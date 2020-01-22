@@ -1,0 +1,20 @@
+{
+  "name": "nwaneri",
+  "version": "1.0.0",
+  "description": "a block-based portolio theme for WordPress",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w ./sass -r -o css --output-style expanded --source-map true output.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gutenberg",
+    "blocks",
+    "themes"
+  ],
+  "author": "jeff ong",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
