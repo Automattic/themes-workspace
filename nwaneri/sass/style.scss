@@ -1,0 +1,33 @@
+@import 'variables';
+
+/*
+Theme Name: Nwaneri
+Theme URI: https://github.com/Automattic/themes-workspace/nwaneri
+Author: Automattic
+Author URI: 
+Description: A portfolio theme for Gutenberg.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: nwaneri
+Tags: translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Nwaneri is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@import 'normalize';
+@import 'typography';
+
+body {
+	background-color: $background-color;
+	color: $primary-color;
+	font-family: 'Overpass';
+	font-weight: lighter;
+	overflow-x: hidden;
+	width: 100vw;
+}
+

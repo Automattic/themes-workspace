@@ -4,7 +4,7 @@
   "description": "a block-based portolio theme for WordPress",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w ./sass -r -o css --output-style expanded --source-map true output.css",
+    "sass": "node-sass -w ./sass -r -o css --output-style expanded --source-map true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "editor-styles.css",
+	"sources": [
+		"../sass/editor-styles.scss",
+		"../sass/_variables.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,OAAO,CAAC,oEAAI;ADEZ,AAAA,IAAI,CAAC;EACJ,KAAK,ECCU,OAAO;CDAtB;;AAED,AAAA,uBAAuB,CAAC;EACvB,gBAAgB,ECJE,OAAO;CDKzB"
+}

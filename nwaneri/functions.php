@@ -1,10 +1,10 @@
 <?php
 
-if ( ! function_exists( 'nwaneri_blocks_support' ) ) :
-    function nwaneri_blocks_support()  {
+if ( ! function_exists( 'nwaneri_support' ) ) :
+    function nwaneri_support()  {
 
 		// Make theme available for translation.
-		load_theme_textdomain( 'nwaneri-blocks', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'nwaneri', get_template_directory() . '/languages' );
 
 		// Let WordPress manage the document title.
 		add_theme_support( 'title-tag' );
@@ -21,22 +21,22 @@ if ( ! function_exists( 'nwaneri_blocks_support' ) ) :
 		// Support a custom color palette.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => __( 'White', 'nwaneri-blocks' ),
+				'name'  => __( 'White', 'nwaneri' ),
 				'slug'  => 'white',
 				'color' => '#fff',
 			),
 			array(
-				'name'  => __( 'Nwaneri Blue', 'nwaneri-blocks' ),
+				'name'  => __( 'Nwaneri Blue', 'nwaneri' ),
 				'slug'  => 'nwaneri-blue',
 				'color' => '#333366',
 			),
 			array(
-				'name'  => __( 'Burning Red', 'nwaneri-blocks' ),
+				'name'  => __( 'Burning Red', 'nwaneri' ),
 				'slug'  => 'burning-red',
 				'color' => '#EB4D55',
 			),
 			array(
-				'name'  => __( 'Cream Orange', 'nwaneri-blocks' ),
+				'name'  => __( 'Cream Orange', 'nwaneri' ),
 				'slug'  => 'cream-orange',
 				'color' => '#FF9D76',
 			)
@@ -53,19 +53,19 @@ if ( ! function_exists( 'nwaneri_blocks_support' ) ) :
 		/* 	'posts' => [ */
 		/* 		'home', */
 		/* 		'blog' => [ */
-		/* 			'post_title' => _x( 'Blog', 'nwaneri-blocks' ), */
-		/* 			'post_content' => '<!-- wp:template-part {"slug":"blog","theme":"nwaneri-blocks"} -->' */
+		/* 			'post_title' => _x( 'Blog', 'nwaneri' ), */
+		/* 			'post_content' => '<!-- wp:template-part {"slug":"blog","theme":"nwaneri"} -->' */
 		/* 		], */
 		/* 	] */
 		/* ]); */
     }
-    add_action( 'after_setup_theme', 'nwaneri_blocks_support' );
+    add_action( 'after_setup_theme', 'nwaneri_support' );
 endif;
 
 /**
  * Register Google Fonts
  */
-function nwaneri_blocks_fonts_url() {
+function nwaneri_fonts_url() {
 	$fonts_url = '';
 
 	/*
@@ -73,7 +73,7 @@ function nwaneri_blocks_fonts_url() {
 	 * supported by Noto Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'nwaneri-blocks' );
+	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'nwaneri' );
 
 	if ( 'off' !== $notoserif ) {
 		$font_families = array();
@@ -91,11 +91,50 @@ function nwaneri_blocks_fonts_url() {
 }
 
 /**
+ * Register and Enqueue Styles.
+ */
+if ( function_exists( 'register_block_style' ) ) {
+	function nwaneri_register_block_styles() {
+		
+		/**
+		** Register stylesheet
+		**/
+		wp_register_style(
+			'block-styles-stylesheet',
+			get_template_directory_uri() . '/css/block-styles.css',
+			array(),
+			'1.1'
+		);
+
+		register_block_style(
+			'core/cover',
+				array(
+					'name'					=> 'cover-hero',
+					'label'					=> 'Hero',
+					'style_handle'	=> 'block-styles-stylesheet',
+			)
+		);
+
+		register_block_style(
+			'core/media-text',
+				array(
+					'name'					=> 'media-text-hero',
+					'label'					=> 'Hero',
+					'style_handle'	=> 'block-styles-stylesheet',
+				)
+		);
+	}
+
+	add_action( 'init', 'nwaneri_register_block_styles' );
+}
+
+
+/**
  * Enqueue scripts and styles.
  */
-function nwaneri_blocks_scripts() {
-	wp_enqueue_style( 'nwaneri-blocks-styles', get_stylesheet_uri() );
-	wp_enqueue_style( 'nwaneri-blocks-block-styles', get_template_directory_uri() . '/css/blocks.css' );
-	wp_enqueue_style( 'nwaneri-blocks-fonts', nwaneri_blocks_fonts_url() );
+function nwaneri_scripts() {
+	wp_enqueue_style( 'nwaneri-styles', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'nwaneri-editor-styles', get_template_directory_uri() . '/css/editor-styles.css' );
+	/* wp_enqueue_style( 'nwaneri-fonts', nwaneri_fonts_url() ); */
 }
-add_action( 'wp_enqueue_scripts', 'nwaneri_blocks_scripts' );
+add_action( 'wp_enqueue_scripts', 'nwaneri_scripts' );

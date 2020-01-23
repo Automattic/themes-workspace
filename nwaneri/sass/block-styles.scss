@@ -1,0 +1,86 @@
+.is-style-cover-hero {
+	mask-mode: alpha;
+    -webkit-mask-mode: alpha;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-position: 100% 0;
+    -webkit-mask-position: 100% 0;
+    mask-image: url('../assets/cover-hero-mask.svg');
+    -webkit-mask-image: url('../assets/cover-hero-mask.svg');
+	// transform: translateX(30vh);
+	// height: 120vh;
+}
+
+.is-style-media-text-hero {
+	&.wp-block-media-text {
+		grid-template-columns: 40% 1fr;
+		width: 110vw;
+	}
+	&.is-stacked-on-mobile {
+		&.has-media-on-the-right {
+			.wp-block-media-text__media {
+				min-height: 872px;
+				padding-top: 4rem;
+				position: relative;
+				&:before {
+					bottom: -3vh;
+					content: url('../assets/hero-blobs.svg');
+					height: 110vh;
+					left: -22vh;
+					position: absolute;
+					width: auto;
+				}
+				> img {
+					height: 110vh;
+					mask-mode: alpha;
+					-webkit-mask-mode: alpha;
+					mask-repeat: no-repeat;
+					-webkit-mask-repeat: no-repeat;
+					mask-size: contain;
+					-webkit-mask-size: contain;
+					// mask-position: 10% 0;
+					// -webkit-mask-position: 10% 0;
+					mask-image: url('../assets/cover-hero-mask.svg');
+					-webkit-mask-image: url('../assets/cover-hero-mask.svg');
+					position: absolute;
+					width: auto;
+				}
+				@media (max-width: 600px){
+					grid-row: 1;
+				}
+			}
+			.wp-block-media-text__content {
+				z-index: 1;
+				>h1 {
+					font-size: 110px;
+					font-weight: normal;
+					margin: 0;
+					width: 70vw;
+				}	
+				>p {
+					font-size: 40px;
+					font-weight: lighter;
+					margin-top: 0;
+					width: 70%;
+				}
+				@media (max-width: 600px){
+					grid-row: 2;
+				}
+			}
+		}
+	}
+}
+
+.block-editor {
+	.is-style-media-text-hero {
+		&.wp-block-media-text {
+			width: 100%;
+		}
+	}
+}
+
+.has-white-color {
+	color: white !important;
+}
