@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Nova+Cut&display=swap");
 /*
 Theme Name: Nwaneri
 Theme URI: https://github.com/Automattic/themes-workspace/nwaneri
@@ -280,9 +279,28 @@ th {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Nova Cut';
+  src: url("../assets/fonts/Nova_Cut/NovaCut-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1, h2, h3, h4 {
+  color: #fff;
   font-family: 'Nova Cut';
   font-weight: normal;
+}
+
+button, a {
+  font-family: 'Nova Cut';
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.has-white-color {
+  color: white !important;
 }
 
 body {
@@ -292,6 +310,100 @@ body {
   font-weight: lighter;
   overflow-x: hidden;
   width: 100vw;
+}
+
+.site-content {
+  padding: 0 55px;
+}
+
+#nwaneri-nav-container {
+  animation: .15s fadeIn;
+  animation-fill-mode: forwards;
+  background: transparent;
+  color: #fff;
+  left: 0;
+  padding: 55px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 0.15s ease;
+  width: 100vw;
+  z-index: 1000;
+}
+
+#nwaneri-nav-container .wp-block-navigation {
+  padding-top: 48px;
+  visibility: hidden;
+}
+
+#nwaneri-nav-container .wp-block-navigation a {
+  color: white;
+}
+
+#nwaneri-nav-container .wp-block-navigation .wp-block-navigation-link {
+  padding-right: 40px;
+}
+
+#nwaneri-nav-container .wp-block-navigation > ul > li > a {
+  font-size: 40px;
+}
+
+#nwaneri-nav-container .wp-block-navigation > ul > li > ul {
+  background: transparent;
+  -webkit-box-shadow: none;
+  border-radius: 0;
+  border: none;
+  position: unset;
+  opacity: unset;
+  transition: none;
+  transform: unset;
+  visibility: unset;
+  padding: 0;
+}
+
+#nwaneri-nav-container .wp-block-navigation > ul > li > ul:before, #nwaneri-nav-container .wp-block-navigation > ul > li > ul:after {
+  content: unset;
+}
+
+#nwaneri-nav-container .wp-block-navigation > ul > li > ul li {
+  margin: 0;
+}
+
+#nwaneri-nav-container button {
+  border: none;
+  background: #333366;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  height: 100px;
+  letter-spacing: 2px;
+  width: 100px;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
+
+#nwaneri-nav-container.open {
+  background: #333366;
+}
+
+#nwaneri-nav-container.open .wp-block-navigation {
+  visibility: visible;
+}
+
+#nwaneri-nav-container.open button {
+  background: #fff;
+  color: #333366;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

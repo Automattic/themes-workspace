@@ -1,17 +1,4 @@
-.is-style-cover-hero {
-	mask-mode: alpha;
-    -webkit-mask-mode: alpha;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    mask-position: 100% 0;
-    -webkit-mask-position: 100% 0;
-    mask-image: url('../assets/cover-hero-mask.svg');
-    -webkit-mask-image: url('../assets/cover-hero-mask.svg');
-	// transform: translateX(30vh);
-	// height: 120vh;
-}
+@import 'variables';
 
 .is-style-media-text-hero {
 	&.wp-block-media-text {
@@ -52,8 +39,10 @@
 				}
 			}
 			.wp-block-media-text__content {
+				padding: 0;
 				z-index: 1;
 				>h1 {
+					color: $primary-color;
 					font-size: 110px;
 					font-weight: normal;
 					margin: 0;
@@ -73,14 +62,22 @@
 	}
 }
 
-.block-editor {
-	.is-style-media-text-hero {
-		&.wp-block-media-text {
-			width: 100%;
-		}
-	}
-}
-
-.has-white-color {
-	color: white !important;
+.is-style-separator-blobs {
+	height: 75vh;
+	max-width: unset !important;
+	// width: 80vw;
+	margin: 4rem auto 0;
+	border-bottom: none;
+	&:after {
+		background-image: url(../assets/separator.svg);
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: " ";
+		display: inline-block;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		width: 100%;
+	}	
 }

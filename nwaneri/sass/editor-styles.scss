@@ -7,3 +7,11 @@ body {
 .block-editor-container {
 	background-color: $background-color;
 }
+
+.block-editor {
+	.is-style-media-text-hero {
+		&.wp-block-media-text {
+			width: 100%;
+		}
+	}
+}

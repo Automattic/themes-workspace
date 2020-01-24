@@ -1,0 +1,52 @@
+<nav id="nwaneri-nav-container">
+	<button id="nwaneri-toggle-navigation" data-open='false'>Menu</button>
+	<div id="nav-links-wrapper">
+		<!-- wp:navigation {"align":"wide"} -->
+		<!-- wp:navigation-link {"label":"Home","title":"Home","url":"http://nwaneri.local/home/"} /-->
+
+		<!-- wp:navigation-link {"label":"About","title":"Sample Page","url":"http://nwaneri.local/sample-page/"} /-->
+
+		<!-- wp:navigation-link {"label":"Portfolio","title":"Portfolio","url":"http://Portfolio"} -->
+		<!-- wp:navigation-link {"label":"Animation","title":"Home","url":"http://nwaneri.local/home/"} /-->
+
+		<!-- wp:navigation-link {"label":"Social","title":"Social","url":"http://Social"} /-->
+
+		<!-- wp:navigation-link {"label":"Websites","title":"Websites","url":"http://Websites"} /-->
+
+		<!-- wp:navigation-link /-->
+		<!-- /wp:navigation-link -->
+
+		<!-- wp:navigation-link {"label":"Contact","title":"Contact","url":"http://Contact"} /-->
+		<!-- /wp:navigation -->
+	</div>
+</nav>
+
+<script type="text/javascript">
+	var navToggleButton = document.querySelector('#nwaneri-toggle-navigation');
+	var navContainer = document.querySelector('#nwaneri-nav-container');
+
+	function toggleNavMenu(){
+		var isOpen = navToggleButton.dataset.open;
+		if ( isOpen === 'true' ){
+			navToggleButton.dataset.open = 'false';
+			navContainer.classList.remove('open');
+			navToggleButton.innerHTML = 'Menu';
+		} else {
+			navToggleButton.dataset.open = 'true';
+			navContainer.classList.add('open');
+			navToggleButton.innerHTML = 'Close';
+		}
+	}
+
+	function closeNavMenu(){
+		var isOpen = navToggleButton.dataset.open;
+		if ( isOpen === 'true' ){
+			navToggleButton.dataset.open = 'false';
+			navContainer.classList.remove('open');
+		} 
+	}
+
+	navToggleButton.addEventListener('click', toggleNavMenu);
+	<!-- document.querySelector('main').addEventListener('click', closeNavMenu); -->
+
+</script>

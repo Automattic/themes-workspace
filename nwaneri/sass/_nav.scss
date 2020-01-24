@@ -1,0 +1,78 @@
+#nwaneri-nav-container {
+	animation: .15s fadeIn;
+	animation-fill-mode: forwards;
+	background: transparent;
+	color: #fff;
+	left: 0;
+	padding: $site-padding;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: background-color 0.15s ease;
+	width: 100vw;
+	z-index: $z-index-nav;
+	.wp-block-navigation {
+		padding-top: 48px;
+		visibility: hidden;
+		a {
+			color: white;
+		}
+		.wp-block-navigation-link {
+			padding-right: 40px;
+		}
+		>ul>li>a {
+			font-size: 40px;
+		}
+		>ul>li>ul {
+			background: transparent;
+			-webkit-box-shadow: none;
+			border-radius: 0;
+			border: none;
+			position: unset;
+			opacity: unset;
+			transition: none;
+			transform: unset;
+			visibility: unset;
+			padding: 0;
+			&:before, &:after {
+				content: unset;
+			}
+			li {
+				margin: 0;
+			}
+		}
+	}
+	button {
+		border: none;
+		background: $primary-color;
+		border-radius: 50%;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 300;
+		height: 100px;
+		letter-spacing: 2px;
+		width: 100px;
+		text-transform: uppercase;
+		transition: all 0.15s ease;
+	}
+	&.open {
+		background: $primary-color;
+		.wp-block-navigation {
+			visibility: visible;
+		}
+		button {
+			background: #fff;
+			color: $primary-color;
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}

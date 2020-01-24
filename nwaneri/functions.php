@@ -1,7 +1,7 @@
 <?php
 
 if ( ! function_exists( 'nwaneri_support' ) ) :
-    function nwaneri_support()  {
+	function nwaneri_support()  {
 
 		// Make theme available for translation.
 		load_theme_textdomain( 'nwaneri', get_template_directory() . '/languages' );
@@ -58,7 +58,9 @@ if ( ! function_exists( 'nwaneri_support' ) ) :
 		/* 		], */
 		/* 	] */
 		/* ]); */
+			wp_enqueue_style( 'nwaneri-editor-styles', get_template_directory_uri() . '/css/editor-styles.css' );
     }
+
     add_action( 'after_setup_theme', 'nwaneri_support' );
 endif;
 
@@ -107,10 +109,10 @@ if ( function_exists( 'register_block_style' ) ) {
 		);
 
 		register_block_style(
-			'core/cover',
+			'core/separator',
 				array(
-					'name'					=> 'cover-hero',
-					'label'					=> 'Hero',
+					'name'					=> 'separator-blobs',
+					'label'					=> 'Blobs',
 					'style_handle'	=> 'block-styles-stylesheet',
 			)
 		);
@@ -134,7 +136,6 @@ if ( function_exists( 'register_block_style' ) ) {
  */
 function nwaneri_scripts() {
 	wp_enqueue_style( 'nwaneri-styles', get_template_directory_uri() . '/css/style.css' );
-	wp_enqueue_style( 'nwaneri-editor-styles', get_template_directory_uri() . '/css/editor-styles.css' );
 	/* wp_enqueue_style( 'nwaneri-fonts', nwaneri_fonts_url() ); */
 }
 add_action( 'wp_enqueue_scripts', 'nwaneri_scripts' );

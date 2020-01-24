@@ -21,6 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 @import 'normalize';
 @import 'typography';
+@import 'utilities';
 
 body {
 	background-color: $background-color;
@@ -31,3 +32,9 @@ body {
 	width: 100vw;
 }
 
+
+.site-content {
+	padding: 0 $site-padding;
+}
+
+@import 'nav';
