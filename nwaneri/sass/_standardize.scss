@@ -1,0 +1,129 @@
+@import 'variables';
+// A set of styles that make the front end look like Gutenberg 
+// out of the box
+/*--------------------------------------------------------------
+## General Structure
+--------------------------------------------------------------*/
+
+.entry-content > *,
+.site-header > *,
+.site-footer > *,
+.site-content > h1 {
+  margin: 36px auto;
+  max-width: 580px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.entry-content > .alignwide,
+.site-header > .alignwide
+.site-footer > .alignwide {
+  max-width: 1070px;
+}
+
+.entry-content > .alignfull,
+.site-header > .alignfull,
+.site-footer > .alignfull {
+  margin: 1.5em 0;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 608px) {
+  .entry-content > *,
+  .site-header > *,
+  .site-footer > *,
+  .site-content > h1 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/*--------------------------------------------------------------
+## Pullquote
+--------------------------------------------------------------*/
+
+.wp-block-pullquote>p:first-child {
+  margin-top: 0;
+}
+
+
+/*--------------------------------------------------------------
+## Pullquote
+--------------------------------------------------------------*/
+
+.wp-block-pullquote>p:first-child {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Quote
+--------------------------------------------------------------*/
+
+.wp-block-quote {
+  margin-left: 14px;
+  margin-right: 14px;
+  padding: 0;
+}
+
+.wp-block-quote > * {
+  margin-left: 1rem;
+}
+
+.wp-block-quote.is-large, 
+.wp-block-quote.is-style-large {
+  margin: 36px auto;
+  padding: 0;
+}
+
+.wp-block-quote.is-large cite, 
+.wp-block-quote.is-large footer, 
+.wp-block-quote.is-style-large cite, 
+.wp-block-quote.is-style-large footer {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+@media screen and (min-width: 644px) {
+  .wp-block-quote {
+    margin: 36px auto;
+  }
+}
+
+
+/*--------------------------------------------------------------
+## Group
+--------------------------------------------------------------*/
+
+.wp-block-group > .wp-block-group__inner-container > * {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-group > .wp-block-group__inner-container > .alignwide {
+  max-width: 1070px;
+}
+
+.wp-block-group > .wp-block-group__inner-container > .alignfull {
+  max-width: 100%;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > :first-child {
+  margin-top: 0;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > .alignfull {
+  width: calc( 100% + 60px );
+  max-width: calc( 100% + 60px );
+  position: relative;
+  left: -30px;
+}
+
+
+/*--------------------------------------------------------------
+## Tags
+--------------------------------------------------------------*/
+
+.wp-block-tag-cloud {
+	margin-top: 0;
+}

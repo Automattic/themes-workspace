@@ -251,6 +251,124 @@ th {
   padding: 0;
 }
 
+/*--------------------------------------------------------------
+## General Structure
+--------------------------------------------------------------*/
+.entry-content > *,
+.site-header > *,
+.site-footer > *,
+.site-content > h1 {
+  margin: 36px auto;
+  max-width: 580px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.entry-content > .alignwide,
+.site-header > .alignwide
+.site-footer > .alignwide {
+  max-width: 1070px;
+}
+
+.entry-content > .alignfull,
+.site-header > .alignfull,
+.site-footer > .alignfull {
+  margin: 1.5em 0;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 608px) {
+  .entry-content > *,
+  .site-header > *,
+  .site-footer > *,
+  .site-content > h1 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/*--------------------------------------------------------------
+## Pullquote
+--------------------------------------------------------------*/
+.wp-block-pullquote > p:first-child {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Pullquote
+--------------------------------------------------------------*/
+.wp-block-pullquote > p:first-child {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Quote
+--------------------------------------------------------------*/
+.wp-block-quote {
+  margin-left: 14px;
+  margin-right: 14px;
+  padding: 0;
+}
+
+.wp-block-quote > * {
+  margin-left: 1rem;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+  margin: 36px auto;
+  padding: 0;
+}
+
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-style-large footer {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+@media screen and (min-width: 644px) {
+  .wp-block-quote {
+    margin: 36px auto;
+  }
+}
+
+/*--------------------------------------------------------------
+## Group
+--------------------------------------------------------------*/
+.wp-block-group > .wp-block-group__inner-container > * {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-group > .wp-block-group__inner-container > .alignwide {
+  max-width: 1070px;
+}
+
+.wp-block-group > .wp-block-group__inner-container > .alignfull {
+  max-width: 100%;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > :first-child {
+  margin-top: 0;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > .alignfull {
+  width: calc( 100% + 60px);
+  max-width: calc( 100% + 60px);
+  position: relative;
+  left: -30px;
+}
+
+/*--------------------------------------------------------------
+## Tags
+--------------------------------------------------------------*/
+.wp-block-tag-cloud {
+  margin-top: 0;
+}
+
 @font-face {
   font-family: 'Overpass';
   src: url("../assets/fonts/Overpass/Overpass-Regular.ttf") format("truetype");
@@ -286,10 +404,16 @@ th {
   font-style: normal;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
   color: #fff;
   font-family: 'Nova Cut';
   font-weight: normal;
+}
+
+h1 {
+  color: #333366;
+  font-size: 64px;
+  font-weight: lighter;
 }
 
 button, a {
@@ -297,6 +421,15 @@ button, a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+a.tag-cloud-link {
+  color: white;
+  font-size: 1rem !important;
+}
+
+p {
+  font-size: 1.222rem;
 }
 
 .has-white-color {
@@ -308,12 +441,80 @@ body {
   color: #333366;
   font-family: 'Overpass';
   font-weight: lighter;
+  font-size: 18px;
   overflow-x: hidden;
   width: 100vw;
 }
 
 .site-content {
-  padding: 0 55px;
+  padding: 28px;
+}
+
+.post-title > h1 {
+  margin-bottom: 0;
+}
+
+.entry-content > .alignwide,
+.site-header > .alignwide
+.site-footer > .alignwide {
+  max-width: 1440px;
+}
+
+@media screen and (min-width: 608px) {
+  .entry-content > *,
+  .site-header > *,
+  .site-footer > *,
+  .site-content > h1 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 110px;
+    max-width: 702px;
+  }
+  .site-content {
+    padding: 0 110px;
+  }
+}
+
+@media screen and (min-width: 608px) {
+  .wp-block-quote {
+    margin: 36px auto 36px 110px;
+  }
+}
+
+.wp-block-latest-comments .wp-block-latest-comments__comment {
+  position: relative;
+}
+
+.wp-block-latest-comments .wp-block-latest-comments .avatar,
+.wp-block-latest-comments .wp-block-latest-comments__comment-avatar {
+  border-radius: 24px;
+  left: -118px;
+  height: 100px;
+  margin-right: 12px;
+  position: absolute;
+  width: 100px;
+}
+
+.wp-block-latest-comments a.wp-block-latest-comments__comment-author {
+  font-family: 'Overpass';
+  font-size: 1.222rem;
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: #333366;
+}
+
+.wp-block-latest-comments .wp-block-latest-comments__comment-date {
+  color: #fff;
+}
+
+.wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
+  font-size: 1.222rem;
+}
+
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt,
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
+  margin-left: 0;
 }
 
 #nwaneri-nav-container {
@@ -322,7 +523,6 @@ body {
   background: transparent;
   color: #fff;
   left: 0;
-  padding: 55px;
   position: absolute;
   right: 0;
   top: 0;
@@ -396,6 +596,14 @@ body {
   color: #333366;
 }
 
+@media screen and (min-width: 608px) {
+  #nwaneri-nav-container {
+    margin: 0;
+    max-width: none;
+    padding: 110px;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -404,6 +612,32 @@ body {
     opacity: 1;
     visibility: visible;
   }
+}
+
+.site-footer {
+  position: relative;
+}
+
+.site-footer p {
+  font-family: 'Nova Cut';
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 608px) {
+  .site-footer p.has-desktop-vertical-align {
+    bottom: 50vh;
+    position: absolute;
+    right: -110px;
+    transform: rotateZ(90deg);
+  }
+}
+
+.site-footer .footer-blobs {
+  height: 245px;
+  margin: 0;
+  background-image: url("../assets/footer-blobs.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=style.css.map */

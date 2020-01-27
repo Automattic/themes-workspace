@@ -1,0 +1,23 @@
+.site-footer {
+	position: relative;
+	p {
+		font-family: 'Nova Cut';
+		text-transform: uppercase;
+		&.has-desktop-vertical-align {
+			@media screen and (min-width: $breakpoint-sm){
+				bottom: 50vh;
+				position: absolute;
+				right: -$site-padding-lg;
+				transform: rotateZ(90deg);
+			}
+		}
+	}
+
+	.footer-blobs {
+		height: 245px;
+		margin: 0;
+		background-image: url('../assets/footer-blobs.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}

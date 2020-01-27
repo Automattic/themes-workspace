@@ -43,6 +43,7 @@
 				z-index: 1;
 				>h1 {
 					color: $primary-color;
+					font-family: 'Nova Cut';
 					font-size: 110px;
 					font-weight: normal;
 					margin: 0;
@@ -80,4 +81,32 @@
 		position: relative;
 		width: 100%;
 	}	
+}
+
+.is-style-quote-blobs {
+	position: relative;
+	&.wp-block-quote {
+		border-left: none;
+		> * {
+			margin-left: 0
+		}		
+	}
+
+	> p {
+		font-family: 'Nova Cut';
+		font-size: 2.222rem;
+	}
+
+	&:after {
+		background-image: url(../assets/quote-blobs.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		content: " ";
+		height: 100%;
+		position: absolute;
+		right: -20%;
+		top: 0;
+		width: 50%;
+		z-index: -1;
+	}
 }

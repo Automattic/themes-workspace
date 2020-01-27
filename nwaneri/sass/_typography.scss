@@ -33,10 +33,16 @@
 	font-style: normal;
 }
 
-h1,h2,h3,h4 {
+h2,h3,h4 {
 	color: #fff;
 	font-family: 'Nova Cut';
 	font-weight: normal;
+}
+
+h1 {
+	color: $primary-color;
+	font-size: 64px;
+	font-weight: lighter;
 }
 
 button, a {
@@ -44,4 +50,15 @@ button, a {
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+a {
+	&.tag-cloud-link {
+		color: white;
+		font-size: 1rem !important;
+	}
+}
+
+p {
+	font-size: 1.222rem;
 }

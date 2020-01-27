@@ -42,22 +42,6 @@ if ( ! function_exists( 'nwaneri_support' ) ) :
 			)
 		) );
 
-		/* // Starter content */
-		/* add_theme_support('starter-content', [ */
-		/* 	// Static front page set to Home, posts page set to Blog */
-		/* 	'options' => [ */
-		/* 		'show_on_front' => 'page', */
-		/* 		'page_on_front' => '{{home}}', */
-		/* 	], */
-		/* 	// Starter pages to include */
-		/* 	'posts' => [ */
-		/* 		'home', */
-		/* 		'blog' => [ */
-		/* 			'post_title' => _x( 'Blog', 'nwaneri' ), */
-		/* 			'post_content' => '<!-- wp:template-part {"slug":"blog","theme":"nwaneri"} -->' */
-		/* 		], */
-		/* 	] */
-		/* ]); */
 			wp_enqueue_style( 'nwaneri-editor-styles', get_template_directory_uri() . '/css/editor-styles.css' );
     }
 
@@ -122,6 +106,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				array(
 					'name'					=> 'media-text-hero',
 					'label'					=> 'Hero',
+					'style_handle'	=> 'block-styles-stylesheet',
+				)
+		);
+
+		register_block_style(
+			'core/quote',
+				array(
+					'name'					=> 'quote-blobs',
+					'label'					=> 'Blobs',
 					'style_handle'	=> 'block-styles-stylesheet',
 				)
 		);

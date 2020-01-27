@@ -45,6 +45,7 @@
 
 .is-style-media-text-hero.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content > h1 {
   color: #333366;
+  font-family: 'Nova Cut';
   font-size: 110px;
   font-weight: normal;
   margin: 0;
@@ -82,6 +83,36 @@
   margin: 0 auto;
   position: relative;
   width: 100%;
+}
+
+.is-style-quote-blobs {
+  position: relative;
+}
+
+.is-style-quote-blobs.wp-block-quote {
+  border-left: none;
+}
+
+.is-style-quote-blobs.wp-block-quote > * {
+  margin-left: 0;
+}
+
+.is-style-quote-blobs > p {
+  font-family: 'Nova Cut';
+  font-size: 2.222rem;
+}
+
+.is-style-quote-blobs:after {
+  background-image: url(../assets/quote-blobs.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: " ";
+  height: 100%;
+  position: absolute;
+  right: -20%;
+  top: 0;
+  width: 50%;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=block-styles.css.map */

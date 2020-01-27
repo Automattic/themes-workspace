@@ -20,6 +20,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 @import 'normalize';
+@import 'standardize';
 @import 'typography';
 @import 'utilities';
 
@@ -28,13 +29,82 @@ body {
 	color: $primary-color;
 	font-family: 'Overpass';
 	font-weight: lighter;
+	font-size: 18px;
 	overflow-x: hidden;
 	width: 100vw;
 }
 
-
 .site-content {
-	padding: 0 $site-padding;
+	padding: $site-padding-sm;
+}
+
+.post-title >h1 {
+	margin-bottom: 0;
+}
+
+.entry-content > .alignwide,
+.site-header > .alignwide
+.site-footer > .alignwide {
+  max-width: $site-width;
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+	.entry-content > *,
+	.site-header > *,
+	.site-footer > *,
+	.site-content > h1 {
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: $content-padding;
+		max-width: $site-content-width;
+	}
+	.site-content {
+		padding: 0 $site-padding-lg;
+	}
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .wp-block-quote {
+    margin: 36px auto 36px $site-padding-lg;
+  }
+}
+
+.wp-block-latest-comments {
+	.wp-block-latest-comments__comment {
+		position: relative;
+	}
+
+	.wp-block-latest-comments .avatar, 
+	.wp-block-latest-comments__comment-avatar {
+		border-radius: 24px;
+		left: -118px;
+		height: 100px;
+		margin-right: 12px;
+		position: absolute;
+		width: 100px;
+	}
+
+	a.wp-block-latest-comments__comment-author {
+		font-family: 'Overpass';
+		font-size: 1.222rem;
+		font-weight: bold;
+		letter-spacing: 0px;
+		text-transform: none;
+		color: $primary-color;
+	}
+
+	.wp-block-latest-comments__comment-date {
+		color: #fff;
+	}
+
+	.wp-block-latest-comments__comment-excerpt p {
+		font-size: 1.222rem;
+	}
+}
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt, 
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
+	margin-left: 0;
 }
 
 @import 'nav';
+@import 'footer';
