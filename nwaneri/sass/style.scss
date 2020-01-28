@@ -45,7 +45,7 @@ body {
 .entry-content > .alignwide,
 .site-header > .alignwide
 .site-footer > .alignwide {
-  max-width: $site-width;
+	max-width: $site-content-width-wide;
 }
 
 @media screen and (min-width: $breakpoint-sm) {

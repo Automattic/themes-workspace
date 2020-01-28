@@ -39,6 +39,10 @@ h2,h3,h4 {
 	font-weight: normal;
 }
 
+h3 {
+	font-size: 2.222rem;
+}
+
 h1 {
 	color: $primary-color;
 	font-size: 64px;
@@ -52,8 +56,9 @@ button, a {
 	letter-spacing: 2px;
 }
 
-a {
-	&.tag-cloud-link {
+p.tag-cloud-link {
+	margin-top: 0;
+	> a {
 		color: white;
 		font-size: 1rem !important;
 	}
