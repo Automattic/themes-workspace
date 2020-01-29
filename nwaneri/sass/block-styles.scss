@@ -65,9 +65,8 @@
 }
 
 .is-style-separator-blobs {
-	height: 75vh;
+	height: 25vh;
 	max-width: unset !important;
-	// width: 80vw;
 	margin: 4rem auto 0;
 	border-bottom: none;
 	&:after {
@@ -82,6 +81,9 @@
 		position: relative;
 		width: 100%;
 	}	
+	@media screen and ( min-width: $breakpoint-sm ){
+		height: 75vh;
+	}
 }
 
 .is-style-quote-blobs {

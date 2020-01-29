@@ -31,7 +31,7 @@ body {
 	font-weight: lighter;
 	font-size: 18px;
 	overflow-x: hidden;
-	width: 100vw;
+	// width: 100vw;
 }
 
 .site-content {
@@ -46,8 +46,12 @@ body {
 .site-header > *,
 .site-footer > *,
 .site-content > h1 {
+	margin: 1rem auto;
 	padding-left: 0px;
 	padding-right: 0px;
+	@media screen and ( min-width: $breakpoint-sm ){
+		margin: 1.5rem 0;
+	}
 }
 
 .entry-content > .alignwide,
@@ -55,6 +59,13 @@ body {
 .site-footer > .alignwide {
 	// padding: 0;
 	max-width: $site-content-width-wide;
+}
+
+.entry-content > .alignfull {
+	margin: 1em 0;
+	@media screen and ( min-width: $breakpoint-sm ){
+		margin: 1.5em 0;
+	}
 }
 
 @media screen and (min-width: $breakpoint-sm) {
@@ -94,16 +105,20 @@ body {
 	}
 
 	a.wp-block-latest-comments__comment-author {
+		border: none;
+		color: $primary-color;
 		font-family: 'Overpass';
 		font-size: 1.222rem;
 		font-weight: bold;
 		letter-spacing: 0px;
+		line-height: 1.4;
 		text-transform: none;
-		color: $primary-color;
 	}
 
 	.wp-block-latest-comments__comment-date {
 		color: #fff;
+		font-family: 'Overpass';
+		font-size: 1rem;
 	}
 
 	.wp-block-latest-comments__comment-excerpt p {
@@ -122,6 +137,9 @@ body {
 		max-width: none;
 		margin: 0;
 		margin-right: 4px;
+		h5 {
+			padding-top: 7px;
+		}
 	}
 	.wp-block-group__inner-container {
 		display: flex;
@@ -143,6 +161,26 @@ p.tag-cloud-link {
 	> a {
 		color: white;
 		font-size: 1rem !important;
+	}
+}
+
+.spacer-collapse-mobile {
+	display: none;
+	@media screen and (min-width: $breakpoint-sm){
+		display: block;
+	}
+}
+
+.wp-block-media-text {
+	margin-bottom: 3rem;
+	@media screen and (min-width: $breakpoint-sm){
+		margin-bottom: 4rem;
+	}
+	.wp-block-media-text__content {
+		padding: 0;
+		@media screen and (min-width: $breakpoint-sm){
+			padding: 0 2rem;
+		}
 	}
 }
 

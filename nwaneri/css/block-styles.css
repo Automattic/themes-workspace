@@ -67,7 +67,7 @@
 }
 
 .is-style-separator-blobs {
-  height: 75vh;
+  height: 25vh;
   max-width: unset !important;
   margin: 4rem auto 0;
   border-bottom: none;
@@ -84,6 +84,12 @@
   margin: 0 auto;
   position: relative;
   width: 100%;
+}
+
+@media screen and (min-width: 608px) {
+  .is-style-separator-blobs {
+    height: 75vh;
+  }
 }
 
 .is-style-quote-blobs {

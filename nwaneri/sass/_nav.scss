@@ -6,7 +6,7 @@
 	font-family: 'Nova Cut';
 	left: 0;
 	letter-spacing: 2px;
-	padding: 0;
+	padding: 0 0 1rem 0;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -21,8 +21,13 @@
 		text-align: left;
 		visibility: hidden;
 		a {
+			border: none;
 			color: white;
 			padding: 1rem;
+			&:hover {
+				text-decoration: none;
+				color: #bbb;
+			}
 		}
 		.wp-block-navigation-link {
 			padding-right: 40px;
@@ -75,6 +80,9 @@
 		button {
 			background: #fff;
 			color: $primary-color;
+			&:hover {
+				background: #bbb;
+			}
 		}
 	}
 

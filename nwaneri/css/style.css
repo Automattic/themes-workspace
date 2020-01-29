@@ -407,9 +407,15 @@ th {
 h1 {
   color: #333366;
   font-family: 'Overpass';
-  font-size: 3.555rem;
+  font-size: 2rem;
   font-weight: lighter;
   line-height: 1.1;
+}
+
+@media screen and (min-width: 608px) {
+  h1 {
+    font-size: 3.555rem;
+  }
 }
 
 h2, h3, h5 {
@@ -441,7 +447,16 @@ h4 {
 }
 
 h5 {
+  font-size: .777rem;
   line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 608px) {
+  h5 {
+    font-size: 1rem;
+  }
 }
 
 h6 {
@@ -452,15 +467,25 @@ h6 {
 }
 
 a {
-  border: 4px solid;
-  border-top: none;
-  border-image: url("../assets/polka-dot.png") 100% 0 round;
+  border-bottom: 4px solid;
+  border-image: url("../assets/polka-dot.png") 100% 0 repeat;
   color: #333366;
   text-decoration: none;
 }
 
+h5 > a {
+  color: #fff;
+  border: none;
+}
+
 p {
-  font-size: 1.222rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 608px) {
+  p {
+    font-size: 1.222rem;
+  }
 }
 
 .has-white-color {
@@ -474,7 +499,6 @@ body {
   font-weight: lighter;
   font-size: 18px;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 .site-content {
@@ -489,14 +513,34 @@ body {
 .site-header > *,
 .site-footer > *,
 .site-content > h1 {
+  margin: 1rem auto;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+@media screen and (min-width: 608px) {
+  .entry-content > *,
+  .site-header > *,
+  .site-footer > *,
+  .site-content > h1 {
+    margin: 1.5rem 0;
+  }
 }
 
 .entry-content > .alignwide,
 .site-header > .alignwide
 .site-footer > .alignwide {
   max-width: 940px;
+}
+
+.entry-content > .alignfull {
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 608px) {
+  .entry-content > .alignfull {
+    margin: 1.5em 0;
+  }
 }
 
 @media screen and (min-width: 608px) {
@@ -535,16 +579,20 @@ body {
 }
 
 .wp-block-latest-comments a.wp-block-latest-comments__comment-author {
+  border: none;
+  color: #333366;
   font-family: 'Overpass';
   font-size: 1.222rem;
   font-weight: bold;
   letter-spacing: 0px;
+  line-height: 1.4;
   text-transform: none;
-  color: #333366;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-date {
   color: #fff;
+  font-family: 'Overpass';
+  font-size: 1rem;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
@@ -565,6 +613,11 @@ body {
   max-width: none;
   margin: 0;
   margin-right: 4px;
+}
+
+.flex-group .wp-block-group > .wp-block-group__inner-container > * h5,
+.flex-group.wp-block-group > .wp-block-group__inner-container > * h5 {
+  padding-top: 7px;
 }
 
 .flex-group .wp-block-group__inner-container {
@@ -590,6 +643,36 @@ p.tag-cloud-link > a {
   font-size: 1rem !important;
 }
 
+.spacer-collapse-mobile {
+  display: none;
+}
+
+@media screen and (min-width: 608px) {
+  .spacer-collapse-mobile {
+    display: block;
+  }
+}
+
+.wp-block-media-text {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 608px) {
+  .wp-block-media-text {
+    margin-bottom: 4rem;
+  }
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+  padding: 0;
+}
+
+@media screen and (min-width: 608px) {
+  .wp-block-media-text .wp-block-media-text__content {
+    padding: 0 2rem;
+  }
+}
+
 #nwaneri-nav-container {
   animation: .15s fadeIn;
   animation-fill-mode: forwards;
@@ -598,7 +681,7 @@ p.tag-cloud-link > a {
   font-family: 'Nova Cut';
   left: 0;
   letter-spacing: 2px;
-  padding: 0;
+  padding: 0 0 1rem 0;
   position: absolute;
   right: 0;
   top: 0;
@@ -616,8 +699,14 @@ p.tag-cloud-link > a {
 }
 
 #nwaneri-nav-container .wp-block-navigation a {
+  border: none;
   color: white;
   padding: 1rem;
+}
+
+#nwaneri-nav-container .wp-block-navigation a:hover {
+  text-decoration: none;
+  color: #bbb;
 }
 
 #nwaneri-nav-container .wp-block-navigation .wp-block-navigation-link {
@@ -680,6 +769,10 @@ p.tag-cloud-link > a {
   color: #333366;
 }
 
+#nwaneri-nav-container.open button:hover {
+  background: #bbb;
+}
+
 @media screen and (min-width: 608px) {
   #nwaneri-nav-container {
     margin: 0;
@@ -707,6 +800,7 @@ p.tag-cloud-link > a {
 }
 
 .site-footer p {
+  font-size: .777rem;
   font-family: 'Nova Cut';
   text-transform: uppercase;
   padding: 0 28px;
