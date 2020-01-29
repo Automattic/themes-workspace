@@ -106,5 +106,35 @@ body {
 	margin-left: 0;
 }
 
+.flex-group {
+	.wp-block-group > .wp-block-group__inner-container > *, 
+	&.wp-block-group > .wp-block-group__inner-container > * {
+		max-width: none;
+		margin: 0;
+		margin-right: 4px;
+	}
+	.wp-block-group__inner-container {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+
+.nwaneri-post-date, time {
+	color: white;
+	font-family: 'Nova Cut';
+	font-size: 1rem;
+	letter-spacing: 2px;
+	padding-top: 6px;
+	text-transform: uppercase;
+}
+
+p.tag-cloud-link {
+	margin-top: 0;
+	> a {
+		color: white;
+		font-size: 1rem !important;
+	}
+}
+
 @import 'nav';
 @import 'footer';

@@ -427,15 +427,6 @@ button, a {
   letter-spacing: 2px;
 }
 
-p.tag-cloud-link {
-  margin-top: 0;
-}
-
-p.tag-cloud-link > a {
-  color: white;
-  font-size: 1rem !important;
-}
-
 p {
   font-size: 1.222rem;
 }
@@ -523,6 +514,36 @@ body {
 .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt,
 .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
   margin-left: 0;
+}
+
+.flex-group .wp-block-group > .wp-block-group__inner-container > *,
+.flex-group.wp-block-group > .wp-block-group__inner-container > * {
+  max-width: none;
+  margin: 0;
+  margin-right: 4px;
+}
+
+.flex-group .wp-block-group__inner-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nwaneri-post-date, time {
+  color: white;
+  font-family: 'Nova Cut';
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding-top: 6px;
+  text-transform: uppercase;
+}
+
+p.tag-cloud-link {
+  margin-top: 0;
+}
+
+p.tag-cloud-link > a {
+  color: white;
+  font-size: 1rem !important;
 }
 
 #nwaneri-nav-container {

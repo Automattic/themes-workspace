@@ -112,3 +112,10 @@
 	}
 }
 
+.is-style-latest-posts-stacked {
+	> li > a{
+		color: $primary-color;
+		font-family: 'Overpass';
+		font-size: 2rem;
+	}
+}

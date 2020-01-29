@@ -118,6 +118,15 @@ if ( function_exists( 'register_block_style' ) ) {
 					'style_handle'	=> 'block-styles-stylesheet',
 				)
 		);
+
+		register_block_style(
+			'core/latest-posts',
+				array(
+					'name'					=> 'latest-posts-stacked',
+					'label'					=> 'Stacked',
+					'style_handle'	=> 'block-styles-stylesheet',
+				)
+		);
 	}
 
 	add_action( 'init', 'nwaneri_register_block_styles' );

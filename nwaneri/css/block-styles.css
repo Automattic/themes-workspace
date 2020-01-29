@@ -116,4 +116,10 @@
   z-index: -1;
 }
 
+.is-style-latest-posts-stacked > li > a {
+  color: #333366;
+  font-family: 'Overpass';
+  font-size: 2rem;
+}
+
 /*# sourceMappingURL=block-styles.css.map */
