@@ -39,12 +39,21 @@ body {
 }
 
 .post-title >h1 {
-	margin-bottom: 0;
+	margin-bottom: 12px;
+}
+
+.entry-content > *,
+.site-header > *,
+.site-footer > *,
+.site-content > h1 {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .entry-content > .alignwide,
 .site-header > .alignwide
 .site-footer > .alignwide {
+	// padding: 0;
 	max-width: $site-content-width-wide;
 }
 
@@ -107,6 +116,7 @@ body {
 }
 
 .flex-group {
+	margin-top: 0;
 	.wp-block-group > .wp-block-group__inner-container > *, 
 	&.wp-block-group > .wp-block-group__inner-container > * {
 		max-width: none;

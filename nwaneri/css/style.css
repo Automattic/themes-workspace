@@ -404,27 +404,59 @@ th {
   font-style: normal;
 }
 
-h2, h3, h4 {
+h1 {
+  color: #333366;
+  font-family: 'Overpass';
+  font-size: 3.555rem;
+  font-weight: lighter;
+  line-height: 1.1;
+}
+
+h2, h3, h5 {
   color: #fff;
   font-family: 'Nova Cut';
   font-weight: normal;
 }
 
-h3 {
-  font-size: 2.222rem;
-}
-
-h1 {
+h4, h6 {
   color: #333366;
-  font-size: 64px;
-  font-weight: lighter;
+  font-family: 'Overpass';
+  font-size: 1.333rem;
+  line-height: 1.2;
 }
 
-button, a {
-  font-family: 'Nova Cut';
-  text-decoration: none;
+h2 {
+  font-size: 2.222rem;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1.777rem;
+  line-height: 1.1;
+}
+
+h4 {
+  font-size: 1.333rem;
+  line-height: 1.2;
+}
+
+h5 {
+  line-height: 1.1;
+}
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
   text-transform: uppercase;
-  letter-spacing: 2px;
+}
+
+a {
+  border: 4px solid;
+  border-top: none;
+  border-image: url("../assets/polka-dot.png") 100% 0 round;
+  color: #333366;
+  text-decoration: none;
 }
 
 p {
@@ -450,7 +482,15 @@ body {
 }
 
 .post-title > h1 {
-  margin-bottom: 0;
+  margin-bottom: 12px;
+}
+
+.entry-content > *,
+.site-header > *,
+.site-footer > *,
+.site-content > h1 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .entry-content > .alignwide,
@@ -516,6 +556,10 @@ body {
   margin-left: 0;
 }
 
+.flex-group {
+  margin-top: 0;
+}
+
 .flex-group .wp-block-group > .wp-block-group__inner-container > *,
 .flex-group.wp-block-group > .wp-block-group__inner-container > * {
   max-width: none;
@@ -551,22 +595,29 @@ p.tag-cloud-link > a {
   animation-fill-mode: forwards;
   background: transparent;
   color: #fff;
+  font-family: 'Nova Cut';
   left: 0;
+  letter-spacing: 2px;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 0;
+  text-align: center;
+  text-transform: uppercase;
   transition: background-color 0.15s ease;
   width: 100vw;
   z-index: 1000;
 }
 
 #nwaneri-nav-container .wp-block-navigation {
-  padding-top: 48px;
+  padding-top: 1rem;
+  text-align: left;
   visibility: hidden;
 }
 
 #nwaneri-nav-container .wp-block-navigation a {
   color: white;
+  padding: 1rem;
 }
 
 #nwaneri-nav-container .wp-block-navigation .wp-block-navigation-link {
@@ -596,6 +647,10 @@ p.tag-cloud-link > a {
 
 #nwaneri-nav-container .wp-block-navigation > ul > li > ul li {
   margin: 0;
+}
+
+#nwaneri-nav-container .wp-block-navigation > ul > li > ul li a {
+  padding-top: 8px;
 }
 
 #nwaneri-nav-container button {
@@ -630,6 +685,10 @@ p.tag-cloud-link > a {
     margin: 0;
     max-width: none;
     padding: 110px;
+    text-align: left;
+  }
+  #nwaneri-nav-container .wp-block-navigation {
+    padding-top: 3rem;
   }
 }
 
@@ -650,6 +709,7 @@ p.tag-cloud-link > a {
 .site-footer p {
   font-family: 'Nova Cut';
   text-transform: uppercase;
+  padding: 0 28px;
 }
 
 @media screen and (min-width: 608px) {

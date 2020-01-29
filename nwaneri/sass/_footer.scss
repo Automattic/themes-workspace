@@ -3,6 +3,7 @@
 	p {
 		font-family: 'Nova Cut';
 		text-transform: uppercase;
+		padding: 0 $site-padding-sm;
 		&.has-desktop-vertical-align {
 			@media screen and (min-width: $breakpoint-sm){
 				bottom: 50vh;

@@ -3,19 +3,26 @@
 	animation-fill-mode: forwards;
 	background: transparent;
 	color: #fff;
+	font-family: 'Nova Cut';
 	left: 0;
+	letter-spacing: 2px;
+	padding: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
+	text-align: center;
+	text-transform: uppercase;
 	transition: background-color 0.15s ease;
 	width: 100vw;
 	z-index: $z-index-nav;
 
 	.wp-block-navigation {
-		padding-top: 48px;
+		padding-top: 1rem;
+		text-align: left;
 		visibility: hidden;
 		a {
 			color: white;
+			padding: 1rem;
 		}
 		.wp-block-navigation-link {
 			padding-right: 40px;
@@ -39,6 +46,9 @@
 			}
 			li {
 				margin: 0;
+				a {
+					padding-top: 8px;
+				}
 			}
 		}
 	}
@@ -72,6 +82,10 @@
 		margin: 0;
 		max-width: none;
 		padding: $site-padding-lg;
+		text-align: left;
+		.wp-block-navigation {
+			padding-top: 3rem;
+		}
 	}
 }
 

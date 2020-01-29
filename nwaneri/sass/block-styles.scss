@@ -96,6 +96,7 @@
 	> p {
 		font-family: 'Nova Cut';
 		font-size: 2.222rem;
+		line-height: 1.5;
 	}
 
 	&:after {
@@ -117,5 +118,7 @@
 		color: $primary-color;
 		font-family: 'Overpass';
 		font-size: 2rem;
+		letter-spacing: unset;
+		text-transform: none;
 	}
 }
