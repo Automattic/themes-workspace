@@ -124,3 +124,19 @@
 		text-transform: none;
 	}
 }
+
+.is-style-cover-hero {
+	&.wp-block-cover {
+		mask-mode: alpha;
+		-webkit-mask-mode: alpha;
+		mask-repeat: no-repeat;
+		-webkit-mask-repeat: no-repeat;
+		mask-size: contain;
+		-webkit-mask-size: contain;
+		// mask-position: 10% 0;
+		// -webkit-mask-position: 10% 0;
+		mask-image: url('../assets/cover-hero-mask.svg');
+		-webkit-mask-image: url('../assets/cover-hero-mask.svg');
+	}
+	
+}

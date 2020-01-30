@@ -71,8 +71,7 @@ body {
 @media screen and (min-width: $breakpoint-sm) {
 	.entry-content > *,
 	.site-header > *,
-	.site-footer > *,
-	.site-content > h1 {
+	.site-footer > * {
 		padding-left: 0px;
 		padding-right: 0px;
 		margin-left: $content-padding;
@@ -80,6 +79,9 @@ body {
 	}
 	.site-content {
 		padding: 0 $site-padding-lg;
+		h1, h2, h3 {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -150,10 +152,13 @@ body {
 .nwaneri-post-date, time {
 	color: white;
 	font-family: 'Nova Cut';
-	font-size: 1rem;
+	font-size: .777rem;
 	letter-spacing: 2px;
 	padding-top: 6px;
 	text-transform: uppercase;
+	@media screen and (min-width: $breakpoint-sm){
+		font-size: 1rem;
+	}
 }
 
 p.tag-cloud-link {
@@ -181,6 +186,24 @@ p.tag-cloud-link {
 		@media screen and (min-width: $breakpoint-sm){
 			padding: 0 2rem;
 		}
+	}
+}
+
+.wp-block-button__link {
+	background-color: $accent-color;
+	border-radius: 5px;
+	font-weight: lighter;
+	position: relative;
+	&:after {
+		content: " ";
+		background-image: url(../assets/button-bg.svg);
+		background-size: contain;
+		position: absolute;
+		top: 8px;
+		left: 4px;
+		width: 107%;
+		height: 103%;
+		z-index: -1;
 	}
 }
 

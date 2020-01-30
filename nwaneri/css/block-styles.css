@@ -131,4 +131,15 @@
   text-transform: none;
 }
 
+.is-style-cover-hero.wp-block-cover {
+  mask-mode: alpha;
+  -webkit-mask-mode: alpha;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-image: url("../assets/cover-hero-mask.svg");
+  -webkit-mask-image: url("../assets/cover-hero-mask.svg");
+}
+
 /*# sourceMappingURL=block-styles.css.map */

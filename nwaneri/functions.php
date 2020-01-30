@@ -49,34 +49,6 @@ if ( ! function_exists( 'nwaneri_support' ) ) :
 endif;
 
 /**
- * Register Google Fonts
- */
-function nwaneri_fonts_url() {
-	$fonts_url = '';
-
-	/*
-	 *Translators: If there are characters in your language that are not
-	 * supported by Noto Serif, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'nwaneri' );
-
-	if ( 'off' !== $notoserif ) {
-		$font_families = array();
-		$font_families[] = 'Noto Serif:400,400italic,700,700italic';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
-
-/**
  * Register and Enqueue Styles.
  */
 if ( function_exists( 'register_block_style' ) ) {
@@ -105,6 +77,15 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/media-text',
 				array(
 					'name'					=> 'media-text-hero',
+					'label'					=> 'Hero',
+					'style_handle'	=> 'block-styles-stylesheet',
+				)
+		);
+
+		register_block_style(
+			'core/cover',
+				array(
+					'name'					=> 'cover-hero',
 					'label'					=> 'Hero',
 					'style_handle'	=> 'block-styles-stylesheet',
 				)
