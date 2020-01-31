@@ -708,6 +708,7 @@ p.tag-cloud-link > a {
   font-family: 'Nova Cut';
   left: 0;
   letter-spacing: 2px;
+  margin-top: 0;
   padding: 0 0 1rem 0;
   position: absolute;
   right: 0;
@@ -778,6 +779,7 @@ p.tag-cloud-link > a {
   font-weight: 300;
   height: 100px;
   letter-spacing: 2px;
+  margin-top: 4rem;
   width: 100px;
   text-transform: uppercase;
   transition: all 0.15s ease;
@@ -809,6 +811,9 @@ p.tag-cloud-link > a {
   }
   #nwaneri-nav-container .wp-block-navigation {
     padding-top: 3rem;
+  }
+  #nwaneri-nav-container button {
+    margin-top: 0;
   }
 }
 

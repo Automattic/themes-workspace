@@ -46,18 +46,30 @@
 
 .is-style-media-text-hero.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content > h1 {
   color: #333366;
+  font-size: 3.555rem;
   font-family: 'Nova Cut';
-  font-size: 110px;
   font-weight: normal;
   margin: 0;
-  width: 70vw;
+}
+
+@media screen and (min-width: 608px) {
+  .is-style-media-text-hero.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content > h1 {
+    font-size: 6.111rem;
+    width: 70vw;
+  }
 }
 
 .is-style-media-text-hero.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content > p {
-  font-size: 40px;
+  font-size: 1.555rem;
   font-weight: lighter;
   margin-top: 0;
   width: 70%;
+}
+
+@media screen and (min-width: 608px) {
+  .is-style-media-text-hero.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content > p {
+    font-size: 2.222rem;
+  }
 }
 
 @media (max-width: 600px) {
