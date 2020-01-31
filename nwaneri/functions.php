@@ -40,9 +40,8 @@ if ( ! function_exists( 'nwaneri_support' ) ) :
 				'slug'  => 'cream-orange',
 				'color' => '#FF9D76',
 			)
-		) );
+		 ) );
 
-			wp_enqueue_style( 'nwaneri-editor-styles', get_template_directory_uri() . '/css/editor-styles.css' );
     }
 
     add_action( 'after_setup_theme', 'nwaneri_support' );
