@@ -119,6 +119,7 @@ if ( function_exists( 'register_block_style' ) ) {
  */
 function nwaneri_scripts() {
 	wp_enqueue_style( 'nwaneri-styles', get_template_directory_uri() . '/css/style.css' );
-	/* wp_enqueue_style( 'nwaneri-fonts', nwaneri_fonts_url() ); */
+	wp_enqueue_script( 'nwaneri-nav-script', get_template_directory_uri() . '/assets/scripts/navigation.js', [], false, true);
 }
+
 add_action( 'wp_enqueue_scripts', 'nwaneri_scripts' );
