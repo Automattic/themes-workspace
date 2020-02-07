@@ -1,0 +1,12 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+
+// Abstracts
+// - Mixins, variables and functions
+@import "sass/abstracts/config-global";
+
+.editor-styles-wrapper {
+	// global variables
+	@include global-variables;
+}

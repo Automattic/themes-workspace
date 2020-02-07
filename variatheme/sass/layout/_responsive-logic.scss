@@ -1,0 +1,36 @@
+/**
+ * Page Layout Styles & Repsonsive Styles
+ */
+
+/* Responsive width-content overrides */
+$content-width-flex: 100%;
+$content-width-sm: calc( #{$breakpoint-sm} - (2 * var(--global--spacing-unit)) );
+$content-width-md: calc( #{$breakpoint-md} - (2 * var(--global--spacing-unit)) );
+$content-width-lg: calc( #{$breakpoint-lg} - (2 * var(--global--spacing-unit)) );
+$content-width-xl: calc( #{$breakpoint-xl} - (2 * var(--global--spacing-unit)) );
+$content-width-xxl: calc( #{$breakpoint-xxl} - (2 * var(--global--spacing-unit)) );
+
+:root {
+
+	--global--width-content: #{$content-width-flex};
+
+	@include media(mobile) {
+		--global--width-content: #{$content-width-sm};
+	}
+
+	@include media(tablet) {
+		--global--width-content: #{$content-width-md};
+	}
+
+	@include media(laptop) {
+		--global--width-content: #{$content-width-lg};
+	}
+
+	@include media(desktop) {
+		--global--width-content: #{$content-width-lg};
+	}
+
+	@include media(wide) {
+		--global--width-content: #{$content-width-lg};
+	}
+}

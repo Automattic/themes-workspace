@@ -1,0 +1,48 @@
+{
+  "name": "variatheme",
+  "version": "1.0.0",
+  "description": "Varia Parent Theme",
+  "bugs": {
+    "url": "https://github.com/Automattic/variatheme/issues"
+  },
+  "homepage": "https://github.com/Automattic/variatheme#readme",
+  "devDependencies": {
+    "@wordpress/browserslist-config": "^2.2.2",
+    "autoprefixer": "^9.5.1",
+    "chokidar-cli": "^1.2.2",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2",
+    "postcss-focus-within": "^3.0.0",
+    "rtlcss": "^2.4.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "scripts": {
+    "start": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "build:style": "node-sass style.scss style.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style.css",
+    "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-editor.css",
+    "build:style-editor-variables": "node-sass style-editor-variables.scss style-editor-variables.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-editor-variables.css",
+    "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-editor-customizer.css",
+    "build:woocommerce": "node-sass style-woocommerce.scss style-woocommerce.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-woocommerce.css",
+    "build:woocommerce-rtl": "rtlcss style-woocommerce.css style-woocommerce-rtl.css",
+    "build:rtl": "rtlcss style.css style-rtl.css",
+    "build:print": "node-sass print.scss print.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r print.css",
+    "build": "run-p \"build:*\"",
+    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+  }
+}

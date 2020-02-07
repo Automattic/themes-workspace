@@ -1,0 +1,274 @@
+/**
+ * Set initial breakpoint variables
+ */
+$config-breakpoint: (
+	"sm": 560px,
+	"md": 640px,
+	"lg": 782px,
+	"xl": 1024px,
+	"xxl": 1280px,
+);
+
+/*
+ * Set horizontal padding
+ * - CSS Custom properties do not work width media queries
+ * - Must use a raw integer for $baseline-unit
+ * - var(--global--spacing-horizontal) == #{2 * $baseline-unit}
+ */
+$horizontal-padding: calc(2 * #{2 * $baseline-unit});
+
+/* Responsive width-content overrides */
+$content-width-flex: 100%;
+$content-width-sm: calc( #{map-deep-get($config-breakpoint, "sm")} - #{$horizontal-padding} );
+$content-width-md: calc( #{map-deep-get($config-breakpoint, "md")} - #{$horizontal-padding} );
+$content-width-lg: calc( #{map-deep-get($config-breakpoint, "lg")} - #{$horizontal-padding} );
+$content-width-xl: calc( #{map-deep-get($config-breakpoint, "xl")} - #{$horizontal-padding} );
+$content-width-xxl: calc( #{map-deep-get($config-breakpoint, "xxl")} - #{$horizontal-padding} );
+
+/**
+ * Responsive breakpoints mixin
+ */
+@mixin media( $res ) {
+
+	@if mobile-only == $res {
+		@media only screen and (max-width: #{$content-width-sm - 1}) {
+			@content;
+		}
+	}
+
+	@if mobile == $res {
+		@media only screen and (min-width: $content-width-sm) {
+			@content;
+		}
+	}
+
+	@if tablet == $res {
+		@media only screen and (min-width: $content-width-md) {
+			@content;
+		}
+	}
+
+	@if laptop == $res {
+		@media only screen and (min-width: $content-width-lg) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (min-width: $content-width-xl) {
+			@content;
+		}
+	}
+
+	@if wide == $res {
+		@media only screen and (min-width: $content-width-xxl) {
+			@content;
+		}
+	}
+}
+
+/**
+ * Align wide widths mixin
+ * - Sets .alignwide widths
+ */
+@mixin alignwide-width( $width: 100%, $multiplier...) {
+
+	@if length($multiplier) == 0 {
+		$multiplier: calc(8 * var(--global--spacing-horizontal));
+	}
+
+	width: calc(#{$width} + calc(2 * #{$multiplier}));
+	max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
+}
+
+@mixin alignwide-width-nested( $width: 100%, $multiplier...) {
+
+	@if length($multiplier) == 0 {
+		$multiplier: calc(8 * var(--global--spacing-horizontal));
+	}
+
+	width: calc(#{$width} + calc(2 * #{$multiplier}));
+	max-width: 100%;
+}
+
+/**
+ * Responsive %extends
+ * - Use placeholders for combining similar logic
+ */
+%responsive-aligndefault {
+
+	max-width: $content-width-flex;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media(mobile) {
+		max-width: $content-width-sm;
+	}
+
+	@include media(tablet) {
+		max-width: $content-width-md;
+	}
+
+	@include media(laptop) {
+		max-width: $content-width-lg;
+	}
+
+	@include media(desktop) {
+		max-width: $content-width-lg;
+	}
+
+	@include media(wide) {
+		max-width: $content-width-lg;
+	}
+}
+
+%responsive-alignwide {
+
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $content-width-flex;
+
+	@include media(mobile) {
+		max-width: $content-width-sm;
+	}
+
+	@include media(tablet) {
+		max-width: $content-width-md;
+	}
+
+	@include media(laptop) {
+		max-width: $content-width-lg;
+	}
+
+	/* Matches normal width until desktop breakpoint */
+
+	@include media(desktop) {
+		@include alignwide-width( $content-width-lg );
+	}
+
+	@include media(wide) {
+		@include alignwide-width( $content-width-lg );
+	}
+}
+
+%responsive-alignwide-nested {
+
+	@include alignwide-width-nested( $content-width-flex );
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media(mobile) {
+		@include alignwide-width-nested( $content-width-sm );
+	}
+
+	@include media(tablet) {
+		@include alignwide-width-nested( $content-width-md );
+	}
+
+	@include media(laptop) {
+		@include alignwide-width-nested( $content-width-lg );
+	}
+
+	@include media(desktop) {
+		@include alignwide-width-nested( $content-width-lg );
+	}
+
+	@include media(wide) {
+		@include alignwide-width-nested( $content-width-lg );
+	}
+}
+
+%responsive-alignfull {
+
+	margin-left: calc(-1 * var(--global--spacing-horizontal));
+	margin-right: calc(-1 * var(--global--spacing-horizontal));
+	width: calc(100% + #{$horizontal-padding});
+	max-width: calc(100% + #{$horizontal-padding});
+
+	/* Letting the box-model do most of the work here. */
+	@include media(mobile) {
+		margin-left: inherit;
+		margin-right: inherit;
+		width: inherit;
+		max-width: inherit;
+	}
+}
+
+%responsive-alignfull-nested {
+
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media(mobile) {
+		width: calc(100% - calc(2 * $horizontal-padding));
+		max-width: 100%;
+	}
+}
+
+%responsive-alignright {
+
+	/*rtl:ignore*/
+	margin-right: var(--global--spacing-horizontal);
+
+	@include media(mobile) {
+		/*rtl:ignore*/
+		margin-right: calc( 0.5 * (100vw - #{$content-width-sm}) );
+	}
+
+	@include media(tablet) {
+		/*rtl:ignore*/
+		margin-right: calc( 0.5 * (100vw - #{$content-width-md}) );
+	}
+
+	@include media(laptop) {
+		/*rtl:ignore*/
+		margin-right: calc( 0.5 * (100vw - #{$content-width-lg}) );
+	}
+
+	@include media(desktop) {
+		/*rtl:ignore*/
+		margin-right: calc( 0.5 * (100vw - #{$content-width-lg}) );
+	}
+
+	@include media(wide) {
+		/*rtl:ignore*/
+		margin-right: calc( 0.5 * (100vw - #{$content-width-lg}) );
+	}
+}
+
+%responsive-alignleft {
+
+	/*rtl:ignore*/
+	margin-left: var(--global--spacing-horizontal);
+
+	@include media(mobile) {
+		/*rtl:ignore*/
+		margin-left: calc( 0.5 * (100vw - #{$content-width-sm}) );
+	}
+
+	@include media(tablet) {
+		/*rtl:ignore*/
+		margin-left: calc( 0.5 * (100vw - #{$content-width-md}) );
+	}
+
+	@include media(laptop) {
+		/*rtl:ignore*/
+		margin-left: calc( 0.5 * (100vw - #{$content-width-lg}) );
+	}
+
+	@include media(desktop) {
+		/*rtl:ignore*/
+		margin-left: calc( 0.5 * (100vw - #{$content-width-lg}) );
+	}
+
+	@include media(wide) {
+		/*rtl:ignore*/
+		margin-left: calc( 0.5 * (100vw - #{$content-width-lg}) );
+	}
+}
+
+%responsive-align-container {
+
+}

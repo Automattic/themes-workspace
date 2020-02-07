@@ -1,0 +1,34 @@
+body {
+	color: var(--global--color-foreground);
+	background-color: var(--global--color-background);
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-root);
+	font-weight: normal;
+	line-height: var(--global--font-line-height-body);
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Set font size of title block the same as body.
+.editor-post-title__block {
+	font-size: var(--global--font-size-root);
+}
+
+p {
+	font-size: var(--global--font-size-base);
+	line-height: var(--global--font-line-height-body);
+}
+
+// Links styles
+a {
+	color: var(--global--color-primary);
+
+	&:hover {
+		color: var(--global--color-primary-hover);;
+	}
+}
+
+button,
+a {
+	cursor: pointer;
+}

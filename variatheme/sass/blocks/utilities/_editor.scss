@@ -1,0 +1,150 @@
+/**
+ * Editor Post Title
+ * - Needs a special styles
+ */
+
+.editor-post-title__block .editor-post-title__input {
+	color: var(--global--color-foreground);
+	font-family: var(--heading--font-family);
+	font-weight: var(--heading--font-weight);
+	font-size: var(--heading--font-size-h2);
+	letter-spacing: var(--heading--letter-spacing-h2);
+	line-height: var(--heading--line-height);
+}
+
+// Gutenberg text color options
+.has-text-color {}
+
+.has-primary-color[class] {
+	color: var(--global--color-primary) !important;
+}
+
+.has-secondary-color[class] {
+	color: var(--global--color-secondary) !important;
+}
+
+.has-foreground-color[class] {
+	color: var(--global--color-foreground) !important;
+}
+
+.has-foreground-light-color[class] {
+	color: var(--global--color-foreground-light) !important;
+}
+
+.has-foreground-dark-color[class] {
+	color: var(--global--color-foreground-dark) !important;
+}
+
+.has-background-light-color[class] {
+	color: var(--global--color-background-light) !important;
+}
+
+.has-background-dark-color[class] {
+	color: var(--global--color-background-dark) !important;
+}
+
+.has-background-color[class] {
+	color: var(--global--color-background) !important;
+}
+
+// Gutenberg background-color options
+.has-background {
+	&:not(.has-background-background-color) a,
+	p, h1, h2, h3, h4, h5, h6 {
+		color: currentColor;
+	}
+}
+
+.has-primary-background-color[class] {
+	background-color: var(--global--color-primary) !important;
+	color: var(--global--color-background);
+}
+
+.has-primary-background-color[class] {
+	background-color: var(--global--color-primary) !important;
+	color: var(--global--color-background);
+}
+
+.has-secondary-background-color[class] {
+	background-color: var(--global--color-secondary) !important;
+	color: var(--global--color-background);
+}
+
+.has-foreground-background-color[class] {
+	background-color: var(--global--color-foreground) !important;
+	color: var(--global--color-background);
+}
+
+.has-foreground-light-background-color[class] {
+	background-color: var(--global--color-foreground-light) !important;
+	color: var(--global--color-background);
+}
+
+.has-foreground-dark-background-color[class] {
+	background-color: var(--global--color-foreground-dark) !important;
+	color: var(--global--color-background);
+}
+
+.has-background-light-background-color[class] {
+	background-color: var(--global--color-background-light) !important;
+	color: var(--global--color-foreground);
+}
+
+.has-background-dark-background-color[class] {
+	background-color: var(--global--color-background-dark) !important;
+	color: var(--global--color-foreground);
+}
+
+.has-background-background-color[class] {
+	background-color: var(--global--color-background) !important;
+	color: var(--global--color-foreground);
+}
+
+// Gutenberg Font-size utility classes
+.is-small-text,
+.has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: var(--global--font-size-md);
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+}
+
+// Drop cap
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--heading--font-family);
+	font-size: calc(2 * var(--heading--font-size-h1));
+	font-weight: var(--heading--font-weight);
+}
+
+/**
+ * Spacing Overrides
+ */
+
+[data-block] {
+	margin-top: calc( 0.666 * var(--global--spacing-vertical) );
+	margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
+
+	@include media(mobile) {
+		margin-top: var(--global--spacing-vertical);
+		margin-bottom: var(--global--spacing-vertical);
+	}
+}
+
+@import "spacing-overrides";

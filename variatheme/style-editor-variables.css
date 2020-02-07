@@ -1,0 +1,67 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+/* Vertical Rhythm Multiplier */
+/* Typescale Multipliers */
+.editor-styles-wrapper {
+	/* Font Family */
+	--global--font-primary: sans-serif;
+	--global--font-secondary: serif;
+	--global--font-code: monospace, monospace;
+	--global--font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	/* Font Size */
+	--global--font-size-root: 18px;
+	--global--font-size-ratio: 1.2;
+	--global--font-size-base: 1rem;
+	--global--font-size-xs: calc(var(--global--font-size-base) / var(--global--font-size-ratio) / var(--global--font-size-ratio));
+	--global--font-size-sm: calc(var(--global--font-size-base) / var(--global--font-size-ratio));
+	--global--font-size-md: calc(var(--global--font-size-base) * var(--global--font-size-ratio));
+	--global--font-size-lg: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	/* Line Height */
+	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-body: 1.78;
+	--global--line-height-heading: 1.125;
+	/* Colors */
+	--global--color-primary: blue;
+	--global--color-primary-hover: indigo;
+	--global--color-secondary: red;
+	--global--color-secondary-hover: darkred;
+	--global--color-black: black;
+	--global--color-white: white;
+	--global--color-foreground: #444444;
+	--global--color-foreground-light: #767676;
+	--global--color-foreground-dark: #111111;
+	--global--color-background: #FFFFFF;
+	--global--color-background-light: #FAFAFA;
+	--global--color-background-dark: #DDDDDD;
+	--global--color-border: #DDDDDD;
+	--global--color-border-light: #FAFAFA;
+	--global--color-border-dark: #AAAAAA;
+	--global--color-text-selection: lightblue;
+	--global--color-alert-success: yellowgreen;
+	--global--color-alert-info: skyblue;
+	--global--color-alert-warning: gold;
+	--global--color-alert-error: salmon;
+	/* Spacing */
+	--global--spacing-unit: 16px;
+	--global--spacing-measure: unset;
+	--global--spacing-horizontal: 16px;
+	--global--spacing-vertical: 32px;
+	/* Elevation */
+	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-none: 0px 0px 0px 0px transparent;
+	/* Other */
+	--global--border-radius-sm: 9px;
+	--global--border-radius-md: 13.5px;
+	--global--border-radius-lg: 18px;
+	--global--border-radius-pill: 180px;
+	--global--border-radius-none: 0;
+}

@@ -1,0 +1,71 @@
+:root {
+
+	// Colors
+	--button--color-text: var(--global--color-background);
+	--button--color-text-hover: var(--button--color-text);
+	--button--color-background: var(--global--color-primary);
+	--button--color-background-hover: var(--global--color-primary-hover);
+
+	// Fonts
+	--button--font-family: var(--global--font-ui);
+	--button--font-size: var(--global--font-size-base);
+	--button--font-weight: bold;
+	--button--line-height: 1;
+
+	// Borders
+	--button--border-width: 2px;
+	--button--border-radius: var(--global--border-radius-sm);
+
+	// Spacing
+	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
+	--button--padding-horizontal: var(--global--spacing-horizontal);
+}
+
+/**
+ * Button
+ */
+button,
+.button,
+input[type="submit"],
+.wp-block-button__link,
+.wp-block-file__button {
+	// Extend button style
+	@extend %button-style;
+}
+
+/**
+ * Block Options
+ */
+.wp-block-button {
+
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	font-weight: var(--button--font-weight);
+	line-height: var(--button--line-height);
+
+	// Outline Style
+	&.is-style-outline {
+
+		.wp-block-button__link {
+			color: var(--button--color-background);
+			background: transparent;
+			border: var(--button--border-width) solid currentcolor;
+			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+
+			&:active {
+				color: var(--button--color-background);
+			}
+
+			&:hover,
+			&:focus,
+			&.has-focus {
+				color: var(--button--color-background-hover);
+			}
+		}
+	}
+
+	// Squared Style
+	&.is-style-squared .wp-block-button__link {
+		border-radius: 0;
+	}
+}

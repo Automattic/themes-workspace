@@ -1,0 +1,22 @@
+/**
+ * Author
+ */
+
+/* Author description */
+
+.author-bio {
+
+	.site-main > article > & {
+		margin-top: calc(2 * var(--global--spacing-vertical));
+	}
+
+	.author-title {
+		font-size: var(--heading--font-size-h3);
+	}
+
+	.author-description {
+		.author-link {
+
+		}
+	}
+}

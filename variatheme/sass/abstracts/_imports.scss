@@ -1,0 +1,13 @@
+/**
+ * Abstracts
+ * - Mixins, variables and functions
+ */
+
+@import "mixins";
+@import "functions";
+@import "config-global";
+/* Print initial global variables */
+:root {
+	@include global-variables;
+}
+@import "sass/abstracts/responsive-logic";

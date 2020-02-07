@@ -1,0 +1,49 @@
+:root {
+	--social-nav--color-link: var(--global--color-foreground);
+	--social-nav--color-link-hover: var(--global--color-primary-hover);
+	--social-nav--padding: calc( 0.5 * var(--primary-nav--padding) );
+}
+
+.social-navigation {
+
+// 	margin-top: calc(-1.5 * var(--global--spacing-vertical));
+
+	& > div > ul {
+		align-content: center;
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		& > li:first-of-type > a {
+			padding-left: 0;
+		}
+
+		& > li:last-of-type > a {
+			padding-right: 0;
+		}
+	}
+
+	a {
+		color: var(--social-nav--color-link);
+		display: inline-block;
+		padding: 0 var(--social-nav--padding);
+
+		&:hover {
+			color: var(--social-nav--color-link-hover);
+		}
+	}
+
+	svg {
+		fill: currentColor;
+		vertical-align: middle;
+	}
+}
+
+.site-title + .social-navigation,
+.site-description + .social-navigation {
+
+	@include media(tablet) {
+
+	}
+}

@@ -1,0 +1,65 @@
+:root {
+
+	// Colors
+	--button--color-text: var(--global--color-background);
+	--button--color-text-hover: var(--button--color-text);
+	--button--color-background: var(--global--color-primary);
+	--button--color-background-hover: var(--global--color-primary-hover);
+
+	// Fonts
+	--button--font-family: var(--global--font-ui);
+	--button--font-size: var(--global--font-size-base);
+	--button--font-weight: bold;
+	--button--line-height: 1;
+
+	// Borders
+	--button--border-width: 2px;
+	--button--border-radius: var(--global--border-radius-sm);
+
+	// Spacing
+	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
+	--button--padding-horizontal: var(--global--spacing-horizontal);
+}
+
+.wp-block-button {
+
+	/* Default Style */
+	.wp-block-button__link {
+		color: var(--button--color-text);
+		font-weight: var(--button--font-weight);
+		font-family: var(--button--font-family);
+		font-size: var(--button--font-size);
+		line-height: var(--button--line-height);
+		background-color: var(--button--color-background);
+		border-radius: var(--button--border-radius);
+		padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+
+		&:hover,
+		&:focus,
+		&.has-focus {
+			color: var(--button--color-text-hover);
+			background-color: var(--button--color-background-hover);
+		}
+	}
+
+	/* Outline Style */
+	&.is-style-outline {
+
+		.wp-block-button__link {
+			color: var(--button--color-background);
+			background: transparent;
+			border: 2px solid currentcolor;
+
+			&:hover,
+			&:focus,
+			&.has-focus {
+				color: var(--button--color-background-hover);
+			}
+		}
+	}
+
+	/* Squared Style */
+	&.is-style-squared .wp-block-button__link {
+		border-radius: 0;
+	}
+}
