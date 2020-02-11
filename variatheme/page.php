@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 

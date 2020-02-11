@@ -25,7 +25,7 @@ function wps_deregister_styles() {
  * @param array $classes Classes for the body element.
  * @return array
  */
-function variatheme_body_classes( $classes ) {
+function varya_body_classes( $classes ) {
 
 	if ( is_singular() ) {
 		// Adds `singular` to singular pages.
@@ -36,39 +36,39 @@ function variatheme_body_classes( $classes ) {
 	}
 
 	// Adds a class if image filters are enabled.
-	if ( variatheme_image_filters_enabled() ) {
+	if ( varya_image_filters_enabled() ) {
 		$classes[] = 'image-filters-enabled';
 	}
 
 	return $classes;
 }
-add_filter( 'body_class', 'variatheme_body_classes' );
+add_filter( 'body_class', 'varya_body_classes' );
 
 /**
  * Adds custom class to the array of posts classes.
  */
-function variatheme_post_classes( $classes, $class, $post_id ) {
+function varya_post_classes( $classes, $class, $post_id ) {
 	$classes[] = 'entry';
 
 	return $classes;
 }
-add_filter( 'post_class', 'variatheme_post_classes', 10, 3 );
+add_filter( 'post_class', 'varya_post_classes', 10, 3 );
 
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function variatheme_pingback_header() {
+function varya_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'variatheme_pingback_header' );
+add_action( 'wp_head', 'varya_pingback_header' );
 
 /**
  * Changes comment form default fields.
  */
-function variatheme_comment_form_defaults( $defaults ) {
+function varya_comment_form_defaults( $defaults ) {
 	$comment_field = $defaults['comment_field'];
 
 	// Adjust height of comment form.
@@ -76,61 +76,61 @@ function variatheme_comment_form_defaults( $defaults ) {
 
 	return $defaults;
 }
-add_filter( 'comment_form_defaults', 'variatheme_comment_form_defaults' );
+add_filter( 'comment_form_defaults', 'varya_comment_form_defaults' );
 
 /**
  * Filters the default archive titles.
  */
-function variatheme_get_the_archive_title() {
+function varya_get_the_archive_title() {
 	if ( is_category() ) {
-		$title = __( 'Category Archives: ', 'variatheme' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		$title = __( 'Category Archives: ', 'varya' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} elseif ( is_tag() ) {
-		$title = __( 'Tag Archives: ', 'variatheme' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		$title = __( 'Tag Archives: ', 'varya' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} elseif ( is_author() ) {
-		$title = __( 'Author Archives: ', 'variatheme' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
+		$title = __( 'Author Archives: ', 'varya' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
 	} elseif ( is_year() ) {
-		$title = __( 'Yearly Archives: ', 'variatheme' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'variatheme' ) ) . '</span>';
+		$title = __( 'Yearly Archives: ', 'varya' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'varya' ) ) . '</span>';
 	} elseif ( is_month() ) {
-		$title = __( 'Monthly Archives: ', 'variatheme' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'variatheme' ) ) . '</span>';
+		$title = __( 'Monthly Archives: ', 'varya' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'varya' ) ) . '</span>';
 	} elseif ( is_day() ) {
-		$title = __( 'Daily Archives: ', 'variatheme' ) . '<span class="page-description">' . get_the_date() . '</span>';
+		$title = __( 'Daily Archives: ', 'varya' ) . '<span class="page-description">' . get_the_date() . '</span>';
 	} elseif ( is_post_type_archive() ) {
 		$cpt = get_post_type_object( get_queried_object()->name );
 		/* translators: %s: Post type singular name */
-		$title = sprintf( esc_html__( '%s Archives', 'variatheme' ),
+		$title = sprintf( esc_html__( '%s Archives', 'varya' ),
 			$cpt->labels->singular_name
 		);
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: %s: Taxonomy singular name */
-		$title = sprintf( esc_html__( '%s Archives', 'variatheme' ),
+		$title = sprintf( esc_html__( '%s Archives', 'varya' ),
 			$tax->labels->singular_name
 		);
 	} else {
-		$title = __( 'Archives:', 'variatheme' );
+		$title = __( 'Archives:', 'varya' );
 	}
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'variatheme_get_the_archive_title' );
+add_filter( 'get_the_archive_title', 'varya_get_the_archive_title' );
 
 /**
  * Determines if post thumbnail can be displayed.
  */
-function variatheme_can_show_post_thumbnail() {
-	return apply_filters( 'variatheme_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
+function varya_can_show_post_thumbnail() {
+	return apply_filters( 'varya_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
 }
 
 /**
  * Returns true if image filters are enabled on the theme options.
  */
-function variatheme_image_filters_enabled() {
+function varya_image_filters_enabled() {
 	return 0 !== get_theme_mod( 'image_filter', 1 );
 }
 
 /**
  * Returns the size for avatars used in the theme.
  */
-function variatheme_get_avatar_size() {
+function varya_get_avatar_size() {
 	return 60;
 }
 
@@ -139,7 +139,7 @@ function variatheme_get_avatar_size() {
  *
  * @see get_comment_class()
  */
-function variatheme_is_comment_by_post_author( $comment = null ) {
+function varya_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 		$user = get_userdata( $comment->user_id );
 		$post = get_post( $comment->comment_post_ID );
@@ -158,7 +158,7 @@ function variatheme_is_comment_by_post_author( $comment = null ) {
  *
  * @ref https://www.w3.org/WAI/tutorials/menus/flyout/
  */
-function variatheme_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+function varya_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
 	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
 	$item_has_children = in_array( 'menu-item-has-children', $item->classes );
@@ -169,17 +169,17 @@ function variatheme_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
 	return $atts;
 }
-add_filter( 'nav_menu_link_attributes', 'variatheme_nav_menu_link_attributes', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'varya_nav_menu_link_attributes', 10, 4 );
 
 /*
  * Create the continue reading link
  */
-function variatheme_continue_reading_link() {
+function varya_continue_reading_link() {
 
 	if ( ! is_admin() ) {
 		$continue_reading = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading %s', 'variatheme' ), array( 'span' => array( 'class' => array() ) ) ),
+			wp_kses( __( 'Continue reading %s', 'varya' ), array( 'span' => array( 'class' => array() ) ) ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		);
 
@@ -188,10 +188,10 @@ function variatheme_continue_reading_link() {
 }
 
 // Filter the excerpt more link
-add_filter( 'excerpt_more', 'variatheme_continue_reading_link' );
+add_filter( 'excerpt_more', 'varya_continue_reading_link' );
 
 // Filter the content more link
-add_filter( 'the_content_more_link', 'variatheme_continue_reading_link' );
+add_filter( 'the_content_more_link', 'varya_continue_reading_link' );
 
 /**
  * Add a dropdown icon to top-level menu items.
@@ -203,7 +203,7 @@ add_filter( 'the_content_more_link', 'variatheme_continue_reading_link' );
  * @return string Nav menu item start element.
  * Add a dropdown icon to top-level menu items
  */
-function variatheme_add_dropdown_icons( $output, $item, $depth, $args ) {
+function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	// Only add class to 'top level' items on the 'primary' menu.
 	if ( ! isset( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
@@ -215,7 +215,7 @@ function variatheme_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// @todo Only do this for nested submenus? If on a first-level submenu, then really the link could be "#" since the desire is to remove the target entirely.
 		$link = sprintf(
 			'<button class="menu-item-link-return" tabindex="-1">%s',
-			variatheme_get_icon_svg( 'chevron_left', 24 )
+			varya_get_icon_svg( 'chevron_left', 24 )
 		);
 
 		// replace opening <a> with <button>
@@ -237,7 +237,7 @@ function variatheme_add_dropdown_icons( $output, $item, $depth, $args ) {
 	} elseif ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = variatheme_get_icon_svg( 'keyboard_arrow_down', 24 );
+		$icon = varya_get_icon_svg( 'keyboard_arrow_down', 24 );
 
 		$output .= sprintf(
 			'<button class="submenu-expand" tabindex="-1">%s</button>',
@@ -247,7 +247,7 @@ function variatheme_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	return $output;
 }
-// add_filter( 'walker_nav_menu_start_el', 'variatheme_add_dropdown_icons', 10, 4 );
+// add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
 
 /**
  * Create a nav menu item to be displayed on mobile to navigate from submenu back to the parent.
@@ -258,7 +258,7 @@ function variatheme_add_dropdown_icons( $output, $item, $depth, $args ) {
  * @param object $args              Nav menu args.
  * @return array Amended nav menu items.
  */
-function variatheme_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
+function varya_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
 	static $pseudo_id = 0;
 	if ( ! isset( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
 		return $sorted_menu_items;
@@ -282,12 +282,12 @@ function variatheme_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args 
 
 	return $amended_menu_items;
 }
-// add_filter( 'wp_nav_menu_objects', 'variatheme_add_mobile_parent_nav_menu_items', 10, 2 );
+// add_filter( 'wp_nav_menu_objects', 'varya_add_mobile_parent_nav_menu_items', 10, 2 );
 
 /**
  * Convert HSL to HEX colors
  */
-function variatheme_hsl_hex( $h, $s, $l, $to_hex = true ) {
+function varya_hsl_hex( $h, $s, $l, $to_hex = true ) {
 
 	$h /= 360;
 	$s /= 100;

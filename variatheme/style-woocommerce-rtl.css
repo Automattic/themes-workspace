@@ -7,6 +7,20 @@
  * Abstracts
  * - Functions and config
  */
+/**
+ * Abstracts
+ * - Mixins, variables and functions
+ */
+/* Vertical Rhythm Multiplier */
+/* Typescale Multipliers */
+/* Collect Root Variables??? */
+/**
+ * Responsive breakpoints mixin
+ */
+/**
+ * Crop Text Boundry
+ * - Sets a fixed-width on content within alignwide and alignfull blocks
+ */
 /* Sass Functions go here */
 /**
  * Map deep get
@@ -80,54 +94,14 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 // --> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
 
  */
-/* Vertical Rhythm Multiplier */
-/* Typescale Multipliers */
-/**
- * WooCommerce Abstracts
- */
-/**
- * WooCommerce Variables
- */
-:root {
-	--wc--wrapper-width: default;
-	--wc--table--border-color: var(--global--color-border);
-	--wc--table--border-radius: 0;
-	--wc--table--border-width: 1px;
-	--wc--table--padding: var(--global--spacing-unit);
-	--wc--tabs--border-color: var(--global--color-border);
-	--wc--tabs--border-radius: 10px;
-	--wc--tabs--border-width: 1px;
-	--wc--tabs--padding: var(--global--spacing-horizontal);
-	--wc--mini-cart--color-background: var(--global--color-background);
-	--wc--mini-cart--color-text: var(--global--color-foreground);
-	--wc--mini-cart--color-subtotal: var(--global--color-foreground);
-	--wc--mini-cart--color-count: var(--global--color-foreground-light);
-	--wc--mini-cart--color-border: var(--global--color-border);
-	--wc--mini-cart--button-text-color: var(--global--color-foreground);
-	--wc--mini-cart--button-background-color: var(--button--color-background);
-	--wc--mini-cart--width: calc(25 * var(--global--spacing-unit));
-	--wc--star-rating--color: var(--global--color-alert-warning);
-}
-
-/**
- * Varia Mixins
- */
-/* Collect Root Variables??? */
-/**
- * Crop Text Boundry
- * - Sets a fixed-width on content within alignwide and alignfull blocks
- */
-/**
- * Varia Responsive Logic
- */
 /**
  * Set initial breakpoint variables
  */
 /*
  * Set horizontal padding
  * - CSS Custom properties do not work width media queries
- * - Must use a raw integer for $baseline-unit
- * - var(--global--spacing-horizontal) == 16px
+ * - Must use a raw integer for \$baseline-unit
+ * - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
  */
 /* Responsive width-content overrides */
 /**
@@ -142,7 +116,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
  * - Use placeholders for combining similar logic
  */
 /**
- * Varia Extends
+ * Varya Extends
  */
 /**
  * Button Placeholder style
@@ -764,7 +738,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: calc( 560px - calc(2 * 16px)) - 1) {
+@media only screen and (max-width: calc( 560px - 32px) - 1) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
@@ -778,7 +752,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	}
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - 32px)) {
 	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
 		margin-left: calc(2 * var(--global--spacing-unit));
 	}
@@ -813,7 +787,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - 32px)) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
 		display: inline-block;
 	}
@@ -826,7 +800,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 	padding: var(--primary-nav--padding) 0;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - 32px)) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 		max-width: calc(20 * var(--global--spacing-horizontal));
 		padding: var(--primary-nav--padding);
@@ -905,7 +879,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-mini-cart__total 
 	font-size: var(--primary-nav--font-size);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - 32px)) {
 	body[class*="woocommerce"] #page .main-navigation > div > ul > li.woocommerce-menu-item > .sub-menu {
 		right: auto;
 		left: 0;
@@ -1487,7 +1461,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media only screen and (min-width: calc( 1024px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1024px - 32px)) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -1772,7 +1746,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - 32px)) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -1792,7 +1766,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - 32px)) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}
@@ -2068,7 +2042,7 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 /**
  * Filter by Product List Widgets
  */
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - 32px)) {
 	body[class*="woocommerce"] #page .widget.woocommerce ul.product_list_widget:not(.woocommerce-mini-cart) {
 		display: flex;
 		flex-wrap: wrap;

@@ -3,7 +3,7 @@
  * Displays header site branding
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 ?>

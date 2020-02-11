@@ -3,7 +3,7 @@
  * SVG Icons class
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 

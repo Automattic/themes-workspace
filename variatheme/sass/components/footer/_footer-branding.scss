@@ -1,10 +1,15 @@
-:root {
-	--footer--color-text: var(--global--color-foreground-light);
-	--footer--color-link: var(--global--color-primary);
-	--footer--color-link-hover: var(--global--color-primary-hover);
+// Footer
 
-	--footer--font-family: var(--global--font-primary);
-	--footer--font-size: var(--global--font-size-sm);
+.site-footer {
+
+	overflow: hidden;
+
+	@include media(tablet) {
+		align-items: flex-end;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 }
 
 // Footer Branding

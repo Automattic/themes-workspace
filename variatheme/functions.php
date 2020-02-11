@@ -1,23 +1,23 @@
 <?php
 /**
- * variatheme functions and definitions
+ * varya functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 
 /**
- * variatheme only works in WordPress 4.7 or later.
+ * varya only works in WordPress 4.7 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
 
-if ( ! function_exists( 'variatheme_setup' ) ) :
+if ( ! function_exists( 'varya_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -25,14 +25,14 @@ if ( ! function_exists( 'variatheme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function variatheme_setup() {
+	function varya_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on variatheme, use a find and replace
-		 * to change 'variatheme' to the name of your theme in all the template files.
+		 * If you're building a theme based on varya, use a find and replace
+		 * to change 'varya' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'variatheme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'varya', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -56,9 +56,9 @@ if ( ! function_exists( 'variatheme_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary Navigation', 'variatheme' ),
-				'footer' => __( 'Footer Navigation', 'variatheme' ),
-				'social' => __( 'Social Links Navigation', 'variatheme' ),
+				'menu-1' => __( 'Primary Navigation', 'varya' ),
+				'footer' => __( 'Footer Navigation', 'varya' ),
+				'social' => __( 'Social Links Navigation', 'varya' ),
 			)
 		);
 
@@ -106,70 +106,69 @@ if ( ! function_exists( 'variatheme_setup' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'style-editor.css' );
-		add_editor_style( 'child-theme-alt-style.css' ); // this will get loaded in a child theme
 
 		// Add custom editor font sizes.
 		add_theme_support(
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Small', 'variatheme' ),
-					'shortName' => __( 'S', 'variatheme' ),
+					'name'      => __( 'Small', 'varya' ),
+					'shortName' => __( 'S', 'varya' ),
 					'size'      => 16,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => __( 'Normal', 'variatheme' ),
-					'shortName' => __( 'M', 'variatheme' ),
+					'name'      => __( 'Normal', 'varya' ),
+					'shortName' => __( 'M', 'varya' ),
 					'size'      => 18,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => __( 'Large', 'variatheme' ),
-					'shortName' => __( 'L', 'variatheme' ),
+					'name'      => __( 'Large', 'varya' ),
+					'shortName' => __( 'L', 'varya' ),
 					'size'      => 32,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'variatheme' ),
-					'shortName' => __( 'XL', 'variatheme' ),
+					'name'      => __( 'Huge', 'varya' ),
+					'shortName' => __( 'XL', 'varya' ),
 					'size'      => 48,
 					'slug'      => 'huge',
 				),
 			)
 		);
 
-		$default_hue     = variatheme_get_default_hue();
-		$saturation      = variatheme_get_default_saturation();
-		$lightness       = variatheme_get_default_lightness();
-		$lightness_hover = variatheme_get_default_lightness_hover();
+		$default_hue     = varya_get_default_hue();
+		$saturation      = varya_get_default_saturation();
+		$lightness       = varya_get_default_lightness();
+		$lightness_hover = varya_get_default_lightness_hover();
 
 		// Editor color palette.
 		add_theme_support(
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Primary', 'variatheme' ),
+					'name'  => __( 'Primary', 'varya' ),
 					'slug'  => 'primary',
-					'color' => variatheme_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness ),
+					'color' => varya_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness ),
 				),
 				array(
-					'name'  => __( 'Secondary', 'variatheme' ),
+					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => variatheme_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness_hover ),
+					'color' => varya_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness_hover ),
 				),
 				array(
-					'name'  => __( 'Dark Gray', 'variatheme' ),
+					'name'  => __( 'Dark Gray', 'varya' ),
 					'slug'  => 'foreground',
 					'color' => '#444444',
 				),
 				array(
-					'name'  => __( 'Light Gray', 'variatheme' ),
+					'name'  => __( 'Light Gray', 'varya' ),
 					'slug'  => 'foreground-light',
 					'color' => '#767676',
 				),
 				array(
-					'name'  => __( 'White', 'variatheme' ),
+					'name'  => __( 'White', 'varya' ),
 					'slug'  => 'background',
 					'color' => '#FFFFFF',
 				),
@@ -180,29 +179,28 @@ if ( ! function_exists( 'variatheme_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 	}
 endif;
-add_action( 'after_setup_theme', 'variatheme_setup' );
+add_action( 'after_setup_theme', 'varya_setup' );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function variatheme_widgets_init() {
+function varya_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer', 'variatheme' ),
+			'name'          => __( 'Footer', 'varya' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your footer.', 'variatheme' ),
+			'description'   => __( 'Add widgets here to appear in your footer.', 'varya' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
 	);
-
 }
-add_action( 'widgets_init', 'variatheme_widgets_init' );
+add_action( 'widgets_init', 'varya_widgets_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -211,33 +209,36 @@ add_action( 'widgets_init', 'variatheme_widgets_init' );
  *
  * @global int $content_width Content width.
  */
-function variatheme_content_width() {
+function varya_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'variatheme_content_width', 750 );
+	$GLOBALS['content_width'] = apply_filters( 'varya_content_width', 750 );
 }
-add_action( 'after_setup_theme', 'variatheme_content_width', 0 );
+add_action( 'after_setup_theme', 'varya_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function variatheme_scripts() {
+function varya_scripts() {
+	// Theme variables
+	wp_enqueue_style( 'varya-variables-style', get_template_directory_uri() . '/variables.css', array(), wp_get_theme()->get( 'Version' ) );
+
 	// Theme styles
-	wp_enqueue_style( 'variatheme-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'varya-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles
-	wp_style_add_data( 'variatheme-style', 'rtl', 'replace' );
+	wp_style_add_data( 'varya-style', 'rtl', 'replace' );
 
 	// Print styles
-	wp_enqueue_style( 'variatheme-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	wp_enqueue_style( 'varya-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	// Threaded comment reply styles
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'variatheme_scripts' );
+add_action( 'wp_enqueue_scripts', 'varya_scripts' );
 
 /**
  * Fix skip link focus in IE11.
@@ -247,7 +248,7 @@ add_action( 'wp_enqueue_scripts', 'variatheme_scripts' );
  *
  * @link https://git.io/vWdr2
  */
-function variatheme_skip_link_focus_fix() {
+function varya_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
 	?>
 	<script>
@@ -255,29 +256,29 @@ function variatheme_skip_link_focus_fix() {
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'variatheme_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 
 /**
  * Enqueue theme styles for the block editor.
  */
-function variatheme_editor_theme_variables() {
+function varya_editor_theme_variables() {
 
 	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'variatheme-editor-variables', get_theme_file_uri( 'style-editor-variables.css' ), false, wp_get_theme()->get( 'Version' ), 'all' );
+	wp_enqueue_style( 'varya-editor-variables', get_theme_file_uri( 'variables-editor.css' ), false, wp_get_theme()->get( 'Version' ), 'all' );
 
 	if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
 		// Add custom colors to Gutenberg.
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-		$custom_colors = variatheme_custom_colors_css();
-		wp_add_inline_style( 'variatheme-editor-variables', variatheme_custom_colors_css() );
+		$custom_colors = varya_custom_colors_css();
+		wp_add_inline_style( 'varya-editor-variables', $custom_colors );
 	}
 }
-add_action( 'enqueue_block_editor_assets', 'variatheme_editor_theme_variables' );
+add_action( 'enqueue_block_editor_assets', 'varya_editor_theme_variables' );
 
 /**
  * Display custom color CSS in customizer and on frontend.
  */
-function variatheme_colors_css_wrap() {
+function varya_colors_css_wrap() {
 
 	// Only bother if we haven't customized the color.
 	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'primary_color', 'default' ) ) || is_admin() ) {
@@ -286,18 +287,18 @@ function variatheme_colors_css_wrap() {
 
 	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 
-	$primary_color = variatheme_get_default_hue();
+	$primary_color = varya_get_default_hue();
 	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
 		$primary_color = get_theme_mod( 'primary_color_hue', $primary_color );
 	}
 	?>
 
 	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
-		<?php echo variatheme_custom_colors_css(); ?>
+		<?php echo varya_custom_colors_css(); ?>
 	</style>
 	<?php
 }
-add_action( 'wp_head', 'variatheme_colors_css_wrap' );
+add_action( 'wp_head', 'varya_colors_css_wrap' );
 
 /**
  * Default color filters.
@@ -307,12 +308,12 @@ require get_template_directory() . '/inc/color-filters.php';
 /**
  * SVG Icons class.
  */
-require get_template_directory() . '/classes/class-variatheme-svg-icons.php';
+require get_template_directory() . '/classes/class-varya-svg-icons.php';
 
 /**
  * Custom Comment Walker template.
  */
-require get_template_directory() . '/classes/class-variatheme-walker-comment.php';
+require get_template_directory() . '/classes/class-varya-walker-comment.php';
 
 /**
  * Enhance the theme by hooking into WordPress.
@@ -333,3 +334,10 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}

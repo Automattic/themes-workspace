@@ -1,8 +1,20 @@
 /* Collect Root Variables??? */
-@mixin local-root-variables {
-    :root {
-        @content;
-    }
+/**
+ * Responsive breakpoints mixin
+ */
+@mixin add_variables( $view: frontend ) {
+
+	@if frontend == $view {
+		:root {
+			@content;
+		}
+	}
+
+	@if editor == $view {
+		.editor-styles-wrapper {
+			@content;
+		}
+	}
 }
 
 /**

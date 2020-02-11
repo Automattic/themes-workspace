@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 
@@ -20,7 +20,7 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-		<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'variatheme' ); ?>">
+		<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'varya' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(
@@ -38,10 +38,10 @@
 			<?php if ( ! empty( $blog_info ) ) : ?>
 				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><span class="comma">,</span>
 			<?php endif; ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'variatheme' ) ); ?>" class="imprint">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'varya' ) ); ?>" class="imprint">
 				<?php
 				/* translators: %s: WordPress. */
-				printf( __( 'Proudly powered by %s.', 'variatheme' ), 'WordPress' );
+				printf( __( 'Proudly powered by %s.', 'varya' ), 'WordPress' );
 				?>
 			</a>
 			<?php

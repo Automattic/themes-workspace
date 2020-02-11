@@ -1,9 +1,3 @@
-:root {
-	--separator--border-color: var(--global--color-border);
-	--separator--height: 2px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
-}
-
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;

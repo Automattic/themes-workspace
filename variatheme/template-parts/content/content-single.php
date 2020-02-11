@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 
@@ -17,12 +17,12 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
-			<?php variatheme_entry_meta(); ?>
+			<?php varya_entry_meta(); ?>
 		</div><!-- .meta-info -->
 		<?php endif; ?>
 	</header>
 
-	<?php variatheme_post_thumbnail(); ?>
+	<?php varya_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -30,7 +30,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'variatheme' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'varya' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -43,7 +43,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'variatheme' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'varya' ),
 				'after'  => '</div>',
 			)
 		);
@@ -51,7 +51,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php variatheme_entry_footer(); ?>
+		<?php varya_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

@@ -2,7 +2,8 @@
  * WooCommerce Variables
  */
 
-:root {
+@mixin woocommerce-variables() {
+
 	// Wrapper Width - accepts full, wide, or default
 	--wc--wrapper-width: default;
 

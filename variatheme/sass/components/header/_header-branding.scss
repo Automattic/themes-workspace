@@ -1,17 +1,3 @@
-:root {
-	--branding--color-text: var(--global--color-foreground);
-	--branding--color-link: var(--global--color-primary);
-	--branding--color-link-hover: var(--global--color-primary-hover);
-
-	--branding--title--font-family: var(--global--font-primary);
-	--branding--title--font-size: var(--global--font-size-md);
-	--branding--title--font-weight: bold;
-
-	--branding--description--font-family: var(--global--font-secondary);
-	--branding--description--font-size: var(--global--font-size-sm);
-	--branding--description--font-family: var(--global--font-secondary);
-}
-
 // Site logo
 
 .site-logo {

@@ -1,11 +1,11 @@
 {
-  "name": "variatheme",
+  "name": "varya",
   "version": "1.0.0",
-  "description": "Varia Parent Theme",
+  "description": "Varya Parent Theme",
   "bugs": {
-    "url": "https://github.com/Automattic/variatheme/issues"
+    "url": "https://github.com/Automattic/varya/issues"
   },
-  "homepage": "https://github.com/Automattic/variatheme#readme",
+  "homepage": "https://github.com/Automattic/varya#readme",
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.2.2",
     "autoprefixer": "^9.5.1",
@@ -34,15 +34,18 @@
   ],
   "scripts": {
     "start": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "build:variables": "node-sass variables.scss variables.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r variables.css",
+    "build:variables-child-theme": "node-sass variables.scss sass/child-theme/variables.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r sass/child-theme/variables.css",
+    "build:variables-editor": "node-sass variables-editor.scss variables-editor.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r variables-editor.css",
+    "build:variables-editor-child-theme": "node-sass variables-editor.scss sass/child-theme/variables-editor.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r sass/child-theme/variables-editor.css",
     "build:style": "node-sass style.scss style.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style.css",
     "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-editor.css",
-    "build:style-editor-variables": "node-sass style-editor-variables.scss style-editor-variables.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-editor-variables.css",
-    "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-editor-customizer.css",
     "build:woocommerce": "node-sass style-woocommerce.scss style-woocommerce.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r style-woocommerce.css",
     "build:woocommerce-rtl": "rtlcss style-woocommerce.css style-woocommerce-rtl.css",
     "build:rtl": "rtlcss style.css style-rtl.css",
     "build:print": "node-sass print.scss print.css --output-style expanded --indent-type tab --indent-width 1 && postcss -r print.css",
     "build": "run-p \"build:*\"",
-    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "child-theme": "sh ../theme-dev-utils/build-child-theme.sh"
   }
 }

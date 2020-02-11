@@ -1,22 +1,3 @@
-:root {
-
-	// Colors
-	--form--color-text: var(--global--color-foreground);
-
-	// Fonts
-	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
-	--form--line-height: var(--global-line-height-body);
-
-	// Borders
-	--form--border-color: var(--global--color-border);
-	--form--border-width: 1px;
-	--form--border-radius: 3px;
-
-	// Spacing
-	--form--spacing-unit: calc(0.33 * var(--global--spacing-unit));
-}
-
 input[type="text"],
 input[type="email"],
 input[type="url"],

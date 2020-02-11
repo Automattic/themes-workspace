@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0.0
  */
 
@@ -28,18 +28,18 @@ get_header();
 					the_post_navigation(
 						array(
 							/* translators: %s: parent post link */
-							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'variatheme' ), '%title' ),
+							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'varya' ), '%title' ),
 						)
 					);
 				} elseif ( is_singular( 'post' ) ) {
 					// Previous/next post navigation.
 					the_post_navigation(
 						array(
-							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'variatheme' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Next post:', 'variatheme' ) . '</span> <br/>' .
+							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'varya' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Next post:', 'varya' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'variatheme' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Previous post:', 'variatheme' ) . '</span> <br/>' .
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'varya' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Previous post:', 'varya' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
 						)
 					);

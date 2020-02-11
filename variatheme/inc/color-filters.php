@@ -1,9 +1,9 @@
 <?php
 /**
- * variatheme: Color Filter for overriding the colors schemes in a child theme
+ * varya: Color Filter for overriding the colors schemes in a child theme
  *
  * @package WordPress
- * @subpackage variatheme
+ * @subpackage Varya
  * @since 1.0
  */
 
@@ -24,8 +24,8 @@ define( 'VARIATHEME_DEFAULT_LIGHTNESS_HOVER', 23 );
  *
  * @return number the default hue
  */
-function variatheme_get_default_hue() {
-	return apply_filters( 'variatheme_default_hue', VARIATHEME_DEFAULT_HUE );
+function varya_get_default_hue() {
+	return apply_filters( 'varya_default_hue', VARIATHEME_DEFAULT_HUE );
 }
 
 /**
@@ -33,8 +33,8 @@ function variatheme_get_default_hue() {
  *
  * @return number the default saturation
  */
-function variatheme_get_default_saturation() {
-	return apply_filters( 'variatheme_default_saturation', VARIATHEME_DEFAULT_SATURATION );
+function varya_get_default_saturation() {
+	return apply_filters( 'varya_default_saturation', VARIATHEME_DEFAULT_SATURATION );
 }
 
 /**
@@ -42,8 +42,8 @@ function variatheme_get_default_saturation() {
  *
  * @return number the default lightness
  */
-function variatheme_get_default_lightness() {
-	return apply_filters( 'variatheme_default_lightness', VARIATHEME_DEFAULT_LIGHTNESS );
+function varya_get_default_lightness() {
+	return apply_filters( 'varya_default_lightness', VARIATHEME_DEFAULT_LIGHTNESS );
 }
 
 /**
@@ -51,8 +51,8 @@ function variatheme_get_default_lightness() {
  *
  * @return number the default saturation selection
  */
-function variatheme_get_default_saturation_selection() {
-	return apply_filters( 'variatheme_default_saturation_selection', VARIATHEME_DEFAULT_SATURATION_SELECTION );
+function varya_get_default_saturation_selection() {
+	return apply_filters( 'varya_default_saturation_selection', VARIATHEME_DEFAULT_SATURATION_SELECTION );
 }
 
 /**
@@ -60,8 +60,8 @@ function variatheme_get_default_saturation_selection() {
  *
  * @return number the default lightness selection
  */
-function variatheme_get_default_lightness_selection() {
-	return apply_filters( 'variatheme_default_lightness_selection', VARIATHEME_DEFAULT_LIGHTNESS_SELECTION );
+function varya_get_default_lightness_selection() {
+	return apply_filters( 'varya_default_lightness_selection', VARIATHEME_DEFAULT_LIGHTNESS_SELECTION );
 }
 
 /**
@@ -69,10 +69,10 @@ function variatheme_get_default_lightness_selection() {
  *
  * @return number the default lightness hover
  */
-function variatheme_get_default_lightness_hover() {
-	return apply_filters( 'variatheme_default_lightness_hover', VARIATHEME_DEFAULT_LIGHTNESS_HOVER );
+function varya_get_default_lightness_hover() {
+	return apply_filters( 'varya_default_lightness_hover', VARIATHEME_DEFAULT_LIGHTNESS_HOVER );
 }
 
-function variatheme_has_custom_default_hue() {
-	return variatheme_get_default_hue() !== VARIATHEME_DEFAULT_HUE;
+function varya_has_custom_default_hue() {
+	return varya_get_default_hue() !== VARIATHEME_DEFAULT_HUE;
 }

@@ -3,10 +3,10 @@ $baseline-unit: 8px;
 
 /* Typescale Multipliers */
 $typescale-root: 18px; // Set 16px/1em default on html
-$typescale-base: 1rem; // Set 1em default on body == $typescale-root;
+$typescale-base: 1em; // Set 1em default on body == $typescale-root;
 $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-root;
 
-@mixin global-variables {
+@mixin global-variables() {
 
 	/* Font Family */
 	--global--font-primary: sans-serif;

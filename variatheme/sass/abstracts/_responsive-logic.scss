@@ -12,10 +12,10 @@ $config-breakpoint: (
 /*
  * Set horizontal padding
  * - CSS Custom properties do not work width media queries
- * - Must use a raw integer for $baseline-unit
- * - var(--global--spacing-horizontal) == #{2 * $baseline-unit}
+ * - Must use a raw integer for \$baseline-unit
+ * - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
  */
-$horizontal-padding: calc(2 * #{2 * $baseline-unit});
+$horizontal-padding: 32px;
 
 /* Responsive width-content overrides */
 $content-width-flex: 100%;
