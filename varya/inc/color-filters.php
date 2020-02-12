@@ -1,6 +1,6 @@
 <?php
 /**
- * varya: Color Filter for overriding the colors schemes in a child theme
+ * Varya: Color Filter for overriding the colors schemes in a child theme
  *
  * @package WordPress
  * @subpackage Varya
@@ -11,13 +11,13 @@
  * Define default color filters.
  */
 
-define( 'VARIATHEME_DEFAULT_HUE', 199 );        // H
-define( 'VARIATHEME_DEFAULT_SATURATION', 100 ); // S
-define( 'VARIATHEME_DEFAULT_LIGHTNESS', 33 );   // L
+define( 'VARYA_DEFAULT_HUE', 199 );        // H
+define( 'VARYA_DEFAULT_SATURATION', 100 ); // S
+define( 'VARYA_DEFAULT_LIGHTNESS', 33 );   // L
 
-define( 'VARIATHEME_DEFAULT_SATURATION_SELECTION', 50 );
-define( 'VARIATHEME_DEFAULT_LIGHTNESS_SELECTION', 90 );
-define( 'VARIATHEME_DEFAULT_LIGHTNESS_HOVER', 23 );
+define( 'VARYA_DEFAULT_SATURATION_SELECTION', 50 );
+define( 'VARYA_DEFAULT_LIGHTNESS_SELECTION', 90 );
+define( 'VARYA_DEFAULT_LIGHTNESS_HOVER', 23 );
 
 /**
  * The default hue (as in hsl) used for the primary color throughout this theme
@@ -25,7 +25,7 @@ define( 'VARIATHEME_DEFAULT_LIGHTNESS_HOVER', 23 );
  * @return number the default hue
  */
 function varya_get_default_hue() {
-	return apply_filters( 'varya_default_hue', VARIATHEME_DEFAULT_HUE );
+	return apply_filters( 'varya_default_hue', VARYA_DEFAULT_HUE );
 }
 
 /**
@@ -34,7 +34,7 @@ function varya_get_default_hue() {
  * @return number the default saturation
  */
 function varya_get_default_saturation() {
-	return apply_filters( 'varya_default_saturation', VARIATHEME_DEFAULT_SATURATION );
+	return apply_filters( 'varya_default_saturation', VARYA_DEFAULT_SATURATION );
 }
 
 /**
@@ -43,7 +43,7 @@ function varya_get_default_saturation() {
  * @return number the default lightness
  */
 function varya_get_default_lightness() {
-	return apply_filters( 'varya_default_lightness', VARIATHEME_DEFAULT_LIGHTNESS );
+	return apply_filters( 'varya_default_lightness', VARYA_DEFAULT_LIGHTNESS );
 }
 
 /**
@@ -52,7 +52,7 @@ function varya_get_default_lightness() {
  * @return number the default saturation selection
  */
 function varya_get_default_saturation_selection() {
-	return apply_filters( 'varya_default_saturation_selection', VARIATHEME_DEFAULT_SATURATION_SELECTION );
+	return apply_filters( 'varya_default_saturation_selection', VARYA_DEFAULT_SATURATION_SELECTION );
 }
 
 /**
@@ -61,7 +61,7 @@ function varya_get_default_saturation_selection() {
  * @return number the default lightness selection
  */
 function varya_get_default_lightness_selection() {
-	return apply_filters( 'varya_default_lightness_selection', VARIATHEME_DEFAULT_LIGHTNESS_SELECTION );
+	return apply_filters( 'varya_default_lightness_selection', VARYA_DEFAULT_LIGHTNESS_SELECTION );
 }
 
 /**
@@ -70,9 +70,9 @@ function varya_get_default_lightness_selection() {
  * @return number the default lightness hover
  */
 function varya_get_default_lightness_hover() {
-	return apply_filters( 'varya_default_lightness_hover', VARIATHEME_DEFAULT_LIGHTNESS_HOVER );
+	return apply_filters( 'varya_default_lightness_hover', VARYA_DEFAULT_LIGHTNESS_HOVER );
 }
 
 function varya_has_custom_default_hue() {
-	return varya_get_default_hue() !== VARIATHEME_DEFAULT_HUE;
+	return varya_get_default_hue() !== VARYA_DEFAULT_HUE;
 }
