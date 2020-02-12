@@ -1,21 +1,22 @@
 @charset "UTF-8";
 /*
-Theme Name: Varia Parent Theme
-Theme URI: https://github.com/Automattic/theme-workspace/variatheme
-Author: the WordPress team
-Author URI: https://wordpress.org/
+Theme Name: VARIA CHILD THEME
+Theme URI: https://github.com/Automattic/theme-workspace/varia
+Author: Automattic
+Author URI: https://automattic.com/
 Description: A design system for WordPress sites built with Gutenberg.
 Requires at least: WordPress 4.9.6
-Version: 1.0
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: variatheme
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Template: varia
+Text Domain: montichello
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, full-site-editing, jetpack-global-styles
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-variatheme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Varia is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -117,8 +118,8 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--font-code: monospace, monospace;
 	--global--font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	/* Font Size */
-	--global--font-size-root: 18px;
-	--global--font-size-ratio: 1.2;
+	--global--font-size-root: 14px;
+	--global--font-size-ratio: 1.1;
 	--global--font-size-base: 1rem;
 	--global--font-size-xs: calc(var(--global--font-size-base) / var(--global--font-size-ratio) / var(--global--font-size-ratio));
 	--global--font-size-sm: calc(var(--global--font-size-base) / var(--global--font-size-ratio));
@@ -154,10 +155,10 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-alert-warning: gold;
 	--global--color-alert-error: salmon;
 	/* Spacing */
-	--global--spacing-unit: 16px;
+	--global--spacing-unit: 14px;
 	--global--spacing-measure: unset;
-	--global--spacing-horizontal: 16px;
-	--global--spacing-vertical: 32px;
+	--global--spacing-horizontal: 14px;
+	--global--spacing-vertical: 28px;
 	/* Elevation */
 	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
 	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
@@ -166,10 +167,10 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
 	--global--elevation-none: 0px 0px 0px 0px transparent;
 	/* Other */
-	--global--border-radius-sm: 9px;
-	--global--border-radius-md: 13.5px;
-	--global--border-radius-lg: 18px;
-	--global--border-radius-pill: 180px;
+	--global--border-radius-sm: 7px;
+	--global--border-radius-md: 10.5px;
+	--global--border-radius-lg: 14px;
+	--global--border-radius-pill: 140px;
 	--global--border-radius-none: 0;
 }
 
@@ -180,7 +181,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
  * Set horizontal padding
  * - CSS Custom properties do not work width media queries
  * - Must use a raw integer for $baseline-unit
- * - var(--global--spacing-horizontal) == 16px
+ * - var(--global--spacing-horizontal) == 14px
  */
 /* Responsive width-content overrides */
 /**
@@ -204,53 +205,53 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	margin-right: auto;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
 	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 560px - calc(2 * 16px));
+		max-width: calc( 560px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
 	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 640px - calc(2 * 16px));
+		max-width: calc( 640px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 782px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 782px - calc(2 * 14px))) {
 	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
 	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 782px - calc(2 * 16px));
+		max-width: calc( 782px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 1024px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1024px - calc(2 * 14px))) {
 	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
 	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 782px - calc(2 * 16px));
+		max-width: calc( 782px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 1280px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1280px - calc(2 * 14px))) {
 	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
 	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 782px - calc(2 * 16px));
+		max-width: calc( 782px - calc(2 * 14px));
 	}
 }
 
@@ -261,34 +262,34 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	/* Matches normal width until desktop breakpoint */
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content > .alignwide {
-		max-width: calc( 560px - calc(2 * 16px));
+		max-width: calc( 560px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.entry-content > .alignwide {
-		max-width: calc( 640px - calc(2 * 16px));
+		max-width: calc( 640px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 782px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 782px - calc(2 * 14px))) {
 	.entry-content > .alignwide {
-		max-width: calc( 782px - calc(2 * 16px));
+		max-width: calc( 782px - calc(2 * 14px));
 	}
 }
 
-@media only screen and (min-width: calc( 1024px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1024px - calc(2 * 14px))) {
 	.entry-content > .alignwide {
-		width: calc(calc( 782px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 782px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
 	}
 }
 
-@media only screen and (min-width: calc( 1280px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1280px - calc(2 * 14px))) {
 	.entry-content > .alignwide {
-		width: calc(calc( 782px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 782px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
 	}
 }
@@ -300,37 +301,37 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	margin-right: auto;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 560px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 560px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 640px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 640px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: calc( 782px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 782px - calc(2 * 14px))) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 782px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 782px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: calc( 1024px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1024px - calc(2 * 14px))) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 782px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 782px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: calc( 1280px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1280px - calc(2 * 14px))) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 782px - calc(2 * 16px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
+		width: calc(calc( 782px - calc(2 * 14px)) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
@@ -338,12 +339,12 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 .entry-content > .alignfull {
 	margin-left: calc(-1 * var(--global--spacing-horizontal));
 	margin-right: calc(-1 * var(--global--spacing-horizontal));
-	width: calc(100% + calc(2 * 16px));
-	max-width: calc(100% + calc(2 * 16px));
+	width: calc(100% + calc(2 * 14px));
+	max-width: calc(100% + calc(2 * 14px));
 	/* Letting the box-model do most of the work here. */
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content > .alignfull {
 		margin-left: inherit;
 		margin-right: inherit;
@@ -357,38 +358,38 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	margin-right: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content > .alignright {
 		/*rtl:ignore*/
-		margin-right: calc( 0.5 * (100vw - calc( 560px - calc(2 * 16px))));
+		margin-right: calc( 0.5 * (100vw - calc( 560px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.entry-content > .alignright {
 		/*rtl:ignore*/
-		margin-right: calc( 0.5 * (100vw - calc( 640px - calc(2 * 16px))));
+		margin-right: calc( 0.5 * (100vw - calc( 640px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 782px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 782px - calc(2 * 14px))) {
 	.entry-content > .alignright {
 		/*rtl:ignore*/
-		margin-right: calc( 0.5 * (100vw - calc( 782px - calc(2 * 16px))));
+		margin-right: calc( 0.5 * (100vw - calc( 782px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 1024px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1024px - calc(2 * 14px))) {
 	.entry-content > .alignright {
 		/*rtl:ignore*/
-		margin-right: calc( 0.5 * (100vw - calc( 782px - calc(2 * 16px))));
+		margin-right: calc( 0.5 * (100vw - calc( 782px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 1280px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1280px - calc(2 * 14px))) {
 	.entry-content > .alignright {
 		/*rtl:ignore*/
-		margin-right: calc( 0.5 * (100vw - calc( 782px - calc(2 * 16px))));
+		margin-right: calc( 0.5 * (100vw - calc( 782px - calc(2 * 14px))));
 	}
 }
 
@@ -397,39 +398,119 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	margin-left: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc( 0.5 * (100vw - calc( 560px - calc(2 * 16px))));
+		margin-left: calc( 0.5 * (100vw - calc( 560px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc( 0.5 * (100vw - calc( 640px - calc(2 * 16px))));
+		margin-left: calc( 0.5 * (100vw - calc( 640px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 782px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 782px - calc(2 * 14px))) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc( 0.5 * (100vw - calc( 782px - calc(2 * 16px))));
+		margin-left: calc( 0.5 * (100vw - calc( 782px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 1024px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1024px - calc(2 * 14px))) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc( 0.5 * (100vw - calc( 782px - calc(2 * 16px))));
+		margin-left: calc( 0.5 * (100vw - calc( 782px - calc(2 * 14px))));
 	}
 }
 
-@media only screen and (min-width: calc( 1280px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 1280px - calc(2 * 14px))) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc( 0.5 * (100vw - calc( 782px - calc(2 * 16px))));
+		margin-left: calc( 0.5 * (100vw - calc( 782px - calc(2 * 14px))));
 	}
+}
+
+/**
+ * Child Theme Deep
+ */
+/* Vertical Rhythm Multiplier */
+/* Typescale Multipliers */
+@font-face {
+	font-family: 'CircularStd';
+	src: url("../montichello/assets/fonts/CircularStd-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manuale';
+	src: url("../montichello/assets/fonts/Manuale-VariableFont:wght.ttf") format("truetype");
+}
+
+:root {
+	/* Font Family */
+	--global--font-primary: 'Manuale';
+	--global--font-secondary: 'Manuale';
+	--global--font-code: monospace, monospace;
+	--global--font-ui: 'CircularStd', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	/* Font Size */
+	--global--font-size-root: 22px;
+	--global--font-size-ratio: 1.2;
+	--global--font-size-base: 1rem;
+	--global--font-size-xs: calc(var(--global--font-size-base) / var(--global--font-size-ratio) / var(--global--font-size-ratio));
+	--global--font-size-sm: calc(var(--global--font-size-base) / var(--global--font-size-ratio));
+	--global--font-size-md: calc(var(--global--font-size-base) * var(--global--font-size-ratio));
+	--global--font-size-lg: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	/* Line Height */
+	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-body: 1.78;
+	--global--line-height-heading: 1.125;
+	/* Colors */
+	--global--color-primary: #91DFAC;
+	--global--color-primary-hover: #D0FBDF;
+	--global--color-secondary: red;
+	--global--color-secondary-hover: darkred;
+	--global--color-black: #181B19;
+	--global--color-white: white;
+	--global--color-foreground: #444444;
+	--global--color-foreground-light: #767676;
+	--global--color-foreground-dark: #111111;
+	--global--color-background: #FFFFFF;
+	--global--color-background-light: #FAFAFA;
+	--global--color-background-dark: #DDDDDD;
+	--global--color-border: #DDDDDD;
+	--global--color-border-light: #FAFAFA;
+	--global--color-border-dark: #AAAAAA;
+	--global--color-text-selection: lightblue;
+	--global--color-alert-success: yellowgreen;
+	--global--color-alert-info: skyblue;
+	--global--color-alert-warning: gold;
+	--global--color-alert-error: salmon;
+	/* Spacing */
+	--global--spacing-unit: 16px;
+	--global--spacing-measure: unset;
+	--global--spacing-horizontal: 16px;
+	--global--spacing-vertical: 32px;
+	/* Elevation */
+	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-none: 0px 0px 0px 0px transparent;
+	/* Other */
+	--global--border-radius-sm: 11px;
+	--global--border-radius-md: 16.5px;
+	--global--border-radius-lg: 22px;
+	--global--border-radius-pill: 220px;
+	--global--border-radius-none: 0;
 }
 
 /**
@@ -912,12 +993,12 @@ html {
 
 html {
 	font-size: calc(var(--global--font-size-root) / var(--global--font-size-ratio));
-	/* 15px; */
+	/* 18.33333px; */
 	font-family: var(--global--font-secondary);
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	html {
 		font-size: var(--global--font-size-root);
 	}
@@ -1072,7 +1153,7 @@ footer {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.site-header,
 	.site-main,
 	.site-footer {
@@ -1145,7 +1226,7 @@ footer {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.site-footer > *,
 	.site-main > article > *,
 	.site-main > .not-found > *,
@@ -1430,7 +1511,7 @@ object {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-newspack-blocks-homepage-articles.is-grid article {
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
@@ -1452,7 +1533,7 @@ object {
 	margin-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-newspack-blocks-homepage-articles article {
 		margin-top: calc(3 * var(--global--spacing-vertical));
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
@@ -1506,7 +1587,7 @@ object {
 	color: currentColor;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-newspack-blocks-homepage-articles article .more-link {
 		margin-top: var(--global--spacing-unit);
 	}
@@ -1740,7 +1821,7 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-columns .wp-block-column > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1763,13 +1844,13 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		margin-bottom: var(--global--spacing-vertical);
 	}
 }
 
-@media only screen and (min-width: calc( 782px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 782px - calc(2 * 14px))) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
@@ -1865,7 +1946,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-cover .wp-block-cover__inner-container > *,
 	.wp-block-cover-image .wp-block-cover__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
@@ -1956,7 +2037,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-group .wp-block-group__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1975,7 +2056,7 @@ button[data-load-more-btn],
 	padding: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2292,7 +2373,7 @@ dd {
 	padding: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.wp-block-media-text .wp-block-media-text__content {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2303,7 +2384,7 @@ dd {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-media-text .wp-block-media-text__content > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -2322,7 +2403,7 @@ dd {
 	color: currentColor;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
 		padding-top: var(--global--spacing-vertical);
 		padding-bottom: var(--global--spacing-vertical);
@@ -2632,7 +2713,7 @@ hr.wp-block-separator.is-style-dots:before {
 	margin-top: 0 !important;
 }
 
-@media only screen and (max-width: calc( 560px - calc(2 * 16px)) - 1) {
+@media only screen and (max-width: calc( 560px - calc(2 * 14px)) - 1) {
 	.wp-block-spacer[style] {
 		height: var(--global--spacing-unit) !important;
 	}
@@ -2875,7 +2956,7 @@ table th,
 	display: none;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.desktop-only {
 		display: block;
 	}
@@ -3094,7 +3175,7 @@ table th,
 	display: inline;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.main-navigation > div {
 		display: inline-block;
 	}
@@ -3138,7 +3219,7 @@ table th,
 	z-index: 99999;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.main-navigation > div > ul li {
 		display: inherit;
 		width: inherit;
@@ -3162,7 +3243,7 @@ table th,
 	}
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.main-navigation > div > ul > li > a {
 		line-height: var(--global--line-height-base);
 	}
@@ -3191,7 +3272,7 @@ table th,
 	position: relative;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.main-navigation > div > ul > li > .sub-menu {
 		background: var(--global--color-background);
 		box-shadow: var(--global--elevation-4);
@@ -3217,7 +3298,7 @@ table th,
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.main-navigation a {
 		padding: var(--primary-nav--padding);
 	}
@@ -3250,7 +3331,7 @@ table th,
 	content: "– " counters(nested-list, "– ", none);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.main-navigation > div > ul > .menu-item-has-children > a::after {
 		content: "\00a0\25BC";
 		display: inline-block;
@@ -3311,7 +3392,7 @@ table th,
 	overflow: hidden;
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.site-footer {
 		align-items: flex-end;
 		display: flex;
@@ -3335,7 +3416,7 @@ table th,
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.site-info {
 		order: 1;
 		flex: 1 0 50%;
@@ -3364,7 +3445,7 @@ table th,
 	display: inline;
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.footer-navigation {
 		flex: 1 0 50%;
 		order: 2;
@@ -3384,7 +3465,7 @@ table th,
 	padding-left: 0;
 }
 
-@media only screen and (min-width: calc( 640px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 640px - calc(2 * 14px))) {
 	.footer-navigation .footer-menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -3490,7 +3571,7 @@ table th,
 	margin-top: var(--global--spacing-unit);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content .more-link {
 		margin-top: var(--global--spacing-vertical);
 	}
@@ -3511,7 +3592,7 @@ table th,
 	max-width: 100% !important;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.entry-content > iframe[style] {
 		max-width: var(--global--spacing-vertical) !important;
 	}
@@ -3591,7 +3672,7 @@ table th,
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.nav-links {
 		display: flex;
 		justify-content: space-between;
@@ -3672,7 +3753,7 @@ table th,
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.comment-list .children {
 		padding-left: calc(2 * var(--global--spacing-horizontal));
 	}
@@ -3692,7 +3773,7 @@ table th,
 	max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.comment-meta .comment-author {
 		display: flex;
 		align-items: center;
@@ -3718,7 +3799,7 @@ table th,
 	padding-right: calc(2.5 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.comment-meta .comment-metadata {
 		padding-right: 0;
 	}
@@ -3732,7 +3813,7 @@ table th,
 	color: var(--global--color-primary-hover);
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.comment-meta {
 		margin-right: inherit;
 		align-items: center;
@@ -3769,7 +3850,7 @@ table th,
 	text-align: right;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.reply {
 		text-align: left;
 	}
@@ -3850,7 +3931,7 @@ table th,
 	width: auto;
 }
 
-@media only screen and (min-width: calc( 560px - calc(2 * 16px))) {
+@media only screen and (min-width: calc( 560px - calc(2 * 14px))) {
 	.comment-form > p {
 		display: flex;
 	}
@@ -3922,3 +4003,72 @@ img#wpstats {
  * Vendors
  * - Styles for 3rd party plugins and WP extensions
  */
+/**
+ * Child Theme Extra Styles
+ */
+/**
+ * Extra Child Theme Styles
+ */
+h1, h2, h3 {
+	font-family: 'CircularStd';
+}
+
+h4, h5 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 5.91rem;
+	line-height: 1.1;
+}
+
+.site-branding,
+.site-info,
+.main-navigation,
+.entry-header,
+.entry-footer,
+.page-title,
+.author-title,
+.comments-title,
+.comment-reply-title {
+	text-align: center;
+}
+
+.main-navigation > div {
+	text-align: left;
+}
+
+.comment-reply-title {
+	display: inherit;
+}
+
+.comment .comment-reply-title {
+	display: flex;
+}
+
+.main-navigation > div > ul,
+.social-navigation > div > ul,
+.pagination .nav-links {
+	justify-content: center;
+}
+
+.wp-block-cover {
+	transition: border-bottom-right-radius 0.1s ease-out;
+}
+
+.wp-block-cover:hover {
+	cursor: pointer;
+	border-bottom-right-radius: 1rem;
+}
+
+.wp-block-button:hover {
+	opacity: .75;
+}
+
+.wp-block-button a.wp-block-button__link {
+	border-radius: 0;
+	border-bottom-right-radius: 8px;
+	color: var(--global--color-black);
+	font-size: 1rem;
+	padding: 1.4rem 1.75rem;
+}

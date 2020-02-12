@@ -1,0 +1,76 @@
+/**
+ * Extra Child Theme Styles
+ */
+// @import "";
+
+
+a {
+	// text-decoration: none;
+}
+
+h1, h2, h3 {
+	font-family: 'CircularStd';
+}
+
+h4, h5 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 5.91rem;
+	line-height: 1.1;
+}
+
+.site-branding,
+.site-info,
+.main-navigation,
+.entry-header,
+.entry-footer,
+.page-title,
+.author-title,
+.comments-title,
+.comment-reply-title {
+	text-align: center;
+}
+
+.main-navigation > div {
+	text-align: left;
+}
+
+.comment-reply-title {
+	display: inherit;
+}
+
+.comment .comment-reply-title {
+	display: flex;
+}
+
+.main-navigation > div > ul,
+.social-navigation > div > ul,
+.pagination .nav-links {
+	justify-content: center;
+}
+
+.wp-block-cover {
+	transition: border-bottom-right-radius 0.1s ease-out;
+}
+
+.wp-block-cover {
+	&:hover {
+		cursor: pointer;
+		border-bottom-right-radius: 1rem;
+	}
+}
+
+.wp-block-button {
+	&:hover {
+		opacity: .75;
+	}
+	a.wp-block-button__link {
+		border-radius: 0;
+		border-bottom-right-radius: 8px;
+		color: var(--global--color-black);
+		font-size: 1rem;
+		padding: 1.4rem 1.75rem;
+	}
+}

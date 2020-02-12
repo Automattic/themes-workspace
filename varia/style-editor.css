@@ -20,7 +20,7 @@
  * Set horizontal padding
  * - CSS Custom properties do not work width media queries
  * - Must use a raw integer for $baseline-unit
- * - var(--global--spacing-horizontal) == 16px
+ * - var(--global--spacing-horizontal) == 14px
  */
 /* Responsive width-content overrides */
 /**
@@ -204,7 +204,7 @@ object {
 	margin-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "sm") - calc(2 * 16px))) {
+@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "sm") - calc(2 * 14px))) {
 	.wp-block-a8c-blog-posts article {
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
@@ -530,7 +530,7 @@ object {
 	padding: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "sm") - calc(2 * 16px))) {
+@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "sm") - calc(2 * 14px))) {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
@@ -772,7 +772,7 @@ dt {
 	padding-left: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "md") - calc(2 * 16px))) {
+@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "md") - calc(2 * 14px))) {
 	.wp-block-media-text .block-editor-inner-blocks {
 		padding-right: var(--global--spacing-vertical);
 		padding-left: var(--global--spacing-vertical);
@@ -1128,7 +1128,7 @@ table th,
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "sm") - calc(2 * 16px))) {
+@media only screen and (min-width: calc( map-deep-get(("sm": 560px, "md": 640px, "lg": 782px, "xl": 1024px, "xxl": 1280px), "sm") - calc(2 * 14px))) {
 	[data-block] {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);

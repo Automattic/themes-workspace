@@ -2,17 +2,28 @@
 $baseline-unit: 8px;
 
 /* Typescale Multipliers */
-$typescale-root: 18px; // Set 16px/1em default on html
+$typescale-root: 22px; // Set 16px/1em default on html
 $typescale-base: 1rem; // Set 1em default on body == $typescale-root;
 $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-root;
 
-@mixin global-variables {
+@font-face {
+	font-family: 'CircularStd';
+	src: url('../montichello/assets/fonts/CircularStd-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 
+@font-face {
+	font-family: 'Manuale';
+	src: url('../montichello/assets/fonts/Manuale-VariableFont:wght.ttf') format('truetype');
+}
+
+:root {
 	/* Font Family */
-	--global--font-primary: sans-serif;
-	--global--font-secondary: serif;
+	--global--font-primary: 'Manuale';
+	--global--font-secondary: 'Manuale';
 	--global--font-code: monospace, monospace;
-	--global--font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--global--font-ui: 'CircularStd', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 	/* Font Size */
 	--global--font-size-root: #{$typescale-root};
@@ -33,11 +44,11 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--line-height-heading: 1.125;
 
 	/* Colors */
-	--global--color-primary: blue;
-	--global--color-primary-hover: indigo;
+	--global--color-primary: #91DFAC;
+	--global--color-primary-hover: #D0FBDF;
 	--global--color-secondary: red;
 	--global--color-secondary-hover: darkred;
-	--global--color-black: black;
+	--global--color-black: #181B19;
 	--global--color-white: white;
 	--global--color-foreground: #444444;
 	--global--color-foreground-light: #767676; // must be accessible against background
