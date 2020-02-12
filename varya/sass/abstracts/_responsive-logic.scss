@@ -17,6 +17,13 @@ $config-breakpoint: (
  */
 $horizontal-padding: 32px;
 
+/* Responsive breakpoints */
+$content-breakpoint-sm: #{map-deep-get($config-breakpoint, "sm")};
+$content-breakpoint-md: #{map-deep-get($config-breakpoint, "md")};
+$content-breakpoint-lg: #{map-deep-get($config-breakpoint, "lg")};
+$content-breakpoint-xl: #{map-deep-get($config-breakpoint, "xl")};
+$content-breakpoint-xxl: #{map-deep-get($config-breakpoint, "xxl")};
+
 /* Responsive width-content overrides */
 $content-width-flex: 100%;
 $content-width-sm: calc( #{map-deep-get($config-breakpoint, "sm")} - #{$horizontal-padding} );
@@ -31,37 +38,37 @@ $content-width-xxl: calc( #{map-deep-get($config-breakpoint, "xxl")} - #{$horizo
 @mixin media( $res ) {
 
 	@if mobile-only == $res {
-		@media only screen and (max-width: #{$content-width-sm - 1}) {
+		@media only screen and (max-width: #{$content-breakpoint-sm - 1}) {
 			@content;
 		}
 	}
 
 	@if mobile == $res {
-		@media only screen and (min-width: $content-width-sm) {
+		@media only screen and (min-width: $content-breakpoint-sm) {
 			@content;
 		}
 	}
 
 	@if tablet == $res {
-		@media only screen and (min-width: $content-width-md) {
+		@media only screen and (min-width: $content-breakpoint-md) {
 			@content;
 		}
 	}
 
 	@if laptop == $res {
-		@media only screen and (min-width: $content-width-lg) {
+		@media only screen and (min-width: $content-breakpoint-lg) {
 			@content;
 		}
 	}
 
 	@if desktop == $res {
-		@media only screen and (min-width: $content-width-xl) {
+		@media only screen and (min-width: $content-breakpoint-xl) {
 			@content;
 		}
 	}
 
 	@if wide == $res {
-		@media only screen and (min-width: $content-width-xxl) {
+		@media only screen and (min-width: $content-breakpoint-xxl) {
 			@content;
 		}
 	}

@@ -103,6 +103,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
  * - Must use a raw integer for \$baseline-unit
  * - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
  */
+/* Responsive breakpoints */
 /* Responsive width-content overrides */
 /**
  * Responsive breakpoints mixin
@@ -738,7 +739,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: calc( 560px - 32px) - 1) {
+@media only screen and (max-width: 560px - 1) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
@@ -752,7 +753,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	}
 }
 
-@media only screen and (min-width: calc( 560px - 32px)) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
 		margin-left: calc(2 * var(--global--spacing-unit));
 	}
@@ -787,7 +788,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: calc( 560px - 32px)) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
 		display: inline-block;
 	}
@@ -800,7 +801,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 	padding: var(--primary-nav--padding) 0;
 }
 
-@media only screen and (min-width: calc( 560px - 32px)) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 		max-width: calc(20 * var(--global--spacing-horizontal));
 		padding: var(--primary-nav--padding);
@@ -879,7 +880,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-mini-cart__total 
 	font-size: var(--primary-nav--font-size);
 }
 
-@media only screen and (min-width: calc( 560px - 32px)) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation > div > ul > li.woocommerce-menu-item > .sub-menu {
 		right: auto;
 		left: 0;
@@ -1461,7 +1462,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media only screen and (min-width: calc( 1024px - 32px)) {
+@media only screen and (min-width: 1024px) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -1746,7 +1747,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media only screen and (min-width: calc( 640px - 32px)) {
+@media only screen and (min-width: 640px) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -1766,7 +1767,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media only screen and (min-width: calc( 640px - 32px)) {
+@media only screen and (min-width: 640px) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}
@@ -2042,7 +2043,7 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 /**
  * Filter by Product List Widgets
  */
-@media only screen and (min-width: calc( 560px - 32px)) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .widget.woocommerce ul.product_list_widget:not(.woocommerce-mini-cart) {
 		display: flex;
 		flex-wrap: wrap;
