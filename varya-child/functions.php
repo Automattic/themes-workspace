@@ -29,25 +29,25 @@ if ( ! function_exists( 'varya_child_setup' ) ) :
 				array(
 					'name'      => __( 'Small', 'varya-child' ),
 					'shortName' => __( 'S', 'varya-child' ),
-					'size'      => 16.5,
+					'size'      => 15,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => __( 'Normal', 'varya-child' ),
 					'shortName' => __( 'M', 'varya-child' ),
-					'size'      => 19,
+					'size'      => 18,
 					'slug'      => 'normal',
 				),
 				array(
 					'name'      => __( 'Large', 'varya-child' ),
 					'shortName' => __( 'L', 'varya-child' ),
-					'size'      => 25.1275,
+					'size'      => 25,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'Huge', 'varya-child' ),
 					'shortName' => __( 'XL', 'varya-child' ),
-					'size'      => 28.9,
+					'size'      => 37,
 					'slug'      => 'huge',
 				),
 			)
@@ -60,42 +60,12 @@ if ( ! function_exists( 'varya_child_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya-child' ),
 					'slug'  => 'primary',
-					'color' => '#0073AA',
+					'color' => '#ff0000',
 				),
 				array(
-					'name'  => __( 'Secondary', 'varya-child' ),
-					'slug'  => 'secondary',
-					'color' => '#0D1B24',
-				),
-				array(
-					'name'  => __( 'Dark Blue', 'varya-child' ),
-					'slug'  => 'foreground-light',
-					'color' => '#005177',
-				),
-				array(
-					'name'  => __( 'Black', 'varya-child' ),
-					'slug'  => 'foreground-dark',
-					'color' => '#000000',
-				),
-				array(
-					'name'  => __( 'Gray', 'varya-child' ),
-					'slug'  => 'foreground',
-					'color' => '#1E1E1E',
-				),
-				array(
-					'name'  => __( 'Lighter Gray', 'varya-child' ),
-					'slug'  => 'background-dark',
-					'color' => '#DDDDDD',
-				),
-				array(
-					'name'  => __( 'Subtle Gray', 'varya-child' ),
-					'slug'  => 'background-light',
-					'color' => '#FAFAFA',
-				),
-				array(
-					'name'  => __( 'White', 'varya-child' ),
+					'name'  => __( 'Yellow', 'varya-child' ),
 					'slug'  => 'background',
-					'color' => '#FFFFFF',
+					'color' => '#ffff00',
 				),
 			)
 		);
@@ -200,40 +170,3 @@ function varya_child_editor_styles() {
 
 }
 add_action( 'enqueue_block_editor_assets', 'varya_child_editor_styles', 99 );
-
-/**
- * Enqueue Custom Cover Block Styles and Scripts
- */
-function varya_child_block_extends() {
-
-	// Cover Block Tweaks
-	wp_enqueue_script( 'varya-child-extend-cover-block',
-		get_stylesheet_directory_uri() . '/block-extends/extend-cover-block.js',
-		array( 'wp-blocks' )
-	);
-
-	wp_enqueue_style( 'varya-child-extend-cover-block-style',
-		get_stylesheet_directory_uri() . '/block-extends/extend-cover-block.css'
-	);
-
-	// Columns Block Tweaks
-	wp_enqueue_script( 'varya-child-extend-columns-block',
-		get_stylesheet_directory_uri() . '/block-extends/extend-columns-block.js',
-		array( 'wp-blocks' )
-	);
-
-	wp_enqueue_style( 'varya-child-extend-cover-columns-style',
-		get_stylesheet_directory_uri() . '/block-extends/extend-columns-block.css'
-	);
-
-	// Columns Block Tweaks
-	wp_enqueue_script( 'varya-child-extend-media-text-block',
-		get_stylesheet_directory_uri() . '/block-extends/extend-media-text-block.js',
-		array( 'wp-blocks' )
-	);
-
-	wp_enqueue_style( 'varya-child-extend-cover-media-text-style',
-		get_stylesheet_directory_uri() . '/block-extends/extend-media-text-block.css'
-	);
-}
-add_action( 'enqueue_block_assets', 'varya_child_block_extends' );
