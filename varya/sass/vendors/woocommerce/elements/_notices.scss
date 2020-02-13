@@ -18,7 +18,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 	.woocommerce-notice--message,
 	.woocommerce-notice--info {
-		color: var(--global--color-alert-info);
+		color: var(--global--color-foreground);
 	}
 
 	.woocommerce-notice--success {

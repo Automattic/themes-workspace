@@ -187,7 +187,7 @@ body[class*="woocommerce"] #page .woocommerce-warning {
 
 body[class*="woocommerce"] #page .woocommerce-notice--message,
 body[class*="woocommerce"] #page .woocommerce-notice--info {
-	color: var(--global--color-alert-info);
+	color: var(--global--color-foreground);
 }
 
 body[class*="woocommerce"] #page .woocommerce-notice--success {
