@@ -104,7 +104,9 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
-		// Enqueue editor styles.
+		// Do not enqueue editor styles here.
+		// Editor styles are loaded in `enqueue_block_editor_assets`
+		// See: varya_editor_theme_variables();
 		// add_editor_style( 'style-editor.css' );
 
 		// Add custom editor font sizes.
@@ -138,11 +140,6 @@ if ( ! function_exists( 'varya_setup' ) ) :
 			)
 		);
 
-		$default_hue     = varya_get_default_hue();
-		$saturation      = varya_get_default_saturation();
-		$lightness       = varya_get_default_lightness();
-		$lightness_hover = varya_get_default_lightness_hover();
-
 		// Editor color palette.
 		add_theme_support(
 			'editor-color-palette',
@@ -150,12 +147,12 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya' ),
 					'slug'  => 'primary',
-					'color' => varya_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness ),
+					'color' => '#0000FF',
 				),
 				array(
 					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => varya_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness_hover ),
+					'color' => '#FF0000',
 				),
 				array(
 					'name'  => __( 'Dark Gray', 'varya' ),
@@ -266,47 +263,10 @@ function varya_editor_theme_variables() {
 	// Load the theme styles within Gutenberg.
 	wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/variables-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 
-	if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
-		// Add custom colors to Gutenberg.
-		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-		$custom_colors = varya_custom_colors_css();
-		wp_add_inline_style( 'varya-editor-variables', $custom_colors );
-	}
-
 	// Load the child theme styles within Gutenberg.
 	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'varya_editor_theme_variables' );
-
-/**
- * Display custom color CSS in customizer and on frontend.
- */
-function varya_colors_css_wrap() {
-
-	// Only bother if we haven't customized the color.
-	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'primary_color', 'default' ) ) || is_admin() ) {
-		return;
-	}
-
-	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-
-	$primary_color = varya_get_default_hue();
-	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
-		$primary_color = get_theme_mod( 'primary_color_hue', $primary_color );
-	}
-	?>
-
-	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
-		<?php echo varya_custom_colors_css(); ?>
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'varya_colors_css_wrap' );
-
-/**
- * Default color filters.
- */
-require get_template_directory() . '/inc/color-filters.php';
 
 /**
  * SVG Icons class.
