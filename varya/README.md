@@ -4,7 +4,7 @@ Varya is a styling system for quickly creating Gutenberg-ready themes for WordPr
 
 ## What does it do?
 
-When you reduce a theme design down to a set of systematic design decisions, you end up with something called a _Style Guide_. The Varya system works by taking the rules of a Style Guide and expressing them carefully placed variables or _design tokens_ that influence the appearance of Gutenberg Blocks, theme Header + Footer areas, WooCommerce, & Jetpack. The system greatly speeds up the theme development process and reduces the amount of hand-written CSS that typically goes into developing a theme. 
+When you reduce a theme design down to a set of systematic design decisions, you end up with something called a _Style Guide_. The Varya system works by taking the rules of a Style Guide and expressing them through carefully placed variables or _design tokens_ that influence the appearance of a WordPress site. It currently unifyies the overall of Gutenberg Blocks, the theme Header + Footer areas, WooCommerce, Jetpack and more. The system greatly speeds up the theme development process and reduces the amount of hand-written CSS that typically goes into developing a theme. 
 
 ### What controls does the system come with?
 
