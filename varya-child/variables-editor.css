@@ -1,5 +1,6 @@
 .editor-styles-wrapper {
-	--global--color-primary: red;
 	--global--font-primary: Courier;
 	--global--font-secondary: Georgia;
+	--global--color-primary: red;
+	--global--color-background: yellow;
 }
