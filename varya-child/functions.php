@@ -168,5 +168,7 @@ function varya_child_editor_styles() {
 	// Load the parent theme styles within Gutenberg.
 	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 
+	// Load the child theme editor styles within Gutenberg.
+	wp_enqueue_style( 'varya-child-editor-styles', get_stylesheet_directory_uri() . '/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'varya_child_editor_styles', 99 );

@@ -24,3 +24,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /* Frontend Tweaks Only */
+
+/* Tweak site branding */
+.site-branding {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Tweak Post Header */
+#main .entry-header.responsive-max-width {
+	max-width: calc(100% - (4 * var(--global--spacing-unit)));
+}

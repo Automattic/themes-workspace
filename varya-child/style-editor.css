@@ -1,1 +1,6 @@
 /* Editor Tweaks Only */
+
+/* Tweak Post Header */
+.editor-styles-wrapper .wp-block.editor-post-title__block {
+	max-width: 100%;
+}
