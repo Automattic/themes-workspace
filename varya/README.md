@@ -11,6 +11,7 @@ When you reduce a theme design down to a set of systematic design decisions, you
   - **Fonts** - Font-family, size, weight, and line-height rules. 
   - **Colors** - Primary, secondary, background, foreground and border colors. 
   - **Spacing** - Sets an 8px vertical rhythm between all blocks and major components. Adds general spacing rules for blocks and components. Adds utility spacing classes for negative margins.
+  - **Responsive Logic** - Unifies the responsive behavior across various Blocks and Components to support nesting.
 
 ## How does it work?
 
@@ -28,11 +29,11 @@ The system itself lives in the `/varya/sass` directory as a collection of Sass p
 - `/varya/variables.css`
 - `/varya/style.css`
 
-In each view, the variables are loaded first and then the stylesheet is loaded which is dependant on the variables.
+In each view, the variables are loaded first and then the stylesheet is loaded which is dependent on the variables.
 
 ## How to use it
 
-To use the system, simply duplicate the `vayra-child` theme driectory and rename it `my-theme-name`. You’ll also want to do a find and replace the `varia-child` strings with `my-theme-name` as follows:
+To use the system, simply duplicate the `vayra-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `varia-child` strings and replace them with `my-theme-name` as follows:
 
   - Search for: `'varya-child'` and replace with: `'my-theme-name'` (with quotes).
   - Search for: `varya_child_` and replace with: `my_theme_name_`.
@@ -70,6 +71,7 @@ When working with a Varya child theme, only the variables need to be overwritten
 
 ### Todos
 
+ - Explore responsive-logic overrides in the child theme.
  - Integrate with build tool
  - Introduce an advanced child theme example that uses block styles
  - Audit Varya system for excessive overridden rules
