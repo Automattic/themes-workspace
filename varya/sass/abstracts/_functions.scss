@@ -1,8 +1,6 @@
-/* Sass Functions go here */
-
-/// Remove the unit of a length
-/// @param {Number} $number - Number to remove unit from
-/// @return {Number} - Unitless number
+// Remove the unit of a length
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
 @function strip-unit($number) {
 	@if type-of($number) == 'number' and not unitless($number) {
 		@return $number / ($number * 0 + 1);
@@ -34,17 +32,15 @@
   @return $ret;
 }
 
-/**
- * Map deep get
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {Arglist} $keys - Key chain
- * @return {*} - Desired value
- *
- * Example:
- * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
- */
+// Map deep get
+// @author Hugo Giraudel
+// @access public
+// @param {Map} $map - Map
+// @param {Arglist} $keys - Key chain
+// @return {*} - Desired value
+//
+// Example:
+// $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
 @function map-deep-get($map, $keys...) {
     @each $key in $keys {
         $map: map-get($map, $key);
@@ -52,18 +48,16 @@
     @return $map;
 }
 
-/**
- * Deep set function to set a value in nested maps
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {List} $keys -  Key chaine
- * @param {*} $value - Value to assign
- * @return {Map}
- *
- * Example:
- * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
- */
+// ep set function to set a value in nested maps
+// uthor Hugo Giraudel
+// ccess public
+// aram {Map} $map - Map
+// aram {List} $keys -  Key chaine
+// aram {*} $value - Value to assign
+// eturn {Map}
+//
+// ample:
+// _prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
 @function map-deep-set($map, $keys, $value) {
 	$maps: ($map);
 	$result: null;
@@ -106,55 +100,53 @@
 	@return $result;
 }
 
-/**
- * jQuery-style extend function
- * - Child themes can use this function to `reset` the values in
- *   config maps without editing the `master` Sass files.
- * - src: https://www.sitepoint.com/extra-map-functions-sass/
- * - About `map-merge()`:
- * - - only takes 2 arguments
- * - - is not recursive
- * @param {Map} $map - first map
- * @param {ArgList} $maps - other maps
- * @param {Bool} $deep - recursive mode
- * @return {Map}
- *
- * Examples:
+// jQuery-style extend function
+// - Child themes can use this function to `reset` the values in
+//   config maps without editing the `master` Sass files.
+// - src: https://www.sitepoint.com/extra-map-functions-sass/
+// - About `map-merge()`:
+// - - only takes 2 arguments
+// - - is not recursive
+// @param {Map} $map - first map
+// @param {ArgList} $maps - other maps
+// @param {Bool} $deep - recursive mode
+// @return {Map}
 
-$grid-configuration-default: (
-	'columns': 12,
-	'layouts': (
-		'small': 800px,
-		'medium': 1000px,
-		'large': 1200px,
-	),
-);
+// Examples:
 
-$grid-configuration-custom: (
-	'layouts': (
-		'large': 1300px,
-		'huge': 1500px
-	),
-);
+// $grid-configuration-default: (
+// 	'columns': 12,
+// 	'layouts': (
+// 		'small': 800px,
+// 		'medium': 1000px,
+// 		'large': 1200px,
+// 	),
+// );
 
-$grid-configuration-user: (
-	'direction': 'ltr',
-	'columns': 16,
-	'layouts': (
-		'large': 1300px,
-		'huge': 1500px
-	),
-);
+// $grid-configuration-custom: (
+// 	'layouts': (
+// 		'large': 1300px,
+// 		'huge': 1500px
+// 	),
+// );
+
+// $grid-configuration-user: (
+// 	'direction': 'ltr',
+// 	'columns': 16,
+// 	'layouts': (
+// 		'large': 1300px,
+// 		'huge': 1500px
+// 	),
+// );
 
 // $deep: false
-$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user);
+// $grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user);
 // --> ("columns": 16, "layouts": (("large": 1300px, "huge": 1500px)), "direction": "ltr")
 
 // $deep: true
-$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user, true);
+// $grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user, true);
 // --> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
 
- */
 @function map-extend($map, $maps.../*, $deep */) {
 	$last: nth($maps, -1);
 	$deep: $last == true;

@@ -1,7 +1,4 @@
-/* Collect Root Variables??? */
-/**
- * Responsive breakpoints mixin
- */
+// Responsive breakpoints mixin
 @mixin add_variables( $view: frontend ) {
 
 	@if frontend == $view {
@@ -17,10 +14,8 @@
 	}
 }
 
-/**
- * Crop Text Boundry
- * - Sets a fixed-width on content within alignwide and alignfull blocks
- */
+// Crop Text Boundry
+// - Sets a fixed-width on content within alignwide and alignfull blocks
 @mixin crop-text($inset-line-height: 1) {
 
 	line-height: $inset-line-height;

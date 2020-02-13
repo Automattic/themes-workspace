@@ -120,8 +120,8 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 					border-top: 1px solid var(--wc--mini-cart--color-border);
 				}
 
-				a:hover,
-				a:focus {
+				a:hover:not(.remove),
+				a:focus:not(.remove) {
 					background-color: transparent;
 				}
 
@@ -177,13 +177,16 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 			padding: 0;
 		}
 
-		ul.cart_list li .quantity,
-		ul.product_list_widget li .quantity,
 		ul.cart_list li a:not(.remove),
 		ul.product_list_widget li a:not(.remove),
 		.woocommerce-mini-cart__total {
 			font-family: var(--primary-nav--font-family);
 			font-size: var(--primary-nav--font-size);
+		}
+
+		ul.cart_list li .quantity,
+		ul.product_list_widget li .quantity {
+			font-size: var(--global--font-size-base);
 		}
 
 		@include media(mobile) {

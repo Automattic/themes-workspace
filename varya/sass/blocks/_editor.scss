@@ -1,11 +1,8 @@
-/**
- * Block Styles for the Editor
- *
- * - These styles replace key Gutenberg Block styles for fonts, colors, and
- *   spacing with CSS-variables overrides in the Block Editor
- * - In the future the Block styles may get compiled to individual .css
- *   files and conditionally loaded
- */
+// Block Styles for the Editor
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides in the Block Editor
+// - In the future the Block styles may get compiled to individual .css
+//   files and conditionally loaded
 
 @import "blog-posts/editor";
 @import "button/editor";
@@ -29,17 +26,3 @@
 @import "subscription/editor";
 @import "table/editor";
 @import "utilities/editor"; // Import LAST to cascade properly
-
-/*
-@import "columns/editor";
-@import "file/editor";
-@import "gallery/editor";
-@import "heading/editor";
-@import "image/editor";
-@import "media-text/editor";
-@import "paragraph/editor";
-@import "separator/editor";
-@import "spacer/editor";
-@import "video/editor";
-@import "utilities"; // Import LAST to cascade properly
-*/

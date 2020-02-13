@@ -105,7 +105,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'style-editor.css' );
+		// add_editor_style( 'style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -225,7 +225,7 @@ function varya_scripts() {
 	wp_enqueue_style( 'varya-variables-style', get_template_directory_uri() . '/variables.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// Theme styles
-	wp_enqueue_style( 'varya-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'varya-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles
 	wp_style_add_data( 'varya-style', 'rtl', 'replace' );
@@ -264,7 +264,7 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 function varya_editor_theme_variables() {
 
 	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-variables', get_theme_file_uri( 'variables-editor.css' ), false, wp_get_theme()->get( 'Version' ), 'all' );
+	wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/variables-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 
 	if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
 		// Add custom colors to Gutenberg.
@@ -272,6 +272,9 @@ function varya_editor_theme_variables() {
 		$custom_colors = varya_custom_colors_css();
 		wp_add_inline_style( 'varya-editor-variables', $custom_colors );
 	}
+
+	// Load the child theme styles within Gutenberg.
+	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'varya_editor_theme_variables' );
 

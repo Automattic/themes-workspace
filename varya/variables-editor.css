@@ -1,16 +1,6 @@
 /**
  * These styles should be loaded by the Block Editor only
  */
-/* Collect Root Variables??? */
-/**
- * Responsive breakpoints mixin
- */
-/**
- * Crop Text Boundry
- * - Sets a fixed-width on content within alignwide and alignfull blocks
- */
-/* Vertical Rhythm Multiplier */
-/* Typescale Multipliers */
 /**
  * Variable Configuration
  * - Import all config files for display in
@@ -181,7 +171,7 @@
 	--wc--mini-cart--color-subtotal: var(--global--color-foreground);
 	--wc--mini-cart--color-count: var(--global--color-foreground-light);
 	--wc--mini-cart--color-border: var(--global--color-border);
-	--wc--mini-cart--button-text-color: var(--global--color-foreground);
+	--wc--mini-cart--button-text-color: var(--button--color-text);
 	--wc--mini-cart--button-background-color: var(--button--color-background);
 	--wc--mini-cart--width: calc(25 * var(--global--spacing-unit));
 	--wc--star-rating--color: var(--global--color-alert-warning);

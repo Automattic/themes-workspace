@@ -1,130 +1,3 @@
-@charset "UTF-8";
-/**
- * WooCommerce Styles
- * - These styles should be loaded when WooCommerce is active
- */
-/**
- * Abstracts
- * - Functions and config
- */
-/**
- * Abstracts
- * - Mixins, variables and functions
- */
-/* Vertical Rhythm Multiplier */
-/* Typescale Multipliers */
-/* Collect Root Variables??? */
-/**
- * Responsive breakpoints mixin
- */
-/**
- * Crop Text Boundry
- * - Sets a fixed-width on content within alignwide and alignfull blocks
- */
-/* Sass Functions go here */
-/**
- * Map deep get
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {Arglist} $keys - Key chain
- * @return {*} - Desired value
- *
- * Example:
- * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
- */
-/**
- * Deep set function to set a value in nested maps
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {List} $keys -  Key chaine
- * @param {*} $value - Value to assign
- * @return {Map}
- *
- * Example:
- * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
- */
-/**
- * jQuery-style extend function
- * - Child themes can use this function to `reset` the values in
- *   config maps without editing the `master` Sass files.
- * - src: https://www.sitepoint.com/extra-map-functions-sass/
- * - About `map-merge()`:
- * - - only takes 2 arguments
- * - - is not recursive
- * @param {Map} $map - first map
- * @param {ArgList} $maps - other maps
- * @param {Bool} $deep - recursive mode
- * @return {Map}
- *
- * Examples:
-
-$grid-configuration-default: (
-	'columns': 12,
-	'layouts': (
-		'small': 800px,
-		'medium': 1000px,
-		'large': 1200px,
-	),
-);
-
-$grid-configuration-custom: (
-	'layouts': (
-		'large': 1300px,
-		'huge': 1500px
-	),
-);
-
-$grid-configuration-user: (
-	'direction': 'ltr',
-	'columns': 16,
-	'layouts': (
-		'large': 1300px,
-		'huge': 1500px
-	),
-);
-
-// $deep: false
-$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user);
-// --> ("columns": 16, "layouts": (("large": 1300px, "huge": 1500px)), "direction": "ltr")
-
-// $deep: true
-$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user, true);
-// --> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
-
- */
-/**
- * Set initial breakpoint variables
- */
-/*
- * Set horizontal padding
- * - CSS Custom properties do not work width media queries
- * - Must use a raw integer for \$baseline-unit
- * - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
- */
-/* Responsive breakpoints */
-/* Responsive width-content overrides */
-/**
- * Responsive breakpoints mixin
- */
-/**
- * Align wide widths mixin
- * - Sets .alignwide widths
- */
-/**
- * Responsive %extends
- * - Use placeholders for combining similar logic
- */
-/**
- * Varya Extends
- */
-/**
- * Button Placeholder style
- * - Since buttons appear in various blocks,
- *   let’s use a placeholder to keep them all
- *   in-sync
- */
 body[class*="woocommerce"] #page #respond input#submit,
 body[class*="woocommerce"] #page #respond input#submit.alt,
 body[class*="woocommerce"] #page a.button,
@@ -256,12 +129,6 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a.ha
 	background-color: var(--button--color-background-hover);
 }
 
-/**
- * Onsale Placeholder style
- * - Since buttons appear in various blocks,
- *   let’s use a placeholder to keep them all
- *   in-sync
- */
 body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-grid__product-onsale {
 	border-radius: 100%;
 	background-color: var(--global--color-alert-warning);
@@ -283,9 +150,6 @@ body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-
 	z-index: 9;
 }
 
-/**
- * WooCommerce Styles
- */
 /**
  * WooCommerce styles
  */
@@ -415,8 +279,8 @@ body[class*="woocommerce"] #page .woocommerce-password-hint {
 body[class*="woocommerce"] #page a.remove {
 	font-size: var(--global--font-size-lg);
 	font-family: sans-serif !important;
-	height: var(--global--font-size-lg);
-	width: var(--global--font-size-lg);
+	height: var(--global--font-size-md);
+	width: var(--global--font-size-md);
 	color: red !important;
 }
 
@@ -816,8 +680,8 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .wooc
 	border-top: 1px solid var(--wc--mini-cart--color-border);
 }
 
-body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:hover,
-body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:focus {
+body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:hover:not(.remove),
+body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:focus:not(.remove) {
 	background-color: transparent;
 }
 
@@ -871,13 +735,16 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a {
 	padding: 0;
 }
 
-body[class*="woocommerce"] #page .main-navigation ul.cart_list li .quantity,
-body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .quantity,
 body[class*="woocommerce"] #page .main-navigation ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation .woocommerce-mini-cart__total {
 	font-family: var(--primary-nav--font-family);
 	font-size: var(--primary-nav--font-size);
+}
+
+body[class*="woocommerce"] #page .main-navigation ul.cart_list li .quantity,
+body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .quantity {
+	font-size: var(--global--font-size-base);
 }
 
 @media only screen and (min-width: 560px) {

@@ -5,27 +5,19 @@
 @import "sass/abstracts/mixins";
 @import "sass/abstracts/responsive-logic";
 
-/**
- * Abstracts
- * - Mixins, variables and functions
- */
+// Abstracts
+// - Mixins, variables and functions
 @import "sass/abstracts/editor";
 
-/**
- * Base
- * - Reset the browser
- */
+// Base
+// - Reset the browser
 @import "sass/base/editor";
 
-/**
- * Elements
- * - Styles for basic HTML elemants
- */
+// Elements
+// - Styles for basic HTML elemants
 @import "sass/elements/editor";
 
-/**
- * Blocks
- * - These styles replace key Gutenberg Block styles for fonts, colors, and
- *   spacing with CSS-variables overrides
- */
+// Blocks
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides
 @import "sass/blocks/editor";

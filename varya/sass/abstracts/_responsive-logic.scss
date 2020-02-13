@@ -1,6 +1,4 @@
-/**
- * Set initial breakpoint variables
- */
+// Set initial breakpoint variables
 $config-breakpoint: (
 	"sm": 560px,
 	"md": 640px,
@@ -9,22 +7,20 @@ $config-breakpoint: (
 	"xxl": 1280px,
 );
 
-/*
- * Set horizontal padding
- * - CSS Custom properties do not work width media queries
- * - Must use a raw integer for \$baseline-unit
- * - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
- */
+// Set horizontal padding
+// - CSS Custom properties do not work width media queries
+// - Must use a raw integer for \$baseline-unit
+// - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
 $horizontal-padding: 32px;
 
-/* Responsive breakpoints */
+// Responsive breakpoints
 $content-breakpoint-sm: #{map-deep-get($config-breakpoint, "sm")};
 $content-breakpoint-md: #{map-deep-get($config-breakpoint, "md")};
 $content-breakpoint-lg: #{map-deep-get($config-breakpoint, "lg")};
 $content-breakpoint-xl: #{map-deep-get($config-breakpoint, "xl")};
 $content-breakpoint-xxl: #{map-deep-get($config-breakpoint, "xxl")};
 
-/* Responsive width-content overrides */
+// Responsive width-content overrides
 $content-width-flex: 100%;
 $content-width-sm: calc( #{map-deep-get($config-breakpoint, "sm")} - #{$horizontal-padding} );
 $content-width-md: calc( #{map-deep-get($config-breakpoint, "md")} - #{$horizontal-padding} );
@@ -32,9 +28,7 @@ $content-width-lg: calc( #{map-deep-get($config-breakpoint, "lg")} - #{$horizont
 $content-width-xl: calc( #{map-deep-get($config-breakpoint, "xl")} - #{$horizontal-padding} );
 $content-width-xxl: calc( #{map-deep-get($config-breakpoint, "xxl")} - #{$horizontal-padding} );
 
-/**
- * Responsive breakpoints mixin
- */
+// Responsive breakpoints mixin
 @mixin media( $res ) {
 
 	@if mobile-only == $res {
@@ -74,10 +68,8 @@ $content-width-xxl: calc( #{map-deep-get($config-breakpoint, "xxl")} - #{$horizo
 	}
 }
 
-/**
- * Align wide widths mixin
- * - Sets .alignwide widths
- */
+// Align wide widths mixin
+// - Sets .alignwide widths
 @mixin alignwide-width( $width: 100%, $multiplier...) {
 
 	@if length($multiplier) == 0 {
@@ -98,10 +90,8 @@ $content-width-xxl: calc( #{map-deep-get($config-breakpoint, "xxl")} - #{$horizo
 	max-width: 100%;
 }
 
-/**
- * Responsive %extends
- * - Use placeholders for combining similar logic
- */
+// Responsive %extends
+// - Use placeholders for combining similar logic
 %responsive-aligndefault {
 
 	max-width: $content-width-flex;

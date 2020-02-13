@@ -1,20 +1,12 @@
-/**
- * WooCommerce Styles
- * - These styles should be loaded when WooCommerce is active
- */
+// WooCommerce Styles
+// - These styles should be loaded when WooCommerce is active
 
-/**
- * Abstracts
- * - Functions and config
- */
+// Abstracts
+// - Functions and config
 @import "sass/abstracts/style";
 
-/**
- * Varya Extends
- */
+// Extends
 @import "sass/base/extends";
 
-/**
- * WooCommerce Styles
- */
+// WooCommerce
 @import "sass/vendors/woocommerce/style";

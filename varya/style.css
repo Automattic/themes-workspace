@@ -21,119 +21,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-/**
- * Abstracts
- * - Mixins, variables and functions
- */
-/**
- * Abstracts
- * - Mixins, variables and functions
- */
-/* Vertical Rhythm Multiplier */
-/* Typescale Multipliers */
-/* Collect Root Variables??? */
-/**
- * Responsive breakpoints mixin
- */
-/**
- * Crop Text Boundry
- * - Sets a fixed-width on content within alignwide and alignfull blocks
- */
-/* Sass Functions go here */
-/**
- * Map deep get
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {Arglist} $keys - Key chain
- * @return {*} - Desired value
- *
- * Example:
- * $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
- */
-/**
- * Deep set function to set a value in nested maps
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {List} $keys -  Key chaine
- * @param {*} $value - Value to assign
- * @return {Map}
- *
- * Example:
- * $__prefix-default-config: map-deep-set($__prefix-default-config, "layouts" "M", 650px);
- */
-/**
- * jQuery-style extend function
- * - Child themes can use this function to `reset` the values in
- *   config maps without editing the `master` Sass files.
- * - src: https://www.sitepoint.com/extra-map-functions-sass/
- * - About `map-merge()`:
- * - - only takes 2 arguments
- * - - is not recursive
- * @param {Map} $map - first map
- * @param {ArgList} $maps - other maps
- * @param {Bool} $deep - recursive mode
- * @return {Map}
- *
- * Examples:
-
-$grid-configuration-default: (
-	'columns': 12,
-	'layouts': (
-		'small': 800px,
-		'medium': 1000px,
-		'large': 1200px,
-	),
-);
-
-$grid-configuration-custom: (
-	'layouts': (
-		'large': 1300px,
-		'huge': 1500px
-	),
-);
-
-$grid-configuration-user: (
-	'direction': 'ltr',
-	'columns': 16,
-	'layouts': (
-		'large': 1300px,
-		'huge': 1500px
-	),
-);
-
-// $deep: false
-$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user);
-// --> ("columns": 16, "layouts": (("large": 1300px, "huge": 1500px)), "direction": "ltr")
-
-// $deep: true
-$grid-configuration: map-extend($grid-configuration-default, $grid-configuration-custom, $grid-configuration-user, true);
-// --> ("columns": 16, "layouts": (("small": 800px, "medium": 1000px, "large": 1300px, "huge": 1500px)), "direction": "ltr")
-
- */
-/**
- * Set initial breakpoint variables
- */
-/*
- * Set horizontal padding
- * - CSS Custom properties do not work width media queries
- * - Must use a raw integer for \$baseline-unit
- * - var(--global--spacing-horizontal) == \#\{2 \* $baseline-unit\}
- */
-/* Responsive breakpoints */
-/* Responsive width-content overrides */
-/**
- * Responsive breakpoints mixin
- */
-/**
- * Align wide widths mixin
- * - Sets .alignwide widths
- */
-/**
- * Responsive %extends
- * - Use placeholders for combining similar logic
- */
 .responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 .wp-block-pullquote.alignfull > p,
 .wp-block-pullquote.alignwide blockquote,
@@ -376,16 +263,6 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
  * Base
  * - Reset the browser
  */
-/**
- * Base
- * - Reset the browser
- */
-/**
- * Button Placeholder style
- * - Since buttons appear in various blocks,
- *   let’s use a placeholder to keep them all
- *   in-sync
- */
 button[data-load-more-btn],
 .button, button,
 input[type="submit"],
@@ -549,12 +426,6 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a.ha
 	background-color: var(--button--color-background-hover);
 }
 
-/**
- * Onsale Placeholder style
- * - Since buttons appear in various blocks,
- *   let’s use a placeholder to keep them all
- *   in-sync
- */
 body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-grid__product-onsale {
 	border-radius: 100%;
 	background-color: var(--global--color-alert-warning);
@@ -577,12 +448,6 @@ body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
 	line-height: 1.15;
 	/* 1 */
@@ -590,37 +455,19 @@ html {
 	/* 2 */
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
 	margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
 main {
 	display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
 	box-sizing: content-box;
 	/* 1 */
@@ -630,10 +477,6 @@ hr {
 	/* 2 */
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 pre {
 	font-family: monospace, monospace;
 	/* 1 */
@@ -642,19 +485,10 @@ pre {
 	overflow: scroll;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
 	background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
 abbr[title] {
 	border-bottom: none;
 	/* 1 */
@@ -664,18 +498,11 @@ abbr[title] {
 	/* 2 */
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
 	font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 code,
 kbd,
 samp {
@@ -685,17 +512,10 @@ samp {
 	/* 2 */
 }
 
-/**
- * Add the correct font size in all browsers.
- */
 small {
 	font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 sub,
 sup {
 	font-size: 75%;
@@ -712,21 +532,10 @@ sup {
 	top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
 img {
 	border-style: none;
 }
 
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 button,
 input,
 optgroup,
@@ -742,29 +551,18 @@ textarea {
 	/* 2 */
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
 button,
 input {
 	/* 1 */
 	overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
 select {
 	/* 1 */
 	text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
 button,
 [type="button"],
 [type="reset"],
@@ -772,9 +570,6 @@ button,
 	-webkit-appearance: button;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -783,9 +578,6 @@ button::-moz-focus-inner,
 	padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -793,19 +585,10 @@ button:-moz-focusring,
 	outline: 1px dotted ButtonText;
 }
 
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
 	padding: 0.35em 0.75em 0.625em;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 legend {
 	box-sizing: border-box;
 	/* 1 */
@@ -821,24 +604,14 @@ legend {
 	/* 1 */
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 progress {
 	vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 textarea {
 	overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
 [type="checkbox"],
 [type="radio"] {
 	box-sizing: border-box;
@@ -847,18 +620,11 @@ textarea {
 	/* 2 */
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type="search"] {
 	-webkit-appearance: textfield;
 	/* 1 */
@@ -866,17 +632,10 @@ textarea {
 	/* 2 */
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 [type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 ::-webkit-file-upload-button {
 	-webkit-appearance: button;
 	/* 1 */
@@ -884,34 +643,18 @@ textarea {
 	/* 2 */
 }
 
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
 	display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
 summary {
 	display: list-item;
 }
 
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
 template {
 	display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
 [hidden] {
 	display: none;
 }
@@ -1070,10 +813,6 @@ a {
 	clear: both;
 }
 
-/**
- * Measure
- * - The width of a line of text, in characters, is known as its measure.
- */
 header *,
 main *,
 footer * {
@@ -1102,10 +841,6 @@ footer {
 	background-color: var(--global--color-text-selection);
 }
 
-/**
- * Layout
- * - Structral and responsive styles
- */
 /**
  * Layout
  * - Structral and responsive styles
@@ -1295,10 +1030,6 @@ footer {
  * Elements
  * - Styles for basic HTML elemants
  */
-/**
- * Elements
- * - Styles for basic HTML elemants
- */
 blockquote {
 	padding-left: var(--global--spacing-horizontal);
 }
@@ -1434,20 +1165,6 @@ object {
 	max-width: 100%;
 }
 
-/**
- * Blocks
- * - These styles replace key Gutenberg Block styles for fonts, colors, and
- *   spacing with CSS-variables overrides
- * - In the future the Block styles may get compiled to individual .css
- *   files and conditionally loaded
- */
-/**
- * Blocks
- * - These styles replace key Gutenberg Block styles with font, color, and
- *   spacing with CSS-variables overrides
- * - In the future the Block styles may get compiled to individual .css
- *   files and conditionally loaded
- */
 .wp-block-audio {
 	min-width: inherit;
 }
@@ -1622,12 +1339,6 @@ object {
 	color: currentColor;
 }
 
-/**
- * Button Placeholder style
- * - Since buttons appear in various blocks,
- *   let’s use a placeholder to keep them all
- *   in-sync
- */
 button[data-load-more-btn],
 .button, button,
 input[type="submit"],
@@ -1791,12 +1502,6 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a.ha
 	background-color: var(--button--color-background-hover);
 }
 
-/**
- * Onsale Placeholder style
- * - Since buttons appear in various blocks,
- *   let’s use a placeholder to keep them all
- *   in-sync
- */
 body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-grid__product-onsale {
 	border-radius: 100%;
 	background-color: var(--global--color-alert-warning);
@@ -3093,10 +2798,6 @@ table th,
 	padding-left: var(--global--spacing-vertical) !important;
 }
 
-/**
- * Components
- * - Similar to Blocks but exist outside of the "current" editor context
- */
 /*
  * Components
  * - Similar to Blocks but exist outside of the "current" editor context
@@ -3206,11 +2907,6 @@ table th,
 	z-index: 99999;
 }
 
-.main-navigation > div > ul li:hover, .main-navigation > div > ul li[focus-within] {
-	cursor: pointer;
-	z-index: 99999;
-}
-
 .main-navigation > div > ul li:hover, .main-navigation > div > ul li:focus-within {
 	cursor: pointer;
 	z-index: 99999;
@@ -3221,14 +2917,6 @@ table th,
 		display: inherit;
 		width: inherit;
 		/* Submenu display */
-	}
-	.main-navigation > div > ul li:hover > ul,
-	.main-navigation > div > ul li[focus-within] > ul,
-	.main-navigation > div > ul li ul:hover,
-	.main-navigation > div > ul li ul:focus {
-		visibility: visible;
-		opacity: 1;
-		display: block;
 	}
 	.main-navigation > div > ul li:hover > ul,
 	.main-navigation > div > ul li[focus-within] > ul,
@@ -3775,10 +3463,6 @@ img#wpstats {
  * Site Pages
  * - Page specific styles
  */
-/**
- * Site Pages
- * - Page specific styles
- */
 .sticky-post {
 	color: var(--global--color-background);
 	background-color: var(--global--color-primary);
@@ -3793,10 +3477,6 @@ img#wpstats {
 	font-size: var(--heading--font-size-h4);
 }
 
-/**
- * Vendors
- * - Styles for 3rd party plugins and WP extensions
- */
 /**
  * Vendor styles
  */
@@ -3929,8 +3609,8 @@ body[class*="woocommerce"] #page .woocommerce-password-hint {
 body[class*="woocommerce"] #page a.remove {
 	font-size: var(--global--font-size-lg);
 	font-family: sans-serif !important;
-	height: var(--global--font-size-lg);
-	width: var(--global--font-size-lg);
+	height: var(--global--font-size-md);
+	width: var(--global--font-size-md);
 	color: red !important;
 }
 
@@ -4330,8 +4010,8 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .wooc
 	border-top: 1px solid var(--wc--mini-cart--color-border);
 }
 
-body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:hover,
-body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:focus {
+body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:hover:not(.remove),
+body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:focus:not(.remove) {
 	background-color: transparent;
 }
 
@@ -4385,13 +4065,16 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a {
 	padding: 0;
 }
 
-body[class*="woocommerce"] #page .main-navigation ul.cart_list li .quantity,
-body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .quantity,
 body[class*="woocommerce"] #page .main-navigation ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation .woocommerce-mini-cart__total {
 	font-family: var(--primary-nav--font-family);
 	font-size: var(--primary-nav--font-size);
+}
+
+body[class*="woocommerce"] #page .main-navigation ul.cart_list li .quantity,
+body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .quantity {
+	font-size: var(--global--font-size-base);
 }
 
 @media only screen and (min-width: 560px) {

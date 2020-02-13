@@ -1,4 +1,4 @@
-.wp-block-pullquote {
+.editor-styles-wrapper .wp-block-pullquote {
 	padding: calc( 3 * var(--global--spacing-unit) ) 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -32,9 +32,7 @@
 		font-size: var(--global--font-size-sm);
 	}
 
-	/**
-	 * Block Options
-	 */
+	// Block Options
 	&:not(.is-style-solid-color) {
 		background: none;
 	}
@@ -43,10 +41,6 @@
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
-
-		&:not(.alignleft):not(.alignright) blockquote {
-			// max-width: calc( var(--global--width-content) - (2 * calc( var(--global--width-content) / 12 )) );
-		}
 
 		&.alignleft blockquote,
 		&.alignright blockquote {

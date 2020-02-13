@@ -21,53 +21,37 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/**
- * Abstracts
- * - Mixins, variables and functions
- */
+// Abstracts
+// - Mixins, variables and functions
 @import "sass/abstracts/style";
 
-/**
- * Base
- * - Reset the browser
- */
+// Base
+// - Reset the browser
 @import "sass/base/style";
 
-/**
- * Layout
- * - Structral and responsive styles
- */
+// Layout
+// - Structral and responsive styles
 @import "sass/layout/style";
 
-/**
- * Elements
- * - Styles for basic HTML elemants
- */
+// Elements
+// - Styles for basic HTML elemants
 @import "sass/elements/style";
 
-/**
- * Blocks
- * - These styles replace key Gutenberg Block styles for fonts, colors, and
- *   spacing with CSS-variables overrides
- * - In the future the Block styles may get compiled to individual .css
- *   files and conditionally loaded
- */
+// Blocks
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides
+// - In the future the Block styles may get compiled to individual .css
+//   files and conditionally loaded
 @import "sass/blocks/style";
 
-/**
- * Components
- * - Similar to Blocks but exist outside of the "current" editor context
- */
+// Components
+// - Similar to Blocks but exist outside of the "current" editor context
 @import "sass/components/style";
 
-/**
- * Site Pages
- * - Page specific styles
- */
+// Site Pages
+// - Page specific styles
 @import "sass/pages/style";
 
-/**
- * Vendors
- * - Styles for 3rd party plugins and WP extensions
- */
+// Vendors
+// - Styles for 3rd party plugins and WP extensions
 @import "sass/vendors/style";
