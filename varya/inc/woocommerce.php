@@ -36,7 +36,7 @@ add_action( 'after_setup_theme', 'varya_woocommerce_setup' );
  * Add a custom wrapper for woocomerce content
  */
 function varya_wrapper_start() {
-	echo '<article id="woocommerce-wrapper" class="responsive-max-width">';
+	echo '<article id="woocommerce-wrapper" class="default-max-width">';
 }
 add_action('woocommerce_before_main_content', 'varya_wrapper_start', 10);
 

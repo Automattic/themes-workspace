@@ -13,7 +13,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header responsive-max-width">
+	<header class="entry-header default-max-width">
 		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 	</header>
 
@@ -31,7 +31,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer responsive-max-width">
+		<footer class="entry-footer default-max-width">
 			<?php
 			edit_post_link(
 				sprintf(

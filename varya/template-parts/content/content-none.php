@@ -12,7 +12,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header responsive-max-width">
+	<header class="page-header default-max-width">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'varya' ); ?></h1>
 	</header><!-- .page-header -->
 

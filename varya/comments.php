@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area responsive-max-width">
+<div id="comments" class="comments-area default-max-width">
 
 	<?php
 	// You can start editing here -- including this comment!

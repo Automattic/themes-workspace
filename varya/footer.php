@@ -15,7 +15,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer responsive-max-width">
+	<footer id="colophon" class="site-footer default-max-width">
 
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 

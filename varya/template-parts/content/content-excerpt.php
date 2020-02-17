@@ -12,7 +12,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header responsive-max-width">
+	<header class="entry-header default-max-width">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
 			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'varya' ) );
@@ -27,7 +27,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer responsive-max-width">
+	<footer class="entry-footer default-max-width">
 		<?php varya_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->

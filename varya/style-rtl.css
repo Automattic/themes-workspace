@@ -21,7 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
+.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 .wp-block-pullquote.alignfull > p,
 .wp-block-pullquote.alignwide blockquote,
 .wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
@@ -32,7 +32,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 560px) {
-	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
+	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
@@ -42,7 +42,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 640px) {
-	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
+	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
@@ -52,7 +52,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 782px) {
-	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
+	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
@@ -62,7 +62,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 1024px) {
-	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
+	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
@@ -72,7 +72,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 1280px) {
-	.responsive-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
+	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
 	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
@@ -81,7 +81,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.entry-content > .alignwide {
+.wide-max-width, .entry-content > .alignwide {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 100%;
@@ -89,32 +89,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 560px) {
-	.entry-content > .alignwide {
+	.wide-max-width, .entry-content > .alignwide {
 		max-width: calc( 560px - 32px);
 	}
 }
 
 @media only screen and (min-width: 640px) {
-	.entry-content > .alignwide {
+	.wide-max-width, .entry-content > .alignwide {
 		max-width: calc( 640px - 32px);
 	}
 }
 
 @media only screen and (min-width: 782px) {
-	.entry-content > .alignwide {
+	.wide-max-width, .entry-content > .alignwide {
 		max-width: calc( 782px - 32px);
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	.entry-content > .alignwide {
+	.wide-max-width, .entry-content > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
 	}
 }
 
 @media only screen and (min-width: 1280px) {
-	.entry-content > .alignwide {
+	.wide-max-width, .entry-content > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
 	}
@@ -162,7 +162,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.entry-content > .alignfull {
+.full-max-width, .entry-content > .alignfull {
 	margin-right: calc(-1 * var(--global--spacing-horizontal));
 	margin-left: calc(-1 * var(--global--spacing-horizontal));
 	width: calc(100% + 32px);
@@ -171,7 +171,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 560px) {
-	.entry-content > .alignfull {
+	.full-max-width, .entry-content > .alignfull {
 		margin-right: inherit;
 		margin-left: inherit;
 		width: inherit;
@@ -882,19 +882,13 @@ footer {
 }
 
 /**
- * Major content sections (article, author-bio, pagination, comments, etc.)
- * - Set a maximum responsive content-width
- *
- * .responsive-max-width is a group selector replacing the following:
- * .site-header,
- * .site-main,
- * .site-footer
- * .entry-header,
- * .post-thumbnail,
- * .entry-content,
- * .entry-footer,
- * .author-bio,
- * .widget-area
+ * Set the default maximum responsive content-width
+ */
+/**
+ * Set the wide maximum responsive content-width
+ */
+/**
+ * Set the full maximum responsive content-width
  */
 /*
  * Block & non-gutenberg content wrappers

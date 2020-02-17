@@ -45,22 +45,24 @@
 }
 
 /**
- * Major content sections (article, author-bio, pagination, comments, etc.)
- * - Set a maximum responsive content-width
- *
- * .responsive-max-width is a group selector replacing the following:
- * .site-header,
- * .site-main,
- * .site-footer
- * .entry-header,
- * .post-thumbnail,
- * .entry-content,
- * .entry-footer,
- * .author-bio,
- * .widget-area
+ * Set the default maximum responsive content-width
  */
-.responsive-max-width {
+.default-max-width {
 	@extend %responsive-aligndefault;
+}
+
+/**
+ * Set the wide maximum responsive content-width
+ */
+.wide-max-width {
+	@extend %responsive-alignwide;
+}
+
+/**
+ * Set the full maximum responsive content-width
+ */
+.full-max-width {
+	@extend %responsive-alignfull;
 }
 
 /*
