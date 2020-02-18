@@ -25,7 +25,7 @@
 
 		<header id="masthead" class="site-header default-max-width">
 
-			<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+			<?php get_template_part( 'template-parts/header', 'site-branding' ); ?>
 
 			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'varya' ); ?>">

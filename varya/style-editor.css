@@ -943,6 +943,16 @@ object {
 	color: var(--global--color-foreground);
 }
 
+.editor-styles-wrapper .has-white-background-color[class] {
+	background-color: var(--global--color-white) !important;
+	color: var(--global--color-secondary);
+}
+
+.editor-styles-wrapper .has-black-background-color[class] {
+	background-color: var(--global--color-black) !important;
+	color: var(--global--color-primary);
+}
+
 .editor-styles-wrapper .is-small-text,
 .editor-styles-wrapper .has-small-font-size {
 	font-size: var(--global--font-size-sm);

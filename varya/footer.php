@@ -17,7 +17,7 @@
 
 	<footer id="colophon" class="site-footer default-max-width">
 
-		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
+		<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
 		<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'varya' ); ?>">

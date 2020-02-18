@@ -21,7 +21,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				get_template_part( 'template-parts/content/content', 'single' );
+				get_template_part( 'template-parts/content/content-single' );
 
 				if ( is_singular( 'attachment' ) ) {
 					// Parent post navigation.
