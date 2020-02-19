@@ -28,6 +28,11 @@
   max-width: 100%;
 }
 
+.site-content {
+	margin: 0 auto;
+	max-width: 1580px;
+}
+
 @media screen and (min-width: 608px) {
   .entry-content > *,
   .site-header > *,

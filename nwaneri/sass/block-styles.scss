@@ -129,6 +129,32 @@
 		letter-spacing: unset;
 		text-transform: none;
 	}
+	> li {
+		width: 50%;
+	}
+
+	&.wp-block-latest-posts.is-grid {
+		&.columns-2 {
+			@media screen and ( min-width: 608px ){
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				max-width: 75%;
+				> li {
+					width: 75%;
+				}
+			}
+		}
+		&.columns-3 {
+			@media screen and ( min-width: 608px ){
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				margin-right: 8%;
+				> li {
+					width: 80%;
+				}
+			}
+		}
+	}
 }
 
 .is-style-cover-hero {
