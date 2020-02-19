@@ -279,7 +279,14 @@ th {
 
 .site-content {
   margin: 0 auto;
+  margin-top: 200px;
   max-width: 1580px;
+}
+
+@media screen and (min-width: 720px) {
+  .site-content {
+    margin-top: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 608px) {
@@ -417,7 +424,7 @@ h1 {
   line-height: 1.1;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   h1 {
     font-size: 3.555rem;
   }
@@ -458,7 +465,7 @@ h5 {
   letter-spacing: 1px;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   h5 {
     font-size: 1rem;
   }
@@ -487,7 +494,7 @@ p {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   p {
     font-size: 1.222rem;
   }
@@ -523,7 +530,7 @@ body {
   padding-right: 0px;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .entry-content > *,
   .site-header > *,
   .site-footer > *,
@@ -542,13 +549,13 @@ body {
   margin: 1em 0;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .entry-content > .alignfull {
     margin: 1.5em 0;
   }
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .entry-content > *,
   .site-header > *,
   .site-footer > * {
@@ -565,7 +572,7 @@ body {
   }
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .wp-block-quote {
     margin: 36px auto 36px 110px;
   }
@@ -641,7 +648,7 @@ body {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .nwaneri-post-date, time {
     font-size: 1rem;
   }
@@ -660,7 +667,7 @@ p.tag-cloud-link > a {
   display: none;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .spacer-collapse-mobile {
     display: block;
   }
@@ -670,7 +677,7 @@ p.tag-cloud-link > a {
   margin-bottom: 3rem;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .wp-block-media-text {
     margin-bottom: 4rem;
   }
@@ -680,7 +687,7 @@ p.tag-cloud-link > a {
   padding: 0;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .wp-block-media-text .wp-block-media-text__content {
     padding: 0 2rem;
   }
@@ -807,7 +814,7 @@ p.tag-cloud-link > a {
   background: #bbb;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   #nwaneri-nav-container {
     margin: 0;
     max-width: none;
@@ -843,7 +850,7 @@ p.tag-cloud-link > a {
   padding: 0 28px;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 720px) {
   .site-footer p.has-desktop-vertical-align {
     bottom: 50vh;
     position: absolute;

@@ -30,7 +30,11 @@
 
 .site-content {
 	margin: 0 auto;
+	margin-top: 200px;
 	max-width: 1580px;
+	@media screen and ( min-width: $breakpoint-sm ){
+		margin-top: 1.5rem;
+	}
 }
 
 @media screen and (min-width: 608px) {

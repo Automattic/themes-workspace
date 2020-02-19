@@ -2,26 +2,34 @@
 
 .is-style-media-text-hero {
 	&.wp-block-media-text {
-		grid-template-columns: 40% 1fr;
-		width: 110vw;
+		grid-template-columns: 100%;
+		@media screen and ( min-width: $breakpoint-sm ){
+			grid-template-columns: 40% 1fr;
+		}
 	}
 	&.is-stacked-on-mobile {
 		&.has-media-on-the-right {
 			.wp-block-media-text__media {
-				min-height: 872px;
+				grid-row: 1;
+				min-height: 430px;
 				padding-top: 4rem;
 				position: relative;
 				&:before {
-					bottom: -3vh;
-					content: url('../assets/hero-blobs.svg');
-					height: 110vh;
-					left: -22vh;
+					background-image: url('../assets/hero-blobs.svg');
+					background-repeat: no-repeat;
+					background-size: contain;
+					content: " ";
+					height: 100%;
+					left: -15%;
 					position: absolute;
-					width: auto;
+					top: 0;
+					width: 100%;
 					z-index: -1;
+					@media (min-width: $breakpoint-sm){
+						left: -18%;
+					}
 				}
 				> img {
-					height: 110vh;
 					mask-mode: alpha;
 					-webkit-mask-mode: alpha;
 					mask-repeat: no-repeat;
@@ -33,13 +41,16 @@
 					mask-image: url('../assets/cover-hero-mask.svg');
 					-webkit-mask-image: url('../assets/cover-hero-mask.svg');
 					position: absolute;
+					top: 0;
 					width: auto;
 				}
-				@media (max-width: 600px){
+				@media (min-width: $breakpoint-sm){
 					grid-row: 1;
+					min-height: 872px;
 				}
 			}
 			.wp-block-media-text__content {
+				grid-row: 2;
 				padding: 0;
 				z-index: 1;
 				>h1 {
@@ -57,13 +68,14 @@
 					font-size: 1.555rem;
 					font-weight: lighter;
 					margin-top: 0;
+					min-width: 320px;
 					width: 70%;
 					@media screen and ( min-width: $breakpoint-sm ){
 						font-size: 2.222rem;
 					}
 				}
-				@media (max-width: 600px){
-					grid-row: 2;
+				@media screen and (min-width: $breakpoint-sm ){
+					grid-row: 1;
 				}
 			}
 		}
