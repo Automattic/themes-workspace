@@ -19,7 +19,14 @@ function closeNavMenu(){
 	if ( isOpen === 'true' ){
 		navToggleButton.dataset.open = 'false';
 		navContainer.classList.remove('open');
+		navToggleButton.innerHTML = 'Menu';
 	} 
 }
 
 navToggleButton.addEventListener('click', toggleNavMenu);
+document.querySelector('main').addEventListener('click', closeNavMenu);
+document.addEventListener('keydown', function(e) {
+	if ( e.key === "Escape" ){ 
+		closeNavMenu();
+	};
+});
