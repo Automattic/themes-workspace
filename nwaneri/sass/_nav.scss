@@ -89,7 +89,7 @@
 	}
 
 	@media screen and (min-width: $breakpoint-sm){
-		margin: 0;
+		margin: 0 auto;
 		max-width: none;
 		padding: $site-padding-lg;
 		text-align: left;
@@ -99,6 +99,10 @@
 		button {
 			margin-top: 0;
 		}
+	}
+
+	@media screen and (min-width: $site-padding-lg + $site-max-width){
+		padding: $site-padding-lg calc(100vw / 2 - #{$site-max-width} / 2);
 	}
 }
 

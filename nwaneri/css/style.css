@@ -816,7 +816,7 @@ p.tag-cloud-link > a {
 
 @media screen and (min-width: 720px) {
   #nwaneri-nav-container {
-    margin: 0;
+    margin: 0 auto;
     max-width: none;
     padding: 110px;
     text-align: left;
@@ -826,6 +826,12 @@ p.tag-cloud-link > a {
   }
   #nwaneri-nav-container button {
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1690px) {
+  #nwaneri-nav-container {
+    padding: 110px calc(100vw / 2 - 1580px / 2);
   }
 }
 
