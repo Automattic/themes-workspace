@@ -11,21 +11,21 @@
  * Gets the SVG code for a given icon.
  */
 function varya_get_icon_svg( $icon, $size = 24 ) {
-	return TwentyNineteen_SVG_Icons::get_svg( 'ui', $icon, $size );
+	return Varya_SVG_Icons::get_svg( 'ui', $icon, $size );
 }
 
 /**
  * Gets the SVG code for a given social icon.
  */
 function varya_get_social_icon_svg( $icon, $size = 24 ) {
-	return TwentyNineteen_SVG_Icons::get_svg( 'social', $icon, $size );
+	return Varya_SVG_Icons::get_svg( 'social', $icon, $size );
 }
 
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
  */
 function varya_get_social_link_svg( $uri, $size = 24 ) {
-	return TwentyNineteen_SVG_Icons::get_social_link_svg( $uri, $size );
+	return Varya_SVG_Icons::get_social_link_svg( $uri, $size );
 }
 
 /**

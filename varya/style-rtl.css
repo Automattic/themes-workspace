@@ -31,7 +31,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-left: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
@@ -41,7 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
@@ -51,7 +51,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (--lg) {
 	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
@@ -61,7 +61,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (--xl) {
 	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (--xxl) {
 	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 	.wp-block-pullquote.alignfull > p,
 	.wp-block-pullquote.alignwide blockquote,
@@ -88,32 +88,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	/* Matches normal width until desktop breakpoint */
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wide-max-width, .entry-content > .alignwide {
 		max-width: calc( 560px - 32px);
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.wide-max-width, .entry-content > .alignwide {
 		max-width: calc( 640px - 32px);
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (--lg) {
 	.wide-max-width, .entry-content > .alignwide {
 		max-width: calc( 782px - 32px);
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (--xl) {
 	.wide-max-width, .entry-content > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (--xxl) {
 	.wide-max-width, .entry-content > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
@@ -127,35 +127,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-left: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
 		width: calc(calc( 560px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
 		width: calc(calc( 640px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (--lg) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (--xl) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (--xxl) {
 	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
 		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
 		max-width: 100%;
@@ -170,7 +170,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	/* Letting the box-model do most of the work here. */
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.full-max-width, .entry-content > .alignfull {
 		margin-right: inherit;
 		margin-left: inherit;
@@ -183,31 +183,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-right: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.entry-content > .alignright {
 		margin-right: calc( 0.5 * (100vw - calc( 560px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.entry-content > .alignright {
 		margin-right: calc( 0.5 * (100vw - calc( 640px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (--lg) {
 	.entry-content > .alignright {
 		margin-right: calc( 0.5 * (100vw - calc( 782px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (--xl) {
 	.entry-content > .alignright {
 		margin-right: calc( 0.5 * (100vw - calc( 782px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (--xxl) {
 	.entry-content > .alignright {
 		margin-right: calc( 0.5 * (100vw - calc( 782px - 32px)));
 	}
@@ -217,31 +217,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-left: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.entry-content > .alignleft {
 		margin-left: calc( 0.5 * (100vw - calc( 560px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.entry-content > .alignleft {
 		margin-left: calc( 0.5 * (100vw - calc( 640px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (--lg) {
 	.entry-content > .alignleft {
 		margin-left: calc( 0.5 * (100vw - calc( 782px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (--xl) {
 	.entry-content > .alignleft {
 		margin-left: calc( 0.5 * (100vw - calc( 782px - 32px)));
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (--xxl) {
 	.entry-content > .alignleft {
 		margin-left: calc( 0.5 * (100vw - calc( 782px - 32px)));
 	}
@@ -706,7 +706,7 @@ html {
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	html {
 		font-size: var(--global--font-size-root);
 	}
@@ -853,7 +853,7 @@ footer {
 	margin-left: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.site-header,
 	.site-main,
 	.site-footer {
@@ -920,7 +920,7 @@ footer {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.site-footer > *,
 	.site-main > article > *,
 	.site-main > .not-found > *,
@@ -1176,7 +1176,7 @@ object {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-newspack-blocks-homepage-articles.is-grid article {
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
@@ -1198,7 +1198,7 @@ object {
 	margin-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-newspack-blocks-homepage-articles article {
 		margin-top: calc(3 * var(--global--spacing-vertical));
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
@@ -1252,7 +1252,7 @@ object {
 	color: currentColor;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-newspack-blocks-homepage-articles article .more-link {
 		margin-top: var(--global--spacing-unit);
 	}
@@ -1577,7 +1577,7 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-columns .wp-block-column > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1600,13 +1600,13 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		margin-bottom: var(--global--spacing-vertical);
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (--lg) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
@@ -1696,7 +1696,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-cover .wp-block-cover__inner-container > *,
 	.wp-block-cover-image .wp-block-cover__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
@@ -1787,7 +1787,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-group .wp-block-group__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1806,7 +1806,7 @@ button[data-load-more-btn],
 	padding: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2093,7 +2093,7 @@ dd {
 	padding: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.wp-block-media-text .wp-block-media-text__content {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2104,7 +2104,7 @@ dd {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-media-text .wp-block-media-text__content > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -2123,7 +2123,7 @@ dd {
 	color: currentColor;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
 		padding-top: var(--global--spacing-vertical);
 		padding-bottom: var(--global--spacing-vertical);
@@ -2414,7 +2414,7 @@ hr.wp-block-separator.is-style-dots:before {
 	margin-top: 0 !important;
 }
 
-@media only screen and (max-width: 560px - 1) {
+@media only screen and (--sm-max) {
 	.wp-block-spacer[style] {
 		height: var(--global--spacing-unit) !important;
 	}
@@ -2670,7 +2670,7 @@ table th,
 	display: none;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.desktop-only {
 		display: block;
 	}
@@ -2851,7 +2851,7 @@ table th,
 	display: inline;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.main-navigation > div {
 		display: inline-block;
 	}
@@ -2895,7 +2895,7 @@ table th,
 	z-index: 99999;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.main-navigation > div > ul li {
 		display: inherit;
 		width: inherit;
@@ -2919,7 +2919,7 @@ table th,
 	}
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.main-navigation > div > ul > li > a {
 		line-height: var(--global--line-height-base);
 	}
@@ -2948,7 +2948,7 @@ table th,
 	position: relative;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.main-navigation > div > ul > li > .sub-menu {
 		background: var(--global--color-background);
 		box-shadow: var(--global--elevation-4);
@@ -2974,7 +2974,7 @@ table th,
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.main-navigation a {
 		padding: var(--primary-nav--padding);
 	}
@@ -3007,7 +3007,7 @@ table th,
 	content: "– " counters(nested-list, "– ", none);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.main-navigation > div > ul > .menu-item-has-children > a::after {
 		content: "\00a0\25BC";
 		display: inline-block;
@@ -3062,7 +3062,7 @@ table th,
 	overflow: hidden;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.site-footer {
 		align-items: flex-end;
 		display: flex;
@@ -3078,7 +3078,7 @@ table th,
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.site-info {
 		order: 1;
 		flex: 1 0 50%;
@@ -3107,7 +3107,7 @@ table th,
 	display: inline;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.footer-navigation {
 		flex: 1 0 50%;
 		order: 2;
@@ -3127,7 +3127,7 @@ table th,
 	padding-right: 0;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	.footer-navigation .footer-menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -3236,7 +3236,7 @@ table th,
 	margin-top: var(--global--spacing-unit);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.entry-content .more-link {
 		margin-top: var(--global--spacing-vertical);
 	}
@@ -3257,7 +3257,7 @@ table th,
 	max-width: 100% !important;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.entry-content > iframe[style] {
 		max-width: var(--global--spacing-vertical) !important;
 	}
@@ -3337,7 +3337,7 @@ table th,
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.nav-links {
 		display: flex;
 		justify-content: space-between;
@@ -3418,7 +3418,7 @@ table th,
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.comment-list .children {
 		padding-right: calc(2 * var(--global--spacing-horizontal));
 	}
@@ -3438,7 +3438,7 @@ table th,
 	max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.comment-meta .comment-author {
 		display: flex;
 		align-items: center;
@@ -3464,7 +3464,7 @@ table th,
 	padding-left: calc(2.5 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.comment-meta .comment-metadata {
 		padding-left: 0;
 	}
@@ -3478,7 +3478,7 @@ table th,
 	color: var(--global--color-primary-hover);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.comment-meta {
 		margin-left: inherit;
 		align-items: center;
@@ -3507,7 +3507,7 @@ table th,
 
 .comment-metadata,
 .reply {
-	font-size: var(--global--font-size-xs);
+	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
 }
 
@@ -3515,7 +3515,7 @@ table th,
 	text-align: left;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.reply {
 		text-align: right;
 	}
@@ -3596,7 +3596,7 @@ table th,
 	width: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	.comment-form > p {
 		display: flex;
 	}
@@ -4116,7 +4116,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: 560px - 1) {
+@media only screen and (--sm-max) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
@@ -4130,7 +4130,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	}
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
 		margin-left: calc(2 * var(--global--spacing-unit));
 	}
@@ -4165,7 +4165,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
 		display: inline-block;
 	}
@@ -4178,7 +4178,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 	padding: var(--primary-nav--padding) 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 		max-width: calc(20 * var(--global--spacing-horizontal));
 		padding: var(--primary-nav--padding);
@@ -4260,7 +4260,7 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .qua
 	font-size: var(--global--font-size-base);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	body[class*="woocommerce"] #page .main-navigation > div > ul > li.woocommerce-menu-item > .sub-menu {
 		right: auto;
 		left: 0;
@@ -4842,7 +4842,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (--xl) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -5127,7 +5127,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -5147,7 +5147,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (--md) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}
@@ -5423,7 +5423,7 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 /**
  * Filter by Product List Widgets
  */
-@media only screen and (min-width: 560px) {
+@media only screen and (--sm) {
 	body[class*="woocommerce"] #page .widget.woocommerce ul.product_list_widget:not(.woocommerce-mini-cart) {
 		display: flex;
 		flex-wrap: wrap;

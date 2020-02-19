@@ -8,6 +8,18 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 
 @mixin global-variables() {
 
+//	@custom-media --sm (min-width: 560px);
+//	@custom-media --md (min-width: 640px);
+//	@custom-media --lg (min-width: 782px);
+//	@custom-media --xl (min-width: 1024px);
+//	@custom-media --xxl (min-width: 1280px);
+//
+//	@custom-media --sm-max (max-width: 559px);
+//	@custom-media --md-max (max-width: 639px);
+//	@custom-media --lg-max (max-width: 781px);
+//	@custom-media --xl-max (max-width: 1023px);
+//	@custom-media --xxl-max (max-width: 1279px);
+
 	/* Font Family */
 	--global--font-primary: sans-serif;
 	--global--font-secondary: serif;
