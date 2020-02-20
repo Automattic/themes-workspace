@@ -14,12 +14,12 @@
  */
 function varya_customize_register( $wp_customize ) {
 	$wp_customize->remove_setting( 'blogname' );
-	$wp_customize->remove_setting( 'blogdescription' );
 	$wp_customize->remove_control( 'blogname' );
+	$wp_customize->remove_setting( 'blogdescription' );
 	$wp_customize->remove_control( 'blogdescription' );
 
 }
-add_action( 'customize_register', 'varya_customize_register', 11 );
+//add_action( 'customize_register', 'varya_customize_register', 11 );
 
 /**
  * Render the site title for the selective refresh partial.

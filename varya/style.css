@@ -1983,7 +1983,7 @@ img {
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-xs);
+	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-body);
 }
 
@@ -4425,7 +4425,7 @@ body[class*="woocommerce"] #page .cart-collaterals .cross-sells ul.products li.p
 #woocommerce-wrapper ul.products li.product .price,
 body[class*="woocommerce"] #page #add_payment_method .cart-collaterals .cross-sells ul.products li.product .price,
 body[class*="woocommerce"] #page .cart-collaterals .cross-sells ul.products li.product .price {
-	color: var(--global--color-foreground-dark);
+	color: var(--global--color-primary);
 	font-size: var(--global--font-size-md);
 	line-height: var(--global--line-height-heading);
 }
