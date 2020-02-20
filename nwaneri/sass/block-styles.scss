@@ -6,80 +6,83 @@
 		@media screen and ( min-width: $breakpoint-sm ){
 			grid-template-columns: 40% 1fr;
 		}
-	}
-	&.is-stacked-on-mobile {
 		&.has-media-on-the-right {
-			.wp-block-media-text__media {
-				grid-row: 1;
-				min-height: 430px;
-				padding-top: 4rem;
-				position: relative;
-				&:before {
-					background-image: url('../assets/hero-blobs.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					content: " ";
-					height: 100%;
-					left: -15%;
-					position: absolute;
-					top: 0;
-					width: 100%;
-					z-index: -1;
-					@media (min-width: $breakpoint-sm){
-						left: -18%;
-						top: 5%;
-					}
-				}
-				> img {
-					mask-mode: alpha;
-					-webkit-mask-mode: alpha;
-					mask-repeat: no-repeat;
-					-webkit-mask-repeat: no-repeat;
-					mask-size: contain;
-					-webkit-mask-size: contain;
-					// mask-position: 10% 0;
-					// -webkit-mask-position: 10% 0;
-					mask-image: url('../assets/cover-hero-mask.svg');
-					-webkit-mask-image: url('../assets/cover-hero-mask.svg');
-					position: absolute;
-					top: 0;
-					width: auto;
-				}
-				@media (min-width: $breakpoint-sm){
-					grid-row: 1;
-					min-height: 872px;
-				}
-			}
-			.wp-block-media-text__content {
-				grid-row: 2;
-				padding: 0;
-				z-index: 1;
-				>h1 {
-					color: $primary-color;
-					font-size: 3.555rem;
-					font-family: 'Nova Cut';
-					font-weight: normal;
-					margin: 0;
-					@media screen and (min-width: $breakpoint-sm){
-						font-size: 6.111rem;
-						width: 70vw;
-					}
-				}	
-				>p {
-					font-size: 1.555rem;
-					font-weight: lighter;
-					margin-top: 0;
-					min-width: 320px;
-					width: 70%;
-					@media screen and ( min-width: $breakpoint-sm ){
-						font-size: 2.222rem;
-					}
-				}
-				@media screen and (min-width: $breakpoint-sm ){
-					grid-row: 1;
-				}
+			@media screen and ( min-width: $breakpoint-sm ){
 			}
 		}
+		.wp-block-media-text__media {
+			grid-row: 1;
+			min-height: 430px;
+			padding-top: 4rem;
+			position: relative;
+			&:before {
+				background-image: url('../assets/hero-blobs.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				content: " ";
+				height: 100%;
+				left: -15%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: -1;
+				@media (min-width: $breakpoint-sm){
+					left: -18%;
+					top: 8%;
+				}
+			}
+			> img {
+				height: 100%;
+				mask-mode: alpha;
+				-webkit-mask-mode: alpha;
+				mask-repeat: no-repeat;
+				-webkit-mask-repeat: no-repeat;
+				mask-size: contain;
+				-webkit-mask-size: contain;
+				// mask-position: 10% 0;
+				// -webkit-mask-position: 10% 0;
+				mask-image: url('../assets/cover-hero-mask.svg');
+				-webkit-mask-image: url('../assets/cover-hero-mask.svg');
+				position: absolute;
+				top: 0;
+				width: auto;
+			}
+			@media (min-width: $breakpoint-sm){
+				grid-row: 1;
+				min-height: 872px;
+			}
+		}
+		.wp-block-media-text__content {
+			grid-row: 2;
+			padding: 0;
+			z-index: 1;
+			>h1 {
+				color: $primary-color;
+				font-size: 3.555rem;
+				font-family: 'Nova Cut';
+				font-weight: normal;
+				margin: 0;
+				@media screen and (min-width: $breakpoint-sm){
+					font-size: 6.111rem;
+					width: 70vw;
+				}
+			}	
+			>p {
+				font-size: 1.555rem;
+				font-weight: lighter;
+				margin-top: 0;
+				min-width: 320px;
+				width: 70%;
+				@media screen and ( min-width: $breakpoint-sm ){
+					font-size: 2.222rem;
+				}
+			}
+			@media screen and (min-width: $breakpoint-sm ){
+				grid-row: 1;
+			}
+		}
+	}
+	&.is-stacked-on-mobile {
 	}
 }
 
