@@ -4,30 +4,53 @@
 	&.wp-block-media-text {
 		grid-template-columns: 100%;
 		@media screen and ( min-width: $breakpoint-sm ){
-			grid-template-columns: 40% 1fr;
+			grid-template-columns: 40% 60%; 
 		}
 		&.has-media-on-the-right {
-			@media screen and ( min-width: $breakpoint-sm ){
+			.wp-block-media-text__media {
+				grid-row: 1;
+				&:after {
+					content: none;
+				}
+				&:before {
+					background-image: url('../assets/hero-blobs.svg');
+					background-repeat: no-repeat;
+					background-size: contain;
+					content: " ";
+					height: 100%;
+					left: -15%;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: -1;
+					@media (min-width: $breakpoint-sm){
+						left: -18%;
+						top: 8%;
+					}
+				}
+				>img {
+					left: 0;
+				}
 			}
 		}
+
 		.wp-block-media-text__media {
-			grid-row: 1;
 			min-height: 430px;
 			padding-top: 4rem;
 			position: relative;
-			&:before {
+			&:after {
 				background-image: url('../assets/hero-blobs.svg');
 				background-repeat: no-repeat;
 				background-size: contain;
 				content: " ";
 				height: 100%;
-				left: -15%;
+				right: -86%;
 				position: absolute;
 				top: 0;
+				transform: scaleX(-1);
 				width: 100%;
 				z-index: -1;
 				@media (min-width: $breakpoint-sm){
-					left: -18%;
 					top: 8%;
 				}
 			}
@@ -46,12 +69,16 @@
 				position: absolute;
 				top: 0;
 				width: auto;
+				@media (min-width: $breakpoint-sm){
+					left: -50%;
+				}
 			}
 			@media (min-width: $breakpoint-sm){
 				grid-row: 1;
 				min-height: 872px;
 			}
 		}
+
 		.wp-block-media-text__content {
 			grid-row: 2;
 			padding: 0;
@@ -81,8 +108,14 @@
 				grid-row: 1;
 			}
 		}
-	}
-	&.is-stacked-on-mobile {
+		&.is-stacked-on-mobile {
+			.wp-block-media-text__content {
+				grid-row: 2;
+				@media screen and (min-width: $breakpoint-sm ){
+					grid-row: 1;
+				}
+			}
+		}
 	}
 }
 
