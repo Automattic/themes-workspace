@@ -31,7 +31,14 @@
 			}
 		}
 		.wp-block-navigation-link {
+			align-self: flex-start;
 			padding-right: 40px;
+			&.has-child {
+				display: block;
+				.wp-block-navigation-link__submenu-icon {
+					display: none;
+				}
+			}
 		}
 		>ul>li>a {
 			font-size: 40px;
