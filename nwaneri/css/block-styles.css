@@ -16,26 +16,6 @@
   content: none;
 }
 
-.is-style-media-text-hero.wp-block-media-text.has-media-on-the-right .wp-block-media-text__media:before {
-  background-image: url("../assets/hero-blobs.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: " ";
-  height: 100%;
-  left: -15%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-@media (min-width: 720px) {
-  .is-style-media-text-hero.wp-block-media-text.has-media-on-the-right .wp-block-media-text__media:before {
-    left: -18%;
-    top: 8%;
-  }
-}
-
 .is-style-media-text-hero.wp-block-media-text.has-media-on-the-right .wp-block-media-text__media > img {
   left: 0;
 }
@@ -62,6 +42,26 @@
 
 @media (min-width: 720px) {
   .is-style-media-text-hero.wp-block-media-text .wp-block-media-text__media:after {
+    top: 8%;
+  }
+}
+
+.is-style-media-text-hero.wp-block-media-text .wp-block-media-text__media:before {
+  background-image: url("../assets/hero-blobs.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: " ";
+  height: 100%;
+  left: -15%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 720px) {
+  .is-style-media-text-hero.wp-block-media-text .wp-block-media-text__media:before {
+    left: -18%;
     top: 8%;
   }
 }
@@ -96,7 +96,9 @@
 
 .is-style-media-text-hero.wp-block-media-text .wp-block-media-text__content {
   grid-row: 2;
+  margin-top: 2rem;
   padding: 0;
+  text-align: center;
   z-index: 1;
 }
 
@@ -118,20 +120,24 @@
 .is-style-media-text-hero.wp-block-media-text .wp-block-media-text__content > p {
   font-size: 1.555rem;
   font-weight: lighter;
-  margin-top: 0;
+  margin: 0 auto;
   min-width: 320px;
+  text-align: center;
   width: 70%;
 }
 
 @media screen and (min-width: 720px) {
   .is-style-media-text-hero.wp-block-media-text .wp-block-media-text__content > p {
     font-size: 2.222rem;
+    margin: 0;
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 720px) {
   .is-style-media-text-hero.wp-block-media-text .wp-block-media-text__content {
     grid-row: 1;
+    text-align: left;
   }
 }
 
