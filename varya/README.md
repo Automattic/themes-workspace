@@ -82,25 +82,26 @@ Here are the available variables for changing content widths in `responsive.scss
 |-------------------|-------------------|--------------|------------------------------------------------------------------------------------------------------------|
 | **Mobile & down** | `$flexwidth`      | 100%         |                                                                                                            |
 | **Mobile & up**   | `$breakpoint_sm`  | 560px        |                                                                                                            |
-| **Tablet & up**   | `$breakpoint_md`  | 640px        | Should match the `$content_width` PHP variable set in `functions.php`. This variables matters the most.    |
+| **Tablet & up**   | `$breakpoint_md`  | 640px        | This variables matters the most. It should match the `$content_width` PHP variable set in `functions.php`. |
 | **Laptop & up**   | `$breakpoint_lg`  | 750px        |                                                                                                            |
 | **Desktop & up**  | `$breakpoint_xl`  | 1024px       |                                                                                                            |
 | **Wide & up**     | `$breakpoint_xxl` | 1280px       |                                                                                                            |
 
-### Todos
+Once you’ve set these variables to your liking, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables.
 
- - Explore responsive-logic overrides in the child theme.
+### Todos
+ - [DONE] Explore responsive-logic overrides in the child theme.
  - Integrate with build tool
- - Introduce an advanced child theme example that uses block styles
+ - [DONE] Introduce an advanced child theme example that uses block styles
  - Audit Varya system for excessive overridden rules
  - Integrate with the child-theme build tool.
  - Add Jetpack support?
  - Optimize responsive font-size styles.
- - Audit how variables appear in the editor, the customizer, and the frontend.
+ - [DONE] Audit how variables appear in the editor, the customizer, and the frontend.
  - Consider adding defaults fallbacks to top-level css-variables.
  - Create a demo.
  - Add a CSS-Variables polyfill or other fallback solution for older browsers.
- - Create a ReadMe that describes how to use it.
+ - [WIP] Create a ReadMe that describes how to use it.
 
 ### License
 
