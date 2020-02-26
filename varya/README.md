@@ -11,11 +11,11 @@ When you reduce a theme design down to a set of systematic design decisions, you
   - **Fonts** - Font-family, size, weight, and line-height rules. 
   - **Colors** - Primary, secondary, background, foreground and border colors. 
   - **Spacing** - Sets an 8px vertical rhythm between all blocks and major components. Adds general spacing rules for blocks and components. Adds utility spacing classes for negative margins.
-  - **Responsive Logic** - Unifies the responsive behavior across various Blocks and Components to support nesting.
+  - **Responsive Logic** - Unifies the responsive behavior across various Blocks and Components to simplify behaviors.
 
 ## How does it work?
 
-The system itself lives in the `/varya/sass` directory as a collection of Sass partials broken up by scope nd hierarchy. The partials get compiled down to singular CSS files that live in the main Varya directory and cascade downward like so:
+The system itself lives in the `/varya/sass` directory as a collection of Sass partials broken up by scope and hierarchy. The partials get compiled down to singular CSS files that live in the main Varya directory and cascade downward like so:
 
 **Frontend** 
 - `/varya/variables.css`
@@ -29,7 +29,7 @@ The system itself lives in the `/varya/sass` directory as a collection of Sass p
 - `/varya/variables.css`
 - `/varya/style.css`
 
-In each view, the variables are loaded first and then the stylesheet is loaded which is dependent on the variables.
+In each view, the variables are loaded first and then the stylesheet is loaded which applies the variables.
 
 ## How to use it
 
@@ -41,9 +41,9 @@ To use the system, simply duplicate the `vayra-child` theme directory and rename
   - Search for:  `varia-child` and replace with: `my_theme_name`.
   - Search for: `varia-child-` and replace with: `my-theme-name-`.
 
-Soon this process will be replaced by a `theme-dev-util` (similar to [this](https://github.com/Automattic/theme-dev-utils)) that allows you to run a command and automatically produce a child theme with all the strings replaced.
+Soon this process will be replaced by a `theme-dev-util` (similar to [this](https://github.com/Automattic/theme-dev-utils)) that allows you to run a command and automatically produce a child theme with all the strings already replaced.
 
-### Child Theme Structure
+### Simple Child Theme Structure (See: `/varya-child`)
 
 When working with a Varya child theme, only the variables need to be overwritten so the stylesheet structure for a child-theme cascades downward like this:
 
@@ -59,15 +59,13 @@ When working with a Varya child theme, only the variables need to be overwritten
 - `/varya/style-editor.css`
   - `../varya-child-theme/style-editor.css` (extra CSS)
 
-**Customizer**
-- `/varya/variables.css`
-  - `../varya-child-theme/variables-editor.css` (system overrides)
-- `/varya/style.css`
-  - `../varya-child-theme/style-editor.css` (extra CSS)
-
-**System Overrides**: A list of CSS-variables that override the variables in the child theme. This is where you tell the system to use the _Futura_ font-family instead of the _sans-serif_ default, for example. There’s no need to replace all of the variables here, only the one you wish to actually change.
+**System Overrides**: A list of CSS-variables that override the variables in the child theme. This is where you tell the system to use the _Futura_ font-family instead of the _sans-serif_ default, for example. There’s no need to replace all of the variables here, only the ones you wish to actually change.
 
 **Extra CSS**: These should be supplemental styles that give the theme a unique appearance beyond what’s possible with the Varya system. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to use Varya variables here so that the system retains its usefulness across the theme. 
+
+### Advanced Child Theme Structure (See: `/varya-child-adnvanced`)
+
+- TBD
 
 ### Todos
 
