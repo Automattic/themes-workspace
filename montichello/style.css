@@ -486,7 +486,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-background-light: #FAFAFA;
 	--global--color-background-dark: #DDDDDD;
 	--global--color-border: #DDDDDD;
-	--global--color-border-light: #FAFAFA;
+	--global--color-border-light: #C9E8D4;
 	--global--color-border-dark: #AAAAAA;
 	--global--color-text-selection: lightblue;
 	--global--color-alert-success: yellowgreen;
@@ -4020,6 +4020,94 @@ h4, h5 {
 h1 {
 	font-size: 5.91rem;
 	line-height: 1.1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+.wp-block-search .wp-block-search__input {
+	border-color: var(--global--color-foreground-light);
+	border-radius: 0;
+	border-top-left-radius: 8px;
+	border-width: 2px;
+	padding: .75rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+.wp-block-search .wp-block-search__input:focus {
+	background-color: var(--global--color-primary-hover);
+	border-color: var(--global--color-black);
+}
+
+hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
+	border-color: var(--global--color-border-light);
+	border-bottom-right-radius: 8px;
+	border-width: 2px;
+	position: relative;
+}
+
+hr.wp-block-separator.is-style-gap:before, hr.wp-block-separator.is-style-wide.is-style-gap:before {
+	border-left: 2px solid var(--global--color-border-light);
+	border-right: 2px solid var(--global--color-border-light);
+	background: white;
+	content: " ";
+	height: 12px;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	top: -6px;
+	width: 12px;
+}
+
+hr.wp-block-separator.is-style-wide:after, hr.wp-block-separator.is-style-wide.is-style-wide:after {
+	border-bottom: 2px solid var(--global--color-border-light);
+	border-right: 2px solid var(--global--color-border-light);
+	border-bottom-right-radius: 10px;
+	content: " ";
+	height: 8px;
+	width: 8px;
+	position: absolute;
+	right: -8px;
+	bottom: -2px;
+}
+
+hr.wp-block-separator.is-style-wide, hr.wp-block-separator.is-style-gap:not(.is-style-wide):not(.is-style-dots), hr.wp-block-separator.is-style-wide.is-style-wide, hr.wp-block-separator.is-style-wide.is-style-gap:not(.is-style-wide):not(.is-style-dots) {
+	max-width: calc( 100% - calc(2 * 14px ));
+}
+
+@media screen and (min-width: 532px) {
+	hr.wp-block-separator.is-style-wide, hr.wp-block-separator.is-style-gap:not(.is-style-wide):not(.is-style-dots), hr.wp-block-separator.is-style-wide.is-style-wide, hr.wp-block-separator.is-style-wide.is-style-gap:not(.is-style-wide):not(.is-style-dots) {
+		max-width: calc( 782px - calc(2 * 14px));
+	}
 }
 
 .site-branding,

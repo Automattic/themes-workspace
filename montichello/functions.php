@@ -111,6 +111,23 @@ function montichello_content_width() {
 }
 add_filter( 'varia_content_width', 'montichello_content_width' );
 
+if ( function_exists( 'register_block_style' ) ) {
+	function montichello_register_block_styles() {
+		/**
+		 * Register block style
+		 */
+		register_block_style(
+			'core/separator',
+			array(
+				'name'         => 'gap',
+				'label'        => 'Gap'
+			)
+		);
+	}
+
+	add_action( 'init', 'montichello_register_block_styles' );
+}
+
 /**
  * Add Google webfonts, if necessary
  *
