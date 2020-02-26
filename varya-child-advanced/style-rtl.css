@@ -21,6 +21,95 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+:root {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width: 100%;
+	--responsive--alignfull-width: 100%;
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
+	--responsive--alignright-margin: var(--global--spacing-horizontal);
+	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 560px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 782px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: $breakpoint_xxl) {
+	:root {
+		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+/**
+ * Extends
+ */
+.default-max-width {
+	max-width: var(--responsive--aligndefault-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wide-max-width {
+	max-width: var(--responsive--alignwide-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.full-max-width {
+	max-width: var(--responsive--alignfull-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/**
+ * Output
+ */
 /* Frontend Tweaks Only */
 body {
 	font-weight: 100;
@@ -160,7 +249,6 @@ a {
 @media only screen and (min-width: 560px) {
 	.site-header #nwaneri-site-navigation.open > div {
 		margin: 0 auto;
-		max-width: none;
 		text-align: right;
 	}
 	.site-header #nwaneri-site-navigation.open > div .wp-block-navigation {

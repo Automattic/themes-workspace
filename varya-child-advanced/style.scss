@@ -25,8 +25,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "../varya/sass/abstracts/functions.scss";
 @import "../varya/sass/abstracts/mixins.scss";
-@import "../varya/sass/abstracts/responsive-logic.scss";
-@import "../varya/sass/abstracts/mixins.scss";
+@import "../varya/sass/structure/responsive-logic.scss";
 
 /* Frontend Tweaks Only */
 
@@ -160,7 +159,7 @@ a {
 				@include media(mobile) {
 
 					margin: 0 auto;
-					max-width: none;
+					//max-width: none;
 					text-align: left;
 
 					.wp-block-navigation {
