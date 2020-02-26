@@ -18,19 +18,10 @@
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 500px) {
-	:root {
-		--responsive--aligndefault-width: calc(500px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(500px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
 @media only screen and (min-width: 600px) {
 	:root {
-		--responsive--aligndefault-width: calc(500px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(500px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(600px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(600px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -45,10 +36,19 @@
 	}
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 880px) {
 	:root {
-		--responsive--aligndefault-width: calc(600px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(720px + var(--responsive--alignwide-width-multiplier));
+		--responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1160px) {
+	:root {
+		--responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(880px + var(--responsive--alignwide-width-multiplier));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -56,8 +56,8 @@
 
 @media only screen and (min-width: $breakpoint_xxl) {
 	:root {
-		--responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(1000px + var(--responsive--alignwide-width-multiplier));
+		--responsive--aligndefault-width: calc(880px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1160px + var(--responsive--alignwide-width-multiplier));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
