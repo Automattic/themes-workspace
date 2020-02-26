@@ -9,6 +9,14 @@
 		margin-bottom: var(--global--spacing-unit);
 		text-align: center;
 	}
+
+	.alignright {
+		@extend %responsive-alignright;
+	}
+
+	.alignleft {
+		@extend %responsive-alignleft;
+	}
 }
 
 // Remove vertical margins from image block wrappers when floated

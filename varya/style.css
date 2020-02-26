@@ -122,14 +122,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	max-width: var(--responsive--alignfull-width);
 }
 
-.entry-content > .alignleft {
-	margin-left: var(--responsive--alignleft-margin);
-	margin-right: auto;
+.wp-block-image .alignleft, .entry-content > .alignleft {
+	margin-left: auto;
+	margin-right: var(--responsive--alignleft-margin);
 }
 
-.entry-content > .alignright {
-	margin-left: auto;
-	margin-right: var(--responsive--alignright-margin);
+.wp-block-image .alignright, .entry-content > .alignright {
+	margin-left: var(--responsive--alignright-margin);
+	margin-right: auto;
 }
 
 /**

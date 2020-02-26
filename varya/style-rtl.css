@@ -119,15 +119,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-right: auto;
 	margin-left: auto;
 	width: var(--responsive--alignwide-width);
-	max-width: 100%;
+	max-width: var(--responsive--alignfull-width);
 }
 
-.entry-content > .alignleft {
+.wp-block-image .alignleft, .entry-content > .alignleft {
 	margin-right: var(--responsive--alignleft-margin);
 	margin-left: auto;
 }
 
-.entry-content > .alignright {
+.wp-block-image .alignright, .entry-content > .alignright {
 	margin-right: auto;
 	margin-left: var(--responsive--alignright-margin);
 }

@@ -161,13 +161,17 @@ $breakpoint_xxl: 1280px;
 }
 
 %responsive-alignleft {
-	margin-left: var(--responsive--alignleft-margin);
-	margin-right: auto;
+	/*rtl:ignore*/
+	margin-left: auto;
+	/*rtl:ignore*/
+	margin-right: var(--responsive--alignleft-margin);
 }
 
 %responsive-alignright {
-	margin-left: auto;
-	margin-right: var(--responsive--alignright-margin);
+	/*rtl:ignore*/
+	margin-left: var(--responsive--alignright-margin);
+	/*rtl:ignore*/
+	margin-right: auto;
 }
 
 /**
