@@ -209,7 +209,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media only screen and (min-width: 560px) {
 	#nwaneri-minicart.open > div {
 		margin: 0 auto;
-		max-width: none;
 		text-align: left;
 	}
 	#nwaneri-minicart.open > div .wp-block-navigation {

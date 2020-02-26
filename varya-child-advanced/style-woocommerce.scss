@@ -121,7 +121,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			@include media(mobile) {
 
 				margin: 0 auto;
-				max-width: none;
+				//max-width: none;
 				text-align: left;
 
 				.wp-block-navigation {
