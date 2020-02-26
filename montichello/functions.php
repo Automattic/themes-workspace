@@ -123,6 +123,22 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label'        => 'Gap'
 			)
 		);
+
+		register_block_style(
+			'core/pullquote',
+			array(
+				'name'         => 'stylish',
+				'label'        => 'Stylish'
+			)
+		);
+		
+		register_block_style(
+			'core/quote',
+			array(
+				'name'         => 'stylish',
+				'label'        => 'Stylish'
+			)
+		);
 	}
 
 	add_action( 'init', 'montichello_register_block_styles' );
