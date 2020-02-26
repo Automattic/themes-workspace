@@ -118,7 +118,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
 	margin-right: auto;
 	margin-left: auto;
-	width: calc( var(--responsive--alignwide-width) + var(--responsive--alignwide-width-multiplier));
+	width: var(--responsive--alignwide-width);
 	max-width: 100%;
 }
 

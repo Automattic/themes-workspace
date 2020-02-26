@@ -149,8 +149,8 @@ $breakpoint_xxl: 1280px;
 %responsive-alignwide-width-nested {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc( var(--responsive--alignwide-width) + var(--responsive--alignwide-width-multiplier) );
-	max-width: 100%;
+	width: var(--responsive--alignwide-width);
+	max-width: var(--responsive--alignfull-width);
 }
 
 %responsive-alignfull-width-nested {
