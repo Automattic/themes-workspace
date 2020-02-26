@@ -480,7 +480,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-black: #181B19;
 	--global--color-white: white;
 	--global--color-foreground: #444444;
-	--global--color-foreground-light: #767676;
+	--global--color-foreground-light: #69726C;
 	--global--color-foreground-dark: #111111;
 	--global--color-background: #FFFFFF;
 	--global--color-background-light: #FAFAFA;
@@ -4061,14 +4061,50 @@ h1 {
 	border-bottom-right-radius: 1rem;
 }
 
-.wp-block-button:hover {
-	opacity: .75;
-}
-
-.wp-block-button a.wp-block-button__link {
+.wp-block-button a.wp-block-button__link, .wp-block-button.is-style-outline a.wp-block-button__link {
+	border: 2px solid transparent;
 	border-radius: 0;
 	border-bottom-right-radius: 8px;
 	color: var(--global--color-black);
 	font-size: 1rem;
-	padding: 1.4rem 1.75rem;
+	opacity: 1;
+	padding: 1.2rem 2.25rem;
+	transition: all .15s ease-in-out;
+}
+
+.wp-block-button a.wp-block-button__link:focus, .wp-block-button.is-style-outline a.wp-block-button__link:focus {
+	background-color: var(--global--color-primary);
+	border: 2px solid var(--global--color-black);
+}
+
+.wp-block-button a.wp-block-button__link:hover, .wp-block-button.is-style-outline a.wp-block-button__link:hover {
+	background-color: var(--global--color-primary);
+	opacity: .75;
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link {
+	border: 2px solid var(--global--color-black);
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link:focus {
+	background-color: transparent;
+	border-width: 4px;
+	color: var(--global--color-black);
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link:hover {
+	color: var(--global--color-black);
+	background-color: var(--global--color-primary-hover);
+	opacity: 1;
+}
+
+.wp-block-latest-posts > li > a {
+	color: var(--global--color-black);
+	font-size: 26px;
+	font-weight: normal;
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-date {
+	font-family: 'CircularStd';
+	font-size: 16px;
 }

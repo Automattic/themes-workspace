@@ -4032,14 +4032,37 @@ h1 {
 	border-bottom-left-radius: 1rem;
 }
 
-.wp-block-button:hover {
-	opacity: .75;
-}
-
-.wp-block-button a.wp-block-button__link {
+.wp-block-button a.wp-block-button__link, .wp-block-button.is-style-outline a.wp-block-button__link {
+	border: 2px solid transparent;
 	border-radius: 0;
 	border-bottom-left-radius: 8px;
 	color: var(--global--color-black);
 	font-size: 1rem;
-	padding: 1.4rem 1.5rem;
+	opacity: 1;
+	padding: 1.2rem 2.25rem;
+	transition: all .15s ease-in-out;
+}
+
+.wp-block-button a.wp-block-button__link:focus, .wp-block-button.is-style-outline a.wp-block-button__link:focus {
+	background-color: var(--global--color-primary);
+	border: 2px solid var(--global--color-black);
+}
+
+.wp-block-button a.wp-block-button__link:hover, .wp-block-button.is-style-outline a.wp-block-button__link:hover {
+	opacity: .75;
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link {
+	border: 2px solid var(--global--color-black);
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link:focus {
+	background-color: transparent;
+	border-width: 4px;
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link:hover {
+	color: var(--global--color-black);
+	background-color: var(--global--color-primary-hover);
+	opacity: 1;
 }

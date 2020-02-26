@@ -62,15 +62,51 @@ h1 {
 	}
 }
 
-.wp-block-button {
-	&:hover {
-		opacity: .75;
-	}
+.wp-block-button, .wp-block-button.is-style-outline {
 	a.wp-block-button__link {
+		border: 2px solid transparent;
 		border-radius: 0;
 		border-bottom-right-radius: 8px;
 		color: var(--global--color-black);
 		font-size: 1rem;
-		padding: 1.4rem 1.75rem;
+		opacity: 1;
+		padding: 1.2rem 2.25rem;
+		transition: all .15s ease-in-out;
+		&:focus {
+			background-color: var(--global--color-primary);
+			border: 2px solid var(--global--color-black);
+		}
+		&:hover {
+			background-color: var(--global--color-primary);
+			opacity: .75;
+		}
+	}
+}
+
+.wp-block-button.is-style-outline {
+	a.wp-block-button__link {
+		border: 2px solid var(--global--color-black);
+		&:focus {
+			background-color: transparent;
+			border-width: 4px;
+			color: var(--global--color-black);
+		}
+		&:hover {
+			color: var(--global--color-black);
+			background-color: var(--global--color-primary-hover);
+			opacity: 1;
+		}
+	}
+}
+
+.wp-block-latest-posts {
+	> li > a {
+		color: var(--global--color-black);
+		font-size: 26px;
+		font-weight: normal;
+	}
+	.wp-block-latest-posts__post-date {
+		font-family: 'CircularStd';
+		font-size: 16px;
 	}
 }
