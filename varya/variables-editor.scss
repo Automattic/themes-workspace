@@ -24,8 +24,9 @@
 	@include quote-variables();
 	@include separator-variables();
 	/* Components */
-	@include header-variables();
-	@include footer-variables();
+//	@include header-variables();
+//	@include entry-variables();
+//	@include footer-variables();
 	/* Vendors */
-	@include woocommerce-variables();
+//	@include woocommerce-variables();
 }

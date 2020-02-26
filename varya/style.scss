@@ -21,6 +21,10 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+// Layout
+// - Structral and responsive styles
+@import "sass/structure/style";
+
 // Abstracts
 // - Mixins, variables and functions
 @import "sass/abstracts/style";
@@ -28,10 +32,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 // Base
 // - Reset the browser
 @import "sass/base/style";
-
-// Layout
-// - Structral and responsive styles
-@import "sass/layout/style";
 
 // Elements
 // - Styles for basic HTML elemants

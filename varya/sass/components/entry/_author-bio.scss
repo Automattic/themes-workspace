@@ -11,7 +11,8 @@
 	}
 
 	.author-title {
-		font-size: var(--heading--font-size-h3);
+		font-family: var(--entry-author-bio--font-family);
+		font-size: var(--entry-author-bio--font-size);
 	}
 
 	.author-description {

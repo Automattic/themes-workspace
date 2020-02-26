@@ -15,7 +15,7 @@ hr {
 		 * Block Options
 		 */
 		&.is-style-wide {
-			@extend %responsive-aligndefault;
+			@extend %responsive-aligndefault-width;
 		}
 
 		&.is-style-dots {

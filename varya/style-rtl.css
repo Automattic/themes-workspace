@@ -21,230 +21,293 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+/**
+ * Layout
+ * - Structral and responsive styles
+ */
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+:root {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width: 100%;
+	--responsive--alignfull-width: 100%;
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
+	--responsive--alignright-margin: var(--global--spacing-horizontal);
+	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 560px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 782px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: $breakpoint_xxl) {
+	:root {
+		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+/**
+ * Extends
+ */
 .default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 .wp-block-pullquote.alignfull > p,
 .wp-block-pullquote.alignwide blockquote,
 .wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
-.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-	max-width: 100%;
+.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .navigation {
+	max-width: var(--responsive--aligndefault-width);
 	margin-right: auto;
 	margin-left: auto;
-}
-
-@media only screen and (min-width: 560px) {
-	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-	.wp-block-pullquote.alignfull > p,
-	.wp-block-pullquote.alignwide blockquote,
-	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
-	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 560px - 32px);
-	}
-}
-
-@media only screen and (min-width: 640px) {
-	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-	.wp-block-pullquote.alignfull > p,
-	.wp-block-pullquote.alignwide blockquote,
-	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
-	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 640px - 32px);
-	}
-}
-
-@media only screen and (min-width: 782px) {
-	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-	.wp-block-pullquote.alignfull > p,
-	.wp-block-pullquote.alignwide blockquote,
-	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
-	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 782px - 32px);
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-	.wp-block-pullquote.alignfull > p,
-	.wp-block-pullquote.alignwide blockquote,
-	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
-	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 782px - 32px);
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-	.wp-block-pullquote.alignfull > p,
-	.wp-block-pullquote.alignwide blockquote,
-	.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
-	.entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .post-navigation, .pagination {
-		max-width: calc( 782px - 32px);
-	}
 }
 
 .wide-max-width, .entry-content > .alignwide {
+	max-width: var(--responsive--alignwide-width);
 	margin-right: auto;
 	margin-left: auto;
-	max-width: 100%;
-	/* Matches normal width until desktop breakpoint */
-}
-
-@media only screen and (min-width: 560px) {
-	.wide-max-width, .entry-content > .alignwide {
-		max-width: calc( 560px - 32px);
-	}
-}
-
-@media only screen and (min-width: 640px) {
-	.wide-max-width, .entry-content > .alignwide {
-		max-width: calc( 640px - 32px);
-	}
-}
-
-@media only screen and (min-width: 782px) {
-	.wide-max-width, .entry-content > .alignwide {
-		max-width: calc( 782px - 32px);
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.wide-max-width, .entry-content > .alignwide {
-		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	.wide-max-width, .entry-content > .alignwide {
-		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: calc(100% - calc(2 * var(--global--spacing-horizontal)));
-	}
-}
-
-.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-	width: calc(100% + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-	max-width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-@media only screen and (min-width: 560px) {
-	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 560px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: 100%;
-	}
-}
-
-@media only screen and (min-width: 640px) {
-	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 640px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: 100%;
-	}
-}
-
-@media only screen and (min-width: 782px) {
-	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: 100%;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: 100%;
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
-		width: calc(calc( 782px - 32px) + calc(2 * calc(8 * var(--global--spacing-horizontal))));
-		max-width: 100%;
-	}
 }
 
 .full-max-width, .entry-content > .alignfull {
-	margin-right: calc(-1 * var(--global--spacing-horizontal));
-	margin-left: calc(-1 * var(--global--spacing-horizontal));
-	width: calc(100% + 32px);
-	max-width: calc(100% + 32px);
-	/* Letting the box-model do most of the work here. */
+	max-width: var(--responsive--alignfull-width);
+	margin-right: auto;
+	margin-left: auto;
 }
 
-@media only screen and (min-width: 560px) {
-	.full-max-width, .entry-content > .alignfull {
-		margin-right: inherit;
-		margin-left: inherit;
-		width: inherit;
-		max-width: inherit;
-	}
-}
-
-.entry-content > .alignright {
-	margin-right: var(--global--spacing-horizontal);
-}
-
-@media only screen and (min-width: 560px) {
-	.entry-content > .alignright {
-		margin-right: calc( 0.5 * (100vw - calc( 560px - 32px)));
-	}
-}
-
-@media only screen and (min-width: 640px) {
-	.entry-content > .alignright {
-		margin-right: calc( 0.5 * (100vw - calc( 640px - 32px)));
-	}
-}
-
-@media only screen and (min-width: 782px) {
-	.entry-content > .alignright {
-		margin-right: calc( 0.5 * (100vw - calc( 782px - 32px)));
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.entry-content > .alignright {
-		margin-right: calc( 0.5 * (100vw - calc( 782px - 32px)));
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	.entry-content > .alignright {
-		margin-right: calc( 0.5 * (100vw - calc( 782px - 32px)));
-	}
+.entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
+	margin-right: auto;
+	margin-left: auto;
+	width: calc( var(--responsive--alignwide-width) + var(--responsive--alignwide-width-multiplier));
+	max-width: 100%;
 }
 
 .entry-content > .alignleft {
-	margin-left: var(--global--spacing-horizontal);
+	margin-right: var(--responsive--alignleft-margin);
+	margin-left: auto;
+}
+
+.entry-content > .alignright {
+	margin-right: auto;
+	margin-left: var(--responsive--alignright-margin);
+}
+
+/**
+ * Output
+ */
+/**
+ * Site Structure
+ *
+ * - Set vertical margins and responsive widths on
+ *   top-level wrappers and content wrappers
+ * - `--global--width-content` is a responsive veriable
+ * - See: globals/_global-width-responsive.scss
+ */
+/**
+ * Top Level Wrappers (header, main, footer)
+ * - Set vertical padding and horizontal margins
+ */
+.site-header,
+.site-main,
+.site-footer {
+	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	margin-right: auto;
+	margin-left: auto;
 }
 
 @media only screen and (min-width: 560px) {
-	.entry-content > .alignleft {
-		margin-left: calc( 0.5 * (100vw - calc( 560px - 32px)));
+	.site-header,
+	.site-main,
+	.site-footer {
+		padding-top: var(--global--spacing-vertical);
+		padding-left: 0;
+		padding-bottom: var(--global--spacing-vertical);
+		padding-right: 0;
 	}
 }
 
-@media only screen and (min-width: 640px) {
-	.entry-content > .alignleft {
-		margin-left: calc( 0.5 * (100vw - calc( 640px - 32px)));
+/**
+ * Site-main children wrappers
+ * - Add double vertical margins here for clearer heirarchy
+ */
+.site-main > * {
+	margin-top: calc(3 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
+.site-main > *:first-child {
+	margin-top: 0;
+}
+
+.site-main > *:last-child {
+	margin-bottom: 0;
+}
+
+/**
+ * Set the default maximum responsive content-width
+ */
+/**
+ * Set the wide maximum responsive content-width
+ */
+/**
+ * Set the full maximum responsive content-width
+ */
+/*
+ * Block & non-gutenberg content wrappers
+ * - Set margins
+ */
+.entry-header,
+.post-thumbnail,
+.entry-content,
+.entry-footer,
+.author-bio,
+.widget-area {
+	margin-top: var(--global--spacing-vertical);
+	margin-left: auto;
+	margin-bottom: var(--global--spacing-vertical);
+	margin-right: auto;
+}
+
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-vertical margin logic
+ */
+.site-footer > *,
+.site-main > article > *,
+.site-main > .not-found > *,
+.entry-content > *,
+[class*="inner-container"] > *,
+.widget-area > * {
+	margin-top: calc( 0.666 * var(--global--spacing-vertical));
+	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
+}
+
+@media only screen and (min-width: 560px) {
+	.site-footer > *,
+	.site-main > article > *,
+	.site-main > .not-found > *,
+	.entry-content > *,
+	[class*="inner-container"] > *,
+	.widget-area > * {
+		margin-top: var(--global--spacing-vertical);
+		margin-bottom: var(--global--spacing-vertical);
 	}
 }
 
-@media only screen and (min-width: 782px) {
-	.entry-content > .alignleft {
-		margin-left: calc( 0.5 * (100vw - calc( 782px - 32px)));
-	}
+.site-footer > *:first-child,
+.site-main > article > *:first-child,
+.site-main > .not-found > *:first-child,
+.entry-content > *:first-child,
+[class*="inner-container"] > *:first-child,
+.widget-area > *:first-child {
+	margin-top: 0;
 }
 
-@media only screen and (min-width: 1024px) {
-	.entry-content > .alignleft {
-		margin-left: calc( 0.5 * (100vw - calc( 782px - 32px)));
-	}
+.site-footer > *:last-child,
+.site-main > article > *:last-child,
+.site-main > .not-found > *:last-child,
+.entry-content > *:last-child,
+[class*="inner-container"] > *:last-child,
+.widget-area > *:last-child {
+	margin-bottom: 0;
 }
 
-@media only screen and (min-width: 1280px) {
-	.entry-content > .alignleft {
-		margin-left: calc( 0.5 * (100vw - calc( 782px - 32px)));
-	}
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-unit margins
+ */
+.site-header > *,
+.entry-header > *,
+.post-thumbnail > *,
+.page-content > *,
+.comment-content > *,
+.author-bio > *,
+.widget-area > .widget > * {
+	margin-top: var(--global--spacing-unit);
+	margin-bottom: var(--global--spacing-unit);
+}
+
+.site-header > *:first-child,
+.entry-header > *:first-child,
+.post-thumbnail > *:first-child,
+.page-content > *:first-child,
+.comment-content > *:first-child,
+.author-bio > *:first-child,
+.widget-area > .widget > *:first-child {
+	margin-top: 0;
+}
+
+.site-header > *:last-child,
+.entry-header > *:last-child,
+.post-thumbnail > *:last-child,
+.page-content > *:last-child,
+.comment-content > *:last-child,
+.author-bio > *:last-child,
+.widget-area > .widget > *:last-child {
+	margin-bottom: 0;
+}
+
+/*
+ * .entry-content children specific controls
+ * - Adds special margin overrides for alignment utility classes
+ */
+.entry-content > * {
+	/* Reset alignleft and alignright margins after alignfull */
+}
+
+.entry-content > *.alignleft, .entry-content > *.alignright,
+.entry-content > *.alignleft:first-child + *,
+.entry-content > *.alignright:first-child + *, .entry-content > *.alignfull {
+	margin-top: 0;
+}
+
+.entry-content > *:last-child, .entry-content > *.alignfull {
+	margin-bottom: 0;
+}
+
+.entry-content > *.alignfull + .alignleft,
+.entry-content > *.alignfull + .alignright {
+	margin-top: var(--global--spacing-vertical);
 }
 
 /**
@@ -827,185 +890,6 @@ footer {
 
 ::-moz-selection {
 	background-color: var(--global--color-text-selection);
-}
-
-/**
- * Layout
- * - Structral and responsive styles
- */
-/**
- * Site Structure
- *
- * - Set vertical margins and responsive widths on
- *   top-level wrappers and content wrappers
- * - `--global--width-content` is a responsive veriable
- * - See: globals/_global-width-responsive.scss
- */
-/**
- * Top Level Wrappers (header, main, footer)
- * - Set vertical padding and horizontal margins
- */
-.site-header,
-.site-main,
-.site-footer {
-	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
-	margin-right: auto;
-	margin-left: auto;
-}
-
-@media only screen and (min-width: 560px) {
-	.site-header,
-	.site-main,
-	.site-footer {
-		padding-top: var(--global--spacing-vertical);
-		padding-left: 0;
-		padding-bottom: var(--global--spacing-vertical);
-		padding-right: 0;
-	}
-}
-
-/**
- * Site-main children wrappers
- * - Add double vertical margins here for clearer heirarchy
- */
-.site-main > * {
-	margin-top: calc(3 * var(--global--spacing-vertical));
-	margin-bottom: calc(3 * var(--global--spacing-vertical));
-}
-
-.site-main > *:first-child {
-	margin-top: 0;
-}
-
-.site-main > *:last-child {
-	margin-bottom: 0;
-}
-
-/**
- * Set the default maximum responsive content-width
- */
-/**
- * Set the wide maximum responsive content-width
- */
-/**
- * Set the full maximum responsive content-width
- */
-/*
- * Block & non-gutenberg content wrappers
- * - Set margins
- */
-.entry-header,
-.post-thumbnail,
-.entry-content,
-.entry-footer,
-.author-bio,
-.widget-area {
-	margin-top: var(--global--spacing-vertical);
-	margin-left: auto;
-	margin-bottom: var(--global--spacing-vertical);
-	margin-right: auto;
-}
-
-/*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-vertical margin logic
- */
-.site-footer > *,
-.site-main > article > *,
-.site-main > .not-found > *,
-.entry-content > *,
-[class*="inner-container"] > *,
-.widget-area > * {
-	margin-top: calc( 0.666 * var(--global--spacing-vertical));
-	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
-}
-
-@media only screen and (min-width: 560px) {
-	.site-footer > *,
-	.site-main > article > *,
-	.site-main > .not-found > *,
-	.entry-content > *,
-	[class*="inner-container"] > *,
-	.widget-area > * {
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
-	}
-}
-
-.site-footer > *:first-child,
-.site-main > article > *:first-child,
-.site-main > .not-found > *:first-child,
-.entry-content > *:first-child,
-[class*="inner-container"] > *:first-child,
-.widget-area > *:first-child {
-	margin-top: 0;
-}
-
-.site-footer > *:last-child,
-.site-main > article > *:last-child,
-.site-main > .not-found > *:last-child,
-.entry-content > *:last-child,
-[class*="inner-container"] > *:last-child,
-.widget-area > *:last-child {
-	margin-bottom: 0;
-}
-
-/*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-unit margins
- */
-.site-header > *,
-.entry-header > *,
-.post-thumbnail > *,
-.page-content > *,
-.comment-content > *,
-.author-bio > *,
-.widget-area > .widget > * {
-	margin-top: var(--global--spacing-unit);
-	margin-bottom: var(--global--spacing-unit);
-}
-
-.site-header > *:first-child,
-.entry-header > *:first-child,
-.post-thumbnail > *:first-child,
-.page-content > *:first-child,
-.comment-content > *:first-child,
-.author-bio > *:first-child,
-.widget-area > .widget > *:first-child {
-	margin-top: 0;
-}
-
-.site-header > *:last-child,
-.entry-header > *:last-child,
-.post-thumbnail > *:last-child,
-.page-content > *:last-child,
-.comment-content > *:last-child,
-.author-bio > *:last-child,
-.widget-area > .widget > *:last-child {
-	margin-bottom: 0;
-}
-
-/*
- * .entry-content children specific controls
- * - Adds special margin overrides for alignment utility classes
- */
-.entry-content > * {
-	/* Reset alignleft and alignright margins after alignfull */
-}
-
-.entry-content > *.alignleft, .entry-content > *.alignright,
-.entry-content > *.alignleft:first-child + *,
-.entry-content > *.alignright:first-child + *, .entry-content > *.alignfull {
-	margin-top: 0;
-}
-
-.entry-content > *:last-child, .entry-content > *.alignfull {
-	margin-bottom: 0;
-}
-
-.entry-content > *.alignfull + .alignleft,
-.entry-content > *.alignfull + .alignright {
-	margin-top: var(--global--spacing-vertical);
 }
 
 /**
@@ -2414,7 +2298,7 @@ hr.wp-block-separator.is-style-dots:before {
 	margin-top: 0 !important;
 }
 
-@media only screen and (max-width: 560px - 1) {
+@media only screen and (max-width: 559px) {
 	.wp-block-spacer[style] {
 		height: var(--global--spacing-unit) !important;
 	}
@@ -2885,11 +2769,6 @@ table th,
 	z-index: 1;
 }
 
-.main-navigation > div > ul li:hover, .main-navigation > div > ul li[focus-within] {
-	cursor: pointer;
-	z-index: 99999;
-}
-
 .main-navigation > div > ul li:hover, .main-navigation > div > ul li:focus-within {
 	cursor: pointer;
 	z-index: 99999;
@@ -2900,14 +2779,6 @@ table th,
 		display: inherit;
 		width: inherit;
 		/* Submenu display */
-	}
-	.main-navigation > div > ul li:hover > ul,
-	.main-navigation > div > ul li[focus-within] > ul,
-	.main-navigation > div > ul li ul:hover,
-	.main-navigation > div > ul li ul:focus {
-		visibility: visible;
-		opacity: 1;
-		display: block;
 	}
 	.main-navigation > div > ul li:hover > ul,
 	.main-navigation > div > ul li:focus-within > ul,
@@ -3167,65 +3038,28 @@ table th,
  * Content
  */
 .entry-title {
-	font-size: var(--heading--font-size-h2);
+	color: var(--entry-header--color);
+	font-size: var(--entry-header--font-size);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height);
 }
 
-.entry-meta,
-.entry-footer {
-	color: var(--global--color-foreground-light);
-	clear: both;
-	float: none;
-	font-size: var(--global--font-size-sm);
-	display: block;
+.entry-title a {
+	color: var(--entry-header--color-link);
 }
 
-.entry-meta > span,
-.entry-footer > span {
-	display: inline-block;
-	margin-left: var(--global--spacing-unit);
-}
-
-.entry-meta > span > *,
-.entry-footer > span > * {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.entry-meta > span:last-child,
-.entry-footer > span:last-child {
-	margin-left: 0;
-}
-
-.entry-meta > span .published + .updated,
-.entry-footer > span .published + .updated {
-	display: none;
-}
-
-.entry-meta a,
-.entry-footer a {
-	color: currentColor;
-}
-
-.entry-meta a:hover, .entry-meta a:active,
-.entry-footer a:hover,
-.entry-footer a:active {
-	color: var(--global--color-primary-hover);
-}
-
-.entry-meta .svg-icon,
-.entry-footer .svg-icon {
-	fill: currentColor;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	margin-left: calc(0.25 * var(--global--spacing-unit));
+.entry-title a:hover, .entry-title a:active {
+	color: var(--entry-header--color-hover);
 }
 
 /**
  * Entry Content
  */
+.entry-content,
+.entry-summary {
+	font-family: var(--entry-content--font-family);
+}
+
 .entry-content p {
 	word-wrap: break-word;
 }
@@ -3267,6 +3101,57 @@ table th,
 	text-align: center;
 }
 
+.entry-meta,
+.entry-footer {
+	color: var(--entry-meta--color);
+	clear: both;
+	float: none;
+	font-size: var(--entry-meta--font-size);
+	display: block;
+}
+
+.entry-meta > span,
+.entry-footer > span {
+	display: inline-block;
+	margin-left: var(--global--spacing-unit);
+}
+
+.entry-meta > span > *,
+.entry-footer > span > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.entry-meta > span:last-child,
+.entry-footer > span:last-child {
+	margin-left: 0;
+}
+
+.entry-meta > span .published + .updated,
+.entry-footer > span .published + .updated {
+	display: none;
+}
+
+.entry-meta a,
+.entry-footer a {
+	color: var(--entry-meta--color-link);
+}
+
+.entry-meta a:hover, .entry-meta a:active,
+.entry-footer a:hover,
+.entry-footer a:active {
+	color: var(--entry-meta--color-hover);
+}
+
+.entry-meta .svg-icon,
+.entry-footer .svg-icon {
+	fill: currentColor;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: calc(0.25 * var(--global--spacing-unit));
+}
+
 /**
  * Post Thumbnails
  */
@@ -3287,10 +3172,46 @@ table th,
 }
 
 .author-bio .author-title {
-	font-size: var(--heading--font-size-h3);
+	font-family: var(--entry-author-bio--font-family);
+	font-size: var(--entry-author-bio--font-size);
 }
 
 /* Next/Previous navigation */
+.navigation {
+	color: var(--global--color-foreground);
+}
+
+.navigation a {
+	color: var(--global--color-primary);
+}
+
+.navigation a:hover {
+	color: var(--global--color-primary-hover);
+}
+
+@media only screen and (min-width: 560px) {
+	.navigation .nav-links {
+		display: flex;
+		justify-content: center;
+	}
+	.navigation .nav-links .nav-next,
+	.navigation .nav-links .nav-previous {
+		flex: 0 1 auto;
+		margin-bottom: inherit;
+		margin-top: inherit;
+		max-width: calc(50% - (0.5 * var(--global--spacing-unit)));
+	}
+	.navigation .nav-links .nav-next {
+		text-align: left;
+	}
+}
+
+.navigation .svg-icon {
+	display: inline-block;
+	fill: currentColor;
+	vertical-align: middle;
+}
+
 .post-navigation .meta-nav {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-body);
@@ -3301,6 +3222,12 @@ table th,
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
 	font-weight: 600;
+}
+
+@media only screen and (min-width: 560px) {
+	.post-navigation .nav-links {
+		justify-content: space-between;
+	}
 }
 
 .post-navigation .nav-next,
@@ -3319,11 +3246,6 @@ table th,
 	margin-bottom: 0;
 }
 
-.pagination .nav-links {
-	justify-content: start;
-	margin: 0 calc(-0.66 * var(--global--spacing-unit));
-}
-
 .pagination .nav-links > * {
 	font-family: var(--global--font-family-primary);
 	font-size: var(--global--font-size-md);
@@ -3332,26 +3254,20 @@ table th,
 	padding-left: calc(0.66 * var(--global--spacing-unit));
 }
 
-.pagination .nav-links .svg-icon {
-	display: inline-block;
-	vertical-align: middle;
+.pagination .nav-links > *:first-child {
+	padding-right: 0;
 }
 
-@media only screen and (min-width: 560px) {
-	.nav-links {
-		display: flex;
-		justify-content: space-between;
-	}
-	.nav-links .nav-next,
-	.nav-links .nav-previous {
-		flex: 0 1 auto;
-		margin-bottom: inherit;
-		margin-top: inherit;
-		max-width: calc(50% - (0.5 * var(--global--spacing-unit)));
-	}
-	.nav-links .nav-next {
-		text-align: left;
-	}
+.pagination .nav-links > *:last-child {
+	padding-left: 0;
+}
+
+.pagination .nav-links > *.next {
+	margin-right: auto;
+}
+
+.pagination .nav-links > *.prev {
+	margin-left: auto;
 }
 
 /**
@@ -4116,7 +4032,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: 560px - 1) {
+@media only screen and (max-width: 559px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);

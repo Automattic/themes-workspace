@@ -4,7 +4,7 @@
 
 .entry-content,
 .entry-summary {
-
+	font-family: var(--entry-content--font-family);
 }
 
 .entry-content {
@@ -55,7 +55,7 @@
 
 	// Classic editor audio embeds.
 	.wp-audio-shortcode {
-		@extend %responsive-aligndefault;
+		@extend %responsive-aligndefault-width;
 	}
 }
 

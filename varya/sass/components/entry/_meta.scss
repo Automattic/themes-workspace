@@ -1,23 +1,10 @@
-.entry-header {
-
-}
-
-.entry-title {
-
-	font-size: var(--heading--font-size-h2);
-	letter-spacing: var(--heading--letter-spacing-h2);
-	line-height: var(--heading--line-height);
-
-	a { }
-}
-
 .entry-meta,
 .entry-footer {
 
-	color: var(--global--color-foreground-light);
+	color: var(--entry-meta--color);
 	clear: both;
 	float: none;
-	font-size: var(--global--font-size-sm);
+	font-size: var(--entry-meta--font-size);
 	display: block;
 
 	> span {
@@ -39,11 +26,11 @@
 	}
 
 	a {
-		color: currentColor;
+		color: var(--entry-meta--color-link);
 
 		&:hover,
 		&:active {
-			color: var(--global--color-primary-hover);
+			color: var(--entry-meta--color-hover);
 		}
 	}
 
@@ -63,4 +50,3 @@
 .entry-footer {
 
 }
-

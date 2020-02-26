@@ -1,3 +1,271 @@
+/**
+ * Layout
+ * - Structral and responsive styles
+ */
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+:root {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width: 100%;
+	--responsive--alignfull-width: 100%;
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
+	--responsive--alignright-margin: var(--global--spacing-horizontal);
+	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 560px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 782px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: $breakpoint_xxl) {
+	:root {
+		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+/**
+ * Extends
+ */
+.default-max-width {
+	max-width: var(--responsive--aligndefault-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wide-max-width {
+	max-width: var(--responsive--alignwide-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.full-max-width {
+	max-width: var(--responsive--alignfull-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/**
+ * Output
+ */
+/**
+ * Site Structure
+ *
+ * - Set vertical margins and responsive widths on
+ *   top-level wrappers and content wrappers
+ * - `--global--width-content` is a responsive veriable
+ * - See: globals/_global-width-responsive.scss
+ */
+/**
+ * Top Level Wrappers (header, main, footer)
+ * - Set vertical padding and horizontal margins
+ */
+.site-header,
+.site-main,
+.site-footer {
+	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media only screen and (min-width: 560px) {
+	.site-header,
+	.site-main,
+	.site-footer {
+		padding-top: var(--global--spacing-vertical);
+		padding-left: 0;
+		padding-bottom: var(--global--spacing-vertical);
+		padding-right: 0;
+	}
+}
+
+/**
+ * Site-main children wrappers
+ * - Add double vertical margins here for clearer heirarchy
+ */
+.site-main > * {
+	margin-top: calc(3 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
+.site-main > *:first-child {
+	margin-top: 0;
+}
+
+.site-main > *:last-child {
+	margin-bottom: 0;
+}
+
+/**
+ * Set the default maximum responsive content-width
+ */
+/**
+ * Set the wide maximum responsive content-width
+ */
+/**
+ * Set the full maximum responsive content-width
+ */
+/*
+ * Block & non-gutenberg content wrappers
+ * - Set margins
+ */
+.entry-header,
+.post-thumbnail,
+.entry-content,
+.entry-footer,
+.author-bio,
+.widget-area {
+	margin-top: var(--global--spacing-vertical);
+	margin-left: auto;
+	margin-bottom: var(--global--spacing-vertical);
+	margin-right: auto;
+}
+
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-vertical margin logic
+ */
+.site-footer > *,
+.site-main > article > *,
+.site-main > .not-found > *,
+.entry-content > *,
+[class*="inner-container"] > *,
+.widget-area > * {
+	margin-top: calc( 0.666 * var(--global--spacing-vertical));
+	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
+}
+
+@media only screen and (min-width: 560px) {
+	.site-footer > *,
+	.site-main > article > *,
+	.site-main > .not-found > *,
+	.entry-content > *,
+	[class*="inner-container"] > *,
+	.widget-area > * {
+		margin-top: var(--global--spacing-vertical);
+		margin-bottom: var(--global--spacing-vertical);
+	}
+}
+
+.site-footer > *:first-child,
+.site-main > article > *:first-child,
+.site-main > .not-found > *:first-child,
+.entry-content > *:first-child,
+[class*="inner-container"] > *:first-child,
+.widget-area > *:first-child {
+	margin-top: 0;
+}
+
+.site-footer > *:last-child,
+.site-main > article > *:last-child,
+.site-main > .not-found > *:last-child,
+.entry-content > *:last-child,
+[class*="inner-container"] > *:last-child,
+.widget-area > *:last-child {
+	margin-bottom: 0;
+}
+
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-unit margins
+ */
+.site-header > *,
+.entry-header > *,
+.post-thumbnail > *,
+.page-content > *,
+.comment-content > *,
+.author-bio > *,
+.widget-area > .widget > * {
+	margin-top: var(--global--spacing-unit);
+	margin-bottom: var(--global--spacing-unit);
+}
+
+.site-header > *:first-child,
+.entry-header > *:first-child,
+.post-thumbnail > *:first-child,
+.page-content > *:first-child,
+.comment-content > *:first-child,
+.author-bio > *:first-child,
+.widget-area > .widget > *:first-child {
+	margin-top: 0;
+}
+
+.site-header > *:last-child,
+.entry-header > *:last-child,
+.post-thumbnail > *:last-child,
+.page-content > *:last-child,
+.comment-content > *:last-child,
+.author-bio > *:last-child,
+.widget-area > .widget > *:last-child {
+	margin-bottom: 0;
+}
+
+/*
+ * .entry-content children specific controls
+ * - Adds special margin overrides for alignment utility classes
+ */
+.entry-content > * {
+	/* Reset alignleft and alignright margins after alignfull */
+}
+
+.entry-content > *.alignleft, .entry-content > *.alignright,
+.entry-content > *.alignleft:first-child + *,
+.entry-content > *.alignright:first-child + *, .entry-content > *.alignfull {
+	margin-top: 0;
+}
+
+.entry-content > *:last-child, .entry-content > *.alignfull {
+	margin-bottom: 0;
+}
+
+.entry-content > *.alignfull + .alignleft,
+.entry-content > *.alignfull + .alignright {
+	margin-top: var(--global--spacing-vertical);
+}
+
 body[class*="woocommerce"] #page #respond input#submit,
 body[class*="woocommerce"] #page #respond input#submit.alt,
 body[class*="woocommerce"] #page a.button,
@@ -603,7 +871,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: 560px - 1) {
+@media only screen and (max-width: 559px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);

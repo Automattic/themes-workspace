@@ -56,7 +56,7 @@
 		color: var(--pullquote--color-background);
 
 		&:not(.alignleft):not(.alignright) blockquote {
-			@extend %responsive-aligndefault;
+			@extend %responsive-aligndefault-width;
 		}
 
 		blockquote {
@@ -78,6 +78,6 @@
 	&.alignfull blockquote {
 		margin-left: auto;
 		margin-right: auto;
-		@extend %responsive-aligndefault;
+		@extend %responsive-aligndefault-width;
 	}
 }

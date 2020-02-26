@@ -2,8 +2,12 @@
  * These styles should be loaded by the Block Editor only
  */
 
+// Layout
+// - Structral and responsive styles
+@import "sass/structure/style";
+
 @import "sass/abstracts/mixins";
-@import "sass/abstracts/responsive-logic";
+//@import "sass/abstracts/responsive-logic";
 
 // Abstracts
 // - Mixins, variables and functions
