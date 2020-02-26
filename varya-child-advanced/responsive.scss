@@ -8,11 +8,11 @@
 $flexwidth: 100%;
 $horizontal_space: var(--global--spacing-horizontal);
 
-$breakpoint_sm: 560px;
-$breakpoint_md: 640px;
-$breakpoint_lg: 782px;
-$breakpoint_xl: 1024px;
-$breakpoint_xxl: 1280px;
+$breakpoint_sm: 500px;
+$breakpoint_md: 600px;
+$breakpoint_lg: 720px;
+$breakpoint_xl: 1000px;
+$breakpoint_xxl: 1200px;
 
 @custom-media --sm only screen and (min-width: #{$breakpoint_sm});
 @custom-media --md only screen and (min-width: #{$breakpoint_md});

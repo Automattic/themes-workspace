@@ -177,6 +177,9 @@ function varya_nwaneri_scripts() {
 	// enqueue child styles
 	wp_enqueue_style('varya-nwaneri-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ));
 
+	// Override responsive width styles
+	wp_enqueue_style( 'varya-nwaneri-responsive-style', get_stylesheet_directory_uri() . '/responsive.css', array(), wp_get_theme()->get( 'Version' ) );
+
 	// enqueue child RTL styles
 	wp_style_add_data( 'varya-nwaneri-style', 'rtl', 'replace' );
 
