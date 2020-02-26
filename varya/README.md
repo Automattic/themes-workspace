@@ -45,7 +45,7 @@ Soon this process will be replaced by a `theme-dev-util` (similar to [this](http
 
 ### Simple Child Theme Structure (See: `/varya-child`)
 
-When working with a Varya child theme, only the variables need to be overwritten so the stylesheet structure for a child-theme cascades downward like this:
+When creating a simple Varya child-theme, only the variables need to be overwritten so the stylesheet structure for a child-theme cascades downward like this:
 
 **Frontend**
 - `/varya/variables.css`
@@ -66,6 +66,26 @@ When working with a Varya child theme, only the variables need to be overwritten
 ### Advanced Child Theme Structure (See: `/varya-child-adnvanced`)
 
 - TBD
+
+**#Responsive Content Widths**
+
+Customizing the width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in a `@media` See here [link to W3C spec]. Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme. 
+
+Usually, breakpoints are set based on common viewport sizes like mobile (320px), tablet (1024px), etc, but Varya takes a different approach. To understand how this approach effects the structure of the site, it’s best to think of the variables as both breakpoints AND content-widths. 
+This means you can simply choose a content width based on your design, and the related breakpoint will also change to make that layout possible. Responsive styles work around the specs of the design which is much less fragile. 
+
+Check out this Codepen for a lo-fi example: https://codepen.io/allancole/pen/zYGNWBJ
+
+Here are the available variables for changing content widths in `responsive.scss`. 
+
+| Screensize        | Breakpoint Size   | Default Size | Description                                                                                                |
+|-------------------|-------------------|--------------|------------------------------------------------------------------------------------------------------------|
+| **Mobile & down** | `$flexwidth`      | 100%         |                                                                                                            |
+| **Mobile & up**   | `$breakpoint_sm`  | 560px        |                                                                                                            |
+| **Tablet & up**   | `$breakpoint_md`  | 640px        | Should match the `$content_width` PHP variable set in `functions.php`. This variables matters the most.    |
+| **Laptop & up**   | `$breakpoint_lg`  | 750px        |                                                                                                            |
+| **Desktop & up**  | `$breakpoint_xl`  | 1024px       |                                                                                                            |
+| **Wide & up**     | `$breakpoint_xxl` | 1280px       |                                                                                                            |
 
 ### Todos
 
