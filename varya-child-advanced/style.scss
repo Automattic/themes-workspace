@@ -243,8 +243,8 @@ a {
 
 /* Posts */
 
-.entry-content a,
-.comment-content a {
+.entry-content a:not(.wp-block-button__link),
+.comment-content a:not(.wp-block-button__link) {
 	border-bottom: 4px solid;
 	border-image: url("assets/polka-dot.png") 100% 0 repeat;
 }
@@ -273,33 +273,4 @@ a {
 .comment-list > li {
 	border-top-style: dotted;
 	border-width: 2px;
-}
-
-/* Blocks */
-
-button[data-load-more-btn],
-.button, button, input[type="submit"],
-.wp-block-button__link,
-.wp-block-file__button,
-.a8c-posts-list__view-all, body[class*="woocommerce"] #page #respond input#submit,
-body[class*="woocommerce"] #page #respond input#submit.alt,
-body[class*="woocommerce"] #page a.button,
-body[class*="woocommerce"] #page a.button.alt,
-body[class*="woocommerce"] #page button.button,
-body[class*="woocommerce"] #page button.button.alt,
-body[class*="woocommerce"] #page input.button,
-body[class*="woocommerce"] #page input.button.alt,
-body[class*="woocommerce"] #page .cart .button,
-body[class*="woocommerce"] #page .cart input.button,
-body[class*="woocommerce"] #page a.added_to_cart,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit,
-body[class*="woocommerce"] #page .woocommerce a.button,
-body[class*="woocommerce"] #page .woocommerce button.button,
-body[class*="woocommerce"] #page .woocommerce input.button,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a {
-	border-bottom-width: 10px;
-	border-right-width: 10px;
-	border-image: url("assets/button-bg.svg") 50;
-	position: relative;
 }

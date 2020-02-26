@@ -209,6 +209,16 @@ add_action( 'enqueue_block_editor_assets', 'varya_nwaneri_editor_styles', 99 );
  */
 function varya_nwaneri_block_extends() {
 
+	// Button Block
+	wp_enqueue_script( 'varya-nwaneri-extend-button-block',
+		get_stylesheet_directory_uri() . '/block-extends/extend-button-block.js',
+		array( 'wp-blocks' )
+	);
+
+	wp_enqueue_style( 'varya-nwaneri-extend-button-block',
+		get_stylesheet_directory_uri() . '/block-extends/extend-button-block.css'
+	);
+
 	// Columns Block Tweaks
 	wp_enqueue_script( 'varya-nwaneri-extend-columns-block',
 		get_stylesheet_directory_uri() . '/block-extends/extend-columns-block.js',
@@ -258,6 +268,7 @@ function varya_nwaneri_block_extends() {
 	wp_enqueue_style( 'varya-nwaneri-extend-separator-block',
 		get_stylesheet_directory_uri() . '/block-extends/extend-separator-block.css'
 	);
+
 }
 add_action( 'enqueue_block_assets', 'varya_nwaneri_block_extends' );
 
