@@ -75,7 +75,7 @@ A list of CSS-variables that override the variables in the child theme. This is 
 
 ### Extra CSS
 
-These should be supplemental styles that give the theme a unique appearance beyond what’s possible with the Varya system. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to include Varya CSS-variables in this styles sheet so that the system retains its usefulness across the theme.
+These should be supplemental styles that give the theme a unique appearance beyond what’s included with the Varya system defaults. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to use Varya CSS-variables in this stylesheet so that the system retains its usefulness across the theme.
 
 ## Advanced Child Theme Structure 
 (See: `/varya-child-advanced`)
