@@ -33,7 +33,7 @@ In each view, the variables are loaded first and then the stylesheet is loaded w
 
 ## How to use it
 
-To use the system, simply duplicate the `vayra-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `varia-child` strings and replace them with `my-theme-name` as follows:
+To use the system, simply duplicate the `varya-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `varia-child` strings and replace them with `my-theme-name` as follows:
 
   - Search for: `'varya-child'` and replace with: `'my-theme-name'` (with quotes).
   - Search for: `varya_child_` and replace with: `my_theme_name_`.
