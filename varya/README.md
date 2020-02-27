@@ -79,9 +79,9 @@ The Varya Child Advanced theme is an example of what a theme in production might
 Usually, breakpoints are set based on common viewport sizes like mobile (320px), tablet (1024px), etc, but Varya takes a different approach. To understand how this approach effects the structure of the site, it’s best to think of the variables as both breakpoints AND content-widths. 
 This means you can simply choose a content width based on your design, and the related breakpoint will also change to make that layout possible and responsive. Responsive styles work around the specs of the design which is much less fragile and flexible. 
 
-Check out this Codepen for a lo-fi example: https://codepen.io/allancole/pen/zYGNWBJ
+Check out this Codepen for a lo-fi example: https://codepen.io/allancole/pen/zYGNWBJ (make sure to resize the screen to see the effect in action).
 
-Customizing the width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in `@media` queries ([see here](https://www.w3.org/TR/css-variables-1/#using-variables)). Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme when its compiled. 
+Customizing the responsive content width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in `@media` queries ([see here](https://www.w3.org/TR/css-variables-1/#using-variables)). Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme when compiled. 
 
 Here are the available variables for changing content widths in `responsive.scss`. 
 
@@ -94,11 +94,10 @@ Here are the available variables for changing content widths in `responsive.scss
 | **Desktop & up**  | `$breakpoint_xl`    | 1024px       |                                                                                                                   |
 | **Wide & up**     | `$breakpoint_xxl`   | 1280px       |                                                                                                                   |
 
-Once you’ve set these variables to your liking, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables.
+Once you’ve set these variables to your liking in `/varya-child-advanced/responsive.scss`, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables in `responsive.css`.
 
 ### Todos
  - [DONE] Explore responsive-logic overrides in the child theme.
- - Integrate with build tool
  - [DONE] Introduce an advanced child theme example that uses block styles
  - Audit Varya system for excessive overridden rules
  - Integrate with the child-theme build tool.
@@ -112,4 +111,4 @@ Once you’ve set these variables to your liking, run `npm run build` on the chi
 
 ### License
 
-- GPL
+- GPL 2.0
