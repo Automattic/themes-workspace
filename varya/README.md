@@ -11,7 +11,7 @@ When you reduce a theme design down to a set of systematic design decisions, you
   - **Fonts** - Font-family, size, weight, and line-height rules. 
   - **Colors** - Primary, secondary, background, foreground and border colors. 
   - **Spacing** - A default 8px vertical rhythm between all blocks and major components. It also includes utility spacing classes for negative margins.
-  - **Responsive Logic** - Unifies the responsive behavior across various Blocks and Components to simplify behaviors.
+  - **Responsive Logic** - Built-in responsive behavior across Blocks and Components.
 
 ## How does it work?
 
