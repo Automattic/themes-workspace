@@ -71,7 +71,7 @@ A list of CSS-variables that override the variables in the child theme. This is 
 
 **Varya child-theme font-style overrides** (`/varya-child/variables.css`)
 
-`:root { --global--font-family: Futura, Helvetica; }`
+`:root { --global--font-family: "Futura", "Helvetica", sans-serif; }`
 
 ### Extra CSS
 
