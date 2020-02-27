@@ -45,47 +45,54 @@ Soon this process will be replaced by a `theme-dev-util` (similar to [this](http
 
 ### Simple Child Theme Structure (See: `/varya-child`)
 
-When creating a simple Varya child-theme, only the variables need to be overwritten so the stylesheet structure for a child-theme cascades downward like this:
+Use this simple Varya child-theme example to familiarize yourself with the CSS-variables and to see how they influence the theme design when you change them. To start, open up the `/varya-child-simple/variables.css` file. Change any of the values, save the file, and refresh the frontend of your site to see the changes. To add more variables, view the [full list of available variables](https://github.com/Automattic/themes-workspace/blob/add/variatheme/varya/variables.css) from the Varya parent them and copy any variables you want in to your child theme. 
+The stylesheet structure for a child-theme cascades downward like this:
 
 **Frontend**
 - `/varya/variables.css`
-  - `../varya-child-theme/variables.css` (system overrides)
+  - `../varya-child-simple/variables.css` (System Override)
 - `/varya/style.css`
-  - `../varya-child-theme/style.css` (extra CSS)
+  - `../varya-child-simple/style.css` (Extra CSS)
 
  **Editor**
 - `/varya/variables-editor.css`
-  - `../varya-child-theme/variables-editor.css` (system overrides)
+  - `../varya-child-simple/variables-editor.css` (System Overrides)
 - `/varya/style-editor.css`
-  - `../varya-child-theme/style-editor.css` (extra CSS)
+  - `../varya-child-simple/style-editor.css` (Extra CSS)
 
-**System Overrides**: A list of CSS-variables that override the variables in the child theme. This is where you tell the system to use the _Futura_ font-family instead of the _sans-serif_ default, for example. There’s no need to replace all of the variables here, only the ones you wish to actually change.
+**System Overrides**: A list of CSS-variables that override the variables in the child theme. This is where you tell the system to use the _Futura_ font-family instead of the _sans-serif_ default, for example. There’s no need to replace all of the variables here, only the ones you wish to actually change based on your theme design.
 
-**Extra CSS**: These should be supplemental styles that give the theme a unique appearance beyond what’s possible with the Varya system. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to use Varya variables here so that the system retains its usefulness across the theme. 
+**Extra CSS**: These should be supplemental styles that give the theme a unique appearance beyond what’s possible with the Varya system. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to include Varya CSS-variables in this styles sheet so that the system retains its usefulness across the theme. 
 
-### Advanced Child Theme Structure (See: `/varya-child-adnvanced`)
+### Advanced Child Theme Structure (See: `/varya-child-advanced`)
 
-- TBD
+The Varya Child Advanced theme is an example of what a theme in production might look like using the Varya system. It primarily relies on CSS-variables like the simple version but it also takes advantage of other child theming techniques. 
+
+- A custom header and footer design by replacing the `header.php` and `footer.php` template parts.
+- Some examples of custom block styles which will likely be common in many Varya-based child themes.
+- A customizer option that allows customers to choose a `header-image`.
+- Some example _Extra CSS_ in the style.scss file.
+- Introduces an example for how to change the responsive content widths (more on this in the next section).
 
 **#Responsive Content Widths**
 
-Customizing the width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in a `@media` See here [link to W3C spec]. Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme. 
-
 Usually, breakpoints are set based on common viewport sizes like mobile (320px), tablet (1024px), etc, but Varya takes a different approach. To understand how this approach effects the structure of the site, it’s best to think of the variables as both breakpoints AND content-widths. 
-This means you can simply choose a content width based on your design, and the related breakpoint will also change to make that layout possible. Responsive styles work around the specs of the design which is much less fragile. 
+This means you can simply choose a content width based on your design, and the related breakpoint will also change to make that layout possible and responsive. Responsive styles work around the specs of the design which is much less fragile and flexible. 
 
 Check out this Codepen for a lo-fi example: https://codepen.io/allancole/pen/zYGNWBJ
 
+Customizing the width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in `@media` queries ([see here](https://www.w3.org/TR/css-variables-1/#using-variables)). Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme when its compiled. 
+
 Here are the available variables for changing content widths in `responsive.scss`. 
 
-| Screensize        | Breakpoint Size   | Default Size | Description                                                                                                |
-|-------------------|-------------------|--------------|------------------------------------------------------------------------------------------------------------|
-| **Mobile & down** | `$flexwidth`      | 100%         |                                                                                                            |
-| **Mobile & up**   | `$breakpoint_sm`  | 560px        |                                                                                                            |
-| **Tablet & up**   | `$breakpoint_md`  | 640px        | This variables matters the most. It should match the `$content_width` PHP variable set in `functions.php`. |
-| **Laptop & up**   | `$breakpoint_lg`  | 750px        |                                                                                                            |
-| **Desktop & up**  | `$breakpoint_xl`  | 1024px       |                                                                                                            |
-| **Wide & up**     | `$breakpoint_xxl` | 1280px       |                                                                                                            |
+| Screensize        | Breakpoint Variable | Default Size | Description                                                                                                       |
+|-------------------|---------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
+| **Mobile & down** | `$flexwidth`        | 100%         |                                                                                                                   |
+| **Mobile & up**   | `$breakpoint_sm`    | 560px        |                                                                                                                   |
+| **Tablet & up**   | `$breakpoint_md`    | 640px        | This variables matters the most. It should always match the `$content_width` PHP variable set in `functions.php`. |
+| **Laptop & up**   | `$breakpoint_lg`    | 750px        |                                                                                                                   |
+| **Desktop & up**  | `$breakpoint_xl`    | 1024px       |                                                                                                                   |
+| **Wide & up**     | `$breakpoint_xxl`   | 1280px       |                                                                                                                   |
 
 Once you’ve set these variables to your liking, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables.
 
