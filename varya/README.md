@@ -25,10 +25,6 @@ The system itself lives in the `/varya/sass` directory as a collection of Sass p
 - `/varya/variables-editor.css`
 - `/varya/style-editor.css`
 
-**Customizer**
-- `/varya/variables.css`
-- `/varya/style.css`
-
 In each view, the variables are loaded first and then the stylesheet is loaded which applies the variables.
 
 ## How to use it
