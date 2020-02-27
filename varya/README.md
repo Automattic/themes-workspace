@@ -31,7 +31,7 @@ In each view, the variables are loaded first and then the stylesheet is loaded w
 
 1. Clone / download this repository into the `wp-content/themes` directory of your WordPress site.
 2. `cd` into the `wp-content/themes/varya` directory and run `npm install`.
-3. Next, run `npm build child-theme` and go through the prompts. This will create a fresh Varya-based child-theme using the name you chose in the prompts (* the build tool is still in the works. Do this step manually using the steps below).
+3. Next, run `npm build child-theme` and go through the prompts. This will create a fresh Varya-based child-theme using the name you chose in the prompts (*The build tool is a work in progress. Follow the manual directions below to complete this step).
 4. Visit the WordPress admin, access the Themes page and activate the new child-theme. 
 5. Then, visit the frontend of your site and to see how it looks by default.
 6. Next, open `child-theme/variables.css` in a text editor, change one or more of the variables, save the file and then refresh the front end of your site to see how it affects the design. 
