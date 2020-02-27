@@ -105,14 +105,14 @@ Customizing the responsive content-width of a Varya Child Theme is also just as 
 
 Here are the available variables for changing content widths in `responsive.scss`. 
 
-| Screensize        | Breakpoint Variable | Default Size | Description                                                                                                       |
-|-------------------|---------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
-| **Mobile & down** | `$flexwidth`        | 100%         |                                                                                                                   |
-| **Mobile & up**   | `$breakpoint_sm`    | 560px        |                                                                                                                   |
-| **Tablet & up**   | `$breakpoint_md`    | 640px        | This variables matters the most. It should always match the `$content_width` PHP variable set in `functions.php`. |
-| **Laptop & up**   | `$breakpoint_lg`    | 750px        |                                                                                                                   |
-| **Desktop & up**  | `$breakpoint_xl`    | 1024px       |                                                                                                                   |
-| **Wide & up**     | `$breakpoint_xxl`   | 1280px       |                                                                                                                   |
+| Screensize        | Breakpoint Variable | Default Size | Description                                                                                                                                                                                            |
+|-------------------|---------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Mobile & down** | `$flexwidth`        | 100%         | On small screens the max width is always set to 100% to maximize screen real estate.                                                                                                                   |
+| **Mobile & up**   | `$breakpoint_sm`    | 560px        | This can be any integer as long as it’s smaller than `$breakpoint_md`.                                                                                                                                 |
+| **Tablet & up**   | `$breakpoint_md`    | 640px        | This can be any integer as long as it’s smaller than `$breakpoint_lg` and larger than `$breakpoint_md`.                                                                                                |
+| **Laptop & up**   | `$breakpoint_lg`    | 750px        | *This variables matters the most. It should always match the `$content_width` PHP variable set in `functions.php`. This number must be larger than `$breakpoint_md` and smaller than `$breakpoint_xl`. |
+| **Desktop & up**  | `$breakpoint_xl`    | 1024px       | This can be any integer as long as it’s smaller than `$breakpoint_xxl` and larger than `$breakpoint_lg`.                                                                                               |
+| **Wide & up**     | `$breakpoint_xxl`   | 1280px       | This can be any integer as long as it’s larger than `$breakpoint_xl`.                                                                                                                                  |
 
 Once you’ve set these variables to your liking in `/varya-child-advanced/responsive.scss`, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables in `responsive.css`.
 
