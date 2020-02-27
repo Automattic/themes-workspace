@@ -1,6 +1,6 @@
 # Varya
 
-Varya is a parent-theme that includes a styling system for quickly creating Gutenberg-ready child-themes for WordPress. 
+Varya is a parent-theme with a built-in styling system for quickly creating Gutenberg-ready child-themes for WordPress. 
 
 ## What does it do?
 
