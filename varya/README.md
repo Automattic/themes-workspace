@@ -99,7 +99,7 @@ The Varya Child Advanced theme is an example of what a theme in production might
 
 Usually, breakpoints are set based on common viewport sizes like mobile (320px), tablet (1024px), etc, but Varya takes a different approach. To understand how this approach effects the structure of the site, it’s best to think of the content-width variables as both breakpoints _and_ content-widths. When you choose a content-width based on your design, the related breakpoint will also change to make that layout possible and responsive. Responsive styles work around the specs of the design which is both less fragile and more flexible. 
 
-Check out this Codepen for a lo-fi example: [https://codepen.io/allancole/pen/zYGNWBJ](https://codepen.io/allancole/pen/zYGNWBJ) (make sure to resize the screen to see the effect in action).
+Check out this Codepen for a lo-fi example: [https://codepen.io/allancole/pen/zYGNWBJ](https://codepen.io/allancole/pen/zYGNWBJ) (make sure to resize the screen to see the effect in action). Notice how the actual content-width of the site jumps down a size when the viewport reaches a breakpoint. 
 
 Customizing the responsive content-width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in `@media` queries ([see here](https://www.w3.org/TR/css-variables-1/#using-variables)). Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme when compiled. 
 
@@ -110,11 +110,11 @@ Here are the available variables for changing content widths in `responsive.scss
 | **Mobile & down** | `$flexwidth`        | 100%         | On small screens the max width is always set to 100% to maximize screen real estate.                                                                                                                   |
 | **Mobile & up**   | `$breakpoint_sm`    | 560px        | This can be any integer as long as it’s smaller than `$breakpoint_md`.                                                                                                                                 |
 | **Tablet & up**   | `$breakpoint_md`    | 640px        | This can be any integer as long as it’s smaller than `$breakpoint_lg` and larger than `$breakpoint_md`.                                                                                                |
-| **Laptop & up**   | `$breakpoint_lg`    | 750px        | *This variables matters the most. It should always match the `$content_width` PHP variable set in `functions.php`. This number must be larger than `$breakpoint_md` and smaller than `$breakpoint_xl`. |
+| **Laptop & up**   | `$breakpoint_lg`    | 750px        | **Important!**. This variable should always match the `$content_width` PHP variable set in `functions.php`. This number must be larger than `$breakpoint_md` and smaller than `$breakpoint_xl`. |
 | **Desktop & up**  | `$breakpoint_xl`    | 1024px       | This can be any integer as long as it’s smaller than `$breakpoint_xxl` and larger than `$breakpoint_lg`.                                                                                               |
 | **Wide & up**     | `$breakpoint_xxl`   | 1280px       | This can be any integer as long as it’s larger than `$breakpoint_xl`.                                                                                                                                  |
 
-Once you’ve set these variables to your liking in `/varya-child-advanced/responsive.scss`, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables in `responsive.css`.
+Once you’ve set these variables to your liking in `/varya-child-advanced/responsive.scss`, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the CSS-variables for content-width in `responsive.css`.
 
 ## To-Dos
 - [DONE] Explore responsive-logic overrides in the child theme.
