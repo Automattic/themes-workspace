@@ -8,10 +8,10 @@ When you reduce a theme design down to a set of systematic design decisions, you
 
 ### What controls does the system come with?
 
-  - **Fonts** - Font-family, size, weight, and line-height rules. 
-  - **Colors** - Primary, secondary, background, foreground and border colors. 
-  - **Spacing** - A default 8px vertical rhythm between all blocks and major components. It also includes utility spacing classes for negative margins.
-  - **Responsive Logic** - Built-in responsive behavior across Blocks and Components.
+- **Fonts** - Font-family, size, weight, and line-height rules. 
+- **Colors** - Primary, secondary, background, foreground and border colors. 
+- **Spacing** - A default 8px vertical rhythm between all blocks and major components. It also includes utility spacing classes for negative margins.
+- **Responsive Logic** - Built-in responsive behavior across Blocks and Components.
 
 ## How does it work?
 
@@ -29,24 +29,24 @@ In each view, the variables are loaded first and then the stylesheet is loaded w
 
 ## Quick start 
 
-  1. Clone / download this repository into the `wp-content/themes` directory of your WordPress site.
-  2. `cd` into the `wp-content/themes/varya` directory and run `npm install`.
-  3. Next, run `npm build child-theme` and go through the prompts. This will create a fresh Varya-based child-theme using the name you chose in the prompts (* the build tool is still in the works. Do this step manually using the steps below).
-  4. Visit the WordPress admin, access the Themes page and activate the new child-theme. 
-  5. Then, visit the frontend of your site and to see how it looks by default.
-  6. Next, open `child-theme/variables.css` in a text editor, change one or more of the variables, save the file and then refresh the front end of your site to see how it affects the design. 
-  7. Continue to add and/or remove variables based on the [full list of available variables in Varya](https://github.com/Automattic/themes-workspace/blob/add/variatheme/varya/variables.css).
-  8. Once you’re variables are all set you can continue development like you would with any child-theme using `child-theme/style.css` to add any extra CSS you might need to accomplish a design. 
+1. Clone / download this repository into the `wp-content/themes` directory of your WordPress site.
+2. `cd` into the `wp-content/themes/varya` directory and run `npm install`.
+3. Next, run `npm build child-theme` and go through the prompts. This will create a fresh Varya-based child-theme using the name you chose in the prompts (* the build tool is still in the works. Do this step manually using the steps below).
+4. Visit the WordPress admin, access the Themes page and activate the new child-theme. 
+5. Then, visit the frontend of your site and to see how it looks by default.
+6. Next, open `child-theme/variables.css` in a text editor, change one or more of the variables, save the file and then refresh the front end of your site to see how it affects the design. 
+7. Continue to add and/or remove variables based on the [full list of available variables in Varya](https://github.com/Automattic/themes-workspace/blob/add/variatheme/varya/variables.css).
+8. Once you’re variables are all set you can continue development like you would with any child-theme using `child-theme/style.css` to add any extra CSS you might need to accomplish a design. 
 
 ### Create a child-theme manually (* optional)
 
 To use the system, simply duplicate the `varya-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `varia-child` strings and replace them with `my-theme-name` as follows:
 
-  - Search for: `'varya-child'` and replace with: `'my-theme-name'` (with quotes).
-  - Search for: `varya_child_` and replace with: `my_theme_name_`.
-  - Search for: `Text Domain: varia-child` and replace with: `Text Domain: my-theme-name` in _style.css_.
-  - Search for:  `varia-child` and replace with: `my_theme_name`.
-  - Search for: `varia-child-` and replace with: `my-theme-name-`.
+- Search for: `'varya-child'` and replace with: `'my-theme-name'` (with quotes).
+- Search for: `varya_child_` and replace with: `my_theme_name_`.
+- Search for: `Text Domain: varia-child` and replace with: `Text Domain: my-theme-name` in _style.css_.
+- Search for:  `varia-child` and replace with: `my_theme_name`.
+- Search for: `varia-child-` and replace with: `my-theme-name-`.
 
 (Soon this process will be replaced by a `theme-dev-util` (similar to [this](https://github.com/Automattic/theme-dev-utils)) that allows you to run a command and automatically produce a child theme with all the strings already replaced.)
 
@@ -90,9 +90,9 @@ These should be supplemental styles that give the theme a unique appearance beyo
 The Varya Child Advanced theme is an example of what a theme in production might look like using the Varya system. It primarily relies on CSS-variables like the simple version but it also takes advantage of other child theming techniques. 
 
 - A custom header and footer design by replacing the `header.php` and `footer.php` template parts.
-- Some examples of custom block styles which will likely be common in many Varya-based child themes.
+- Some examples of custom block styles which will likely be common in many Varya-based child-themes.
 - A customizer option that allows customers to choose a `header-image`.
-- Some example _Extra CSS_ in the style.scss file.
+- Some example _Extra CSS_ in the `style.scss` file.
 - Introduces an example for how to change the responsive content widths (more on this in the next section).
 
 ## Responsive content widths
@@ -117,19 +117,20 @@ Here are the available variables for changing content widths in `responsive.scss
 Once you’ve set these variables to your liking in `/varya-child-advanced/responsive.scss`, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables in `responsive.css`.
 
 ## To-Dos
- - [DONE] Explore responsive-logic overrides in the child theme.
- - [DONE] Introduce an advanced child theme example that uses block styles
- - Audit Varya system for excessive overridden rules
- - Integrate with the child-theme build tool.
- - Add Jetpack support?
- - Optimize responsive font-size styles.
- - [DONE] Audit how variables appear in the editor, the customizer, and the frontend.
- - Consider adding default fallbacks to top-level css-variables.
- - Create a demo.
- - Add a CSS-Variables polyfill or other fallback solution for older browsers.
- - [WIP] Create a ReadMe that describes how to use it.
+- [DONE] Explore responsive-logic overrides in the child theme.
+- [DONE] Introduce an advanced child theme example that uses block styles
+- [DONE] Audit how variables appear in the editor, the customizer, and the frontend.
+- Audit Varya system for excessive overridden rules
+- Integrate with the child-theme build tool.
+- Add Jetpack support?
+- Optimize responsive font-size styles.
+- Consider adding default fallbacks to top-level css-variables.
+- Create a demo.
+- Add a CSS-Variables polyfill or other fallback solution for older browsers.
+- [WIP] Create a ReadMe that describes how to use it.
 
 ### License
 
 GNU General Public License v2 or later
+
 URI: LICENSE
