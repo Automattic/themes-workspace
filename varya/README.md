@@ -27,7 +27,7 @@ The system itself lives in the `/varya/sass` directory as a collection of Sass p
 
 In each view, the variables are loaded first and then the stylesheet is loaded which applies the variables.
 
-## Quick start 
+## Quick start guide
 
 1. Clone / download this repository into the `wp-content/themes` directory of your WordPress site.
 2. `cd` into the `wp-content/themes/varya` directory and run `npm install`.
@@ -38,7 +38,7 @@ In each view, the variables are loaded first and then the stylesheet is loaded w
 7. Continue to add and/or remove variables based on the [full list of available variables in Varya](https://github.com/Automattic/themes-workspace/blob/add/variatheme/varya/variables.css).
 8. Once you’re variables are all set you can continue development like you would with any child-theme using `child-theme/style.css` to add any extra CSS you might need to accomplish a design. 
 
-### Create a child-theme manually (* optional)
+#### Create a child-theme manually (*optional)
 
 To use the system, simply duplicate the `varya-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `varia-child` strings and replace them with `my-theme-name` as follows:
 
