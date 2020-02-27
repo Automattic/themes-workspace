@@ -43,28 +43,42 @@ To use the system, simply duplicate the `vayra-child` theme directory and rename
 
 Soon this process will be replaced by a `theme-dev-util` (similar to [this](https://github.com/Automattic/theme-dev-utils)) that allows you to run a command and automatically produce a child theme with all the strings already replaced.
 
-### Simple Child Theme Structure (See: `/varya-child`)
+## Simple Child Theme Structure 
+(See: `/varya-child`)
 
 Use this simple Varya child-theme example to familiarize yourself with the CSS-variables and to see how they influence the theme design when you change them. To start, open up the `/varya-child-simple/variables.css` file. Change any of the values, save the file, and refresh the frontend of your site to see the changes. To add more variables, view the [full list of available variables](https://github.com/Automattic/themes-workspace/blob/add/variatheme/varya/variables.css) from the Varya parent them and copy any variables you want in to your child theme. 
 The stylesheet structure for a child-theme cascades downward like this:
 
-**Frontend**
+### Frontend
 - `/varya/variables.css`
-  - `../varya-child-simple/variables.css` (System Override)
+- `/varya-child-simple/variables.css` (System Override)
 - `/varya/style.css`
-  - `../varya-child-simple/style.css` (Extra CSS)
+- `/varya-child-simple/style.css` (Extra CSS)
 
- **Editor**
+### Editor
 - `/varya/variables-editor.css`
-  - `../varya-child-simple/variables-editor.css` (System Overrides)
+- `/varya-child-simple/variables-editor.css` (System Overrides)
 - `/varya/style-editor.css`
-  - `../varya-child-simple/style-editor.css` (Extra CSS)
+- `/varya-child-simple/style-editor.css` (Extra CSS)
 
-**System Overrides**: A list of CSS-variables that override the variables in the child theme. This is where you tell the system to use the _Futura_ font-family instead of the _sans-serif_ default, for example. There’s no need to replace all of the variables here, only the ones you wish to actually change based on your theme design.
+### System Overrides
 
-**Extra CSS**: These should be supplemental styles that give the theme a unique appearance beyond what’s possible with the Varya system. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to include Varya CSS-variables in this styles sheet so that the system retains its usefulness across the theme. 
+A list of CSS-variables that override the variables in the child theme. This is where you tell the system to use the _Futura_ font-family instead of the _sans-serif_ default, for example. There’s no need to replace all of the variables here, only the ones you wish to actually change based on your theme design.
 
-### Advanced Child Theme Structure (See: `/varya-child-advanced`)
+**Varya parent theme font style** (`/varya/variables.css`)
+
+`:root { --global--font-family: sans-serif; }`
+
+**Varya child-theme font-style overrides** (`/varya-child/variables.css`)
+
+`:root { --global--font-family: Futura, Helvetica; }`
+
+### Extra CSS
+
+These should be supplemental styles that give the theme a unique appearance beyond what’s possible with the Varya system. Need to add a fixed header or add a box-shadow to your theme’s buttons? This is where those styles would go. When possible and appropriate, try to include Varya CSS-variables in this styles sheet so that the system retains its usefulness across the theme.
+
+## Advanced Child Theme Structure 
+(See: `/varya-child-advanced`)
 
 The Varya Child Advanced theme is an example of what a theme in production might look like using the Varya system. It primarily relies on CSS-variables like the simple version but it also takes advantage of other child theming techniques. 
 
@@ -74,12 +88,11 @@ The Varya Child Advanced theme is an example of what a theme in production might
 - Some example _Extra CSS_ in the style.scss file.
 - Introduces an example for how to change the responsive content widths (more on this in the next section).
 
-**#Responsive Content Widths**
+## Responsive Content Widths
 
-Usually, breakpoints are set based on common viewport sizes like mobile (320px), tablet (1024px), etc, but Varya takes a different approach. To understand how this approach effects the structure of the site, it’s best to think of the variables as both breakpoints AND content-widths. 
-This means you can simply choose a content width based on your design, and the related breakpoint will also change to make that layout possible and responsive. Responsive styles work around the specs of the design which is much less fragile and flexible. 
+Usually, breakpoints are set based on common viewport sizes like mobile (320px), tablet (1024px), etc, but Varya takes a different approach. To understand how this approach effects the structure of the site, it’s best to think of the content-width variables as both breakpoints _and_ content-widths. When you choose a content-width based on your design, the related breakpoint will also change to make that layout possible and responsive. Responsive styles work around the specs of the design which is less fragile and more flexible. 
 
-Check out this Codepen for a lo-fi example: https://codepen.io/allancole/pen/zYGNWBJ (make sure to resize the screen to see the effect in action).
+Check out this Codepen for a lo-fi example: [https://codepen.io/allancole/pen/zYGNWBJ](https://codepen.io/allancole/pen/zYGNWBJ) (make sure to resize the screen to see the effect in action).
 
 Customizing the responsive content width of a Varya Child Theme is also just as simple as changing a few variables. However, we can’t use CSS-variables directly in `@media` queries ([see here](https://www.w3.org/TR/css-variables-1/#using-variables)). Instead, Varya child-themes come with a `responsive.scss` file that overwrites _only_ the responsive styles of the Varya parent theme when compiled. 
 
@@ -96,7 +109,7 @@ Here are the available variables for changing content widths in `responsive.scss
 
 Once you’ve set these variables to your liking in `/varya-child-advanced/responsive.scss`, run `npm run build` on the child-theme which will recompile `responsive.scss` and reset the content width CSS-variables in `responsive.css`.
 
-### Todos
+## Todos
  - [DONE] Explore responsive-logic overrides in the child theme.
  - [DONE] Introduce an advanced child theme example that uses block styles
  - Audit Varya system for excessive overridden rules
