@@ -125,6 +125,22 @@ if ( function_exists( 'register_block_style' ) ) {
 		);
 
 		register_block_style(
+			'core/media-text',
+			array(
+				'name'         => 'boxed',
+				'label'        => 'Boxed'
+			)
+		);
+
+		register_block_style(
+			'core/media-text',
+			array(
+				'name'         => 'overlap',
+				'label'        => 'Overlap'
+			)
+		);
+
+		register_block_style(
 			'core/pullquote',
 			array(
 				'name'         => 'stylish',

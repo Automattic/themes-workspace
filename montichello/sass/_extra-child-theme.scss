@@ -200,29 +200,41 @@ hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 	border-left: 2px solid var(--global--color-primary);
 	padding-left: 32px;
 	> p {
-		font-size: 22px;
+		font-size: 18px;
 		font-style: italic;
 		font-variation-settings: "ital" 1;
 		line-height: 1.6;
 		margin-bottom: 0;
+		@media screen and ( min-width: 582px ){
+			font-size: 22px;
+		}
 	}
 	cite {
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.6;
+		@media screen and ( min-width: 582px ){
+			font-size: 18px;
+		}
 	}
 	&.is-style-large {
 		border-left: 2px solid var(--global--color-primary);
 		padding-left: 32px;
 		> p {
-			font-size: 32px;
+			font-size: 26px;
 			font-style: italic;
 			font-variation-settings: "ital" 1;
 			line-height: 1.5;
 			margin-bottom: 0;
+			@media screen and ( min-width: 582px ){
+				font-size: 32px;
+			}
 		}
 		cite {
-			font-size: 22px;
+			font-size: 18px;
 			line-height: 1.6;
+			@media screen and ( min-width: 582px ){
+				font-size: 22px;
+			}
 		}
 	}
 
@@ -256,11 +268,53 @@ hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 		padding-left: 0;
 		position: relative;
 		&:before {
-			width: 50px;	
+			display: block;
 			height: 50px;
-			position: absolute;
-			left: -82px;
-			top: 12px;
+			margin-bottom: 12px;
+			width: 50px;	
+			@media screen and ( min-width: 582px ){
+				position: absolute;
+				left: -82px;
+				top: 12px;
+			}
+		}
+	}
+}
+
+.wp-block-media-text {
+	&.is-style-overlap {
+		.wp-block-media-text__content {
+			@media screen and (min-width: 582px){
+				margin-left: -15vw;
+			}
+		}
+		&.has-media-on-the-right {
+			.wp-block-media-text__content {
+				@media screen and (min-width: 582px){
+					margin-left: unset;
+					margin-right: -15vw;
+				}
+			}
+		}
+	}
+}
+
+.wp-block-media-text {
+	&.is-style-boxed {
+		.wp-block-media-text__content {
+			@media screen and (min-width: 582px){
+				background: var(--global--color-background-light);
+				border-bottom-right-radius: 2rem;
+				margin-left: -10vw;
+			}
+		}
+		&.has-media-on-the-right {
+			.wp-block-media-text__content {
+				@media screen and (min-width: 582px){
+					margin-left: unset;
+					margin-right: -10vw;
+				}
+			}
 		}
 	}
 }
