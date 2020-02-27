@@ -51,7 +51,7 @@ The stylesheet structure for a child-theme cascades downward like this:
 
 ### Frontend
 - `/varya/variables.css`
-- `/varya-child-simple/variables.css` (System Override)
+- `/varya-child-simple/variables.css` (System Overrides)
 - `/varya/style.css`
 - `/varya-child-simple/style.css` (Extra CSS)
 
