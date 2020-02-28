@@ -123,12 +123,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .wp-block-image .alignleft, .entry-content > .alignleft {
+	/*rtl:ignore*/
 	margin-left: auto;
+	/*rtl:ignore*/
 	margin-right: var(--responsive--alignleft-margin);
 }
 
 .wp-block-image .alignright, .entry-content > .alignright {
+	/*rtl:ignore*/
 	margin-left: var(--responsive--alignright-margin);
+	/*rtl:ignore*/
 	margin-right: auto;
 }
 

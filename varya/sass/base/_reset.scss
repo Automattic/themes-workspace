@@ -59,7 +59,7 @@ html {
 // HTML resets
 html {
 	// Set mobile font-size to one step lower for mobile
-	font-size: calc(var(--global--font-size-root) / var(--global--font-size-ratio); /* #{$typescale-root / $typescale-ratio}; */
+	font-size: calc(var(--global--font-size-root) / var(--global--font-size-ratio)); /* #{$typescale-root / $typescale-ratio}; */
 	font-family: var(--global--font-secondary);
 	line-height: var(--global--line-height-body);
 
