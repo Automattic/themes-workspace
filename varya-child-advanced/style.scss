@@ -207,6 +207,12 @@ a {
 		}
 	}
 
+	.site-title {
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+	}
+
 	.site-branding,
 	.social-navigation {
 		position: relative;

@@ -291,6 +291,12 @@ a {
 	color: var(--global--color-primary);
 }
 
+.site-header .site-title {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
 .site-header .site-branding,
 .site-header .social-navigation {
 	position: relative;

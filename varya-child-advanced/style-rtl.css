@@ -324,8 +324,8 @@ a {
 }
 
 /* Posts */
-.entry-content a,
-.comment-content a {
+.entry-content a:not(.wp-block-button__link),
+.comment-content a:not(.wp-block-button__link) {
 	border-bottom: 4px solid;
 	border-image: url("assets/polka-dot.png") 100% 0 repeat;
 }
