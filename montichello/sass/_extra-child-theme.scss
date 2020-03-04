@@ -50,7 +50,7 @@ textarea,
 }
 
 hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
-	border-color: var(--global--color-border-light);
+	border-color: var(--global--color-border-light) !important;
 	border-bottom-right-radius: 8px;
 	border-width: 2px;
 	position: relative;
@@ -313,6 +313,47 @@ hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 				@media screen and (min-width: 582px){
 					margin-left: unset;
 					margin-right: -10vw;
+				}
+			}
+		}
+	}
+}
+
+.wp-block-navigation {
+	&.is-style-vertical {
+		.wp-block-navigation__container {
+			flex-direction: column;
+			align-items: flex-start;
+			.wp-block-navigation-link {
+				a {
+					font-family: 'CircularStd' !important;
+					font-size: 48px;
+					text-decoration: none;
+				}
+				&.has-child {
+					flex-direction: column;
+					> .wp-block-navigation__container {
+						background: transparent;
+						border: none;
+						a {
+							color: var(--global--color-primary);
+							font-size: 36px;
+						}
+						max-height: 0;
+						opacity: 0;
+						overflow: hidden;
+						position: relative;
+						visibility: visible;
+						transform-origin: top;
+						transition: all .25s ease-out;
+					}
+					&:hover {
+						> .wp-block-navigation__container {
+							max-height: 100vh;
+							opacity: 1;
+							transition: all .25s ease-out;
+						}
+					}
 				}
 			}
 		}

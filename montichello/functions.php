@@ -155,6 +155,14 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label'        => 'Stylish'
 			)
 		);
+
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'         => 'vertical',
+				'label'        => 'Vertical'
+			)
+		);
 	}
 
 	add_action( 'init', 'montichello_register_block_styles' );
