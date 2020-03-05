@@ -1,0 +1,253 @@
+/*
+Theme Name: Varya Child (Advanced)
+Theme URI: https://github.com/Automattic/themes/varya-child
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Make your online portfolio impressively awesome with Varya.
+Requires at least: WordPress 4.9.6
+Version: 1.2.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Template: varya
+Text Domain: varya-child-advanced
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Varia is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+:root {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width: 100%;
+	--responsive--alignfull-width: 100%;
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
+	--responsive--alignright-margin: var(--global--spacing-horizontal);
+	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 560px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 782px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: $breakpoint_xxl) {
+	:root {
+		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+/**
+ * Extends
+ */
+.default-max-width {
+	max-width: var(--responsive--aligndefault-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wide-max-width {
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-max-width {
+	max-width: var(--responsive--alignfull-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+ * Output
+ */
+/* Mini cart */
+#nwaneri-minicart {
+	animation: .15s fadeIn;
+	animation-fill-mode: forwards;
+	background: transparent;
+	color: var(--global--color-foreground-light);
+	font-family: var(--global--font-primary);
+	left: 0;
+	letter-spacing: 2px;
+	margin-top: 0;
+	padding: 0 0 1rem 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color 0.15s ease;
+	width: 100vw;
+	z-index: -1;
+}
+
+#nwaneri-minicart > div {
+	text-align: left;
+	visibility: hidden;
+	padding-top: calc(4 * var(--global--spacing-vertical));
+	padding-bottom: var(--global--spacing-vertical);
+}
+
+@media only screen and (min-width: 640px) {
+	#nwaneri-minicart > div {
+		padding-top: calc(8 * var(--global--spacing-vertical));
+	}
+}
+
+#nwaneri-minicart > div a {
+	border: none;
+	color: white;
+	padding: 1rem 0;
+}
+
+#nwaneri-minicart > div a:hover {
+	text-decoration: none;
+	color: #bbb;
+}
+
+@media only screen and (min-width: 640px) {
+	#nwaneri-minicart > div a {
+		padding: 1rem;
+	}
+}
+
+#nwaneri-minicart > div ul {
+	font-family: var(--global--font-family-primary);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nwaneri-minicart > div > ul > li {
+	width: 100%;
+}
+
+#nwaneri-minicart > div > ul > li > ul {
+	background: transparent;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	border: none;
+	position: unset;
+	opacity: unset;
+	transition: none;
+	transform: unset;
+	visibility: unset;
+	padding: 0;
+}
+
+#nwaneri-minicart > div > ul > li > ul:before, #nwaneri-minicart > div > ul > li > ul:after {
+	content: unset;
+}
+
+#nwaneri-minicart > div > ul > li > ul li {
+	margin: 0;
+}
+
+#nwaneri-minicart > div > ul > li > ul li a {
+	padding-top: 8px;
+}
+
+#nwaneri-minicart.open {
+	background: var(--global--color-primary);
+	z-index: 888;
+}
+
+#nwaneri-minicart.open > div {
+	visibility: visible;
+}
+
+@media only screen and (min-width: 560px) {
+	#nwaneri-minicart.open > div {
+		margin: 0 auto;
+		text-align: left;
+	}
+	#nwaneri-minicart.open > div .wp-block-navigation {
+		padding-top: calc(3 * var(--global--spacing-vertical));
+	}
+	#nwaneri-minicart.open > div > ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#nwaneri-minicart.open > div button {
+		margin-top: 0;
+	}
+}
+
+#nwaneri-toggle-minicart {
+	border: none;
+	background: var(--global--color-primary);
+	border-radius: 50%;
+	color: var(--global--color-foreground-light);
+	font-family: var(--global--font-primary);
+	font-size: var(--global--font-size-base);
+	font-weight: 300;
+	height: calc( 4 * var(--global--spacing-unit));
+	letter-spacing: 2px;
+	margin-bottom: var(--global--spacing-vertical);
+	margin-top: 0;
+	padding: 0;
+	position: relative;
+	width: calc( 4 * var(--global--spacing-unit));
+	text-transform: uppercase;
+	transition: all 0.15s ease;
+	z-index: 999;
+}
+
+#nwaneri-toggle-minicart:hover {
+	background: var(--global--color-secondary);
+}
+
+#nwaneri-toggle-minicart[data-open="true"] {
+	background: var(--global--color-foreground-light);
+	color: var(--global--color-primary);
+}

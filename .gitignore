@@ -1,3 +1,6 @@
-*.swp
+# Dependency directories
 node_modules
+
+# Other
+*.swp
 *.DS_Store

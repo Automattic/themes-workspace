@@ -1,0 +1,44 @@
+// Site logo
+
+.site-logo {
+
+}
+
+// Site branding
+
+.site-branding {
+	color: var(--branding--color-text);
+}
+
+// Site title
+
+.site-title {
+
+	color: var(--branding--color-link);
+	font-family: var(--branding--title--font-family);
+	font-size: var(--branding--title--font-size);
+	letter-spacing: normal;
+	line-height: var(--global--line-height-heading);
+
+	a {
+		color: currentColor;
+		font-weight: var(--branding--title--font-weight);
+
+		&:link,
+		&:visited {
+			color: currentColor;
+		}
+
+		&:hover {
+			color: var(--branding--color-link-hover);
+		}
+	}
+}
+
+// Site description
+
+.site-description {
+	color: currentColor;
+	font-family: var(--branding--description--font-family);
+	font-size: var(--branding--description--font-size);
+}

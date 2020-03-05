@@ -1,0 +1,362 @@
+/*
+Theme Name: Varya Child (Advanced)
+Theme URI: https://github.com/Automattic/themes/varya-child
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Make your online portfolio impressively awesome with Varya.
+Requires at least: WordPress 4.9.6
+Version: 1.2.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Template: varya
+Text Domain: varya-child-advanced
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Varia is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+:root {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width: 100%;
+	--responsive--alignfull-width: 100%;
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
+	--responsive--alignright-margin: var(--global--spacing-horizontal);
+	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 560px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	:root {
+		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 782px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: $breakpoint_xxl) {
+	:root {
+		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+/**
+ * Extends
+ */
+.default-max-width {
+	max-width: var(--responsive--aligndefault-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wide-max-width {
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-max-width {
+	max-width: var(--responsive--alignfull-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+ * Output
+ */
+/* Frontend Tweaks Only */
+body {
+	font-weight: 100;
+}
+
+h1,
+.h1,
+h4,
+.h4,
+h6,
+.h6 {
+	font-family: var(--global--font-family-secondary);
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h5,
+.h5 {
+	color: var(--global--color-white);
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Site Header */
+.site-header {
+	padding-top: var(--global--spacing-vertical);
+	padding-bottom: var(--global--spacing-vertical);
+}
+
+@media only screen and (min-width: 560px) {
+	.site-header {
+		padding-top: calc(3 * var(--global--spacing-vertical));
+		padding-bottom: calc(3 * var(--global--spacing-vertical));
+	}
+}
+
+.site-header #nwaneri-site-navigation {
+	animation: .15s fadeIn;
+	animation-fill-mode: forwards;
+	background: transparent;
+	color: var(--global--color-foreground-light);
+	font-family: var(--global--font-family-primary);
+	left: 0;
+	letter-spacing: 2px;
+	margin-top: 0;
+	padding: 0 0 1rem 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color 0.15s ease;
+	width: 100vw;
+	z-index: -1;
+}
+
+.site-header #nwaneri-site-navigation > div {
+	text-align: left;
+	visibility: hidden;
+	padding-top: calc(4 * var(--global--spacing-vertical));
+	padding-bottom: var(--global--spacing-vertical);
+}
+
+@media only screen and (min-width: 640px) {
+	.site-header #nwaneri-site-navigation > div {
+		padding-top: calc(8 * var(--global--spacing-vertical));
+	}
+}
+
+.site-header #nwaneri-site-navigation > div a {
+	border: none;
+	color: white;
+	display: inline-block;
+	padding: 1rem 0;
+}
+
+.site-header #nwaneri-site-navigation > div a:hover {
+	text-decoration: none;
+	color: #bbb;
+}
+
+@media only screen and (min-width: 640px) {
+	.site-header #nwaneri-site-navigation > div a {
+		padding: 1rem;
+	}
+}
+
+.site-header #nwaneri-site-navigation > div ul {
+	font-family: var(--global--font-family-primary);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-header #nwaneri-site-navigation > div > ul > li > a {
+	font-size: 40px;
+}
+
+.site-header #nwaneri-site-navigation > div > ul > li > ul {
+	background: transparent;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	border: none;
+	position: unset;
+	opacity: unset;
+	transition: none;
+	transform: unset;
+	visibility: unset;
+	padding: 0;
+}
+
+.site-header #nwaneri-site-navigation > div > ul > li > ul:before, .site-header #nwaneri-site-navigation > div > ul > li > ul:after {
+	content: unset;
+}
+
+.site-header #nwaneri-site-navigation > div > ul > li > ul li {
+	margin: 0;
+}
+
+.site-header #nwaneri-site-navigation > div > ul > li > ul li a {
+	padding-top: 8px;
+}
+
+.site-header #nwaneri-site-navigation.open {
+	background: var(--global--color-primary);
+	z-index: 888;
+}
+
+.site-header #nwaneri-site-navigation.open > div {
+	visibility: visible;
+}
+
+@media only screen and (min-width: 560px) {
+	.site-header #nwaneri-site-navigation.open > div {
+		margin: 0 auto;
+		text-align: left;
+	}
+	.site-header #nwaneri-site-navigation.open > div .wp-block-navigation {
+		padding-top: calc(3 * var(--global--spacing-vertical));
+	}
+	.site-header #nwaneri-site-navigation.open > div > ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.site-header #nwaneri-site-navigation.open > div button {
+		margin-top: 0;
+	}
+}
+
+.site-header #nwaneri-toggle-navigation {
+	border: none;
+	background: var(--global--color-primary);
+	border-radius: 50%;
+	color: var(--global--color-foreground-light);
+	font-family: var(--global--font-primary);
+	font-size: var(--global--font-size-base);
+	font-weight: 300;
+	height: calc( 5.5 * var(--global--spacing-unit));
+	letter-spacing: 2px;
+	margin-bottom: var(--global--spacing-vertical);
+	padding: 0;
+	position: relative;
+	width: calc( 5.5 * var(--global--spacing-unit));
+	text-transform: uppercase;
+	transition: all 0.15s ease;
+	z-index: 999;
+}
+
+.site-header #nwaneri-toggle-navigation:hover {
+	background: var(--global--color-secondary);
+}
+
+.site-header #nwaneri-toggle-navigation[data-open="true"] {
+	background: var(--global--color-foreground-light);
+	color: var(--global--color-primary);
+}
+
+.site-header .site-title {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.site-header .site-branding,
+.site-header .social-navigation {
+	position: relative;
+	z-index: 1;
+}
+
+/* Site Footer */
+.site-footer {
+	max-width: inherit;
+	overflow: visible;
+	padding-bottom: 0;
+	position: relative;
+}
+
+@media only screen and (min-width: 560px) {
+	.site-footer .site-info {
+		bottom: 50vh;
+		position: absolute;
+		right: -110px;
+		transform: rotateZ(90deg);
+	}
+}
+
+.site-footer .footer-blobs {
+	height: calc(15 * var(--global--spacing-unit));
+	width: 100%;
+	margin: 0;
+	background-image: url(assets/footer-blobs.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* Posts */
+.entry-content a:not(.wp-block-button__link),
+.comment-content a:not(.wp-block-button__link) {
+	border-bottom: 4px solid;
+	border-image: url("assets/polka-dot.png") 100% 0 repeat;
+}
+
+.sticky-post {
+	color: #FFFFFF;
+	background: transparent;
+	padding: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.entry-meta,
+.entry-footer {
+	color: var(--global--color-white);
+	font-size: 1rem;
+}
+
+/* Comments */
+.comment-list {
+	border-bottom-style: dotted;
+	border-width: 2px;
+}
+
+.comment-list > li {
+	border-top-style: dotted;
+	border-width: 2px;
+}
