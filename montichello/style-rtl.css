@@ -4363,6 +4363,6 @@ button.pushbutton-wide a.wp-block-button__link:hover,
 	transition: all .25s ease-out;
 }
 
-.wp-block-jetpack-contact-info h5 {
+.wp-block-jetpack-contact-info h5, .wp-block-jetpack-contact-info h6 {
 	font-weight: bold;
 }
