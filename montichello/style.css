@@ -4067,6 +4067,11 @@ textarea:focus,
 	border-color: var(--global--color-black);
 }
 
+.contact-form label {
+	font-family: 'CircularStd';
+	font-size: 22px;
+}
+
 hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 	border-color: var(--global--color-border-light) !important;
 	border-bottom-right-radius: 8px;
@@ -4149,7 +4154,10 @@ hr.wp-block-separator.is-style-wide, hr.wp-block-separator.is-style-gap:not(.is-
 	border-bottom-right-radius: 1rem;
 }
 
-.wp-block-button a.wp-block-button__link, .wp-block-button.is-style-outline a.wp-block-button__link {
+button a.wp-block-button__link,
+button.pushbutton-wide a.wp-block-button__link,
+.wp-block-button a.wp-block-button__link,
+.wp-block-button.is-style-outline a.wp-block-button__link {
 	border: 2px solid transparent;
 	border-radius: 0;
 	border-bottom-right-radius: 8px;
@@ -4160,12 +4168,18 @@ hr.wp-block-separator.is-style-wide, hr.wp-block-separator.is-style-gap:not(.is-
 	transition: all .15s ease-in-out;
 }
 
-.wp-block-button a.wp-block-button__link:focus, .wp-block-button.is-style-outline a.wp-block-button__link:focus {
+button a.wp-block-button__link:focus,
+button.pushbutton-wide a.wp-block-button__link:focus,
+.wp-block-button a.wp-block-button__link:focus,
+.wp-block-button.is-style-outline a.wp-block-button__link:focus {
 	background-color: var(--global--color-primary);
 	border: 2px solid var(--global--color-black);
 }
 
-.wp-block-button a.wp-block-button__link:hover, .wp-block-button.is-style-outline a.wp-block-button__link:hover {
+button a.wp-block-button__link:hover,
+button.pushbutton-wide a.wp-block-button__link:hover,
+.wp-block-button a.wp-block-button__link:hover,
+.wp-block-button.is-style-outline a.wp-block-button__link:hover {
 	background-color: var(--global--color-primary);
 	opacity: .75;
 }
@@ -4376,4 +4390,8 @@ hr.wp-block-separator.is-style-wide, hr.wp-block-separator.is-style-gap:not(.is-
 	max-height: 100vh;
 	opacity: 1;
 	transition: all .25s ease-out;
+}
+
+.wp-block-jetpack-contact-info h5, .wp-block-jetpack-contact-info h6 {
+	font-weight: bold;
 }

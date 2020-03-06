@@ -49,6 +49,11 @@ textarea,
 	}
 }
 
+.contact-form label {
+	font-family: 'CircularStd';
+	font-size: 22px;
+}
+
 hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 	border-color: var(--global--color-border-light) !important;
 	border-bottom-right-radius: 8px;
@@ -131,7 +136,10 @@ hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 	}
 }
 
-.wp-block-button, .wp-block-button.is-style-outline {
+button,
+button.pushbutton-wide,
+.wp-block-button,
+.wp-block-button.is-style-outline {
 	a.wp-block-button__link {
 		border: 2px solid transparent;
 		border-radius: 0;
@@ -357,5 +365,11 @@ hr.wp-block-separator, hr.wp-block-separator.is-style-wide {
 				}
 			}
 		}
+	}
+}
+
+.wp-block-jetpack-contact-info {
+	h5, h6 {
+		font-weight: bold;
 	}
 }

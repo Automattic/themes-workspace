@@ -222,13 +222,13 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-black: #181B19;
 	--global--color-white: white;
 	--global--color-foreground: #444444;
-	--global--color-foreground-light: #767676;
+	--global--color-foreground-light: #69726C;
 	--global--color-foreground-dark: #111111;
 	--global--color-background: #FFFFFF;
-	--global--color-background-light: #FAFAFA;
+	--global--color-background-light: #D0FBDF;
 	--global--color-background-dark: #DDDDDD;
 	--global--color-border: #DDDDDD;
-	--global--color-border-light: #FAFAFA;
+	--global--color-border-light: #C9E8D4;
 	--global--color-border-dark: #AAAAAA;
 	--global--color-text-selection: lightblue;
 	--global--color-alert-success: yellowgreen;
