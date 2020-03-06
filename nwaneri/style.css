@@ -1,21 +1,37 @@
+@charset "UTF-8";
 /*
-Theme Name: Nwaneri
-Theme URI: https://github.com/Automattic/themes-workspace/nwaneri
+Theme Name: Nwaneri Varya
+Theme URI: https://github.com/Automattic/themes/varya-child
 Author: Automattic
-Author URI: 
-Description: A portfolio theme for Gutenberg.
-Version: 1.0.0
+Author URI: https://automattic.com/
+Description: Make your online portfolio impressively awesome with Varya.
+Requires at least: WordPress 4.9.6
+Version: 1.2.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
+Template: varya
 Text Domain: nwaneri 
-Tags: translation-ready
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-gutenberg-starter-theme-blocks is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Varia is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+/* Frontend Tweaks Only */
+
+/* Tweak site branding */
+.site-branding {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Tweak Post Header */
+#main .entry-header.responsive-max-width {
+	max-width: calc(100% - (4 * var(--global--spacing-unit)));
+}

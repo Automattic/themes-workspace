@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Overpass';
+	src: url('../assets/fonts/Overpass/Overpass-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Overpass';
+	src: url('../assets/fonts/Overpass/Overpass-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Overpass';
+	src: url('../assets/fonts/Overpass/Overpass-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Overpass';
+	src: url('../assets/fonts/Overpass/Overpass-Light.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nova Cut';
+	src: url('../assets/fonts/Nova_Cut/NovaCut-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Editor variables */
+.editor-styles-wrapper {
+	--global--font-primary: 'Overpass', san-serif;
+	--global--font-secondary: 'Nova Cut', Georgia, serif;
+	--global--color-primary: #333366;
+	--global--color-background: #FF9D76;
+}

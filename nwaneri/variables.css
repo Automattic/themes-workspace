@@ -1,0 +1,7 @@
+/* Frontend variables */
+:root {
+	--global--font-primary: 'Overpass', san-serif;
+	--global--font-secondary: 'Nova Cut', Georgia, serif;
+	--global--color-primary: #333366;
+	--global--color-background: #FF9D76;
+}
