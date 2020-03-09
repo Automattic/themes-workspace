@@ -475,7 +475,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-background-dark: #DDDDDD;
 	--global--color-border: #DDDDDD;
 	--global--color-border-light: #C9E8D4;
-	--global--color-border-dark: #AAAAAA;
+	--global--color-border-dark: #69726C;
 	--global--color-text-selection: lightblue;
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;
@@ -4125,8 +4125,33 @@ hr.wp-block-separator.is-style-wide, hr.wp-block-separator.is-style-gap:not(.is-
 	border-bottom-left-radius: 1rem;
 }
 
-button a.wp-block-button__link,
-button.pushbutton-wide a.wp-block-button__link,
+button,
+button[type="submit"],
+button.pushbutton-wide {
+	border: 2px solid transparent;
+	border-radius: 0;
+	border-bottom-left-radius: 8px;
+	color: var(--global--color-black);
+	font-size: 1rem;
+	opacity: 1;
+	padding: 1.2rem 2.25rem;
+	transition: all .15s ease-in-out;
+}
+
+button:focus,
+button[type="submit"]:focus,
+button.pushbutton-wide:focus {
+	background-color: var(--global--color-primary);
+	border: 2px solid var(--global--color-black);
+}
+
+button:hover,
+button[type="submit"]:hover,
+button.pushbutton-wide:hover {
+	background-color: var(--global--color-primary);
+	opacity: .75;
+}
+
 .wp-block-button a.wp-block-button__link,
 .wp-block-button.is-style-outline a.wp-block-button__link {
 	border: 2px solid transparent;
@@ -4139,16 +4164,12 @@ button.pushbutton-wide a.wp-block-button__link,
 	transition: all .15s ease-in-out;
 }
 
-button a.wp-block-button__link:focus,
-button.pushbutton-wide a.wp-block-button__link:focus,
 .wp-block-button a.wp-block-button__link:focus,
 .wp-block-button.is-style-outline a.wp-block-button__link:focus {
 	background-color: var(--global--color-primary);
 	border: 2px solid var(--global--color-black);
 }
 
-button a.wp-block-button__link:hover,
-button.pushbutton-wide a.wp-block-button__link:hover,
 .wp-block-button a.wp-block-button__link:hover,
 .wp-block-button.is-style-outline a.wp-block-button__link:hover {
 	background-color: var(--global--color-primary);
@@ -4365,4 +4386,26 @@ button.pushbutton-wide a.wp-block-button__link:hover,
 
 .wp-block-jetpack-contact-info h5, .wp-block-jetpack-contact-info h6 {
 	font-weight: bold;
+}
+
+.wp-block-table.is-style-regular table {
+	border: 2px solid var(--global--color-border-dark);
+}
+
+.wp-block-table.is-style-regular thead {
+	border-bottom: 1px solid var(--global--color-border-light);
+}
+
+.wp-block-table.is-style-regular tfoot {
+	border-top: 1px solid var(--global--color-border-light);
+}
+
+.wp-block-table.is-style-regular thead th, .wp-block-table.is-style-regular thead td, .wp-block-table.is-style-regular tfoot th, .wp-block-table.is-style-regular tfoot td {
+	border: none;
+	font-family: 'CircularStd';
+	font-weight: bold;
+}
+
+.wp-block-table.is-style-regular thead th, .wp-block-table.is-style-regular thead td, .wp-block-table.is-style-regular tbody th, .wp-block-table.is-style-regular tbody td, .wp-block-table.is-style-regular tfoot th, .wp-block-table.is-style-regular tfoot td {
+	border: none;
 }

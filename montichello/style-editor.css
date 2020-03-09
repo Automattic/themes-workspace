@@ -229,7 +229,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-background-dark: #DDDDDD;
 	--global--color-border: #DDDDDD;
 	--global--color-border-light: #C9E8D4;
-	--global--color-border-dark: #AAAAAA;
+	--global--color-border-dark: #69726C;
 	--global--color-text-selection: lightblue;
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;

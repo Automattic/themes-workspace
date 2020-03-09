@@ -392,3 +392,27 @@ button.pushbutton-wide {
 		font-weight: bold;
 	}
 }
+
+.wp-block-table.is-style-regular {
+	table {
+		border: 2px solid var(--global--color-border-dark);
+	}
+	thead {
+		border-bottom: 1px solid var(--global--color-border-light);
+	}
+	tfoot {
+		border-top: 1px solid var(--global--color-border-light);
+	}
+	thead, tfoot {
+		th, td {
+			border: none;
+			font-family: 'CircularStd';
+			font-weight: bold;
+		}
+	}
+	thead, tbody, tfoot {
+		th, td {
+			border: none;
+		}
+	}
+}

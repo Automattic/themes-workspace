@@ -487,7 +487,7 @@ $grid-configuration: map-extend($grid-configuration-default, $grid-configuration
 	--global--color-background-dark: #DDDDDD;
 	--global--color-border: #DDDDDD;
 	--global--color-border-light: #C9E8D4;
-	--global--color-border-dark: #AAAAAA;
+	--global--color-border-dark: #69726C;
 	--global--color-text-selection: lightblue;
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;
@@ -4415,4 +4415,26 @@ button.pushbutton-wide:hover {
 
 .wp-block-jetpack-contact-info h5, .wp-block-jetpack-contact-info h6 {
 	font-weight: bold;
+}
+
+.wp-block-table.is-style-regular table {
+	border: 2px solid var(--global--color-border-dark);
+}
+
+.wp-block-table.is-style-regular thead {
+	border-bottom: 1px solid var(--global--color-border-light);
+}
+
+.wp-block-table.is-style-regular tfoot {
+	border-top: 1px solid var(--global--color-border-light);
+}
+
+.wp-block-table.is-style-regular thead th, .wp-block-table.is-style-regular thead td, .wp-block-table.is-style-regular tfoot th, .wp-block-table.is-style-regular tfoot td {
+	border: none;
+	font-family: 'CircularStd';
+	font-weight: bold;
+}
+
+.wp-block-table.is-style-regular thead th, .wp-block-table.is-style-regular thead td, .wp-block-table.is-style-regular tbody th, .wp-block-table.is-style-regular tbody td, .wp-block-table.is-style-regular tfoot th, .wp-block-table.is-style-regular tfoot td {
+	border: none;
 }
