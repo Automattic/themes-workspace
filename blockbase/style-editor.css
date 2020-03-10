@@ -5,6 +5,7 @@
 
 .editor-post-title__input {
 	font-family: var(--wp--typography--font-family);
+	color: var(--wp--color--text);
 }
 
 .editor-styles-wrapper {
@@ -16,6 +17,7 @@
 	font-family: var(--wp--typography--font-family);
 	font-size: var(--wp--typography--font-size);
 	font-weight: var(--wp--typography--font-weight);
+	color: var(--wp--color--text);
 }
 
 .editor-styles-wrapper h1 {
