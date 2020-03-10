@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Editor Styles
 --------------------------------------------------------------*/
+@import url( "./css/variables.css" );
 
 .editor-styles-wrapper {
 	background: var(--wp--color--background);
@@ -11,4 +12,8 @@
 	font-family: var(--wp--typography--font-family);
 	font-size: var(--wp--typography--font-size);
 	font-weight: var(--wp--typography--font-weight);
+}
+
+.editor-post-title__input {
+	font-family: var(--wp--typography--font-family);
 }
