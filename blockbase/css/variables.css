@@ -29,9 +29,9 @@
 	--wp--typography--line-height-heading: 1.4;
 
 	/* Spacing */
-	--global--spacing--small: 1rem;
-	--global--spacing--medium: 1.5rem;
-	--global--spacing--large: 3rem;
+	--global--spacing--small: 8px;
+	--global--spacing--medium: 14px;
+	--global--spacing--large: 28px;
 
 	/* Content Width */
 	--wp--content-width--standard: 580px;
