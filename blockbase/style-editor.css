@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Editor Styles
+--------------------------------------------------------------*/
+
+.editor-styles-wrapper {
+	background: var(--wp--color--background);
+	color: var(--wp--color--text);
+}
+
+.editor-styles-wrapper > * {
+	font-family: var(--wp--typography--font-family);
+	font-size: var(--wp--typography--font-size);
+	font-weight: var(--wp--typography--font-weight);
+}
