@@ -2,7 +2,8 @@
 # Root Variables
 #
 # NOTE: This should match the files in experimental-theme.json.
-# This is required for editor styles to match up.
+# This is required for editor styles to match up, and can be
+# removed once the JSON file is loaded in the editor.
 --------------------------------------------------------------*/
 
 :root {
