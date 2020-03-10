@@ -119,6 +119,36 @@ big {
   font-size: 125%;
 }
 
+h1 {
+  font-size: var(--wp--typography--font-size-heading-1);
+  line-height: var(--wp--typography--line-height-heading);
+}
+
+h2 {
+  font-size: var(--wp--typography--font-size-heading-2);
+  line-height: var(--wp--typography--line-height-heading);
+}
+
+h3 {
+  font-size: var(--wp--typography--font-size-heading-3);
+  line-height: var(--wp--typography--line-height-heading);
+}
+
+h4 {
+  font-size: var(--wp--typography--font-size-heading-4);
+  line-height: var(--wp--typography--line-height-heading);
+}
+
+h5 {
+  font-size: var(--wp--typography--font-size-heading-5);
+  line-height: var(--wp--typography--line-height-heading);
+}
+
+h6 {
+  font-size: var(--wp--typography--font-size-heading-6);
+  line-height: var(--wp--typography--line-height-heading);
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
