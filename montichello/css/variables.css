@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+# Root Variables
+#
+# NOTE: This should match the files in experimental-theme.json.
+# This is required for editor styles to match up, and can be
+# removed once the JSON file is loaded in the editor.
+--------------------------------------------------------------*/
+
+:root {
+	/* Colors */
+	--wp--color--primary: #0073aa;
+	--wp--color--background: white;
+	--wp--color--text: black;
+
+	/* Typography Base */
+	--wp--typography--font-scale: 1.3;
+	--wp--typography--font-family: "CircularStd";
+	--wp--typography--font-size: "16px";
+	--wp--typography--font-weight: 500;
+	--wp--typography--line-height: 1.7;
+
+	/* Typography Headings */
+	--wp--typography--font-size-heading-1: "40px";
+	--wp--typography--font-size-heading-2: "32px";
+	--wp--typography--font-size-heading-3: "25px";
+	--wp--typography--font-size-heading-4: "20px";
+	--wp--typography--font-size-heading-5: "16px";
+	--wp--typography--font-size-heading-6: "13px";
+	--wp--typography--font-weight-heading: 700;
+	--wp--typography--line-height-heading: 1.4;
+
+	/* Spacing */
+	--global--spacing--small: 8px;
+	--global--spacing--medium: 14px;
+	--global--spacing--large: 28px;
+
+	/* Content Width */
+	--wp--content-width--standard: 580px;
+	--wp--content-width--wide: 1100px;
+
+	/* Styling */
+	--wp--styling--border-radius: 3px;
+}
+
+:root {
+	/* Font Family */
+	--global--font-primary: 'Manuale';
+	--global--font-secondary: 'Manuale';
+	--global--font-code: monospace, monospace;
+	--global--font-ui: 'CircularStd', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+	/* Font Size */
+	--global--font-size-root: #{$typescale-root};
+	--global--font-size-ratio: #{$typescale-ratio};
+	--global--font-size-base: #{$typescale-base};
+	--global--font-size-xs: calc(var(--global--font-size-base) / var(--global--font-size-ratio) / var(--global--font-size-ratio)); // #{$typescale-base / $typescale-ratio / $typescale-ratio};
+	--global--font-size-sm: calc(var(--global--font-size-base) / var(--global--font-size-ratio)); // #{$typescale-base / $typescale-ratio};
+	--global--font-size-md: calc(var(--global--font-size-base) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio};
+	--global--font-size-lg: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+
+	/* Line Height */
+	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-body: 1.78;
+	--global--line-height-heading: 1.125;
+
+	/* Colors */
+	--global--color-primary: #91DFAC;
+	--global--color-primary-hover: #D0FBDF;
+	--global--color-secondary: red;
+	--global--color-secondary-hover: darkred;
+	--global--color-black: #181B19;
+	--global--color-white: white;
+	--global--color-foreground: #444444;
+	--global--color-foreground-light: #69726C; // must be accessible against background
+	--global--color-foreground-dark: #111111; // must be accessible against background
+	--global--color-background: #FFFFFF;
+	--global--color-background-light: #D0FBDF; // must be accessible against foreground
+	--global--color-background-dark: #DDDDDD; // must be accessible against foreground
+	--global--color-border: #DDDDDD;
+	--global--color-border-light: #C9E8D4; // must be accessible against foreground
+	--global--color-border-dark: #69726C; // must be accessible against foreground
+	--global--color-text-selection: lightblue;
+	--global--color-alert-success: yellowgreen;
+	--global--color-alert-info: skyblue;
+	--global--color-alert-warning: gold;
+	--global--color-alert-error: salmon;
+
+	/* Spacing */
+	--global--spacing-unit: #{2 * $baseline-unit}; // 16px
+	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
+	--global--spacing-horizontal: #{2 * $baseline-unit}; // 16px
+	--global--spacing-vertical: #{4 * $baseline-unit}; // 32px matches default spacing in the editor.
+
+	/* Elevation */
+	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-none: 0px 0px 0px 0px transparent;
+
+	/* Other */
+	--global--border-radius-sm: #{0.5 * $typescale-root};
+	--global--border-radius-md: #{0.75 * $typescale-root};
+	--global--border-radius-lg: #{$typescale-root};
+	--global--border-radius-pill: #{10 * $typescale-root};
+	--global--border-radius-none: 0;
+}
