@@ -13,6 +13,8 @@
 	"typography": {
 		"font-scale": 1.3,
 		"font-family": "'Manuale'",
+		"font-family-heading": "'CircularStd'",
+		"font-family-code": "monospace",
 		"font-size": "18px",
 		"font-weight": 500,
 		"line-height": 1.6,
