@@ -31,7 +31,7 @@
 --------------------------------------------------------------*/
 
 .editor-post-title__input {
-	font-family: var(--wp--typography--font-family);
+	font-family: var(--wp--typography--font-family-heading);
 	color: var(--wp--color--text);
 }
 
@@ -50,6 +50,15 @@
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-family: var(--wp--typography--font-family-heading);
+}
 
 .editor-styles-wrapper h1 {
   font-size: var(--wp--typography--font-size-heading-1);
