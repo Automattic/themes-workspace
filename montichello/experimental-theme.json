@@ -33,8 +33,8 @@
 		"large": "28px"
 	},
 	"content-width": {
-		"standard": "700px",
-		"wide": "1280px"
+		"standard": "720px",
+		"wide": "1020px"
 	},
 	"styling": {
 		"border-radius": "3px"
