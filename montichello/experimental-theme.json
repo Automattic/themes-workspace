@@ -1,7 +1,13 @@
 {
 	"color": {
-		"primary": "#0073aa",
-		"background": "white",
+		"background": "#FFFFFF",
+		"background-dark": "#DDDDDD",
+		"background-light": "#D0FBDF",
+		"black": "#181B19",
+		"border": "#69726C",
+		"border-light": "#C9E8D4",
+		"primary": "#91DFAC",
+		"primary-hover": "#D0FBDF",
 		"text": "black"
 	},
 	"typography": {
@@ -26,7 +32,7 @@
 	},
 	"content-width": {
 		"standard": "700px",
-		"wide": "1440px"
+		"wide": "1280px"
 	},
 	"styling": {
 		"border-radius": "3px"
