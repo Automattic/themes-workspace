@@ -17,7 +17,7 @@
 --------------------------------------------------------------*/
 
 .editor-post-title__input {
-	font-family: var(--wp--typography--font-family-secondary);
+	font-family: var(--wp--typography--font-family-heading);
 	color: var(--wp--color--text);
 }
 
@@ -43,7 +43,7 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-  font-family: var(--wp--typography--font-family-secondary);
+  font-family: var(--wp--typography--font-family-heading);
 }
 
 .editor-styles-wrapper h1 {

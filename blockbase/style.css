@@ -63,7 +63,7 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--wp--typography--font-family-secondary);
+	font-family: var(--wp--typography--font-family-heading);
 	clear: both;
 }
 

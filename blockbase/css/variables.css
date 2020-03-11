@@ -9,17 +9,20 @@
 :root {
 	/* Colors */
 	--wp--color--primary: #0073aa;
+	--wp--color--primary-hover: #00a0d2;
 	--wp--color--background: white;
 	--wp--color--text: black;
 
 	/* Typography Base */
 	--wp--typography--font-scale: 1.3;
 	--wp--typography--font-family: sans-serif;
+	--wp--typography--font-family-code: monospace;
 	--wp--typography--font-size: "16px";
 	--wp--typography--font-weight: 500;
 	--wp--typography--line-height: 1.7;
 
 	/* Typography Headings */
+	--wp--typography--font-family-heading: sans-serif;
 	--wp--typography--font-size-heading-1: "40px";
 	--wp--typography--font-size-heading-2: "32px";
 	--wp--typography--font-size-heading-3: "25px";
@@ -30,8 +33,8 @@
 	--wp--typography--line-height-heading: 1.4;
 
 	/* Spacing */
-	--global--spacing--small: 8px;
-	--global--spacing--medium: 14px;
+	--global--spacing--small: 14px;
+	--global--spacing--medium: 24px;
 	--global--spacing--large: 28px;
 
 	/* Content Width */
