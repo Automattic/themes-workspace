@@ -63,6 +63,7 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: var(--wp--typography--font-family-secondary);
 	clear: both;
 }
 
@@ -308,7 +309,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-	color: var(--wp--color--primary-alternate);
+	color: var(--wp--color--primary-hover);
 }
 
 a:focus {
