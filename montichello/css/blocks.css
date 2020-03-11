@@ -2,7 +2,10 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # General Structure
+# Site Header Overrides
+  ## Button
   ## Code
+  ## Contact Form (Jetpack)
   ## Cover
   ## Embeds
   ## Gallery
@@ -74,6 +77,77 @@
 }
 
 /*--------------------------------------------------------------
+## Site Header Overrides
+--------------------------------------------------------------*/
+
+.site-header h1 {
+  font-size: var(--wp--typography--font-size-heading-4);
+}
+
+.site-header .wp-block-column > * {
+  padding-left: var(--wp--spacing--large);
+}
+
+.site-header .wp-block-navigation, .wp-block-navigation>.wp-block-navigation__container {
+  justify-content: flex-end;
+}
+
+.site-header .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__content {
+  padding-left: var(--wp--spacing--large);
+  padding-right: var(--wp--spacing--large);
+}
+
+/* Hack to get the header floating above content */
+.home .site-header {
+  height: 200px;
+  margin-bottom: -228px;
+}
+
+/*--------------------------------------------------------------
+## Button
+--------------------------------------------------------------*/
+
+.wp-block-button a.wp-block-button__link,
+.wp-block-button.is-style-outline a.wp-block-button__link {
+  border: 2px solid transparent;
+  border-radius: 0;
+  border-bottom-right-radius: 8px;
+  color: var(--wp--color--black);
+  font-size: 1rem;
+  opacity: 1;
+  padding: 1.2rem 2.25rem;
+  transition: all .15s ease-in-out;
+}
+
+.wp-block-button a.wp-block-button__link:focus,
+.wp-block-button.is-style-outline a.wp-block-button__link:focus {
+  background-color: var(--wp--color--primary);
+  border: 2px solid var(--wp--color--black);
+}
+
+.wp-block-button a.wp-block-button__link:hover,
+.wp-block-button.is-style-outline a.wp-block-button__link:hover {
+  background-color: var(--wp--color--primary);
+  opacity: .75;
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link {
+  border: 2px solid var(--wp--color--black);
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link:focus {
+  background-color: transparent;
+  border-width: 4px;
+  color: var(--wp--color--black);
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link:hover {
+  color: var(--wp--color--black);
+  background-color: var(--wp--color--primary-hover);
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
 ## Code
 --------------------------------------------------------------*/
 
@@ -91,8 +165,26 @@
 }
 
 /*--------------------------------------------------------------
+## Contact Form (Jetpack)
+--------------------------------------------------------------*/
+
+.contact-form label {
+  font-family: var(--wp--typography--font-family);
+  font-size: var(--wp--typography--font-size-heading-3);
+}
+
+/*--------------------------------------------------------------
 ## Cover
 --------------------------------------------------------------*/
+
+.wp-block-cover {
+  transition: border-bottom-right-radius 0.1s ease-out;
+}
+
+.wp-block-cover:hover {
+  cursor: pointer;
+  border-bottom-right-radius: 1rem;
+}
 
 .wp-block-cover-text p {
   padding: 1.5em var(--wp--spacing--small);
@@ -206,6 +298,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0 var(--wp--spacing--small);
 }
 
+.wp-block-latest-posts > li > a {
+  color: var(--wp--color--black);
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-date {
+  font-family: var(--wp--typography--font-family);
+  font-size: var(--wp--typography--font-size);
+}
+
 /*--------------------------------------------------------------
 # List
 --------------------------------------------------------------*/
@@ -269,6 +372,27 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ## Pullquote
 --------------------------------------------------------------*/
 
+.wp-block-pullquote {
+  border: none;
+}
+
+.wp-block-pullquote > blockquote > p {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 532px) {
+  .wp-block-pullquote > blockquote > p {
+    font-size: 48px;
+  }
+}
+
+.wp-block-pullquote cite {
+  color: var(--wp--color--foreground-light);
+  font-family: 'CircularStd';
+  text-transform: none;
+}
+
 .wp-block-pullquote>p:first-child {
   margin-top: 0;
 }
@@ -314,6 +438,56 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-separator {
   margin: 3em auto;
   padding: 0;
+}
+
+.wp-block-separator, 
+.wp-block-separator.is-style-wide {
+  border-color: var(--wp--color--border-light) !important;
+  border-bottom-right-radius: 8px;
+  border-width: 2px;
+  position: relative;
+}
+
+.wp-block-separator.is-style-gap:before, 
+.wp-block-separator.is-style-wide.is-style-gap:before {
+  border-left: 2px solid var(--wp--color--border-light);
+  border-right: 2px solid var(--wp--color--border-light);
+  background: white;
+  content: " ";
+  height: 12px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: -6px;
+  width: 12px;
+}
+
+.wp-block-separator.is-style-wide:after, 
+.wp-block-separator.is-style-wide.is-style-wide:after {
+  border-bottom: 2px solid var(--wp--color--border-light);
+  border-right: 2px solid var(--wp--color--border-light);
+  border-bottom-right-radius: 10px;
+  content: " ";
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  right: -8px;
+  bottom: -2px;
+}
+
+.wp-block-separator.is-style-wide, 
+.wp-block-separator.is-style-gap:not(.is-style-wide):not(.is-style-dots), 
+.wp-block-separator.is-style-wide.is-style-wide, hr.wp-block-separator.is-style-wide.is-style-gap:not(.is-style-wide):not(.is-style-dots) {
+  max-width: calc( 100% - calc(2 * 14px ));
+}
+
+@media screen and (min-width: 532px) {
+  .wp-block-separator.is-style-wide, 
+  .wp-block-separator.is-style-gap:not(.is-style-wide):not(.is-style-dots), 
+  .wp-block-separator.is-style-wide.is-style-wide, hr.wp-block-separator.is-style-wide.is-style-gap:not(.is-style-wide):not(.is-style-dots) {
+    max-width: calc( 782px - calc(2 * 14px));
+  }
 }
 
 /*--------------------------------------------------------------
