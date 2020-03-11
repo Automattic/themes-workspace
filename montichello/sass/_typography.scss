@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'CircularStd';
+	src: url('../assets/fonts/CircularStd-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manuale';
+	src: url('../assets/fonts/Manuale-VariableFont:wght.ttf') format('truetype');
+}
+
+h1, h2, h3 {
+	font-family: 'CircularStd';
+}
+
+h4, h5 {
+	font-weight: normal;
+}
+
+h1 {
+	line-height: 1.05 !important;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.6;
+	// font-family: 'Manuale';
+}
