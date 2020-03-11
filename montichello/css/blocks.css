@@ -11,6 +11,7 @@
   ## Gallery
   ## Group
   ## Image
+  ## Media & Text
   ## Latest Posts
   ## List
   ## More
@@ -19,6 +20,7 @@
   ## Separator
   ## Table
   ## Video
+  ## Search & Inputs
 # Additional Theme Styles
   ## Color Palette
 --------------------------------------------------------------*/
@@ -288,6 +290,46 @@
 }
 
 /*--------------------------------------------------------------
+## Media & Text
+--------------------------------------------------------------*/
+
+.wp-block-media-text.is-vertically-aligned-bottom .wp-block-media-text__content h1, .wp-block-media-text.is-vertically-aligned-bottom .wp-block-media-text__content h2 {
+  margin-bottom: 0;
+}
+
+.wp-block-media-text.is-vertically-aligned-top .wp-block-media-text__content h1, .wp-block-media-text.is-vertically-aligned-top .wp-block-media-text__content h2 {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-media-text.is-style-overlap .wp-block-media-text__content {
+    margin-left: -15vw;
+  }
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-media-text.is-style-overlap.has-media-on-the-right .wp-block-media-text__content {
+    margin-left: unset;
+    margin-right: -15vw;
+  }
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-media-text.is-style-boxed .wp-block-media-text__content {
+    background: var(--wp--color--background-light);
+    border-bottom-right-radius: 2rem;
+    margin-left: -10vw;
+  }
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-media-text.is-style-boxed.has-media-on-the-right .wp-block-media-text__content {
+    margin-left: unset;
+    margin-right: -10vw;
+  }
+}
+
+/*--------------------------------------------------------------
 ## Latest Posts
 --------------------------------------------------------------*/
 
@@ -431,6 +473,100 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   }
 }
 
+.wp-block-quote {
+  border-left: 2px solid var(--wp--color--primary);
+  padding-left: 32px;
+}
+
+.wp-block-quote > p {
+  font-size: 18px;
+  font-style: italic;
+  font-variation-settings: "ital" 1;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-quote > p {
+    font-size: 22px;
+  }
+}
+
+.wp-block-quote cite {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-quote cite {
+    font-size: 18px;
+  }
+}
+
+.wp-block-quote.is-style-large {
+  border-left: 2px solid var(--wp--color--primary);
+  padding-left: 32px;
+}
+
+.wp-block-quote.is-style-large > p {
+  font-size: 26px;
+  font-style: italic;
+  font-variation-settings: "ital" 1;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-quote.is-style-large > p {
+    font-size: 32px;
+  }
+}
+
+.wp-block-quote.is-style-large cite {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-quote.is-style-large cite {
+    font-size: 22px;
+  }
+}
+
+.wp-block-quote.is-style-stylish:before, .wp-block-pullquote.is-style-stylish:before {
+  content: " ";
+  background-image: url("../assets/quote-stylish.svg");
+  background-size: cover;
+}
+
+.wp-block-pullquote.is-style-stylish:before {
+  display: block;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto .5rem;
+}
+
+.wp-block-quote.is-style-stylish {
+  border-left: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.wp-block-quote.is-style-stylish:before {
+  display: block;
+  height: 50px;
+  margin-bottom: 12px;
+  width: 50px;
+}
+
+@media screen and (min-width: 582px) {
+  .wp-block-quote.is-style-stylish:before {
+    position: absolute;
+    left: -82px;
+    top: 12px;
+  }
+}
+
 /*--------------------------------------------------------------
 ## Separator
 --------------------------------------------------------------*/
@@ -518,6 +654,29 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   }
 }
 
+.wp-block-table.is-style-regular table {
+  border: 2px solid var(--wp--color--border-dark);
+}
+
+.wp-block-table.is-style-regular thead {
+  border-bottom: 1px solid var(--wp--color--border-light);
+}
+
+.wp-block-table.is-style-regular tfoot {
+  border-top: 1px solid var(--wp--color--border-light);
+}
+
+.wp-block-table.is-style-regular thead th, .wp-block-table.is-style-regular thead td, .wp-block-table.is-style-regular tfoot th, .wp-block-table.is-style-regular tfoot td {
+  border: none;
+  font-family: 'CircularStd';
+  font-weight: bold;
+}
+
+.wp-block-table.is-style-regular thead th, .wp-block-table.is-style-regular thead td, .wp-block-table.is-style-regular tbody th, .wp-block-table.is-style-regular tbody td, .wp-block-table.is-style-regular tfoot th, .wp-block-table.is-style-regular tfoot td {
+  border: none;
+}
+
+
 /*--------------------------------------------------------------
 ## Video
 --------------------------------------------------------------*/
@@ -525,3 +684,53 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-video video {
   max-width: var(--wp--content-width--standard);
 }
+
+/*--------------------------------------------------------------
+## Search & Inputs
+--------------------------------------------------------------*/
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+.wp-block-search .wp-block-search__input {
+  border-color: var(--wp--color--border);
+  border-radius: 0;
+  border-top-left-radius: 8px;
+  border-width: 2px;
+  padding: .75rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+.wp-block-search .wp-block-search__input:focus {
+  background-color: var(--wp--color--primary-hover);
+  border-color: var(--wp--color--black);
+}
+
