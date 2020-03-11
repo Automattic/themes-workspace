@@ -412,3 +412,29 @@ button.pushbutton-wide {
 		}
 	}
 }
+
+/**
+ * Header Styles
+ */
+.site-header h1 {
+	font-size: var(--wp--typography--font-size-heading-4);
+}
+
+.site-header .wp-block-column > * {
+	padding-left: var(--wp--spacing--large);
+}
+
+.site-header .wp-block-navigation, .wp-block-navigation>.wp-block-navigation__container {
+	justify-content: flex-end;
+}
+
+.site-header .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__content {
+	padding-left: var(--wp--spacing--large);
+	padding-right: var(--wp--spacing--large);
+}
+
+/* Hack to get the header floating above content */
+.home .site-header {
+	height: 200px;
+	margin-bottom: -228px;
+}
