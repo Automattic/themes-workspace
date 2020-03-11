@@ -14,7 +14,9 @@
 
 	/* Typography Base */
 	--wp--typography--font-scale: 1.3;
-	--wp--typography--font-family: "CircularStd";
+	--wp--typography--font-family: "Manuale";
+	--wp--typography--font-family-heading: "CircularStd";
+	--wp--typography--font-family-code: monospace;
 	--wp--typography--font-size: "18px";
 	--wp--typography--font-weight: 500;
 	--wp--typography--line-height: 1.6;
