@@ -11,20 +11,7 @@
 # Imports
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-# Fonts
---------------------------------------------------------------*/
-@font-face {
-	font-family: 'CircularStd';
-	src: url('./assets/fonts/CircularStd-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Manuale';
-	src: url('./assets/fonts/Manuale-VariableFont:wght.ttf') format('truetype');
-}
+@import url( "./css/fonts.css" );
 
 /*--------------------------------------------------------------
 # Base Styles
