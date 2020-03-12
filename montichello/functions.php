@@ -97,9 +97,6 @@ add_action( 'wp_enqueue_scripts', 'montichello_blocks_enqueue' );
  * (This does not use the standard add_theme_support('editor-styles') method.)
  */
 function montichello_register_FSE_styles() {
-	wp_register_style( 'montichello-style-variables', get_template_directory_uri() . '/css/variables.css' );
-	wp_enqueue_style( 'montichello-style-variables' );
-
 	wp_register_style( 'montichello-styles-editor', get_template_directory_uri() . '/style-editor.css' );
 	wp_enqueue_style( 'montichello-styles-editor' );
 }
