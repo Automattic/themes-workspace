@@ -65,7 +65,6 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--wp--color--text-heading);
-	font-family: var(--wp--typography--font-family-heading);
 	clear: both;
 }
 
@@ -97,7 +96,7 @@ code, kbd, tt, var {
 
 @media screen and (min-width: 600px) {
 	code, kbd, tt, var {
-	font-size: 0.8125rem;
+		font-size: 0.8125rem;
 	}
 }
 
@@ -123,33 +122,48 @@ big {
 }
 
 h1 {
+	font-family: var(--wp--typography--font-family-heading);
 	font-size: var(--wp--typography--font-size-heading-1);
-	line-height: var(--wp--typography--line-height-heading);
+	line-height: var(--wp--typography--line-height-heading-2);
 }
 
 h2 {
+	font-family: var(--wp--typography--font-family-heading);
 	font-size: var(--wp--typography--font-size-heading-2);
-	line-height: var(--wp--typography--line-height-heading);
+	line-height: var(--wp--typography--line-height-heading-2);
 }
 
 h3 {
+	font-family: var(--wp--typography--font-family-heading);
 	font-size: var(--wp--typography--font-size-heading-3);
-	line-height: var(--wp--typography--line-height-heading);
+	line-height: var(--wp--typography--line-height-heading-3);
 }
 
 h4 {
+	font-family: var(--wp--typography--font-family);
 	font-size: var(--wp--typography--font-size-heading-4);
-	line-height: var(--wp--typography--line-height-heading);
+	font-weight: normal;
+	line-height: var(--wp--typography--line-height-heading-4);
 }
 
-h5 {
-	font-size: var(--wp--typography--font-size-heading-5);
-	line-height: var(--wp--typography--line-height-heading);
+.has-huge-font-size {
+	font-size: 48px;
+	line-height: 1.4;
 }
 
-h6 {
-	font-size: var(--wp--typography--font-size-heading-6);
-	line-height: var(--wp--typography--line-height-heading);
+.has-large-font-size {
+	font-size: 32px;
+	line-height: 1.5;
+}
+
+.has-normal-font-size {
+	font-size: 22px;
+	line-height: 1.6;
+}
+
+.has-small-font-size {
+	font-size: 18px;
+	line-height: 1.6;
 }
 
 /*--------------------------------------------------------------
