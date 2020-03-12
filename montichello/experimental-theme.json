@@ -8,7 +8,8 @@
 		"border-light": "#C9E8D4",
 		"primary": "#91DFAC",
 		"primary-hover": "#D0FBDF",
-		"text": "black"
+		"text": "#3D433F",
+		"text-heading": "#181B19"
 	},
 	"typography": {
 		"font-scale": 1.3,

@@ -8,8 +8,14 @@
 
 :root {
 	/* Colors */
+	--wp--color--background: #ffffff;
+	--wp--color--background-dark: #DDDDDD;
+	--wp--color--background-light: #D0FBDF;
+	--wp--color--border: #69726C;
+	--wp--color--border-light: #C9E8D4;
+	--wp--color--text: black;
 	--wp--color--primary: #0073aa;
-	--wp--color--background: white;
+	--wp--color--primary-hover: #D0FBDF;
 	--wp--color--text: black;
 
 	/* Typography Base */
@@ -37,39 +43,9 @@
 	--global--spacing--large: 28px;
 
 	/* Content Width */
-	--wp--content-width--standard: 580px;
-	--wp--content-width--wide: 1100px;
+	--wp--content-width--standard: 720px;
+	--wp--content-width--wide: 1020px;
 
 	/* Styling */
 	--wp--styling--border-radius: 3px;
-}
-
-:root {
-	/* Font Family */
-	--global--font-primary: 'Manuale';
-	--global--font-secondary: 'Manuale';
-	--global--font-code: monospace, monospace;
-	--global--font-ui: 'CircularStd', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-
-	/* Colors */
-	--global--color-primary: #91DFAC;
-	--global--color-primary-hover: #D0FBDF;
-	--global--color-secondary: red;
-	--global--color-secondary-hover: darkred;
-	--global--color-black: #181B19;
-	--global--color-white: white;
-	--global--color-foreground: #444444;
-	--global--color-foreground-light: #69726C; // must be accessible against background
-	--global--color-foreground-dark: #111111; // must be accessible against background
-	--global--color-background: #FFFFFF;
-	--global--color-background-light: #D0FBDF; // must be accessible against foreground
-	--global--color-background-dark: #DDDDDD; // must be accessible against foreground
-	--global--color-border: #DDDDDD;
-	--global--color-border-light: #C9E8D4; // must be accessible against foreground
-	--global--color-border-dark: #69726C; // must be accessible against foreground
-	--global--color-text-selection: lightblue;
-	--global--color-alert-success: yellowgreen;
-	--global--color-alert-info: skyblue;
-	--global--color-alert-warning: gold;
-	--global--color-alert-error: salmon;
 }
