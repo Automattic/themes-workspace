@@ -3,26 +3,26 @@
 if ( ! function_exists( 'montichello_blocks_support' ) ) :
     function montichello_blocks_support()  {
 
-		// Make theme available for translation.
-		load_theme_textdomain( 'montichello', get_template_directory() . '/languages' );
+			// Make theme available for translation.
+			load_theme_textdomain( 'montichello', get_template_directory() . '/languages' );
 
-		// Let WordPress manage the document title.
-		add_theme_support( 'title-tag' );
+			// Let WordPress manage the document title.
+			add_theme_support( 'title-tag' );
 
-		// Alignwide and alignfull classes in the block editor
-		add_theme_support( 'align-wide' );
+			// Alignwide and alignfull classes in the block editor
+			add_theme_support( 'align-wide' );
 
-		// Adding support for core block visual styles.
-		add_theme_support( 'wp-block-styles' );
+			// Adding support for core block visual styles.
+			add_theme_support( 'wp-block-styles' );
 
-		// Adding support for responsive embedded content.
-		add_theme_support( 'responsive-embeds' );
+			// Adding support for responsive embedded content.
+			add_theme_support( 'responsive-embeds' );
 
-		// Add support for editor styles.
-		add_theme_support( 'editor-styles' );
+			// Add support for editor styles.
+			add_theme_support( 'editor-styles' );
 
-		// Enqueue editor styles.
-		add_editor_style( './style-editor.css' );
+			// Enqueue editor styles.
+			add_editor_style( './style-editor.css' );
     }
     add_action( 'after_setup_theme', 'montichello_blocks_support' );
 endif;

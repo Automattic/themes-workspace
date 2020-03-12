@@ -64,6 +64,7 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: var(--wp--color--text-heading);
 	font-family: var(--wp--typography--font-family-heading);
 	clear: both;
 }
@@ -415,12 +416,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: var(--wp--spacing--medium) 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 var(--wp--spacing--medium);

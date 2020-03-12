@@ -64,7 +64,7 @@
 .entry-content > .alignfull,
 .site-header > .alignfull,
 .site-footer > .alignfull {
-  margin: 1.5em 0;
+  margin: 0;
   max-width: 100%;
 }
 
@@ -245,6 +245,10 @@
   max-width: 100%;
 }
 
+.wp-block-group.has-background {
+	padding: 72px 30px;
+}
+
 .wp-block-group.has-background > .wp-block-group__inner-container > :first-child {
   margin-top: 0;
 }
@@ -259,6 +263,10 @@
 /*--------------------------------------------------------------
 # Image
 --------------------------------------------------------------*/
+
+figure.wp-block-image {
+  margin: 0;
+}
 
 .wp-block-image img {
   display: block;
@@ -293,6 +301,9 @@
 ## Media & Text
 --------------------------------------------------------------*/
 
+.wp-block-media-text {
+	margin: 72px auto;
+}
 .wp-block-media-text.is-vertically-aligned-bottom .wp-block-media-text__content h1, .wp-block-media-text.is-vertically-aligned-bottom .wp-block-media-text__content h2 {
   margin-bottom: 0;
 }
