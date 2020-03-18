@@ -2,8 +2,8 @@
 
 Contributors: kjellr
 Tags: translation-ready
-Requires at least: 5.0
-Tested up to: 5.2.2
+Requires at least: 5.4
+Tested up to: 5.4
 Requires PHP: 5.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
