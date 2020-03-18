@@ -33,6 +33,10 @@ If you would like the ability to keep up to date when blockbase is updated, you 
 - [Full Site Editing Project Board](https://github.com/WordPress/gutenberg/projects/35)
 - [Global Styles Project Board](https://github.com/WordPress/gutenberg/projects/40)
 
+## Screenshot
+
+![Blockbase Screenshot](https://cldup.com/pYacH7icja.png)
+
 ## Changelog
 
 **1.0 - March 18 2020**
