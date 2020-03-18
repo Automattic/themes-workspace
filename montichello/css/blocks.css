@@ -572,9 +572,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ## Separator
 --------------------------------------------------------------*/
 
-.wp-block-separator {
-  margin: 3em auto;
-  padding: 0;
+hr.wp-block-separator {
+	margin: 3em auto;
+	overflow: visible !important;
+	padding: 0;
 }
 
 .wp-block-separator, 
@@ -623,7 +624,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-separator.is-style-wide, 
   .wp-block-separator.is-style-gap:not(.is-style-wide):not(.is-style-dots), 
   .wp-block-separator.is-style-wide.is-style-wide, hr.wp-block-separator.is-style-wide.is-style-gap:not(.is-style-wide):not(.is-style-dots) {
-    max-width: calc( 782px - calc(2 * 14px));
+    max-width: calc( var(--wp--content-width--standard) - calc(2 * 14px));
   }
 }
 
