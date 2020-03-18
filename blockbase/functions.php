@@ -20,9 +20,6 @@ if ( ! function_exists( 'blockbase_blocks_support' ) ) :
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
-
-		// Enqueue editor styles.
-		add_editor_style( './style-editor.css' );
     }
     add_action( 'after_setup_theme', 'blockbase_blocks_support' );
 endif;
