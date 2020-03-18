@@ -1,10 +1,10 @@
 # Blockbase
 
-Blockbase is a simple base for building block-based themes, using the experimental [Block Based Themes](https://developer.wordpress.org/block-editor/developers/themes/block-based-themes/) guidelines. 
+Blockbase is a simple base for building block-based themes, using the [experimental guidelines](https://developer.wordpress.org/block-editor/developers/themes/block-based-themes/). 
 
 It includes: 
 
-- Basic block-based page templates, with header and footer template parts. 
+- Basic block-based HTML page templates, with header and footer template parts. 
 - Base styles for the front end, editor, and beta site editor.
 - Global Styles support.
 
