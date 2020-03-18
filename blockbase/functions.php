@@ -37,7 +37,7 @@ add_action( 'wp_enqueue_scripts', 'blockbase_blocks_enqueue' );
 
 /**
  * Load base styles in edit-site.
- * (This unfortuately does not use the standard add_theme_support('editor-styles') method yet.)
+ * (This unfortunately does not use the standard add_theme_support('editor-styles') method yet.)
  */
 function blockbase_register_FSE_styles() {
 	wp_register_style( 'blockbase-styles-editor', get_template_directory_uri() . '/style-editor.css' );
