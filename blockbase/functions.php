@@ -36,8 +36,10 @@ add_action( 'wp_enqueue_scripts', 'blockbase_blocks_enqueue' );
  * Load base styles in edit-site.
  * (This unfortunately does not use the standard add_theme_support('editor-styles') method yet.)
  */
-function blockbase_register_FSE_styles() {
-	wp_register_style( 'blockbase-styles-editor', get_template_directory_uri() . '/style-editor.css' );
+function blockbase_register_FSE_styles( $hook ) {
+  if ( 'gutenberg_page_gutenberg-edit-site' == $hook ){
+    wp_register_style( 'blockbase-styles-editor', get_template_directory_uri() . '/style-editor.css' );
     wp_enqueue_style( 'blockbase-styles-editor' );
+  }
 }
 add_action( 'admin_enqueue_scripts', 'blockbase_register_FSE_styles' );
