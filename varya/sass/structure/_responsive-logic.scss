@@ -101,7 +101,7 @@ $breakpoint_xxl: 1280px;
 @include media(laptop) {
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -109,7 +109,7 @@ $breakpoint_xxl: 1280px;
 
 @include media(desktop) {
 	:root {
-		--responsive--aligndefault-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_lg} + var(--responsive--alignwide-width-multiplier));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
@@ -118,7 +118,7 @@ $breakpoint_xxl: 1280px;
 
 @include media(wide) {
 	:root {
-		--responsive--aligndefault-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(#{$breakpoint_xl} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_xl} + var(--responsive--alignwide-width-multiplier));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
