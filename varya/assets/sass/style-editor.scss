@@ -4,24 +4,22 @@
 
 // Layout
 // - Structral and responsive styles
-@import "sass/structure/style";
-
-@import "sass/abstracts/mixins";
-//@import "sass/abstracts/responsive-logic";
+@import "structure/style";
+@import "abstracts/mixins";
 
 // Abstracts
 // - Mixins, variables and functions
-@import "sass/abstracts/editor";
+@import "abstracts/editor";
 
 // Base
 // - Reset the browser
-@import "sass/base/editor";
+@import "base/editor";
 
 // Elements
 // - Styles for basic HTML elemants
-@import "sass/elements/editor";
+@import "elements/editor";
 
 // Blocks
 // - These styles replace key Gutenberg Block styles for fonts, colors, and
 //   spacing with CSS-variables overrides
-@import "sass/blocks/editor";
+@import "blocks/editor";

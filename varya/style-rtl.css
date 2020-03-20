@@ -1834,10 +1834,6 @@ img {
 	margin-bottom: 0;
 }
 
-.wp-block-latest-posts.is-grid {
-	/* last row, doesn't matter how many cells */
-}
-
 .wp-block-latest-posts.is-grid > li {
 	margin-bottom: var(--global--spacing-vertical);
 }
@@ -1846,8 +1842,16 @@ img {
 	margin-bottom: 0;
 }
 
+.wp-block-latest-posts.is-grid.columns-2 > li:nth-last-child(-n + 2):nth-child(2n + 1),
+.wp-block-latest-posts.is-grid.columns-2 > li:nth-last-child(-n + 2):nth-child(2n + 1) ~ li,
 .wp-block-latest-posts.is-grid.columns-3 > li:nth-last-child(-n + 3):nth-child(3n + 1),
-.wp-block-latest-posts.is-grid.columns-3 > li:nth-last-child(-n + 3):nth-child(3n + 1) ~ li {
+.wp-block-latest-posts.is-grid.columns-3 > li:nth-last-child(-n + 3):nth-child(3n + 1) ~ li,
+.wp-block-latest-posts.is-grid.columns-4 > li:nth-last-child(-n + 4):nth-child(4n + 1),
+.wp-block-latest-posts.is-grid.columns-4 > li:nth-last-child(-n + 4):nth-child(4n + 1) ~ li,
+.wp-block-latest-posts.is-grid.columns-5 > li:nth-last-child(-n + 5):nth-child(5n + 1),
+.wp-block-latest-posts.is-grid.columns-5 > li:nth-last-child(-n + 5):nth-child(5n + 1) ~ li,
+.wp-block-latest-posts.is-grid.columns-6 > li:nth-last-child(-n + 6):nth-child(6n + 1),
+.wp-block-latest-posts.is-grid.columns-6 > li:nth-last-child(-n + 6):nth-child(6n + 1) ~ li {
 	margin-bottom: 0;
 }
 

@@ -2,12 +2,12 @@
  * These styles should be loaded on the frontend-only
  */
 
-@import "sass/abstracts/mixins";
-@import "sass/abstracts/config";
-@import "sass/elements/config";
-@import "sass/blocks/config";
-@import "sass/components/config";
-@import "sass/vendors/woocommerce/config";
+@import "abstracts/mixins";
+@import "abstracts/config";
+@import "elements/config";
+@import "blocks/config";
+@import "components/config";
+@import "vendors/woocommerce/config";
 
 @include add_variables( frontend ) {
 	/* Globals */
