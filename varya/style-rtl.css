@@ -96,7 +96,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
 .wp-block-pullquote.alignfull > p,
 .wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment),
+.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 .entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .navigation {
 	max-width: var(--responsive--aligndefault-width);
 	margin-right: auto;
@@ -119,6 +119,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-right: auto;
 	margin-left: auto;
 	width: var(--responsive--alignwide-width);
+	max-width: var(--responsive--alignfull-width);
+}
+
+body[class*="woocommerce"] .entry-content > .woocommerce {
+	margin-right: auto;
+	margin-left: auto;
+	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
 	max-width: var(--responsive--alignfull-width);
 }
 
@@ -2955,7 +2962,7 @@ table th,
 	overflow: hidden;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1024px) {
 	.site-footer {
 		align-items: flex-end;
 		display: flex;
@@ -2964,15 +2971,15 @@ table th,
 	}
 }
 
-.site-info {
+.site-footer > .site-info {
 	color: var(--footer--color-text);
 	font-family: var(--footer--font-family);
 	font-size: var(--footer--font-size);
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 640px) {
-	.site-info {
+@media only screen and (min-width: 1024px) {
+	.site-footer > .site-info {
 		order: 1;
 		flex: 1 0 50%;
 		margin-top: 0;
@@ -2980,28 +2987,28 @@ table th,
 	}
 }
 
-.site-info .site-name {
+.site-footer > .site-info .site-name {
 	font-weight: bold;
 }
 
-.site-info a {
+.site-footer > .site-info a {
 	color: currentColor;
 }
 
-.site-info a:link, .site-info a:visited {
+.site-footer > .site-info a:link, .site-footer > .site-info a:visited {
 	color: currentColor;
 }
 
-.site-info a:hover {
+.site-footer > .site-info a:hover {
 	color: var(--footer--color-link);
 }
 
-.footer-navigation {
+.site-footer > .footer-navigation {
 	display: inline;
 }
 
-@media only screen and (min-width: 640px) {
-	.footer-navigation {
+@media only screen and (min-width: 1024px) {
+	.site-footer > .footer-navigation {
 		flex: 1 0 50%;
 		order: 2;
 		margin-top: 0;
@@ -3010,37 +3017,37 @@ table th,
 	}
 }
 
-.footer-navigation > div {
+.site-footer > .footer-navigation > div {
 	display: inline;
 }
 
-.footer-navigation .footer-menu {
+.site-footer > .footer-navigation .footer-menu {
 	color: var(--footer--color-text);
 	margin: 0;
 	padding-right: 0;
 }
 
-@media only screen and (min-width: 640px) {
-	.footer-navigation .footer-menu {
+@media only screen and (min-width: 1024px) {
+	.site-footer > .footer-navigation .footer-menu {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
 	}
 }
 
-.footer-navigation .footer-menu > li {
+.site-footer > .footer-navigation .footer-menu > li {
 	display: inline;
 }
 
-.footer-navigation .footer-menu > li:first-of-type > a {
+.site-footer > .footer-navigation .footer-menu > li:first-of-type > a {
 	padding-right: 0;
 }
 
-.footer-navigation .footer-menu > li:last-of-type {
+.site-footer > .footer-navigation .footer-menu > li:last-of-type {
 	padding-left: 0;
 }
 
-.footer-navigation .footer-menu a {
+.site-footer > .footer-navigation .footer-menu a {
 	font-family: var(--primary-nav--font-family);
 	font-size: var(--footer--font-size);
 	font-weight: var(--primary-nav--font-weight);
@@ -3048,11 +3055,11 @@ table th,
 	color: currentColor;
 }
 
-.footer-navigation .footer-menu a:link, .footer-navigation .footer-menu a:visited {
+.site-footer > .footer-navigation .footer-menu a:link, .site-footer > .footer-navigation .footer-menu a:visited {
 	color: currentColor;
 }
 
-.footer-navigation .footer-menu a:hover {
+.site-footer > .footer-navigation .footer-menu a:hover {
 	color: var(--footer--color-link-hover);
 }
 
@@ -4544,9 +4551,6 @@ body[class*="woocommerce"] p.demo_store {
 
 /**
  * Structure
- */
-/**
- * WooCommerce Wrapper Width
  */
 /**
  * Vertical Space - 32px

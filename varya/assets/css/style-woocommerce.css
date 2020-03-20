@@ -88,6 +88,13 @@
 	margin-right: auto;
 }
 
+body[class*="woocommerce"] .entry-content > .woocommerce {
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
+	max-width: var(--responsive--alignfull-width);
+}
+
 /**
  * Output
  */

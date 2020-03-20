@@ -88,6 +88,13 @@
 	margin-left: auto;
 }
 
+body[class*="woocommerce"] .entry-content > .woocommerce {
+	margin-right: auto;
+	margin-left: auto;
+	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
+	max-width: var(--responsive--alignfull-width);
+}
+
 /**
  * Output
  */
@@ -1361,9 +1368,6 @@ body[class*="woocommerce"] p.demo_store {
 
 /**
  * Structure
- */
-/**
- * WooCommerce Wrapper Width
  */
 /**
  * Vertical Space - 32px

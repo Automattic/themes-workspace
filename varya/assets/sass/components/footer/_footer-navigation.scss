@@ -1,8 +1,8 @@
-.footer-navigation {
+.site-footer > .footer-navigation {
 
 	display: inline;
 
-	@include media(tablet) {
+	@include media(desktop) {
 		flex: 1 0 50%;
 		order: 2;
 		margin-top: 0;
@@ -20,7 +20,7 @@
 		margin: 0;
 		padding-left: 0;
 
-		@include media(tablet) {
+		@include media(desktop) {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: flex-end;

@@ -35,15 +35,45 @@ add_action( 'after_setup_theme', 'varya_woocommerce_setup' );
 /**
  * Add a custom wrapper for woocomerce content
  */
-function varya_wrapper_start() {
-	echo '<article id="woocommerce-wrapper" class="default-max-width">';
+function varya_content_wrapper_start() {
+	echo '<article id="woocommerce-wrapper" class="wide-max-width">';
 }
-add_action('woocommerce_before_main_content', 'varya_wrapper_start', 10);
+add_action('woocommerce_before_main_content', 'varya_content_wrapper_start', 10);
 
-function varya_wrapper_end() {
+function varya_content_wrapper_end() {
 	echo '</article>';
 }
-add_action('woocommerce_after_main_content', 'varya_wrapper_end', 10);
+add_action('woocommerce_after_main_content', 'varya_content_wrapper_end', 10);
+
+/**
+ * Add a custom wrapper for woocomerce cart
+ */
+function varya_cart_wrapper_start() {
+	echo '<div id="woocommerce-cart-wrapper" class="wide-max-width">';
+}
+add_action('woocommerce_before_cart', 'varya_cart_wrapper_start', 10);
+add_action('woocommerce_before_checkout_form', 'varya_cart_wrapper_start', 10);
+
+function varya_cart_wrapper_end() {
+	echo '</div>';
+}
+add_action('woocommerce_after_cart', 'varya_cart_wrapper_end', 10);
+add_action('woocommerce_after_checkout_form', 'varya_cart_wrapper_end', 10);
+
+/**
+ * Add a custom wrapper for woocomerce my-account
+ */
+function varya_my_account_wrapper_start() {
+	echo '<div id="woocommerce-my-account-wrapper" class="wide-max-width">';
+}
+add_action('woocommerce_before_account_navigation', 'varya_my_account_wrapper_start', 10);
+add_action('woocommerce_before_customer_login_form', 'varya_my_account_wrapper_start', 10);
+
+function varya_my_account_wrapper_end() {
+	echo '</div>';
+}
+add_action('woocommerce_account_dashboard', 'varya_my_account_wrapper_end', 10);
+add_action('woocommerce_after_customer_login_form', 'varya_my_account_wrapper_end', 10);
 
 /**
  * Display category image on category archive

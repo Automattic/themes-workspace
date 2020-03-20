@@ -4,7 +4,7 @@
 
 	overflow: hidden;
 
-	@include media(tablet) {
+	@include media(desktop) {
 		align-items: flex-end;
 		display: flex;
 		flex-wrap: wrap;
@@ -14,14 +14,14 @@
 
 // Footer Branding
 
-.site-info {
+.site-footer > .site-info {
 
 	color: var(--footer--color-text);
 	font-family: var(--footer--font-family);
 	font-size: var(--footer--font-size);
 	line-height: var(--global--line-height-body);
 
-	@include media(tablet) {
+	@include media(desktop) {
 		order: 1;
 		flex: 1 0 50%;
 		margin-top: 0;
