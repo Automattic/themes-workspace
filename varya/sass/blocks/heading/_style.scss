@@ -7,6 +7,10 @@ h6, .h6 {
 	clear: both;
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight);
+
+	strong {
+		font-weight: var(--heading--font-weight-strong);
+	}
 }
 
 h1, .h1 {

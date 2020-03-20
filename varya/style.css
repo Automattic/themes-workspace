@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media only screen and (min-width: 782px) {
 	:root {
 		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(640px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignwide-width: calc(782px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -1709,6 +1709,15 @@ h6, .h6 {
 	clear: both;
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight);
+}
+
+h1 strong, .h1 strong,
+h2 strong, .h2 strong,
+h3 strong, .h3 strong,
+h4 strong, .h4 strong,
+h5 strong, .h5 strong,
+h6 strong, .h6 strong {
+	font-weight: var(--heading--font-weight-strong);
 }
 
 h1, .h1 {

@@ -46,7 +46,7 @@
 @media only screen and (min-width: 782px) {
 	:root {
 		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(640px + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignwide-width: calc(782px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -718,6 +718,15 @@ object {
 	clear: both;
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight);
+}
+
+.editor-styles-wrapper .wp-block-heading h1 strong, .editor-styles-wrapper h1 strong, .editor-styles-wrapper .h1 strong,
+.editor-styles-wrapper .wp-block-heading h2 strong, .editor-styles-wrapper h2 strong, .editor-styles-wrapper .h2 strong,
+.editor-styles-wrapper .wp-block-heading h3 strong, .editor-styles-wrapper h3 strong, .editor-styles-wrapper .h3 strong,
+.editor-styles-wrapper .wp-block-heading h4 strong, .editor-styles-wrapper h4 strong, .editor-styles-wrapper .h4 strong,
+.editor-styles-wrapper .wp-block-heading h5 strong, .editor-styles-wrapper h5 strong, .editor-styles-wrapper .h5 strong,
+.editor-styles-wrapper .wp-block-heading h6 strong, .editor-styles-wrapper h6 strong, .editor-styles-wrapper .h6 strong {
+	font-weight: var(--heading--font-weight-strong);
 }
 
 .editor-styles-wrapper .wp-block-heading h1, .editor-styles-wrapper h1, .editor-styles-wrapper .h1 {

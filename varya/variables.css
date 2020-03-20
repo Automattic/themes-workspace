@@ -115,6 +115,7 @@
 	--heading--letter-spacing-h1: var(--global--letter-spacing-xxxl);
 	--heading--line-height: 1.25em;
 	--heading--font-weight: 600;
+	--heading--font-weight-strong: 800;
 	--latest-posts--title-font-family: var(--heading--font-family);
 	--latest-posts--title-font-size: var(--heading--font-size-h3);
 	--latest-posts--description-font-family: var(--global--font-family-secondary);

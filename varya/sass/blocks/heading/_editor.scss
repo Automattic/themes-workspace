@@ -1,4 +1,5 @@
 .editor-styles-wrapper {
+
 	.wp-block-heading h1, h1, .h1,
 	.wp-block-heading h2, h2, .h2,
 	.wp-block-heading h3, h3, .h3,
@@ -8,6 +9,10 @@
 		clear: both;
 		font-family: var(--heading--font-family);
 		font-weight: var(--heading--font-weight);
+
+		strong {
+			font-weight: var(--heading--font-weight-strong);
+		}
 	}
 
 	.wp-block-heading h1, h1, .h1 {
