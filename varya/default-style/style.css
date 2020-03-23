@@ -27,8 +27,10 @@ a {
 	border-bottom: 1px solid var(--global--color-secondary);
 }
 
+a.custom-logo-link,
 nav a {
 	border-bottom: none;
+	text-decoration: none;
 }
 
 .site-title > a,
