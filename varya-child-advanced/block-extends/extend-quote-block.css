@@ -1,0 +1,30 @@
+/* Quotye Blobs */
+
+.wp-block-quote.is-style-quote-blobs {
+  position: relative;
+  padding: 4rem 0;
+  border-left: none;
+}
+
+.wp-block-quote.is-style-quote-blobs > * {
+  margin-left: 0;
+}
+
+.wp-block-quote.is-style-quote-blobs p {
+	font-family: var(--global--font-primary);
+	line-height: 1.25;
+	font-size: var(--heading--font-size-h2);
+}
+
+.wp-block-quote.is-style-quote-blobs:after {
+  background-image: url(../assets/quote-blobs.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: " ";
+  height: 100%;
+  position: absolute;
+  right: -20%;
+  top: 0;
+  width: 50%;
+  z-index: -1;
+}

@@ -1,0 +1,44 @@
+.editor-styles-wrapper .wp-block-quote {
+	border-left-color: var(--quote--border-color);
+	margin: var(--global--spacing-vertical) 0;
+	padding-left: var(--global--spacing-horizontal);
+
+	p {
+		font-family: var(--quote--font-family);
+		font-size: var(--heading--font-size-h4);
+		letter-spacing: var(--heading--letter-spacing-h4);
+		line-height: var(--global--line-height-h4);
+	}
+
+	&.is-large,
+	&.is-style-large {
+		border: none;
+		padding: 0;
+
+		p {
+			font-family: var(--quote--font-family);
+			font-size: var(--heading--font-size-h3);
+			letter-spacing: var(--heading--letter-spacing-h3);
+			line-height: var(--global--line-height-h3);
+		}
+	}
+
+	.has-background:not(.has-background-background-color) &,
+	[class*="background-color"]:not(.has-background-background-color) &,
+	[style*="background-color"]:not(.has-background-background-color) &,
+	.wp-block-cover[style*="background-image"] & {
+			border-color: currentColor;
+	}
+
+	.wp-block-quote__citation {
+		color: var(--global--color-foreground-light);
+		font-size: var(--global--font-size-sm);
+
+		.has-background:not(.has-background-background-color) &,
+		[class*="background-color"]:not(.has-background-background-color) &,
+		[style*="background-color"]:not(.has-background-background-color) &,
+		.wp-block-cover[style*="background-image"] & {
+			color: currentColor;
+		}
+	}
+}

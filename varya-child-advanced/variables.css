@@ -1,0 +1,55 @@
+:root {
+	/* Globals */
+	--global--font-primary: 'Nova Cut', Georgia, serif;
+	--global--font-secondary: 'Overpass', Helvetica, sans-serif;
+	--global--font-ui: 'Overpass', Helvetica, sans-serif;
+	--global--font-size-lg: 24px;
+	--global--font-size-xl: 32px;
+	--global--font-size-xxl: 40px;
+	--global--font-size-xxxl: 64px;
+	--global--color-primary: #333366;
+	--global--color-primary-hover: #EB4D55;
+	--global--color-secondary: #EB4D55;
+	--global--color-secondary-hover: #333366;
+	--global--color-foreground: #333366;
+	--global--color-foreground-light: #FFD8C9;
+	--global--color-background: #FF9D76;
+	--global--color-background-dark: #CB643A;
+	--global--color-border: var(--global--color-secondary);
+
+	/* Form */
+	--form--border-width: 2px;
+	--form--border-color: var(--global--color-primary);
+
+	/* Branding */
+	--branding--title--font-size: 96px;
+	--branding--title--font-weight: normal;
+	--branding--description--font-size: 32px;
+	--branding--color-text: #FFFFFF;
+
+	/* Primary Nav */
+	--primary-nav--font-weight: normal;
+
+	/* Footer */
+	--footer--color-text: var(--global--color-foreground);
+	--footer--color-link: var(--global--color-secondary);
+
+	/* Headings */
+	--heading--font-size-h6: var(--global--font-size-base);
+	--heading--font-size-h5: var(--global--font-size-base);
+	--heading--font-family: var(--global--font-primary);
+	--heading--font-weight: normal;
+
+	/* Blocks */
+	--button--color-text: var(--global--color-foreground-light);
+	--button--color-text-hover: var(--global--color-foreground-light);
+	--button--color-background: var(--global--color-secondary);
+	--button--color-background-hover: var(--global--color-primary);
+	--button--font-weight: 400;
+	--button--border-width: 2px;
+	--button--border-radius: 5px;
+	--separator--border-color: var(--global--color-secondary);
+
+	/* WooCommerce */
+	--wc--wrapper-width: wide;
+}

@@ -1,0 +1,25 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+
+// Layout
+// - Structral and responsive styles
+@import "structure/style";
+@import "abstracts/mixins";
+
+// Abstracts
+// - Mixins, variables and functions
+@import "abstracts/editor";
+
+// Base
+// - Reset the browser
+@import "base/editor";
+
+// Elements
+// - Styles for basic HTML elemants
+@import "elements/editor";
+
+// Blocks
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides
+@import "blocks/editor";

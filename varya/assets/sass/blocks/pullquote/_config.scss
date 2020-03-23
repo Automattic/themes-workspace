@@ -1,0 +1,7 @@
+@mixin pullquote-variables() {
+	--pullquote--font-family: var(--global--font-family-primary);
+	--pullquote--border-width: 4px; // half of $baseline-unit (8px)
+	--pullquote--color-border: var(--global--color-foreground);
+	--pullquote--color-foreground: var(--global--color-foreground);
+	--pullquote--color-background: var(--global--color-background);
+}
