@@ -1,0 +1,16 @@
+// WooCommerce Styles
+// - These styles should be loaded when WooCommerce is active
+
+// Layout
+// - Structral and responsive styles
+@import "sass/structure/style";
+
+// Abstracts
+// - Functions and config
+@import "sass/abstracts/style";
+
+// Extends
+@import "sass/base/extends";
+
+// WooCommerce
+@import "sass/vendors/woocommerce/style";

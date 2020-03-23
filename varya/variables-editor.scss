@@ -1,0 +1,32 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/config";
+@import "sass/elements/config";
+@import "sass/blocks/config";
+@import "sass/components/config";
+@import "sass/vendors/woocommerce/config";
+
+@include add_variables( editor ) {
+	/* Globals */
+	@include global-variables();
+	/* Elements */
+	@include form-variables();
+	/* Blocks */
+	@include button-variables();
+	@include cover-variables();
+	@include heading-variables();
+	@include latest-posts-variables();
+	@include list-variables();
+	@include pullquote-variables();
+	@include quote-variables();
+	@include separator-variables();
+	/* Components */
+//	@include header-variables();
+//	@include entry-variables();
+//	@include footer-variables();
+	/* Vendors */
+//	@include woocommerce-variables();
+}
