@@ -1,0 +1,77 @@
+// Vertical Rhythm Multiplier
+$baseline-unit: 8px;
+
+// Typescale Multipliers
+$typescale-root: 18px; // Set 16px/1em default on html
+$typescale-base: 1em; // Set 1em default on body == $typescale-root;
+$typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-root;
+
+@mixin global-variables() {
+
+	/* Font Family */
+	--global--font-primary: sans-serif;
+	--global--font-secondary: serif;
+	--global--font-code: monospace, monospace;
+	--global--font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+	/* Font Size */
+	--global--font-size-root: #{$typescale-root};
+	--global--font-size-ratio: #{$typescale-ratio};
+	--global--font-size-base: #{$typescale-base};
+	--global--font-size-xs: calc(var(--global--font-size-base) / var(--global--font-size-ratio) / var(--global--font-size-ratio)); // #{$typescale-base / $typescale-ratio / $typescale-ratio};
+	--global--font-size-sm: calc(var(--global--font-size-base) / var(--global--font-size-ratio)); // #{$typescale-base / $typescale-ratio};
+	--global--font-size-md: calc(var(--global--font-size-base) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio};
+	--global--font-size-lg: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
+
+	/* Line Height */
+	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-body: 1.78;
+	--global--line-height-heading: 1.125;
+
+	/* Colors */
+	--global--color-primary: blue;
+	--global--color-primary-hover: indigo;
+	--global--color-secondary: red;
+	--global--color-secondary-hover: darkred;
+	--global--color-black: black;
+	--global--color-white: white;
+	--global--color-foreground: #444444;
+	--global--color-foreground-light: #767676; // must be accessible against background
+	--global--color-foreground-dark: #111111; // must be accessible against background
+	--global--color-background: #FFFFFF;
+	--global--color-background-light: #FAFAFA; // must be accessible against foreground
+	--global--color-background-dark: #DDDDDD; // must be accessible against foreground
+	--global--color-border: #DDDDDD;
+	--global--color-border-light: #FAFAFA; // must be accessible against foreground
+	--global--color-border-dark: #AAAAAA; // must be accessible against foreground
+	--global--color-text-selection: lightblue;
+	--global--color-alert-success: yellowgreen;
+	--global--color-alert-info: skyblue;
+	--global--color-alert-warning: gold;
+	--global--color-alert-error: salmon;
+
+	/* Spacing */
+	--global--spacing-unit: #{2 * $baseline-unit}; // 16px
+	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
+	--global--spacing-horizontal: #{2 * $baseline-unit}; // 16px
+	--global--spacing-vertical: #{4 * $baseline-unit}; // 32px matches default spacing in the editor.
+
+	/* Elevation */
+	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-none: 0px 0px 0px 0px transparent;
+
+	/* Other */
+	--global--border-radius-sm: #{0.5 * $typescale-root};
+	--global--border-radius-md: #{0.75 * $typescale-root};
+	--global--border-radius-lg: #{$typescale-root};
+	--global--border-radius-pill: #{10 * $typescale-root};
+	--global--border-radius-none: 0;
+}

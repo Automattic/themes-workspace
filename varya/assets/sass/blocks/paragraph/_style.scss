@@ -1,0 +1,6 @@
+p {
+	// inherits general font style set at <body>
+	&.has-background {
+		padding: var(--global--spacing-unit);
+	}
+}
