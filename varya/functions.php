@@ -219,7 +219,7 @@ add_action( 'after_setup_theme', 'varya_content_width', 0 );
  */
 function varya_scripts() {
 	// Theme variables
-	wp_enqueue_style( 'varya-variables-style', get_template_directory_uri() . '/variables.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'varya-variables-style', get_template_directory_uri() . '/assets/css/variables.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// Theme styles
 	wp_enqueue_style( 'varya-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
@@ -228,7 +228,7 @@ function varya_scripts() {
 	wp_style_add_data( 'varya-style', 'rtl', 'replace' );
 
 	// Print styles
-	wp_enqueue_style( 'varya-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	wp_enqueue_style( 'varya-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	// Threaded comment reply styles
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -261,10 +261,10 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 function varya_editor_theme_variables() {
 
 	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/variables-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
+	wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/assets/css/variables-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 
 	// Load the child theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
+	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/assets/css/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'varya_editor_theme_variables' );
 
