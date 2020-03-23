@@ -1,20 +1,17 @@
 const postcssFocusWithin = require('postcss-focus-within');
 const postcssCustomMedia = require('postcss-custom-media');
-
-module.exports = {
-	plugins: {
-		autoprefixer: {}
-	}
-};
+const postcssCustomProperties = require('postcss-custom-properties');
 
 module.exports = {
 	plugins: [
-		postcssFocusWithin(/* pluginOptions */)
+    autoprefixer(),
+		postcssFocusWithin(/* pluginOptions */),
+		postcssCustomMedia(/* pluginOptions */),
+    postcssCustomProperties({
+      importFrom: [
+        'assets/css/variables.css',
+        'assets/css/variables-editor.css'
+      ]
+    })
 	]
 };
-
-module.exports = {
-	plugins: [
-		postcssCustomMedia(/* pluginOptions */)
-	]
-}
