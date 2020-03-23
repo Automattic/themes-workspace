@@ -7,6 +7,24 @@
 	/* Global Font sizes */
 	--global--font-size-ratio: 1.2;
 
+	/* Colors */
+	--global--color-primary: #000000;
+	--global--color-primary-hover: #A36265;
+	--global--color-secondary: #A36265;
+	--global--color-secondary-hover: #333333;
+	--global--color-black: black;
+	--global--color-white: white;
+	--global--color-foreground: #333333;
+	--global--color-foreground-light: #444444;
+	--global--color-foreground-dark: #000000;
+	--global--color-background: #FFFFFF;
+	--global--color-background-light: #FAFBF6;
+	--global--color-background-dark: #DDDDDD;
+	--global--color-border: #333333;
+	--global--color-border-light: #444444;
+	--global--color-border-dark: #AAAAAA;
+	--global--color-text-selection: #FAFBF6;
+
 	/* Headings Font sizes */
 	--heading--font-size-h6: var(--global--font-size-base);
 	--heading--font-size-h5: 20px;
@@ -14,4 +32,11 @@
 	--heading--font-size-h3: 28px;
 	--heading--font-size-h2: 32px;
 	--heading--font-size-h1: 64px;
+
+	/* Utilities Font sizes */
+	--utilities--font-size-xs: 14px;
+	--utilities--font-size-sm: 16px;
+	--utilities--font-size-md: 18px;
+	--utilities--font-size-lg: 20px;
+	--utilities--font-size-xl: 24px;
 }
