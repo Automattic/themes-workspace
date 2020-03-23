@@ -3147,9 +3147,9 @@ table th,
 }
 
 .entry-meta > span > *,
-.entry-meta > span span fn,
+.entry-meta > span span .fn,
 .entry-footer > span > *,
-.entry-footer > span span fn {
+.entry-footer > span span .fn {
 	display: inline-block;
 	vertical-align: middle;
 }
