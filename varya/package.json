@@ -7,8 +7,8 @@
   },
   "homepage": "https://github.com/Automattic/varya#readme",
   "devDependencies": {
-    "@wordpress/browserslist-config": "^2.2.2",
-    "autoprefixer": "^9.5.1",
+    "@wordpress/browserslist-config": "^2.6.0",
+    "autoprefixer": "^9.7.4",
     "chokidar-cli": "^2.1.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
@@ -16,7 +16,7 @@
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.1.1",
     "postcss-focus-within": "^3.0.0",
-    "rtlcss": "^2.4.0"
+    "rtlcss": "^2.5.0"
   },
   "rtlcssConfig": {
     "options": {
