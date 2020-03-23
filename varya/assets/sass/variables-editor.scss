@@ -23,10 +23,7 @@
 	@include pullquote-variables();
 	@include quote-variables();
 	@include separator-variables();
-	/* Components */
-//	@include header-variables();
-//	@include entry-variables();
-//	@include footer-variables();
+	@include utilities-variables();
 	/* Vendors */
-//	@include woocommerce-variables();
+	@include woocommerce-variables();
 }
