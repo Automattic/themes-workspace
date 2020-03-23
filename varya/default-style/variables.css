@@ -1,5 +1,17 @@
 :root {
-	/* Globals */
-	--global--font-primary: 'Nova Cut', Georgia, serif;
-	--global--font-secondary: 'Overpass', Helvetica, sans-serif;
+	/* Global Fonts */
+	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
+	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
+	--global--font-ui: var(--global--font-secondary);
+
+	/* Global Font sizes */
+	--global--font-size-ratio: 1.2;
+
+	/* Headings Font sizes */
+	--heading--font-size-h6: var(--global--font-size-base);
+	--heading--font-size-h5: 20px;
+	--heading--font-size-h4: 24px;
+	--heading--font-size-h3: 28px;
+	--heading--font-size-h2: 32px;
+	--heading--font-size-h1: 64px;
 }
