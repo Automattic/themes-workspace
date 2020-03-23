@@ -1,7 +1,7 @@
 <?php
 
 if ( ! function_exists( 'blockbase_blocks_support' ) ) :
-    function blockbase_blocks_support()  {
+	function blockbase_blocks_support()  {
 
 		// Make theme available for translation.
 		load_theme_textdomain( 'blockbase', get_template_directory() . '/languages' );
@@ -20,8 +20,15 @@ if ( ! function_exists( 'blockbase_blocks_support' ) ) :
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
-    }
-    add_action( 'after_setup_theme', 'blockbase_blocks_support' );
+
+		// Enqueue editor styles.
+		add_editor_style( array(
+			'style-editor.css',
+			'./css/editor/variables.css',
+			'./css/editor/editor-custom.css'
+		) );
+	}
+	add_action( 'after_setup_theme', 'blockbase_blocks_support' );
 endif;
 
 /**
