@@ -2731,6 +2731,7 @@ table th,
 
 .main-navigation {
 	color: var(--primary-nav--color-text);
+	font-size: var(--primary-nav--font-size);
 }
 
 .main-navigation > div {
@@ -3146,7 +3147,9 @@ table th,
 }
 
 .entry-meta > span > *,
-.entry-footer > span > * {
+.entry-meta > span span fn,
+.entry-footer > span > *,
+.entry-footer > span span fn {
 	display: inline-block;
 	vertical-align: middle;
 }

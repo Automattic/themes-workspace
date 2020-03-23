@@ -11,7 +11,8 @@
 		display: inline-block;
 		margin-right: var(--global--spacing-unit);
 
-		& > * {
+		& > *,
+		span .fn {
 			display: inline-block;
 			vertical-align: middle;
 		}
