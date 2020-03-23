@@ -62,6 +62,11 @@ if ( ! function_exists( 'varya_default_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya-default' ),
 					'slug'  => 'primary',
+					'color' => '#000000',
+				),
+				array(
+					'name'  => __( 'Secondary', 'varya-default' ),
+					'slug'  => 'secondary',
 					'color' => '#A36265',
 				),
 				array(
@@ -70,19 +75,14 @@ if ( ! function_exists( 'varya_default_setup' ) ) :
 					'color' => '#333333',
 				),
 				array(
-					'name'  => __( 'Foreground Dark', 'varya-default' ),
-					'slug'  => 'foreground-dark',
-					'color' => '#000000',
+					'name'  => __( 'Background Light', 'varya-default' ),
+					'slug'  => 'background-light',
+					'color' => '#FAFBF6',
 				),
 				array(
 					'name'  => __( 'Background', 'varya-default' ),
 					'slug'  => 'background',
 					'color' => '#FFFFFF',
-				),
-				array(
-					'name'  => __( 'Background Light', 'varya-default' ),
-					'slug'  => 'background-light',
-					'color' => '#FAFBF6',
 				),
 			)
 		);

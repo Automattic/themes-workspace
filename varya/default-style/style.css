@@ -31,13 +31,15 @@ nav a {
 	border-bottom: none;
 }
 
+.site-title > a,
 h1 > a,
 h2 > a,
 h3 > a,
 h4 > a,
 h5 > a,
 h6 > a {
-	text-decoration: solid;
+	text-decoration: underline;
+	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
 	border-bottom: none;
 }
