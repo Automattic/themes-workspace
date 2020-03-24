@@ -46,3 +46,58 @@ h6 > a {
 	border-bottom: none;
 }
 
+/****
+ * Quotes
+ */
+.wp-block-quote, .wp-block-quote.is-style-large {
+  border-left: 1px solid var(--quote--border-color);
+  padding-left: var(--global--spacing-horizontal);
+}
+
+.wp-block-quote p {
+  font-size: var(--global--font-size-base);
+  line-height: var(--global--line-height);
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 24px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/****
+ * Pullquote
+ */
+.wp-block-pullquote {
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.wp-block-pullquote p {
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.wp-block-pullquote cite {
+  margin-top: var(--global--spacing-vertical);
+  text-transform: none;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+  padding: var(--global--spacing-horizontal);
+}
+
+.wp-block-separator.is-style-wide {
+  border-bottom-width: var(--separator--height);
+}
+
+/****
+ * Table
+ */
+.wp-block-table td{
+  border-color: var(--global--color-border);  
+  padding: calc( 0.75 * var(--global--spacing-unit) );
+}

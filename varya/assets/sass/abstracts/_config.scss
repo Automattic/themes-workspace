@@ -57,7 +57,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 16px
 	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
-	--global--spacing-horizontal: #{2 * $baseline-unit}; // 16px
+	--global--spacing-horizontal: #{4 * $baseline-unit};
 	--global--spacing-vertical: #{4 * $baseline-unit}; // 32px matches default spacing in the editor.
 
 	/* Elevation */
