@@ -2060,7 +2060,7 @@ p.has-background {
 .a8c-posts-list-item__featured span {
 	color: var(--global--color-background);
 	background-color: var(--global--color-primary);
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-weight: bold;
 	font-size: var(--global--font-size-sm);
 	line-height: 1;
@@ -2134,7 +2134,7 @@ p.has-background {
 
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
-	font-size: var(--heading--font-size-h4);
+	font-size: var(--pullquote--font-size);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height);
 }
@@ -3250,7 +3250,7 @@ table th,
 }
 
 .post-navigation .post-title {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
 	font-weight: 600;
@@ -3279,7 +3279,7 @@ table th,
 }
 
 .pagination .nav-links > * {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-md);
 	font-weight: 600;
 	padding-right: calc(0.66 * var(--global--spacing-unit));
@@ -3335,7 +3335,7 @@ table th,
 
 .comment-reply-title small {
 	font-size: var(--global--font-size-base);
-	font-family: var(--global--font-family-secondary);
+	font-family: var(--global--font-secondary);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
 }
@@ -3480,7 +3480,7 @@ table th,
 .comment-author .fn,
 .pingback .url,
 .trackback .url {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 }
 
 .comment-body {
@@ -3570,7 +3570,7 @@ table th,
 }
 
 .comment-navigation a {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-md);
 	font-weight: 600;
 }
@@ -3597,7 +3597,7 @@ img#wpstats {
 .sticky-post {
 	color: var(--global--color-background);
 	background-color: var(--global--color-primary);
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-weight: bold;
 	font-size: var(--global--font-size-sm);
 	line-height: 1;
@@ -3623,7 +3623,7 @@ img#wpstats {
 body[class*="woocommerce"] #page .woocommerce-breadcrumb {
 	margin-bottom: var(--global--spacing-vertical);
 	font-size: var(--global--font-size-base);
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	color: var(--global--color-foreground-light);
 }
 
@@ -3926,7 +3926,7 @@ body[class*="woocommerce"] #page .woocommerce input.button:disabled[disabled]:ho
 }
 
 #content .wc-block-grid .wc-block-grid__product-title {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-base);
 }
 
@@ -4245,7 +4245,7 @@ body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers {
 
 body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers li > * {
 	display: block;
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-md);
 	font-weight: 600;
 	padding-right: calc(0.66 * var(--global--spacing-unit));
@@ -4454,7 +4454,7 @@ body[class*="woocommerce"] #page .woocommerce-tabs .panel {
 
 body[class*="woocommerce"] #page .woocommerce-tabs .panel h2,
 body[class*="woocommerce"] #page .woocommerce-tabs .panel .comment-reply-title {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	font-weight: bold;
 }
@@ -4502,7 +4502,7 @@ body[class*="woocommerce"] #page #reviews #comments ol.commentlist li img.avatar
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist li .woocommerce-review__author {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist li .comment-text {
@@ -4806,7 +4806,7 @@ body[class*="woocommerce"] #page td.product-thumbnail img {
 }
 
 body[class*="woocommerce"] #page td.product-name {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-weight: 700;
 }
 
@@ -4839,7 +4839,7 @@ body[class*="woocommerce"] #page table.cart td.actions .input-text {
  * Checkout page
  */
 body[class*="woocommerce"] #page .woocommerce-order h2 {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-sm);
 	font-weight: bold;
 }
@@ -4854,7 +4854,7 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details {
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li {
 	border: none;
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-sm);
 	margin-left: 0;
 	padding: var(--wc--table--padding);
@@ -4870,7 +4870,7 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li:no
 }
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li strong {
-	font-family: var(--global--font-family-secondary);
+	font-family: var(--global--font-secondary);
 	font-size: var(--global--font-size-md);
 	line-height: var(--global--line-height-heading);
 }
@@ -5046,7 +5046,7 @@ body[class*="woocommerce"] #page .woocommerce-invalid #terms {
 }
 
 body[class*="woocommerce"] #page .checkout h3 {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-sm);
 	font-weight: bold;
 }
@@ -5312,7 +5312,7 @@ body[class*="woocommerce"] #page {
 
 body[class*="woocommerce"] #page ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page ul.product_list_widget li a:not(.remove) {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	line-height: var(--global--line-height-heading);
 }
 

@@ -34,7 +34,7 @@
 
 	small {
 		font-size: var(--global--font-size-base);
-		font-family: var(--global--font-family-secondary);
+		font-family: var(--global--font-secondary);
 		letter-spacing: normal;
 		line-height: var(--global--line-height-heading);
 	}
@@ -179,7 +179,7 @@
 .comment-author .fn,
 .pingback .url,
 .trackback .url {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 }
 
 // Comment body

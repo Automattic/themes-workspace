@@ -50,6 +50,7 @@
 	--button--color-background: var(--global--color-secondary);
 	--button--color-background-hover: var(--global--color-secondary-hover);
 	--button--font-weight: normal;
+<<<<<<< HEAD
   --button--padding-horizontal: 20px;
   --button--padding-vertical: 22px;
 
@@ -60,6 +61,17 @@
   --separator--width: 52px;
   --separator--height: 2px;
   --separator--border-color: var(--global--color-border);
+=======
+	--button--border-width: 1px;
+	--button--border-radius: 4px;
+	--pullquote--font-family: var(--global--font-primary);
+	--pullquote--font-size: var(--heading--font-size-h2);
+	--pullquote--border-width: 0;
+	--pullquote--color-border: transparent;
+	--pullquote--color-foreground: var(--global--color-foreground);
+	--pullquote--color-background: var(--global--color-background);
+	--quote--font-family: var(--global--font-primary);
+>>>>>>> add/varya-default-style
 
 	/* Utilities Font sizes */
 	--utilities--font-size-xs: 14px;
