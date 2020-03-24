@@ -50,16 +50,16 @@
 	--button--color-background: var(--global--color-secondary);
 	--button--color-background-hover: var(--global--color-secondary-hover);
 	--button--font-weight: normal;
-  --button--padding-horizontal: 20px;
-  --button--padding-vertical: 22px;
+    --button--padding-horizontal: 20px;
+    --button--padding-vertical: 22px;
 
 	--pullquote--font-family: var(--global--font-primary);
 	--quote--font-family: var(--global--font-secondary);
-  --quote--border-color: var(--global--color-secondary);
+    --quote--border-color: var(--global--color-secondary);
 
-  --separator--width: 52px;
-  --separator--height: 2px;
-  --separator--border-color: var(--global--color-border);
+    --separator--width: 52px;
+    --separator--height: 2px;
+    --separator--border-color: var(--global--color-border);
 
 	/* Utilities Font sizes */
 	--utilities--font-size-xs: 14px;
