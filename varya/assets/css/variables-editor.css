@@ -33,7 +33,7 @@
 	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	/* Line Height */
-	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.78;
 	--global--line-height-heading: 1.125;
 	/* Colors */
@@ -132,6 +132,30 @@
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 2px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
-	/* Components */
+	--utilities--font-size-xs: var(--global--font-size-xs);
+	--utilities--font-size-sm: var(--global--font-size-sm);
+	--utilities--font-size-md: var(--global--font-size-md);
+	--utilities--font-size-lg: var(--global--font-size-lg);
+	--utilities--font-size-xl: var(--global--font-size-xl);
+	--utilities--font-size-xxl: var(--global--font-size-xxl);
+	--utilities--font-size-xxxl: var(--global--font-size-xxxl);
 	/* Vendors */
+	--wc--wrapper-width: default;
+	--wc--table--border-color: var(--global--color-border);
+	--wc--table--border-radius: 0;
+	--wc--table--border-width: 1px;
+	--wc--table--padding: var(--global--spacing-unit);
+	--wc--tabs--border-color: var(--global--color-border);
+	--wc--tabs--border-radius: 10px;
+	--wc--tabs--border-width: 1px;
+	--wc--tabs--padding: var(--global--spacing-horizontal);
+	--wc--mini-cart--color-background: var(--global--color-background);
+	--wc--mini-cart--color-text: var(--global--color-foreground);
+	--wc--mini-cart--color-subtotal: var(--global--color-foreground);
+	--wc--mini-cart--color-count: var(--global--color-foreground-light);
+	--wc--mini-cart--color-border: var(--global--color-border);
+	--wc--mini-cart--button-text-color: var(--button--color-text);
+	--wc--mini-cart--button-background-color: var(--button--color-background);
+	--wc--mini-cart--width: calc(25 * var(--global--spacing-unit));
+	--wc--star-rating--color: var(--global--color-alert-warning);
 }

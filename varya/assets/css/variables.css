@@ -33,7 +33,7 @@
 	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	/* Line Height */
-	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.78;
 	--global--line-height-heading: 1.125;
 	/* Colors */
@@ -132,6 +132,13 @@
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 2px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--utilities--font-size-xs: var(--global--font-size-xs);
+	--utilities--font-size-sm: var(--global--font-size-sm);
+	--utilities--font-size-md: var(--global--font-size-md);
+	--utilities--font-size-lg: var(--global--font-size-lg);
+	--utilities--font-size-xl: var(--global--font-size-xl);
+	--utilities--font-size-xxl: var(--global--font-size-xxl);
+	--utilities--font-size-xxxl: var(--global--font-size-xxxl);
 	/* Components */
 	--branding--color-text: var(--global--color-foreground);
 	--branding--color-link: var(--global--color-primary);
