@@ -51,6 +51,7 @@
 	--button--border-width: 1px;
 	--button--border-radius: 4px;
 	--pullquote--font-family: var(--global--font-primary);
+	--pullquote--font-size: var(--heading--font-size-h2);
 	--pullquote--border-width: 0;
 	--pullquote--color-border: transparent;
 	--pullquote--color-foreground: var(--global--color-foreground);

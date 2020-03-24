@@ -50,7 +50,7 @@
 	}
 
 	.post-title {
-		font-family: var(--global--font-family-primary);
+		font-family: var(--global--font-primary);
 		font-size: var(--global--font-size-lg);
 		line-height: var(--heading--line-height);
 		font-weight: 600;
@@ -81,7 +81,7 @@
 .pagination {
 
 	.nav-links > * {
-		font-family: var(--global--font-family-primary);
+		font-family: var(--global--font-primary);
 		font-size: var(--global--font-size-md);
 		font-weight: 600;
 		padding-left: calc(0.66 * var(--global--spacing-unit));

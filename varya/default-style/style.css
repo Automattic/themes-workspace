@@ -47,6 +47,9 @@ h6 > a {
 }
 
 /* Blocks */
-.wp-block-pullquote {
+.wp-block-pullquote,
+.wp-block-pullquote.is-style-default.alignleft blockquote > *,
+.wp-block-pullquote.is-style-default.aligncenter blockquote > *,
+.wp-block-pullquote.is-style-default.alignright blockquote > * {
 	text-align: left;
 }
