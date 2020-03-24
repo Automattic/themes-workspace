@@ -32,6 +32,7 @@
 	--heading--font-size-h3: 28px;
 	--heading--font-size-h2: 32px;
 	--heading--font-size-h1: 64px;
+	--heading--font-weight: normal;
 
 	/* Branding */
 	--branding--title--font-size: var(--heading--font-size-h1);
@@ -49,8 +50,11 @@
 	--button--font-weight: normal;
 	--button--border-width: 1px;
 	--button--border-radius: 4px;
-
 	--pullquote--font-family: var(--global--font-primary);
+	--pullquote--border-width: 0;
+	--pullquote--color-border: transparent;
+	--pullquote--color-foreground: var(--global--color-foreground);
+	--pullquote--color-background: var(--global--color-background);
 	--quote--font-family: var(--global--font-primary);
 
 	/* Utilities Font sizes */
