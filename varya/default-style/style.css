@@ -27,17 +27,40 @@ a {
 	border-bottom: 1px solid var(--global--color-secondary);
 }
 
+a:focus {
+    color: var(--global--color-secondary);
+}
+
+a:focus {
+    outline: 1px dotted var(--global--color-secondary);
+    border-bottom: none;
+}
+
+a:active,
+a:hover {
+    border-bottom-width: 2px;
+}
+
+a:active {
+    color: var(--button--color-active);
+    border-color: var(--button--color-active);
+    outline: 0;
+}
+
 a.custom-logo-link,
 nav a {
 	border-bottom: none;
 	text-decoration: none;
 }
 
-.site-title > a
-{
+.site-title > a {
 	text-decoration: underline;
 	text-decoration-color: var(--global--color-secondary);
 	border-bottom: none;
+}
+
+.site-title > a:focus {
+	text-decoration: none;
 }
 
 /****

@@ -45,7 +45,7 @@
 	/* Blocks */
     --button--border-radius: 4px;
     --button--border-width: 2px;
-    --button--color-text: var(--global--color-background);
+    --button--color-text: var(--global--color-secondary);
     --button--color-text-hover: var(--button--color-text);
     --button--color-background: var(--global--color-secondary);
     --button--color-background-hover: var(--global--color-secondary-hover);
