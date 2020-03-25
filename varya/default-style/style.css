@@ -141,3 +141,35 @@ nav a {
     max-height: 647px;
 }
 
+/****
+ * Image
+ */
+.wp-block-image.is-style-floated {
+    background: var(--global--color-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-block-image.is-style-floated:after {
+    content: " ";
+    background: #FAFBF6;
+    left: 0;
+    padding-bottom: 50%;
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0;
+    transform: rotate(45deg) skewX(30deg);
+    width: 100%;
+}
+
+.wp-block-image.is-style-floated > img {
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+    .wp-block-image.is-style-floated.alignfull > img,
+    .wp-block-image.is-style-floated.alignwide > img {
+        padding: calc( 2 * var(--global--spacing-vertical) ) 30%;
+    }
+}

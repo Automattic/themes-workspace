@@ -103,6 +103,14 @@ if ( ! function_exists( 'varya_default_setup' ) ) :
 					'label'        => 'Text Overlap'
 				)
 			);
+      
+			register_block_style(
+				'core/image',
+				array(
+					'name'         => 'floated',
+					'label'        => 'Floated'
+				)
+			);
 		}
 	}
 endif;
