@@ -86,6 +86,24 @@ if ( ! function_exists( 'varya_default_setup' ) ) :
 				),
 			)
 		);
+
+		if ( function_exists( 'register_block_style' ) ) {
+			register_block_style(
+				'core/group',
+				array(
+					'name'         => 'overflow',
+					'label'        => 'Overflow'
+				)
+			);
+
+			register_block_style(
+				'core/cover',
+				array(
+					'name'         => 'overlap',
+					'label'        => 'Text Overlap'
+				)
+			);
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'varya_default_setup', 12 );
