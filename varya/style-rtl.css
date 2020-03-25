@@ -1427,6 +1427,10 @@ button[data-load-more-btn],
 	line-height: var(--button--line-height);
 }
 
+.wp-block-button .wp-block-button__link:active {
+	background: var(--button--color-active);
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
@@ -1434,12 +1438,13 @@ button[data-load-more-btn],
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:active {
-	color: var(--button--color-background);
-}
-
 .wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
 	color: var(--button--color-background-hover);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:active {
+	color: var(--button--color-active);
+	border: var(--button--border-width) solid var(--button--color-active);
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {

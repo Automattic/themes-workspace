@@ -11,7 +11,7 @@
 	--global--color-primary: #000000;
 	--global--color-primary-hover: #A36265;
 	--global--color-secondary: #A36265;
-	--global--color-secondary-hover: #333333;
+	--global--color-secondary-hover: #855053;
 	--global--color-black: black;
 	--global--color-white: white;
 	--global--color-foreground: #333333;
@@ -57,7 +57,6 @@
     --separator--height: 2px;
     --separator--border-color: var(--global--color-border);
         
-
     --pullquote--font-family: var(--global--font-primary);
     --pullquote--font-size: var(--heading--font-size-h2);
     --pullquote--border-width: 0;
