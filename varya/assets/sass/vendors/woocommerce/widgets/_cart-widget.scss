@@ -13,7 +13,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 		li {
 
 			a:not(.remove) {
-				font-family: var(--global--font-family-primary);
+				font-family: var(--global--font-primary);
 				line-height: var(--global--line-height-heading);
 			}
 
