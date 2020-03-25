@@ -60,7 +60,7 @@
 	/* Spacing */
 	--global--spacing-unit: 16px;
 	--global--spacing-measure: unset;
-	--global--spacing-horizontal: 32px;
+	--global--spacing-horizontal: 16px;
 	--global--spacing-vertical: 32px;
 	/* Elevation */
 	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
