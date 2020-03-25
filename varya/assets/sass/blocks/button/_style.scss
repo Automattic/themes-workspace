@@ -20,6 +20,12 @@ input[type="submit"],
 	font-weight: var(--button--font-weight);
 	line-height: var(--button--line-height);
 
+    .wp-block-button__link {
+        &:active {
+            background: var(--button--color-active);
+        }
+    }
+
 	// Outline Style
 	&.is-style-outline {
 
@@ -29,14 +35,15 @@ input[type="submit"],
 			border: var(--button--border-width) solid currentcolor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-			&:active {
-				color: var(--button--color-background);
-			}
-
 			&:hover,
 			&:focus,
 			&.has-focus {
 				color: var(--button--color-background-hover);
+			}
+
+			&:active {
+				color: var(--button--color-active) ;
+                border: var(--button--border-width) solid var(--button--color-active);
 			}
 		}
 	}
