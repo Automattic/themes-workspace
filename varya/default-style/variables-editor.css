@@ -1,4 +1,5 @@
 .editor-styles-wrapper {
+
 	/* Global Fonts */
 	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
 	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
@@ -32,6 +33,32 @@
 	--heading--font-size-h3: 28px;
 	--heading--font-size-h2: 32px;
 	--heading--font-size-h1: 64px;
+	--heading--font-weight: normal;
+
+	/* Branding */
+	--branding--title--font-size: var(--heading--font-size-h1);
+	--branding--title--font-weight: normal;
+
+	/* Navigation */
+	--primary-nav--font-family: var(--global--font-secondary);
+	--primary-nav--font-size: 16px;
+	--primary-nav--font-weight: normal;
+
+	/* Blocks */
+	--button--color-text: var(--global--color-background);
+	--button--color-text-hover: var(--button--color-text);
+	--button--color-background: var(--global--color-secondary);
+	--button--color-background-hover: var(--global--color-secondary-hover);
+	--button--font-weight: normal;
+	--button--border-width: 1px;
+	--button--border-radius: 4px;
+	--pullquote--font-family: var(--global--font-primary);
+	--pullquote--font-size: var(--heading--font-size-h2);
+	--pullquote--border-width: 0;
+	--pullquote--color-border: transparent;
+	--pullquote--color-foreground: var(--global--color-foreground);
+	--pullquote--color-background: var(--global--color-background);
+	--quote--font-family: var(--global--font-primary);
 
 	/* Utilities Font sizes */
 	--utilities--font-size-xs: 14px;

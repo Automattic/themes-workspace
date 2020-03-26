@@ -1,4 +1,5 @@
 :root {
+
 	/* Global Fonts */
 	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
 	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
@@ -36,6 +37,7 @@
 
 	/* Branding */
 	--branding--title--font-size: var(--heading--font-size-h1);
+	--branding--title--font-weight: normal;
 
 	/* Navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
