@@ -87,8 +87,10 @@
 	/* Blocks */
 	--button--color-text: var(--global--color-background);
 	--button--color-text-hover: var(--button--color-text);
+	--button--color-text-active: var(--button--color-text);
 	--button--color-background: var(--global--color-primary);
 	--button--color-background-hover: var(--global--color-primary-hover);
+	--button--color-background-active: var(--global--color-foreground);
 	--button--font-family: var(--global--font-ui);
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: bold;
@@ -129,7 +131,10 @@
 	--pullquote--color-foreground: var(--global--color-foreground);
 	--pullquote--color-background: var(--global--color-background);
 	--quote--border-color: var(--global--color-primary);
+	--quote--border-width: 4px;
 	--quote--font-family: var(--global--font-primary);
+	--quote--font-size: var(--heading--font-size-h4);
+	--quote--font-size-large: var(--heading--font-size-h3);
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 2px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));

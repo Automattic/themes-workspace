@@ -378,6 +378,18 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:af
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
+body[class*="woocommerce"] #page #respond input#submit:active,
+body[class*="woocommerce"] #page a.button:active,
+body[class*="woocommerce"] #page button.button:active,
+body[class*="woocommerce"] #page input.button:active,
+body[class*="woocommerce"] #page .cart .button:active,
+body[class*="woocommerce"] #page a.added_to_cart:active,
+body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
+body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-text-active);
+}
+
 body[class*="woocommerce"] #page #respond input#submit:hover,
 body[class*="woocommerce"] #page a.button:hover,
 body[class*="woocommerce"] #page button.button:hover,
