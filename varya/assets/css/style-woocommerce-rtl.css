@@ -387,7 +387,7 @@ body[class*="woocommerce"] #page a.added_to_cart:active,
 body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
 body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
 	color: var(--button--color-text-active);
-	background-color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
 }
 
 body[class*="woocommerce"] #page #respond input#submit:hover,
