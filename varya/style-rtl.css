@@ -129,14 +129,28 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	max-width: var(--responsive--alignfull-width);
 }
 
-.wp-block-image .alignleft, .entry-content > .alignleft {
-	margin-left: auto;
-	margin-right: var(--responsive--alignleft-margin);
+.entry-content > .alignleft {
+	margin-left: 0;
+	margin-right: var(--responsive--spacing-horizontal);
 }
 
-.wp-block-image .alignright, .entry-content > .alignright {
-	margin-left: var(--responsive--alignright-margin);
-	margin-right: auto;
+@media only screen and (min-width: 560px) {
+	.entry-content .wp-block-button.alignright, .entry-content > .alignleft {
+		margin-left: auto;
+		margin-right: var(--responsive--alignleft-margin);
+	}
+}
+
+.entry-content > .alignright {
+	margin-left: var(--responsive--spacing-horizontal);
+	margin-right: 0;
+}
+
+@media only screen and (min-width: 560px) {
+	.entry-content .wp-block-button.alignleft, .entry-content > .alignright {
+		margin-left: var(--responsive--alignright-margin);
+		margin-right: auto;
+	}
 }
 
 /**
@@ -444,6 +458,22 @@ body[class*="woocommerce"] #page .woocommerce input.button:after,
 body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:after,
 body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
+}
+
+
+.button:active, button:active,
+input:active[type="submit"],
+.wp-block-button__link:active,
+.wp-block-file__button:active, .a8c-posts-list__view-all:active, body[class*="woocommerce"] #page #respond input#submit:active,
+body[class*="woocommerce"] #page a.button:active,
+body[class*="woocommerce"] #page button.button:active,
+body[class*="woocommerce"] #page input.button:active,
+body[class*="woocommerce"] #page .cart .button:active,
+body[class*="woocommerce"] #page a.added_to_cart:active,
+body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
+body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
 }
 
 
@@ -1338,6 +1368,22 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:af
 }
 
 
+.button:active, button:active,
+input:active[type="submit"],
+.wp-block-button__link:active,
+.wp-block-file__button:active, .a8c-posts-list__view-all:active, body[class*="woocommerce"] #page #respond input#submit:active,
+body[class*="woocommerce"] #page a.button:active,
+body[class*="woocommerce"] #page button.button:active,
+body[class*="woocommerce"] #page input.button:active,
+body[class*="woocommerce"] #page .cart .button:active,
+body[class*="woocommerce"] #page a.added_to_cart:active,
+body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
+body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
+}
+
+
 .button:hover, button:hover,
 input:hover[type="submit"],
 .wp-block-button__link:hover,
@@ -1449,6 +1495,14 @@ button[data-load-more-btn],
 
 .wp-block-button.is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+.entry-content .wp-block-button.alignleft {
+	margin-left: var(--global--spacing-horizontal);
+}
+
+.entry-content .wp-block-button.alignright {
+	margin-right: var(--global--spacing-horizontal);
 }
 
 .wp-block-code {
@@ -1775,6 +1829,14 @@ h6, .h6 {
 	margin-top: calc(0.5 * var(--global--spacing-unit));
 	margin-bottom: var(--global--spacing-unit);
 	text-align: center;
+}
+
+.wp-block-image .alignright {
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.wp-block-image .alignleft {
+	margin-left: var(--global--spacing-horizontal);
 }
 
 .entry-content > *[class="wp-block-image"],
@@ -2195,6 +2257,7 @@ p.has-background {
 
 .wp-block-quote {
 	border-right-color: var(--quote--border-color);
+	border-right-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
 	padding-right: var(--global--spacing-horizontal);
 	/**
@@ -2217,7 +2280,7 @@ p.has-background {
 
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
-	font-size: var(--heading--font-size-h4);
+	font-size: var(--quote--font-size);
 	line-height: var(--heading--line-height);
 }
 
@@ -2261,7 +2324,7 @@ p.has-background {
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-	font-size: var(--heading--font-size-h3);
+	font-size: var(--quote--font-size-large);
 	line-height: var(--heading--line-height);
 }
 

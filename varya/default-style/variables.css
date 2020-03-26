@@ -1,4 +1,5 @@
 :root {
+
 	/* Global Fonts */
 	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
 	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
@@ -36,6 +37,7 @@
 
 	/* Branding */
 	--branding--title--font-size: var(--heading--font-size-h1);
+	--branding--title--font-weight: normal;
 
 	/* Navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
@@ -44,28 +46,32 @@
 
 	/* Blocks */
     --button--border-radius: 4px;
-    --button--border-width: 2px;
+    --button--border-width: 1px;
     --button--color-text: var(--global--color-white);
-    --button--color-text-hover: var(--button--color-foreground);
+    --button--color-text-hover: var(--button--color-text);
     --button--color-background: var(--global--color-secondary);
     --button--color-background-hover: var(--global--color-secondary-hover);
+	  --button--color-background-active: var(--global--color-primary);
     --button--font-weight: normal;
     --button--padding-horizontal: 20px;
     --button--padding-vertical: 22px;
 
     --separator--width: 52px;
     --separator--height: 2px;
-    --separator--border-color: var(--global--color-border);
+    --separator--border-color: #757575;
         
     --pullquote--font-family: var(--global--font-primary);
     --pullquote--font-size: var(--heading--font-size-h2);
     --pullquote--border-width: 0;
     --pullquote--color-border: transparent;
     --pullquote--color-foreground: var(--global--color-foreground);
-    --pullquote--color-background: var(--global--color-background);
+  --pullquote--color-background: var(--global--color-background);
 
-    --quote--font-family: var(--global--font-secondary);
-    --quote--border-color: var(--global--color-secondary);
+  --quote--font-family: var(--global--font-secondary);
+  --quote--border-color: var(--global--color-secondary);
+	--quote--border-width: 1px;
+	--quote--font-size: var(--heading--font-size-h6);
+	--quote--font-size-large: var(--heading--font-size-h4);
 
 	/* Utilities Font sizes */
 	--utilities--font-size-xs: 14px;

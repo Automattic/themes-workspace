@@ -11,11 +11,11 @@
 	}
 
 	.alignright {
-		@extend %responsive-alignright;
+		margin-left: var(--global--spacing-horizontal);
 	}
 
 	.alignleft {
-		@extend %responsive-alignleft;
+		margin-right: var(--global--spacing-horizontal);
 	}
 }
 

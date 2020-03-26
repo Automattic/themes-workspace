@@ -176,3 +176,10 @@ nav a {
         padding: calc( 2 * var(--global--spacing-vertical) ) 30%;
     }
 }
+
+.wp-block-quote.is-style-large {
+	border-left-color: var(--quote--border-color);
+	border-left-style: solid;
+	border-left-width: var(--quote--border-width);
+	padding-left: var(--global--spacing-horizontal);
+}
