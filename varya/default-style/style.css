@@ -1,0 +1,62 @@
+/*
+Theme Name: Varya Default Style
+Theme URI: https://github.com/Automattic/themes/varya
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Make your online portfolio impressively awesome with Varya.
+Requires at least: WordPress 4.9.6
+Version: 1.2.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Template: varya
+Text Domain: varya-default
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Varia is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid var(--global--color-secondary);
+}
+
+a.custom-logo-link,
+nav a {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.site-title > a,
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	text-decoration: underline;
+	text-underline-width: .125em;
+	text-decoration-color: var(--global--color-secondary);
+	border-bottom: none;
+}
+
+/* Blocks */
+.wp-block-pullquote,
+.wp-block-pullquote.is-style-default.alignleft blockquote > *,
+.wp-block-pullquote.is-style-default.aligncenter blockquote > *,
+.wp-block-pullquote.is-style-default.alignright blockquote > * {
+	text-align: left;
+}
+
+.wp-block-quote.is-style-large {
+	border-left-color: var(--quote--border-color);
+	border-left-style: solid;
+	border-left-width: var(--quote--border-width);
+	padding-left: var(--global--spacing-horizontal);
+}

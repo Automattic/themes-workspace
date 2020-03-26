@@ -28,7 +28,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio)); // #{$typescale-base * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio * $typescale-ratio};
 
 	/* Line Height */
-	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-base: #{$typescale-base / ( $typescale-base * 0 + 1 )};
 	--global--line-height-body: 1.78;
 	--global--line-height-heading: 1.125;
 

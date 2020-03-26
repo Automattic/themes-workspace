@@ -1,6 +1,6 @@
 <?php
 /**
- * varya functions and definitions
+ * Varya functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -303,4 +303,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
+}
+
+/**
+ * Load default styles for Varya parent-theme-only
+ */
+if ( ! is_child_theme() ) {
+	require get_template_directory() . '/default-style/functions.php';
 }

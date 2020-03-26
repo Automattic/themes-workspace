@@ -33,7 +33,7 @@
 	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	/* Line Height */
-	--global--line-height-base: strip-unit($typescale-base);
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.78;
 	--global--line-height-heading: 1.125;
 	/* Colors */
@@ -87,8 +87,10 @@
 	/* Blocks */
 	--button--color-text: var(--global--color-background);
 	--button--color-text-hover: var(--button--color-text);
+	--button--color-text-active: var(--button--color-text);
 	--button--color-background: var(--global--color-primary);
 	--button--color-background-hover: var(--global--color-primary-hover);
+	--button--color-background-active: var(--global--color-foreground);
 	--button--font-family: var(--global--font-ui);
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: bold;
@@ -118,20 +120,48 @@
 	--heading--font-weight-strong: 800;
 	--latest-posts--title-font-family: var(--heading--font-family);
 	--latest-posts--title-font-size: var(--heading--font-size-h3);
-	--latest-posts--description-font-family: var(--global--font-family-secondary);
+	--latest-posts--description-font-family: var(--global--font-secondary);
 	--latest-posts--description-font-size: var(--global--font-size-sm);
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
-	--pullquote--font-family: var(--global--font-family-primary);
+	--pullquote--font-family: var(--global--font-primary);
+	--pullquote--font-size: var(--heading--font-size-h4);
 	--pullquote--border-width: 4px;
 	--pullquote--color-border: var(--global--color-foreground);
 	--pullquote--color-foreground: var(--global--color-foreground);
 	--pullquote--color-background: var(--global--color-background);
 	--quote--border-color: var(--global--color-primary);
-	--quote--font-family: var(--global--font-family-primary);
+	--quote--border-width: 4px;
+	--quote--font-family: var(--global--font-primary);
+	--quote--font-size: var(--heading--font-size-h4);
+	--quote--font-size-large: var(--heading--font-size-h3);
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 2px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
-	/* Components */
+	--utilities--font-size-xs: var(--global--font-size-xs);
+	--utilities--font-size-sm: var(--global--font-size-sm);
+	--utilities--font-size-md: var(--global--font-size-md);
+	--utilities--font-size-lg: var(--global--font-size-lg);
+	--utilities--font-size-xl: var(--global--font-size-xl);
+	--utilities--font-size-xxl: var(--global--font-size-xxl);
+	--utilities--font-size-xxxl: var(--global--font-size-xxxl);
 	/* Vendors */
+	--wc--wrapper-width: default;
+	--wc--table--border-color: var(--global--color-border);
+	--wc--table--border-radius: 0;
+	--wc--table--border-width: 1px;
+	--wc--table--padding: var(--global--spacing-unit);
+	--wc--tabs--border-color: var(--global--color-border);
+	--wc--tabs--border-radius: 10px;
+	--wc--tabs--border-width: 1px;
+	--wc--tabs--padding: var(--global--spacing-horizontal);
+	--wc--mini-cart--color-background: var(--global--color-background);
+	--wc--mini-cart--color-text: var(--global--color-foreground);
+	--wc--mini-cart--color-subtotal: var(--global--color-foreground);
+	--wc--mini-cart--color-count: var(--global--color-foreground-light);
+	--wc--mini-cart--color-border: var(--global--color-border);
+	--wc--mini-cart--button-text-color: var(--button--color-text);
+	--wc--mini-cart--button-background-color: var(--button--color-background);
+	--wc--mini-cart--width: calc(25 * var(--global--spacing-unit));
+	--wc--star-rating--color: var(--global--color-alert-warning);
 }

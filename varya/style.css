@@ -129,18 +129,36 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	max-width: var(--responsive--alignfull-width);
 }
 
-.wp-block-image .alignleft, .entry-content > .alignleft {
+.entry-content > .alignleft {
 	/*rtl:ignore*/
-	margin-left: auto;
+	margin-left: 0;
 	/*rtl:ignore*/
-	margin-right: var(--responsive--alignleft-margin);
+	margin-right: var(--responsive--spacing-horizontal);
 }
 
-.wp-block-image .alignright, .entry-content > .alignright {
+@media only screen and (min-width: 560px) {
+	.entry-content .wp-block-button.alignright, .entry-content > .alignleft {
+		/*rtl:ignore*/
+		margin-left: auto;
+		/*rtl:ignore*/
+		margin-right: var(--responsive--alignleft-margin);
+	}
+}
+
+.entry-content > .alignright {
 	/*rtl:ignore*/
-	margin-left: var(--responsive--alignright-margin);
+	margin-left: var(--responsive--spacing-horizontal);
 	/*rtl:ignore*/
-	margin-right: auto;
+	margin-right: 0;
+}
+
+@media only screen and (min-width: 560px) {
+	.entry-content .wp-block-button.alignleft, .entry-content > .alignright {
+		/*rtl:ignore*/
+		margin-left: var(--responsive--alignright-margin);
+		/*rtl:ignore*/
+		margin-right: auto;
+	}
 }
 
 /**
@@ -448,6 +466,22 @@ body[class*="woocommerce"] #page .woocommerce input.button:after,
 body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:after,
 body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
+}
+
+
+.button:active, button:active,
+input:active[type="submit"],
+.wp-block-button__link:active,
+.wp-block-file__button:active, .a8c-posts-list__view-all:active, body[class*="woocommerce"] #page #respond input#submit:active,
+body[class*="woocommerce"] #page a.button:active,
+body[class*="woocommerce"] #page button.button:active,
+body[class*="woocommerce"] #page input.button:active,
+body[class*="woocommerce"] #page .cart .button:active,
+body[class*="woocommerce"] #page a.added_to_cart:active,
+body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
+body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
 }
 
 
@@ -1342,6 +1376,22 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:af
 }
 
 
+.button:active, button:active,
+input:active[type="submit"],
+.wp-block-button__link:active,
+.wp-block-file__button:active, .a8c-posts-list__view-all:active, body[class*="woocommerce"] #page #respond input#submit:active,
+body[class*="woocommerce"] #page a.button:active,
+body[class*="woocommerce"] #page button.button:active,
+body[class*="woocommerce"] #page input.button:active,
+body[class*="woocommerce"] #page .cart .button:active,
+body[class*="woocommerce"] #page a.added_to_cart:active,
+body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
+body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
+}
+
+
 .button:hover, button:hover,
 input:hover[type="submit"],
 .wp-block-button__link:hover,
@@ -1448,6 +1498,14 @@ button[data-load-more-btn],
 
 .wp-block-button.is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+.entry-content .wp-block-button.alignleft {
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.entry-content .wp-block-button.alignright {
+	margin-left: var(--global--spacing-horizontal);
 }
 
 .wp-block-code {
@@ -1776,6 +1834,14 @@ h6, .h6 {
 	text-align: center;
 }
 
+.wp-block-image .alignright {
+	margin-left: var(--global--spacing-horizontal);
+}
+
+.wp-block-image .alignleft {
+	margin-right: var(--global--spacing-horizontal);
+}
+
 .entry-content > *[class="wp-block-image"],
 .entry-content [class*="inner-container"] > *[class="wp-block-image"] {
 	margin-top: 0;
@@ -2064,7 +2130,7 @@ p.has-background {
 .a8c-posts-list-item__featured span {
 	color: var(--global--color-background);
 	background-color: var(--global--color-primary);
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-weight: bold;
 	font-size: var(--global--font-size-sm);
 	line-height: 1;
@@ -2138,7 +2204,7 @@ p.has-background {
 
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
-	font-size: var(--heading--font-size-h4);
+	font-size: var(--pullquote--font-size);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height);
 }
@@ -2194,6 +2260,7 @@ p.has-background {
 
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
+	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 	/**
@@ -2216,7 +2283,7 @@ p.has-background {
 
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
-	font-size: var(--heading--font-size-h4);
+	font-size: var(--quote--font-size);
 	line-height: var(--heading--line-height);
 }
 
@@ -2260,7 +2327,7 @@ p.has-background {
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-	font-size: var(--heading--font-size-h3);
+	font-size: var(--quote--font-size-large);
 	line-height: var(--heading--line-height);
 }
 
@@ -2752,6 +2819,7 @@ table th,
 
 .main-navigation {
 	color: var(--primary-nav--color-text);
+	font-size: var(--primary-nav--font-size);
 }
 
 .main-navigation > div {
@@ -3167,7 +3235,9 @@ table th,
 }
 
 .entry-meta > span > *,
-.entry-footer > span > * {
+.entry-meta > span span .fn,
+.entry-footer > span > *,
+.entry-footer > span span .fn {
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -3268,7 +3338,7 @@ table th,
 }
 
 .post-navigation .post-title {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
 	font-weight: 600;
@@ -3297,7 +3367,7 @@ table th,
 }
 
 .pagination .nav-links > * {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-md);
 	font-weight: 600;
 	padding-left: calc(0.66 * var(--global--spacing-unit));
@@ -3353,7 +3423,7 @@ table th,
 
 .comment-reply-title small {
 	font-size: var(--global--font-size-base);
-	font-family: var(--global--font-family-secondary);
+	font-family: var(--global--font-secondary);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
 }
@@ -3498,7 +3568,7 @@ table th,
 .comment-author .fn,
 .pingback .url,
 .trackback .url {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 }
 
 .comment-body {
@@ -3588,7 +3658,7 @@ table th,
 }
 
 .comment-navigation a {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-md);
 	font-weight: 600;
 }
@@ -3615,7 +3685,7 @@ img#wpstats {
 .sticky-post {
 	color: var(--global--color-background);
 	background-color: var(--global--color-primary);
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-weight: bold;
 	font-size: var(--global--font-size-sm);
 	line-height: 1;
@@ -3641,7 +3711,7 @@ img#wpstats {
 body[class*="woocommerce"] #page .woocommerce-breadcrumb {
 	margin-bottom: var(--global--spacing-vertical);
 	font-size: var(--global--font-size-base);
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	color: var(--global--color-foreground-light);
 }
 
@@ -3944,7 +4014,7 @@ body[class*="woocommerce"] #page .woocommerce input.button:disabled[disabled]:ho
 }
 
 #content .wc-block-grid .wc-block-grid__product-title {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-base);
 }
 
@@ -4263,7 +4333,7 @@ body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers {
 
 body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers li > * {
 	display: block;
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-md);
 	font-weight: 600;
 	padding-left: calc(0.66 * var(--global--spacing-unit));
@@ -4472,7 +4542,7 @@ body[class*="woocommerce"] #page .woocommerce-tabs .panel {
 
 body[class*="woocommerce"] #page .woocommerce-tabs .panel h2,
 body[class*="woocommerce"] #page .woocommerce-tabs .panel .comment-reply-title {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	font-weight: bold;
 }
@@ -4520,7 +4590,7 @@ body[class*="woocommerce"] #page #reviews #comments ol.commentlist li img.avatar
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist li .woocommerce-review__author {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist li .comment-text {
@@ -4824,7 +4894,7 @@ body[class*="woocommerce"] #page td.product-thumbnail img {
 }
 
 body[class*="woocommerce"] #page td.product-name {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-weight: 700;
 }
 
@@ -4857,7 +4927,7 @@ body[class*="woocommerce"] #page table.cart td.actions .input-text {
  * Checkout page
  */
 body[class*="woocommerce"] #page .woocommerce-order h2 {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-sm);
 	font-weight: bold;
 }
@@ -4872,7 +4942,7 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details {
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li {
 	border: none;
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-sm);
 	margin-right: 0;
 	padding: var(--wc--table--padding);
@@ -4888,7 +4958,7 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li:no
 }
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li strong {
-	font-family: var(--global--font-family-secondary);
+	font-family: var(--global--font-secondary);
 	font-size: var(--global--font-size-md);
 	line-height: var(--global--line-height-heading);
 }
@@ -5064,7 +5134,7 @@ body[class*="woocommerce"] #page .woocommerce-invalid #terms {
 }
 
 body[class*="woocommerce"] #page .checkout h3 {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-sm);
 	font-weight: bold;
 }
@@ -5330,7 +5400,7 @@ body[class*="woocommerce"] #page {
 
 body[class*="woocommerce"] #page ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page ul.product_list_widget li a:not(.remove) {
-	font-family: var(--global--font-family-primary);
+	font-family: var(--global--font-primary);
 	line-height: var(--global--line-height-heading);
 }
 

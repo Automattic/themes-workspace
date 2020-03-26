@@ -23,6 +23,7 @@
 	@include pullquote-variables();
 	@include quote-variables();
 	@include separator-variables();
+	@include utilities-variables();
 	/* Components */
 	@include header-variables();
 	@include entry-variables();

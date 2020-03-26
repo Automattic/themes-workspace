@@ -15,6 +15,7 @@
 }
 
 .entry-content > .alignleft {
+	@extend %responsive-alignleft-mobile;
 	@extend %responsive-alignleft;
 }
 
@@ -43,6 +44,7 @@
 }
 
 .entry-content > .alignright {
+	@extend %responsive-alignright-mobile;
 	@extend %responsive-alignright;
 }
 

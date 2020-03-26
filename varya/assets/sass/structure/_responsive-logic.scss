@@ -160,19 +160,38 @@ $breakpoint_xxl: 1280px;
 	max-width: var(--responsive--alignfull-width);
 }
 
-%responsive-alignleft {
+%responsive-alignleft-mobile {
 	/*rtl:ignore*/
-	margin-left: auto;
+	margin-left: 0;
 	/*rtl:ignore*/
-	margin-right: var(--responsive--alignleft-margin);
+	margin-right: var(--responsive--spacing-horizontal);
 }
 
-%responsive-alignright {
-	/*rtl:ignore*/
-	margin-left: var(--responsive--alignright-margin);
-	/*rtl:ignore*/
-	margin-right: auto;
+@include media(mobile) {
+	%responsive-alignleft {
+		/*rtl:ignore*/
+		margin-left: auto;
+		/*rtl:ignore*/
+		margin-right: var(--responsive--alignleft-margin);
+	}
 }
+
+%responsive-alignright-mobile {
+	/*rtl:ignore*/
+	margin-left: var(--responsive--spacing-horizontal);
+	/*rtl:ignore*/
+	margin-right: 0;
+}
+
+@include media(mobile) {
+	%responsive-alignright {
+		/*rtl:ignore*/
+		margin-left: var(--responsive--alignright-margin);
+		/*rtl:ignore*/
+		margin-right: auto;
+	}
+}
+
 
 /**
  * Output
