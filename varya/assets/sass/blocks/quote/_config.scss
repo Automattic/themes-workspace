@@ -1,4 +1,7 @@
 @mixin quote-variables() {
 	--quote--border-color: var(--global--color-primary);
+	--quote--border-width: 4px;
 	--quote--font-family: var(--global--font-primary);
+	--quote--font-size: var(--heading--font-size-h4);
+	--quote--font-size-large: var(--heading--font-size-h3);
 }

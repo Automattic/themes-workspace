@@ -1,6 +1,7 @@
 .wp-block-quote {
 
 	border-left-color: var(--quote--border-color);
+	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 
@@ -19,7 +20,7 @@
 
 	p {
 		font-family: var(--quote--font-family);
-		font-size: var(--heading--font-size-h4);
+		font-size: var(--quote--font-size);
 		line-height: var(--heading--line-height);
 	}
 
@@ -53,7 +54,7 @@
 		padding: 0;
 
 		p {
-			font-size: var(--heading--font-size-h3);
+			font-size: var(--quote--font-size-large);
 			line-height: var(--heading--line-height);
 		}
 
