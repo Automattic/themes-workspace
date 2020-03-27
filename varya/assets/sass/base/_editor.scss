@@ -1,10 +1,11 @@
-body {
+body,
+p {
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
 	font-size: var(--global--font-size-root);
 	font-weight: normal;
-	line-height: var(--global--font-line-height-body);
+	line-height: var(--global--line-height-body);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
