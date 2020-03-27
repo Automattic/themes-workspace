@@ -2842,21 +2842,6 @@ nav a {
 	border-bottom: none;
 }
 
-/* Blocks */
-.wp-block-pullquote,
-.wp-block-pullquote.is-style-default.alignleft blockquote > *,
-.wp-block-pullquote.is-style-default.aligncenter blockquote > *,
-.wp-block-pullquote.is-style-default.alignright blockquote > * {
-	text-align: left;
-}
-
-.wp-block-quote.is-style-large {
-	border-left-color: var(--quote--border-color);
-	border-left-style: solid;
-	border-left-width: var(--quote--border-width);
-	padding-left: var(--global--spacing-horizontal);
-}
-
 .main-navigation {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
