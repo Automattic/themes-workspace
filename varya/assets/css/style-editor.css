@@ -947,7 +947,7 @@ p.has-background:not(.has-background-background-color) a {
 	padding-left: 0;
 }
 
-.editor-styles-wrapper .wp-block-pullquote {
+.wp-block-pullquote {
 	padding: calc( 3 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -959,58 +959,58 @@ p.has-background:not(.has-background-background-color) a {
 	color: var(--pullquote--color-foreground);
 }
 
-.editor-styles-wrapper .wp-block-pullquote blockquote {
+.wp-block-pullquote blockquote {
 	padding-left: 0;
 }
 
-.editor-styles-wrapper .wp-block-pullquote p {
+.wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
 	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height);
 }
 
-.editor-styles-wrapper .wp-block-pullquote a {
+.wp-block-pullquote a {
 	color: currentColor;
 }
 
-.editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
-.editor-styles-wrapper .wp-block-pullquote cite,
-.editor-styles-wrapper .wp-block-pullquote footer {
+.wp-block-pullquote .wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
 	color: var(--global--color-foreground-light);
 	font-size: var(--global--font-size-sm);
 }
 
-.editor-styles-wrapper .wp-block-pullquote:not(.is-style-solid-color) {
+.wp-block-pullquote:not(.is-style-solid-color) {
 	background: none;
 }
 
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color {
+.wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
 }
 
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color.alignleft blockquote,
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color.alignright blockquote {
+.wp-block-pullquote.is-style-solid-color.alignleft blockquote,
+.wp-block-pullquote.is-style-solid-color.alignright blockquote {
 	padding-left: var(--global--spacing-unit);
 	padding-right: var(--global--spacing-unit);
 	max-width: inherit;
 }
 
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color blockquote {
+.wp-block-pullquote.is-style-solid-color blockquote {
 	padding-left: 0;
 }
 
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color cite,
-.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color footer {
+.wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
+.wp-block-pullquote.is-style-solid-color cite,
+.wp-block-pullquote.is-style-solid-color footer {
 	color: currentColor;
 }
 
-.editor-styles-wrapper .wp-block-pullquote.alignwide > p,
-.editor-styles-wrapper .wp-block-pullquote.alignfull > p,
-.editor-styles-wrapper .wp-block-pullquote.alignwide blockquote,
-.editor-styles-wrapper .wp-block-pullquote.alignfull blockquote {
+.wp-block-pullquote.alignwide > p,
+.wp-block-pullquote.alignfull > p,
+.wp-block-pullquote.alignwide blockquote,
+.wp-block-pullquote.alignfull blockquote {
 	margin-left: auto;
 	margin-right: auto;
 }
