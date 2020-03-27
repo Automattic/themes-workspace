@@ -1,23 +1,9 @@
 /**
- * Layout
- * - Structral and responsive styles
- */
-/**
  * Repsonsive Styles
  */
 /**
  * Required Variables
  */
-@custom-media --sm only screen and (min-width: 560px);
-@custom-media --md only screen and (min-width: 640px);
-@custom-media --lg only screen and (min-width: 782px);
-@custom-media --xl only screen and (min-width: 1024px);
-@custom-media --xxl only screen and (min-width: $breakpoint_xxl);
-@custom-media --sm-max only screen and (max-width: 559px);
-@custom-media --md-max only screen and (max-width: 639px);
-@custom-media --lg-max only screen and (max-width: 781px);
-@custom-media --xl-max only screen and (max-width: 1023px);
-@custom-media --xxl-max only screen and (max-width: 1279px);
 /**
  * Root Media Query Variables
  */
@@ -32,7 +18,7 @@
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
-@media (--sm) {
+@media only screen and (min-width: 560px) {
 	:root {
 		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
@@ -41,7 +27,7 @@
 	}
 }
 
-@media (--md) {
+@media only screen and (min-width: 640px) {
 	:root {
 		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
@@ -50,7 +36,7 @@
 	}
 }
 
-@media (--lg) {
+@media only screen and (min-width: 782px) {
 	:root {
 		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(782px - var(--responsive--spacing-horizontal));
@@ -59,7 +45,7 @@
 	}
 }
 
-@media (--xl) {
+@media only screen and (min-width: 1024px) {
 	:root {
 		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
@@ -68,7 +54,7 @@
 	}
 }
 
-@media (--xxl) {
+@media only screen and (min-width: $breakpoint_xxl) {
 	:root {
 		--responsive--aligndefault-width: calc(1024px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
@@ -108,181 +94,6 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 /**
  * Output
  */
-/**
- * Site Structure
- *
- * - Set vertical margins and responsive widths on
- *   top-level wrappers and content wrappers
- * - `--global--width-content` is a responsive veriable
- * - See: globals/_global-width-responsive.scss
- */
-/**
- * Top Level Wrappers (header, main, footer)
- * - Set vertical padding and horizontal margins
- */
-.site-header,
-.site-main,
-.site-footer {
-	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
-	margin-right: auto;
-	margin-left: auto;
-}
-
-@media (--sm) {
-	.site-header,
-	.site-main,
-	.site-footer {
-		padding-top: var(--global--spacing-vertical);
-		padding-left: 0;
-		padding-bottom: var(--global--spacing-vertical);
-		padding-right: 0;
-	}
-}
-
-/**
- * Site-main children wrappers
- * - Add double vertical margins here for clearer heirarchy
- */
-.site-main > * {
-	margin-top: calc(3 * var(--global--spacing-vertical));
-	margin-bottom: calc(3 * var(--global--spacing-vertical));
-}
-
-.site-main > *:first-child {
-	margin-top: 0;
-}
-
-.site-main > *:last-child {
-	margin-bottom: 0;
-}
-
-/**
- * Set the default maximum responsive content-width
- */
-/**
- * Set the wide maximum responsive content-width
- */
-/**
- * Set the full maximum responsive content-width
- */
-/*
- * Block & non-gutenberg content wrappers
- * - Set margins
- */
-.entry-header,
-.post-thumbnail,
-.entry-content,
-.entry-footer,
-.author-bio,
-.widget-area {
-	margin-top: var(--global--spacing-vertical);
-	margin-left: auto;
-	margin-bottom: var(--global--spacing-vertical);
-	margin-right: auto;
-}
-
-/*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-vertical margin logic
- */
-.site-footer > *,
-.site-main > article > *,
-.site-main > .not-found > *,
-.entry-content > *,
-[class*="inner-container"] > *,
-.widget-area > * {
-	margin-top: calc( 0.666 * var(--global--spacing-vertical));
-	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
-}
-
-@media (--sm) {
-	.site-footer > *,
-	.site-main > article > *,
-	.site-main > .not-found > *,
-	.entry-content > *,
-	[class*="inner-container"] > *,
-	.widget-area > * {
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
-	}
-}
-
-.site-footer > *:first-child,
-.site-main > article > *:first-child,
-.site-main > .not-found > *:first-child,
-.entry-content > *:first-child,
-[class*="inner-container"] > *:first-child,
-.widget-area > *:first-child {
-	margin-top: 0;
-}
-
-.site-footer > *:last-child,
-.site-main > article > *:last-child,
-.site-main > .not-found > *:last-child,
-.entry-content > *:last-child,
-[class*="inner-container"] > *:last-child,
-.widget-area > *:last-child {
-	margin-bottom: 0;
-}
-
-/*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-unit margins
- */
-.site-header > *,
-.entry-header > *,
-.post-thumbnail > *,
-.page-content > *,
-.comment-content > *,
-.author-bio > *,
-.widget-area > .widget > * {
-	margin-top: var(--global--spacing-unit);
-	margin-bottom: var(--global--spacing-unit);
-}
-
-.site-header > *:first-child,
-.entry-header > *:first-child,
-.post-thumbnail > *:first-child,
-.page-content > *:first-child,
-.comment-content > *:first-child,
-.author-bio > *:first-child,
-.widget-area > .widget > *:first-child {
-	margin-top: 0;
-}
-
-.site-header > *:last-child,
-.entry-header > *:last-child,
-.post-thumbnail > *:last-child,
-.page-content > *:last-child,
-.comment-content > *:last-child,
-.author-bio > *:last-child,
-.widget-area > .widget > *:last-child {
-	margin-bottom: 0;
-}
-
-/*
- * .entry-content children specific controls
- * - Adds special margin overrides for alignment utility classes
- */
-.entry-content > * {
-	/* Reset alignleft and alignright margins after alignfull */
-}
-
-.entry-content > *.alignleft, .entry-content > *.alignright,
-.entry-content > *.alignleft:first-child + *,
-.entry-content > *.alignright:first-child + *, .entry-content > *.alignfull {
-	margin-top: 0;
-}
-
-.entry-content > *:last-child, .entry-content > *.alignfull {
-	margin-bottom: 0;
-}
-
-.entry-content > *.alignfull + .alignleft,
-.entry-content > *.alignfull + .alignright {
-	margin-top: var(--global--spacing-vertical);
-}
-
 body[class*="woocommerce"] #page #respond input#submit,
 body[class*="woocommerce"] #page #respond input#submit.alt,
 body[class*="woocommerce"] #page a.button,
@@ -900,7 +711,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media (--sm-max) {
+@media only screen and (max-width: 559px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
@@ -914,7 +725,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	}
 }
 
-@media (--sm) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
 		margin-left: calc(2 * var(--global--spacing-unit));
 	}
@@ -949,7 +760,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 	vertical-align: middle;
 }
 
-@media (--sm) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
 		display: inline-block;
 	}
@@ -962,7 +773,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 	padding: var(--primary-nav--padding) 0;
 }
 
-@media (--sm) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 		max-width: calc(20 * var(--global--spacing-horizontal));
 		padding: var(--primary-nav--padding);
@@ -1044,7 +855,7 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .qua
 	font-size: var(--global--font-size-base);
 }
 
-@media (--sm) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .main-navigation > div > ul > li.woocommerce-menu-item > .sub-menu {
 		right: auto;
 		left: 0;
@@ -1392,9 +1203,6 @@ body[class*="woocommerce"] p.demo_store {
  * Structure
  */
 /**
- * WooCommerce Wrapper Width
- */
-/**
  * Vertical Space - 32px
  */
 body[class*="woocommerce"] #page div.summary > *:not(:first-child),
@@ -1626,7 +1434,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media (--xl) {
+@media only screen and (min-width: 1024px) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -1911,7 +1719,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media (--md) {
+@media only screen and (min-width: 640px) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -1931,7 +1739,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media (--md) {
+@media only screen and (min-width: 640px) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}
@@ -2207,7 +2015,7 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 /**
  * Filter by Product List Widgets
  */
-@media (--sm) {
+@media only screen and (min-width: 560px) {
 	body[class*="woocommerce"] #page .widget.woocommerce ul.product_list_widget:not(.woocommerce-mini-cart) {
 		display: flex;
 		flex-wrap: wrap;
