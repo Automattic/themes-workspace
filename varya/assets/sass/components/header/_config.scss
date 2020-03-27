@@ -3,15 +3,15 @@
 	--branding--color-link: var(--global--color-primary);
 	--branding--color-link-hover: var(--global--color-primary-hover);
 	--branding--title--font-family: var(--global--font-primary);
-	--branding--title--font-size: var(--global--font-size-md);
-	--branding--title--font-weight: bold;
+	--branding--title--font-size: var(--heading--font-size-h1);
+	--branding--title--font-weight: normal;
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
 
-	--primary-nav--font-family: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-md);
-	--primary-nav--font-weight: bold;
+	--primary-nav--font-family: var(--global--font-secondary);
+	--primary-nav--font-size: 16px;
+	--primary-nav--font-weight: normal;
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
 	--primary-nav--color-text: var(--global--color-foreground);
