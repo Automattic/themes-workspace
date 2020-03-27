@@ -308,6 +308,6 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Load default styles for Varya parent-theme-only
  */
-if ( ! is_child_theme() ) {
+//if ( ! is_child_theme() ) {
 	require get_template_directory() . '/default-style/functions.php';
-}
+//}
