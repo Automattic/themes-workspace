@@ -147,3 +147,20 @@ function varya_default_fonts_url() {
 
 	return esc_url_raw( $fonts_url );
 }
+
+/**
+ * Enqueue scripts and styles for the frontend.
+ */
+function varya_default_variables() {
+
+	// Enqueue Google fonts
+	wp_enqueue_style( 'varya-default-fonts', varya_default_fonts_url(), array(), null );
+
+	// Default variables
+	wp_enqueue_style( 'varya-default-variables-style', get_template_directory_uri() . '/default-style/variables.css', array(), wp_get_theme()->get( 'Version' ) );
+
+	// Default extra styles
+	wp_enqueue_style( 'varya-default-extra-style', get_template_directory_uri() . '/default-style/style.css', array(), wp_get_theme()->get( 'Version' ) );
+
+}
+add_action( 'wp_enqueue_scripts', 'varya_default_variables' );
