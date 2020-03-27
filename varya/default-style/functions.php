@@ -19,6 +19,13 @@ if ( ! function_exists( 'varya_default_setup' ) ) :
 	 */
 	function varya_default_setup() {
 
+		// Enqueue editor styles.
+		add_editor_style( array(
+			varya_default_fonts_url(),
+			'./default-style/variables.css',
+			'./default-style/variables-editor.css'
+		) );
+
 		add_theme_support(
 			'editor-font-sizes',
 			array(
@@ -157,18 +164,3 @@ function varya_default_variables() {
 
 }
 add_action( 'wp_enqueue_scripts', 'varya_default_variables' );
-
-/**
- * Enqueue scripts and styles for the editor.
- */
-function varya_editor_default_variables() {
-
-	// Enqueue Google fonts in the editor
-	wp_enqueue_style( 'varya-default-editor-fonts', varya_default_fonts_url(), array(), null );
-
-	// Default variables
-	wp_enqueue_style( 'varya-default-editor-variables-style', get_template_directory_uri() . '/default-style/variables-editor.css', array(), wp_get_theme()->get( 'Version' ) );
-
-}
-add_action( 'enqueue_block_editor_assets', 'varya_editor_default_variables' );
-
