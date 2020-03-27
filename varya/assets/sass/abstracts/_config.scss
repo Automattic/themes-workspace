@@ -29,7 +29,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 
 	/* Line Height */
 	--global--line-height-base: #{$typescale-base / ( $typescale-base * 0 + 1 )};
-	--global--line-height-body: 1.78;
+	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.125;
 
 	/* Colors */

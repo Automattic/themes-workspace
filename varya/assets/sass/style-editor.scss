@@ -2,14 +2,10 @@
  * These styles should be loaded by the Block Editor only
  */
 
-// Layout
-// - Structral and responsive styles
-@import "structure/style";
-@import "abstracts/mixins";
-
 // Abstracts
 // - Mixins, variables and functions
-@import "abstracts/editor";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 
 // Base
 // - Reset the browser

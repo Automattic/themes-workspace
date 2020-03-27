@@ -1,10 +1,6 @@
 .wp-block-group {
 	&.has-background {
-		padding: calc( 0.666 * var(--global--spacing-vertical) );
-
-		@include media(mobile) {
-			padding: var(--global--spacing-vertical);
-		}
+		padding: var(--global--spacing-vertical);
 	}
 }
 

@@ -18,7 +18,7 @@ $breakpoint_xxl: 1280px;
 @custom-media --md only screen and (min-width: #{$breakpoint_md});
 @custom-media --lg only screen and (min-width: #{$breakpoint_lg});
 @custom-media --xl only screen and (min-width: #{$breakpoint_xl});
-@custom-media --xxl only screen and (min-width: $breakpoint_xxl);
+@custom-media --xxl only screen and (min-width: #{$breakpoint_xxl});
 
 @custom-media --sm-max only screen and (max-width: #{$breakpoint_sm - 1});
 @custom-media --md-max only screen and (max-width: #{$breakpoint_md - 1});

@@ -54,7 +54,7 @@
 	}
 }
 
-@media only screen and (min-width: $breakpoint_xxl) {
+@media only screen and (min-width: 1280px) {
 	:root {
 		--responsive--aligndefault-width: calc(1024px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));

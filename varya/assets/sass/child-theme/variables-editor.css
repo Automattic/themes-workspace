@@ -34,7 +34,7 @@ body {
 	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
 	/* Line Height */
 	--global--line-height-base: 1;
-	--global--line-height-body: 1.78;
+	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.125;
 	/* Colors */
 	--global--color-primary: blue;
