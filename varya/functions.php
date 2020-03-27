@@ -104,10 +104,12 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
-		// Do not enqueue editor styles here.
-		// Editor styles are loaded in `enqueue_block_editor_assets`
-		// See: varya_editor_theme_variables();
-		// add_editor_style( 'style-editor.css' );
+		// Enqueue editor styles.
+    add_editor_style( array(
+      varya_fonts_url(),
+      './assets/css/variables-editor.css',
+      './assets/css/style-editor.css'
+    ) );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -307,22 +309,6 @@ function varya_skip_link_focus_fix() {
 	<?php
 }
 add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
-
-/**
- * Enqueue theme styles for the block editor.
- */
-function varya_editor_theme_variables() {
-
-	// Enqueue Google fonts in the editor
-	wp_enqueue_style( 'varya-editor-fonts', varya_fonts_url(), array(), null );
-
-	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/assets/css/variables-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
-
-	// Load the child theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/assets/css/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'varya_editor_theme_variables' );
 
 /**
  * SVG Icons class.

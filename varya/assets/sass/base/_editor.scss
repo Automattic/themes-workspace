@@ -1,4 +1,4 @@
-#wpwrap .editor-styles-wrapper {
+body {
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
@@ -15,7 +15,7 @@
 }
 
 // Links styles
-.editor-styles-wrapper a {
+a {
 	color: var(--global--color-primary);
 
 	&:hover {
@@ -23,7 +23,7 @@
 	}
 }
 
-.editor-styles-wrapper button,
-.editor-styles-wrapper a {
+button,
+a {
 	cursor: pointer;
 }

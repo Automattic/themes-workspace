@@ -14,7 +14,7 @@
 /**
  * WooCommerce Variables
  */
-.editor-styles-wrapper {
+body {
 	/* Globals */
 	/* Font Family */
 	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
