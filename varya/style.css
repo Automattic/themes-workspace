@@ -195,6 +195,11 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	}
 }
 
+.site-header {
+	padding-top: calc(3 * var(--global--spacing-vertical));
+	padding-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
 /**
  * Site-main children wrappers
  * - Add double vertical margins here for clearer heirarchy
@@ -2797,6 +2802,7 @@ table th,
  */
 .site-branding {
 	color: var(--branding--color-text);
+	text-align: center;
 }
 
 .site-title {
@@ -2805,6 +2811,7 @@ table th,
 	font-size: var(--branding--title--font-size);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
+	margin-bottom: var(--global--spacing-vertical);
 }
 
 .site-title a {
@@ -2833,10 +2840,18 @@ nav a {
 }
 
 .site-title > a {
-	text-decoration: underline;
 	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
-	border-bottom: none;
+}
+
+.site-logo {
+	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+}
+
+.site-logo .custom-logo {
+	border-radius: var(--branding--logo--border-radius);
+	max-width: var(--branding--logo--max-width);
+	height: auto;
 }
 
 .main-navigation {

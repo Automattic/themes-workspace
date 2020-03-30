@@ -129,6 +129,11 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	}
 }
 
+.site-header {
+	padding-top: calc(3 * var(--global--spacing-vertical));
+	padding-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
 /**
  * Site-main children wrappers
  * - Add double vertical margins here for clearer heirarchy
