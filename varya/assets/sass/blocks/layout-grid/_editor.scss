@@ -1,6 +1,7 @@
 @import 'config';
 
 .wp-block-jetpack-layout-grid {
+    /* wpcom-overlay-grid is the classname targeting the grid overlay visual aid displayed in the editor */
     .wpcom-overlay-grid {
         grid-gap: var(--layout-grid--gutter-large) ;
         padding-left: var(--layout-grid--gutter-large);
