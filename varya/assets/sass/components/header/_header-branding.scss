@@ -8,6 +8,7 @@
 
 .site-branding {
 	color: var(--branding--color-text);
+	text-align: center;
 }
 
 // Site title
@@ -19,6 +20,7 @@
 	font-size: var(--branding--title--font-size);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
+	margin-bottom: var(--global--spacing-vertical);
 
 	a {
 		color: currentColor;
@@ -59,4 +61,16 @@ nav a {
 	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
 	border-bottom: none;
+}
+
+// Site logo
+
+.site-logo {
+	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+
+	.custom-logo {
+		border-radius: var(--branding--logo--border-radius);
+		max-width: var(--branding--logo--max-width);
+		height: auto;
+	}
 }
