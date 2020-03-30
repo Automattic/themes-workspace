@@ -38,11 +38,7 @@
 	}
 
 	article {
-		margin-bottom: calc(2 * var(--global--spacing-vertical));
-
-		@include media(mobile) {
-			margin-bottom: calc(3 * var(--global--spacing-vertical));
-		}
+		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
 
 	.post-thumbnail {
