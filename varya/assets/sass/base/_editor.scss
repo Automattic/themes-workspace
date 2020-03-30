@@ -1,12 +1,15 @@
-#wpwrap .editor-styles-wrapper {
+body {
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
 	font-size: var(--global--font-size-root);
 	font-weight: normal;
-	line-height: var(--global--font-line-height-body);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	line-height: var(--global--line-height-body);
 }
 
 // Set font size of title block the same as body.
@@ -15,7 +18,7 @@
 }
 
 // Links styles
-.editor-styles-wrapper a {
+a {
 	color: var(--global--color-primary);
 
 	&:hover {
@@ -23,7 +26,7 @@
 	}
 }
 
-.editor-styles-wrapper button,
-.editor-styles-wrapper a {
+button,
+a {
 	cursor: pointer;
 }

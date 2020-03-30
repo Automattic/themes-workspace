@@ -2,11 +2,6 @@
 	.block-editor-inner-blocks {
 		padding-right: var(--global--spacing-horizontal);
 		padding-left: var(--global--spacing-horizontal);
-
-		@include media(tablet) {
-			padding-right: var(--global--spacing-vertical);
-			padding-left: var(--global--spacing-vertical);
-		}
 	}
 
 	&[style*="background-color"]:not(.has-background-background-color) {

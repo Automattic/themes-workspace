@@ -1,4 +1,4 @@
-.editor-styles-wrapper .wp-block-a8c-blog-posts {
+.wp-block-a8c-blog-posts {
 	&.image-aligntop {
 		.post-thumbnail {
 			margin-bottom: calc(0.5 * var(--global--spacing-vertical));
@@ -38,11 +38,7 @@
 	}
 
 	article {
-		margin-bottom: calc(2 * var(--global--spacing-vertical));
-
-		@include media(mobile) {
-			margin-bottom: calc(3 * var(--global--spacing-vertical));
-		}
+		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
 
 	.post-thumbnail {

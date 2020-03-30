@@ -104,15 +104,23 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
-		// Do not enqueue editor styles here.
-		// Editor styles are loaded in `enqueue_block_editor_assets`
-		// See: varya_editor_theme_variables();
-		// add_editor_style( 'style-editor.css' );
+		// Enqueue editor styles.
+    add_editor_style( array(
+      varya_fonts_url(),
+      './assets/css/variables-editor.css',
+      './assets/css/style-editor.css'
+    ) );
 
 		// Add custom editor font sizes.
 		add_theme_support(
 			'editor-font-sizes',
 			array(
+				array(
+				'name'      => __( 'Tiny', 'varya' ),
+					'shortName' => __( 'XS', 'varya' ),
+					'size'      => 14,
+					'slug'      => 'tiny',
+				),
 				array(
 					'name'      => __( 'Small', 'varya' ),
 					'shortName' => __( 'S', 'varya' ),
@@ -128,13 +136,13 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'      => __( 'Large', 'varya' ),
 					'shortName' => __( 'L', 'varya' ),
-					'size'      => 32,
+					'size'      => 20,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'Huge', 'varya' ),
 					'shortName' => __( 'XL', 'varya' ),
-					'size'      => 48,
+					'size'      => 24,
 					'slug'      => 'huge',
 				),
 			)
@@ -147,25 +155,25 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya' ),
 					'slug'  => 'primary',
-					'color' => '#0000FF',
+					'color' => '#000000',
 				),
 				array(
 					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => '#FF0000',
+					'color' => '#A36265',
 				),
 				array(
-					'name'  => __( 'Dark Gray', 'varya' ),
+					'name'  => __( 'Foreground', 'varya' ),
 					'slug'  => 'foreground',
-					'color' => '#444444',
+					'color' => '#333333',
 				),
 				array(
-					'name'  => __( 'Light Gray', 'varya' ),
-					'slug'  => 'foreground-light',
-					'color' => '#767676',
+					'name'  => __( 'Background Light', 'varya' ),
+					'slug'  => 'background-light',
+					'color' => '#FAFBF6',
 				),
 				array(
-					'name'  => __( 'White', 'varya' ),
+					'name'  => __( 'Background', 'varya' ),
 					'slug'  => 'background',
 					'color' => '#FFFFFF',
 				),
@@ -177,6 +185,50 @@ if ( ! function_exists( 'varya_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'varya_setup' );
+
+/**
+ * Add Google webfonts, if necessary
+ *
+ * - See: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+ */
+function varya_fonts_url() {
+
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	* supported by Playfair Display, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$fira_sans = esc_html_x( 'on', 'Fira Sans: on or off', 'varya' );
+
+	/* Translators: If there are characters in your language that are not
+	* supported by Roboto Sans, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$playfair_display = esc_html_x( 'on', 'Playfair Display: on or off', 'varya' );
+
+	if ( 'off' !== $fira_sans || 'off' !== $playfair_display ) {
+		$font_families = array();
+
+		if ( 'off' !== $fira_sans ) {
+			$font_families[] = 'Fira Sans:ital,wght@0,400;0,500;1,400';
+		}
+
+		if ( 'off' !== $playfair_display ) {
+			$font_families[] = 'Playfair Display:ital,wght@0,400;0,700;1,400';
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
 
 /**
  * Register widget area.
@@ -218,6 +270,9 @@ add_action( 'after_setup_theme', 'varya_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function varya_scripts() {
+	// Enqueue Google fonts
+	wp_enqueue_style( 'varya-fonts', varya_fonts_url(), array(), null );
+
 	// Theme variables
 	wp_enqueue_style( 'varya-variables-style', get_template_directory_uri() . '/assets/css/variables.css', array(), wp_get_theme()->get( 'Version' ) );
 
@@ -256,19 +311,6 @@ function varya_skip_link_focus_fix() {
 add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 
 /**
- * Enqueue theme styles for the block editor.
- */
-function varya_editor_theme_variables() {
-
-	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/assets/css/variables-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
-
-	// Load the child theme styles within Gutenberg.
-	wp_enqueue_style( 'varya-editor-styles', get_template_directory_uri() . '/assets/css/style-editor.css', false, wp_get_theme()->get( 'Version' ), 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'varya_editor_theme_variables' );
-
-/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
@@ -304,10 +346,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
-
-/**
- * Load default styles for Varya parent-theme-only
- */
-//if ( ! is_child_theme() ) {
-	require get_template_directory() . '/default-style/functions.php';
-//}

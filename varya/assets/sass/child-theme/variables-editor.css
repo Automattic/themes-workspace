@@ -6,6 +6,7 @@
  * - Import all config files for display in
  *   the editor, customizer, and front end.
  */
+/* Blocks */
 /*
  * Configure Components
  * - Similar to Blocks but exist outside of the "current" editor context
@@ -13,46 +14,45 @@
 /**
  * WooCommerce Variables
  */
-.editor-styles-wrapper {
+body {
 	/* Globals */
 	/* Font Family */
-	--global--font-primary: sans-serif;
-	--global--font-secondary: serif;
+	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
+	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
 	--global--font-code: monospace, monospace;
-	--global--font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--global--font-ui: var(--global--font-secondary);
 	/* Font Size */
 	--global--font-size-root: 18px;
 	--global--font-size-ratio: 1.2;
 	--global--font-size-base: 1em;
-	--global--font-size-xs: calc(var(--global--font-size-base) / var(--global--font-size-ratio) / var(--global--font-size-ratio));
-	--global--font-size-sm: calc(var(--global--font-size-base) / var(--global--font-size-ratio));
-	--global--font-size-md: calc(var(--global--font-size-base) * var(--global--font-size-ratio));
-	--global--font-size-lg: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
-	--global--font-size-xl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
-	--global--font-size-xxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
-	--global--font-size-xxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
-	--global--font-size-xxxxl: calc(var(--global--font-size-base) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio) * var(--global--font-size-ratio));
+	--global--font-size-xs: 14px;
+	--global--font-size-sm: 15px;
+	--global--font-size-md: 18px;
+	--global--font-size-lg: 24px;
+	--global--font-size-xl: 28px;
+	--global--font-size-xxl: 32px;
+	--global--font-size-xxxl: 64px;
 	/* Line Height */
 	--global--line-height-base: 1;
-	--global--line-height-body: 1.78;
+	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.125;
 	/* Colors */
-	--global--color-primary: blue;
-	--global--color-primary-hover: indigo;
-	--global--color-secondary: red;
-	--global--color-secondary-hover: darkred;
+	--global--color-primary: #000000;
+	--global--color-primary-hover: #A36265;
+	--global--color-secondary: #A36265;
+	--global--color-secondary-hover: #8B5356;
 	--global--color-black: black;
 	--global--color-white: white;
-	--global--color-foreground: #444444;
-	--global--color-foreground-light: #767676;
-	--global--color-foreground-dark: #111111;
+	--global--color-foreground: #333333;
+	--global--color-foreground-light: #444444;
+	--global--color-foreground-dark: #000000;
 	--global--color-background: #FFFFFF;
-	--global--color-background-light: #FAFAFA;
+	--global--color-background-light: #FAFBF6;
 	--global--color-background-dark: #DDDDDD;
-	--global--color-border: #DDDDDD;
-	--global--color-border-light: #FAFAFA;
+	--global--color-border: #757575;
+	--global--color-border-light: #444444;
 	--global--color-border-dark: #AAAAAA;
-	--global--color-text-selection: lightblue;
+	--global--color-text-selection: #FAFBF6;
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;
 	--global--color-alert-warning: gold;
@@ -88,15 +88,15 @@
 	--button--color-text: var(--global--color-background);
 	--button--color-text-hover: var(--button--color-text);
 	--button--color-text-active: var(--button--color-text);
-	--button--color-background: var(--global--color-primary);
-	--button--color-background-hover: var(--global--color-primary-hover);
-	--button--color-background-active: var(--global--color-foreground);
+	--button--color-background: var(--global--color-secondary);
+	--button--color-background-hover: var(--global--color-secondary-hover);
+	--button--color-background-active: var(--global--color-primary);
 	--button--font-family: var(--global--font-ui);
 	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: bold;
+	--button--font-weight: normal;
 	--button--line-height: 1;
-	--button--border-width: 2px;
-	--button--border-radius: var(--global--border-radius-sm);
+	--button--border-width: 1px;
+	--button--border-radius: 4px;
 	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
 	--button--padding-horizontal: var(--global--spacing-horizontal);
 	--cover--height: calc( 15 * var(--global--spacing-vertical) );
@@ -116,8 +116,8 @@
 	--heading--letter-spacing-h2: var(--global--letter-spacing-xxl);
 	--heading--letter-spacing-h1: var(--global--letter-spacing-xxxl);
 	--heading--line-height: 1.25em;
-	--heading--font-weight: 600;
-	--heading--font-weight-strong: 800;
+	--heading--font-weight: normal;
+	--heading--font-weight-strong: 600;
 	--latest-posts--title-font-family: var(--heading--font-family);
 	--latest-posts--title-font-size: var(--heading--font-size-h3);
 	--latest-posts--description-font-family: var(--global--font-secondary);
