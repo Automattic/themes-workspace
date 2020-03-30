@@ -1,0 +1,29 @@
+@import 'config';
+
+.wp-block-jetpack-layout-grid {
+    .wpcom-overlay-grid {
+        grid-gap: var(--layout-grid--gutter-large) ;
+        padding-left: var(--layout-grid--gutter-large);
+        padding-right: var(--layout-grid--gutter-large);
+    }
+
+    @each $size in $layout-gutter-sizes {
+        &.wp-block-jetpack-layout-gutter__#{$size} {
+            > .block-editor-inner-blocks > .block-editor-block-list__layout,
+            .wpcom-overlay-grid {
+                grid-gap: var(--layout-grid--gutter-#{$size});
+            }
+            .wpcom-overlay-grid {
+                padding-left: var(--layout-grid--gutter-#{$size});
+                padding-right: var(--layout-grid--gutter-#{$size});
+            }
+        }
+    }
+
+    &.wp-block-jetpack-layout-gutter__nowrap {
+        .wpcom-overlay-grid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

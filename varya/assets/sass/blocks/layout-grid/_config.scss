@@ -1,0 +1,8 @@
+$layout-gutter-sizes: "small", "medium", "large", "huge";
+
+@mixin layout-grid-variables() {
+    --layout-grid--gutter-small: calc( var(--global--spacing-unit) / 2);
+    --layout-grid--gutter-medium: var(--global--spacing-unit);
+    --layout-grid--gutter-large: calc( var(--global--spacing-unit) * 1.5);
+    --layout-grid--gutter-huge: calc( var(--global--spacing-unit) * 2);
+}
