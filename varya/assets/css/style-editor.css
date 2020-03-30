@@ -569,6 +569,57 @@ object {
 	line-height: var(--global--line-height-body);
 }
 
+.wp-block-jetpack-layout-grid .wpcom-overlay-grid {
+	grid-gap: var(--layout-grid--gutter-large);
+	padding-left: var(--layout-grid--gutter-large);
+	padding-right: var(--layout-grid--gutter-large);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__small > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__small .wpcom-overlay-grid {
+	grid-gap: var(--layout-grid--gutter-small);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__small .wpcom-overlay-grid {
+	padding-left: var(--layout-grid--gutter-small);
+	padding-right: var(--layout-grid--gutter-small);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__medium > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__medium .wpcom-overlay-grid {
+	grid-gap: var(--layout-grid--gutter-medium);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__medium .wpcom-overlay-grid {
+	padding-left: var(--layout-grid--gutter-medium);
+	padding-right: var(--layout-grid--gutter-medium);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__large > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__large .wpcom-overlay-grid {
+	grid-gap: var(--layout-grid--gutter-large);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__large .wpcom-overlay-grid {
+	padding-left: var(--layout-grid--gutter-large);
+	padding-right: var(--layout-grid--gutter-large);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__huge > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__huge .wpcom-overlay-grid {
+	grid-gap: var(--layout-grid--gutter-huge);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__huge .wpcom-overlay-grid {
+	padding-left: var(--layout-grid--gutter-huge);
+	padding-right: var(--layout-grid--gutter-huge);
+}
+
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__nowrap .wpcom-overlay-grid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .gallery-item {
 	display: inline-block;
 	text-align: center;

@@ -122,6 +122,10 @@ body {
 	--latest-posts--title-font-size: var(--heading--font-size-h3);
 	--latest-posts--description-font-family: var(--global--font-secondary);
 	--latest-posts--description-font-size: var(--global--font-size-sm);
+	--layout-grid--gutter-small: calc( var(--global--spacing-unit) / 2);
+	--layout-grid--gutter-medium: var(--global--spacing-unit);
+	--layout-grid--gutter-large: calc( var(--global--spacing-unit) * 1.5);
+	--layout-grid--gutter-huge: calc( var(--global--spacing-unit) * 2);
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	--pullquote--font-family: var(--global--font-primary);
