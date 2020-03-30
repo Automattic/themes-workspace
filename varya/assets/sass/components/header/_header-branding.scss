@@ -36,9 +36,21 @@
 }
 
 // Site description
-
 .site-description {
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
+}
+
+a.custom-logo-link,
+nav a {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.site-title > a {
+	text-decoration: underline;
+	text-underline-width: .125em;
+	text-decoration-color: var(--global--color-secondary);
+	border-bottom: none;
 }

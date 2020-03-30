@@ -3,7 +3,7 @@
 	padding: calc( 3 * var(--global--spacing-unit) ) 0;
 	margin-left: 0;
 	margin-right: 0;
-	text-align: center;
+	text-align: left;
 	// Theme?
 	border-top-color: var(--pullquote--color-border);
 	border-top-width: var(--pullquote--border-width);
@@ -50,6 +50,13 @@
 			}
 		}
 	}
+    
+    &.is-style-large {
+        border-left-color: var(--quote--border-color);
+        border-left-style: solid;
+        border-left-width: var(--quote--border-width);
+        padding-left: var(--global--spacing-horizontal);
+    }
 
 	&.is-style-solid-color {
 

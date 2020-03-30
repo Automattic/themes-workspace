@@ -2183,7 +2183,7 @@ p.has-background {
 	padding: calc( 3 * var(--global--spacing-unit)) 0;
 	margin-right: 0;
 	margin-left: 0;
-	text-align: center;
+	text-align: right;
 	border-top-color: var(--pullquote--color-border);
 	border-top-width: var(--pullquote--border-width);
 	border-bottom-color: var(--pullquote--color-border);
@@ -2223,6 +2223,13 @@ p.has-background {
 
 .wp-block-pullquote.is-style-default.alignleft blockquote > *, .wp-block-pullquote.is-style-default.aligncenter blockquote > *, .wp-block-pullquote.is-style-default.alignright blockquote > * {
 	text-align: center;
+}
+
+.wp-block-pullquote.is-style-large {
+	border-right-color: var(--quote--border-color);
+	border-right-style: solid;
+	border-right-width: var(--quote--border-width);
+	padding-right: var(--global--spacing-horizontal);
 }
 
 .wp-block-pullquote.is-style-solid-color {
@@ -2790,6 +2797,24 @@ table th,
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid var(--global--color-secondary);
+}
+
+a.custom-logo-link,
+nav a {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.site-title > a {
+	text-decoration: underline;
+	text-underline-width: .125em;
+	text-decoration-color: var(--global--color-secondary);
+	border-bottom: none;
 }
 
 .main-navigation {
