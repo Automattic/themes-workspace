@@ -2840,10 +2840,8 @@ nav a {
 }
 
 .main-navigation {
-	display: flex;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	justify-content: var(--primary-nav--justify-content);
 }
 
 .main-navigation > div {
@@ -2878,6 +2876,10 @@ nav a {
 }
 
 @media only screen and (min-width: 560px) {
+	.main-navigation {
+		display: flex;
+		justify-content: var(--primary-nav--justify-content);
+	}
 	.main-navigation > div {
 		display: inline-block;
 	}
