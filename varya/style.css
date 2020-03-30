@@ -835,7 +835,9 @@ body {
 }
 
 a {
+	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--global--color-primary);
+	text-decoration: none;
 }
 
 a:hover {
@@ -2829,11 +2831,6 @@ table th,
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
-}
-
-a {
-	text-decoration: none;
-	border-bottom: 1px solid var(--global--color-secondary);
 }
 
 a.custom-logo-link,
