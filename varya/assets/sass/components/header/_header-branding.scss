@@ -61,8 +61,8 @@ nav a {
 	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
 
 	.custom-logo {
-		border-radius: var(--branding--logo--border-radius);
 		max-width: var(--branding--logo--max-width);
+		max-height: var(--branding--logo--max-width);
 		height: auto;
 	}
 }
