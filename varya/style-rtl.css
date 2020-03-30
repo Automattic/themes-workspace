@@ -2817,6 +2817,7 @@ nav a {
 .main-navigation {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
+	margin-top: var(--global--spacing-vertical);
 }
 
 .main-navigation > div {
