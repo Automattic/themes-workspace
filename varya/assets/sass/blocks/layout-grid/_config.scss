@@ -1,8 +1,9 @@
-$layout-gutter-sizes: "small", "medium", "large", "huge";
+$layout-gutter-sizes: "none", "small", "medium", "default", "huge";
 
 @mixin layout-grid-variables() {
-    --layout-grid--gutter-small: calc( var(--global--spacing-unit) / 2);
-    --layout-grid--gutter-medium: var(--global--spacing-unit);
-    --layout-grid--gutter-large: calc( var(--global--spacing-unit) * 1.5);
-    --layout-grid--gutter-huge: calc( var(--global--spacing-unit) * 2);
+	--layout-grid--gutter-none: 0;
+	--layout-grid--gutter-small: calc( var(--global--spacing-unit) / 2);   // 8px
+	--layout-grid--gutter-medium: var(--global--spacing-unit);             // 16px
+	--layout-grid--gutter-default: calc( var(--global--spacing-unit) * 2); // 32px
+	--layout-grid--gutter-huge: calc( var(--global--spacing-unit) * 3);    // 48px
 }

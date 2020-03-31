@@ -1,17 +1,29 @@
 @import 'config';
 
 .wp-block-jetpack-layout-grid {
-    grid-gap: var(--layout-grid--gutter-large) !important;
+	grid-gap: var(--layout-grid--gutter-default);
 
-    @each $size in $layout-gutter-sizes {
-        &.wp-block-jetpack-layout-gutter__#{$size} {
-            grid-gap: var(--layout-grid--gutter-#{size}) !important;
-            padding-left: var(--layout-grid--gutter-#{size}) !important;
-            padding-right: var(--layout-grid--gutter-#{size}) !important;
-            &.wp-block-jetpack-layout-gutter__nowrap {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-        }
-    }
+	@each $size in $layout-gutter-sizes {
+		&.wp-block-jetpack-layout-gutter__#{$size} {
+			grid-gap: var(--layout-grid--gutter-#{$size});
+			padding-left: var(--layout-grid--gutter-#{$size});
+			padding-right: var(--layout-grid--gutter-#{$size});
+
+			&.wp-block-jetpack-layout-gutter__nowrap {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
 }
+
+/*
+.wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__none {
+    grid-gap: 0px; }
+  .wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__small {
+    grid-gap: 8px; }
+  .wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__medium {
+    grid-gap: 16px; }
+  .wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__huge {
+    grid-gap: 48px; }
+*/
