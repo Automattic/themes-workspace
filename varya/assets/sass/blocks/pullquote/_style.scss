@@ -28,8 +28,9 @@
 	cite,
 	footer {
 		color: currentColor;
-		font-size: var(--global--font-size-sm);
 		display: block;
+		font-size: var(--global--font-size-sm);
+		text-transform: none;
 	}
 
 	/**

@@ -2226,8 +2226,9 @@ p.has-background {
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	color: currentColor;
-	font-size: var(--global--font-size-sm);
 	display: block;
+	font-size: var(--global--font-size-sm);
+	text-transform: none;
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
