@@ -37,7 +37,7 @@ a {
 // This line overrides it to use the responsive spacing rules for default width content 
 .wp-block {
 	&:not([data-align="full"]):not([data-align="wide"]){
-		@extend %responsive-aligndefault-width;
+		max-width: var(--responsive--aligndefault-width);
 	}
 }
 
