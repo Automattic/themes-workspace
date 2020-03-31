@@ -2212,8 +2212,10 @@ p.has-background {
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
 	font-size: var(--pullquote--font-size);
+	font-style: var(--pullquote--font-style);
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height);
+	line-height: var(--pullquote--line-height);
+	margin: 0;
 }
 
 .wp-block-pullquote a {
@@ -2253,8 +2255,8 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
-	padding-left: var(--global--spacing-unit);
-	padding-right: var(--global--spacing-unit);
+	padding-left: calc( 2 * var(--global--spacing-unit));
+	padding-right: calc( 2 * var(--global--spacing-unit));
 	max-width: inherit;
 }
 
@@ -2276,7 +2278,7 @@ p.has-background {
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
-	padding-left: var(--global--spacing-horizontal);
+	padding-left: calc( 2 * var(--global--spacing-horizontal));
 	/**
 	 * Block Options
 	 */
@@ -2298,7 +2300,7 @@ p.has-background {
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
-	line-height: var(--heading--line-height);
+	line-height: inherit;
 }
 
 .wp-block-quote .wp-block-quote__citation,
@@ -2334,15 +2336,16 @@ p.has-background {
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
+	border-left: var(--quote--border-width) solid var(--quote--border-color);
+	padding-left: calc( 2 * var(--global--spacing-horizontal));
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
-	padding: 0;
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
 	font-size: var(--quote--font-size-large);
-	line-height: var(--heading--line-height);
+	font-style: normal;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation,

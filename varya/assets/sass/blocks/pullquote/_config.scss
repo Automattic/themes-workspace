@@ -1,8 +1,10 @@
 @mixin pullquote-variables() {
 	--pullquote--font-family: var(--global--font-primary);
-	--pullquote--font-size: var(--heading--font-size-h4);
-	--pullquote--border-width: 4px; // half of $baseline-unit (8px)
-	--pullquote--color-border: var(--global--color-foreground);
+	--pullquote--font-size: var(--heading--font-size-h2);
+	--pullquote--font-style: italic;
+	--pullquote--line-height: var(--global--line-height-heading);
+	--pullquote--border-width: 0;
+	--pullquote--color-border: transparent;
 	--pullquote--color-foreground: var(--global--color-foreground);
 	--pullquote--color-background: var(--global--color-background);
 }
