@@ -67,76 +67,21 @@ if ( ! function_exists( 'varya_comment_count' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'varya_entry_meta' ) ) :
+if ( ! function_exists( 'varya_entry_meta_header' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Allow child themes to include meta in the header of the post
+	 * by overwriting this function.
 	 */
-	function varya_entry_meta() {
+	function varya_entry_meta_header() {
 
-		// Hide author, post date, category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
-
-			// Posted by
-			varya_posted_by();
-
-			// Posted on
-			varya_posted_on();
-
-			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'varya' ) );
-			if ( $categories_list ) {
-				printf(
-					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of categories. */
-					'<span class="cat-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
-					varya_get_icon_svg( 'archive', 16 ),
-					__( 'Posted in', 'varya' ),
-					$categories_list
-				); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'varya' ) );
-			if ( $tags_list ) {
-				printf(
-					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of tags. */
-					'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
-					varya_get_icon_svg( 'tag', 16 ),
-					__( 'Tags:', 'varya' ),
-					$tags_list
-				); // WPCS: XSS OK.
-			}
-		}
-
-		// Comment count.
-		if ( ! is_singular() ) {
-			varya_comment_count();
-		}
-
-		// Edit post link.
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'varya' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">' . varya_get_icon_svg( 'edit', 16 ),
-			'</span>'
-		);
 	}
 endif;
 
-if ( ! function_exists( 'varya_entry_footer' ) ) :
+if ( ! function_exists( 'varya_entry_meta_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function varya_entry_footer() {
+	function varya_entry_meta_footer() {
 
 		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {

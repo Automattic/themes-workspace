@@ -17,7 +17,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
-			<?php varya_entry_meta(); ?>
+			<?php varya_entry_meta_header(); ?>
 		</div><!-- .meta-info -->
 		<?php endif; ?>
 	</header>
@@ -51,7 +51,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php varya_entry_footer(); ?>
+		<?php varya_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
