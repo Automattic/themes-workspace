@@ -948,10 +948,6 @@ footer {
  * Elements
  * - Styles for basic HTML elemants
  */
-blockquote {
-	padding-left: var(--global--spacing-horizontal);
-}
-
 blockquote p {
 	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h4);
@@ -2235,10 +2231,6 @@ p.has-background {
 	background: none;
 }
 
-.wp-block-pullquote:not(.is-style-solid-color) blockquote {
-	padding-left: 0;
-}
-
 .wp-block-pullquote.is-style-default.alignleft blockquote > *, .wp-block-pullquote.is-style-default.aligncenter blockquote > *, .wp-block-pullquote.is-style-default.alignright blockquote > * {
 	text-align: center;
 }
@@ -2247,17 +2239,15 @@ p.has-background {
 	border-left-color: var(--quote--border-color);
 	border-left-style: solid;
 	border-left-width: var(--quote--border-width);
-	padding-left: var(--global--spacing-horizontal);
 }
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
+	padding: calc( 3 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
-	padding-left: calc( 2 * var(--global--spacing-unit));
-	padding-right: calc( 2 * var(--global--spacing-unit));
 	max-width: inherit;
 }
 

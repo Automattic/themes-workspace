@@ -36,10 +36,6 @@ a {
  * Elements
  * - Styles for basic HTML elemants
  */
-blockquote {
-	padding-left: var(--global--spacing-horizontal);
-}
-
 blockquote p {
 	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h4);

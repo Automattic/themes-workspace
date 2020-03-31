@@ -38,10 +38,6 @@
 	 */
 	&:not(.is-style-solid-color) {
 		background: none;
-
-		blockquote {
-			padding-left: 0;
-		}
 	}
 
 	&.is-style-default {
@@ -58,21 +54,19 @@
         border-left-color: var(--quote--border-color);
         border-left-style: solid;
         border-left-width: var(--quote--border-width);
-        padding-left: var(--global--spacing-horizontal);
     }
 
 	&.is-style-solid-color {
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
+		padding: calc( 3 * var(--global--spacing-unit) );
 
 		&:not(.alignleft):not(.alignright) blockquote {
 			@extend %responsive-aligndefault-width;
 		}
 
 		blockquote {
-			padding-left: calc( 2 * var(--global--spacing-unit) );
-			padding-right: calc( 2 * var(--global--spacing-unit) );
 			max-width: inherit;
 		}
 
