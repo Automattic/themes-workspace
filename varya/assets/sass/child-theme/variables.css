@@ -125,8 +125,9 @@
 	--layout-grid--gutter-none: 0;
 	--layout-grid--gutter-small: calc( var(--global--spacing-unit) / 2);
 	--layout-grid--gutter-medium: var(--global--spacing-unit);
-	--layout-grid--gutter-default: calc( var(--global--spacing-unit) * 2);
+	--layout-grid--gutter-large: calc( var(--global--spacing-unit) * 2);
 	--layout-grid--gutter-huge: calc( var(--global--spacing-unit) * 3);
+	--layout-grid--gutter-bg-offset: calc( var(--global--spacing-unit));
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	--pullquote--font-family: var(--global--font-primary);
