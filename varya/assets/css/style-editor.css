@@ -69,7 +69,7 @@
 /**
  * Extends
  */
-.default-max-width, .wp-block:not([data-align="full"]):not([data-align="wide"]) {
+.default-max-width {
 	max-width: var(--responsive--aligndefault-width);
 	margin-left: auto;
 	margin-right: auto;
@@ -119,6 +119,10 @@ a:hover {
 button,
 a {
 	cursor: pointer;
+}
+
+.wp-block:not([data-align="full"]):not([data-align="wide"]) {
+	max-width: var(--responsive--aligndefault-width);
 }
 
 div[data-type="core/button"] {
