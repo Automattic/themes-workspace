@@ -2825,7 +2825,7 @@ nav a {
 
 .site-logo .custom-logo {
 	max-width: var(--branding--logo--max-width);
-	max-height: var(--branding--logo--max-width);
+	max-height: var(--branding--logo--max-height);
 	height: auto;
 }
 
@@ -3271,6 +3271,7 @@ nav a {
 
 .entry-meta a,
 .entry-footer a {
+	border-bottom: none;
 	color: var(--entry-meta--color-link);
 }
 
