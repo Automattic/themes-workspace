@@ -4,6 +4,7 @@
 
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
+	margin-top: var(--global--spacing-vertical);
 
 	// Menu wrapper
 	& > div {
@@ -42,6 +43,9 @@
 	}
 
 	@include media(mobile) {
+
+		display: flex;
+		justify-content: var(--primary-nav--justify-content);
 
 		& > div {
 			display: inline-block;
