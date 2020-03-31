@@ -1,3 +1,5 @@
+@import '../structure/responsive-logic';
+
 body {
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
@@ -22,11 +24,23 @@ a {
 	color: var(--global--color-primary);
 
 	&:hover {
-		color: var(--global--color-primary-hover);;
+		color: var(--global--color-primary-hover);
 	}
 }
 
 button,
 a {
 	cursor: pointer;
+}
+
+// Gutenberg injects a rule that limits the max width of .wp-block to 580px
+// This line overrides it to use the responsive spacing rules for default width content 
+.wp-block {
+	&:not([data-align="full"]):not([data-align="wide"]){
+		@extend %responsive-aligndefault-width;
+	}
+}
+
+div[data-type="core/button"] {
+	display: block;
 }
