@@ -173,21 +173,12 @@
 	.sub-menu {
 
 		list-style: none;
-		margin-left: 0;
-		/* Reset the counter for each UL */
-		counter-reset: nested-list;
+		margin-left: var(--primary-nav--padding);
 
 		.menu-item a {
 
 			padding-top: calc(0.5 * var(--primary-nav--padding));
 			padding-bottom: calc(0.5 * var(--primary-nav--padding));
-
-			&::before {
-				/* Increment the dashes */
-				counter-increment: nested-list;
-				/* Insert dashes with spaces in between */
-				content: "\2013\00a0" counters( nested-list, "\2013\00a0", none );
-			}
 		}
 	}
 
