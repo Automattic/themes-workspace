@@ -210,10 +210,12 @@ function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 		return $output;
 	}
 
-	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+	if ( 'menu-1' == $args->theme_location && $depth === 0 ) {
+		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
-		// Add SVG icon to parent items.
-		$output .= varya_get_icon_svg( 'keyboard_arrow_down', 24 );
+			// Add SVG icon to parent items.
+			$output .= varya_get_icon_svg( 'keyboard_arrow_down', 24 );
+		}
 	}
 
 	return $output;

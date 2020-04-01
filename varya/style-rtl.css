@@ -2976,8 +2976,16 @@ nav a {
 	width: 100%;
 }
 
-.main-navigation a {
+.main-navigation .menu-item {
 	color: var(--primary-nav--color-link);
+}
+
+.main-navigation .menu-item:hover {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation a {
+	color: currentColor;
 	display: block;
 	font-family: var(--primary-nav--font-family);
 	font-weight: var(--primary-nav--font-weight);
@@ -2990,12 +2998,8 @@ nav a {
 	}
 }
 
-.main-navigation a:link, .main-navigation a:visited {
-	color: var(--primary-nav--color-link);
-}
-
-.main-navigation a:hover {
-	color: var(--primary-nav--color-link-hover);
+.main-navigation a:hover, .main-navigation a:link, .main-navigation a:visited {
+	color: currentColor;
 }
 
 .main-navigation .sub-menu {

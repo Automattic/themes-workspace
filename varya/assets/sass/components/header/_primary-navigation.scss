@@ -154,8 +154,16 @@
 	}
 
 	// Menu Link
-	a {
+	.menu-item {
 		color: var(--primary-nav--color-link);
+
+		&:hover {
+			color: var(--primary-nav--color-link-hover);
+		}
+	}
+
+	a {
+		color: currentColor;
 		display: block;
 		font-family: var(--primary-nav--font-family);
 		font-weight: var(--primary-nav--font-weight);
@@ -165,13 +173,10 @@
 			padding: var(--primary-nav--padding);
 		}
 
+		&:hover,
 		&:link,
 		&:visited {
-			color: var(--primary-nav--color-link);
-		}
-
-		&:hover {
-			color: var(--primary-nav--color-link-hover);
+			color: currentColor;
 		}
 	}
 
