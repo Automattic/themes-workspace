@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Varya
 Theme URI: https://github.com/Automattic/theme-workspace/varya
@@ -3020,21 +3019,12 @@ nav a {
 
 .main-navigation .sub-menu {
 	list-style: none;
-	margin-left: 0;
-	/* Reset the counter for each UL */
-	counter-reset: nested-list;
+	margin-left: var(--primary-nav--padding);
 }
 
 .main-navigation .sub-menu .menu-item a {
 	padding-top: calc(0.5 * var(--primary-nav--padding));
 	padding-bottom: calc(0.5 * var(--primary-nav--padding));
-}
-
-.main-navigation .sub-menu .menu-item a::before {
-	/* Increment the dashes */
-	counter-increment: nested-list;
-	/* Insert dashes with spaces in between */
-	content: "– " counters(nested-list, "– ", none);
 }
 
 @media only screen and (min-width: 482px) {
