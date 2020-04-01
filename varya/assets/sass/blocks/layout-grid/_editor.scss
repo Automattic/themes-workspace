@@ -1,9 +1,9 @@
 @import 'config';
 
 .wp-block-jetpack-layout-grid {
-	grid-gap: var(--layout-grid--gutter-large) !important;
-	padding-left: var(--layout-grid--gutter-large) !important;
-	padding-right: var(--layout-grid--gutter-large) !important;
+	grid-gap: var(--layout-grid--gutter-large);
+	padding-left: var(--layout-grid--gutter-large);
+	padding-right: var(--layout-grid--gutter-large);
 
 	/* Individual Column Options */
 	.wp-block-jetpack-layout-grid-column {
@@ -12,18 +12,23 @@
 		// some of the gutter to work as default padding.
 		&.has-background,
 		&[style^="background-color"] {
-			margin-left: calc(var(--layout-grid--background-offset) * -1) !important;
-			margin-right: calc(var(--layout-grid--background-offset) * -1) !important;
-			padding-left: var(--layout-grid--background-offset) !important;
-			padding-right: var(--layout-grid--background-offset) !important;
+			margin-left: calc(var(--layout-grid--background-offset) * -1);
+			margin-right: calc(var(--layout-grid--background-offset) * -1);
+			padding-left: var(--layout-grid--background-offset);
+			padding-right: var(--layout-grid--background-offset);
 		}
+	}
+
+	&.wp-block-jetpack-layout-gutter__nowrap {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
 /* Gutter Options */
 @each $size in $layout-gutter-sizes {
 .wp-block-jetpack-layout-grid .wp-block-jetpack-layout-gutter__#{$size} {
-		grid-gap: var(--layout-grid--gutter-#{$size}) !important;
+		grid-gap: var(--layout-grid--gutter-#{$size});
 	}
 }
 
@@ -31,13 +36,13 @@
 @each $size in $layout-gutter-sizes {
 .wp-block-jetpack-layout-grid .wp-block-jetpack-layout-gutter__#{$size} {
 		// This padding adds end gutters.
-		padding-left: var(--layout-grid--gutter-#{$size}) !important;
-		padding-right: var(--layout-grid--gutter-#{$size}) !important;
+		padding-left: var(--layout-grid--gutter-#{$size});
+		padding-right: var(--layout-grid--gutter-#{$size});
 
 		// This padding removes end gutters.
 		&.wp-block-jetpack-layout-gutter__nowrap {
-			padding-left: 0 !important;
-			padding-right: 0 !important;
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }
@@ -46,14 +51,14 @@
 // Apply both gutter padding and user-set padding, when a background is also set.
 @each $size in $layout-gutter-sizes {
 	.wp-block-jetpack-layout-grid .wp-block-jetpack-layout-grid-column.wp-block-jetpack-layout-grid__padding-#{$size} {
-		padding: var(--layout-grid--gutter-#{$size}) !important;
+		padding: var(--layout-grid--gutter-#{$size});
 
 		&.has-background,
 		&[style^="background-color"] {
-			padding-top: var(--layout-grid--gutter-#{$size}) !important;
-			padding-right: calc(var(--layout-grid--gutter-#{$size}) + var(--layout-grid--background-offset)) !important;
-			padding-bottom: var(--layout-grid--gutter-#{$size}) !important;
-			padding-left: calc(var(--layout-grid--gutter-#{$size}) + var(--layout-grid--background-offset)) !important;
+			padding-top: var(--layout-grid--gutter-#{$size});
+			padding-right: calc(var(--layout-grid--gutter-#{$size}) + var(--layout-grid--background-offset));
+			padding-bottom: var(--layout-grid--gutter-#{$size});
+			padding-left: calc(var(--layout-grid--gutter-#{$size}) + var(--layout-grid--background-offset));
 		}
 	}
 }
@@ -61,22 +66,9 @@
 .wp-block-jetpack-layout-grid {
     /* wpcom-overlay-grid is the classname targeting the grid overlay visual aid displayed in the editor */
     .wpcom-overlay-grid {
-        grid-gap: var(--layout-grid--gutter-large) ;
+        grid-gap: var(--layout-grid--gutter-large);
         padding-left: var(--layout-grid--gutter-large);
         padding-right: var(--layout-grid--gutter-large);
-    }
-
-    @each $size in $layout-gutter-sizes {
-        &.wp-block-jetpack-layout-gutter__#{$size} {
-            > .block-editor-inner-blocks > .block-editor-block-list__layout,
-            .wpcom-overlay-grid {
-                grid-gap: var(--layout-grid--gutter-#{$size});
-            }
-            .wpcom-overlay-grid {
-                padding-left: var(--layout-grid--gutter-#{$size});
-                padding-right: var(--layout-grid--gutter-#{$size});
-            }
-        }
     }
 
     &.wp-block-jetpack-layout-gutter__nowrap {
@@ -86,3 +78,23 @@
         }
     }
 }
+
+.wp-block-jetpack-layout-grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	grid-gap: var(--layout-grid--gutter-large);
+}
+
+@each $size in $layout-gutter-sizes {
+    .wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__#{$size} {
+
+        & > .block-editor-inner-blocks > .block-editor-block-list__layout,
+        .wpcom-overlay-grid {
+            grid-gap: var(--layout-grid--gutter-#{$size});
+        }
+
+        .wpcom-overlay-grid {
+            padding-left: var(--layout-grid--gutter-#{$size});
+            padding-right: var(--layout-grid--gutter-#{$size});
+        }
+    }
+}
+
