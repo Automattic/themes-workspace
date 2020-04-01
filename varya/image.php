@@ -81,7 +81,7 @@ get_header();
 					}
 					?>
 
-						<?php varya_entry_footer(); ?>
+						<?php varya_entry_meta_footer(); ?>
 
 					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->
