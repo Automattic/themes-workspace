@@ -39,34 +39,42 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width: 100%;
 	--responsive--alignfull-width: 100%;
-	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	:root {
-		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(482px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	:root {
-		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(592px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 652px) {
 	:root {
-		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(592px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 822px) {
+	:root {
+		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -74,17 +82,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media only screen and (min-width: 1024px) {
 	:root {
-		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	:root {
-		--responsive--aligndefault-width: calc(1024px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -134,7 +133,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-right: var(--responsive--spacing-horizontal);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content .wp-block-button.alignright, .entry-content > .alignleft {
 		margin-left: auto;
 		margin-right: var(--responsive--alignleft-margin);
@@ -146,7 +145,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-right: 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content .wp-block-button.alignleft, .entry-content > .alignright {
 		margin-left: var(--responsive--alignright-margin);
 		margin-right: auto;
@@ -176,7 +175,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-left: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.site-header,
 	.site-main,
 	.site-footer {
@@ -248,7 +247,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.site-footer > *,
 	.site-main > article > *,
 	.site-main > .not-found > *,
@@ -811,7 +810,7 @@ html {
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	html {
 		font-size: var(--global--font-size-root);
 	}
@@ -1104,7 +1103,7 @@ object {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-newspack-blocks-homepage-articles.is-grid article {
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
@@ -1126,7 +1125,7 @@ object {
 	margin-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-newspack-blocks-homepage-articles article {
 		margin-top: calc(3 * var(--global--spacing-vertical));
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
@@ -1180,7 +1179,7 @@ object {
 	color: currentColor;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-newspack-blocks-homepage-articles article .more-link {
 		margin-top: var(--global--spacing-unit);
 	}
@@ -1529,7 +1528,7 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-columns .wp-block-column > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1552,13 +1551,13 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		margin-bottom: var(--global--spacing-vertical);
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 652px) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
@@ -1648,7 +1647,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-cover .wp-block-cover__inner-container > *,
 	.wp-block-cover-image .wp-block-cover__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
@@ -1739,7 +1738,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-group .wp-block-group__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1758,7 +1757,7 @@ button[data-load-more-btn],
 	padding: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2075,7 +2074,7 @@ dd {
 	padding: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	.wp-block-media-text .wp-block-media-text__content {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2086,7 +2085,7 @@ dd {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-media-text .wp-block-media-text__content > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -2105,7 +2104,7 @@ dd {
 	color: currentColor;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
 		padding-top: var(--global--spacing-vertical);
 		padding-bottom: var(--global--spacing-vertical);
@@ -2412,7 +2411,7 @@ hr.wp-block-separator.is-style-dots:before {
 	margin-top: 0 !important;
 }
 
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 481px) {
 	.wp-block-spacer[style] {
 		height: var(--global--spacing-unit) !important;
 	}
@@ -2668,7 +2667,7 @@ table th,
 	display: none;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.desktop-only {
 		display: block;
 	}
@@ -2874,7 +2873,7 @@ nav a {
 	display: inline;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation {
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
@@ -2917,7 +2916,7 @@ nav a {
 	z-index: 99999;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul li {
 		display: inherit;
 		width: inherit;
@@ -2933,7 +2932,7 @@ nav a {
 	}
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > li > a {
 		line-height: var(--global--line-height-base);
 	}
@@ -2962,7 +2961,7 @@ nav a {
 	position: relative;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > li > .sub-menu {
 		background: var(--global--color-background);
 		box-shadow: var(--global--elevation-4);
@@ -2988,7 +2987,7 @@ nav a {
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation a {
 		padding: var(--primary-nav--padding);
 	}
@@ -3021,7 +3020,7 @@ nav a {
 	content: "– " counters(nested-list, "– ", none);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > .menu-item-has-children > a::after {
 		content: "\00a0\25BC";
 		display: inline-block;
@@ -3076,7 +3075,7 @@ nav a {
 	overflow: hidden;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer {
 		align-items: flex-end;
 		display: flex;
@@ -3092,7 +3091,7 @@ nav a {
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		order: 1;
 		flex: 1 0 50%;
@@ -3121,7 +3120,7 @@ nav a {
 	display: inline;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer > .footer-navigation {
 		flex: 1 0 50%;
 		order: 2;
@@ -3141,7 +3140,7 @@ nav a {
 	padding-right: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer > .footer-navigation .footer-menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -3213,7 +3212,7 @@ nav a {
 	margin-top: var(--global--spacing-unit);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content .more-link {
 		margin-top: var(--global--spacing-vertical);
 	}
@@ -3234,7 +3233,7 @@ nav a {
 	max-width: 100% !important;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content > iframe[style] {
 		max-width: var(--global--spacing-vertical) !important;
 	}
@@ -3335,7 +3334,7 @@ nav a {
 	color: var(--global--color-primary-hover);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.navigation .nav-links {
 		display: flex;
 		justify-content: center;
@@ -3370,7 +3369,7 @@ nav a {
 	font-weight: 600;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.post-navigation .nav-links {
 		justify-content: space-between;
 	}
@@ -3480,7 +3479,7 @@ nav a {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-list .children {
 		padding-right: calc(2 * var(--global--spacing-horizontal));
 	}
@@ -3500,7 +3499,7 @@ nav a {
 	max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-meta .comment-author {
 		display: flex;
 		align-items: center;
@@ -3526,7 +3525,7 @@ nav a {
 	padding-left: calc(2.5 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-meta .comment-metadata {
 		padding-left: 0;
 	}
@@ -3540,7 +3539,7 @@ nav a {
 	color: var(--global--color-primary-hover);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-meta {
 		margin-left: inherit;
 		align-items: center;
@@ -3577,7 +3576,7 @@ nav a {
 	text-align: left;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.reply {
 		text-align: right;
 	}
@@ -3658,7 +3657,7 @@ nav a {
 	width: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-form > p {
 		display: flex;
 	}
@@ -4178,7 +4177,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 481px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
@@ -4192,7 +4191,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	}
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
 		margin-left: calc(2 * var(--global--spacing-unit));
 	}
@@ -4227,7 +4226,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
 		display: inline-block;
 	}
@@ -4240,7 +4239,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 	padding: var(--primary-nav--padding) 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 		max-width: calc(20 * var(--global--spacing-horizontal));
 		padding: var(--primary-nav--padding);
@@ -4322,7 +4321,7 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .qua
 	font-size: var(--global--font-size-base);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation > div > ul > li.woocommerce-menu-item > .sub-menu {
 		right: auto;
 		left: 0;
@@ -4904,7 +4903,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -5189,7 +5188,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -5209,7 +5208,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}
@@ -5485,7 +5484,7 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 /**
  * Filter by Product List Widgets
  */
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .widget.woocommerce ul.product_list_widget:not(.woocommerce-mini-cart) {
 		display: flex;
 		flex-wrap: wrap;
