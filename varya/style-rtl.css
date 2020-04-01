@@ -940,6 +940,10 @@ footer {
  * Elements
  * - Styles for basic HTML elemants
  */
+blockquote {
+	margin: 0;
+}
+
 blockquote p {
 	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h4);
@@ -2183,7 +2187,7 @@ p.has-background {
 }
 
 .wp-block-pullquote {
-	padding: calc( 3 * var(--global--spacing-unit)) 0;
+	padding: calc( 2 * var(--global--spacing-unit)) 0;
 	margin-right: 0;
 	margin-left: 0;
 	text-align: right;
@@ -2231,12 +2235,13 @@ p.has-background {
 	border-right-color: var(--quote--border-color);
 	border-right-style: solid;
 	border-right-width: var(--quote--border-width);
+	font-style: normal;
 }
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
-	padding: calc( 3 * var(--global--spacing-unit));
+	padding: calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
@@ -2261,7 +2266,7 @@ p.has-background {
 	border-right-color: var(--quote--border-color);
 	border-right-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
-	padding-right: calc( 2 * var(--global--spacing-horizontal));
+	padding-right: var(--global--spacing-horizontal);
 	/**
 	 * Block Options
 	 */
@@ -2314,13 +2319,13 @@ p.has-background {
 	color: currentColor;
 }
 
-.wp-block-quote[style*="text-align:right"], .wp-block-quote[style*="text-align: right"] {
-	border-left-color: var(--quote--border-color);
+.wp-block-quote.has-text-align-right {
+	border-left: var(--quote--border-width) solid var(--quote--border-color);
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
 	border-right: var(--quote--border-width) solid var(--quote--border-color);
-	padding-right: calc( 2 * var(--global--spacing-horizontal));
+	padding-right: var(--global--spacing-horizontal);
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -2329,6 +2334,15 @@ p.has-background {
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
 	font-size: var(--quote--font-size-large);
 	font-style: normal;
+	line-height: 1.6;
+}
+
+.wp-block-quote.is-style-large.has-text-align-right, .wp-block-quote.is-large.has-text-align-right {
+	border-right: none;
+}
+
+.wp-block-quote.is-style-large.has-text-align-center, .wp-block-quote.is-large.has-text-align-center {
+	border: none;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation,

@@ -2,7 +2,7 @@
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
-	padding-left: calc( 2 * var(--global--spacing-horizontal) );
+	padding-left: var(--global--spacing-horizontal);
 
 	& > * {
 		margin-top: var(--global--spacing-unit);
@@ -40,15 +40,14 @@
 	/**
 	 * Block Options
 	 */
-	&[style*="text-align:right"],
-	&[style*="text-align: right"] {
-		border-right-color: var(--quote--border-color);
+	&.has-text-align-right {
+		border-right: var(--quote--border-width) solid var(--quote--border-color);
 	}
 
 	&.is-style-large,
 	&.is-large {
 		border-left: var(--quote--border-width) solid var(--quote--border-color);
-		padding-left: calc( 2 * var(--global--spacing-horizontal) );
+		padding-left: var(--global--spacing-horizontal);
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -56,6 +55,14 @@
 		p {
 			font-size: var(--quote--font-size-large);
 			font-style: normal;
+			line-height: 1.6;
+		}
+		&.has-text-align-right {
+			border-left: none;
+		}
+
+		&.has-text-align-center {
+			border: none;
 		}
 
 		.wp-block-quote__citation,

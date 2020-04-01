@@ -1,26 +1,41 @@
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
+	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 
 	p {
 		font-family: var(--quote--font-family);
-		font-size: var(--heading--font-size-h4);
+		font-size: var(--quote--font-size);
 		letter-spacing: var(--heading--letter-spacing-h4);
 		line-height: var(--global--line-height-h4);
 	}
 
 	&.is-large,
 	&.is-style-large {
-		border: none;
-		padding: 0;
+		border-left: var(--quote--border-width) solid var(--quote--border-color);
+		padding-left: var(--global--spacing-horizontal);
+		/* Resetting margins to match _block-container.scss */
+		margin-top: var(--global--spacing-vertical);
+		margin-bottom: var(--global--spacing-vertical);
 
 		p {
-			font-family: var(--quote--font-family);
-			font-size: var(--heading--font-size-h3);
-			letter-spacing: var(--heading--letter-spacing-h3);
-			line-height: var(--global--line-height-h3);
+			font-size: var(--quote--font-size-large);
+			font-style: normal;
+			line-height: 1.6;
 		}
+		&.has-text-align-right {
+			border-left: none;
+			border-right: var(--quote--border-width) solid var(--quote--border-color);
+		}
+	}
+
+	&.has-text-align-right {
+		border-right: var(--quote--border-width) solid var(--quote--border-color);
+	}
+
+	&.has-text-align-center {
+		border: none;
 	}
 
 	.has-background:not(.has-background-background-color) &,
