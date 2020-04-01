@@ -210,44 +210,15 @@ function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 		return $output;
 	}
 
-	if ( in_array( 'mobile-parent-nav-menu-item', $item->classes, true ) && isset( $item->original_id ) ) {
-		// Inject the keyboard_arrow_left SVG inside the parent nav menu item, and let the item link to the parent item.
-		// @todo Only do this for nested submenus? If on a first-level submenu, then really the link could be "#" since the desire is to remove the target entirely.
-		$link = sprintf(
-			'<button class="menu-item-link-return" tabindex="-1">%s',
-			varya_get_icon_svg( 'chevron_left', 24 )
-		);
-
-		// replace opening <a> with <button>
-		$output = preg_replace(
-			'/<a\s.*?>/',
-			$link,
-			$output,
-			1 // Limit.
-		);
-
-		// replace closing </a> with </button>
-		$output = preg_replace(
-			'#</a>#i',
-			'</button>',
-			$output,
-			1 // Limit.
-		);
-
-	} elseif ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = varya_get_icon_svg( 'keyboard_arrow_down', 24 );
-
-		$output .= sprintf(
-			'<button class="submenu-expand" tabindex="-1">%s</button>',
-			$icon
-		);
+		$output .= varya_get_icon_svg( 'keyboard_arrow_down', 24 );
 	}
 
 	return $output;
 }
-// add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
 
 /**
  * Create a nav menu item to be displayed on mobile to navigate from submenu back to the parent.
