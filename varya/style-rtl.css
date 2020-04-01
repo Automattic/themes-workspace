@@ -3014,11 +3014,17 @@ nav a {
 
 @media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > .menu-item-has-children > a::after {
-		content: "\00a0\25BC";
-		display: inline-block;
-		font-size: var(--global--font-size-xs);
+		content: "";
+		position: relative;
+		top: calc( var(--primary-nav--padding) / -4);
 		height: inherit;
 		width: inherit;
+		border: solid currentColor;
+		border-width: 0 0 1px 1px;
+		display: inline-block;
+		margin-right: calc( var(--primary-nav--padding) / 2);
+		padding: 3px;
+		transform: rotate(-45deg);
 	}
 }
 
