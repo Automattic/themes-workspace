@@ -2900,12 +2900,17 @@ nav a {
 	display: block;
 	position: relative;
 	width: 100%;
+	color: var(--primary-nav--color-link);
 	z-index: 1;
 }
 
 .main-navigation > div > ul li:hover, .main-navigation > div > ul li:focus-within {
 	cursor: pointer;
 	z-index: 99999;
+}
+
+.main-navigation > div > ul li:hover, .main-navigation > div > ul li:focus {
+	color: var(--primary-nav--color-link-hover);
 }
 
 @media only screen and (min-width: 482px) {

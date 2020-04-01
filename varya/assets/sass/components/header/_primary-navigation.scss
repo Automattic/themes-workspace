@@ -79,12 +79,18 @@
 			display: block;
 			position: relative;
 			width: 100%;
+			color: var(--primary-nav--color-link);
 			z-index: 1;
 
 			&:hover,
 			&:focus-within {
 				cursor: pointer;
 				z-index: 99999;
+			}
+
+			&:hover,
+			&:focus {
+				color: var(--primary-nav--color-link-hover);
 			}
 
 			&:focus-within a {
@@ -202,7 +208,7 @@
 			> .svg-icon {
 				display: inline-block;
 				height: 100%;
-				fill: var(--primary-nav--color-link);
+				fill: currentColor;
 				margin-right: var(--primary-nav--padding);
 			}
 		}
