@@ -8,59 +8,71 @@
 $flexwidth: 100%;
 $horizontal_space: var(--global--spacing-horizontal);
 
-$breakpoint_sm: 560px;
-$breakpoint_md: 640px;
-$breakpoint_lg: 782px;
-$breakpoint_xl: 1024px;
-$breakpoint_xxl: 1280px;
-
-@custom-media --sm only screen and (min-width: #{$breakpoint_sm});
-@custom-media --md only screen and (min-width: #{$breakpoint_md});
-@custom-media --lg only screen and (min-width: #{$breakpoint_lg});
-@custom-media --xl only screen and (min-width: #{$breakpoint_xl});
-@custom-media --xxl only screen and (min-width: #{$breakpoint_xxl});
-
-@custom-media --sm-max only screen and (max-width: #{$breakpoint_sm - 1});
-@custom-media --md-max only screen and (max-width: #{$breakpoint_md - 1});
-@custom-media --lg-max only screen and (max-width: #{$breakpoint_lg - 1});
-@custom-media --xl-max only screen and (max-width: #{$breakpoint_xl - 1});
-@custom-media --xxl-max only screen and (max-width: #{$breakpoint_xxl - 1});
+$breakpoint_sm: 482px;
+$breakpoint_md: 592px;
+$breakpoint_lg: 652px;
+$breakpoint_xl: 822px;
+$breakpoint_xxl: 1024px;
 
 // Responsive breakpoints mixin
 @mixin media( $res ) {
 
 	@if mobile-only == $res {
-		@media (--sm-max) {
+		@media only screen and (max-width: #{$breakpoint_sm - 1}) {
 			@content;
 		}
 	}
 
 	@if mobile == $res {
-		@media (--sm) {
+		@media only screen and (min-width: #{$breakpoint_sm}) {
+			@content;
+		}
+	}
+
+	@if tablet-only == $res {
+		@media only screen and (max-width: #{$breakpoint_md - 1}) {
 			@content;
 		}
 	}
 
 	@if tablet == $res {
-		@media (--md) {
+		@media only screen and (min-width: #{$breakpoint_md}) {
+			@content;
+		}
+	}
+
+	@if laptop-only == $res {
+		@media only screen and (max-width: #{$breakpoint_lg - 1}) {
 			@content;
 		}
 	}
 
 	@if laptop == $res {
-		@media (--lg) {
+		@media only screen and (min-width: #{$breakpoint_lg}) {
+			@content;
+		}
+	}
+
+	@if desktop-only == $res {
+		@media only screen and (max-width: #{$breakpoint_xl - 1}) {
 			@content;
 		}
 	}
 
 	@if desktop == $res {
-		@media (--xl) {
+		@media only screen and (min-width: #{$breakpoint_xl}) {
+			@content;
+		}
+	}
+
+	@if wide-only == $res {
+		@media only screen and (max-width: #{$breakpoint_xxl - 1}) {
 			@content;
 		}
 	}
 
 	@if wide == $res {
-		@media (--xxl) {
+		@media only screen and (min-width: #{$breakpoint_xxl}) {
 			@content;
 		}
 	}
@@ -74,7 +86,6 @@ $breakpoint_xxl: 1280px;
 	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width: 100%;
 	--responsive--alignfull-width: 100%;
-	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
@@ -92,7 +103,7 @@ $breakpoint_xxl: 1280px;
 @include media(tablet) {
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -110,7 +121,7 @@ $breakpoint_xxl: 1280px;
 @include media(desktop) {
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_lg} + var(--responsive--alignwide-width-multiplier));
+		--responsive--alignwide-width: calc(#{$breakpoint_xl} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -118,8 +129,8 @@ $breakpoint_xxl: 1280px;
 
 @include media(wide) {
 	:root {
-		--responsive--aligndefault-width: calc(#{$breakpoint_xl} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_xl} + var(--responsive--alignwide-width-multiplier));
+		--responsive--aligndefault-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(#{$breakpoint_xl} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
