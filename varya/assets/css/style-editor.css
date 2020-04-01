@@ -134,6 +134,7 @@ div[data-type="core/button"] {
  */
 blockquote {
 	margin: 0;
+	padding: 0;
 }
 
 blockquote p {
@@ -820,12 +821,8 @@ p.has-background:not(.has-background-background-color) a {
 	color: currentColor;
 }
 
-.wp-block-pullquote.alignwide > p,
-.wp-block-pullquote.alignfull > p,
-.wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote {
-	margin-left: auto;
-	margin-right: auto;
+.wp-block[data-align="full"] .wp-block-pullquote:not(.is-style-solid-color) blockquote {
+	padding: 0 calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-quote {
@@ -858,11 +855,13 @@ p.has-background:not(.has-background-background-color) a {
 
 .wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
 	border-left: none;
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
+	border-right: none;
+	padding-right: 0;
 }
 
 .wp-block-quote.has-text-align-right {
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
+	border-right: none;
+	padding-right: 0;
 }
 
 .wp-block-quote.has-text-align-center {

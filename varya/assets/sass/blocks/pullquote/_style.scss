@@ -54,17 +54,23 @@
         border-left-style: solid;
 		border-left-width: var(--quote--border-width);
 		font-style: normal;
-    }
+	}
+
+	&.alignwide > p,
+	&.alignwide blockquote {
+		max-width: var(--responsive--alignwide-width);
+
+	}
+	&.alignfull:not(.is-style-solid-color) > p,
+	&.alignfull:not(.is-style-solid-color) blockquote {
+		padding: 0 calc( 2 * var(--global--spacing-unit) );
+	}
 
 	&.is-style-solid-color {
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
 		padding: calc( 2 * var(--global--spacing-unit) );
-
-		&:not(.alignleft):not(.alignright) blockquote {
-			@extend %responsive-aligndefault-width;
-		}
 
 		blockquote {
 			max-width: inherit;
@@ -77,12 +83,4 @@
 		}
 	}
 
-	&.alignwide > p,
-	&.alignfull > p,
-	&.alignwide blockquote,
-	&.alignfull blockquote {
-		margin-left: auto;
-		margin-right: auto;
-		@extend %responsive-aligndefault-width;
-	}
 }

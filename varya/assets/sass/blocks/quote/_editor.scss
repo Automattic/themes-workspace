@@ -26,12 +26,14 @@
 		}
 		&.has-text-align-right {
 			border-left: none;
-			border-right: var(--quote--border-width) solid var(--quote--border-color);
+			border-right: none;
+			padding-right: 0;
 		}
 	}
 
 	&.has-text-align-right {
-		border-right: var(--quote--border-width) solid var(--quote--border-color);
+		border-right: none;
+		padding-right: 0;
 	}
 
 	&.has-text-align-center {
