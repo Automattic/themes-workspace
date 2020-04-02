@@ -835,8 +835,7 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
-	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--global--line-height-h4);
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
@@ -850,7 +849,6 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
 	font-size: var(--quote--font-size-large);
 	font-style: normal;
-	line-height: 1.6;
 }
 
 .wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {

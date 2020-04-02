@@ -7,8 +7,7 @@
 	p {
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
-		letter-spacing: var(--heading--letter-spacing-h4);
-		line-height: var(--global--line-height-h4);
+		line-height: var(--global--line-height-body);
 	}
 
 	&.is-large,
@@ -22,7 +21,6 @@
 		p {
 			font-size: var(--quote--font-size-large);
 			font-style: normal;
-			line-height: 1.6;
 		}
 		&.has-text-align-right {
 			border-left: none;

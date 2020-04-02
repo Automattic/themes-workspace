@@ -17,10 +17,10 @@
 		}
 	}
 
-		p {
+	p {
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
-		line-height: inherit; 
+		line-height: var(--global--line-height-body); 
 	}
 
 	.wp-block-quote__citation,
@@ -56,7 +56,6 @@
 		p {
 			font-size: var(--quote--font-size-large);
 			font-style: normal;
-			line-height: 1.6;
 		}
 		&.has-text-align-right {
 			border-left: none;

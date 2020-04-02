@@ -2287,7 +2287,7 @@ p.has-background {
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
-	line-height: inherit;
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-quote .wp-block-quote__citation,
@@ -2334,7 +2334,6 @@ p.has-background {
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
 	font-size: var(--quote--font-size-large);
 	font-style: normal;
-	line-height: 1.6;
 }
 
 .wp-block-quote.is-style-large.has-text-align-right, .wp-block-quote.is-large.has-text-align-right {
