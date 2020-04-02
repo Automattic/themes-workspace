@@ -1,6 +1,7 @@
 @import '../structure/responsive-logic';
 
 body {
+	--wp--typography--line-height: var(--global--line-height-body);
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
@@ -8,10 +9,6 @@ body {
 	font-weight: normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-}
-
-p {
-	line-height: var(--global--line-height-body);
 }
 
 // Set font size of title block the same as body.
@@ -34,7 +31,7 @@ a {
 }
 
 // Gutenberg injects a rule that limits the max width of .wp-block to 580px
-// This line overrides it to use the responsive spacing rules for default width content 
+// This line overrides it to use the responsive spacing rules for default width content
 .wp-block {
 	&:not([data-align="full"]):not([data-align="wide"]){
 		max-width: var(--responsive--aligndefault-width);

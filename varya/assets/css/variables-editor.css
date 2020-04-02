@@ -122,7 +122,7 @@ body {
 	--heading--letter-spacing-h3: var(--global--letter-spacing-xl);
 	--heading--letter-spacing-h2: var(--global--letter-spacing-xxl);
 	--heading--letter-spacing-h1: var(--global--letter-spacing-xxxl);
-	--heading--line-height: 1.25em;
+	--heading--line-height: var(--wp--typography--line-height, 1.25);
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;
 	--latest-posts--title-font-family: var(--heading--font-family);
