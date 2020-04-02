@@ -2327,8 +2327,7 @@ p.has-background {
 }
 
 .wp-block-quote.has-text-align-right {
-	border-right: none;
-	padding-right: 0;
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {

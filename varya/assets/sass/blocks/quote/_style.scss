@@ -41,8 +41,7 @@
 	 * Block Options
 	 */
 	&.has-text-align-right {
-		border-right: none;
-		padding-right: 0;
+		border-right: var(--quote--border-width) solid var(--quote--border-color);
 	}
 
 	&.is-style-large,

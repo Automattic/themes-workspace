@@ -853,13 +853,11 @@ p.has-background:not(.has-background-background-color) a {
 
 .wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
 	border-left: none;
-	border-right: none;
-	padding-right: 0;
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
 }
 
 .wp-block-quote.has-text-align-right {
-	border-right: none;
-	padding-right: 0;
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
 }
 
 .wp-block-quote.has-text-align-center {
