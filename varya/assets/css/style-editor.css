@@ -90,6 +90,7 @@
  * Output
  */
 body {
+	--wp--typography--line-height: var(--global--line-height-body);
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
@@ -97,10 +98,6 @@ body {
 	font-weight: normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-}
-
-p {
-	line-height: var(--global--line-height-body);
 }
 
 .editor-post-title__block {

@@ -34,8 +34,8 @@ body {
 	--global--font-size-xxxl: 64px;
 	/* Line Height */
 	--global--line-height-base: 1;
-	--global--line-height-body: 1.7;
-	--global--line-height-heading: 1.125;
+	--global--line-height-body: var(--wp--typography--line-height, 1.7);
+	--global--line-height-heading: var(--wp--typography--line-height, 1.125);
 	/* Colors */
 	--global--color-primary: #000000;
 	--global--color-primary-hover: #A36265;
@@ -115,7 +115,7 @@ body {
 	--heading--letter-spacing-h3: var(--global--letter-spacing-xl);
 	--heading--letter-spacing-h2: var(--global--letter-spacing-xxl);
 	--heading--letter-spacing-h1: var(--global--letter-spacing-xxxl);
-	--heading--line-height: 1.25em;
+	--heading--line-height: var(--wp--typography--line-height, 1.25);
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;
 	--latest-posts--title-font-family: var(--heading--font-family);
