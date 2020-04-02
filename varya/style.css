@@ -2831,6 +2831,10 @@ table th,
 	color: var(--branding--color-link-hover);
 }
 
+.site-title a::selection {
+	text-shadow: 1px 0px var(--global--color-text-selection), -1px 0px var(--global--color-text-selection), -2px 0px var(--global--color-text-selection), 2px 0px var(--global--color-text-selection), -3px 0px var(--global--color-text-selection), 3px 0px var(--global--color-text-selection), -4px 0px var(--global--color-text-selection), 4px 0px var(--global--color-text-selection), -5px 0px var(--global--color-text-selection), 5px 0px var(--global--color-text-selection);
+}
+
 .site-description {
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
