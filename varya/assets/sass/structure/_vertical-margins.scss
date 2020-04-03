@@ -27,8 +27,13 @@
 }
 
 .site-header {
-	padding-top: calc(3 * var(--global--spacing-vertical));
-	padding-bottom: calc(3 * var(--global--spacing-vertical));
+	padding-top: calc(2 * var(--global--spacing-vertical));
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+
+	@include media(mobile) {
+		padding-top: calc(3 * var(--global--spacing-vertical));
+		padding-bottom: calc(3 * var(--global--spacing-vertical));
+	}
 }
 
 /**
