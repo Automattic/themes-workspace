@@ -191,8 +191,15 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 }
 
 .site-header {
-	padding-top: calc(3 * var(--global--spacing-vertical));
-	padding-bottom: calc(3 * var(--global--spacing-vertical));
+	padding-top: calc(2 * var(--global--spacing-vertical));
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+}
+
+@media only screen and (min-width: 482px) {
+	.site-header {
+		padding-top: calc(3 * var(--global--spacing-vertical));
+		padding-bottom: calc(3 * var(--global--spacing-vertical));
+	}
 }
 
 /**
