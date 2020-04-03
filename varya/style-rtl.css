@@ -3296,6 +3296,12 @@ nav a {
 	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
+.site-main > article > .entry-footer {
+	margin-top: calc( var(--global--spacing-vertical) * 3);
+	padding-top: var(--global--spacing-unit);
+	border-top: var(--separator--height) solid var(--separator--border-color);
+}
+
 /**
  * Post Thumbnails
  */
