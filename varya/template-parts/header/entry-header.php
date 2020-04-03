@@ -12,6 +12,6 @@
 
 <?php if ( ! is_page() ) : ?>
 <div class="entry-meta">
-	<?php varya_entry_footer(); ?>
+	<?php varya_entry_meta_footer(); ?>
 </div><!-- .meta-info -->
 <?php endif; ?>

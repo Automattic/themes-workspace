@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Varya
 Theme URI: https://github.com/Automattic/theme-workspace/varya
@@ -39,34 +38,42 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width: 100%;
 	--responsive--alignfull-width: 100%;
-	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	:root {
-		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(482px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	:root {
-		--responsive--aligndefault-width: calc(560px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(560px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(592px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 652px) {
 	:root {
-		--responsive--aligndefault-width: calc(640px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(782px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(592px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 822px) {
+	:root {
+		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -74,17 +81,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media only screen and (min-width: 1024px) {
 	:root {
-		--responsive--aligndefault-width: calc(782px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(782px + var(--responsive--alignwide-width-multiplier));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	:root {
-		--responsive--aligndefault-width: calc(1024px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(1024px + var(--responsive--alignwide-width-multiplier));
+		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -93,10 +91,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /**
  * Extends
  */
-.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-.wp-block-pullquote.alignfull > p,
-.wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+.default-max-width, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 .entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .navigation {
 	max-width: var(--responsive--aligndefault-width);
 	margin-left: auto;
@@ -136,7 +131,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-right: var(--responsive--spacing-horizontal);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content .wp-block-button.alignright, .entry-content > .alignleft {
 		/*rtl:ignore*/
 		margin-left: auto;
@@ -152,7 +147,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-right: 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content .wp-block-button.alignleft, .entry-content > .alignright {
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignright-margin);
@@ -184,7 +179,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.site-header,
 	.site-main,
 	.site-footer {
@@ -193,6 +188,11 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 		padding-bottom: var(--global--spacing-vertical);
 		padding-left: 0;
 	}
+}
+
+.site-header {
+	padding-top: calc(3 * var(--global--spacing-vertical));
+	padding-bottom: calc(3 * var(--global--spacing-vertical));
 }
 
 /**
@@ -251,7 +251,7 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.site-footer > *,
 	.site-main > article > *,
 	.site-main > .not-found > *,
@@ -814,7 +814,7 @@ html {
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	html {
 		font-size: var(--global--font-size-root);
 	}
@@ -944,7 +944,8 @@ footer {
  * - Styles for basic HTML elemants
  */
 blockquote {
-	padding-left: var(--global--spacing-horizontal);
+	margin: 0;
+	padding: 0;
 }
 
 blockquote p {
@@ -956,8 +957,8 @@ blockquote p {
 blockquote cite,
 blockquote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
-	letter-spacing: var(--global--letter-spacing-sm);
+	font-size: var(--global--font-size-xs);
+	letter-spacing: var(--global--letter-spacing-xs);
 }
 
 blockquote > * {
@@ -1107,7 +1108,7 @@ object {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-newspack-blocks-homepage-articles.is-grid article {
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
@@ -1129,7 +1130,7 @@ object {
 	margin-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-newspack-blocks-homepage-articles article {
 		margin-top: calc(3 * var(--global--spacing-vertical));
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
@@ -1183,7 +1184,7 @@ object {
 	color: currentColor;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-newspack-blocks-homepage-articles article .more-link {
 		margin-top: var(--global--spacing-unit);
 	}
@@ -1532,7 +1533,7 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-columns .wp-block-column > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1555,13 +1556,13 @@ button[data-load-more-btn],
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		margin-bottom: var(--global--spacing-vertical);
 	}
 }
 
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 652px) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
@@ -1651,7 +1652,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-cover .wp-block-cover__inner-container > *,
 	.wp-block-cover-image .wp-block-cover__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
@@ -1742,7 +1743,7 @@ button[data-load-more-btn],
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-group .wp-block-group__inner-container > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -1761,7 +1762,7 @@ button[data-load-more-btn],
 	padding: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2219,7 +2220,7 @@ dd {
 	padding: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	.wp-block-media-text .wp-block-media-text__content {
 		padding: var(--global--spacing-vertical);
 	}
@@ -2230,7 +2231,7 @@ dd {
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-media-text .wp-block-media-text__content > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -2249,7 +2250,7 @@ dd {
 	color: currentColor;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
 		padding-top: var(--global--spacing-vertical);
 		padding-bottom: var(--global--spacing-vertical);
@@ -2331,7 +2332,7 @@ p.has-background {
 }
 
 .wp-block-pullquote {
-	padding: calc( 3 * var(--global--spacing-unit)) 0;
+	padding: calc( 2 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
@@ -2348,8 +2349,10 @@ p.has-background {
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
 	font-size: var(--pullquote--font-size);
+	font-style: var(--pullquote--font-style);
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height);
+	line-height: var(--pullquote--line-height);
+	margin: 0;
 }
 
 .wp-block-pullquote a {
@@ -2360,16 +2363,13 @@ p.has-background {
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	color: currentColor;
-	font-size: var(--global--font-size-sm);
 	display: block;
+	font-size: var(--global--font-size-xs);
+	text-transform: none;
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
 	background: none;
-}
-
-.wp-block-pullquote:not(.is-style-solid-color) blockquote {
-	padding-left: 0;
 }
 
 .wp-block-pullquote.is-style-default.alignleft blockquote > *, .wp-block-pullquote.is-style-default.aligncenter blockquote > *, .wp-block-pullquote.is-style-default.alignright blockquote > * {
@@ -2380,17 +2380,26 @@ p.has-background {
 	border-left-color: var(--quote--border-color);
 	border-left-style: solid;
 	border-left-width: var(--quote--border-width);
-	padding-left: var(--global--spacing-horizontal);
+	font-style: normal;
+}
+
+.wp-block-pullquote.alignwide > p,
+.wp-block-pullquote.alignwide blockquote {
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block-pullquote.alignfull:not(.is-style-solid-color) > p,
+.wp-block-pullquote.alignfull:not(.is-style-solid-color) blockquote {
+	padding: 0 calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
+	padding: calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
-	padding-left: var(--global--spacing-unit);
-	padding-right: var(--global--spacing-unit);
 	max-width: inherit;
 }
 
@@ -2398,14 +2407,6 @@ p.has-background {
 .wp-block-pullquote.is-style-solid-color cite,
 .wp-block-pullquote.is-style-solid-color footer {
 	color: currentColor;
-}
-
-.wp-block-pullquote.alignwide > p,
-.wp-block-pullquote.alignfull > p,
-.wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote {
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .wp-block-quote {
@@ -2434,14 +2435,14 @@ p.has-background {
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
-	line-height: var(--heading--line-height);
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-quote .wp-block-quote__citation,
 .wp-block-quote cite,
 .wp-block-quote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -2465,20 +2466,29 @@ p.has-background {
 	color: currentColor;
 }
 
-.wp-block-quote[style*="text-align:right"], .wp-block-quote[style*="text-align: right"] {
-	border-right-color: var(--quote--border-color);
+.wp-block-quote.has-text-align-right {
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
+	border-left: var(--quote--border-width) solid var(--quote--border-color);
+	padding-left: var(--global--spacing-horizontal);
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
-	padding: 0;
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
 	font-size: var(--quote--font-size-large);
-	line-height: var(--heading--line-height);
+	font-style: normal;
+}
+
+.wp-block-quote.is-style-large.has-text-align-right, .wp-block-quote.is-large.has-text-align-right {
+	border-left: none;
+}
+
+.wp-block-quote.is-style-large.has-text-align-center, .wp-block-quote.is-large.has-text-align-center {
+	border: none;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation,
@@ -2487,7 +2497,7 @@ p.has-background {
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote,
@@ -2548,7 +2558,7 @@ hr.wp-block-separator.is-style-dots:before {
 	margin-top: 0 !important;
 }
 
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 481px) {
 	.wp-block-spacer[style] {
 		height: var(--global--spacing-unit) !important;
 	}
@@ -2809,7 +2819,7 @@ table th,
 	display: none;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.desktop-only {
 		display: block;
 	}
@@ -2938,6 +2948,7 @@ table th,
  */
 .site-branding {
 	color: var(--branding--color-text);
+	text-align: center;
 }
 
 .site-title {
@@ -2946,11 +2957,18 @@ table th,
 	font-size: var(--branding--title--font-size);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
+	margin-bottom: calc( var(--global--spacing-vertical) / 2);
 }
 
 .site-title a {
+	background-image: linear-gradient(to right, var(--global--color-secondary) 100%, transparent 100%);
+	background-position: 0 1.22em;
+	background-repeat: repeat-x;
+	background-size: 8px 2px;
+	border-bottom: none;
 	color: currentColor;
 	font-weight: var(--branding--title--font-weight);
+	text-shadow: 1px 0px var(--global--color-background), -1px 0px var(--global--color-background), -2px 0px var(--global--color-background), 2px 0px var(--global--color-background), -3px 0px var(--global--color-background), 3px 0px var(--global--color-background), -4px 0px var(--global--color-background), 4px 0px var(--global--color-background), -5px 0px var(--global--color-background), 5px 0px var(--global--color-background);
 }
 
 .site-title a:link, .site-title a:visited {
@@ -2959,6 +2977,10 @@ table th,
 
 .site-title a:hover {
 	color: var(--branding--color-link-hover);
+}
+
+.site-title a::selection {
+	text-shadow: 1px 0px var(--global--color-text-selection), -1px 0px var(--global--color-text-selection), -2px 0px var(--global--color-text-selection), 2px 0px var(--global--color-text-selection), -3px 0px var(--global--color-text-selection), 3px 0px var(--global--color-text-selection), -4px 0px var(--global--color-text-selection), 4px 0px var(--global--color-text-selection), -5px 0px var(--global--color-text-selection), 5px 0px var(--global--color-text-selection);
 }
 
 .site-description {
@@ -2974,15 +2996,24 @@ nav a {
 }
 
 .site-title > a {
-	text-decoration: underline;
 	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
-	border-bottom: none;
+}
+
+.site-logo {
+	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+}
+
+.site-logo .custom-logo {
+	max-width: var(--branding--logo--max-width);
+	max-height: var(--branding--logo--max-height);
+	height: auto;
 }
 
 .main-navigation {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
+	margin-top: calc( var(--global--spacing-vertical) * 1.5);
 }
 
 .main-navigation > div {
@@ -3016,7 +3047,11 @@ nav a {
 	display: inline;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
+	.main-navigation {
+		display: flex;
+		justify-content: var(--primary-nav--justify-content);
+	}
 	.main-navigation > div {
 		display: inline-block;
 	}
@@ -3055,7 +3090,7 @@ nav a {
 	z-index: 99999;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul li {
 		display: inherit;
 		width: inherit;
@@ -3071,7 +3106,7 @@ nav a {
 	}
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > li > a {
 		line-height: var(--global--line-height-base);
 	}
@@ -3100,7 +3135,7 @@ nav a {
 	position: relative;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > li > .sub-menu {
 		background: var(--global--color-background);
 		box-shadow: var(--global--elevation-4);
@@ -3118,33 +3153,43 @@ nav a {
 	width: 100%;
 }
 
-.main-navigation a {
+.main-navigation .main-menu > .menu-item:hover > a {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation .main-menu > .menu-item:hover > a + svg {
+	fill: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation .menu-item > a {
 	color: var(--primary-nav--color-link);
+}
+
+.main-navigation .menu-item > a:hover {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation a {
+	color: currentColor;
 	display: block;
 	font-family: var(--primary-nav--font-family);
 	font-weight: var(--primary-nav--font-weight);
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.main-navigation a {
 		padding: var(--primary-nav--padding);
 	}
 }
 
-.main-navigation a:link, .main-navigation a:visited {
-	color: var(--primary-nav--color-link);
-}
-
-.main-navigation a:hover {
-	color: var(--primary-nav--color-link-hover);
+.main-navigation a:hover, .main-navigation a:link, .main-navigation a:visited {
+	color: currentColor;
 }
 
 .main-navigation .sub-menu {
 	list-style: none;
-	margin-left: 0;
-	/* Reset the counter for each UL */
-	counter-reset: nested-list;
+	margin-left: var(--primary-nav--padding);
 }
 
 .main-navigation .sub-menu .menu-item a {
@@ -3152,20 +3197,14 @@ nav a {
 	padding-bottom: calc(0.5 * var(--primary-nav--padding));
 }
 
-.main-navigation .sub-menu .menu-item a::before {
-	/* Increment the dashes */
-	counter-increment: nested-list;
-	/* Insert dashes with spaces in between */
-	content: "– " counters(nested-list, "– ", none);
-}
-
-@media only screen and (min-width: 560px) {
-	.main-navigation > div > ul > .menu-item-has-children > a::after {
-		content: "\00a0\25BC";
+@media only screen and (min-width: 482px) {
+	.main-navigation .menu-item-has-children > a {
+		padding-right: 0;
+	}
+	.main-navigation .menu-item-has-children > .svg-icon {
 		display: inline-block;
-		font-size: var(--global--font-size-xs);
-		height: inherit;
-		width: inherit;
+		height: 100%;
+		margin-right: var(--primary-nav--padding);
 	}
 }
 
@@ -3214,7 +3253,7 @@ nav a {
 	overflow: hidden;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer {
 		align-items: flex-end;
 		display: flex;
@@ -3230,7 +3269,7 @@ nav a {
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		order: 1;
 		flex: 1 0 50%;
@@ -3259,7 +3298,7 @@ nav a {
 	display: inline;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer > .footer-navigation {
 		flex: 1 0 50%;
 		order: 2;
@@ -3279,7 +3318,7 @@ nav a {
 	padding-left: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	.site-footer > .footer-navigation .footer-menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -3351,7 +3390,7 @@ nav a {
 	margin-top: var(--global--spacing-unit);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content .more-link {
 		margin-top: var(--global--spacing-vertical);
 	}
@@ -3372,7 +3411,7 @@ nav a {
 	max-width: 100% !important;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.entry-content > iframe[style] {
 		max-width: var(--global--spacing-vertical) !important;
 	}
@@ -3417,6 +3456,7 @@ nav a {
 
 .entry-meta a,
 .entry-footer a {
+	border-bottom: none;
 	color: var(--entry-meta--color-link);
 }
 
@@ -3433,6 +3473,12 @@ nav a {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: calc(0.25 * var(--global--spacing-unit));
+}
+
+.site-main > article > .entry-footer {
+	margin-top: calc( var(--global--spacing-vertical) * 3);
+	padding-top: var(--global--spacing-unit);
+	border-top: var(--separator--height) solid var(--separator--border-color);
 }
 
 /**
@@ -3472,7 +3518,7 @@ nav a {
 	color: var(--global--color-primary-hover);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.navigation .nav-links {
 		display: flex;
 		justify-content: center;
@@ -3496,18 +3542,18 @@ nav a {
 }
 
 .post-navigation .meta-nav {
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
+	color: var(--global--color-foreground);
 }
 
 .post-navigation .post-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
-	font-weight: 600;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.post-navigation .nav-links {
 		justify-content: space-between;
 	}
@@ -3617,7 +3663,7 @@ nav a {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-list .children {
 		padding-left: calc(2 * var(--global--spacing-horizontal));
 	}
@@ -3637,7 +3683,7 @@ nav a {
 	max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-meta .comment-author {
 		display: flex;
 		align-items: center;
@@ -3663,7 +3709,7 @@ nav a {
 	padding-right: calc(2.5 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-meta .comment-metadata {
 		padding-right: 0;
 	}
@@ -3677,7 +3723,7 @@ nav a {
 	color: var(--global--color-primary-hover);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-meta {
 		margin-right: inherit;
 		align-items: center;
@@ -3714,7 +3760,7 @@ nav a {
 	text-align: right;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.reply {
 		text-align: left;
 	}
@@ -3795,7 +3841,7 @@ nav a {
 	width: auto;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	.comment-form > p {
 		display: flex;
 	}
@@ -4315,7 +4361,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	display: inline;
 }
 
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 481px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
@@ -4329,7 +4375,7 @@ body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + 
 	}
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
 		margin-right: calc(2 * var(--global--spacing-unit));
 	}
@@ -4364,7 +4410,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
 		display: inline-block;
 	}
@@ -4377,7 +4423,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 	padding: var(--primary-nav--padding) 0;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget {
 		max-width: calc(20 * var(--global--spacing-horizontal));
 		padding: var(--primary-nav--padding);
@@ -4459,7 +4505,7 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li .qua
 	font-size: var(--global--font-size-base);
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation > div > ul > li.woocommerce-menu-item > .sub-menu {
 		left: auto;
 		right: 0;
@@ -4807,9 +4853,6 @@ body[class*="woocommerce"] p.demo_store {
  * Structure
  */
 /**
- * WooCommerce Wrapper Width
- */
-/**
  * Vertical Space - 32px
  */
 body[class*="woocommerce"] #page div.summary > *:not(:first-child),
@@ -5041,7 +5084,7 @@ body[class*="woocommerce"] #page table.shop_table td.product-remove {
 	border-width: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 822px) {
 	body[class*="woocommerce"] #page table.shop_table td.product-remove {
 		height: var(--global--font-size-sm);
 		width: var(--global--font-size-sm);
@@ -5326,7 +5369,7 @@ body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigatio
 	margin-top: 0;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	body[class*="woocommerce"] #page .entry-content .woocommerce-MyAccount-navigation {
 		width: 20%;
 	}
@@ -5346,7 +5389,7 @@ body[class*="woocommerce"] #page .woocommerce-MyAccount-content fieldset {
 	border-radius: 3px;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 592px) {
 	body[class*="woocommerce"] #page .woocommerce-MyAccount-content {
 		width: calc(80% - var(--global--spacing-horizontal));
 	}
@@ -5622,7 +5665,7 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 /**
  * Filter by Product List Widgets
  */
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .widget.woocommerce ul.product_list_widget:not(.woocommerce-mini-cart) {
 		display: flex;
 		flex-wrap: wrap;

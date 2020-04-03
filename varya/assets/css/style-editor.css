@@ -1,6 +1,94 @@
 /**
  * These styles should be loaded by the Block Editor only
  */
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+:root {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
+	--responsive--aligndefault-width: 100%;
+	--responsive--alignwide-width: 100%;
+	--responsive--alignfull-width: 100%;
+	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
+	--responsive--alignright-margin: var(--global--spacing-horizontal);
+	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 482px) {
+	:root {
+		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 592px) {
+	:root {
+		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(592px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 652px) {
+	:root {
+		--responsive--aligndefault-width: calc(592px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 822px) {
+	:root {
+		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
+		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+
+/**
+ * Extends
+ */
+.default-max-width {
+	max-width: var(--responsive--aligndefault-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wide-max-width {
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-max-width {
+	max-width: var(--responsive--alignfull-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+ * Output
+ */
 body {
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
@@ -32,12 +120,21 @@ a {
 	cursor: pointer;
 }
 
+.wp-block:not([data-align="full"]):not([data-align="wide"]) {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+div[data-type="core/button"] {
+	display: block;
+}
+
 /**
  * Elements
  * - Styles for basic HTML elemants
  */
 blockquote {
-	padding-left: var(--global--spacing-horizontal);
+	margin: 0;
+	padding: 0;
 }
 
 blockquote p {
@@ -49,8 +146,8 @@ blockquote p {
 blockquote cite,
 blockquote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
-	letter-spacing: var(--global--letter-spacing-sm);
+	font-size: var(--global--font-size-xs);
+	letter-spacing: var(--global--letter-spacing-xs);
 }
 
 blockquote > * {
@@ -907,10 +1004,10 @@ p.has-background:not(.has-background-background-color) a {
 }
 
 .wp-block-pullquote {
-	padding: calc( 3 * var(--global--spacing-unit)) 0;
+	padding: calc( 2 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
-	text-align: center;
+	text-align: left;
 	border-top-color: var(--pullquote--color-border);
 	border-top-width: var(--pullquote--border-width);
 	border-bottom-color: var(--pullquote--color-border);
@@ -918,15 +1015,13 @@ p.has-background:not(.has-background-background-color) a {
 	color: var(--pullquote--color-foreground);
 }
 
-.wp-block-pullquote blockquote {
-	padding-left: 0;
-}
-
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
-	font-size: var(--heading--font-size-h4);
+	font-size: var(--pullquote--font-size);
+	font-style: var(--pullquote--font-style);
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height);
+	line-height: var(--pullquote--line-height);
+	margin: 0;
 }
 
 .wp-block-pullquote a {
@@ -937,7 +1032,7 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
@@ -947,6 +1042,7 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
+	padding: calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color.alignleft blockquote,
@@ -957,7 +1053,9 @@ p.has-background:not(.has-background-background-color) a {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
-	padding-left: 0;
+	margin: 0;
+	text-align: left;
+	max-width: 100%;
 }
 
 .wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
@@ -966,37 +1064,47 @@ p.has-background:not(.has-background-background-color) a {
 	color: currentColor;
 }
 
-.wp-block-pullquote.alignwide > p,
-.wp-block-pullquote.alignfull > p,
-.wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote {
-	margin-left: auto;
-	margin-right: auto;
+.wp-block[data-align="full"] .wp-block-pullquote:not(.is-style-solid-color) blockquote {
+	padding: 0 calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
+	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 }
 
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
-	font-size: var(--heading--font-size-h4);
-	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--global--line-height-h4);
+	font-size: var(--quote--font-size);
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-	border: none;
-	padding: 0;
+	border-left: var(--quote--border-width) solid var(--quote--border-color);
+	padding-left: var(--global--spacing-horizontal);
+	/* Resetting margins to match _block-container.scss */
+	margin-top: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
 }
 
 .wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
-	font-family: var(--quote--font-family);
-	font-size: var(--heading--font-size-h3);
-	letter-spacing: var(--heading--letter-spacing-h3);
-	line-height: var(--global--line-height-h3);
+	font-size: var(--quote--font-size-large);
+	font-style: normal;
+}
+
+.wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
+	border-left: none;
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
+}
+
+.wp-block-quote.has-text-align-right {
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
+}
+
+.wp-block-quote.has-text-align-center {
+	border: none;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote,
@@ -1008,7 +1116,7 @@ p.has-background:not(.has-background-background-color) a {
 
 .wp-block-quote .wp-block-quote__citation {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
