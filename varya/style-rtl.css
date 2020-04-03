@@ -2791,7 +2791,7 @@ table th,
 	font-size: var(--branding--title--font-size);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: calc( var(--global--spacing-vertical) / 2);
 }
 
 .site-title a {
@@ -2847,7 +2847,7 @@ nav a {
 .main-navigation {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	margin-top: var(--global--spacing-vertical);
+	margin-top: calc( var(--global--spacing-vertical) * 1.5);
 }
 
 .main-navigation > div {
