@@ -2909,17 +2909,12 @@ nav a {
 	display: block;
 	position: relative;
 	width: 100%;
-	color: var(--primary-nav--color-link);
 	z-index: 1;
 }
 
 .main-navigation > div > ul li:hover, .main-navigation > div > ul li:focus-within {
 	cursor: pointer;
 	z-index: 99999;
-}
-
-.main-navigation > div > ul li:hover, .main-navigation > div > ul li:focus {
-	color: var(--primary-nav--color-link-hover);
 }
 
 @media only screen and (min-width: 482px) {
@@ -2985,11 +2980,19 @@ nav a {
 	width: 100%;
 }
 
-.main-navigation .menu-item {
+.main-navigation .main-menu > .menu-item:hover > a {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation .main-menu > .menu-item:hover > a + svg {
+	fill: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation .menu-item > a {
 	color: var(--primary-nav--color-link);
 }
 
-.main-navigation .menu-item:hover {
+.main-navigation .menu-item > a:hover {
 	color: var(--primary-nav--color-link-hover);
 }
 
@@ -3028,7 +3031,6 @@ nav a {
 	.main-navigation .menu-item-has-children > .svg-icon {
 		display: inline-block;
 		height: 100%;
-		fill: currentColor;
 		margin-left: var(--primary-nav--padding);
 	}
 }

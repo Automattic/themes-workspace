@@ -79,18 +79,12 @@
 			display: block;
 			position: relative;
 			width: 100%;
-			color: var(--primary-nav--color-link);
 			z-index: 1;
 
 			&:hover,
 			&:focus-within {
 				cursor: pointer;
 				z-index: 99999;
-			}
-
-			&:hover,
-			&:focus {
-				color: var(--primary-nav--color-link-hover);
 			}
 
 			@include media(mobile) {
@@ -149,8 +143,17 @@
 		}
 	}
 
+	// Top-level Item Link Colors
+	.main-menu > .menu-item:hover > a {
+		color: var(--primary-nav--color-link-hover);
+
+		+ svg {
+			fill: var(--primary-nav--color-link-hover);
+		}
+	}
+
 	// Menu Item Link Colors
-	.menu-item {
+	.menu-item > a {
 		color: var(--primary-nav--color-link);
 
 		&:hover {
@@ -201,7 +204,6 @@
 			> .svg-icon {
 				display: inline-block;
 				height: 100%;
-				fill: currentColor;
 				margin-right: var(--primary-nav--padding);
 			}
 		}
