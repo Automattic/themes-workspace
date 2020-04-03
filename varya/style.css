@@ -3382,15 +3382,15 @@ nav a {
 }
 
 .post-navigation .meta-nav {
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
+	color: var(--global--color-foreground);
 }
 
 .post-navigation .post-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
-	font-weight: 600;
 }
 
 @media only screen and (min-width: 482px) {
