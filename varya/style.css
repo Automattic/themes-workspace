@@ -3096,6 +3096,10 @@ nav a {
 	}
 }
 
+.main-navigation .menu-item-has-children > .svg-icon {
+	display: none;
+}
+
 @media only screen and (min-width: 482px) {
 	.main-navigation .menu-item-has-children > a {
 		padding-right: 0;

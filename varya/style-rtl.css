@@ -2911,7 +2911,6 @@ nav a {
 		left: initial;
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
-		margin-top: var(--global--spacing-vertical);
 		margin-top: calc( var(--global--spacing-vertical) * 1.5);
 	}
 	.main-navigation > div {
@@ -3070,6 +3069,10 @@ nav a {
 		font-size: var(--primary-nav--font-size);
 		font-style: var(--primary-nav--font-style);
 	}
+}
+
+.main-navigation .menu-item-has-children > .svg-icon {
+	display: none;
 }
 
 @media only screen and (min-width: 482px) {

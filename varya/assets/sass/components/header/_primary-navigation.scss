@@ -233,9 +233,13 @@
 	}
 
 	// Show top-level sub-menu indicators above mobile-breakpoint-only
-	@include media(mobile) {
-		.menu-item-has-children {
+	.menu-item-has-children {
 
+		> .svg-icon {
+			display: none;
+		}
+
+		@include media(mobile) {
 			> a {
 				padding-right: 0;
 			}
