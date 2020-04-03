@@ -7,7 +7,7 @@
 @import "elements/config";
 @import "blocks/config";
 @import "components/config";
-@import "vendors/woocommerce/config";
+@import "vendors/config";
 
 @include add_variables( frontend ) {
 	/* Globals */
