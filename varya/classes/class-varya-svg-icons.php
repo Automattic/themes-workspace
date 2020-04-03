@@ -174,6 +174,16 @@ class Varya_SVG_Icons {
 	<path d="M0 0h24v24H0z" fill="none"/>
 </svg>',
 
+		'menu_close' => /* custom  - menu close */ '
+		<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M12.707 11.5l4.596-4.596-.707-.707L12 10.793 7.403 6.197l-.707.707 4.597 4.596-4.597 4.596.707.707L12 12.207l4.596 4.596.707-.707-4.596-4.596z" fill="currentColor"/>
+		</svg>',
+
+		'menu_open' => /* custom  - menu open */ '
+		<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M5 5h14v1H5V5zm0 6h14v1H5v-1zm14 6H5v1h14v-1z" fill="currentColor"/>
+		</svg>',
+
 	);
 
 	/**
