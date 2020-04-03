@@ -23,8 +23,24 @@
 	margin-bottom: var(--global--spacing-vertical);
 
 	a {
+		background-image: linear-gradient(to right, var(--global--color-secondary) 100%, transparent 100%);
+		background-position: 0 1.22em;
+		background-repeat: repeat-x;
+		background-size: 8px 2px;
+		border-bottom: none;
 		color: currentColor;
 		font-weight: var(--branding--title--font-weight);
+		text-shadow:
+			1px 0px var(--global--color-background), 
+			-1px 0px var(--global--color-background),
+			-2px 0px var(--global--color-background),
+			2px 0px var(--global--color-background),
+			-3px 0px var(--global--color-background),
+			3px 0px var(--global--color-background),
+			-4px 0px var(--global--color-background),
+			4px 0px var(--global--color-background),
+			-5px 0px var(--global--color-background), 
+			5px 0px var(--global--color-background);
 
 		&:link,
 		&:visited {
@@ -34,7 +50,22 @@
 		&:hover {
 			color: var(--branding--color-link-hover);
 		}
+
+		&::selection {
+			text-shadow:
+				1px 0px var(--global--color-text-selection), 
+				-1px 0px var(--global--color-text-selection),
+				-2px 0px var(--global--color-text-selection),
+				2px 0px var(--global--color-text-selection),
+				-3px 0px var(--global--color-text-selection),
+				3px 0px var(--global--color-text-selection),
+				-4px 0px var(--global--color-text-selection),
+				4px 0px var(--global--color-text-selection),
+				-5px 0px var(--global--color-text-selection), 
+				5px 0px var(--global--color-text-selection);
+		}
 	}
+
 }
 
 // Site description

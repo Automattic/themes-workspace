@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Varya
 Theme URI: https://github.com/Automattic/theme-workspace/varya
@@ -2814,8 +2813,14 @@ table th,
 }
 
 .site-title a {
+	background-image: linear-gradient(to right, var(--global--color-secondary) 100%, transparent 100%);
+	background-position: 0 1.22em;
+	background-repeat: repeat-x;
+	background-size: 8px 2px;
+	border-bottom: none;
 	color: currentColor;
 	font-weight: var(--branding--title--font-weight);
+	text-shadow: 1px 0px var(--global--color-background), -1px 0px var(--global--color-background), -2px 0px var(--global--color-background), 2px 0px var(--global--color-background), -3px 0px var(--global--color-background), 3px 0px var(--global--color-background), -4px 0px var(--global--color-background), 4px 0px var(--global--color-background), -5px 0px var(--global--color-background), 5px 0px var(--global--color-background);
 }
 
 .site-title a:link, .site-title a:visited {
@@ -2824,6 +2829,10 @@ table th,
 
 .site-title a:hover {
 	color: var(--branding--color-link-hover);
+}
+
+.site-title a::selection {
+	text-shadow: 1px 0px var(--global--color-text-selection), -1px 0px var(--global--color-text-selection), -2px 0px var(--global--color-text-selection), 2px 0px var(--global--color-text-selection), -3px 0px var(--global--color-text-selection), 3px 0px var(--global--color-text-selection), -4px 0px var(--global--color-text-selection), 4px 0px var(--global--color-text-selection), -5px 0px var(--global--color-text-selection), 5px 0px var(--global--color-text-selection);
 }
 
 .site-description {
@@ -3029,21 +3038,12 @@ nav a {
 
 .main-navigation .sub-menu {
 	list-style: none;
-	margin-left: 0;
-	/* Reset the counter for each UL */
-	counter-reset: nested-list;
+	margin-left: var(--primary-nav--padding);
 }
 
 .main-navigation .sub-menu .menu-item a {
 	padding-top: calc(0.5 * var(--primary-nav--padding));
 	padding-bottom: calc(0.5 * var(--primary-nav--padding));
-}
-
-.main-navigation .sub-menu .menu-item a::before {
-	/* Increment the dashes */
-	counter-increment: nested-list;
-	/* Insert dashes with spaces in between */
-	content: "– " counters(nested-list, "– ", none);
 }
 
 @media only screen and (min-width: 482px) {
@@ -4695,9 +4695,6 @@ body[class*="woocommerce"] p.demo_store {
 
 /**
  * Structure
- */
-/**
- * WooCommerce Wrapper Width
  */
 /**
  * Vertical Space - 32px
