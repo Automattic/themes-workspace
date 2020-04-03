@@ -105,11 +105,11 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-    add_editor_style( array(
-      varya_fonts_url(),
-      './assets/css/variables-editor.css',
-      './assets/css/style-editor.css'
-    ) );
+		add_editor_style( array(
+			varya_fonts_url(),
+			'./assets/css/variables-editor.css',
+			'./assets/css/style-editor.css'
+		) );
 
 		// Add custom editor font sizes.
 		add_theme_support(

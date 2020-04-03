@@ -1,6 +1,6 @@
 blockquote {
-
-	padding-left: var(--global--spacing-horizontal);
+	margin: 0;
+	padding: 0;
 
 	p {
 		font-size: var(--heading--font-size-h4);
@@ -11,8 +11,8 @@ blockquote {
 	cite,
 	footer {
 		color: var(--global--color-foreground-light);
-		font-size: var(--global--font-size-sm);
-		letter-spacing: var(--global--letter-spacing-sm);
+		font-size: var(--global--font-size-xs);
+		letter-spacing: var(--global--letter-spacing-xs);
 	}
 
 	& > * {

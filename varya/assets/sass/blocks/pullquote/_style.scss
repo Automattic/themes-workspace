@@ -1,6 +1,5 @@
 .wp-block-pullquote {
-
-	padding: calc( 3 * var(--global--spacing-unit) ) 0;
+	padding: calc( 2 * var(--global--spacing-unit) ) 0;
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
@@ -14,8 +13,10 @@
 	p {
 		font-family: var(--pullquote--font-family);
 		font-size: var(--pullquote--font-size);
+		font-style: var(--pullquote--font-style);
 		letter-spacing: var(--heading--letter-spacing-h4);
-		line-height: var(--heading--line-height);
+		line-height: var(--pullquote--line-height);
+		margin: 0;
 	}
 
 	a {
@@ -26,8 +27,9 @@
 	cite,
 	footer {
 		color: currentColor;
-		font-size: var(--global--font-size-sm);
 		display: block;
+		font-size: var(--global--font-size-xs);
+		text-transform: none;
 	}
 
 	/**
@@ -35,10 +37,6 @@
 	 */
 	&:not(.is-style-solid-color) {
 		background: none;
-
-		blockquote {
-			padding-left: 0;
-		}
 	}
 
 	&.is-style-default {
@@ -54,22 +52,27 @@
     &.is-style-large {
         border-left-color: var(--quote--border-color);
         border-left-style: solid;
-        border-left-width: var(--quote--border-width);
-        padding-left: var(--global--spacing-horizontal);
-    }
+		border-left-width: var(--quote--border-width);
+		font-style: normal;
+	}
+
+	&.alignwide > p,
+	&.alignwide blockquote {
+		max-width: var(--responsive--alignwide-width);
+
+	}
+	&.alignfull:not(.is-style-solid-color) > p,
+	&.alignfull:not(.is-style-solid-color) blockquote {
+		padding: 0 calc( 2 * var(--global--spacing-unit) );
+	}
 
 	&.is-style-solid-color {
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
-
-		&:not(.alignleft):not(.alignright) blockquote {
-			@extend %responsive-aligndefault-width;
-		}
+		padding: calc( 2 * var(--global--spacing-unit) );
 
 		blockquote {
-			padding-left: var(--global--spacing-unit);
-			padding-right: var(--global--spacing-unit);
 			max-width: inherit;
 		}
 
@@ -80,12 +83,4 @@
 		}
 	}
 
-	&.alignwide > p,
-	&.alignfull > p,
-	&.alignwide blockquote,
-	&.alignfull blockquote {
-		margin-left: auto;
-		margin-right: auto;
-		@extend %responsive-aligndefault-width;
-	}
 }

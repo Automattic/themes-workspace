@@ -91,10 +91,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /**
  * Extends
  */
-.default-max-width, .wp-block-pullquote.is-style-solid-color:not(.alignleft):not(.alignright) blockquote, .wp-block-pullquote.alignwide > p,
-.wp-block-pullquote.alignfull > p,
-.wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+.default-max-width, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 .entry-content [class*="inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .entry-content .wp-audio-shortcode, .navigation {
 	max-width: var(--responsive--aligndefault-width);
 	margin-left: auto;
@@ -947,7 +944,8 @@ footer {
  * - Styles for basic HTML elemants
  */
 blockquote {
-	padding-left: var(--global--spacing-horizontal);
+	margin: 0;
+	padding: 0;
 }
 
 blockquote p {
@@ -959,8 +957,8 @@ blockquote p {
 blockquote cite,
 blockquote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
-	letter-spacing: var(--global--letter-spacing-sm);
+	font-size: var(--global--font-size-xs);
+	letter-spacing: var(--global--letter-spacing-xs);
 }
 
 blockquote > * {
@@ -2193,7 +2191,7 @@ p.has-background {
 }
 
 .wp-block-pullquote {
-	padding: calc( 3 * var(--global--spacing-unit)) 0;
+	padding: calc( 2 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
@@ -2210,8 +2208,10 @@ p.has-background {
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
 	font-size: var(--pullquote--font-size);
+	font-style: var(--pullquote--font-style);
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height);
+	line-height: var(--pullquote--line-height);
+	margin: 0;
 }
 
 .wp-block-pullquote a {
@@ -2222,16 +2222,13 @@ p.has-background {
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	color: currentColor;
-	font-size: var(--global--font-size-sm);
 	display: block;
+	font-size: var(--global--font-size-xs);
+	text-transform: none;
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
 	background: none;
-}
-
-.wp-block-pullquote:not(.is-style-solid-color) blockquote {
-	padding-left: 0;
 }
 
 .wp-block-pullquote.is-style-default.alignleft blockquote > *, .wp-block-pullquote.is-style-default.aligncenter blockquote > *, .wp-block-pullquote.is-style-default.alignright blockquote > * {
@@ -2242,17 +2239,26 @@ p.has-background {
 	border-left-color: var(--quote--border-color);
 	border-left-style: solid;
 	border-left-width: var(--quote--border-width);
-	padding-left: var(--global--spacing-horizontal);
+	font-style: normal;
+}
+
+.wp-block-pullquote.alignwide > p,
+.wp-block-pullquote.alignwide blockquote {
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block-pullquote.alignfull:not(.is-style-solid-color) > p,
+.wp-block-pullquote.alignfull:not(.is-style-solid-color) blockquote {
+	padding: 0 calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
+	padding: calc( 2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
-	padding-left: var(--global--spacing-unit);
-	padding-right: var(--global--spacing-unit);
 	max-width: inherit;
 }
 
@@ -2260,14 +2266,6 @@ p.has-background {
 .wp-block-pullquote.is-style-solid-color cite,
 .wp-block-pullquote.is-style-solid-color footer {
 	color: currentColor;
-}
-
-.wp-block-pullquote.alignwide > p,
-.wp-block-pullquote.alignfull > p,
-.wp-block-pullquote.alignwide blockquote,
-.wp-block-pullquote.alignfull blockquote {
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .wp-block-quote {
@@ -2296,14 +2294,14 @@ p.has-background {
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
-	line-height: var(--heading--line-height);
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-quote .wp-block-quote__citation,
 .wp-block-quote cite,
 .wp-block-quote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -2327,20 +2325,29 @@ p.has-background {
 	color: currentColor;
 }
 
-.wp-block-quote[style*="text-align:right"], .wp-block-quote[style*="text-align: right"] {
-	border-right-color: var(--quote--border-color);
+.wp-block-quote.has-text-align-right {
+	border-right: var(--quote--border-width) solid var(--quote--border-color);
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
+	border-left: var(--quote--border-width) solid var(--quote--border-color);
+	padding-left: var(--global--spacing-horizontal);
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
-	padding: 0;
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
 	font-size: var(--quote--font-size-large);
-	line-height: var(--heading--line-height);
+	font-style: normal;
+}
+
+.wp-block-quote.is-style-large.has-text-align-right, .wp-block-quote.is-large.has-text-align-right {
+	border-left: none;
+}
+
+.wp-block-quote.is-style-large.has-text-align-center, .wp-block-quote.is-large.has-text-align-center {
+	border: none;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation,
@@ -2349,7 +2356,7 @@ p.has-background {
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote,

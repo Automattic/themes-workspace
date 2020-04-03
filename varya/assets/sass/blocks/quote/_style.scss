@@ -1,5 +1,4 @@
 .wp-block-quote {
-
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
 	margin: var(--global--spacing-vertical) 0;
@@ -21,14 +20,14 @@
 	p {
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
-		line-height: var(--heading--line-height);
+		line-height: var(--global--line-height-body); 
 	}
 
 	.wp-block-quote__citation,
 	cite,
 	footer {
 		color: var(--global--color-foreground-light);
-		font-size: var(--global--font-size-sm);
+		font-size: var(--global--font-size-xs);
 
 		.has-background:not(.has-background-background-color) &,
 		[class*="background-color"]:not(.has-background-background-color) &,
@@ -41,28 +40,35 @@
 	/**
 	 * Block Options
 	 */
-	&[style*="text-align:right"],
-	&[style*="text-align: right"] {
-		border-right-color: var(--quote--border-color);
+	&.has-text-align-right {
+		border-right: var(--quote--border-width) solid var(--quote--border-color);
 	}
 
 	&.is-style-large,
 	&.is-large {
+		border-left: var(--quote--border-width) solid var(--quote--border-color);
+		padding-left: var(--global--spacing-horizontal);
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
-		padding: 0;
 
 		p {
 			font-size: var(--quote--font-size-large);
-			line-height: var(--heading--line-height);
+			font-style: normal;
+		}
+		&.has-text-align-right {
+			border-left: none;
+		}
+
+		&.has-text-align-center {
+			border: none;
 		}
 
 		.wp-block-quote__citation,
 		cite,
 		footer {
 			color: var(--global--color-foreground-light);
-			font-size: var(--global--font-size-sm);
+			font-size: var(--global--font-size-xs);
 		}
 	}
 
