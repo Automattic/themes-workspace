@@ -2830,7 +2830,7 @@ table th,
 	background-image: linear-gradient(to right, var(--global--color-secondary) 100%, transparent 100%);
 	background-position: 0 1.22em;
 	background-repeat: repeat-x;
-	background-size: 8px 2px;
+	background-size: 8px 1.5px;
 	border-bottom: none;
 	color: currentColor;
 	font-weight: var(--branding--title--font-weight);
@@ -2852,6 +2852,9 @@ table th,
 @media only screen and (min-width: 482px) {
 	.site-title {
 		font-size: var(--branding--title--font-size);
+	}
+	.site-title a {
+		background-size: 8px 2px;
 	}
 }
 
@@ -2883,9 +2886,6 @@ nav a {
 }
 
 @media only screen and (min-width: 482px) {
-	.site-logo {
-		margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
-	}
 	.site-logo .custom-logo {
 		max-width: var(--branding--logo--max-width);
 		max-height: var(--branding--logo--max-height);
