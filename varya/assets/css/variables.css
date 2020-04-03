@@ -12,6 +12,10 @@
  * - Similar to Blocks but exist outside of the "current" editor context
  */
 /**
+ * Variable configuration
+ * - import all vendor config files
+ */
+/**
  * WooCommerce Variables
  */
 :root {
