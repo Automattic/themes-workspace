@@ -183,8 +183,8 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 }
 
 .site-header {
-	padding-top: calc(1.5 * var(--global--spacing-vertical));
-	padding-bottom: calc(1.5 * var(--global--spacing-vertical));
+	padding-top: calc(2 * var(--global--spacing-vertical));
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
 @media only screen and (min-width: 482px) {
@@ -2798,7 +2798,7 @@ table th,
 	font-size: var(--branding--title--font-size-mobile);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: calc( var(--global--spacing-vertical) / 2);
 }
 
 .site-title a {
@@ -2871,7 +2871,7 @@ nav a {
 .main-navigation {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	margin-top: var(--global--spacing-vertical);
+	margin-top: calc( var(--global--spacing-vertical) * 1.5);
 }
 
 .main-navigation > div {
@@ -3320,6 +3320,12 @@ nav a {
 	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
+.site-main > article > .entry-footer {
+	margin-top: calc( var(--global--spacing-vertical) * 3);
+	padding-top: var(--global--spacing-unit);
+	border-top: var(--separator--height) solid var(--separator--border-color);
+}
+
 /**
  * Post Thumbnails
  */
@@ -3381,15 +3387,15 @@ nav a {
 }
 
 .post-navigation .meta-nav {
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
+	color: var(--global--color-foreground);
 }
 
 .post-navigation .post-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
-	font-weight: 600;
 }
 
 @media only screen and (min-width: 482px) {

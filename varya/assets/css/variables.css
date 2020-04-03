@@ -26,7 +26,7 @@
 	--global--font-size-ratio: 1.2;
 	--global--font-size-base: 1em;
 	--global--font-size-xs: 14px;
-	--global--font-size-sm: 15px;
+	--global--font-size-sm: 16px;
 	--global--font-size-md: 18px;
 	--global--font-size-lg: 24px;
 	--global--font-size-xl: 28px;
@@ -158,8 +158,8 @@
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
-	--branding--logo--max-width: 128px;
-	--branding--logo--max-height: 128px;
+	--branding--logo--max-width: 120px;
+	--branding--logo--max-height: 120px;
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 	--primary-nav--font-family: var(--global--font-secondary);
@@ -179,11 +179,11 @@
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--heading--font-size-h2);
-	--entry-meta--color: var(--global--color-foreground-light);
+	--entry-meta--color: var(--global--color-foreground);
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-sm);
+	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
 	--footer--color-text: var(--global--color-foreground-light);

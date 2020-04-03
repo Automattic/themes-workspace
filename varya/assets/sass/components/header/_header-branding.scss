@@ -14,7 +14,7 @@
 	font-size: var(--branding--title--font-size-mobile);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: calc( var(--global--spacing-vertical) / 2 );
 
 	a {
 		background-image: linear-gradient(to right, var(--global--color-secondary) 100%, transparent 100%);
