@@ -85,8 +85,8 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 128,
-				'width'       => 128,
+				'height'      => 120,
+				'width'       => 120,
 				'flex-width'  => false,
 				'flex-height' => false,
 			)
