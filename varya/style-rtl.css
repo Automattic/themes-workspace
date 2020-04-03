@@ -950,8 +950,8 @@ blockquote p {
 blockquote cite,
 blockquote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
-	letter-spacing: var(--global--letter-spacing-sm);
+	font-size: var(--global--font-size-xs);
+	letter-spacing: var(--global--letter-spacing-xs);
 }
 
 blockquote > * {
@@ -2216,7 +2216,7 @@ p.has-background {
 .wp-block-pullquote footer {
 	color: currentColor;
 	display: block;
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	text-transform: none;
 }
 
@@ -2294,7 +2294,7 @@ p.has-background {
 .wp-block-quote cite,
 .wp-block-quote footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -2349,7 +2349,7 @@ p.has-background {
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
 	color: var(--global--color-foreground-light);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote,

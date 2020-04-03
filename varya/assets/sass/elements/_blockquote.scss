@@ -11,8 +11,8 @@ blockquote {
 	cite,
 	footer {
 		color: var(--global--color-foreground-light);
-		font-size: var(--global--font-size-sm);
-		letter-spacing: var(--global--letter-spacing-sm);
+		font-size: var(--global--font-size-xs);
+		letter-spacing: var(--global--letter-spacing-xs);
 	}
 
 	& > * {
