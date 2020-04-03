@@ -2,10 +2,14 @@
 
 .main-navigation {
 
+	position: absolute;
+	top: 0;
+	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	margin-top: var(--global--spacing-vertical);
-
+	margin-top: 0;
+	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	
 	// Menu wrapper
 	& > div {
 		display: none;
@@ -13,19 +17,38 @@
 
 	// Mobile menu toggle
 	#toggle-menu {
-		display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 		margin: 0;
+
+		&:hover {
+			color: var(--primary-nav--color-link-hover);
+		}
+
+		.dropdown-icon {
+			height: var(--primary-nav--icon-size);
+			width: var(--primary-nav--icon-size);
+			fill: currentColor;
+			margin-left: calc(0.5 * var(--global--spacing-unit));
+		}
 	}
 
 	// Checkbox hack
 	#toggle:checked ~ div:not(.woocommerce-menu-container) {
 		display: block;
+		top: calc(2* var(--global--spacing-unit) + var(--primary-nav--icon-size));
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+		background-color: var(--global--color-background);
+		position: fixed;
+		overflow: scroll;
 	}
 
 	#toggle:focus + #toggle-menu {
-		background-color: var(--primary-nav--color-link-hover);
 		outline: inherit;
-		text-decoration: underline;
 	}
 
 	.dropdown-icon.close {
@@ -44,8 +67,12 @@
 
 	@include media(mobile) {
 
+		position: relative;
+		top: initial;
+		right: initial;
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
+		margin-top: var(--global--spacing-vertical);
 
 		& > div {
 			display: inline-block;
