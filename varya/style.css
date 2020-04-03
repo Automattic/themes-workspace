@@ -2813,7 +2813,7 @@ table th,
 .site-title {
 	color: var(--branding--color-link);
 	font-family: var(--branding--title--font-family);
-	font-size: var(--branding--title--font-size);
+	font-size: var(--branding--title--font-size-mobile);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
 	margin-bottom: var(--global--spacing-vertical);
@@ -2842,6 +2842,12 @@ table th,
 	text-shadow: 1px 0px var(--global--color-text-selection), -1px 0px var(--global--color-text-selection), -2px 0px var(--global--color-text-selection), 2px 0px var(--global--color-text-selection), -3px 0px var(--global--color-text-selection), 3px 0px var(--global--color-text-selection), -4px 0px var(--global--color-text-selection), 4px 0px var(--global--color-text-selection), -5px 0px var(--global--color-text-selection), 5px 0px var(--global--color-text-selection);
 }
 
+@media only screen and (min-width: 482px) {
+	.site-title {
+		font-size: var(--branding--title--font-size);
+	}
+}
+
 .site-description {
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
@@ -2860,13 +2866,24 @@ nav a {
 }
 
 .site-logo {
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: calc( var(--global--spacing-vertical) / 2) var(--global--spacing-horizontal);
 }
 
 .site-logo .custom-logo {
-	max-width: var(--branding--logo--max-width);
-	max-height: var(--branding--logo--max-height);
+	max-width: var(--branding--logo--max-width-mobile);
+	max-height: var(--branding--logo--max-height-mobile);
 	height: auto;
+}
+
+@media only screen and (min-width: 482px) {
+	.site-logo {
+		margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	}
+	.site-logo .custom-logo {
+		max-width: var(--branding--logo--max-width);
+		max-height: var(--branding--logo--max-height);
+		height: auto;
+	}
 }
 
 .main-navigation {

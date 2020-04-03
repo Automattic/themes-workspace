@@ -4,6 +4,7 @@
 	--branding--color-link-hover: var(--global--color-primary-hover);
 	--branding--title--font-family: var(--global--font-primary);
 	--branding--title--font-size: var(--heading--font-size-h1);
+	--branding--title--font-size-mobile: calc( 0.75 * var(--heading--font-size-h1) ); // This is a one-off calculation.
 	--branding--title--font-weight: 700;
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
@@ -11,6 +12,8 @@
 
 	--branding--logo--max-width: 128px;
 	--branding--logo--max-height: 128px;
+	--branding--logo--max-width-mobile: 96px;
+	--branding--logo--max-height-mobile: 96px;
 
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-size: 16px;
