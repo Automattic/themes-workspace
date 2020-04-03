@@ -4,7 +4,7 @@
 
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	margin-top: var(--global--spacing-vertical);
+	margin-top: calc( var(--global--spacing-vertical) * 1.5 );
 
 	// Menu wrapper
 	& > div {
