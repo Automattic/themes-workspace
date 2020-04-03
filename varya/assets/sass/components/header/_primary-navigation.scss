@@ -93,10 +93,6 @@
 				color: var(--primary-nav--color-link-hover);
 			}
 
-			&:focus-within a {
-			//	outline: none;
-			}
-
 			@include media(mobile) {
 				display: inherit;
 				width: inherit;
