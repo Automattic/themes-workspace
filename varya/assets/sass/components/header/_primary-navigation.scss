@@ -9,7 +9,7 @@
 	font-size: var(--primary-nav--font-size);
 	margin-top: 0;
 	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
-	
+
 	// Menu wrapper
 	& > div {
 		display: none;
@@ -72,7 +72,7 @@
 		right: initial;
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
-		margin-top: var(--global--spacing-vertical);
+		margin-top: calc( var(--global--spacing-vertical) * 1.5 );
 
 		& > div {
 			display: inline-block;
@@ -112,10 +112,6 @@
 			&:focus-within {
 				cursor: pointer;
 				z-index: 99999;
-			}
-
-			&:focus-within a {
-			//	outline: none;
 			}
 
 			@include media(mobile) {
@@ -174,9 +170,27 @@
 		}
 	}
 
-	// Menu Link
-	a {
+	// Top-level Item Link Colors
+	.main-menu > .menu-item:hover > a {
+		color: var(--primary-nav--color-link-hover);
+
+		+ svg {
+			fill: var(--primary-nav--color-link-hover);
+		}
+	}
+
+	// Menu Item Link Colors
+	.menu-item > a {
 		color: var(--primary-nav--color-link);
+
+		&:hover {
+			color: var(--primary-nav--color-link-hover);
+		}
+	}
+
+	// Menu Item
+	a {
+		color: currentColor;
 		display: block;
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
@@ -190,13 +204,10 @@
 			padding: var(--primary-nav--padding);
 		}
 
+		&:hover,
 		&:link,
 		&:visited {
-			color: var(--primary-nav--color-link);
-		}
-
-		&:hover {
-			color: var(--primary-nav--color-link-hover);
+			color: currentColor;
 		}
 	}
 
@@ -223,14 +234,16 @@
 
 	// Show top-level sub-menu indicators above mobile-breakpoint-only
 	@include media(mobile) {
-		& > div > ul > .menu-item-has-children > a {
+		.menu-item-has-children {
 
-			&::after {
-				content: "\00a0\25BC";
+			> a {
+				padding-right: 0;
+			}
+
+			> .svg-icon {
 				display: inline-block;
-				font-size: var(--global--font-size-xs);
-				height: inherit;
-				width: inherit;
+				height: 100%;
+				margin-right: var(--primary-nav--padding);
 			}
 		}
 	}

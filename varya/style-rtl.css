@@ -2791,7 +2791,7 @@ table th,
 	font-size: var(--branding--title--font-size);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: calc( var(--global--spacing-vertical) / 2);
 }
 
 .site-title a {
@@ -2912,6 +2912,7 @@ nav a {
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
 		margin-top: var(--global--spacing-vertical);
+		margin-top: calc( var(--global--spacing-vertical) * 1.5);
 	}
 	.main-navigation > div {
 		display: inline-block;
@@ -3014,8 +3015,24 @@ nav a {
 	width: 100%;
 }
 
-.main-navigation a {
+.main-navigation .main-menu > .menu-item:hover > a {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation .main-menu > .menu-item:hover > a + svg {
+	fill: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation .menu-item > a {
 	color: var(--primary-nav--color-link);
+}
+
+.main-navigation .menu-item > a:hover {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.main-navigation a {
+	color: currentColor;
 	display: block;
 	font-family: var(--primary-nav--font-family-mobile);
 	font-size: var(--primary-nav--font-size-mobile);
@@ -3032,12 +3049,8 @@ nav a {
 	}
 }
 
-.main-navigation a:link, .main-navigation a:visited {
-	color: var(--primary-nav--color-link);
-}
-
-.main-navigation a:hover {
-	color: var(--primary-nav--color-link-hover);
+.main-navigation a:hover, .main-navigation a:link, .main-navigation a:visited {
+	color: currentColor;
 }
 
 .main-navigation .sub-menu {
@@ -3060,12 +3073,13 @@ nav a {
 }
 
 @media only screen and (min-width: 482px) {
-	.main-navigation > div > ul > .menu-item-has-children > a::after {
-		content: "\00a0\25BC";
+	.main-navigation .menu-item-has-children > a {
+		padding-left: 0;
+	}
+	.main-navigation .menu-item-has-children > .svg-icon {
 		display: inline-block;
-		font-size: var(--global--font-size-xs);
-		height: inherit;
-		width: inherit;
+		height: 100%;
+		margin-left: var(--primary-nav--padding);
 	}
 }
 
@@ -3336,6 +3350,12 @@ nav a {
 	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
+.site-main > article > .entry-footer {
+	margin-top: calc( var(--global--spacing-vertical) * 3);
+	padding-top: var(--global--spacing-unit);
+	border-top: var(--separator--height) solid var(--separator--border-color);
+}
+
 /**
  * Post Thumbnails
  */
@@ -3397,15 +3417,15 @@ nav a {
 }
 
 .post-navigation .meta-nav {
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
+	color: var(--global--color-foreground);
 }
 
 .post-navigation .post-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	line-height: var(--heading--line-height);
-	font-weight: 600;
 }
 
 @media only screen and (min-width: 482px) {
