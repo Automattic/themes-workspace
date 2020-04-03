@@ -45,10 +45,9 @@
 	}
 }
 
-.entry-meta {
-
-}
-
-.entry-footer {
-
+// Extra specificity to override rules in _vertical-margins.scss
+.site-main > article > .entry-footer {
+	margin-top: calc( var(--global--spacing-vertical) * 3 );
+	padding-top: var(--global--spacing-unit);
+	border-top: var(--separator--height) solid var(--separator--border-color);
 }
