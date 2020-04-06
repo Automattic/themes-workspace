@@ -17,7 +17,8 @@
 
 	// Menu wrapper
 	& > div {
-		display: none;
+		visibility: hidden;
+		opacity: 0;
 	}
 
 	// Mobile menu toggle
@@ -41,14 +42,7 @@
 		}
 	}
 
-	// Checkbox hack
-	#toggle:checked ~ #toggle-menu {
-		position: fixed;
-		right: var(--global--spacing-horizontal);
-	}
-
-	#toggle:checked ~ div:not(.woocommerce-menu-container) {
-		display: block;
+	#toggle ~ div:not(.woocommerce-menu-container) {
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -59,11 +53,25 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		z-index: 499;
+		transition: all .15s ease-in-out;
+	  	transform: translateY(var(--global--spacing-vertical));
 
 		// Logged-in position
 		.admin-bar & {
 			top: 46px;
 		}
+	}
+
+	// Checkbox hack
+	#toggle:checked ~ #toggle-menu {
+		position: fixed;
+		right: var(--global--spacing-horizontal);
+	}
+
+	#toggle:checked ~ div:not(.woocommerce-menu-container) {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	#toggle:focus + #toggle-menu {

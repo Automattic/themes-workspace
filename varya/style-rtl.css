@@ -2883,7 +2883,8 @@ nav a {
 }
 
 .main-navigation > div {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
 }
 
 .main-navigation #toggle-menu {
@@ -2906,13 +2907,7 @@ nav a {
 	margin-right: calc(0.5 * var(--global--spacing-unit));
 }
 
-.main-navigation #toggle:checked ~ #toggle-menu {
-	position: fixed;
-	left: var(--global--spacing-horizontal);
-}
-
-.main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
-	display: block;
+.main-navigation #toggle ~ div:not(.woocommerce-menu-container) {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -2923,10 +2918,23 @@ nav a {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	z-index: 499;
+	transition: all .15s ease-in-out;
+	transform: translateY(var(--global--spacing-vertical));
 }
 
-.admin-bar .main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
+.admin-bar .main-navigation #toggle ~ div:not(.woocommerce-menu-container) {
 	top: 46px;
+}
+
+.main-navigation #toggle:checked ~ #toggle-menu {
+	position: fixed;
+	left: var(--global--spacing-horizontal);
+}
+
+.main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .main-navigation #toggle:focus + #toggle-menu {
