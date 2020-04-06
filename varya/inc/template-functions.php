@@ -214,7 +214,7 @@ function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 			// Add SVG icon to parent items.
-			$output .= varya_get_icon_svg( 'keyboard_arrow_down', 24 );
+			$output .= varya_get_icon_svg( 'dropdown', 24 );
 		}
 	}
 
