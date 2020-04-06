@@ -71,34 +71,34 @@ class Varya_SVG_Icons {
 	 * @var array
 	 */
 	static $ui_icons = array(
-		'link'                     => /* link */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.667 8h.889A4.444 4.444 0 0120 12.445v0a4.444 4.444 0 01-4.444 4.444h-.89M9.333 16.889h-.889A4.444 4.444 0 014 12.445v0A4.444 4.444 0 018.444 8h.89" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/><path stroke="currentColor" stroke-width="1.5" d="M9.333 12.584h5.334"/></svg>',
 
 		'calendar'                    => /* calendar */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3.75h14c.69 0 1.25.56 1.25 1.25v14c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25V5c0-.69.56-1.25 1.25-1.25z" stroke="currentColor" stroke-width="1.5"/><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v2H3V5zM7 10h2v2H7zM7 14h2v2H7zM11 10h2v2h-2zM15 10h2v2h-2zM11 14h2v2h-2zM15 14h2v2h-2z" fill="currentColor"/></svg>',
 
 		'category'                  => /* category */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.454 6.585l.207.415H19c.69 0 1.25.56 1.25 1.25v9.5c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25V6c0-.69.56-1.25 1.25-1.25h5.764c.473 0 .906.268 1.118.691l.572 1.144z" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'tag'                      => /* tag */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.545 13.93l-5.61 5.61a1.564 1.564 0 01-2.214 0L5 12.827V5h7.824l6.721 6.723a1.566 1.566 0 010 2.207v0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="1" fill="currentColor"/></svg>',
-
-		'comment'                  => /* comment */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.97 16.47l.22-.22H18c.69 0 1.25-.56 1.25-1.25V6c0-.69-.56-1.25-1.25-1.25H6c-.69 0-1.25.56-1.25 1.25v12.94a.31.31 0 00.53.22l2.69-2.69z" stroke="currentColor" stroke-width="1.5"/></svg>',
-
-		'person'                   => /* person */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM16 8a4 4 0 11-8 0 4 4 0 018 0zm3.75 12v-3A2.75 2.75 0 0017 14.25H7A2.75 2.75 0 004.25 17v3h1.5v-3c0-.69.56-1.25 1.25-1.25h10c.69 0 1.25.56 1.25 1.25v3h1.5z" fill="currentColor"/></svg>',
-
-		'edit'                     => /* edit */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.033 15.161L19 5.097 16.833 3 6.867 13.065 6 16l3.033-.839z" fill="currentColor"/><path d="M4 20h8m7-14.903L9.033 15.16 6 16l.867-2.935L16.833 3 19 5.097z" stroke="currentColor" stroke-width="1.5"/></svg>',
-
-		'chevron_left'             => /* chevron_left */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 18l-5.25-5.75L14 7" stroke="currentColor" stroke-width="1.5"/></svg>',
-
-		'chevron_right'            => /* chevron_right */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 18l5.25-5.75L10 7" stroke="currentColor" stroke-width="1.5"/></svg>',
-
 		'check'                    => /* check */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.537 6.448L10.189 19.02l-5.763-4.285.895-1.204 4.559 3.39 8.453-11.368 1.204.895z" fill="currentColor"/></svg>',
-
-		'dropdown'      => /* dropdown */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10l5.5 5 5.5-5" stroke="currentColor" stroke-width="1.5"/></svg>',
-
-		'shopping_cart' => /* shopping_cart */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.25h3.07l.56 2.014c.29-.167.628-.264.994-.264h12.773a2 2 0 011.932 2.515l-1.333 5A2 2 0 0118.064 13H7.999c-.197 0-.39-.029-.572-.083l-.242.302c-.655.819-.072 2.031.976 2.031H20v1.5H8.161c-2.306 0-3.588-2.667-2.147-4.468l.212-.265-.06-.217a2.003 2.003 0 01-.095-.27l-1.375-5a2.06 2.06 0 01-.035-.15L3.93 3.75H2v-1.5zm5.573 9.012A.5.5 0 008 11.5h10.065a.5.5 0 00.483-.371l1.333-5a.5.5 0 00-.483-.629H6.624a.5.5 0 00-.497.556l1.446 5.206zM10 20a2 2 0 11-4 0 2 2 0 014 0zm8 2a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"/></svg>',
-
-		'menu' => /* menu */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 5.5h14V7H5zM5 11.5h14V13H5zM5 17.5h14V19H5z"/></svg>',
-
+		
+		'chevron_left'             => /* chevron_left */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 18l-5.25-5.75L14 7" stroke="currentColor" stroke-width="1.5"/></svg>',
+		
+		'chevron_right'            => /* chevron_right */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 18l5.25-5.75L10 7" stroke="currentColor" stroke-width="1.5"/></svg>',
+		
 		'close' => /* close */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 12.868l-6.462 6.655-1.076-1.046 6.493-6.685-6.088-6.27 1.076-1.044L12 10.715l6.057-6.237 1.077 1.045-6.088 6.269 6.492 6.685-1.076 1.046L12 12.867z" fill="currentColor"/></svg>',
-
+		
+		'comment'                  => /* comment */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.97 16.47l.22-.22H18c.69 0 1.25-.56 1.25-1.25V6c0-.69-.56-1.25-1.25-1.25H6c-.69 0-1.25.56-1.25 1.25v12.94a.31.31 0 00.53.22l2.69-2.69z" stroke="currentColor" stroke-width="1.5"/></svg>',
+		
+		'dropdown'      => /* dropdown */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10l5.5 5 5.5-5" stroke="currentColor" stroke-width="1.5"/></svg>',
+		
+		'edit'                     => /* edit */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.033 15.161L19 5.097 16.833 3 6.867 13.065 6 16l3.033-.839z" fill="currentColor"/><path d="M4 20h8m7-14.903L9.033 15.16 6 16l.867-2.935L16.833 3 19 5.097z" stroke="currentColor" stroke-width="1.5"/></svg>',
+		
+		'link'                     => /* link */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.667 8h.889A4.444 4.444 0 0120 12.445v0a4.444 4.444 0 01-4.444 4.444h-.89M9.333 16.889h-.889A4.444 4.444 0 014 12.445v0A4.444 4.444 0 018.444 8h.89" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/><path stroke="currentColor" stroke-width="1.5" d="M9.333 12.584h5.334"/></svg>',
+		
+		'menu' => /* menu */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 5.5h14V7H5zM5 11.5h14V13H5zM5 17.5h14V19H5z"/></svg>',
+		
+		'person'                   => /* person */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM16 8a4 4 0 11-8 0 4 4 0 018 0zm3.75 12v-3A2.75 2.75 0 0017 14.25H7A2.75 2.75 0 004.25 17v3h1.5v-3c0-.69.56-1.25 1.25-1.25h10c.69 0 1.25.56 1.25 1.25v3h1.5z" fill="currentColor"/></svg>',
+		
+		'shopping_cart' => /* shopping_cart */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.25h3.07l.56 2.014c.29-.167.628-.264.994-.264h12.773a2 2 0 011.932 2.515l-1.333 5A2 2 0 0118.064 13H7.999c-.197 0-.39-.029-.572-.083l-.242.302c-.655.819-.072 2.031.976 2.031H20v1.5H8.161c-2.306 0-3.588-2.667-2.147-4.468l.212-.265-.06-.217a2.003 2.003 0 01-.095-.27l-1.375-5a2.06 2.06 0 01-.035-.15L3.93 3.75H2v-1.5zm5.573 9.012A.5.5 0 008 11.5h10.065a.5.5 0 00.483-.371l1.333-5a.5.5 0 00-.483-.629H6.624a.5.5 0 00-.497.556l1.446 5.206zM10 20a2 2 0 11-4 0 2 2 0 014 0zm8 2a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"/></svg>',
+		
+		'tag'                      => /* tag */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.545 13.93l-5.61 5.61a1.564 1.564 0 01-2.214 0L5 12.827V5h7.824l6.721 6.723a1.566 1.566 0 010 2.207v0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="1" fill="currentColor"/></svg>',
 	);
 
 	/**
