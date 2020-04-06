@@ -71,82 +71,33 @@ class Varya_SVG_Icons {
 	 * @var array
 	 */
 	static $ui_icons = array(
-		'link'                     => /* material-design – link */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
-</svg>',
+		'link'                     => /* link */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.667 8h.889A4.444 4.444 0 0120 12.445v0a4.444 4.444 0 01-4.444 4.444h-.89M9.333 16.889h-.889A4.444 4.444 0 014 12.445v0A4.444 4.444 0 018.444 8h.89" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/><path stroke="currentColor" stroke-width="1.5" d="M9.333 12.584h5.334"/></svg>',
 
-		'watch'                    => /* material-design – watch-later */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <defs>
-        <path id="a" d="M0 0h24v24H0V0z"></path>
-    </defs>
-    <clipPath id="b">
-        <use xlink:href="#a" overflow="visible"></use>
-    </clipPath>
-    <path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path>
-</svg>',
+		'watch'                    => /* watch-later */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3.75h14c.69 0 1.25.56 1.25 1.25v14c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25V5c0-.69.56-1.25 1.25-1.25z" stroke="currentColor" stroke-width="1.5"/><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v2H3V5zM7 10h2v2H7zM7 14h2v2H7zM11 10h2v2h-2zM15 10h2v2h-2zM11 14h2v2h-2zM15 14h2v2h-2z" fill="currentColor"/></svg>',
 
-		'archive'                  => /* material-design – folder */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'archive'                  => /* folder */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.454 6.585l.207.415H19c.69 0 1.25.56 1.25 1.25v9.5c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25V6c0-.69.56-1.25 1.25-1.25h5.764c.473 0 .906.268 1.118.691l.572 1.144z" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'tag'                      => /* material-design – local_offer */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
-	<path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'tag'                      => /* local_offer */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.545 13.93l-5.61 5.61a1.564 1.564 0 01-2.214 0L5 12.827V5h7.824l6.721 6.723a1.566 1.566 0 010 2.207v0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="1" fill="currentColor"/></svg>',
 
-		'comment'                  => /* material-design – comment */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'comment'                  => /* comment */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.97 16.47l.22-.22H18c.69 0 1.25-.56 1.25-1.25V6c0-.69-.56-1.25-1.25-1.25H6c-.69 0-1.25.56-1.25 1.25v12.94a.31.31 0 00.53.22l2.69-2.69z" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'person'                   => /* material-design – person */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'person'                   => /* person */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM16 8a4 4 0 11-8 0 4 4 0 018 0zm3.75 12v-3A2.75 2.75 0 0017 14.25H7A2.75 2.75 0 004.25 17v3h1.5v-3c0-.69.56-1.25 1.25-1.25h10c.69 0 1.25.56 1.25 1.25v3h1.5z" fill="currentColor"/></svg>',
 
-		'edit'                     => /* material-design – edit */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'edit'                     => /* edit */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.033 15.161L19 5.097 16.833 3 6.867 13.065 6 16l3.033-.839z" fill="currentColor"/><path d="M4 20h8m7-14.903L9.033 15.16 6 16l.867-2.935L16.833 3 19 5.097z" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'chevron_left'             => /* material-design – chevron_left */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'chevron_left'             => /* chevron_left */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 18l-5.25-5.75L14 7" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'chevron_right'            => /* material-design – chevron_right */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'chevron_right'            => /* chevron_right */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 18l5.25-5.75L10 7" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'check'                    => /* material-design – check */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-</svg>',
+		'check'                    => /* check */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.537 6.448L10.189 19.02l-5.763-4.285.895-1.204 4.559 3.39 8.453-11.368 1.204.895z" fill="currentColor"/></svg>',
 
-		'keyboard_arrow_down'      => /* material-design – keyboard_arrow_down */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-	<path fill="none" d="M0 0h24v24H0V0z"></path>
-</svg>',
+		'keyboard_arrow_down'      => /* keyboard_arrow_down */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10l5.5 5 5.5-5" stroke="currentColor" stroke-width="1.5"/></svg>',
 
-		'shopping_cart' => /* material-design - shopping_cart */ '
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-	<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/>
-	<path d="M0 0h24v24H0z" fill="none"/>
-</svg>',
+		'shopping_cart' => /* material-design - shopping_cart */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.25h3.07l.56 2.014c.29-.167.628-.264.994-.264h12.773a2 2 0 011.932 2.515l-1.333 5A2 2 0 0118.064 13H7.999c-.197 0-.39-.029-.572-.083l-.242.302c-.655.819-.072 2.031.976 2.031H20v1.5H8.161c-2.306 0-3.588-2.667-2.147-4.468l.212-.265-.06-.217a2.003 2.003 0 01-.095-.27l-1.375-5a2.06 2.06 0 01-.035-.15L3.93 3.75H2v-1.5zm5.573 9.012A.5.5 0 008 11.5h10.065a.5.5 0 00.483-.371l1.333-5a.5.5 0 00-.483-.629H6.624a.5.5 0 00-.497.556l1.446 5.206zM10 20a2 2 0 11-4 0 2 2 0 014 0zm8 2a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"/></svg>',
+
+		'menu' => /* menu */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 5.5h14V7H5zM5 11.5h14V13H5zM5 17.5h14V19H5z"/></svg>',
+
+		'close' => /* close */ '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 12.868l-6.462 6.655-1.076-1.046 6.493-6.685-6.088-6.27 1.076-1.044L12 10.715l6.057-6.237 1.077 1.045-6.088 6.269 6.492 6.685-1.076 1.046L12 12.867z" fill="currentColor"/></svg>',
 
 	);
 
