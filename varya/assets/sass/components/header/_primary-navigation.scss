@@ -10,6 +10,11 @@
 	margin-top: 0;
 	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
 
+	// Logged-in position
+	.admin-bar & {
+		top: 46px;
+	}
+
 	// Menu wrapper
 	& > div {
 		display: none;
@@ -54,6 +59,11 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		z-index: 499;
+
+		// Logged-in position
+		.admin-bar & {
+			top: 46px;
+		}
 	}
 
 	#toggle:focus + #toggle-menu {
@@ -271,3 +281,5 @@
 		overflow: hidden;
 	}
 }
+
+

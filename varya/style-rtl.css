@@ -2878,6 +2878,10 @@ nav a {
 	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
 }
 
+.admin-bar .main-navigation {
+	top: 46px;
+}
+
 .main-navigation > div {
 	display: none;
 }
@@ -2919,6 +2923,10 @@ nav a {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	z-index: 499;
+}
+
+.admin-bar .main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
+	top: 46px;
 }
 
 .main-navigation #toggle:focus + #toggle-menu {
