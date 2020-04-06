@@ -2904,6 +2904,7 @@ nav a {
 
 .main-navigation #toggle:checked ~ #toggle-menu {
 	position: fixed;
+	left: var(--global--spacing-horizontal);
 }
 
 .main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
@@ -2915,7 +2916,8 @@ nav a {
 	right: 0;
 	padding: calc(2* var(--global--spacing-unit) + var(--primary-nav--icon-size)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 	background-color: var(--global--color-background);
-	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	z-index: 499;
 }
 

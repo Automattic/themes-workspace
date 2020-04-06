@@ -51,7 +51,8 @@
 		left: 0;
 		padding: calc(2* var(--global--spacing-unit) + var(--primary-nav--icon-size)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: scroll;
 		z-index: 499;
 	}
 
