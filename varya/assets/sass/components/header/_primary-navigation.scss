@@ -17,10 +17,12 @@
 
 	// Mobile menu toggle
 	#toggle-menu {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 		margin: 0;
+		z-index: 500;
 
 		&:hover {
 			color: var(--primary-nav--color-link-hover);
@@ -35,16 +37,22 @@
 	}
 
 	// Checkbox hack
+	#toggle:checked ~ #toggle-menu {
+		position: fixed;
+		right: var(--global--spacing-horizontal);
+	}
+
 	#toggle:checked ~ div:not(.woocommerce-menu-container) {
 		display: block;
-		top: calc(2* var(--global--spacing-unit) + var(--primary-nav--icon-size));
+		position: fixed;
+		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+		padding: calc(2* var(--global--spacing-unit) + var(--primary-nav--icon-size)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		position: fixed;
 		overflow: scroll;
+		z-index: 499;
 	}
 
 	#toggle:focus + #toggle-menu {
