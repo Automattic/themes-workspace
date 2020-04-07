@@ -2922,10 +2922,6 @@ nav a {
 	transform: translateY(var(--global--spacing-vertical));
 }
 
-.admin-bar .main-navigation #toggle ~ div:not(.woocommerce-menu-container) {
-	top: 46px;
-}
-
 .main-navigation #toggle:checked ~ #toggle-menu {
 	position: fixed;
 	left: var(--global--spacing-horizontal);
@@ -2954,14 +2950,8 @@ nav a {
 }
 
 @media only screen and (min-width: 482px) {
-	.main-navigation {
-		position: relative;
-		top: initial;
-		left: initial;
-		display: flex;
-		justify-content: var(--primary-nav--justify-content);
-		margin-top: calc( var(--global--spacing-vertical) * 1.5);
-		padding: 0;
+	.admin-bar .main-navigation {
+		top: 32px;
 	}
 	.main-navigation > div {
 		display: inline-block;
@@ -2976,6 +2966,7 @@ nav a {
 		padding: inherit;
 		background-color: transparent;
 		overflow: initial;
+		top: -46px;
 		z-index: 1;
 	}
 	.main-navigation > div > ul > li > ul {

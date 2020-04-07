@@ -1,7 +1,6 @@
 // Navigation
 
 .main-navigation {
-
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -55,11 +54,6 @@
 		z-index: 499;
 		transition: all .15s ease-in-out;
 	  	transform: translateY(var(--global--spacing-vertical));
-
-		// Logged-in position
-		.admin-bar & {
-			top: 46px;
-		}
 	}
 
 	// Checkbox hack
@@ -93,14 +87,10 @@
 	}
 
 	@include media(mobile) {
-
-		position: relative;
-		top: initial;
-		right: initial;
-		display: flex;
-		justify-content: var(--primary-nav--justify-content);
-		margin-top: calc( var(--global--spacing-vertical) * 1.5 );
-		padding: 0;
+		// Logged-in position
+		.admin-bar & {
+			top: 32px;
+		}
 
 		& > div {
 			display: inline-block;
@@ -117,6 +107,7 @@
 			padding: inherit;
 			background-color: transparent;
 			overflow: initial;
+			top: -46px;
 			z-index: 1;
 		}
 
