@@ -81,8 +81,8 @@
 	--form--line-height: var(--global-line-height-body);
 	--form--color-text: var(--global--color-foreground);
 	--form--border-color: var(--global--color-border);
-	--form--border-width: 1px;
-	--form--border-radius: 3px;
+	--form--border-width: 2px;
+	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.33 * var(--global--spacing-unit));
 	/* Blocks */
 	--button--color-text: var(--global--color-background);

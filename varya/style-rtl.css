@@ -3483,18 +3483,20 @@ nav a {
 	letter-spacing: var(--heading--letter-spacing-h3);
 }
 
-.comment-reply-title small {
-	font-size: var(--global--font-size-base);
+.comment-reply-title small a {
+	border-bottom: none;
+	float: left;
 	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-xs);
+	font-style: normal;
+	font-weight: normal;
 	letter-spacing: normal;
-	line-height: var(--global--line-height-heading);
 }
 
 /**
  * Comment Lists
  */
 .comment-list {
-	border-bottom: 1px solid var(--global--color-border);
 	padding-right: 0;
 	list-style: none;
 }
@@ -3549,7 +3551,7 @@ nav a {
 }
 
 .comment-meta .comment-author .avatar {
-	border: 2px solid var(--global--color-border-dark);
+	border: 2px solid var(--global--color-border);
 	border-radius: 50%;
 	position: absolute;
 	top: 5px;
@@ -3589,14 +3591,14 @@ nav a {
 }
 
 .reply a {
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border-bottom: none;
 	color: var(--button--color-text);
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
 	line-height: var(--button--line-height);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border-bottom: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
@@ -3635,6 +3637,10 @@ nav a {
 .comment-body > * {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
+}
+
+.comment-body .reply {
+	margin: calc(1.5 * var(--global--spacing-vertical)) 0;
 }
 
 .comment-content a {
@@ -3682,6 +3688,9 @@ nav a {
 .comment-form > p input[type="text"],
 .comment-form > p input[type="url"],
 .comment-form > p textarea {
+	display: block;
+	font-size: var(--global--font-size-sm);
+	margin-bottom: calc( .5 * var(--global--spacing-unit));
 	width: 100%;
 }
 
@@ -3690,24 +3699,9 @@ nav a {
 }
 
 @media only screen and (min-width: 482px) {
-	.comment-form > p {
-		display: flex;
-	}
-	.comment-form > p label {
-		width: 25%;
-	}
-	.comment-form > p.comment-form-cookies-consent {
-		margin-right: 25%;
-	}
 	.comment-form > p.comment-form-cookies-consent > label {
 		width: auto;
 		display: inline-block;
-	}
-	.comment-form > p input[type="email"],
-	.comment-form > p input[type="text"],
-	.comment-form > p input[type="url"],
-	.comment-form > p textarea {
-		width: 75%;
 	}
 	.comment-form > p.comment-notes, .comment-form > p.logged-in-as {
 		display: block;

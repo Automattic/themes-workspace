@@ -31,10 +31,15 @@
 .comment-reply-title {
 
 	small {
-		font-size: var(--global--font-size-base);
-		font-family: var(--global--font-secondary);
-		letter-spacing: normal;
-		line-height: var(--global--line-height-heading);
+		a {
+			border-bottom: none;
+			float: right;
+			font-family: var(--global--font-secondary);
+			font-size: var(--global--font-size-xs);
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: normal;
+		}
 	}
 }
 
@@ -96,7 +101,7 @@
 		}
 
 		.avatar {
-			border: 2px solid var(--global--color-border-dark);
+			border: 2px solid var(--global--color-border);
 			border-radius: 50%;
 			position: absolute;
 			top: 5px;
@@ -135,15 +140,16 @@
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
+
 	a {
+		background-color: var(--button--color-background);
+		border-radius: var(--button--border-radius);
+		border-bottom: none;
 		color: var(--button--color-text);
 		font-weight: var(--button--font-weight);
 		font-family: var(--button--font-family);
 		font-size: var(--button--font-size);
 		line-height: var(--button--line-height);
-		background-color: var(--button--color-background);
-		border-radius: var(--button--border-radius);
-		border-bottom: none;
 		padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
 		&:hover,
@@ -182,6 +188,10 @@
 	& > * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
+	}
+	
+	.reply {
+		margin: calc(1.5 * var(--global--spacing-vertical)) 0;
 	}
 }
 

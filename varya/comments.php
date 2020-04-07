@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $varya_comment_count, 'comments title', 'varya' ) ),
+					esc_html( _nx( '%1$s Comment', '%1$s Comments', $varya_comment_count, 'comments title', 'varya' ) ),
 					number_format_i18n( $varya_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -69,7 +69,13 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	comment_form( array(
+		'logged_in_as'	=> null,
+		'fields' => array(
+				'author' => esc_html('Author', 'varya'),
+		),
+		'title_reply'	=> esc_html( 'Leave a Comment', 'varya')
+	) );
 	?>
 
 </div><!-- #comments -->

@@ -32,6 +32,9 @@
 	input[type="text"],
 	input[type="url"],
 	textarea {
+		display: block;
+		font-size: var(--global--font-size-sm);
+		margin-bottom: calc( .5 * var(--global--spacing-unit) );
 		width: 100%;
 	}
 
@@ -40,27 +43,12 @@
 	}
 
 	@include media(mobile) {
-		display: flex;
-
-		label {
-			width: 25%;
-		}
-
 		&.comment-form-cookies-consent {
-
-			margin-left: 25%;
 
 			& > label {
 				width: auto;
 				display: inline-block;
 			}
-		}
-
-		input[type="email"],
-		input[type="text"],
-		input[type="url"],
-		textarea {
-			width: 75%;
 		}
 
 		&.comment-notes,
