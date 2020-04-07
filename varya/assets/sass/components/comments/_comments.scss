@@ -21,16 +21,14 @@
  * Comment Title
  */
 
-.comments-title {
+.comments-title,
+.comment-reply-title {
 	font-size: var(--heading--font-size-h3);
+	font-style: italic;
 	letter-spacing: var(--heading--letter-spacing-h3);
 }
 
 .comment-reply-title {
-	font-size: var(--global--font-size-xl);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 
 	small {
 		font-size: var(--global--font-size-base);
@@ -45,12 +43,10 @@
  */
 
 .comment-list {
-	border-bottom: 1px solid var(--global--color-border);
 	padding-left: 0;
 	list-style: none;
 
 	> li {
-		border-top: 1px solid var(--global--color-border);
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
@@ -76,10 +72,7 @@
  */
 
 .comment-meta {
-
 	$avatar-size: var(--global--spacing-vertical);
-
-	margin-right: calc( #{$avatar-size} + (0.5 * var(--global--spacing-horizontal)) );
 
 	.comment-author {
 		line-height: var(--global--line-height-heading);
@@ -88,34 +81,35 @@
 		max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 
 		@include media(mobile) {
-			display: flex;
-			align-items: center;
 			margin-bottom: 0;
 			padding-right: 0;
 		}
 
 		.fn {
+			font-family: var(--global--font-secondary);
+			font-weight: normal;
+			font-size: var(--global--font-size-xs);
+			hyphens: auto;
+			padding-left: 60px;
 			word-wrap: break-word;
 			word-break: break-word;
-			hyphens: auto;
 		}
 
 		.avatar {
-			display: block;
+			border: 2px solid var(--global--color-border-dark);
+			border-radius: 50%;
 			position: absolute;
-			right: 0;
+			top: 5px;
 		}
 	}
 
 	.comment-metadata {
 		color: var(--global--color-foreground);
-		padding-right: calc(2.5 * var(--global--spacing-horizontal));
-
-		@include media(mobile) {
-			padding-right: 0;
-		}
+		font-size: var(--global--font-size-xs);
+		padding-left: 60px;
 
 		a {
+			border-bottom: none;
 			color: currentColor;
 
 			&:hover,
@@ -123,42 +117,42 @@
 				color: var(--global--color-primary-hover);
 			}
 		}
+
+		.edit-link {
+			float: right;
+		}
 	}
 
 	@include media(mobile) {
 		margin-right: inherit;
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
 
 		.comment-author {
-			display: flex;
-			align-items: center;
 			max-width: inherit;
-			flex: 0 1 auto;
-
-			.fn {
-				padding-right: var(--global--spacing-horizontal);
-			}
-
-			.avatar {
-				margin-right: var(--global--spacing-horizontal);
-				display: inherit;
-				position: inherit;
-				right: inherit;
-			}
-		}
-
-		.comment-metadata {
-			flex: 0 1 auto;
 		}
 	}
 }
 
-.comment-metadata,
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
+	a {
+		color: var(--button--color-text);
+		font-weight: var(--button--font-weight);
+		font-family: var(--button--font-family);
+		font-size: var(--button--font-size);
+		line-height: var(--button--line-height);
+		background-color: var(--button--color-background);
+		border-radius: var(--button--border-radius);
+		border-bottom: none;
+		padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+
+		&:hover,
+		&:focus,
+		&.has-focus {
+			color: var(--button--color-text-hover);
+			background-color: var(--button--color-background-hover);
+		}
+	}
 }
 
 .reply {
@@ -176,7 +170,6 @@
 	display: none;
 }
 
-.comment-author .fn,
 .pingback .url,
 .trackback .url {
 	font-family: var(--global--font-primary);

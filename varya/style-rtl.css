@@ -3476,16 +3476,11 @@ nav a {
 /**
  * Comment Title
  */
-.comments-title {
-	font-size: var(--heading--font-size-h3);
-	letter-spacing: var(--heading--letter-spacing-h3);
-}
-
+.comments-title,
 .comment-reply-title {
-	font-size: var(--global--font-size-xl);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	font-size: var(--heading--font-size-h3);
+	font-style: italic;
+	letter-spacing: var(--heading--letter-spacing-h3);
 }
 
 .comment-reply-title small {
@@ -3505,7 +3500,6 @@ nav a {
 }
 
 .comment-list > li {
-	border-top: 1px solid var(--global--color-border);
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
 }
@@ -3530,10 +3524,6 @@ nav a {
 /**
  * Comment Meta
  */
-.comment-meta {
-	margin-left: calc( var(--global--spacing-vertical) + (0.5 * var(--global--spacing-horizontal)));
-}
-
 .comment-meta .comment-author {
 	line-height: var(--global--line-height-heading);
 	margin-bottom: calc(0.25 * var(--global--spacing-unit));
@@ -3543,37 +3533,36 @@ nav a {
 
 @media only screen and (min-width: 482px) {
 	.comment-meta .comment-author {
-		display: flex;
-		align-items: center;
 		margin-bottom: 0;
 		padding-left: 0;
 	}
 }
 
 .comment-meta .comment-author .fn {
+	font-family: var(--global--font-secondary);
+	font-weight: normal;
+	font-size: var(--global--font-size-xs);
+	hyphens: auto;
+	padding-right: 60px;
 	word-wrap: break-word;
 	word-break: break-word;
-	hyphens: auto;
 }
 
 .comment-meta .comment-author .avatar {
-	display: block;
+	border: 2px solid var(--global--color-border-dark);
+	border-radius: 50%;
 	position: absolute;
-	left: 0;
+	top: 5px;
 }
 
 .comment-meta .comment-metadata {
 	color: var(--global--color-foreground);
-	padding-left: calc(2.5 * var(--global--spacing-horizontal));
-}
-
-@media only screen and (min-width: 482px) {
-	.comment-meta .comment-metadata {
-		padding-left: 0;
-	}
+	font-size: var(--global--font-size-xs);
+	padding-right: 60px;
 }
 
 .comment-meta .comment-metadata a {
+	border-bottom: none;
 	color: currentColor;
 }
 
@@ -3581,37 +3570,39 @@ nav a {
 	color: var(--global--color-primary-hover);
 }
 
+.comment-meta .comment-metadata .edit-link {
+	float: left;
+}
+
 @media only screen and (min-width: 482px) {
 	.comment-meta {
 		margin-left: inherit;
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
 	}
 	.comment-meta .comment-author {
-		display: flex;
-		align-items: center;
 		max-width: inherit;
-		flex: 0 1 auto;
-	}
-	.comment-meta .comment-author .fn {
-		padding-left: var(--global--spacing-horizontal);
-	}
-	.comment-meta .comment-author .avatar {
-		margin-left: var(--global--spacing-horizontal);
-		display: inherit;
-		position: inherit;
-		left: inherit;
-	}
-	.comment-meta .comment-metadata {
-		flex: 0 1 auto;
 	}
 }
 
-.comment-metadata,
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
+}
+
+.reply a {
+	color: var(--button--color-text);
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	line-height: var(--button--line-height);
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border-bottom: none;
+	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+}
+
+.reply a:hover, .reply a:focus, .reply a.has-focus {
+	color: var(--button--color-text-hover);
+	background-color: var(--button--color-background-hover);
 }
 
 .reply {
@@ -3632,7 +3623,6 @@ nav a {
 	display: none;
 }
 
-.comment-author .fn,
 .pingback .url,
 .trackback .url {
 	font-family: var(--global--font-primary);

@@ -32,8 +32,7 @@ if ( post_password_required() ) {
 			if ( '1' === $varya_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'varya' ),
-					'<span>' . get_the_title() . '</span>'
+					esc_html__( '1 Comment', 'varya' )
 				);
 			} else {
 				printf( // WPCS: XSS OK.
@@ -51,6 +50,7 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments( array(
+				'avatar_size'=> 42,
 				'style'      => 'ol',
 				'short_ping' => true,
 			) );
