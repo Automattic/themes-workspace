@@ -100,13 +100,24 @@
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
 		margin-top: calc( var(--global--spacing-vertical) * 1.5 );
+		padding: 0;
 
 		& > div {
 			display: inline-block;
+			visibility: visible;
+			opacity: 1;
 		}
 
 		#toggle-menu {
 			display: none;
+		}
+
+		#toggle ~ div:not(.woocommerce-menu-container) {
+			position: relative;
+			padding: inherit;
+			background-color: transparent;
+			overflow: initial;
+			z-index: 1;
 		}
 
 		// Hide sub-sub-menus
