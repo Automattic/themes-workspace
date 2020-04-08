@@ -2655,26 +2655,12 @@ nav a {
 	margin: 0;
 }
 
-.main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
+body.menu-open .main-navigation > div:not(.woocommerce-menu-container) {
 	display: block;
-}
-
-.main-navigation #toggle:focus + #toggle-menu {
-	background-color: var(--primary-nav--color-link-hover);
-	outline: inherit;
-	text-decoration: underline;
 }
 
 .main-navigation .dropdown-icon.close {
 	display: none;
-}
-
-.main-navigation #toggle:checked + #toggle-menu .open {
-	display: none;
-}
-
-.main-navigation #toggle:checked + #toggle-menu .close {
-	display: inline;
 }
 
 @media only screen and (min-width: 482px) {

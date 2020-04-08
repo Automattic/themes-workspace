@@ -29,14 +29,13 @@
 
 			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'varya' ); ?>">
-					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
-					<label for="toggle" id="toggle-menu" class="button">
+					<button id="toggle-menu" class="button">
 						<?php _e( 'Menu', 'varya' ); ?>
 						<span class="dropdown-icon open">+</span>
 						<span class="dropdown-icon close">&times;</span>
 						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'varya' ); ?></span>
 						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'varya' ); ?></span>
-					</label>
+					</button>
 					<?php
 					wp_nav_menu(
 						array(
