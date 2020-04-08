@@ -90,6 +90,7 @@
  * Output
  */
 body {
+	--wp--typography--line-height: var(--global--line-height-body);
 	color: var(--global--color-foreground);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
@@ -97,10 +98,6 @@ body {
 	font-weight: normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-}
-
-p {
-	line-height: var(--global--line-height-body);
 }
 
 .editor-post-title__block {
@@ -590,6 +587,15 @@ object {
 	line-height: var(--global--line-height-body);
 }
 
+.wp-block-heading h1[style*="--wp--typography--line-height"], h1[style*="--wp--typography--line-height"], .h1[style*="--wp--typography--line-height"],
+.wp-block-heading h2[style*="--wp--typography--line-height"], h2[style*="--wp--typography--line-height"], .h2[style*="--wp--typography--line-height"],
+.wp-block-heading h3[style*="--wp--typography--line-height"], h3[style*="--wp--typography--line-height"], .h3[style*="--wp--typography--line-height"],
+.wp-block-heading h4[style*="--wp--typography--line-height"], h4[style*="--wp--typography--line-height"], .h4[style*="--wp--typography--line-height"],
+.wp-block-heading h5[style*="--wp--typography--line-height"], h5[style*="--wp--typography--line-height"], .h5[style*="--wp--typography--line-height"],
+.wp-block-heading h6[style*="--wp--typography--line-height"], h6[style*="--wp--typography--line-height"], .h6[style*="--wp--typography--line-height"] {
+	line-height: var(--wp--typography--line-height);
+}
+
 /* Center image block by default in the editor */
 .wp-block-image > div {
 	text-align: center;
@@ -746,6 +752,10 @@ dt {
 
 .wp-block-media-text[style*="background-color"]:not(.has-background-background-color) a {
 	color: currentColor;
+}
+
+p {
+	line-height: var(--wp--typography--line-height, --global--line-height-body);
 }
 
 p.has-background {
