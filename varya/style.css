@@ -407,13 +407,7 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a {
 	cursor: pointer;
 	font-weight: normal;
 	font-weight: var(--button--font-weight);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -587,13 +581,7 @@ body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
 	font-weight: 700;
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	min-height: 3.236rem;
 	min-width: 3.236rem;
@@ -878,13 +866,7 @@ html {
 	font-size: calc(18px / 1.2);
 	font-size: calc(var(--global--font-size-root) / var(--global--font-size-ratio));
 	/* 15px; */
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--global--font-secondary);
 	line-height: 1.7;
 	line-height: var(--global--line-height-body);
@@ -1414,13 +1396,7 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a {
 	cursor: pointer;
 	font-weight: normal;
 	font-weight: var(--button--font-weight);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -1594,13 +1570,7 @@ body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
 	font-weight: 700;
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	min-height: 3.236rem;
 	min-width: 3.236rem;
@@ -1642,13 +1612,7 @@ button[data-load-more-btn],
  * Block Options
  */
 .wp-block-button {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -1908,13 +1872,7 @@ sans-serif;
 	background: var(--button--color-background);
 	color: #FFFFFF;
 	color: var(--button--color-text);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -2008,13 +1966,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
 	clear: both;
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 	font-weight: normal;
 	font-weight: var(--heading--font-weight);
@@ -2153,13 +2105,7 @@ img {
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 }
 
@@ -2235,13 +2181,7 @@ serif;
 }
 
 .wp-block-latest-posts > li > a {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--latest-posts--title-font-family);
 	font-size: 28px;
 	font-size: var(--latest-posts--title-font-size);
@@ -2267,13 +2207,7 @@ serif;
 
 .wp-block-latest-posts .wp-block-latest-posts__post-excerpt,
 .wp-block-latest-posts .wp-block-latest-posts__post-full-content {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--latest-posts--description-font-family);
 	font-size: 16px;
 	font-size: var(--latest-posts--description-font-size);
@@ -2343,13 +2277,7 @@ sans-serif;
 
 ul,
 ol {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--list--font-family);
 	margin: 0;
 	padding-left: calc(2 * 25px);
@@ -2378,13 +2306,7 @@ ol {
 }
 
 dt {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--definition-term--font-family);
 	font-weight: bold;
 }
@@ -2476,13 +2398,7 @@ p.has-background {
 	color: var(--global--color-background);
 	background-color: #000000;
 	background-color: var(--global--color-primary);
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-weight: bold;
 	font-size: 16px;
@@ -2572,13 +2488,7 @@ serif;
 }
 
 .wp-block-pullquote p {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--pullquote--font-family);
 	font-size: 32px;
 	font-size: var(--pullquote--font-size);
@@ -2683,13 +2593,7 @@ serif;
 }
 
 .wp-block-quote p {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--quote--font-family);
 	font-size: 18px;
 	font-size: var(--quote--font-size);
@@ -2855,13 +2759,7 @@ table,
 
 table th,
 .wp-block-table th {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 }
 
@@ -3127,13 +3025,7 @@ table th,
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 	font-size: calc(2 * 64px);
 	font-size: calc(2 * var(--heading--font-size-h1));
@@ -3309,13 +3201,7 @@ serif;
 .site-title {
 	color: #000000;
 	color: var(--branding--color-link);
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--branding--title--font-family);
 	font-size: calc( 0.75 * 64px);
 	font-size: var(--branding--title--font-size-mobile);
@@ -3366,13 +3252,7 @@ serif;
 
 .site-description {
 	color: currentColor;
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--branding--description--font-family);
 	font-size: 16px;
 	font-size: var(--branding--description--font-size);
@@ -3609,13 +3489,7 @@ rgba( 0, 0, 0, 0.2 );
 .main-navigation a {
 	color: currentColor;
 	display: block;
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--primary-nav--font-family);
 	font-weight: normal;
 	font-weight: var(--primary-nav--font-weight);
@@ -3719,13 +3593,7 @@ sans-serif;
 .site-footer > .site-info {
 	color: #444444;
 	color: var(--footer--color-text);
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--footer--font-family);
 	font-size: 16px;
 	font-size: var(--footer--font-size);
@@ -3805,13 +3673,7 @@ serif;
 }
 
 .site-footer > .footer-navigation .footer-menu a {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--primary-nav--font-family);
 	font-size: 16px;
 	font-size: var(--footer--font-size);
@@ -3999,13 +3861,7 @@ sans-serif;
 }
 
 .author-bio .author-title {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--entry-author-bio--font-family);
 	font-size: 28px;
 	font-size: var(--entry-author-bio--font-size);
@@ -4061,13 +3917,7 @@ serif;
 }
 
 .post-navigation .post-title {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 24px;
 	font-size: var(--global--font-size-lg);
@@ -4100,13 +3950,7 @@ serif;
 }
 
 .pagination .nav-links > * {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 18px;
 	font-size: var(--global--font-size-md);
@@ -4172,13 +4016,7 @@ serif;
 .comment-reply-title small {
 	font-size: 1em;
 	font-size: var(--global--font-size-base);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--global--font-secondary);
 	letter-spacing: normal;
 	line-height: 1.3;
@@ -4348,13 +4186,7 @@ sans-serif;
 .comment-author .fn,
 .pingback .url,
 .trackback .url {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 }
 
@@ -4454,13 +4286,7 @@ serif;
 }
 
 .comment-navigation a {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 18px;
 	font-size: var(--global--font-size-md);
@@ -4491,13 +4317,7 @@ img#wpstats {
 	color: var(--global--color-background);
 	background-color: #000000;
 	background-color: var(--global--color-primary);
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-weight: bold;
 	font-size: 16px;
@@ -4529,13 +4349,7 @@ body[class*="woocommerce"] #page .woocommerce-breadcrumb {
 	margin-bottom: var(--global--spacing-vertical);
 	font-size: 1em;
 	font-size: var(--global--font-size-base);
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	color: #444444;
 	color: var(--global--color-foreground-light);
@@ -4897,13 +4711,7 @@ body[class*="woocommerce"] #page .woocommerce input.button:disabled[disabled]:ho
 }
 
 #content .wc-block-grid .wc-block-grid__product-title {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 1em;
 	font-size: var(--global--font-size-base);
@@ -5214,13 +5022,7 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a {
 body[class*="woocommerce"] #page .main-navigation ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation .woocommerce-mini-cart__total {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--primary-nav--font-family);
 	font-size: 16px;
 	font-size: var(--primary-nav--font-size);
@@ -5272,13 +5074,7 @@ body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers {
 
 body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers li > * {
 	display: block;
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 18px;
 	font-size: var(--global--font-size-md);
@@ -5523,13 +5319,7 @@ body[class*="woocommerce"] #page .woocommerce-tabs .panel {
 
 body[class*="woocommerce"] #page .woocommerce-tabs .panel h2,
 body[class*="woocommerce"] #page .woocommerce-tabs .panel .comment-reply-title {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 24px;
 	font-size: var(--global--font-size-lg);
@@ -5585,13 +5375,7 @@ body[class*="woocommerce"] #page #reviews #comments ol.commentlist li img.avatar
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist li .woocommerce-review__author {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 }
 
@@ -5905,13 +5689,7 @@ body[class*="woocommerce"] #page td.product-thumbnail img {
 }
 
 body[class*="woocommerce"] #page td.product-name {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-weight: 700;
 }
@@ -5949,13 +5727,7 @@ body[class*="woocommerce"] #page table.cart td.actions .input-text {
  * Checkout page
  */
 body[class*="woocommerce"] #page .woocommerce-order h2 {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
@@ -5973,13 +5745,7 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details {
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li {
 	border: none;
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
@@ -5999,13 +5765,7 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li:no
 }
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li strong {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--global--font-secondary);
 	font-size: 18px;
 	font-size: var(--global--font-size-md);
@@ -6230,13 +5990,7 @@ body[class*="woocommerce"] #page .woocommerce-invalid #terms {
 }
 
 body[class*="woocommerce"] #page .checkout h3 {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
@@ -6544,13 +6298,7 @@ body[class*="woocommerce"] #page {
 
 body[class*="woocommerce"] #page ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page ul.product_list_widget li a:not(.remove) {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--global--font-primary);
 	line-height: 1.3;
 	line-height: var(--global--line-height-heading);

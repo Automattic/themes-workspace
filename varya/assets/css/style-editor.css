@@ -98,13 +98,7 @@ body {
 	color: var(--global--color-foreground);
 	background-color: #FFFFFF;
 	background-color: var(--global--color-background);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--global--font-secondary);
 	font-size: 18px;
 	font-size: var(--global--font-size-root);
@@ -421,13 +415,7 @@ object {
 	cursor: pointer;
 	font-weight: normal;
 	font-weight: var(--button--font-weight);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -496,13 +484,7 @@ sans-serif;
 	color: var(--button--color-text);
 	font-weight: normal;
 	font-weight: var(--button--font-weight);
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -634,13 +616,7 @@ sans-serif;
 .wp-block-heading h5, h5, .h5,
 .wp-block-heading h6, h6, .h6 {
 	clear: both;
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 	font-weight: normal;
 	font-weight: var(--heading--font-weight);
@@ -776,13 +752,7 @@ serif;
 }
 
 .wp-block-latest-posts > li > a {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--latest-posts--title-font-family);
 	font-size: 28px;
 	font-size: var(--latest-posts--title-font-size);
@@ -808,13 +778,7 @@ serif;
 
 .wp-block-latest-posts .wp-block-latest-posts__post-excerpt,
 .wp-block-latest-posts .wp-block-latest-posts__post-full-content {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--latest-posts--description-font-family);
 	font-size: 16px;
 	font-size: var(--latest-posts--description-font-size);
@@ -867,13 +831,7 @@ sans-serif;
 
 ul,
 ol {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--list--font-family);
 	margin: 30px 0;
 	margin: var(--global--spacing-vertical) 0;
@@ -900,13 +858,7 @@ li > ol {
 }
 
 dt {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--definition-term--font-family);
 	font-weight: bold;
 }
@@ -959,13 +911,7 @@ p.has-background:not(.has-background-background-color) a {
 }
 
 .wp-block-pullquote p {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--pullquote--font-family);
 	font-size: 32px;
 	font-size: var(--pullquote--font-size);
@@ -1042,13 +988,7 @@ serif;
 }
 
 .wp-block-quote p {
-	font-family: 'Fira Sans'
-,
-Helvetica
-,
-Arial
-,
-sans-serif;
+	font-family: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
 	font-family: var(--quote--font-family);
 	font-size: 18px;
 	font-size: var(--quote--font-size);
@@ -1169,13 +1109,7 @@ hr {
 
 table th,
 .wp-block-table th {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 }
 
@@ -1194,13 +1128,7 @@ table th,
 .editor-post-title__block .editor-post-title__input {
 	color: #333333;
 	color: var(--global--color-foreground);
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 	font-weight: normal;
 	font-weight: var(--heading--font-weight);
@@ -1366,13 +1294,7 @@ serif;
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	font-family: 'Playfair Display'
-,
-Georgia
-,
-Times
-,
-serif;
+	font-family: "\"Playfair Display\"\, Georgia\, Times\, serif";
 	font-family: var(--heading--font-family);
 	font-size: calc(2 * 64px);
 	font-size: calc(2 * var(--heading--font-size-h1));
