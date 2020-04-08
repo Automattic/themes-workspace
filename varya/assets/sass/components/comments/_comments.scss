@@ -29,11 +29,13 @@
 }
 
 .comment-reply-title {
+	display: flex;
+	justify-content: space-between;
 
 	small {
 		a {
 			border-bottom: none;
-			float: right;
+			color: currentColor;
 			font-family: var(--global--font-secondary);
 			font-size: var(--global--font-size-xs);
 			font-style: normal;
@@ -52,6 +54,7 @@
 	list-style: none;
 
 	> li {
+		border-bottom: 1px solid var(--global--color-border);
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}

@@ -71,9 +71,6 @@ if ( post_password_required() ) {
 
 	comment_form( array(
 		'logged_in_as'	=> null,
-		'fields' => array(
-				'author' => esc_html('Author', 'varya'),
-		),
 		'title_reply'	=> esc_html( 'Leave a Comment', 'varya')
 	) );
 	?>

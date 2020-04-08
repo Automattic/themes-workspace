@@ -1014,9 +1014,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: var(--form--color-text);
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
+	color: var(--form--color-text);
+	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit);
 }
 
@@ -1051,7 +1052,6 @@ textarea {
 input[type=checkbox] + label {
 	display: inline;
 	margin-left: 0.5em;
-	margin-right: 2em;
 	line-height: 1em;
 }
 
@@ -3508,9 +3508,14 @@ nav a {
 	letter-spacing: var(--heading--letter-spacing-h3);
 }
 
+.comment-reply-title {
+	display: flex;
+	justify-content: space-between;
+}
+
 .comment-reply-title small a {
 	border-bottom: none;
-	float: right;
+	color: currentColor;
 	font-family: var(--global--font-secondary);
 	font-size: var(--global--font-size-xs);
 	font-style: normal;
@@ -3527,6 +3532,7 @@ nav a {
 }
 
 .comment-list > li {
+	border-bottom: 1px solid var(--global--color-border);
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
 }
@@ -3679,7 +3685,7 @@ nav a {
 }
 
 .comment-respond {
-	margin-top: calc(2 * var(--global--spacing-vertical));
+	margin-top: var(--global--spacing-vertical);
 }
 
 .comment-respond > * {
@@ -3695,8 +3701,44 @@ nav a {
 	margin-bottom: 0;
 }
 
+.comment-respond > *:last-child.comment-form {
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.comment-author {
+	padding-top: 3px;
+}
+
+.comment-author .url {
+	border-bottom: none;
+	color: currentColor;
+}
+
+.comment-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comment-form .comment-notes {
+	font-size: var(--global--font-size-sm);
+}
+
+.comment-form .comment-form-url,
+.comment-form .comment-form-comment {
+	width: 100%;
+}
+
+.comment-form .comment-form-author,
+.comment-form .comment-form-email {
+	flex-grow: 1;
+}
+
+.comment-form .comment-form-cookies-consent > label,
+.comment-form .comment-notes {
+	font-size: var(--global--font-size-xs);
+}
+
 .comment-form > p {
-	margin-top: var(--global--spacing-unit);
 	margin-bottom: var(--global--spacing-unit);
 }
 
@@ -3719,14 +3761,13 @@ nav a {
 	width: 100%;
 }
 
-.comment-form > p.comment-form-cookies-consent > label {
-	width: auto;
+.comment-form > p.comment-form-cookies-consent {
+	display: flex;
 }
 
 @media only screen and (min-width: 482px) {
-	.comment-form > p.comment-form-cookies-consent > label {
-		width: auto;
-		display: inline-block;
+	.comment-form > p.comment-form-author {
+		margin-right: calc( 1.5 * var(--global--spacing-horizontal));
 	}
 	.comment-form > p.comment-notes, .comment-form > p.logged-in-as {
 		display: block;
