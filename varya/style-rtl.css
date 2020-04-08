@@ -828,9 +828,11 @@ body {
 	background-color: var(--global--color-background);
 }
 
-body.menu-open {
-	position: fixed;
-	max-width: 100%;
+@media only screen and (min-width: 482px) {
+	body.menu-open {
+		position: fixed;
+		max-width: 100%;
+	}
 }
 
 a {
