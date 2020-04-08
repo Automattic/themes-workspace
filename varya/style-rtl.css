@@ -2621,6 +2621,7 @@ nav a {
 	left: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
+	margin-top: 0;
 }
 
 .main-navigation > div {
@@ -2770,12 +2771,12 @@ body.menu-open .main-navigation #toggle-menu .close {
 }
 
 .main-navigation > div > ul > li > .sub-menu {
-	margin: 0;
 	position: relative;
 }
 
 @media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > li > .sub-menu {
+		margin: 0;
 		background: var(--global--color-background);
 		box-shadow: var(--global--elevation-4);
 		right: 0;
@@ -2811,13 +2812,17 @@ body.menu-open .main-navigation #toggle-menu .close {
 .main-navigation a {
 	color: currentColor;
 	display: block;
-	font-family: var(--primary-nav--font-family);
+	font-family: var(--primary-nav--font-family-mobile);
+	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
 @media only screen and (min-width: 482px) {
 	.main-navigation a {
+		font-family: var(--primary-nav--font-family);
+		font-size: var(--primary-nav--font-size);
+		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding);
 	}
 }
@@ -2832,8 +2837,21 @@ body.menu-open .main-navigation #toggle-menu .close {
 }
 
 .main-navigation .sub-menu .menu-item a {
+	font-size: var(--primary-nav--font-size-sub-menu-mobile);
+	font-style: var(--primary-nav--font-style-sub-menu-mobile);
 	padding-top: calc(0.5 * var(--primary-nav--padding));
 	padding-bottom: calc(0.5 * var(--primary-nav--padding));
+}
+
+@media only screen and (min-width: 482px) {
+	.main-navigation .sub-menu .menu-item a {
+		font-size: var(--primary-nav--font-size);
+		font-style: var(--primary-nav--font-style);
+	}
+}
+
+.main-navigation .menu-item-has-children > .svg-icon {
+	display: none;
 }
 
 @media only screen and (min-width: 482px) {

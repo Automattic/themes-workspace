@@ -163,10 +163,11 @@
 
 		/* Sub-menus Flyout */
 		& > li > .sub-menu {
-			margin: 0;
+
 			position: relative;
 
 			@include media(mobile) {
+				margin: 0;
 				background: var(--global--color-background);
 				box-shadow: var(--global--elevation-4);
 				left: 0;
@@ -206,11 +207,15 @@
 	a {
 		color: currentColor;
 		display: block;
-		font-family: var(--primary-nav--font-family);
+		font-family: var(--primary-nav--font-family-mobile);
+		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
 		padding: calc(0.5 * var(--primary-nav--padding)) 0;
 
 		@include media(mobile) {
+			font-family: var(--primary-nav--font-family);
+			font-size: var(--primary-nav--font-size);
+			font-weight: var(--primary-nav--font-weight);
 			padding: var(--primary-nav--padding);
 		}
 
@@ -221,7 +226,7 @@
 		}
 	}
 
-	// Sub-menu depth indicators
+	// Sub-menu depth indicators + text styles
 	.sub-menu {
 
 		list-style: none;
@@ -229,15 +234,26 @@
 
 		.menu-item a {
 
+			font-size: var(--primary-nav--font-size-sub-menu-mobile);
+			font-style: var(--primary-nav--font-style-sub-menu-mobile);
 			padding-top: calc(0.5 * var(--primary-nav--padding));
 			padding-bottom: calc(0.5 * var(--primary-nav--padding));
+
+			@include media(mobile) {
+				font-size: var(--primary-nav--font-size);
+				font-style: var(--primary-nav--font-style);
+			}
 		}
 	}
 
 	// Show top-level sub-menu indicators above mobile-breakpoint-only
-	@include media(mobile) {
-		.menu-item-has-children {
+	.menu-item-has-children {
 
+		> .svg-icon {
+ 			display: none;
+ 		}
+
+		@include media(mobile) {
 			> a {
 				padding-right: 0;
 			}
