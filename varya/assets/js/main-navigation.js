@@ -4,10 +4,8 @@
  * Required to open and close the mobile navigation.
  */
 
-( function() {
-
+( function() { 
 	document.getElementById( "toggle-menu" ).onclick = function() {
 		document.body.classList.toggle( "menu-open" );
 	}
-
 } )();
