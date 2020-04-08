@@ -112,9 +112,13 @@
 			display: none;
 		}
 
-		// Logged-in position
+		// Don't adjust position when logged-in
 		.admin-bar & {
 			top: initial;
+
+			& > div {
+				top: initial;
+			}
 		}
 	}
 
