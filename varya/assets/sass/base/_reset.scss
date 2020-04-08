@@ -76,6 +76,12 @@ body {
 	color: var(--global--color-foreground);
 	text-align: left;
 	background-color: var(--global--color-background);
+	
+	// Keep the menu pinned to the top when the menu is open.
+	&.menu-open {
+		position: fixed;
+		max-width: 100%;
+	}
 }
 
 // Links styles

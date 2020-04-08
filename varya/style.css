@@ -704,6 +704,11 @@ body {
 	background-color: var(--global--color-background);
 }
 
+body.menu-open {
+	position: fixed;
+	max-width: 100%;
+}
+
 a {
 	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--global--color-primary);
