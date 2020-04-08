@@ -5542,6 +5542,12 @@ body[class*="woocommerce"] #page .widget_price_filter .price_slider_wrapper .ui-
 	}
 }
 
+/**
+ * Jetpack styles
+ */
+/**
+ * Jetpack Block styles
+ */
 .wp-block-jetpack-layout-grid {
 	grid-gap: var(--layout-grid--gutter-large) !important;
 	padding-left: var(--layout-grid--gutter-large) !important;

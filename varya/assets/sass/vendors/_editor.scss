@@ -1,5 +1,6 @@
-// Block Styles for the Editor
-// - These styles override some Vendor block styles for fonts, colors, and
-//   spacing with CSS-variables overrides in the Block Editor
+/**
+ * Vendor styles for the editor
+ */
 
-@import "layout-grid/editor";
+// Jetpack
+@import "jetpack/editor";

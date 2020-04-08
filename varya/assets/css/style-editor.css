@@ -1097,6 +1097,15 @@ table th,
 	margin-bottom: 0;
 }
 
+/**
+ * Vendor styles for the editor
+ */
+/**
+ * Jetpack editor styles
+ */
+/**
+ * Jetpack Block editor styles
+ */
 /* Gutter Options */
 .wp-block-jetpack-layout-grid,
 .wp-block-jetpack-layout-grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
