@@ -289,6 +289,9 @@ function varya_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Main navigation scripts
+	wp_enqueue_script( 'varya-main-navigation-scripts', get_template_directory_uri() . '/assets/js/main-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'varya_scripts' );
 
