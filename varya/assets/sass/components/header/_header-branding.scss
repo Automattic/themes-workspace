@@ -1,9 +1,3 @@
-// Site logo
-
-.site-logo {
-
-}
-
 // Site branding
 
 .site-branding {
@@ -17,16 +11,16 @@
 
 	color: var(--branding--color-link);
 	font-family: var(--branding--title--font-family);
-	font-size: var(--branding--title--font-size);
+	font-size: var(--branding--title--font-size-mobile);
 	letter-spacing: normal;
 	line-height: var(--global--line-height-heading);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: calc( var(--global--spacing-vertical) / 2 );
 
 	a {
 		background-image: linear-gradient(to right, var(--global--color-secondary) 100%, transparent 100%);
 		background-position: 0 1.22em;
 		background-repeat: repeat-x;
-		background-size: 8px 2px;
+		background-size: 8px 1.5px;
 		border-bottom: none;
 		color: currentColor;
 		font-weight: var(--branding--title--font-weight);
@@ -66,6 +60,13 @@
 		}
 	}
 
+	@include media(mobile) {
+		font-size: var(--branding--title--font-size);
+
+		a {
+			background-size: 8px 2px;
+		}
+	}
 }
 
 // Site description
@@ -89,11 +90,21 @@ nav a {
 // Site logo
 
 .site-logo {
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+
+	margin: calc( var(--global--spacing-vertical) / 2 ) var(--global--spacing-horizontal);
 
 	.custom-logo {
-		max-width: var(--branding--logo--max-width);
-		max-height: var(--branding--logo--max-height);
+		max-width: var(--branding--logo--max-width-mobile);
+		max-height: var(--branding--logo--max-height-mobile);
 		height: auto;
+	}
+
+	@include media(mobile) {
+	
+		.custom-logo {
+			max-width: var(--branding--logo--max-width);
+			max-height: var(--branding--logo--max-height);
+			height: auto;
+		}
 	}
 }
