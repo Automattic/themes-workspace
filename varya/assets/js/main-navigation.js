@@ -6,6 +6,6 @@
 
 ( function() { 
 	document.getElementById( "toggle-menu" ).onclick = function() {
-		document.body.classList.toggle( "menu-open" );
+		document.body.classList.toggle( "main-navigation-open" );
 	}
 } )();
