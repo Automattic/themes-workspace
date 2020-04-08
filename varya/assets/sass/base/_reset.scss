@@ -79,7 +79,7 @@ body {
 	
 
 	// Keep the menu pinned to the top when the menu is open.
-	@include media(mobile) {
+	@include media(mobile-only) {
 		&.menu-open {
 			position: fixed;
 			max-width: 100%;
