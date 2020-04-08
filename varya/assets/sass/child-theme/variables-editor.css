@@ -24,9 +24,9 @@
 body {
 	/* Globals */
 	/* Font Family */
-	--global--font-primary: "\"Playfair Display\"\, Georgia\, Times\, serif";
-	--global--font-secondary: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
-	--global--font-code: "monospace, monospace";
+	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
+	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
+	--global--font-code: monospace, monospace;
 	--global--font-ui: var(--global--font-secondary);
 	/* Font Size */
 	--global--font-size-root: 18px;

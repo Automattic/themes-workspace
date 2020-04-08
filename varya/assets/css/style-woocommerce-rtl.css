@@ -122,7 +122,13 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a {
 	cursor: pointer;
 	font-weight: normal;
 	font-weight: var(--button--font-weight);
-	font-family: "\"Fira Sans\", Helvetica, Arial, sans-serif";
+	font-family: 'Fira Sans'
+,
+Helvetica
+,
+Arial
+,
+sans-serif;
 	font-family: var(--button--font-family);
 	font-size: 1em;
 	font-size: var(--button--font-size);
@@ -264,7 +270,13 @@ body[class*="woocommerce"] #page span.onsale, #content .wc-block-grid .wc-block-
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
 	font-weight: 700;
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	min-height: 3.236rem;
 	min-width: 3.236rem;
@@ -294,7 +306,13 @@ body[class*="woocommerce"] #page .woocommerce-breadcrumb {
 	margin-bottom: var(--global--spacing-vertical);
 	font-size: 1em;
 	font-size: var(--global--font-size-base);
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	color: #444444;
 	color: var(--global--color-foreground-light);
@@ -656,7 +674,13 @@ body[class*="woocommerce"] #page .woocommerce input.button:disabled[disabled]:ho
 }
 
 #content .wc-block-grid .wc-block-grid__product-title {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-size: 1em;
 	font-size: var(--global--font-size-base);
@@ -967,7 +991,13 @@ body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a {
 body[class*="woocommerce"] #page .main-navigation ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation ul.product_list_widget li a:not(.remove),
 body[class*="woocommerce"] #page .main-navigation .woocommerce-mini-cart__total {
-	font-family: "\"Fira Sans\", Helvetica, Arial, sans-serif";
+	font-family: 'Fira Sans'
+,
+Helvetica
+,
+Arial
+,
+sans-serif;
 	font-family: var(--primary-nav--font-family);
 	font-size: 16px;
 	font-size: var(--primary-nav--font-size);
@@ -1019,7 +1049,13 @@ body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers {
 
 body[class*="woocommerce"] #page .woocommerce-pagination .page-numbers li > * {
 	display: block;
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-size: 18px;
 	font-size: var(--global--font-size-md);
@@ -1264,7 +1300,13 @@ body[class*="woocommerce"] #page .woocommerce-tabs .panel {
 
 body[class*="woocommerce"] #page .woocommerce-tabs .panel h2,
 body[class*="woocommerce"] #page .woocommerce-tabs .panel .comment-reply-title {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-size: 24px;
 	font-size: var(--global--font-size-lg);
@@ -1320,7 +1362,13 @@ body[class*="woocommerce"] #page #reviews #comments ol.commentlist li img.avatar
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist li .woocommerce-review__author {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 }
 
@@ -1634,7 +1682,13 @@ body[class*="woocommerce"] #page td.product-thumbnail img {
 }
 
 body[class*="woocommerce"] #page td.product-name {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-weight: 700;
 }
@@ -1672,7 +1726,13 @@ body[class*="woocommerce"] #page table.cart td.actions .input-text {
  * Checkout page
  */
 body[class*="woocommerce"] #page .woocommerce-order h2 {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
@@ -1690,7 +1750,13 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details {
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li {
 	border: none;
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
@@ -1710,7 +1776,13 @@ body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li:no
 }
 
 body[class*="woocommerce"] #page .woocommerce-order-overview.order_details li strong {
-	font-family: "\"Fira Sans\", Helvetica, Arial, sans-serif";
+	font-family: 'Fira Sans'
+,
+Helvetica
+,
+Arial
+,
+sans-serif;
 	font-family: var(--global--font-secondary);
 	font-size: 18px;
 	font-size: var(--global--font-size-md);
@@ -1935,7 +2007,13 @@ body[class*="woocommerce"] #page .woocommerce-invalid #terms {
 }
 
 body[class*="woocommerce"] #page .checkout h3 {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	font-size: 16px;
 	font-size: var(--global--font-size-sm);
@@ -2243,7 +2321,13 @@ body[class*="woocommerce"] #page {
 
 body[class*="woocommerce"] #page ul.cart_list li a:not(.remove),
 body[class*="woocommerce"] #page ul.product_list_widget li a:not(.remove) {
-	font-family: "\"Playfair Display\", Georgia, Times, serif";
+	font-family: 'Playfair Display'
+,
+Georgia
+,
+Times
+,
+serif;
 	font-family: var(--global--font-primary);
 	line-height: 1.3;
 	line-height: var(--global--line-height-heading);

@@ -24,9 +24,9 @@
 :root {
 	/* Globals */
 	/* Font Family */
-	--global--font-primary: "\"Playfair Display\"\, Georgia\, Times\, serif";
-	--global--font-secondary: "\"Fira Sans\"\, Helvetica\, Arial\, sans-serif";
-	--global--font-code: "monospace, monospace";
+	--global--font-primary: 'Playfair Display', Georgia, Times, serif;
+	--global--font-secondary: 'Fira Sans', Helvetica, Arial, sans-serif;
+	--global--font-code: monospace, monospace;
 	--global--font-ui: var(--global--font-secondary);
 	/* Font Size */
 	--global--font-size-root: 18px;
@@ -191,7 +191,7 @@
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
-	--entry-content--font-family: var(--heading--font-size-h2);
+	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-foreground);
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
