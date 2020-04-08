@@ -1,5 +1,5 @@
 // Vertical Rhythm Multiplier
-$baseline-unit: 8px;
+$baseline-unit: 10px;
 
 // Typescale Multipliers
 $typescale-root: 18px; // Set 16px/1em default on html
@@ -53,10 +53,10 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--color-alert-error: salmon;
 
 	/* Spacing */
-	--global--spacing-unit: #{2 * $baseline-unit}; // 16px
+	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
 	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
-	--global--spacing-horizontal: #{2 * $baseline-unit}; // 16px
-	--global--spacing-vertical: #{4 * $baseline-unit}; // 32px matches default spacing in the editor.
+	--global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px
+	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
 
 	/* Elevation */
 	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
