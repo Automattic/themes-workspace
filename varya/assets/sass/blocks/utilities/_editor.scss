@@ -150,4 +150,9 @@
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
+
+	[data-block] {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }

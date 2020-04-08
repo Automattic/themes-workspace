@@ -7,7 +7,7 @@
 @import "elements/config";
 @import "blocks/config";
 @import "components/config";
-@import "vendors/woocommerce/config";
+@import "vendors/config";
 
 @include add_variables( editor ) {
 	/* Globals */
@@ -19,6 +19,7 @@
 	@include cover-variables();
 	@include heading-variables();
 	@include latest-posts-variables();
+	@include layout-grid-variables();
 	@include list-variables();
 	@include pullquote-variables();
 	@include quote-variables();

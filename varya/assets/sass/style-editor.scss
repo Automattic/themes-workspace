@@ -19,3 +19,8 @@
 // - These styles replace key Gutenberg Block styles for fonts, colors, and
 //   spacing with CSS-variables overrides
 @import "blocks/editor";
+
+// Vendor
+// - These styles override key Vendor styles for fonts, colors, and
+//   spacing with CSS-variables overrides
+@import "vendors/editor";
