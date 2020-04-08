@@ -42,7 +42,7 @@
 	}
 
 	// Mobile menu open
-	body.menu-open & {
+	.main-navigation-open & {
 
 		> div {
 			visibility: visible;
@@ -70,9 +70,18 @@
 		display: none;
 	}
 
-	// Logged-in position
+	// Adjust position when logged-in
 	.admin-bar & {
 		top: 46px;
+
+		& > div {
+			top: 46px;
+		}
+	}
+	.admin-bar.main-navigation-open & {
+		#toggle-menu {
+			top: 46px;
+		}
 	}
 
 	@include media(mobile) {
@@ -281,5 +290,13 @@
 		height: 1px !important;
 		width: 1px !important;
 		overflow: hidden;
+	}
+}
+
+// Keep the menu pinned to the top when the menu is open.
+@include media(mobile-only) {
+	.main-navigation-open .site {
+		position: fixed;
+		max-width: 100%;
 	}
 }

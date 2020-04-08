@@ -828,13 +828,6 @@ body {
 	background-color: var(--global--color-background);
 }
 
-@media only screen and (max-width: 481px) {
-	body.menu-open {
-		position: fixed;
-		max-width: 100%;
-	}
-}
-
 a {
 	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--global--color-primary);
@@ -2914,23 +2907,23 @@ nav a {
 	color: var(--primary-nav--color-hover);
 }
 
-body.menu-open .main-navigation > div {
+.main-navigation-open .main-navigation > div {
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(0);
 }
 
-body.menu-open .main-navigation #toggle-menu {
+.main-navigation-open .main-navigation #toggle-menu {
 	position: fixed;
 	top: 0;
 	left: 0;
 }
 
-body.menu-open .main-navigation #toggle-menu .open {
+.main-navigation-open .main-navigation #toggle-menu .open {
 	display: none;
 }
 
-body.menu-open .main-navigation #toggle-menu .close {
+.main-navigation-open .main-navigation #toggle-menu .close {
 	display: inline;
 }
 
@@ -2939,6 +2932,14 @@ body.menu-open .main-navigation #toggle-menu .close {
 }
 
 .admin-bar .main-navigation {
+	top: 46px;
+}
+
+.admin-bar .main-navigation > div {
+	top: 46px;
+}
+
+.main-navigation-open .main-navigation #toggle-menu {
 	top: 46px;
 }
 
@@ -3139,6 +3140,13 @@ body.menu-open .main-navigation #toggle-menu .close {
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
+}
+
+@media only screen and (max-width: 481px) {
+	.main-navigation-open .site {
+		position: fixed;
+		max-width: 100%;
+	}
 }
 
 .social-navigation > div > ul {
