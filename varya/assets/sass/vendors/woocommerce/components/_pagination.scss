@@ -11,7 +11,7 @@ body[class*="woocommerce"] #page .woocommerce-pagination {
 
 		border: none;
 		display: flex;
-		justify-content: start;
+		justify-content: flex-start;
 
 		li > * {
 			display: block;

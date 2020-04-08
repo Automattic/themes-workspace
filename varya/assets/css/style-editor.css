@@ -74,18 +74,21 @@
  * Extends
  */
 .default-max-width {
+	max-width: 100%;
 	max-width: var(--responsive--aligndefault-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .wide-max-width {
+	max-width: 100%;
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .full-max-width {
+	max-width: 100%;
 	max-width: var(--responsive--alignfull-width);
 	margin-left: auto;
 	margin-right: auto;
@@ -109,6 +112,7 @@
 .site-header,
 .site-main,
 .site-footer {
+	padding: 16px 16px;
 	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
 	margin-left: auto;
 	margin-right: auto;
@@ -118,8 +122,10 @@
 	.site-header,
 	.site-main,
 	.site-footer {
+		padding-top: 32px;
 		padding-top: var(--global--spacing-vertical);
 		padding-right: 0;
+		padding-bottom: 32px;
 		padding-bottom: var(--global--spacing-vertical);
 		padding-left: 0;
 	}
@@ -130,7 +136,9 @@
  * - Add double vertical margins here for clearer heirarchy
  */
 .site-main > * {
+	margin-top: calc(3 * 32px);
 	margin-top: calc(3 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * 32px);
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
 }
 
@@ -161,8 +169,10 @@
 .entry-footer,
 .author-bio,
 .widget-area {
+	margin-top: 32px;
 	margin-top: var(--global--spacing-vertical);
 	margin-right: auto;
+	margin-bottom: 32px;
 	margin-bottom: var(--global--spacing-vertical);
 	margin-left: auto;
 }
@@ -177,7 +187,9 @@
 .entry-content > *,
 [class*="inner-container"] > *,
 .widget-area > * {
+	margin-top: calc( 0.666 * 32px);
 	margin-top: calc( 0.666 * var(--global--spacing-vertical));
+	margin-bottom: calc( 0.666 * 32px);
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
@@ -188,7 +200,9 @@
 	.entry-content > *,
 	[class*="inner-container"] > *,
 	.widget-area > * {
+		margin-top: 32px;
 		margin-top: var(--global--spacing-vertical);
+		margin-bottom: 32px;
 		margin-bottom: var(--global--spacing-vertical);
 	}
 }
@@ -222,7 +236,9 @@
 .comment-content > *,
 .author-bio > *,
 .widget-area > .widget > * {
+	margin-top: 16px;
 	margin-top: var(--global--spacing-unit);
+	margin-bottom: 16px;
 	margin-bottom: var(--global--spacing-unit);
 }
 
@@ -266,13 +282,18 @@
 
 .entry-content > *.alignfull + .alignleft,
 .entry-content > *.alignfull + .alignright {
+	margin-top: 32px;
 	margin-top: var(--global--spacing-vertical);
 }
 
 #wpwrap .editor-styles-wrapper {
+	color: #444444;
 	color: var(--global--color-foreground);
+	background-color: #FFFFFF;
 	background-color: var(--global--color-background);
+	font-family: serif;
 	font-family: var(--global--font-secondary);
+	font-size: 18px;
 	font-size: var(--global--font-size-root);
 	font-weight: normal;
 	line-height: var(--global--font-line-height-body);
@@ -281,14 +302,17 @@
 }
 
 .editor-post-title__block {
+	font-size: 18px;
 	font-size: var(--global--font-size-root);
 }
 
 .editor-styles-wrapper a {
+	color: blue;
 	color: var(--global--color-primary);
 }
 
 .editor-styles-wrapper a:hover {
+	color: indigo;
 	color: var(--global--color-primary-hover);
 }
 
@@ -302,24 +326,32 @@
  * - Styles for basic HTML elemants
  */
 blockquote {
+	padding-left: 16px;
 	padding-left: var(--global--spacing-horizontal);
 }
 
 blockquote p {
+	font-size: calc(1em * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h4);
+	letter-spacing: var(--global--letter-spacing-lg);
 	letter-spacing: var(--heading--letter-spacing-h4);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
 blockquote cite,
 blockquote footer {
+	color: #767676;
 	color: var(--global--color-foreground-light);
+	font-size: calc(1em / 1.2);
 	font-size: var(--global--font-size-sm);
 	letter-spacing: var(--global--letter-spacing-sm);
 }
 
 blockquote > * {
+	margin-top: 16px;
 	margin-top: var(--global--spacing-unit);
+	margin-bottom: 16px;
 	margin-bottom: var(--global--spacing-unit);
 }
 
@@ -336,6 +368,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 blockquote.alignleft p, blockquote.alignright p {
+	font-size: calc(1em * 1.2);
 	font-size: var(--heading--font-size-h5);
 	max-width: inherit;
 	width: inherit;
@@ -344,15 +377,20 @@ blockquote.alignleft p, blockquote.alignright p {
 blockquote.alignleft cite,
 blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
+	font-size: calc(1em / 1.2 / 1.2);
 	font-size: var(--global--font-size-xs);
 	letter-spacing: var(--global--letter-spacing-xs);
 }
 
 figcaption {
+	color: #767676;
 	color: var(--global--color-foreground-light);
+	font-size: calc(1em / 1.2 / 1.2);
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--font-line-height-xs);
+	margin-top: calc(0.5 * 16px);
 	margin-top: calc(0.5 * var(--global--spacing-unit));
+	margin-bottom: 16px;
 	margin-bottom: var(--global--spacing-unit);
 	text-align: center;
 }
@@ -380,22 +418,27 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts.image-aligntop .post-thumbnail {
+	margin-bottom: calc(0.5 * 32px);
 	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts.image-alignleft .post-thumbnail {
+	margin-right: 32px;
 	margin-right: var(--global--spacing-vertical);
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts.image-alignright .post-thumbnail {
+	margin-left: 32px;
 	margin-left: var(--global--spacing-vertical);
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts.image-alignbehind .post-has-image .entry-wrapper {
+	padding: 32px;
 	padding: var(--global--spacing-vertical);
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts.image-alignbehind .post-has-image .cat-links {
+	color: white;
 	color: var(--global--color-white);
 }
 
@@ -404,17 +447,21 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .article-section-title {
+	font-size: 1em;
 	font-size: var(--global--font-size-base);
 	margin-top: 0;
+	margin-bottom: calc(0.5 * 32px);
 	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts article {
+	margin-bottom: calc(2 * 32px);
 	margin-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
 @media only screen and (min-width: 560px) {
 	.editor-styles-wrapper .wp-block-a8c-blog-posts article {
+		margin-bottom: calc(3 * 32px);
 		margin-bottom: calc(3 * var(--global--spacing-vertical));
 	}
 }
@@ -426,7 +473,9 @@ object {
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-wrapper > * {
 	/* Vertical margins logic between post details */
+	margin-top: 16px;
 	margin-top: var(--global--spacing-unit);
+	margin-bottom: 16px;
 	margin-bottom: var(--global--spacing-unit);
 }
 
@@ -439,6 +488,7 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-title a {
+	color: blue;
 	color: var(--global--color-primary);
 }
 
@@ -449,6 +499,7 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-title a:hover {
+	color: indigo;
 	color: var(--global--color-primary-hover);
 	text-decoration: underline;
 }
@@ -462,6 +513,7 @@ object {
 .editor-styles-wrapper .wp-block-a8c-blog-posts .more-link {
 	display: block;
 	color: inherit;
+	margin-top: 16px;
 	margin-top: var(--global--spacing-unit);
 }
 
@@ -472,6 +524,7 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .more-link:hover, .editor-styles-wrapper .wp-block-a8c-blog-posts .more-link:active {
+	color: indigo;
 	color: var(--global--color-primary-hover);
 	text-decoration: none;
 }
@@ -486,7 +539,9 @@ object {
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-meta,
 .editor-styles-wrapper .wp-block-a8c-blog-posts .cat-links {
+	color: #767676;
 	color: var(--global--color-foreground-light);
+	font-size: calc(1em / 1.2);
 	font-size: var(--global--font-size-sm);
 }
 
@@ -503,6 +558,7 @@ object {
 
 .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-meta .byline:not(:last-child),
 .editor-styles-wrapper .wp-block-a8c-blog-posts .cat-links .byline:not(:last-child) {
+	margin-right: 16px;
 	margin-right: var(--global--spacing-unit);
 }
 
@@ -520,6 +576,7 @@ object {
 .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-meta a:hover, .editor-styles-wrapper .wp-block-a8c-blog-posts .entry-meta a:active,
 .editor-styles-wrapper .wp-block-a8c-blog-posts .cat-links a:hover,
 .editor-styles-wrapper .wp-block-a8c-blog-posts .cat-links a:active {
+	color: indigo;
 	color: var(--global--color-primary-hover);
 	text-decoration: none;
 }
@@ -543,16 +600,44 @@ object {
 }
 
 .wp-block-a8c-blog-posts + .button {
+	line-height: 1;
 	line-height: var(--button--line-height);
+	color: #FFFFFF;
 	color: var(--button--color-text);
 	cursor: pointer;
+	font-weight: bold;
 	font-weight: var(--button--font-weight);
+	font-family: -apple-system
+,
+BlinkMacSystemFont
+,
+"Segoe UI"
+,
+"Roboto"
+,
+"Oxygen"
+,
+"Ubuntu"
+,
+"Cantarell"
+,
+"Fira Sans"
+,
+"Droid Sans"
+,
+"Helvetica Neue"
+,
+sans-serif;
 	font-family: var(--button--font-family);
+	font-size: 1em;
 	font-size: var(--button--font-size);
+	background-color: blue;
 	background-color: var(--button--color-background);
+	border-radius: 9px;
 	border-radius: var(--button--border-radius);
 	border-width: 0;
 	text-decoration: none;
+	padding: calc(16px - 2px) 16px;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
@@ -564,20 +649,25 @@ object {
 }
 
 .wp-block-a8c-blog-posts + .button:before {
+	margin-bottom: -calc(.5em * 1 + -.38);
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
 .wp-block-a8c-blog-posts + .button:after {
+	margin-top: -calc(.5em * 1 + -.39);
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
 .wp-block-a8c-blog-posts + .button:hover, .wp-block-a8c-blog-posts + .button:focus, .wp-block-a8c-blog-posts + .has-focus.button {
+	color: #FFFFFF;
 	color: var(--button--color-text-hover);
+	background-color: indigo;
 	background-color: var(--button--color-background-hover);
 }
 
 .wp-block-a8c-blog-posts + .button {
 	display: inline-block;
+	font-size: calc(1em * 1.2);
 	font-size: var(--global--font-size-md);
 }
 
@@ -589,33 +679,66 @@ object {
 [class*="background-color"]:not(.has-background-background-color) .wp-block-a8c-blog-posts + .button,
 [style*="background-color"] .wp-block-a8c-blog-posts + .button {
 	background-color: transparent;
+	border: 2px solid currentColor;
 	border: var(--button--border-width, 2px) solid currentColor;
 	color: currentColor;
 }
 
 .editor-styles-wrapper .wp-block-button .wp-block-button__link {
+	color: #FFFFFF;
 	color: var(--button--color-text);
+	font-weight: bold;
 	font-weight: var(--button--font-weight);
+	font-family: -apple-system
+,
+BlinkMacSystemFont
+,
+"Segoe UI"
+,
+"Roboto"
+,
+"Oxygen"
+,
+"Ubuntu"
+,
+"Cantarell"
+,
+"Fira Sans"
+,
+"Droid Sans"
+,
+"Helvetica Neue"
+,
+sans-serif;
 	font-family: var(--button--font-family);
+	font-size: 1em;
 	font-size: var(--button--font-size);
+	line-height: 1;
 	line-height: var(--button--line-height);
+	background-color: blue;
 	background-color: var(--button--color-background);
+	border-radius: 9px;
 	border-radius: var(--button--border-radius);
+	padding: calc(16px - 2px) 16px;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
 .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover, .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus, .editor-styles-wrapper .wp-block-button .wp-block-button__link.has-focus {
+	color: #FFFFFF;
 	color: var(--button--color-text-hover);
+	background-color: indigo;
 	background-color: var(--button--color-background-hover);
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
+	color: blue;
 	color: var(--button--color-background);
 	background: transparent;
 	border: 2px solid currentcolor;
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover, .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus, .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
+	color: indigo;
 	color: var(--button--color-background-hover);
 }
 
@@ -625,8 +748,11 @@ object {
 
 .editor-styles-wrapper .wp-block-cover,
 .editor-styles-wrapper .wp-block-cover-image {
+	background-color: #FAFAFA;
 	background-color: var(--cover--color-background);
+	color: #111111;
 	color: var(--cover--color-foreground);
+	min-height: calc( 15 * 32px);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -662,13 +788,17 @@ object {
 .editor-styles-wrapper .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-image-text,
 .editor-styles-wrapper .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-text,
 .editor-styles-wrapper .wp-block-cover-image:not([class*='background-color']) .block-editor-block-list__block {
+	color: #111111;
 	color: var(--cover--color-foreground);
 }
 
 .editor-styles-wrapper .wp-block-cover h2,
 .editor-styles-wrapper .wp-block-cover-image h2 {
+	font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h2);
+	letter-spacing: var(--global--letter-spacing-xxl);
 	letter-spacing: var(--heading--letter-spacing-h2);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 	padding: 0;
 	max-width: inherit;
@@ -695,11 +825,13 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-group.has-background {
+	padding: calc( 0.666 * 32px);
 	padding: calc( 0.666 * var(--global--spacing-vertical));
 }
 
 @media only screen and (min-width: 560px) {
 	.editor-styles-wrapper .wp-block-group.has-background {
+		padding: 32px;
 		padding: var(--global--spacing-vertical);
 	}
 }
@@ -716,7 +848,9 @@ object {
 .editor-styles-wrapper .wp-block-heading h5, .editor-styles-wrapper h5, .editor-styles-wrapper .h5,
 .editor-styles-wrapper .wp-block-heading h6, .editor-styles-wrapper h6, .editor-styles-wrapper .h6 {
 	clear: both;
+	font-family: sans-serif;
 	font-family: var(--heading--font-family);
+	font-weight: 600;
 	font-weight: var(--heading--font-weight);
 }
 
@@ -726,42 +860,61 @@ object {
 .editor-styles-wrapper .wp-block-heading h4 strong, .editor-styles-wrapper h4 strong, .editor-styles-wrapper .h4 strong,
 .editor-styles-wrapper .wp-block-heading h5 strong, .editor-styles-wrapper h5 strong, .editor-styles-wrapper .h5 strong,
 .editor-styles-wrapper .wp-block-heading h6 strong, .editor-styles-wrapper h6 strong, .editor-styles-wrapper .h6 strong {
+	font-weight: 800;
 	font-weight: var(--heading--font-weight-strong);
 }
 
 .editor-styles-wrapper .wp-block-heading h1, .editor-styles-wrapper h1, .editor-styles-wrapper .h1 {
+	font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h1);
+	letter-spacing: var(--global--letter-spacing-xxxl);
 	letter-spacing: var(--heading--letter-spacing-h1);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
 .editor-styles-wrapper .wp-block-heading h2, .editor-styles-wrapper h2, .editor-styles-wrapper .h2 {
+	font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h2);
+	letter-spacing: var(--global--letter-spacing-xxl);
 	letter-spacing: var(--heading--letter-spacing-h2);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
 .editor-styles-wrapper .wp-block-heading h3, .editor-styles-wrapper h3, .editor-styles-wrapper .h3 {
+	font-size: calc(1em * 1.2 * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h3);
+	letter-spacing: var(--global--letter-spacing-xl);
 	letter-spacing: var(--heading--letter-spacing-h3);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
 .editor-styles-wrapper .wp-block-heading h4, .editor-styles-wrapper h4, .editor-styles-wrapper .h4 {
+	font-size: calc(1em * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h4);
+	letter-spacing: var(--global--letter-spacing-lg);
 	letter-spacing: var(--heading--letter-spacing-h4);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
 .editor-styles-wrapper .wp-block-heading h5, .editor-styles-wrapper h5, .editor-styles-wrapper .h5 {
+	font-size: calc(1em * 1.2);
 	font-size: var(--heading--font-size-h5);
+	letter-spacing: var(--global--letter-spacing-md);
 	letter-spacing: var(--heading--letter-spacing-h5);
+	line-height: 1.78;
 	line-height: var(--global--line-height-body);
 }
 
 .editor-styles-wrapper .wp-block-heading h6, .editor-styles-wrapper h6, .editor-styles-wrapper .h6 {
+	font-size: 1em;
 	font-size: var(--heading--font-size-h6);
+	letter-spacing: var(--global--letter-spacing-md);
 	letter-spacing: var(--heading--letter-spacing-h6);
+	line-height: 1.78;
 	line-height: var(--global--line-height-body);
 }
 
@@ -783,7 +936,9 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-latest-posts:not(.is-grid) > li {
+	margin-top: 32px;
 	margin-top: var(--global--spacing-vertical);
+	margin-bottom: 32px;
 	margin-bottom: var(--global--spacing-vertical);
 }
 
@@ -796,6 +951,7 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-latest-posts.is-grid > li {
+	margin-bottom: 32px;
 	margin-bottom: var(--global--spacing-vertical);
 }
 
@@ -804,7 +960,9 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-latest-posts > li > * {
+	margin-top: calc(0.5 * 32px);
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.5 * 32px);
 	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
@@ -817,15 +975,22 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-latest-posts > li > a {
+	font-family: sans-serif;
 	font-family: var(--latest-posts--title-font-family);
+	font-size: calc(1em * 1.2 * 1.2 * 1.2);
 	font-size: var(--latest-posts--title-font-size);
+	font-weight: 600;
 	font-weight: var(--heading--font-weight);
+	line-height: 1.125;
 	line-height: var(--global--line-height-heading);
 }
 
 .editor-styles-wrapper .wp-block-latest-posts .wp-block-latest-posts__post-date {
+	color: #767676;
 	color: var(--global--color-foreground-light);
+	font-size: calc(1em / 1.2 / 1.2);
 	font-size: var(--global--font-size-xs);
+	line-height: 1.78;
 	line-height: var(--global--line-height-body);
 }
 
@@ -836,8 +1001,11 @@ object {
 
 .editor-styles-wrapper .wp-block-latest-posts .wp-block-latest-posts__post-excerpt,
 .editor-styles-wrapper .wp-block-latest-posts .wp-block-latest-posts__post-full-content {
+	font-family: var(--global--font-family-secondary);
 	font-family: var(--latest-posts--description-font-family);
+	font-size: calc(1em / 1.2);
 	font-size: var(--latest-posts--description-font-size);
+	line-height: 1.78;
 	line-height: var(--global--line-height-body);
 }
 
@@ -886,8 +1054,11 @@ object {
 
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol {
+	font-family: serif;
 	font-family: var(--list--font-family);
+	margin: 32px 0;
 	margin: var(--global--spacing-vertical) 0;
+	padding-left: calc( 2 * 16px);
 	padding-left: calc( 2 * var(--global--spacing-horizontal));
 }
 
@@ -910,18 +1081,23 @@ object {
 }
 
 .editor-styles-wrapper dt {
+	font-family: sans-serif;
 	font-family: var(--definition-term--font-family);
 	font-weight: bold;
 }
 
 .wp-block-media-text .block-editor-inner-blocks {
+	padding-right: 16px;
 	padding-right: var(--global--spacing-horizontal);
+	padding-left: 16px;
 	padding-left: var(--global--spacing-horizontal);
 }
 
 @media only screen and (min-width: 640px) {
 	.wp-block-media-text .block-editor-inner-blocks {
+		padding-right: 32px;
 		padding-right: var(--global--spacing-vertical);
+		padding-left: 32px;
 		padding-left: var(--global--spacing-vertical);
 	}
 }
@@ -931,6 +1107,7 @@ object {
 }
 
 .editor-styles-wrapper p.has-background {
+	padding: 16px;
 	padding: var(--global--spacing-unit);
 }
 
@@ -943,14 +1120,20 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-pullquote {
+	padding: calc( 3 * 16px) 0;
 	padding: calc( 3 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
 	text-align: center;
+	border-top-color: #444444;
 	border-top-color: var(--pullquote--color-border);
+	border-top-width: 4px;
 	border-top-width: var(--pullquote--border-width);
+	border-bottom-color: #444444;
 	border-bottom-color: var(--pullquote--color-border);
+	border-bottom-width: 4px;
 	border-bottom-width: var(--pullquote--border-width);
+	color: #444444;
 	color: var(--pullquote--color-foreground);
 }
 
@@ -959,9 +1142,13 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-pullquote p {
+	font-family: var(--global--font-family-primary);
 	font-family: var(--pullquote--font-family);
+	font-size: calc(1em * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h4);
+	letter-spacing: var(--global--letter-spacing-lg);
 	letter-spacing: var(--heading--letter-spacing-h4);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
@@ -972,7 +1159,9 @@ object {
 .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
 .editor-styles-wrapper .wp-block-pullquote cite,
 .editor-styles-wrapper .wp-block-pullquote footer {
+	color: #767676;
 	color: var(--global--color-foreground-light);
+	font-size: calc(1em / 1.2);
 	font-size: var(--global--font-size-sm);
 }
 
@@ -981,13 +1170,17 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-pullquote.is-style-solid-color {
+	background-color: #444444;
 	background-color: var(--pullquote--color-foreground);
+	color: #FFFFFF;
 	color: var(--pullquote--color-background);
 }
 
 .editor-styles-wrapper .wp-block-pullquote.is-style-solid-color.alignleft blockquote,
 .editor-styles-wrapper .wp-block-pullquote.is-style-solid-color.alignright blockquote {
+	padding-left: 16px;
 	padding-left: var(--global--spacing-unit);
+	padding-right: 16px;
 	padding-right: var(--global--spacing-unit);
 	max-width: inherit;
 }
@@ -1011,14 +1204,20 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-quote {
+	border-left-color: blue;
 	border-left-color: var(--quote--border-color);
+	margin: 32px 0;
 	margin: var(--global--spacing-vertical) 0;
+	padding-left: 16px;
 	padding-left: var(--global--spacing-horizontal);
 }
 
 .editor-styles-wrapper .wp-block-quote p {
+	font-family: var(--global--font-family-primary);
 	font-family: var(--quote--font-family);
+	font-size: calc(1em * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h4);
+	letter-spacing: var(--global--letter-spacing-lg);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--global--line-height-h4);
 }
@@ -1029,8 +1228,11 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-quote.is-large p, .editor-styles-wrapper .wp-block-quote.is-style-large p {
+	font-family: var(--global--font-family-primary);
 	font-family: var(--quote--font-family);
+	font-size: calc(1em * 1.2 * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h3);
+	letter-spacing: var(--global--letter-spacing-xl);
 	letter-spacing: var(--heading--letter-spacing-h3);
 	line-height: var(--global--line-height-h3);
 }
@@ -1043,7 +1245,9 @@ object {
 }
 
 .editor-styles-wrapper .wp-block-quote .wp-block-quote__citation {
+	color: #767676;
 	color: var(--global--color-foreground-light);
+	font-size: calc(1em / 1.2);
 	font-size: var(--global--font-size-sm);
 }
 
@@ -1056,6 +1260,7 @@ object {
 
 .editor-styles-wrapper .wp-block-separator,
 .editor-styles-wrapper hr {
+	border-bottom: 2px solid #DDDDDD;
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
 }
@@ -1063,11 +1268,13 @@ object {
 .editor-styles-wrapper .wp-block-separator[style*="text-align:right"], .editor-styles-wrapper .wp-block-separator[style*="text-align: right"],
 .editor-styles-wrapper hr[style*="text-align:right"],
 .editor-styles-wrapper hr[style*="text-align: right"] {
+	border-right-color: #DDDDDD;
 	border-right-color: var(--separator--border-color);
 }
 
 .editor-styles-wrapper .wp-block-separator.is-style-wide,
 .editor-styles-wrapper hr.is-style-wide {
+	border-bottom-width: 2px;
 	border-bottom-width: var(--separator--height);
 }
 
@@ -1090,6 +1297,7 @@ object {
 
 .editor-styles-wrapper .wp-block-separator.is-style-dots:before,
 .editor-styles-wrapper hr.is-style-dots:before {
+	color: #DDDDDD;
 	color: var(--separator--border-color);
 }
 
@@ -1109,6 +1317,7 @@ object {
 
 .editor-styles-wrapper table th,
 .editor-styles-wrapper .wp-block-table th {
+	font-family: sans-serif;
 	font-family: var(--heading--font-family);
 }
 
@@ -1116,6 +1325,7 @@ object {
 .editor-styles-wrapper table th,
 .editor-styles-wrapper .wp-block-table td,
 .editor-styles-wrapper .wp-block-table th {
+	padding: calc( 0.5 * 16px);
 	padding: calc( 0.5 * var(--global--spacing-unit));
 }
 
@@ -1124,11 +1334,17 @@ object {
  * - Needs a special styles
  */
 .editor-post-title__block .editor-post-title__input {
+	color: #444444;
 	color: var(--global--color-foreground);
+	font-family: sans-serif;
 	font-family: var(--heading--font-family);
+	font-weight: 600;
 	font-weight: var(--heading--font-weight);
+	font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
 	font-size: var(--heading--font-size-h2);
+	letter-spacing: var(--global--letter-spacing-xxl);
 	letter-spacing: var(--heading--letter-spacing-h2);
+	line-height: 1.25em;
 	line-height: var(--heading--line-height);
 }
 
@@ -1139,34 +1355,42 @@ object {
 }
 
 .editor-styles-wrapper .has-primary-color[class] {
+	color: blue !important;
 	color: var(--global--color-primary) !important;
 }
 
 .editor-styles-wrapper .has-secondary-color[class] {
+	color: red !important;
 	color: var(--global--color-secondary) !important;
 }
 
 .editor-styles-wrapper .has-foreground-color[class] {
+	color: #444444 !important;
 	color: var(--global--color-foreground) !important;
 }
 
 .editor-styles-wrapper .has-foreground-light-color[class] {
+	color: #767676 !important;
 	color: var(--global--color-foreground-light) !important;
 }
 
 .editor-styles-wrapper .has-foreground-dark-color[class] {
+	color: #111111 !important;
 	color: var(--global--color-foreground-dark) !important;
 }
 
 .editor-styles-wrapper .has-background-light-color[class] {
+	color: #FAFAFA !important;
 	color: var(--global--color-background-light) !important;
 }
 
 .editor-styles-wrapper .has-background-dark-color[class] {
+	color: #DDDDDD !important;
 	color: var(--global--color-background-dark) !important;
 }
 
 .editor-styles-wrapper .has-background-color[class] {
+	color: #FFFFFF !important;
 	color: var(--global--color-background) !important;
 }
 
@@ -1176,62 +1400,85 @@ object {
 }
 
 .editor-styles-wrapper .has-primary-background-color[class] {
+	background-color: blue !important;
 	background-color: var(--global--color-primary) !important;
+	color: #FFFFFF;
 	color: var(--global--color-background);
 }
 
 .editor-styles-wrapper .has-primary-background-color[class] {
+	background-color: blue !important;
 	background-color: var(--global--color-primary) !important;
+	color: #FFFFFF;
 	color: var(--global--color-background);
 }
 
 .editor-styles-wrapper .has-secondary-background-color[class] {
+	background-color: red !important;
 	background-color: var(--global--color-secondary) !important;
+	color: #FFFFFF;
 	color: var(--global--color-background);
 }
 
 .editor-styles-wrapper .has-foreground-background-color[class] {
+	background-color: #444444 !important;
 	background-color: var(--global--color-foreground) !important;
+	color: #FFFFFF;
 	color: var(--global--color-background);
 }
 
 .editor-styles-wrapper .has-foreground-light-background-color[class] {
+	background-color: #767676 !important;
 	background-color: var(--global--color-foreground-light) !important;
+	color: #FFFFFF;
 	color: var(--global--color-background);
 }
 
 .editor-styles-wrapper .has-foreground-dark-background-color[class] {
+	background-color: #111111 !important;
 	background-color: var(--global--color-foreground-dark) !important;
+	color: #FFFFFF;
 	color: var(--global--color-background);
 }
 
 .editor-styles-wrapper .has-background-light-background-color[class] {
+	background-color: #FAFAFA !important;
 	background-color: var(--global--color-background-light) !important;
+	color: #444444;
 	color: var(--global--color-foreground);
 }
 
 .editor-styles-wrapper .has-background-dark-background-color[class] {
+	background-color: #DDDDDD !important;
 	background-color: var(--global--color-background-dark) !important;
+	color: #444444;
 	color: var(--global--color-foreground);
 }
 
 .editor-styles-wrapper .has-background-background-color[class] {
+	background-color: #FFFFFF !important;
 	background-color: var(--global--color-background) !important;
+	color: #444444;
 	color: var(--global--color-foreground);
 }
 
 .editor-styles-wrapper .has-white-background-color[class] {
+	background-color: white !important;
 	background-color: var(--global--color-white) !important;
+	color: red;
 	color: var(--global--color-secondary);
 }
 
 .editor-styles-wrapper .has-black-background-color[class] {
+	background-color: black !important;
 	background-color: var(--global--color-black) !important;
+	color: blue;
 	color: var(--global--color-primary);
 }
 
 .editor-styles-wrapper .is-small-text,
 .editor-styles-wrapper .has-small-font-size {
+	font-size: calc(1em / 1.2);
 	font-size: var(--global--font-size-sm);
 }
 
@@ -1239,36 +1486,48 @@ object {
 .editor-styles-wrapper .has-regular-font-size,
 .editor-styles-wrapper .has-normal-font-size,
 .editor-styles-wrapper .has-medium-font-size {
+	font-size: calc(1em * 1.2);
 	font-size: var(--global--font-size-md);
 }
 
 .editor-styles-wrapper .is-large-text,
 .editor-styles-wrapper .has-large-font-size {
+	font-size: calc(1em * 1.2 * 1.2);
 	font-size: var(--global--font-size-lg);
+	line-height: 1.125;
 	line-height: var(--global--line-height-heading);
 }
 
 .editor-styles-wrapper .is-larger-text,
 .editor-styles-wrapper .has-larger-font-size,
 .editor-styles-wrapper .has-huge-font-size {
+	font-size: calc(1em * 1.2 * 1.2 * 1.2);
 	font-size: var(--global--font-size-xl);
+	line-height: 1.125;
 	line-height: var(--global--line-height-heading);
 }
 
 .editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter {
+	font-family: sans-serif;
 	font-family: var(--heading--font-family);
+	font-size: calc(2 * calc(1em * 1.2 * 1.2 * 1.2 * 1.2 * 1.2));
 	font-size: calc(2 * var(--heading--font-size-h1));
+	font-weight: 600;
 	font-weight: var(--heading--font-weight);
 }
 
 .editor-styles-wrapper [data-block] {
+	margin-top: calc( 0.666 * 32px);
 	margin-top: calc( 0.666 * var(--global--spacing-vertical));
+	margin-bottom: calc( 0.666 * 32px);
 	margin-bottom: calc( 0.666 * var(--global--spacing-vertical));
 }
 
 @media only screen and (min-width: 560px) {
 	.editor-styles-wrapper [data-block] {
+		margin-top: 32px;
 		margin-top: var(--global--spacing-vertical);
+		margin-bottom: 32px;
 		margin-bottom: var(--global--spacing-vertical);
 	}
 }
