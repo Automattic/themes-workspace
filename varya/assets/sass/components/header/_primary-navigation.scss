@@ -2,26 +2,60 @@
 
 .main-navigation {
 
+	position: absolute;
+ 	top: 0;
+ 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	margin-top: calc( var(--global--spacing-vertical) * 1.5 );
+	margin-top: 0;
 
 	// Mobile menu closed
 	& > div {
-		display: none;
+		visibility: hidden;
+		opacity: 0;
+		position: fixed;
+ 		top: 0;
+ 		right: 0;
+ 		bottom: 0;
+ 		left: 0;
+ 		padding: calc(2* var(--global--spacing-unit) + var(--primary-nav--icon-size)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+ 		background-color: var(--global--color-background);
+ 		overflow-x: hidden;
+ 		overflow-y: scroll;
+ 		z-index: 499;
+ 		transition: all .15s ease-in-out;
+ 	  	transform: translateY(var(--global--spacing-vertical));
 	}
 
 	// Mobile menu toggle
 	#toggle-menu {
+		position: relative;
 		display: inline-block;
 		margin: 0;
+		background-color: transparent; 
+		color: var(--primary-nav--color-link);
+		z-index: 500;
+
+		&:hover {
+			color: var(--primary-nav--color-hover);
+		}
 	}
 
 	// Mobile menu open
 	body.menu-open & {
 
-		> div:not(.woocommerce-menu-container) {
-			display: block;
+		> div {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		#toggle-menu .open {
+			display: none;
+		}
+
+		#toggle-menu .close {
+			display: inline;
 		}
 	}
 
@@ -29,13 +63,27 @@
 		display: none;
 	}
 
-	@include media(mobile) {
+	// Logged-in position
+	.admin-bar & {
+		top: 46px;
+	}
 
+	@include media(mobile) {
+		
+		position: relative;
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
+		margin-top: calc( var(--global--spacing-vertical) * 1.5 );
 
+		// Mobile menu on desktop
 		& > div {
-			display: inline-block;
+			visibility: visible;
+			opacity: 1;
+			position: relative;
+			padding: 0;
+			background-color: transparent;
+			overflow: initial;
+			transform: none;
 		}
 
 		// Hide mobile menu toggle
@@ -46,6 +94,11 @@
 		// Hide sub-sub-menus
 		& > div > ul > li > ul {
 			display: none;
+		}
+
+		// Logged-in position
+		.admin-bar & {
+			top: initial;
 		}
 	}
 
