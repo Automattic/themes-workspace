@@ -2938,6 +2938,12 @@ body.menu-open .main-navigation > div {
 	transform: translateY(0);
 }
 
+body.menu-open .main-navigation #toggle-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
 body.menu-open .main-navigation #toggle-menu .open {
 	display: none;
 }

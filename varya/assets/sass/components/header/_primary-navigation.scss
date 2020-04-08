@@ -50,13 +50,20 @@
 			transform: translateY(0);
 		}
 
-		#toggle-menu .open {
-			display: none;
+		#toggle-menu {
+			position: fixed;
+			top: 0;
+			right: 0;
+
+			.open {
+				display: none;
+			}
+
+			.close {
+				display: inline;
+			}
 		}
 
-		#toggle-menu .close {
-			display: inline;
-		}
 	}
 
 	.dropdown-icon.close {
