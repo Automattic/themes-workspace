@@ -2740,6 +2740,9 @@ nav a {
 	.admin-bar .main-navigation {
 		top: initial;
 	}
+	.admin-bar .main-navigation > div {
+		top: initial;
+	}
 }
 
 .main-navigation > div > ul {
