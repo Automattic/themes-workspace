@@ -2649,6 +2649,12 @@ nav a {
 	margin-top: 0;
 }
 
+@media only screen and (max-width: 481px) {
+	.main-navigation {
+		width: 100%;
+	}
+}
+
 .main-navigation > div {
 	visibility: hidden;
 	opacity: 0;
@@ -2667,9 +2673,10 @@ nav a {
 }
 
 .main-navigation #toggle-menu {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	margin: 0;
+	right: 0;
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
 }

@@ -684,7 +684,9 @@ body[class*="woocommerce"] #page .wc-block-grid__product-add-to-cart .added_to_c
 }
 
 body[class*="woocommerce"] #page .main-navigation #toggle-cart {
+	position: absolute;
 	display: inline-block;
+	right: 0;
 	margin: 0;
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
@@ -707,7 +709,7 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation > .woocomme
 body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-cart {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 500;
 }
 
