@@ -17,10 +17,11 @@
 		var lockScrollClass = 'lock-scrolling';
 		var navOpenClass;
 
-		// On Toggle Click
+		// Toggle click if it exists
+		toggleButton ?
 		toggleButton.onclick = function() {
 			wrapper.classList.toggle(navOpenClass);
 			wrapper.classList.toggle(lockScrollClass);
-		}
+		} : null;
 	}
 } )();
