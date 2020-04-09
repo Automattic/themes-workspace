@@ -1822,7 +1822,7 @@ body[class*="woocommerce"] #page .woocommerce-ordering select {
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__image--placeholder {
-	border-color: var(--global--color-border-light);
+	border-color: var(--global--color-border);
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__trigger {
@@ -1831,11 +1831,11 @@ body[class*="woocommerce"] #page .woocommerce-ordering select {
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__trigger::before {
-	border-color: var(--global--color-border-dark);
+	border-color: var(--global--color-border);
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__trigger::after {
-	background-color: var(--global--color-border-dark);
+	background-color: var(--global--color-border);
 }
 
 .single-product #page #woocommerce-wrapper div.product div.summary {
