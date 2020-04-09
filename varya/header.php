@@ -36,11 +36,18 @@
 						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'varya' ); ?></span>
 					</button>
 					<?php
+					// Get menu slug
+					$location_name = 'menu-1';
+					$locations = get_nav_menu_locations();
+					$menu_id = $locations[ $location_name ];
+					$menu = wp_get_nav_menu_object( $menu_id );
+
 					wp_nav_menu(
 						array(
-							'theme_location' => 'menu-1',
-							'menu_class'     => 'main-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
+							'theme_location'  => 'menu-1',
+							'menu_class'      => 'main-menu',
+							'container_class' => 'main-menu-container menu-'. $menu->slug .'-container',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 						)
 					);
 					?>

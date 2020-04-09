@@ -2678,7 +2678,7 @@ nav a {
 	color: var(--primary-nav--color-hover);
 }
 
-.main-navigation-open .main-navigation > .menu-primary-container {
+.main-navigation-open .main-navigation > .main-menu-container {
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(0);
