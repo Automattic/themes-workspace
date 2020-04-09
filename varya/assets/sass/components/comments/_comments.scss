@@ -54,9 +54,12 @@
 	list-style: none;
 
 	> li {
-		border-bottom: 1px solid var(--global--color-border);
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
+	}
+
+	> li:not(first-child) {
+		border-bottom: 1px solid var(--global--color-border-dark);
 	}
 }
 
@@ -65,7 +68,7 @@
 	padding-left: var(--global--spacing-horizontal);
 
 	> li {
-		border-top: 1px solid var(--global--color-border);
+		border-top: 1px solid var(--global--color-border-dark);
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
