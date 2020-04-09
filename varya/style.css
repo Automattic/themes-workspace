@@ -2672,7 +2672,6 @@ nav a {
 	margin: 0;
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
-	z-index: 500;
 }
 
 .main-navigation #toggle-menu:hover {
@@ -2689,6 +2688,7 @@ nav a {
 	position: fixed;
 	top: 0;
 	right: 0;
+	z-index: 500;
 }
 
 .main-navigation-open .main-navigation #toggle-menu .open {
@@ -2918,7 +2918,7 @@ nav a {
 }
 
 @media only screen and (max-width: 481px) {
-	.main-navigation-open .site {
+	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
 	}

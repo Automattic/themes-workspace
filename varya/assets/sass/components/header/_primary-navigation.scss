@@ -34,7 +34,6 @@
 		margin: 0;
 		background-color: transparent; 
 		color: var(--primary-nav--color-link);
-		z-index: 500;
 
 		&:hover {
 			color: var(--primary-nav--color-hover);
@@ -54,6 +53,7 @@
 			position: fixed;
 			top: 0;
 			right: 0;
+			z-index: 500;
 
 			.open {
 				display: none;
@@ -63,7 +63,6 @@
 				display: inline;
 			}
 		}
-
 	}
 
 	.dropdown-icon.close {
@@ -299,7 +298,7 @@
 
 // Keep the menu pinned to the top when the menu is open.
 @include media(mobile-only) {
-	.main-navigation-open .site {
+	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
 	}

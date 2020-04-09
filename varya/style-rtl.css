@@ -2647,7 +2647,6 @@ nav a {
 	margin: 0;
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
-	z-index: 500;
 }
 
 .main-navigation #toggle-menu:hover {
@@ -2664,6 +2663,7 @@ nav a {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 500;
 }
 
 .main-navigation-open .main-navigation #toggle-menu .open {
@@ -2713,6 +2713,9 @@ nav a {
 		display: none;
 	}
 	.admin-bar .main-navigation {
+		top: initial;
+	}
+	.admin-bar .main-navigation > div {
 		top: initial;
 	}
 }
@@ -2890,7 +2893,7 @@ nav a {
 }
 
 @media only screen and (max-width: 481px) {
-	.main-navigation-open .site {
+	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
 	}
