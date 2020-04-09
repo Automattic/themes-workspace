@@ -5,56 +5,23 @@
  */
 
 ( function() {
-//	document.getElementById( "toggle-menu" ).onclick = function() {
-//		document.body.classList.toggle( "main-navigation-open" );
-//	}
-
 	/**
-	 * Shows an element by removing a className.
-	 *
-	 * @param {Element} element
-	 */
-	function showButton(element) {
-		// classList.remove is not supported in IE11
-		element.className = element.className.replace('is-hidden', '');
-	}
-
-	/**
-	 * Hides an element by adding className.
-	 *
-	 * @param {Element} element
-	 */
-	function hideButton(element) {
-		// classList.add is not supported in IE11
-		if (!element.classList.contains('is-hidden')) {
-			element.className += ' is-hidden';
-		}
-	}
-
-	/**
-	 * Shows an element by adding a hidden className.
+	 * Menu Toggle Behaviors
 	 *
 	 * @param {Element} element
 	 */
 	function menuToggleUI( toggleButtonID, navOpenClass = 'main-navigation-open' ) {
 
-		var wrapper      = document.body;
-		var toggleButton = document.getElementById( toggleButtonID );
+		var wrapper         = document.body;
+		var toggleButton    = document.getElementById( toggleButtonID );
+		var lockScrollClass = 'lock-scrolling';
 		var navOpenClass;
-
-		//console.log(toggleButton, wrapper)
 
 		// On Toggle Click
 		toggleButton.onclick = function() {
-			// Is menu open already?
-			if ( wrapper.classList.contains(navOpenClass)) {
-				wrapper.className = wrapper.className.replace(navOpenClass, '');
-			} else {
-				wrapper.classList.toggle(navOpenClass);
-			}
+			wrapper.classList.toggle(navOpenClass);
+			wrapper.classList.toggle(lockScrollClass);
 		}
-		// classList.remove is not supported in IE11
-		// element.className = element.className.replace('is-empty', '');
 	}
 
 	/**
