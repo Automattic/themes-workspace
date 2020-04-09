@@ -176,7 +176,12 @@
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 	--primary-nav--font-family: var(--global--font-secondary);
-	--primary-nav--font-size: 16px;
+	--primary-nav--font-family-mobile: var(--global--font-primary);
+	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size-mobile: var(--global--font-size-xxl);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
+	--primary-nav--font-style: normal;
+	--primary-nav--font-style-sub-menu-mobile: italic;
 	--primary-nav--font-weight: normal;
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);

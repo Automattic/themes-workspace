@@ -2616,55 +2616,114 @@ nav a {
 }
 
 .main-navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	margin-top: calc( var(--global--spacing-vertical) * 1.5);
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 481px) {
+	.main-navigation {
+		width: 100%;
+	}
 }
 
 .main-navigation > div {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+	background-color: var(--global--color-background);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 499;
+	transition: all .15s ease-in-out;
+	transform: translateY(var(--global--spacing-vertical));
 }
 
 .main-navigation #toggle-menu {
+	position: absolute;
 	display: inline-block;
 	margin: 0;
+	left: 0;
+	background-color: transparent;
+	color: var(--primary-nav--color-link);
 }
 
-.main-navigation #toggle:checked ~ div:not(.woocommerce-menu-container) {
-	display: block;
+.main-navigation #toggle-menu:hover {
+	color: var(--primary-nav--color-hover);
 }
 
-.main-navigation #toggle:focus + #toggle-menu {
-	background-color: var(--primary-nav--color-link-hover);
-	outline: inherit;
-	text-decoration: underline;
+.main-navigation-open .main-navigation > .main-menu-container {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.main-navigation-open .main-navigation #toggle-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+}
+
+.main-navigation-open .main-navigation #toggle-menu .open {
+	display: none;
+}
+
+.main-navigation-open .main-navigation #toggle-menu .close {
+	display: inline;
 }
 
 .main-navigation .dropdown-icon.close {
 	display: none;
 }
 
-.main-navigation #toggle:checked + #toggle-menu .open {
-	display: none;
+.admin-bar .main-navigation {
+	top: 46px;
 }
 
-.main-navigation #toggle:checked + #toggle-menu .close {
-	display: inline;
+.admin-bar .main-navigation > div {
+	top: 46px;
+}
+
+.admin-bar.main-navigation-open .main-navigation #toggle-menu {
+	top: 46px;
 }
 
 @media only screen and (min-width: 482px) {
 	.main-navigation {
+		position: relative;
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
+		margin-top: calc( var(--global--spacing-vertical) * 1.5);
 	}
 	.main-navigation > div {
-		display: inline-block;
+		visibility: visible;
+		opacity: 1;
+		position: relative;
+		padding: 0;
+		background-color: transparent;
+		overflow: initial;
+		transform: none;
 	}
 	.main-navigation #toggle-menu {
 		display: none;
 	}
 	.main-navigation > div > ul > li > ul {
 		display: none;
+	}
+	.admin-bar .main-navigation {
+		top: initial;
+	}
+	.admin-bar .main-navigation > div {
+		top: initial;
 	}
 }
 
@@ -2736,12 +2795,12 @@ nav a {
 }
 
 .main-navigation > div > ul > li > .sub-menu {
-	margin: 0;
 	position: relative;
 }
 
 @media only screen and (min-width: 482px) {
 	.main-navigation > div > ul > li > .sub-menu {
+		margin: 0;
 		background: var(--global--color-background);
 		box-shadow: var(--global--elevation-4);
 		right: 0;
@@ -2777,13 +2836,17 @@ nav a {
 .main-navigation a {
 	color: currentColor;
 	display: block;
-	font-family: var(--primary-nav--font-family);
+	font-family: var(--primary-nav--font-family-mobile);
+	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
 @media only screen and (min-width: 482px) {
 	.main-navigation a {
+		font-family: var(--primary-nav--font-family);
+		font-size: var(--primary-nav--font-size);
+		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding);
 	}
 }
@@ -2798,8 +2861,21 @@ nav a {
 }
 
 .main-navigation .sub-menu .menu-item a {
+	font-size: var(--primary-nav--font-size-sub-menu-mobile);
+	font-style: var(--primary-nav--font-style-sub-menu-mobile);
 	padding-top: calc(0.5 * var(--primary-nav--padding));
 	padding-bottom: calc(0.5 * var(--primary-nav--padding));
+}
+
+@media only screen and (min-width: 482px) {
+	.main-navigation .sub-menu .menu-item a {
+		font-size: var(--primary-nav--font-size);
+		font-style: var(--primary-nav--font-style);
+	}
+}
+
+.main-navigation .menu-item-has-children > .svg-icon {
+	display: none;
 }
 
 @media only screen and (min-width: 482px) {
@@ -2821,6 +2897,13 @@ nav a {
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
+}
+
+@media only screen and (max-width: 481px) {
+	.lock-scrolling .site {
+		position: fixed;
+		max-width: 100%;
+	}
 }
 
 .social-navigation > div > ul {

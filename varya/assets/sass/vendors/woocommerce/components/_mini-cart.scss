@@ -13,48 +13,78 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 		// Mobile menu toggle
 		#toggle-cart {
+			position: absolute;
 			display: inline-block;
+			left: 0;
 			margin: 0;
+			background-color: transparent;
+			color: var(--primary-nav--color-link);
+
+			&:hover {
+				color: var(--primary-nav--color-hover);
+			}
 
 			.svg-icon {
 				vertical-align: middle;
 			}
 		}
 
-		// Checkbox hack
-		#woocommerce-toggle:checked ~ div {
-			display: inline-block;
-		}
+		// Mobile menu open
+		@at-root body[class*="woocommerce"].wc-navigation-open #page .main-navigation {
 
-		#woocommerce-toggle:focus + #toggle-cart {
-			background-color: var(--primary-nav--color-link-hover);
-			outline: inherit;
-			text-decoration: underline;
-		}
-
-		#woocommerce-toggle:checked + #toggle-cart {
-			.open {
-				display: none;
+			> .woocommerce-menu-container {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(0);
 			}
 
-			.close {
-				display: inline;
+			#toggle-cart {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 500;
+
+				.open {
+					display: none;
+				}
+
+				.close {
+					display: inline;
+				}
 			}
 		}
 
 		@include media(mobile-only) {
 
+			// Adjust position when logged-in
+			@at-root body[class*="woocommerce"].admin-bar #page .main-navigation {
+				top: 46px;
+
+				& > .woocommerce-menu-container {
+					top: 46px;
+				}
+			}
+			@at-root body[class*="woocommerce"].admin-bar.wc-navigation-open #page .main-navigation {
+				#toggle-cart {
+					top: 46px;
+				}
+			}
+
 			.woocommerce-menu-container {
 
 				background-color: var(--wc--mini-cart--color-background);
 				color: var(--wc--mini-cart--color-text);
-				padding: 0;
+				padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 				width: 100%;
 
 				a,
 				a:link,
 				a:visited {
 					color: currentColor;
+				}
+
+				.sub-menu {
+					margin-left: 0;
 				}
 			}
 		}
@@ -118,6 +148,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 				li {
 					border-top: 1px solid var(--wc--mini-cart--color-border);
+					padding-left: var(--global--spacing-horizontal);
 				}
 
 				a:hover:not(.remove),
