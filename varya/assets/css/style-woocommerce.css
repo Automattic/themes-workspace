@@ -806,6 +806,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .wooc
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list li {
 	border-top: 1px solid var(--wc--mini-cart--color-border);
+	padding-left: var(--global--spacing-horizontal);
 }
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:hover:not(.remove),
@@ -2009,7 +2010,7 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .cart_list {
 
 body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .cart_list li {
 	border-top: 1px solid var(--wc--table--border-color);
-	padding: var(--global--spacing-unit) 0 var(--global--spacing-unit) var(--global--spacing-horizontal);
+	padding: var(--global--spacing-unit) 0 var(--global--spacing-unit) calc(2 * var(--global--spacing-horizontal));
 }
 
 body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .cart_list li a.remove {

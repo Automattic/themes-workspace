@@ -146,6 +146,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 				li {
 					border-top: 1px solid var(--wc--mini-cart--color-border);
+					padding-left: var(--global--spacing-horizontal);
 				}
 
 				a:hover:not(.remove),
