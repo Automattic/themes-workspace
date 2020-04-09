@@ -57,16 +57,22 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 		@include media(mobile-only) {
 
 			// Adjust position when logged-in
-			@at-root body[class*="woocommerce"].admin-bar #page .main-navigation {
-				top: 46px;
-
-				& > .woocommerce-menu-container {
-					top: 46px;
-				}
-			}
 			@at-root body[class*="woocommerce"].admin-bar.wc-navigation-open #page .main-navigation {
 				#toggle-cart {
 					top: 46px;
+				}
+
+				#toggle-menu {
+					top: -46px;
+				}
+			}
+			@at-root body[class*="woocommerce"].admin-bar.main-navigation-open #page .main-navigation {
+				#toggle-menu {
+					top: 46px;
+				}
+			
+				#toggle-cart {
+					top: -46px;
 				}
 			}
 
