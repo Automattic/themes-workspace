@@ -2695,7 +2695,7 @@ nav a {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	z-index: 499;
-	transition: all 2s ease-in-out;
+	transition: all .15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
 }
 
