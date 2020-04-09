@@ -56,7 +56,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary Navigation', 'varya' ),
+				'primary' => __( 'Primary Navigation', 'varya' ),
 				'footer' => __( 'Footer Navigation', 'varya' ),
 				'social' => __( 'Social Links Navigation', 'varya' ),
 			)
@@ -295,7 +295,7 @@ function varya_scripts() {
 	$menu = wp_nav_menu(
 		array (
 			'echo' => FALSE,
-			'menu' => 'menu-1',
+			'menu' => 'primary',
 			'fallback_cb' => '__return_false'
 		)
 	);

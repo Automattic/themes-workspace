@@ -206,11 +206,11 @@ add_filter( 'the_content_more_link', 'varya_continue_reading_link' );
 function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	// Only add class to 'top level' items on the 'primary' menu.
-	if ( ! isset( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
+	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
 		return $output;
 	}
 
-	if ( 'menu-1' == $args->theme_location && $depth === 0 ) {
+	if ( 'primary' == $args->theme_location && $depth === 0 ) {
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 			// Add SVG icon to parent items.
@@ -233,7 +233,7 @@ add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
  */
 function varya_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
 	static $pseudo_id = 0;
-	if ( ! isset( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
+	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
 		return $sorted_menu_items;
 	}
 
