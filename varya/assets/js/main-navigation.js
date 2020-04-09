@@ -24,4 +24,13 @@
 			wrapper.classList.toggle(lockScrollClass);
 		} : null;
 	}
+
+	/**
+	 * Run our menuToggleUI function on load
+	 */
+	window.addEventListener( 'load', function() {
+		menuToggleUI( 'toggle-menu', 'main-navigation-open' );
+		menuToggleUI( 'toggle-cart', 'wc-navigation-open' );
+	});
+
 } )();
