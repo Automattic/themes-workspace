@@ -27,7 +27,7 @@
 
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
-			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'varya' ); ?>">
 					<button id="toggle-menu" class="button">
 						<span class="dropdown-icon open"><?php _e( 'Menu', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu_open' ) ?></span>
@@ -37,14 +37,14 @@
 					</button>
 					<?php
 					// Get menu slug
-					$location_name = 'menu-1';
+					$location_name = 'primary';
 					$locations = get_nav_menu_locations();
 					$menu_id = $locations[ $location_name ];
 					$menu = wp_get_nav_menu_object( $menu_id );
 
 					wp_nav_menu(
 						array(
-							'theme_location'  => 'menu-1',
+							'theme_location'  => 'primary',
 							'menu_class'      => 'main-menu',
 							'container_class' => 'main-menu-container menu-'. $menu->slug .'-container',
 							'items_wrap'      => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
