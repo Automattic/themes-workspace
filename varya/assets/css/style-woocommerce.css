@@ -717,8 +717,6 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-car
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
-		padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-		width: 100%;
 	}
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a,
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a:link,
