@@ -128,6 +128,7 @@
 	// Menu list wrapper
 	& > div > ul {
 		display: flex;
+		justify-content: var(--primary-nav--justify-content);
 		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
@@ -172,14 +173,6 @@
 			@include media(mobile) {
 				& > a {
 					@include crop-text(var(--global--line-height-base));
-				}
-
-				&:first-of-type > a {
-					padding-left: 0;
-				}
-
-				&:last-of-type > a {
-					padding-right: 0;
 				}
 			}
 		}

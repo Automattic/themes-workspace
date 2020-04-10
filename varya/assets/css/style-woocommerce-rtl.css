@@ -748,8 +748,8 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-car
 }
 
 @media only screen and (min-width: 482px) {
-	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
-		margin-left: calc(2 * var(--global--spacing-unit));
+	body[class*="woocommerce"] #page .main-navigation {
+		flex-direction: column;
 	}
 	body[class*="woocommerce"] #page .main-navigation #toggle-cart {
 		display: none;
