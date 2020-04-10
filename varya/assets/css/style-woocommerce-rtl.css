@@ -729,12 +729,9 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-car
 }
 
 @media only screen and (min-width: 482px) {
-<<<<<<< HEAD
 	body[class*="woocommerce"] #page .main-navigation {
 		flex-direction: column;
 	}
-=======
->>>>>>> Varya: Force mini-cart text to sit on one line at all times.
 	body[class*="woocommerce"] #page .main-navigation #toggle-cart {
 		display: none;
 	}
