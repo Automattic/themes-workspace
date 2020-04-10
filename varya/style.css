@@ -2699,6 +2699,10 @@ nav a {
 	transform: translateY(var(--global--spacing-vertical));
 }
 
+.main-navigation .woocommerce-menu-container {
+	z-index: 498;
+}
+
 .main-navigation #toggle-menu {
 	position: absolute;
 	display: inline-block;

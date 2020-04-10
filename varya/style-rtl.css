@@ -2657,7 +2657,8 @@ nav a {
 	}
 }
 
-.main-navigation > div {
+.main-navigation .main-menu-container,
+.main-navigation .woocommerce-menu-container {
 	visibility: hidden;
 	opacity: 0;
 	position: fixed;
@@ -2669,9 +2670,16 @@ nav a {
 	background-color: var(--global--color-background);
 	overflow-x: hidden;
 	overflow-y: scroll;
-	z-index: 499;
 	transition: all .15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
+}
+
+.main-navigation .main-menu-container {
+	z-index: 499;
+}
+
+.main-navigation .woocommerce-menu-container {
+	z-index: 498;
 }
 
 .main-navigation #toggle-menu {
