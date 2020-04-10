@@ -55,8 +55,6 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 				background-color: var(--wc--mini-cart--color-background);
 				color: var(--wc--mini-cart--color-text);
-				padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-				width: 100%;
 
 				a,
 				a:link,
