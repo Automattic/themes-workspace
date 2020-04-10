@@ -31,12 +31,13 @@
  	  	transform: translateY(var(--global--spacing-vertical));
 	}
 
-	// Mobile menu toggle
-	#toggle-menu {
+	// Mobile menu toggles
+	> .button {
 		position: absolute;
 		display: inline-block;
 		margin: 0;
 		right: 0;
+		top: 0;
 		background-color: transparent;
 		color: var(--primary-nav--color-link);
 
@@ -54,10 +55,8 @@
 			transform: translateY(0);
 		}
 
-		#toggle-menu {
-			position: fixed;
-			top: 0;
-			right: 0;
+		> #toggle-menu {
+
 			z-index: 500;
 
 			.open {
@@ -74,18 +73,20 @@
 		display: none;
 	}
 
-	// Adjust position when logged-in
-	.admin-bar & {
-		top: 46px;
-
-		& > div {
-			top: 46px;
+	// Adjust button postion when scrolling is locked
+	.lock-scrolling & {
+		> .button {
+			position: fixed;
+			top: 0;
+			right: 0;
 		}
 	}
-	.admin-bar.main-navigation-open & {
-		#toggle-menu {
-			top: 46px;
-		}
+
+	// Adjust positions when logged-in
+	.admin-bar &,
+	.admin-bar & > div,
+	.admin-bar.lock-scrolling & > .button {
+		top: 46px;
 	}
 
 	@include media(mobile) {
