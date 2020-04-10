@@ -74,12 +74,10 @@
 	}
 
 	// Adjust button postion when scrolling is locked
-	.lock-scrolling & {
-		> .button {
-			position: fixed;
-			top: 0;
-			right: 0;
-		}
+	.lock-scrolling & > .button {
+		position: fixed;
+		top: 0;
+		right: 0;
 	}
 
 	// Adjust positions when logged-in
