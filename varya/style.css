@@ -2672,16 +2672,17 @@ nav a {
 	transform: translateY(var(--global--spacing-vertical));
 }
 
-.main-navigation #toggle-menu {
+.main-navigation > .button {
 	position: absolute;
 	display: inline-block;
 	margin: 0;
 	right: 0;
+	top: 0;
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
 }
 
-.main-navigation #toggle-menu:hover {
+.main-navigation > .button:hover {
 	color: var(--primary-nav--color-hover);
 }
 
@@ -2691,18 +2692,15 @@ nav a {
 	transform: translateY(0);
 }
 
-.main-navigation-open .main-navigation #toggle-menu {
-	position: fixed;
-	top: 0;
-	right: 0;
+.main-navigation-open .main-navigation > #toggle-menu {
 	z-index: 500;
 }
 
-.main-navigation-open .main-navigation #toggle-menu .open {
+.main-navigation-open .main-navigation > #toggle-menu .open {
 	display: none;
 }
 
-.main-navigation-open .main-navigation #toggle-menu .close {
+.main-navigation-open .main-navigation > #toggle-menu .close {
 	display: inline;
 }
 
@@ -2710,15 +2708,15 @@ nav a {
 	display: none;
 }
 
-.admin-bar .main-navigation {
-	top: 46px;
+.lock-scrolling .main-navigation > .button {
+	position: fixed;
+	top: 0;
+	right: 0;
 }
 
-.admin-bar .main-navigation > div {
-	top: 46px;
-}
-
-.admin-bar.main-navigation-open .main-navigation #toggle-menu {
+.admin-bar .main-navigation,
+.admin-bar .main-navigation > div,
+.admin-bar.lock-scrolling .main-navigation > .button {
 	top: 46px;
 }
 
