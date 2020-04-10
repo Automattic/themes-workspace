@@ -120,7 +120,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 	max-width: var(--responsive--alignfull-width);
 }
 
-.entry-content > .alignleft {
+.entry-content > .wp-block-cover.alignright, .entry-content > .wp-block-cover-image.alignright, .entry-content > .alignleft {
 	/*rtl:ignore*/
 	margin-left: 0;
 	/*rtl:ignore*/
@@ -128,7 +128,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignright, .entry-content > .alignleft {
+	.entry-content .wp-block-button.alignright, .entry-content > .wp-block-cover.alignright, .entry-content > .wp-block-cover-image.alignright, .entry-content > .alignleft {
 		/*rtl:ignore*/
 		margin-left: auto;
 		/*rtl:ignore*/
@@ -136,7 +136,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 	}
 }
 
-.entry-content > .alignright {
+.entry-content > .wp-block-cover.alignleft, .entry-content > .wp-block-cover-image.alignleft, .entry-content > .alignright {
 	/*rtl:ignore*/
 	margin-left: var(--responsive--spacing-horizontal);
 	/*rtl:ignore*/
@@ -144,7 +144,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignleft, .entry-content > .alignright {
+	.entry-content .wp-block-button.alignleft, .entry-content > .wp-block-cover.alignleft, .entry-content > .wp-block-cover-image.alignleft, .entry-content > .alignright {
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignright-margin);
 		/*rtl:ignore*/
@@ -1421,6 +1421,30 @@ button[data-load-more-btn],
 .wp-block-cover .wp-block-cover__inner-container > *:last-child,
 .wp-block-cover-image .wp-block-cover__inner-container > *:last-child {
 	margin-bottom: 0;
+}
+
+.entry-content > .wp-block-cover.alignright, .entry-content >
+.wp-block-cover-image.alignright {
+	margin-left: var(--global--spacing-horizontal);
+}
+
+@media only screen and (max-width: 481px) {
+	.entry-content > .wp-block-cover.alignright, .entry-content >
+	.wp-block-cover-image.alignright {
+		margin-right: 0;
+	}
+}
+
+.entry-content > .wp-block-cover.alignleft, .entry-content >
+.wp-block-cover-image.alignleft {
+	margin-right: var(--global--spacing-horizontal);
+}
+
+@media only screen and (max-width: 481px) {
+	.entry-content > .wp-block-cover.alignleft, .entry-content >
+	.wp-block-cover-image.alignleft {
+		margin-left: 0;
+	}
 }
 
 .wp-block-cover.alignleft, .wp-block-cover.alignright,

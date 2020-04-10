@@ -75,6 +75,26 @@
 	/**
 	 * Block Options
 	 */
+	.entry-content > &.alignright {
+		@extend %responsive-alignleft-mobile;
+		@extend %responsive-alignleft;
+		margin-left: var(--global--spacing-horizontal);
+
+		@include media(mobile-only) {
+			margin-right: 0;
+		}
+	}
+
+	.entry-content > &.alignleft {
+		@extend %responsive-alignright-mobile;
+		@extend %responsive-alignright;
+		margin-right: var(--global--spacing-horizontal);
+
+		@include media(mobile-only) {
+			margin-left: 0;
+		}
+	}
+
 	&.alignleft,
 	&.alignright {
 		margin-top: 0;
