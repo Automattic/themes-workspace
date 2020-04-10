@@ -93,6 +93,9 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 			.woocommerce-cart-count {
 				color: var(--wc--mini-cart--color-count);
 				font-weight: normal;
+				white-space: nowrap;
+				display: inline-block;
+				vertical-align: bottom;
 			}
 
 			.svg-icon {
@@ -103,7 +106,9 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 			}
 
 			@include media(mobile) {
-				display: inline-block;
+				align-items: center;
+				display: flex;
+				flex-wrap: nowrap;
 			}
 		}
 

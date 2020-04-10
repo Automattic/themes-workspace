@@ -2669,9 +2669,14 @@ nav a {
 	background-color: var(--global--color-background);
 	overflow-x: hidden;
 	overflow-y: scroll;
-	z-index: 499;
 	transition: all .15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
+}
+
+@media only screen and (max-width: 481px) {
+	.main-navigation > div {
+		z-index: 499;
+	}
 }
 
 .main-navigation > .button {

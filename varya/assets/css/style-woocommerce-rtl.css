@@ -754,6 +754,9 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .woocom
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .woocommerce-cart-count {
 	color: var(--wc--mini-cart--color-count);
 	font-weight: normal;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: bottom;
 }
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-icon {
@@ -765,7 +768,8 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 
 @media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
-		display: inline-block;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 }
 
