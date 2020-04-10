@@ -3635,12 +3635,11 @@ img#wpstats {
  */
 .sticky-post {
 	color: var(--global--color-background);
-	background-color: var(--global--color-primary);
-	font-family: var(--global--font-primary);
-	font-weight: bold;
-	font-size: var(--global--font-size-sm);
+	background-color: var(--global--color-secondary);
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-xs);
 	line-height: 1;
-	padding: calc(0.5 * var(--global--spacing-unit)) calc(0.66 * var(--global--spacing-unit));
+	padding: calc(0.25 * var(--global--spacing-unit)) calc(0.33 * var(--global--spacing-unit));
 }
 
 .page-title {
