@@ -216,7 +216,6 @@ function varya_add_cart_menu( $nav, $args ) {
 		return sprintf(
 			'%1$s
 			</ul></div>
-			<input type="checkbox" role="button" aria-haspopup="true" id="woocommerce-toggle" class="hide-visually">
 			<button id="toggle-cart" class="button">
 				<span class="dropdown-icon open">%2$s %3$s %4$s</span>
 				<span class="dropdown-icon close">%5$s %6$s</span>
