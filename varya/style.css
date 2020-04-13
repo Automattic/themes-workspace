@@ -3395,7 +3395,7 @@ nav a {
 }
 
 .comment-list > li:not(first-child) {
-	border-bottom: 1px solid var(--global--color-border-dark);
+	border-bottom: 1px solid var(--global--color-border);
 }
 
 .comment-list .children {
@@ -3404,7 +3404,7 @@ nav a {
 }
 
 .comment-list .children > li {
-	border-top: 1px solid var(--global--color-border-dark);
+	border-top: 1px solid var(--global--color-border);
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
 }

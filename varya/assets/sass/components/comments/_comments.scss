@@ -59,7 +59,7 @@
 	}
 
 	> li:not(first-child) {
-		border-bottom: 1px solid var(--global--color-border-dark);
+		border-bottom: 1px solid var(--global--color-border);
 	}
 }
 
@@ -68,7 +68,7 @@
 	padding-left: var(--global--spacing-horizontal);
 
 	> li {
-		border-top: 1px solid var(--global--color-border-dark);
+		border-top: 1px solid var(--global--color-border);
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
@@ -195,7 +195,7 @@
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
-	
+
 	.reply {
 		margin: calc(1.5 * var(--global--spacing-vertical)) 0;
 	}
