@@ -2932,9 +2932,14 @@ nav a {
 	align-content: center;
 	justify-content: center;
 	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	padding-right: 0;
+}
+
+.social-navigation > div > ul > li {
+	margin-bottom: calc(2 * var(--social-nav--padding));
 }
 
 .social-navigation > div > ul > li:first-of-type > a {
