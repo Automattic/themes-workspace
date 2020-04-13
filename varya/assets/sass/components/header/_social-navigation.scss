@@ -9,6 +9,10 @@
 		margin: 0;
 		padding-left: 0;
 
+		& > li {
+			margin-bottom: var(--social-nav--padding);
+		}
+
 		& > li:first-of-type > a {
 			padding-left: 0;
 		}

@@ -2941,6 +2941,10 @@ nav a {
 	padding-left: 0;
 }
 
+.social-navigation > div > ul > li {
+	margin-bottom: var(--social-nav--padding);
+}
+
 .social-navigation > div > ul > li:first-of-type > a {
 	padding-left: 0;
 }
