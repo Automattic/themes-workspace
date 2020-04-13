@@ -20,6 +20,10 @@ input[type="submit"],
 	font-weight: var(--button--font-weight);
 	line-height: var(--button--line-height);
 
+	&:not(.wp-block-button__link){
+		padding: 0;
+	}
+
 	// Outline Style
 	&.is-style-outline {
 		color: inherit;
