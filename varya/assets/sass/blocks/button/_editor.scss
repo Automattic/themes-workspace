@@ -17,20 +17,16 @@
 	}
 
 	// Outline Style
-	&.is-style-outline {
+	&.is-style-outline,
+	.is-style-outline & {
 		color: var(--button--color-background);
 		background: transparent;
 		border: 2px solid currentcolor;
-
-		&:hover,
-		&:focus,
-		&.has-focus {
-			color: var(--button--color-background-hover);
-		}
 	}
 
 	// Squared Style
-	&.is-style-squared {
+	&.is-style-squared,
+	.is-style-squared & {
 		border-radius: 0;
 	}
 }
