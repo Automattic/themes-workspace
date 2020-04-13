@@ -421,7 +421,7 @@ object {
 	color: currentColor;
 }
 
-.wp-block-button .wp-block-button__link {
+.wp-block-button__link {
 	color: var(--button--color-text);
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
@@ -432,22 +432,22 @@ object {
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link.has-focus {
+.wp-block-button__link:hover, .wp-block-button__link:focus, .wp-block-button__link.has-focus {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link {
+.wp-block-button__link.is-style-outline {
 	color: var(--button--color-background);
 	background: transparent;
 	border: 2px solid currentcolor;
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
+.wp-block-button__link.is-style-outline:hover, .wp-block-button__link.is-style-outline:focus, .wp-block-button__link.is-style-outline.has-focus {
 	color: var(--button--color-background-hover);
 }
 
-.wp-block-button.is-style-squared .wp-block-button__link {
+.wp-block-button__link.is-style-squared {
 	border-radius: 0;
 }
 
