@@ -4,9 +4,9 @@
 	margin-right: 0;
 	text-align: left;
 	// Theme?
-	border-top-color: var(--pullquote--color-border);
+	border-top-color: var(--pullquote--border-color);
 	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--color-border);
+	border-bottom-color: var(--pullquote--border-color);
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
 
@@ -48,7 +48,7 @@
 			}
 		}
 	}
-    
+
     &.is-style-large {
         border-left-color: var(--quote--border-color);
         border-left-style: solid;

@@ -1968,9 +1968,9 @@ p.has-background {
 	margin-right: 0;
 	margin-left: 0;
 	text-align: right;
-	border-top-color: var(--pullquote--color-border);
+	border-top-color: var(--pullquote--border-color);
 	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--color-border);
+	border-bottom-color: var(--pullquote--border-color);
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
 	/**
