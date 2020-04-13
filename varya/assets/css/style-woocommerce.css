@@ -700,6 +700,8 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation > .woocomme
 }
 
 body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-cart {
+	left: auto;
+	right: 0;
 	z-index: 500;
 }
 

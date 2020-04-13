@@ -33,6 +33,8 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 			#toggle-cart {
 
+				left: auto;
+				right: 0;
 				z-index: 500;
 
 				.open {
