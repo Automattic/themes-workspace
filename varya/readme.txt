@@ -18,12 +18,9 @@ Varya is a parent-theme with a built-in styling system for quickly creating Gute
 
 When you reduce a theme design down to a set of systematic design decisions, you end up with something called a _Style Guide_. The Varya system works by taking the rules of a Style Guide and expressing them through carefully placed variables or _design tokens_ that influence the appearance of a WordPress site. This unifies the design decisions needed to style the aesthetic appearance of Gutenberg Blocks, the theme Header + Footer areas, WooCommerce, Jetpack and more. It also syncs styles between the editor and the frontend so that you don’t need to hand-write CSS for both. This greatly speeds up the Gutenberg theme development process and reduces the amount of manual styling that typically goes into developing a theme.
 
-= What controls does the system come with? =
+= How does it work? =
 
-- **Fonts** - Font-family, size, weight, and line-height rules.
-- **Colors** - Primary, secondary, background, foreground and border colors.
-- **Spacing** - A default 8px vertical rhythm between all blocks and major components. It also includes utility spacing classes for negative margins.
-- **Responsive Logic** - Built-in responsive behavior across Blocks and Components.
+Visit the Varya GitHub repo for usage and setup instructions: https://github.com/Automattic/themes-workspace/tree/master/varya
 
 == Changelog ==
 
