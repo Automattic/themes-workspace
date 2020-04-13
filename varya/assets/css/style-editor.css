@@ -377,6 +377,13 @@ object {
 	border-width: 0;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+	border: none;
+	box-shadow: none;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: break-word;
 }
 
 .wp-block-a8c-blog-posts + .button:before, .wp-block-a8c-blog-posts + .button:after {

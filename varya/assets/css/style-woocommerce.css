@@ -121,6 +121,13 @@ body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart
 	border-width: 0;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+	border: none;
+	box-shadow: none;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: break-word;
 }
 
 body[class*="woocommerce"] #page .site-content #respond input#submit:before,

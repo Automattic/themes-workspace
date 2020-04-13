@@ -354,6 +354,13 @@ input[type="submit"],
 	border-width: 0;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+	border: none;
+	box-shadow: none;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: break-word;
 }
 
 button[data-load-more-btn]:before,
@@ -1139,6 +1146,13 @@ input[type="submit"],
 	border-width: 0;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+	border: none;
+	box-shadow: none;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: break-word;
 }
 
 button[data-load-more-btn]:before,
@@ -1227,6 +1241,11 @@ button[data-load-more-btn],
 	font-size: var(--button--font-size);
 	font-weight: var(--button--font-weight);
 	line-height: var(--button--line-height);
+}
+
+.wp-block-button.is-style-outline {
+	color: inherit;
+	border: none;
 }
 
 .wp-block-button.is-style-outline.wp-block-button__link,

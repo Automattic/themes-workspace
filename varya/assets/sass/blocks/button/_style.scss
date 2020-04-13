@@ -22,6 +22,8 @@ input[type="submit"],
 
 	// Outline Style
 	&.is-style-outline {
+		color: inherit;
+		border: none;
 	
 		&.wp-block-button__link,
 		.wp-block-button__link {
@@ -40,6 +42,7 @@ input[type="submit"],
 				color: var(--button--color-background-hover);
 			}
 		}
+
 	}
 
 	// Squared Style
