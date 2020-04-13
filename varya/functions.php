@@ -74,6 +74,8 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				'comment-list',
 				'gallery',
 				'caption',
+				'style',
+				'script',
 			)
 		);
 
