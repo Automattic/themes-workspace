@@ -22,7 +22,8 @@ input[type="submit"],
 
 	// Outline Style
 	&.is-style-outline {
-
+	
+		&.wp-block-button__link,
 		.wp-block-button__link {
 			color: var(--button--color-background);
 			background: transparent;
