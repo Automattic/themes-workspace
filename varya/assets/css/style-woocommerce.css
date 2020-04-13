@@ -686,6 +686,7 @@ body[class*="woocommerce"] #page .wc-block-grid__product-add-to-cart .added_to_c
 body[class*="woocommerce"] #page .main-navigation > #toggle-cart {
 	left: 0;
 	top: 0;
+	right: auto;
 }
 
 body[class*="woocommerce"] #page .main-navigation > #toggle-cart .svg-icon {

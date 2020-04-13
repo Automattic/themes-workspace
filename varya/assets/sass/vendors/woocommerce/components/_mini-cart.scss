@@ -15,6 +15,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 		> #toggle-cart {
 			left: 0;
 			top: 0;
+			right: auto;
 
 			.svg-icon {
 				vertical-align: middle;
