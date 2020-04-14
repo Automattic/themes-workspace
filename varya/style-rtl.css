@@ -918,7 +918,10 @@ input[type=checkbox] + label {
 	line-height: 1em;
 }
 
-figcaption {
+/* Media captions */
+figcaption,
+.wp-caption,
+.wp-caption-text {
 	color: var(--global--color-foreground-light);
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--font-line-height-xs);
@@ -928,7 +931,13 @@ figcaption {
 }
 
 .alignleft figcaption,
-.alignright figcaption {
+.alignright figcaption, .alignleft
+.wp-caption,
+.alignright
+.wp-caption, .alignleft
+.wp-caption-text,
+.alignright
+.wp-caption-text {
 	margin-bottom: 0;
 }
 
