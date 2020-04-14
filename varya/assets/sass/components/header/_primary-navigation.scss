@@ -1,6 +1,6 @@
 // Navigation
 
-.main-navigation {
+.primary-navigation {
 
 	position: absolute;
  	top: 0;
@@ -50,9 +50,9 @@
 	}
 
 	// Mobile menu open
-	.main-navigation-open & {
+	.primary-navigation-open & {
 
-		> .main-menu-container {
+		> .primary-menu-container {
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
@@ -204,7 +204,7 @@
 	}
 
 	// Top-level Item Link Colors
-	.main-menu > .menu-item:hover > a {
+	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 
 		+ svg {

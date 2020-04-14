@@ -1,5 +1,5 @@
 /**
- * File main-navigation.js.
+ * File primary-navigation.js.
  *
  * Required to open and close the mobile navigation.
  */
@@ -10,7 +10,7 @@
 	 *
 	 * @param {Element} element
 	 */
-	function menuToggleUI( toggleButtonID, navOpenClass = 'main-navigation-open' ) {
+	function menuToggleUI( toggleButtonID, navOpenClass = 'primary-navigation-open' ) {
 
 		var wrapper         = document.body;
 		var toggleButton    = document.getElementById( toggleButtonID );
@@ -29,7 +29,7 @@
 	 * Run our menuToggleUI function on load
 	 */
 	window.addEventListener( 'load', function() {
-		menuToggleUI( 'toggle-menu', 'main-navigation-open' );
+		menuToggleUI( 'toggle-menu', 'primary-navigation-open' );
 		menuToggleUI( 'toggle-cart', 'wc-navigation-open' );
 	});
 
