@@ -48,7 +48,7 @@ To use the system, simply duplicate the `varya-child` theme directory and rename
 - Search for:  `varia-child` and replace with: `my_theme_name`.
 - Search for: `varia-child-` and replace with: `my-theme-name-`.
 
-(Soon this process will be replaced by a `theme-dev-util` (similar to [this](https://github.com/Automattic/theme-dev-utils)) that allows you to run a command and automatically produce a child theme with all the strings already replaced.)
+(Soon this process will be replaced by a `theme-dev-util` that allows you to run a command and automatically produce a child theme with all the strings already replaced.)
 
 ## Simple child-theme structure
 (See: `/varya-child`)
