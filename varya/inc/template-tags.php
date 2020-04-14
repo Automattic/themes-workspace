@@ -190,23 +190,6 @@ if ( ! function_exists( 'varya_comment_avatar' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'varya_comment_form' ) ) :
-	/**
-	 * Documentation for function.
-	 */
-	function varya_comment_form( $order ) {
-		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
-
-			comment_form(
-				array(
-					'logged_in_as' => null,
-					'title_reply'  => null,
-				)
-			);
-		}
-	}
-endif;
-
 if ( ! function_exists( 'varya_the_posts_navigation' ) ) :
 	/**
 	 * Documentation for function.
