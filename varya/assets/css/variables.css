@@ -57,7 +57,7 @@
 	--global--color-background-light: #FAFBF6;
 	--global--color-background-dark: #DDDDDD;
 	--global--color-border: #757575;
-	--global--color-text-selection: #FAFBF6;
+	--global--color-text-selection: rgba( 163, 98, 101, 0.1 );
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;
 	--global--color-alert-warning: gold;
