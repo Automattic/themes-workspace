@@ -332,11 +332,6 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
 
 /**
- * Custom Comment Walker template.
- */
-require get_template_directory() . '/classes/class-varya-walker-comment.php';
-
-/**
  * Enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
