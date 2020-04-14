@@ -46,14 +46,4 @@ input[type="submit"],
 	&.is-style-squared .wp-block-button__link {
 		border-radius: 0;
 	}
-
-	.entry-content &.alignleft {
-		@extend %responsive-alignright;
-		margin-right: var(--global--spacing-horizontal);
-	}
-
-	.entry-content &.alignright {
-		@extend %responsive-alignleft;
-		margin-left: var(--global--spacing-horizontal);
-	}
 }
