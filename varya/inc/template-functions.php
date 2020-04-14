@@ -13,11 +13,10 @@
  *   should live in `_block-utilities.scss` where we can make
  *   them simpler and more block-agnostic.
  */
-function wps_deregister_styles() {
-	wp_dequeue_style( 'wp-block-library' );
+function varya_deregister_styles() {
 	wp_dequeue_style( 'wp-block-library-theme' );
 }
-//add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+add_action( 'wp_print_styles', 'varya_deregister_styles', 100 );
 
 /**
  * Adds custom classes to the array of body classes.
