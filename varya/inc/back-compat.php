@@ -36,7 +36,7 @@ add_action( 'after_switch_theme', 'varya_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function varya_upgrade_notice() {
-	$message = sprintf( __( 'varya requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'varya' ), $GLOBALS['wp_version'] );
+	$message = sprintf( __( 'Varya requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'varya' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -50,7 +50,7 @@ function varya_upgrade_notice() {
 function varya_customize() {
 	wp_die(
 		sprintf(
-			__( 'varya requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'varya' ),
+			__( 'Varya requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'varya' ),
 			$GLOBALS['wp_version']
 		),
 		'',
@@ -70,7 +70,7 @@ add_action( 'load-customize.php', 'varya_customize' );
  */
 function varya_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'varya requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'varya' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'Varya requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'varya' ), $GLOBALS['wp_version'] ) );
 	}
 }
 add_action( 'template_redirect', 'varya_preview' );
