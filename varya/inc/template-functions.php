@@ -8,10 +8,7 @@
  */
 
 /**
- * Remove Gutenberg Block Styles
- * - We could end up keeping these, but for now these styles
- *   should live in `_block-utilities.scss` where we can make
- *   them simpler and more block-agnostic.
+ * Remove Gutenberg `Theme` Block Styles
  */
 function varya_deregister_styles() {
 	wp_dequeue_style( 'wp-block-library-theme' );
