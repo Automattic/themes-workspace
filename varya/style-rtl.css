@@ -126,7 +126,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignright, .entry-content > .alignleft {
+	.entry-content > .alignleft {
 		margin-left: var(--responsive--alignleft-margin);
 		margin-right: var(--global--spacing-unit);
 	}
@@ -138,7 +138,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignleft, .entry-content > .alignright {
+	.entry-content > .alignright {
 		margin-left: var(--global--spacing-unit);
 		margin-right: var(--responsive--alignright-margin);
 	}
@@ -1255,14 +1255,6 @@ button[data-load-more-btn],
 
 .wp-block-button.is-style-squared .wp-block-button__link {
 	border-radius: 0;
-}
-
-.entry-content .wp-block-button.alignleft {
-	margin-left: var(--global--spacing-horizontal);
-}
-
-.entry-content .wp-block-button.alignright {
-	margin-right: var(--global--spacing-horizontal);
 }
 
 .wp-block-code {
