@@ -1985,9 +1985,9 @@ p.has-background {
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
-	border-top-color: var(--pullquote--color-border);
+	border-top-color: var(--pullquote--border-color);
 	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--color-border);
+	border-bottom-color: var(--pullquote--border-color);
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
 	/**
@@ -3404,7 +3404,7 @@ nav a {
 }
 
 .comment-list > li:not(first-child) {
-	border-bottom: 1px solid var(--global--color-border);
+	border-bottom: 1px solid var(--comments--border-color);
 }
 
 .comment-list .children {
@@ -3413,7 +3413,7 @@ nav a {
 }
 
 .comment-list .children > li {
-	border-top: 1px solid var(--global--color-border);
+	border-top: 1px solid var(--comments--border-color);
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
 }
@@ -3452,7 +3452,7 @@ nav a {
 }
 
 .comment-meta .comment-author .avatar {
-	border: 2px solid var(--global--color-border);
+	border: 2px solid var(--global--border-color);
 	border-radius: 50%;
 	position: absolute;
 	top: 5px;

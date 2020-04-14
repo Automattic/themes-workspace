@@ -28,6 +28,7 @@
 	/* Components */
 	@include header-variables();
 	@include entry-variables();
+	@include comments-variables();
 	@include footer-variables();
 	/* Vendors */
 	@include woocommerce-variables();
