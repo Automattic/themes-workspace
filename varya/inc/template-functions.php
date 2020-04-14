@@ -50,7 +50,6 @@ function varya_post_classes( $classes, $class, $post_id ) {
 }
 add_filter( 'post_class', 'varya_post_classes', 10, 3 );
 
-
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
@@ -210,41 +209,6 @@ function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
-
-/**
- * Create a nav menu item to be displayed on mobile to navigate from submenu back to the parent.
- *
- * This duplicates each parent nav menu item and makes it the first child of itself.
- *
- * @param array  $sorted_menu_items Sorted nav menu items.
- * @param object $args              Nav menu args.
- * @return array Amended nav menu items.
- */
-function varya_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
-	static $pseudo_id = 0;
-	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
-		return $sorted_menu_items;
-	}
-
-	$amended_menu_items = array();
-	foreach ( $sorted_menu_items as $nav_menu_item ) {
-		$amended_menu_items[] = $nav_menu_item;
-		if ( in_array( 'menu-item-has-children', $nav_menu_item->classes, true ) ) {
-			$parent_menu_item                   = clone $nav_menu_item;
-			$parent_menu_item->original_id      = $nav_menu_item->ID;
-			$parent_menu_item->ID               = --$pseudo_id;
-			$parent_menu_item->db_id            = $parent_menu_item->ID;
-			$parent_menu_item->object_id        = $parent_menu_item->ID;
-			$parent_menu_item->classes          = array( 'mobile-parent-nav-menu-item' );
-			$parent_menu_item->menu_item_parent = $nav_menu_item->ID;
-
-			$amended_menu_items[] = $parent_menu_item;
-		}
-	}
-
-	return $amended_menu_items;
-}
-// add_filter( 'wp_nav_menu_objects', 'varya_add_mobile_parent_nav_menu_items', 10, 2 );
 
 /**
  * Convert HSL to HEX colors
