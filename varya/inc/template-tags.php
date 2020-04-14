@@ -73,7 +73,7 @@ if ( ! function_exists( 'varya_entry_meta_header' ) ) :
 	 * by overwriting this function.
 	 */
 	function varya_entry_meta_header() {
-
+		/* Leaving this empty so child themes can optionally add entry-meta to the header */
 	}
 endif;
 
