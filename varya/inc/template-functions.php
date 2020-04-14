@@ -35,11 +35,6 @@ function varya_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class if image filters are enabled.
-	if ( varya_image_filters_enabled() ) {
-		$classes[] = 'image-filters-enabled';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'varya_body_classes' );
@@ -118,13 +113,6 @@ add_filter( 'get_the_archive_title', 'varya_get_the_archive_title' );
  */
 function varya_can_show_post_thumbnail() {
 	return apply_filters( 'varya_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
-}
-
-/**
- * Returns true if image filters are enabled on the theme options.
- */
-function varya_image_filters_enabled() {
-	return 0 !== get_theme_mod( 'image_filter', 1 );
 }
 
 /**
