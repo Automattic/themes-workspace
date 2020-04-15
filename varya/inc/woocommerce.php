@@ -214,7 +214,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
  * Add WooCommerce mini-cart link to primary menu
  */
 function varya_add_cart_menu( $nav, $args ) {
-	if ( $args->theme_location == 'primary' ) {
+	if ( $args->theme_location == 'primary' && ! is_customize_preview() ) {
 		return sprintf(
 			'%1$s
 			</ul></div>
