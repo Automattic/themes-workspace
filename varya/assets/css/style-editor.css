@@ -121,6 +121,10 @@ a {
 	max-width: var(--responsive--aligndefault-width);
 }
 
+.wp-block[data-align="wide"], .wp-block.alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
 div[data-type="core/button"] {
 	display: block;
 }
