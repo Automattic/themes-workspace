@@ -23,7 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'varya' ); ?></a>
 
-		<header id="masthead" class="site-header default-max-width <?php if ( has_nav_menu( 'primary' ) ) : echo esc_attr( 'has-main-navigation' ); endif; ?>">
+		<header id="masthead" class="site-header default-max-width">
 
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 

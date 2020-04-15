@@ -30,7 +30,7 @@
 	padding-top: calc(3 * var(--global--spacing-vertical));
 	padding-bottom: calc(3 * var(--global--spacing-vertical));
 
-	&.has-main-navigation {
+	.has-main-navigation & {
 		padding-top: calc(4 * var(--global--spacing-vertical));
 	}
 
@@ -38,7 +38,7 @@
 		padding-top: calc(3 * var(--global--spacing-vertical));
 		padding-bottom: calc(3 * var(--global--spacing-vertical));
 
-		&.has-main-navigation {
+		.has-main-navigation & {
 			padding-top: calc(3 * var(--global--spacing-vertical));
 		}
 	}

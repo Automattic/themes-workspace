@@ -40,6 +40,11 @@ function varya_body_classes( $classes ) {
 		$classes[] = 'image-filters-enabled';
 	}
 
+	// Add a body class if main navigation is active.
+	if ( has_nav_menu( 'primary' ) ) {
+		$classes[] = 'has-main-navigation'; 
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'varya_body_classes' );
