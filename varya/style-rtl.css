@@ -179,14 +179,21 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 .site-header {
-	padding-top: calc(2 * var(--global--spacing-vertical));
-	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	padding-top: calc(3 * var(--global--spacing-vertical));
+	padding-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
+.site-header.has-main-navigation {
+	padding-top: calc(4 * var(--global--spacing-vertical));
 }
 
 @media only screen and (min-width: 482px) {
 	.site-header {
 		padding-top: calc(3 * var(--global--spacing-vertical));
 		padding-bottom: calc(3 * var(--global--spacing-vertical));
+	}
+	.site-header.has-main-navigation {
+		padding-top: calc(3 * var(--global--spacing-vertical));
 	}
 }
 
