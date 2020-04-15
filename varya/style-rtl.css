@@ -183,7 +183,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 	padding-bottom: calc(3 * var(--global--spacing-vertical));
 }
 
-.site-header.has-main-navigation {
+.has-main-navigation .site-header {
 	padding-top: calc(4 * var(--global--spacing-vertical));
 }
 
@@ -192,7 +192,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 		padding-top: calc(3 * var(--global--spacing-vertical));
 		padding-bottom: calc(3 * var(--global--spacing-vertical));
 	}
-	.site-header.has-main-navigation {
+	.has-main-navigation .site-header {
 		padding-top: calc(3 * var(--global--spacing-vertical));
 	}
 }
