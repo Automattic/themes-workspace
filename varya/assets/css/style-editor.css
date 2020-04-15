@@ -177,7 +177,10 @@ blockquote.alignright footer {
 	letter-spacing: var(--global--letter-spacing-xs);
 }
 
-figcaption {
+/* Media captions */
+figcaption,
+.wp-caption,
+.wp-caption-text {
 	color: var(--global--color-foreground-light);
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--font-line-height-xs);
@@ -187,7 +190,13 @@ figcaption {
 }
 
 .alignleft figcaption,
-.alignright figcaption {
+.alignright figcaption, .alignleft
+.wp-caption,
+.alignright
+.wp-caption, .alignleft
+.wp-caption-text,
+.alignright
+.wp-caption-text {
 	margin-bottom: 0;
 }
 
@@ -775,9 +784,9 @@ p.has-background:not(.has-background-background-color) a {
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
-	border-top-color: var(--pullquote--color-border);
+	border-top-color: var(--pullquote--border-color);
 	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--color-border);
+	border-bottom-color: var(--pullquote--border-color);
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
 }

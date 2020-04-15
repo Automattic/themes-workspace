@@ -1,8 +1,7 @@
-figure {
-
-}
-
-figcaption {
+/* Media captions */
+figcaption,
+.wp-caption,
+.wp-caption-text {
 	color: var(--global--color-foreground-light);
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--font-line-height-xs);

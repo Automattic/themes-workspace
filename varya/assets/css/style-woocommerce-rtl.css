@@ -683,20 +683,13 @@ body[class*="woocommerce"] #page .wc-block-grid__product-add-to-cart .added_to_c
 	text-decoration: none;
 }
 
-body[class*="woocommerce"] #page .main-navigation #toggle-cart {
-	position: absolute;
-	display: inline-block;
+body[class*="woocommerce"] #page .main-navigation > #toggle-cart {
 	right: 0;
-	margin: 0;
-	background-color: transparent;
-	color: var(--primary-nav--color-link);
+	top: 0;
+	left: auto;
 }
 
-body[class*="woocommerce"] #page .main-navigation #toggle-cart:hover {
-	color: var(--primary-nav--color-hover);
-}
-
-body[class*="woocommerce"] #page .main-navigation #toggle-cart .svg-icon {
+body[class*="woocommerce"] #page .main-navigation > #toggle-cart .svg-icon {
 	vertical-align: middle;
 }
 
@@ -707,9 +700,8 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation > .woocomme
 }
 
 body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-cart {
-	position: fixed;
-	top: 0;
-	right: 0;
+	right: auto;
+	left: 0;
 	z-index: 500;
 }
 
@@ -722,20 +714,12 @@ body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-car
 }
 
 @media only screen and (max-width: 481px) {
-	body[class*="woocommerce"].admin-bar #page .main-navigation {
-		top: 46px;
-	}
-	body[class*="woocommerce"].admin-bar #page .main-navigation > .woocommerce-menu-container {
-		top: 46px;
-	}
-	body[class*="woocommerce"].admin-bar.wc-navigation-open #page .main-navigation #toggle-cart {
+	body[class*="woocommerce"].admin-bar.lock-scrolling #page .main-navigation #toggle-cart {
 		top: 46px;
 	}
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
-		padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-		width: 100%;
 	}
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a,
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a:link,
@@ -773,6 +757,9 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .woocom
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .woocommerce-cart-count {
 	color: var(--wc--mini-cart--color-count);
 	font-weight: normal;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: bottom;
 }
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-icon {
@@ -784,7 +771,9 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 
 @media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
-		display: inline-block;
+		align-items: center;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 }
 
