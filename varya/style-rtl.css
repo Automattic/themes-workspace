@@ -925,6 +925,20 @@ input[type=checkbox] + label {
 	line-height: 1em;
 }
 
+.search-form {
+	display: flex;
+}
+
+.search-form > label {
+	display: flex;
+	margin-left: var(--global--spacing-horizontal);
+	width: 100%;
+}
+
+.search-form > label .search-field {
+	width: 100%;
+}
+
 /* Media captions */
 figcaption,
 .wp-caption,

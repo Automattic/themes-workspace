@@ -933,6 +933,21 @@ input[type=checkbox] + label {
 	line-height: 1em;
 }
 
+.search-form {
+	display: flex;
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.search-form > label {
+	display: flex;
+	margin-right: var(--global--spacing-horizontal);
+	width: 100%;
+}
+
+.search-form > label .search-field {
+	width: 100%;
+}
+
 /* Media captions */
 figcaption,
 .wp-caption,

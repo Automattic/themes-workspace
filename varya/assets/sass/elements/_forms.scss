@@ -41,3 +41,16 @@ input[type=checkbox] + label {
 	margin-left: 0.5em;
 	line-height: 1em;
 }
+
+.search-form {
+	display: flex;
+	margin-bottom: var(--global--spacing-vertical);
+	> label {
+		display: flex;
+		margin-right: var(--global--spacing-horizontal);
+		width: 100%;
+		.search-field {
+			width: 100%;
+		}
+	}
+}
