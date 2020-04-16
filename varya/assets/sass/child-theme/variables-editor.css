@@ -108,6 +108,7 @@ body {
 	--cover--color-foreground: var(--global--color-foreground-dark);
 	--cover--color-background: var(--global--color-background-light);
 	--heading--font-family: var(--global--font-primary);
+	--heading--line-height: 1.3;
 	--heading--font-size-h6: var(--global--font-size-base);
 	--heading--font-size-h5: var(--global--font-size-md);
 	--heading--font-size-h4: var(--global--font-size-lg);
@@ -120,7 +121,12 @@ body {
 	--heading--letter-spacing-h3: var(--global--letter-spacing-xl);
 	--heading--letter-spacing-h2: var(--global--letter-spacing-xxl);
 	--heading--letter-spacing-h1: var(--global--letter-spacing-xxxl);
-	--heading--line-height: var(--wp--typography--line-height, 1.25);
+	--heading--line-height-h6: 1.3;
+	--heading--line-height-h5: 1.3;
+	--heading--line-height-h4: 1.3;
+	--heading--line-height-h3: var(--heading--line-height);
+	--heading--line-height-h2: var(--heading--line-height);
+	--heading--line-height-h1: var(--heading--line-height);
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;
 	--latest-posts--title-font-family: var(--heading--font-family);
