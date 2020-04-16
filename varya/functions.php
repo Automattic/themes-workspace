@@ -182,6 +182,17 @@ if ( ! function_exists( 'varya_setup' ) ) :
 			)
 		);
 
+		add_theme_support(
+			'editor-gradient-presets',
+			array(
+				array(
+					'name'     => __( 'Half red, half cream cutting diagonally', 'themeLangDomain' ),
+					'gradient' => 'linear-gradient(to bottom right, #A36265 50%, #FAFBF6 50%)',
+					'slug'     => 'red-to-cream'
+				),
+			)
+		);
+
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 	}
