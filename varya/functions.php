@@ -186,7 +186,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( 'Half red, half cream cutting diagonally', 'themeLangDomain' ),
+					'name'     => __( 'Half red, half cream cutting diagonally', 'en' ),
 					'gradient' => 'linear-gradient(to bottom right, #A36265 50%, #FAFBF6 50%)',
 					'slug'     => 'red-to-cream'
 				),
