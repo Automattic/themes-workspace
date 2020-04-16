@@ -1076,6 +1076,11 @@ table th,
 	color: var(--global--color-primary);
 }
 
+.is-tiny-text,
+.has-tiny-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
 .is-small-text,
 .has-small-font-size {
 	font-size: var(--global--font-size-sm);
