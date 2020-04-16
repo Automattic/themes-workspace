@@ -428,6 +428,11 @@ input.has-focus[type="submit"],
 	background-color: var(--button--color-background-hover);
 }
 
+/* Customizations afforded by the Gutenberg editor */
+.has-red-to-cream-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
 	line-height: 1.15;

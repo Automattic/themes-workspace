@@ -89,6 +89,11 @@
 /**
  * Output
  */
+/* Customizations afforded by the Gutenberg editor */
+.has-red-to-cream-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
 body {
 	--wp--typography--line-height: var(--global--line-height-body);
 	color: var(--global--color-foreground);
