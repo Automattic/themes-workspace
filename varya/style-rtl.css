@@ -421,7 +421,7 @@ input.has-focus[type="submit"],
 }
 
 /* Customizations afforded by the Gutenberg editor */
-.has-red-to-cream-gradient-background {
+.has-hard-diagonal-gradient-background {
 	background: linear-gradient(to bottom left, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
 }
 
