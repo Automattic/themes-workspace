@@ -927,6 +927,7 @@ input[type=checkbox] + label {
 
 .search-form {
 	display: flex;
+	margin-bottom: var(--global--spacing-vertical);
 }
 
 .search-form > label {
