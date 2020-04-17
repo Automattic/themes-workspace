@@ -1,0 +1,11 @@
+.wp-block-search {
+    display: flex;
+    max-width: var(--responsive--aligndefault-width);
+    .wp-block-search__label {
+        font-weight: normal;
+    }
+    .wp-block-search__input {
+        max-width: inherit;
+        margin-right: calc( .66 * var(--global--spacing-horizontal) );
+    }
+}

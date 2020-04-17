@@ -13,12 +13,12 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
+input.wp-block-search__input,
 textarea {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
 	line-height: var(--global--line-height-body);
-
 	padding: var(--form--spacing-unit);
 
 	&:focus {
@@ -42,8 +42,12 @@ input[type=checkbox] + label {
 	line-height: 1em;
 }
 
+// Search widget styles
 .search-form {
 	display: flex;
+	margin: auto;
+	max-width: var(--responsive--aligndefault-width);
+
 	> label {
 		display: flex;
 		margin-right: var(--global--spacing-horizontal);
