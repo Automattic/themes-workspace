@@ -2592,6 +2592,13 @@ table th,
 	padding-left: var(--global--spacing-vertical) !important;
 }
 
+/* 
+ * Custom gradients 
+*/
+.has-hard-diagonal-gradient-background {
+	background: linear-gradient(to bottom left, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
 /*
  * Components
  * - Similar to Blocks but exist outside of the "current" editor context
