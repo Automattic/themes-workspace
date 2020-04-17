@@ -1237,6 +1237,10 @@ button[data-load-more-btn],
 	line-height: var(--button--line-height);
 }
 
+.wp-block-button.is-style-outline {
+	border: none;
+}
+
 .wp-block-button.is-style-outline.wp-block-button__link,
 .wp-block-button.is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
