@@ -43,6 +43,11 @@ a {
 	&.alignwide {
 		max-width: var(--responsive--alignwide-width);
 	}
+
+	&.block-editor-default-block-appender > textarea {
+		font-family: var(--global--font-secondary);
+		font-size: var(--global--font-size-md);
+	}
 }
 
 div[data-type="core/button"] {
