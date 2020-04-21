@@ -2,17 +2,13 @@
 /**
  * Varya Theme: Custom Colors Class
  *
- * @package WordPress
- * @subpackage Varya
- * @since 1.0.0
- */
-
-/**
  * This class is in charge of color customization via the Customizer.
  *
  * Each variable that needs to be updated is defined in the $varya_custom_color_variables array below.
- * A customizer setting is created for each color, and custom CSS is enqueued in the front and back end.
+ * A customizer setting is created for each color, and custom CSS-variables are enqueued in the front and back end.
  *
+ * @package WordPress
+ * @subpackage Varya
  * @since 1.0.0
  */
 class Varya_Custom_Colors {
