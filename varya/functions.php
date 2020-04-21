@@ -333,12 +333,12 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
 
 /**
- * Custom Comment Walker template.
+ * Custom comment walker template.
  */
 require get_template_directory() . '/classes/class-varya-walker-comment.php';
 
 /**
- * Load custom color class.
+ * Custom colors class.
  */
 require get_template_directory() . '/classes/class-varya-custom-colors.php';
 
