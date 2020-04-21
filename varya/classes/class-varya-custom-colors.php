@@ -127,7 +127,12 @@ private $varya_custom_color_variables = array();
 			}
 		}
 
+		$theme_css .= "--global--color-primary-hover: var(--global--color-foreground);";
+		$theme_css .= "--global--color-secondary-hover: var(--global--color-foreground);";
 		$theme_css .= "}";
+		$theme_css .= "::selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
+		$theme_css .= "::-moz-selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
+
 		return $theme_css;
 	}
 
