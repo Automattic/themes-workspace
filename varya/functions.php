@@ -337,6 +337,11 @@ require get_template_directory() . '/classes/class-varya-svg-icons.php';
 require get_template_directory() . '/classes/class-varya-walker-comment.php';
 
 /**
+ * Load custom color class.
+ */
+require get_template_directory() . '/classes/class-varya-custom-colors.php';
+
+/**
  * Enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
