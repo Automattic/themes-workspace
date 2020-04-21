@@ -52,7 +52,7 @@ class Varya_Custom_Colors {
 	function varya_customize_colors_register( $wp_customize ) {
 
 		/**
-		 * Create color options panel
+		 * Create color options panel.
 		 */
 		$wp_customize->add_section( 'varya_options', array(
 			'capability' => 'edit_theme_options',
@@ -60,21 +60,57 @@ class Varya_Custom_Colors {
 		) );
 
 		/**
-		 * Create customizer color controls
+		 * Create toggle between default and custom colors.
+		 */
+		$wp_customize->add_setting(
+			'custom_colors_active',
+			array(
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => array( $this, 'sanitize_select' ),
+				'transport'         => 'refresh',
+				'default'           => 'default',
+			)
+		);
+
+		$wp_customize->add_control(
+			'custom_colors_active',
+			array(
+				'type'    => 'radio',
+				'section' => 'varya_options',
+				'label'   => __( 'Colors', 'varya' ),
+				'choices' => array(
+					'default' => __( 'Theme Default', 'varya' ),
+					'custom'  => __( 'Custom', 'varya' ),
+				),
+			)
+		);
+
+		/**
+		 * Create customizer color controls.
 		 */
 		foreach ( $this->$varya_color_variables as $variable ) {
-			$wp_customize->add_setting( "varya_$variable[0]", array(
-				'default'        => esc_html( $variable[1] )
-			 ) );
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "varya_$variable[0]", array(
-				'section'   => 'varya_options',
-				'label'     => __( $variable[2], 'varya' )
-			) ) );
+			$wp_customize->add_setting( 
+				"varya_$variable[0]", 
+				array(
+					'default'	=> esc_html( $variable[1] )
+				)
+			);
+			$wp_customize->add_control( new WP_Customize_Color_Control( 
+				$wp_customize, 
+				"varya_$variable[0]", 
+				array(
+					'section'   => 'varya_options',
+					'label'     => __( $variable[2], 'varya' ),
+					'active_callback' => function() use ( $wp_customize ) {
+						return ( 'custom' === $wp_customize->get_setting( 'custom_colors_active' )->value() );
+					},
+				)
+			) );
 		}
 	}
 
 	/**
-	 * Generate stylesheet adjustments
+	 * Generate stylesheet adjustments.
 	 */
 	function varya_generate_styles() {
 
@@ -94,7 +130,23 @@ class Varya_Custom_Colors {
 	 * Enqueue editor styles.
 	 */
 	function varya_customize_enqueue_styles() {
-		wp_add_inline_style( 'varya-style', $this->varya_generate_styles() );
+		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
+			wp_add_inline_style( 'varya-style', $this->varya_generate_styles() );
+		}
+	}
+
+	/**
+	 * Sanitize select.
+	 *
+	 * @param string $input The input from the setting.
+	 * @param object $setting The selected setting.
+	 *
+	 * @return string $input|$setting->default The input from the setting or the default setting.
+	 */
+	public static function sanitize_select( $input, $setting ) {
+		$input   = sanitize_key( $input );
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 
 }
