@@ -38,8 +38,3 @@ function varya_customize_partial_blogname() {
 function varya_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
-
-/**
- * Load custom color functions
- */
-require get_template_directory() . '/classes/class-varya-custom-colors.php';
