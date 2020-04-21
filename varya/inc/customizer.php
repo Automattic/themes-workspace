@@ -42,4 +42,4 @@ function varya_customize_partial_blogdescription() {
 /**
  * Load custom color functions
  */
-require get_template_directory() . '/inc/custom-colors.php';
+require get_template_directory() . '/classes/class-varya-custom-colors.php';
