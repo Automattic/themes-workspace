@@ -22,7 +22,7 @@ class Varya_Custom_Colors {
 	function __construct() {
 
 		/**
-		 * Define Varia Color Variables
+		 * Define color variables
 		 */
 		$this->$varya_color_variables = array(
 			array( '--global--color-primary', '#000000', 'Primary Color' ),
@@ -34,14 +34,14 @@ class Varya_Custom_Colors {
 		);
 
 		/**
-		 * Register Customizer Actions
+		 * Register Customizer actions
 		 */
 		add_action( 'customize_register', array( $this, 'varya_customize_colors_register' ) );
 
 		/**
-		 * Render custom colors in the Customizer and front end.
+		 * Enqueue Customizer styles
 		 */
-		add_action( 'wp_head', array( $this, 'varya_css_wrap' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'varya_customize_enqueue_styles' ) );
 	}
 
 	/**
@@ -91,19 +91,10 @@ class Varya_Custom_Colors {
 	}
 
 	/**
-	 * Render custom color CSS in customizer and front end.
+	 * Enqueue editor styles.
 	 */
-	function varya_css_wrap() {
-
-		// Only include custom colors in frontend.
-		if ( is_admin() ) {
-			return;
-		} ?>
-
-		<style type="text/css" id="varia-adjstments">
-			<?php echo $this->varya_generate_styles(); ?>
-		</style>
-		<?php
+	function varya_customize_enqueue_styles() {
+		wp_add_inline_style( 'varya-style', $this->varya_generate_styles() );
 	}
 
 }
