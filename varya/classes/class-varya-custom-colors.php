@@ -42,6 +42,11 @@ class Varya_Custom_Colors {
 		 * Enqueue Customizer styles
 		 */
 		add_action( 'wp_enqueue_scripts', array( $this, 'varya_customize_enqueue_styles' ) );
+
+		/**
+		 * Enqueue styles in the editor.
+		 */
+		add_action( 'enqueue_block_editor_assets', array( $this, 'varya_customize_enqueue_editor_styles' ) );
 	}
 
 	/**
@@ -132,6 +137,18 @@ class Varya_Custom_Colors {
 	function varya_customize_enqueue_styles() {
 		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
 			wp_add_inline_style( 'varya-style', $this->varya_generate_styles() );
+		}
+	}
+
+	/**
+	 * Add editor styles.
+	 */
+	function varya_customize_enqueue_editor_styles() {
+		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
+
+			wp_enqueue_style( 'varya-style-editor-customizer', get_template_directory_uri() . '/assets/css/style-editor-customizer.css', array(), wp_get_theme()->get( 'Version' ) );
+			
+			wp_add_inline_style( 'varya-style-editor-customizer', $this->varya_generate_styles() );
 		}
 	}
 
