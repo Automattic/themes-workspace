@@ -28,6 +28,7 @@ class Varya_Custom_Colors {
 			array( '--global--color-primary', '#000000', 'Primary Color' ),
 			array( '--global--color-secondary', '#A36265', 'Secondary Color' ),
 			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
+			array( '--global--color-background-light', '#FAFBF6', 'Background Light Color' ),
 			array( '--global--color-background', '#FFFFFF', 'Background Color' ),
 			array( '--global--color-border', '#EFEFEF', 'Borders Color' )
 		);

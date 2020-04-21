@@ -157,27 +157,27 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya' ),
 					'slug'  => 'primary',
-					'color' => '#000000',
+					'color' => get_theme_mod( 'varya_--global--color-primary' ),
 				),
 				array(
 					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => '#A36265',
+					'color' => get_theme_mod( 'varya_--global--color-secondary' ),
 				),
 				array(
 					'name'  => __( 'Foreground', 'varya' ),
 					'slug'  => 'foreground',
-					'color' => '#333333',
+					'color' => get_theme_mod( 'varya_--global--color-foreground' ),
 				),
 				array(
 					'name'  => __( 'Background Light', 'varya' ),
 					'slug'  => 'background-light',
-					'color' => '#FAFBF6',
+					'color' => get_theme_mod( 'varya_--global--color-background-light' ),
 				),
 				array(
 					'name'  => __( 'Background', 'varya' ),
 					'slug'  => 'background',
-					'color' => '#FFFFFF',
+					'color' => get_theme_mod( 'varya_--global--color-background' ),
 				),
 			)
 		);
