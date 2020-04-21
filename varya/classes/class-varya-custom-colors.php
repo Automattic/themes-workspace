@@ -10,21 +10,21 @@
 /**
  * This class is in charge of color customization via the Customizer.
  *
- * Each variable that needs to be updated is defined in the $varya_color_variables array below.
+ * Each variable that needs to be updated is defined in the $varya_custom_color_variables array below.
  * A customizer setting is created for each color, and custom CSS is enqueued in the front and back end.
  *
  * @since 1.0.0
  */
 class Varya_Custom_Colors {
 
-	private $varya_color_variables = array();
+private $varya_custom_color_variables = array();
 
 	function __construct() {
 
 		/**
 		 * Define color variables
 		 */
-		$this->$varya_color_variables = array(
+		$this->$varya_custom_color_variables = array(
 			array( '--global--color-primary', '#000000', 'Primary Color' ),
 			array( '--global--color-secondary', '#A36265', 'Secondary Color' ),
 			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
@@ -36,17 +36,17 @@ class Varya_Custom_Colors {
 		/**
 		 * Register Customizer actions
 		 */
-		add_action( 'customize_register', array( $this, 'varya_customize_colors_register' ) );
+		add_action( 'customize_register', array( $this, 'varya_customize_custom_colors_register' ) );
 
 		/**
 		 * Enqueue color variables for customizer & frontend.
 		 */
-		add_action( 'wp_enqueue_scripts', array( $this, 'varya_color_variables' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'varya_custom_color_variables' ) );
 
 		/**
 		 * Enqueue color variables for editor.
 		 */
-		add_action( 'enqueue_block_editor_assets', array( $this, 'varya_editor_color_variables' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'varya_editor_custom_color_variables' ) );
 	}
 
 	/**
@@ -54,7 +54,7 @@ class Varya_Custom_Colors {
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 */
-	function varya_customize_colors_register( $wp_customize ) {
+	function varya_customize_custom_colors_register( $wp_customize ) {
 
 		/**
 		 * Create color options panel.
@@ -93,7 +93,7 @@ class Varya_Custom_Colors {
 		/**
 		 * Create customizer color controls.
 		 */
-		foreach ( $this->$varya_color_variables as $variable ) {
+		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			$wp_customize->add_setting(
 				"varya_$variable[0]",
 				array(
@@ -117,11 +117,11 @@ class Varya_Custom_Colors {
 	/**
 	 * Generate color variables for customizer & frontend.
 	 */
-	function varya_generate_color_variables() {
+	function varya_generate_custom_color_variables() {
 
 		$theme_css = ':root {';
 
-		foreach ( $this->$varya_color_variables as $variable ) {
+		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
 			}
@@ -134,11 +134,11 @@ class Varya_Custom_Colors {
 	/**
 	 * Generate color variables for editor.
 	 */
-	function varya_generate_editor_color_variables() {
+	function varya_generate_editor_custom_color_variables() {
 
 		$theme_css = ':root .editor-styles-wrapper {';
 
-		foreach ( $this->$varya_color_variables as $variable ) {
+		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
 			}
@@ -149,21 +149,21 @@ class Varya_Custom_Colors {
 	}
 
 	/**
-	 * Customizer & frontend variables.
+	 * Customizer & frontend custom color variables.
 	 */
-	function varya_color_variables() {
+	function varya_custom_color_variables() {
 		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
-			wp_add_inline_style( 'varya-style', $this->varya_generate_color_variables() );
+			wp_add_inline_style( 'varya-style', $this->varya_generate_custom_color_variables() );
 		}
 	}
 
 	/**
-	 * Editor variables.
+	 * Editor custom color variables.
 	 */
-	function varya_editor_color_variables() {
+	function varya_editor_custom_color_variables() {
 		wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/assets/css/variables-editor.css', array(), wp_get_theme()->get( 'Version' ) );
 		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
-			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_editor_color_variables() );
+			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_editor_custom_color_variables() );
 		}
 	}
 
