@@ -24,7 +24,6 @@ private $varya_custom_color_variables = array();
 			array( '--global--color-primary', '#000000', 'Primary Color' ),
 			array( '--global--color-secondary', '#A36265', 'Secondary Color' ),
 			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
-			array( '--global--color-background-light', '#FAFBF6', 'Background Light Color' ),
 			array( '--global--color-background', '#FFFFFF', 'Background Color' ),
 			array( '--global--color-border', '#EFEFEF', 'Borders Color' )
 		);
@@ -43,6 +42,41 @@ private $varya_custom_color_variables = array();
 		 * Enqueue color variables for editor.
 		 */
 		add_action( 'enqueue_block_editor_assets', array( $this, 'varya_editor_custom_color_variables' ) );
+	}
+
+	/**
+	 * Auto-set color luminance for hover and selection colors
+	 *
+	 * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.7
+	 *
+	 * @param str $hexcolor Colour as hexadecimal (with or without hash);
+	 * @percent float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
+	 * @return str Lightened/Darkend colour as hexadecimal (with hash);
+	 */
+	function varya_color_midpoint( $fg_hex, $bg_hex ) {
+
+		// Validate hex color string
+		$fg_hex = preg_replace( '/[^0-9a-f]/i', '', $fg_hex );
+		$bg_hex = preg_replace( '/[^0-9a-f]/i', '', $bg_hex );
+		$new_hex = '#';
+
+		if ( strlen( $fg_hex ) < 6 ) {
+			$fg_hex = $fg_hex[0] + $fg_hex[0] + $fg_hex[1] + $fg_hex[1] + $fg_hex[2] + $fg_hex[2];
+		}
+
+		if ( strlen( $bg_hex ) < 6 ) {
+			$bg_hex = $bg_hex[0] + $bg_hex[0] + $bg_hex[1] + $bg_hex[1] + $bg_hex[2] + $bg_hex[2];
+		}
+
+		// Convert to decimal and find midpoint between two colors
+		for ($i = 0; $i < 3; $i++) {
+			$dec1 = hexdec( substr( $fg_hex, $i*2, 2 ) );
+			$dec2 = hexdec( substr( $bg_hex, $i*2, 2 ) );
+			$dec = floor(($dec1 + $dec2) / 2);
+			$new_hex .= str_pad( dechex( $dec ) , 2, 0, STR_PAD_LEFT );
+		}
+
+		return $new_hex;
 	}
 
 	/**
@@ -111,41 +145,43 @@ private $varya_custom_color_variables = array();
 	}
 
 	/**
-	 * Generate color variables for customizer & frontend.
+	 * Generate color variables.
 	 */
-	function varya_generate_custom_color_variables() {
+	function varya_generate_custom_color_variables( $context = null ) {
 
-		$theme_css = ':root {';
+		if ( $context == 'editor' ) {
+			$theme_css = ':root .editor-styles-wrapper {';
+		} else {
+			$theme_css = ':root {';
+		}
 
 		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
+
+				if ( '--global--color-primary' === $variable[0] ) {
+					$theme_css .= "--global--color-primary-hover: " . $this->varya_color_midpoint( get_theme_mod( "varya_$variable[0]" ), get_theme_mod( "varya_--global--color-background" ) ) . ";";
+				}
+
+				if ( '--global--color-secondary' === $variable[0] ) {
+					$theme_css .= "--global--color-secondary-hover: " . $this->varya_color_midpoint( get_theme_mod( "varya_$variable[0]" ), get_theme_mod( "varya_--global--color-background" ) ) . ";";
+				}
+
+				if ( '--global--color-foreground' === $variable[0] ) {
+					$theme_css .= "--global--color-foreground-light: " . $this->varya_color_midpoint( get_theme_mod( "varya_$variable[0]" ), get_theme_mod( "varya_--global--color-background" ) ) . ";";
+				}
+
+				if ( '--global--color-background' === $variable[0] ) {
+					$theme_css .= "--global--color-background-light: " . $this->varya_color_midpoint( get_theme_mod( "varya_$variable[0]" ), get_theme_mod( "varya_--global--color-foreground" ) ) . ";";
+				}
 			}
 		}
 
-		$theme_css .= "--global--color-primary-hover: var(--global--color-foreground);";
-		$theme_css .= "--global--color-secondary-hover: var(--global--color-foreground);";
+		//$theme_css .= "--global--color-secondary-hover: " . $this->varya_color_midpoint( '', '' ) . ";";
 		$theme_css .= "}";
 		$theme_css .= "::selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
 		$theme_css .= "::-moz-selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
 
-		return $theme_css;
-	}
-
-	/**
-	 * Generate color variables for editor.
-	 */
-	function varya_generate_editor_custom_color_variables() {
-
-		$theme_css = ':root .editor-styles-wrapper {';
-
-		foreach ( $this->$varya_custom_color_variables as $variable ) {
-			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
-				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
-			}
-		}
-
-		$theme_css .= "}";
 		return $theme_css;
 	}
 
@@ -164,7 +200,7 @@ private $varya_custom_color_variables = array();
 	function varya_editor_custom_color_variables() {
 		wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/assets/css/variables-editor.css', array(), wp_get_theme()->get( 'Version' ) );
 		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
-			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_editor_custom_color_variables() );
+			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_custom_color_variables( 'editor' ) );
 		}
 	}
 
