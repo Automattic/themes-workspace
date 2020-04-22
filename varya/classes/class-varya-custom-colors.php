@@ -11,6 +11,7 @@
  * @subpackage Varya
  * @since 1.0.0
  */
+
 class Varya_Custom_Colors {
 
 private $varya_custom_color_variables = array();
@@ -60,19 +61,22 @@ private $varya_custom_color_variables = array();
 		$bg_hex = preg_replace( '/[^0-9a-f]/i', '', $bg_hex );
 		$new_hex = '#';
 
+		// Foreground color
 		if ( strlen( $fg_hex ) < 6 ) {
 			$fg_hex = $fg_hex[0] + $fg_hex[0] + $fg_hex[1] + $fg_hex[1] + $fg_hex[2] + $fg_hex[2];
 		}
 
+		// Background color
 		if ( strlen( $bg_hex ) < 6 ) {
 			$bg_hex = $bg_hex[0] + $bg_hex[0] + $bg_hex[1] + $bg_hex[1] + $bg_hex[2] + $bg_hex[2];
 		}
 
 		// Convert to decimal and find midpoint between two colors
 		for ($i = 0; $i < 3; $i++) {
-			$dec1 = hexdec( substr( $fg_hex, $i*2, 2 ) );
-			$dec2 = hexdec( substr( $bg_hex, $i*2, 2 ) );
-			$dec = floor(($dec1 + $dec2) / 2);
+			$fg_dec = hexdec( substr( $fg_hex, $i*2, 2 ) );
+			$bg_dec = hexdec( substr( $bg_hex, $i*2, 2 ) );
+			$dec = floor(($fg_dec + $bg_dec) / 2);
+			// Convert back to hex
 			$new_hex .= str_pad( dechex( $dec ) , 2, 0, STR_PAD_LEFT );
 		}
 
