@@ -1,31 +1,45 @@
 === Varya ===
-Contributors: (Should only contain WordPress.org usernames.)
+Contributors: Automattic
 Requires at least: 5.0
 Tested up to: 5.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A theme for creating Gutenberg-ready themes quickly and easily.
+
+A simple, text-driven, single-column theme. 
 
 == Description ==
 
-Varya is a parent-theme with a built-in styling system for quickly creating Gutenberg-ready child-themes for WordPress.
-
-== Frequently Asked Questions ==
-
-= What does it do? =
-
-When you reduce a theme design down to a set of systematic design decisions, you end up with something called a _Style Guide_. The Varya system works by taking the rules of a Style Guide and expressing them through carefully placed variables or _design tokens_ that influence the appearance of a WordPress site. This unifies the design decisions needed to style the aesthetic appearance of Gutenberg Blocks, the theme Header + Footer areas, WooCommerce, Jetpack and more. It also syncs styles between the editor and the frontend so that you don’t need to hand-write CSS for both. This greatly speeds up the Gutenberg theme development process and reduces the amount of manual styling that typically goes into developing a theme.
-
-= How does it work? =
-
-Visit the Varya GitHub repo for usage and setup instructions: https://github.com/Automattic/themes-workspace/tree/master/varya
+Varya is a simple, text-driven, single-column theme. 
 
 == Changelog ==
 
 = 1.0 =
-* Initial release
+* Initial release 
 
-== Resources ==
-* normalize.css © Nicolas Gallagher and Jonathan Neal, MIT
+== Copyright ==
+
+Varya WordPress Theme, (C) 2020 Automattic, Inc.
+Varya is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Varya is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc. 
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Varya bundles the following third-party resources:
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+Social Icons License: GNU GPL v2 or later.
+Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
