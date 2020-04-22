@@ -119,7 +119,7 @@ private $varya_custom_color_variables = array();
 	 */
 	function varya_generate_custom_color_variables( $context = null ) {
 
-		if ( $context == 'editor' ) {
+		if ( $context === 'editor' ) {
 			$theme_css = ':root .editor-styles-wrapper {';
 		} else {
 			$theme_css = ':root {';
