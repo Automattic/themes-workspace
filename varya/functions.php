@@ -187,7 +187,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 			array(
 				array(
 					'name'     => __( 'Half red, half cream cutting diagonally', 'en' ),
-					'gradient' => 'linear-gradient(to bottom right, #A36265 50%, #FAFBF6 50%)',
+					'gradient' => 'linear-gradient(to bottom right, #A36265 49.9%, #FAFBF6 50%)',
 					'slug'     => 'hard-diagonal'
 				),
 			)

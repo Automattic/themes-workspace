@@ -1124,7 +1124,7 @@ table th,
  * Custom gradients 
 */
 .has-hard-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
 }
 
 /**
