@@ -935,22 +935,6 @@ input[type=checkbox] + label {
 	line-height: 1em;
 }
 
-.search-form {
-	display: flex;
-	margin: auto;
-	max-width: var(--responsive--aligndefault-width);
-}
-
-.search-form > label {
-	display: flex;
-	margin-right: var(--global--spacing-horizontal);
-	width: 100%;
-}
-
-.search-form > label .search-field {
-	width: 100%;
-}
-
 /* Media captions */
 figcaption,
 .wp-caption,
@@ -2191,8 +2175,18 @@ p.has-background {
 }
 
 .wp-block-search .wp-block-search__input {
+	border: var(--form--border-width) solid var(--form--border-color);
+	border-radius: var(--form--border-radius);
+	color: var(--form--color-text);
+	line-height: var(--global--line-height-body);
 	max-width: inherit;
 	margin-right: calc( .66 * var(--global--spacing-horizontal));
+	padding: var(--form--spacing-unit);
+}
+
+.wp-block-search .wp-block-search__input:focus {
+	color: var(--form--color-text);
+	border-color: var(--form--border-color);
 }
 
 hr {
@@ -3694,6 +3688,22 @@ nav a {
 
 .widget-area {
 	flex: 0 0 100%;
+}
+
+.search-form {
+	display: flex;
+	margin: auto;
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.search-form > label {
+	display: flex;
+	margin-right: var(--global--spacing-horizontal);
+	width: 100%;
+}
+
+.search-form > label .search-field {
+	width: 100%;
 }
 
 /* Utilities */

@@ -2173,6 +2173,20 @@ p.has-background {
 	border-color: currentColor;
 }
 
+.wp-block-search {
+	display: flex;
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.wp-block-search .wp-block-search__label {
+	font-weight: normal;
+}
+
+.wp-block-search .wp-block-search__input {
+	max-width: inherit;
+	margin-left: calc( .66 * var(--global--spacing-horizontal));
+}
+
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
