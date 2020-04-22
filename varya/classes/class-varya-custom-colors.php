@@ -117,26 +117,13 @@ private $varya_custom_color_variables = array();
 	/**
 	 * Generate color variables for customizer & frontend.
 	 */
-	function varya_generate_custom_color_variables() {
+	function varya_generate_custom_color_variables( $context = null ) {
 
-		$theme_css = ':root {';
-
-		foreach ( $this->$varya_custom_color_variables as $variable ) {
-			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
-				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
-			}
+		if ( $context == 'editor' ) {
+			$theme_css = ':root .editor-styles-wrapper {';
+		} else {
+			$theme_css = ':root {';
 		}
-
-		$theme_css .= "}";
-		return $theme_css;
-	}
-
-	/**
-	 * Generate color variables for editor.
-	 */
-	function varya_generate_editor_custom_color_variables() {
-
-		$theme_css = ':root .editor-styles-wrapper {';
 
 		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
@@ -163,7 +150,7 @@ private $varya_custom_color_variables = array();
 	function varya_editor_custom_color_variables() {
 		wp_enqueue_style( 'varya-editor-variables', get_template_directory_uri() . '/assets/css/variables-editor.css', array(), wp_get_theme()->get( 'Version' ) );
 		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
-			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_editor_custom_color_variables() );
+			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_custom_color_variables( 'editor' ) );
 		}
 	}
 
