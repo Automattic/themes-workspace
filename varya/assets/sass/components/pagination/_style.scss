@@ -81,18 +81,27 @@
 .pagination {
 
 	.nav-links > * {
-		font-family: var(--global--font-primary);
-		font-size: var(--global--font-size-md);
-		font-weight: 600;
-		padding-left: calc(0.66 * var(--global--spacing-unit));
-		padding-right: calc(0.66 * var(--global--spacing-unit));
+		color: var(--pagination--color-text);
+		font-family: var(--pagination--font-family);
+		font-size: var(--pagination--font-size);
+		font-weight: var(--pagination--font-weight);
+		margin-left: calc(0.66 * var(--global--spacing-unit));
+		margin-right: calc(0.66 * var(--global--spacing-unit));
+
+		&.current {
+			border-bottom: 1px solid var(--pagination--color-text);
+		}
 
 		&:first-child {
-			padding-left: 0;
+			margin-left: 0;
+		}
+
+		&a:hover {
+			color: var(--pagination--color-link-hover);
 		}
 
 		&:last-child {
-			padding-right: 0;
+			margin-right: 0;
 		}
 
 		&.next {
