@@ -128,7 +128,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignright, .entry-content > .wp-block-cover.alignright, .entry-content > .wp-block-cover-image.alignright, .entry-content > .alignleft {
+	.entry-content .wp-block-button.alignright, .entry-content > .wp-block-cover.alignright, .entry-content > .wp-block-cover-image.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignleft {
 		/*rtl:ignore*/
 		margin-left: auto;
 		/*rtl:ignore*/
@@ -144,7 +144,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignleft, .entry-content > .wp-block-cover.alignleft, .entry-content > .wp-block-cover-image.alignleft, .entry-content > .alignright {
+	.entry-content .wp-block-button.alignleft, .entry-content > .wp-block-cover.alignleft, .entry-content > .wp-block-cover-image.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignright {
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignright-margin);
 		/*rtl:ignore*/
@@ -2074,6 +2074,14 @@ p.has-background {
 	color: currentColor;
 }
 
+.entry-content .wp-block-pullquote.alignleft {
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.entry-content .wp-block-pullquote.alignright {
+	margin-left: var(--global--spacing-horizontal);
+}
+
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
@@ -2285,6 +2293,14 @@ table th,
 	margin-top: calc(0.5 * var(--global--spacing-unit));
 	margin-bottom: var(--global--spacing-unit);
 	text-align: center;
+}
+
+.entry-content .wp-block-video.alignleft {
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.entry-content .wp-block-video.alignright {
+	margin-left: var(--global--spacing-horizontal);
 }
 
 * > figure > video {
