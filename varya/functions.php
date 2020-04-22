@@ -150,8 +150,6 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		);
 
 		// Editor color palette.
-		global $my_theme_defaults;
-
 		add_theme_support(
 			'editor-color-palette',
 			array(
