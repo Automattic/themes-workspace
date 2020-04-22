@@ -2876,10 +2876,6 @@ nav a {
 	color: var(--primary-nav--color-link-hover);
 }
 
-.main-navigation .main-menu > .menu-item:hover > a + svg {
-	fill: var(--primary-nav--color-link-hover);
-}
-
 .main-navigation .menu-item > a {
 	color: var(--primary-nav--color-link);
 }
@@ -2904,6 +2900,10 @@ nav a {
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding);
 	}
+}
+
+.main-navigation a + svg {
+	fill: currentColor;
 }
 
 .main-navigation a:hover, .main-navigation a:link, .main-navigation a:visited {
