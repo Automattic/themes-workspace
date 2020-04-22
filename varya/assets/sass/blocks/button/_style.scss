@@ -4,8 +4,7 @@
 button,
 .button,
 input[type="submit"],
-.wp-block-button__link,
-.wp-block-file__button {
+.wp-block-button__link {
 	// Extend button style
 	@extend %button-style;
 }
@@ -23,7 +22,7 @@ input[type="submit"],
 	// Outline Style
 	&.is-style-outline {
 		border: none;
-	
+
 		&.wp-block-button__link,
 		.wp-block-button__link {
 			color: var(--button--color-background);
