@@ -100,7 +100,7 @@
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: normal;
 	--button--line-height: 1;
-	--button--border-width: 1px;
+	--button--border-width: 2px;
 	--button--border-radius: 4px;
 	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
 	--button--padding-horizontal: var(--global--spacing-horizontal);
