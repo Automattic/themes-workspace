@@ -891,7 +891,6 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-input.wp-block-search__input,
 textarea {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
@@ -915,7 +914,6 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-input.wp-block-search__input:focus,
 textarea:focus {
 	color: var(--form--color-text);
 	border-color: var(--form--border-color);
