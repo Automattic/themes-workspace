@@ -51,8 +51,14 @@ a {
 		font-size: var(--global--font-size-md);
 	}
 
-	&.alignright, &.alignleft {
-		margin: 0 var(--global--spacing-horizontal);
+	&.alignleft {
+		margin: 0;
+		margin-right: var(--global--spacing-horizontal);
+	}
+
+	&.alignright {
+		margin: 0;
+		margin-left: var(--global--spacing-horizontal);
 	}
 }
 
