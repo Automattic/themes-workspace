@@ -883,7 +883,6 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-input.wp-block-search__input,
 textarea {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
@@ -907,7 +906,6 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-input.wp-block-search__input:focus,
 textarea:focus {
 	color: var(--form--color-text);
 	border-color: var(--form--border-color);
@@ -2094,7 +2092,8 @@ p.has-background {
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
-	line-height: var(--global--line-height-body);
+	font-style: var(--quote--font-style);
+	line-height: var(--quote--line-height);
 }
 
 .wp-block-quote .wp-block-quote__citation,
@@ -2139,7 +2138,8 @@ p.has-background {
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
 	font-size: var(--quote--font-size-large);
-	font-style: normal;
+	font-style: var(--quote--font-style-large);
+	line-height: var(--quote--line-height-large);
 }
 
 .wp-block-quote.is-style-large.has-text-align-right, .wp-block-quote.is-large.has-text-align-right {
