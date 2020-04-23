@@ -56,6 +56,14 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px
 	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
 
+	/* Elevation */
+	--global--elevation-1: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-2: 1px 1px 4px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-3: 2px 2px 6px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-4: 3px 3px 7px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation-none: 0px 0px 0px 0px transparent;
+
 	/* Other */
 	--global--border-radius-sm: #{0.5 * $typescale-root};
 	--global--border-radius-md: #{0.75 * $typescale-root};

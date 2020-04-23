@@ -187,7 +187,7 @@
 			@include media(mobile) {
 				margin: 0;
 				background: var(--global--color-background);
-				box-shadow: var(--primary-nav--box-shadow);
+				box-shadow: var(--global--elevation-1);
 				left: 0;
 				top: 100%;
 				min-width: max-content;
