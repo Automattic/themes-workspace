@@ -196,16 +196,6 @@ if ( ! function_exists( 'varya_setup' ) ) :
 					'slug'     => 'hard-diagonal-inverted'
 				),
 				array(
-					'name'     => __( 'Brick to cream diagonal gradient', 'en' ),
-					'gradient' => 'linear-gradient(to bottom right, #A36265, #FAFBF6)',
-					'slug'     => 'diagonal'
-				),
-				array(
-					'name'     => __( 'Cream to brick diagonal gradient', 'en' ),
-					'gradient' => 'linear-gradient(to top left, #A36265, #FAFBF6)',
-					'slug'     => 'diagonal-inverted'
-				),
-				array(
 					'name'     => __( 'Half brick, half cream', 'en' ),
 					'gradient' => 'linear-gradient(to bottom, #A36265 50%, #FAFBF6 50%)',
 					'slug'     => 'hard-horizontal'
@@ -214,6 +204,16 @@ if ( ! function_exists( 'varya_setup' ) ) :
 					'name'     => __( 'Half cream, half brick', 'en' ),
 					'gradient' => 'linear-gradient(to top, #A36265 50%, #FAFBF6 50%)',
 					'slug'     => 'hard-horizontal-inverted'
+				),
+				array(
+					'name'     => __( 'Brick to cream diagonal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, #A36265, #FAFBF6)',
+					'slug'     => 'diagonal'
+				),
+				array(
+					'name'     => __( 'Cream to brick diagonal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top left, #A36265, #FAFBF6)',
+					'slug'     => 'diagonal-inverted'
 				),
 				array(
 					'name'     => __( 'Brick to cream gradient', 'en' ),
