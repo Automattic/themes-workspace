@@ -13,8 +13,6 @@ jQuery( function( $ ) {
 
 		wooMenuContainer.remove();
 		wooMenuButton.remove();
-
-		console.log(wooMenuButton);
 	}
 
 	$( document ).on( 'customize-preview-menu-refreshed', function( e, params ) {
