@@ -181,7 +181,6 @@ private $varya_custom_color_variables = array();
 			}
 		}
 
-		//$theme_css .= "--global--color-secondary-hover: " . $this->varya_color_midpoint( '', '' ) . ";";
 		$theme_css .= "}";
 		$theme_css .= "::selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
 		$theme_css .= "::-moz-selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
