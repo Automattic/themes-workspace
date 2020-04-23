@@ -126,11 +126,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-<<<<<<< HEAD
-	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignleft {
-=======
-	.entry-content > .alignleft {
->>>>>>> 5e8887593f1f60bf90ec218f0243672cbb7f42f6
+	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignleft {
 		margin-left: var(--responsive--alignleft-margin);
 		margin-right: var(--global--spacing-unit);
 	}
@@ -142,11 +138,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-<<<<<<< HEAD
-	.entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignright {
-=======
-	.entry-content > .alignright {
->>>>>>> 5e8887593f1f60bf90ec218f0243672cbb7f42f6
+	.entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignright {
 		margin-left: var(--global--spacing-unit);
 		margin-right: var(--responsive--alignright-margin);
 	}
@@ -2021,14 +2013,6 @@ p.has-background {
 	color: currentColor;
 }
 
-.entry-content .wp-block-pullquote.alignleft {
-	margin-left: var(--global--spacing-horizontal);
-}
-
-.entry-content .wp-block-pullquote.alignright {
-	margin-right: var(--global--spacing-horizontal);
-}
-
 .wp-block-quote {
 	border-right-color: var(--quote--border-color);
 	border-right-width: var(--quote--border-width);
@@ -2243,14 +2227,6 @@ table th,
 	margin-top: calc(0.5 * var(--global--spacing-unit));
 	margin-bottom: var(--global--spacing-unit);
 	text-align: center;
-}
-
-.entry-content .wp-block-video.alignleft {
-	margin-left: var(--global--spacing-horizontal);
-}
-
-.entry-content .wp-block-video.alignright {
-	margin-right: var(--global--spacing-horizontal);
 }
 
 * > figure > video {
