@@ -244,19 +244,19 @@ private $varya_custom_color_variables = array();
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
 
-				if ( '--global--color-primary' === $variable[0] ) {
+				if ( '--global--color-primary' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
 					$theme_css .= "--global--color-primary-hover: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 60, get_theme_mod( "varya_--global--color-background" ) ) . ";";
 				}
 
-				if ( '--global--color-secondary' === $variable[0] ) {
+				if ( '--global--color-secondary' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
 					$theme_css .= "--global--color-secondary-hover: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 60, get_theme_mod( "varya_--global--color-background" ) ) . ";";
 				}
 
-				if ( '--global--color-foreground' === $variable[0] ) {
+				if ( '--global--color-foreground' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
 					$theme_css .= "--global--color-foreground-light: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 60, get_theme_mod( "varya_--global--color-background" ) ) . ";";
 				}
 
-				if ( '--global--color-background' === $variable[0] ) {
+				if ( '--global--color-background' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
 					$theme_css .= "--global--color-background-light: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 60, get_theme_mod( "varya_--global--color-foreground" ) ) . ";";
 				}
 			}
