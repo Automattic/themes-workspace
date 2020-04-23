@@ -2271,6 +2271,10 @@ table th,
 	word-break: break-all;
 }
 
+.wp-block-verse {
+	font-family: var(--entry-content--font-family);
+}
+
 .wp-block-video figcaption {
 	color: var(--global--color-foreground-light);
 	font-size: var(--global--font-size-xs);
