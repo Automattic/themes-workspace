@@ -128,7 +128,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignright, .entry-content > .wp-block-cover.alignright, .entry-content > .wp-block-cover-image.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignleft {
+	.entry-content .wp-block-button.alignright, .entry-content > .wp-block-cover.alignright, .entry-content > .wp-block-cover-image.alignright, .entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignleft {
 		/*rtl:ignore*/
 		margin-left: auto;
 		/*rtl:ignore*/
@@ -144,7 +144,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-button.alignleft, .entry-content > .wp-block-cover.alignleft, .entry-content > .wp-block-cover-image.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignright {
+	.entry-content .wp-block-button.alignleft, .entry-content > .wp-block-cover.alignleft, .entry-content > .wp-block-cover-image.alignleft, .entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignright {
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignright-margin);
 		/*rtl:ignore*/
@@ -2269,6 +2269,10 @@ table th,
 	padding: calc( 0.5 * var(--global--spacing-unit));
 	border: 1px solid;
 	word-break: break-all;
+}
+
+.wp-block-verse {
+	font-family: var(--entry-content--font-family);
 }
 
 .wp-block-video figcaption {
