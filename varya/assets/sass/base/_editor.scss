@@ -50,6 +50,10 @@ a {
 		font-family: var(--global--font-secondary);
 		font-size: var(--global--font-size-md);
 	}
+
+	&.alignright, &.alignleft {
+		margin: 0 var(--global--spacing-horizontal);
+	}
 }
 
 div[data-type="core/button"] {

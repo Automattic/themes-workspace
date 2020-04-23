@@ -132,6 +132,10 @@ a {
 	font-size: var(--global--font-size-md);
 }
 
+.wp-block.alignright, .wp-block.alignleft {
+	margin: 0 var(--global--spacing-horizontal);
+}
+
 div[data-type="core/button"] {
 	display: block;
 }
