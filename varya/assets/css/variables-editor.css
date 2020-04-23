@@ -67,13 +67,6 @@ body {
 	--global--spacing-measure: unset;
 	--global--spacing-horizontal: 25px;
 	--global--spacing-vertical: 30px;
-	/* Elevation */
-	--global--elevation-1: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-2: 1px 1px 4px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-3: 2px 2px 6px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-4: 3px 3px 7px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-none: 0px 0px 0px 0px transparent;
 	/* Other */
 	--global--border-radius-sm: 9px;
 	--global--border-radius-md: 13.5px;

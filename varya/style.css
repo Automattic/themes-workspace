@@ -2891,7 +2891,7 @@ nav a {
 	.main-navigation > div > ul > li > .sub-menu {
 		margin: 0;
 		background: var(--global--color-background);
-		box-shadow: var(--global--elevation-1);
+		box-shadow: var(--primary-nav--box-shadow);
 		left: 0;
 		top: 100%;
 		min-width: max-content;
