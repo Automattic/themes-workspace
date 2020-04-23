@@ -108,9 +108,16 @@ function varya_woocommerce_scripts() {
 
 	// WooCommerce RTL styles
 	wp_style_add_data( 'varya-woocommerce-style', 'rtl', 'replace' );
-
 }
 add_action( 'wp_enqueue_scripts', 'varya_woocommerce_scripts' );
+
+/**
+ * Bind JS handlers to instantly live-preview changes.
+ */
+function varya_customize_preview_js() {
+	wp_enqueue_script( 'varya-woocommerce-customize-preview', get_template_directory_uri() . '/assets/js/woocommerce-customize-preview.js', array( 'customize-preview' ), wp_get_theme()->get( 'Version' ), true );
+}
+add_action( 'customize_preview_init', 'varya_customize_preview_js' );
 
 /**
  * Setup cart link for main menu
@@ -214,7 +221,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
  * Add WooCommerce mini-cart link to primary menu
  */
 function varya_add_cart_menu( $nav, $args ) {
-	if ( $args->theme_location == 'primary' && ! is_customize_preview() ) {
+	if ( $args->theme_location == 'primary' ) {
 		return sprintf(
 			'%1$s
 			</ul></div>
