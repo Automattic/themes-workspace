@@ -2011,10 +2011,6 @@ p.has-background {
 	background: none;
 }
 
-.wp-block-pullquote.is-style-default.alignleft blockquote > *, .wp-block-pullquote.is-style-default.aligncenter blockquote > *, .wp-block-pullquote.is-style-default.alignright blockquote > * {
-	text-align: center;
-}
-
 .wp-block-pullquote.is-style-large {
 	border-right-color: var(--quote--border-color);
 	border-right-style: solid;
