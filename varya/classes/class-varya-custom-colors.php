@@ -263,8 +263,11 @@ private $varya_custom_color_variables = array();
 		}
 
 		$theme_css .= "}";
-		$theme_css .= "::selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
-		$theme_css .= "::-moz-selection { background-color: var(--global--color-foreground); color: var(--global--color-background); }";
+
+		// Selection colors
+		$selection_background = $this->varya_color_blend_by_opacity( get_theme_mod( "varya_--global--color-primary" ), 5, get_theme_mod( "varya_--global--color-background" ) ) . ";";
+		$theme_css .= "::selection { background-color: " . $selection_background . "}";
+		$theme_css .= "::-moz-selection { background-color: ". $selection_background . "}";
 
 		return $theme_css;
 	}
