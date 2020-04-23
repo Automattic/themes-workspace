@@ -126,7 +126,11 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
+<<<<<<< HEAD
 	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignleft {
+=======
+	.entry-content > .alignleft {
+>>>>>>> 5e8887593f1f60bf90ec218f0243672cbb7f42f6
 		margin-left: var(--responsive--alignleft-margin);
 		margin-right: var(--global--spacing-unit);
 	}
@@ -138,7 +142,11 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
+<<<<<<< HEAD
 	.entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignright {
+=======
+	.entry-content > .alignright {
+>>>>>>> 5e8887593f1f60bf90ec218f0243672cbb7f42f6
 		margin-left: var(--global--spacing-unit);
 		margin-right: var(--responsive--alignright-margin);
 	}

@@ -33,7 +33,7 @@ function varya_body_classes( $classes ) {
 
 	// Add a body class if main navigation is active.
 	if ( has_nav_menu( 'primary' ) ) {
-		$classes[] = 'has-main-navigation'; 
+		$classes[] = 'has-main-navigation';
 	}
 
 	return $classes;
