@@ -1170,6 +1170,14 @@ pre.wp-block-verse {
 }
 
 /* Block Alignments */
+.wp-block:not(.alignwide):not(.alignfull):not([data-align="full"]):not([data-align="wide"]) {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.wp-block[data-align="wide"], .wp-block.alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
 .alignleft {
 	margin: 0;
 	margin-right: var(--global--spacing-horizontal);
@@ -1178,17 +1186,6 @@ pre.wp-block-verse {
 .alignright {
 	margin: 0;
 	margin-left: var(--global--spacing-horizontal);
-}
-
-/**
- * Alignments
- */
-.wp-block:not(.alignwide):not(.alignfull):not([data-align="full"]):not([data-align="wide"]) {
-	max-width: var(--responsive--aligndefault-width);
-}
-
-.wp-block[data-align="wide"], .wp-block.alignwide {
-	max-width: var(--responsive--alignwide-width);
 }
 
 /**
