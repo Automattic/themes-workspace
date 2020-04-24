@@ -205,24 +205,24 @@ private $varya_custom_color_variables = array();
 		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 
-				$theme_mod_default_color = $variable[1];
 				$theme_mod_variable_name = $variable[0];
-				$theme_mod_new_hex_color = get_theme_mod( "varya_$variable[0]" );
+				$theme_mod_default_color = $variable[1];
+				$theme_mod_custom_color  = get_theme_mod( "varya_$variable[0]" );
 				$theme_mod_bg_color      = get_theme_mod( "varya_--global--color-background" );
-				$opacity_int             = 70;
-				$adjusted_color          = $this->varya_color_blend_by_opacity( $theme_mod_new_hex_color, $opacity_int, $theme_mod_bg_color );
+				$opacity_integer         = 70;
+				$adjusted_color          = $this->varya_color_blend_by_opacity( $theme_mod_custom_color, $opacity_integer, $theme_mod_bg_color );
 
-				$theme_css .= $theme_mod_variable_name . ":" . $theme_mod_new_hex_color . ";";
+				$theme_css .= $theme_mod_variable_name . ":" . $theme_mod_custom_color . ";";
 
-				if ( '--global--color-primary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_new_hex_color ) {
+				if ( '--global--color-primary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_custom_color ) {
 					$theme_css .= "--global--color-primary-hover: " . $adjusted_color . ";";
 				}
 
-				if ( '--global--color-secondary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_new_hex_color ) {
+				if ( '--global--color-secondary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_custom_color ) {
 					$theme_css .= "--global--color-secondary-hover: " . $adjusted_color . ";";
 				}
 
-				if ( '--global--color-foreground' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_new_hex_color ) {
+				if ( '--global--color-foreground' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_custom_color ) {
 					$theme_css .= "--global--color-foreground-light: " . $adjusted_color . ";";
 				}
 			}
@@ -230,7 +230,7 @@ private $varya_custom_color_variables = array();
 
 		$theme_css .= "}";
 
-		// Selection colors
+		// Text selection colors
 		$selection_background = $this->varya_color_blend_by_opacity( get_theme_mod( "varya_--global--color-primary" ), 5, $theme_mod_bg_color ) . ";";
 		$theme_css .= "::selection { background-color: " . $selection_background . "}";
 		$theme_css .= "::-moz-selection { background-color: ". $selection_background . "}";
