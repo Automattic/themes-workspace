@@ -1,15 +1,23 @@
-/*
-Theme Name: Varya
-Theme URI: https://github.com/Automattic/theme-workspace/varya
-Author: Dotorg Themes
-Author URI: https://wordpress.org/
-Description: A design system for WordPress sites built with Gutenberg.
-Requires at least: WordPress 4.9.6
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: varya
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+=== Varya ===
+Contributors: Automattic
+Requires at least: 5.0
+Tested up to: 5.2
+Requires PHP: 5.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+A simple, text-driven, single-column theme. 
+
+== Description ==
+
+Varya is a simple, text-driven, single-column theme. 
+
+== Changelog ==
+
+= 1.0 =
+* Initial release 
+
+== Copyright ==
 
 Varya WordPress Theme, (C) 2020 Automattic, Inc.
 Varya is distributed under the terms of the GNU GPL.
@@ -46,39 +54,3 @@ License: GPLv2
 Source: https://wordpress.org/themes/twentytwenty/
 Included as part of the following classes and functions:
 - sanitize_select()
-*/
-
-// Layout
-// - Structral and responsive styles
-@import "structure/style";
-
-// Abstracts
-// - Mixins, variables and functions
-@import "abstracts/style";
-
-// Base
-// - Reset the browser
-@import "base/style";
-
-// Elements
-// - Styles for basic HTML elemants
-@import "elements/style";
-
-// Blocks
-// - These styles replace key Gutenberg Block styles for fonts, colors, and
-//   spacing with CSS-variables overrides
-// - In the future the Block styles may get compiled to individual .css
-//   files and conditionally loaded
-@import "blocks/style";
-
-// Components
-// - Similar to Blocks but exist outside of the "current" editor context
-@import "components/style";
-
-// Site Pages
-// - Page specific styles
-@import "pages/style";
-
-// Vendors
-// - Styles for 3rd party plugins and WP extensions
-@import "vendors/style";
