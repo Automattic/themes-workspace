@@ -156,3 +156,14 @@
 		margin-bottom: 0;
 	}
 }
+
+/* Block Alignments */
+.alignleft {
+	margin: 0;
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.alignright {
+	margin: 0;
+	margin-left: var(--global--spacing-horizontal);
+}
