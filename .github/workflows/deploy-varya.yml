@@ -16,7 +16,7 @@ jobs:
       with:
         local-dir: varya/
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: sftp://sftp.pressable.com:22/htdocs/wp-content/themes/
+        ftp-server: sftp://sftp.pressable.com:22/htdocs/wp-content/themes/varya/
         # FTP account username
         ftp-username: ${{ secrets.SFTP_USERNAME }}
         # FTP account password
