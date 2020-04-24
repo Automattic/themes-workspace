@@ -46,44 +46,6 @@ private $varya_custom_color_variables = array();
 	}
 
 	/**
-	 * Auto-set color luminance for hover and selection colors
-	 *
-	 * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.7
-	 *
-	 * @param str $fg_hex Colour as hexadecimal (with or without hash);
-	 * @percent float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
-	 * @return str Lightened/Darkend colour as hexadecimal (with hash);
-	 */
-	function varya_color_midpoint( $fg_hex, $bg_hex ) {
-
-		// Validate hex color string
-		$fg_hex = preg_replace( '/[^0-9a-f]/i', '', $fg_hex );
-		$bg_hex = preg_replace( '/[^0-9a-f]/i', '', $bg_hex );
-		$new_hex = '#';
-
-		// Foreground color
-		if ( strlen( $fg_hex ) < 6 ) {
-			$fg_hex = $fg_hex[0] + $fg_hex[0] + $fg_hex[1] + $fg_hex[1] + $fg_hex[2] + $fg_hex[2];
-		}
-
-		// Background color
-		if ( strlen( $bg_hex ) < 6 ) {
-			$bg_hex = $bg_hex[0] + $bg_hex[0] + $bg_hex[1] + $bg_hex[1] + $bg_hex[2] + $bg_hex[2];
-		}
-
-		// Convert to decimal and find midpoint between two colors
-		for ($i = 0; $i < 3; $i++) {
-			$fg_dec = hexdec( substr( $fg_hex, $i*2, 2 ) );
-			$bg_dec = hexdec( substr( $bg_hex, $i*2, 2 ) );
-			$dec = floor(($fg_dec + $bg_dec) * 0.667);
-			// Convert back to hex
-			$new_hex .= str_pad( dechex( $dec ) , 2, 0, STR_PAD_LEFT );
-		}
-
-		return $new_hex;
-	}
-
-	/**
 	 * Find the resulting colour by blending 2 colours
 	 * and setting an opacity level for the foreground colour.
 	 *
@@ -106,7 +68,6 @@ private $varya_custom_color_variables = array();
 		}
 
 		$pattern = '~^[a-f0-9]{6,6}$~i'; // accept only valid hexadecimal colour values.
-
 
 		if ( !@preg_match($pattern, $foreground) or !@preg_match($pattern, $background) ) {
 			echo $foreground;
