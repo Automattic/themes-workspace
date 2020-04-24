@@ -114,10 +114,10 @@ add_action( 'wp_enqueue_scripts', 'varya_woocommerce_scripts' );
 /**
  * Bind JS handlers to instantly live-preview changes.
  */
-function varya_customize_preview_js() {
-	wp_enqueue_script( 'varya-woocommerce-customize-preview', get_template_directory_uri() . '/assets/js/woocommerce-customize-preview.js', array( 'customize-preview' ), wp_get_theme()->get( 'Version' ), true );
+function varya_woocommerce_customize_preview_js() {
+	wp_enqueue_script( 'customize-preview-woocommerce', get_template_directory_uri() . '/assets/js/customize-preview-woocommerce.js', array( 'customize-preview' ), wp_get_theme()->get( 'Version' ), true );
 }
-add_action( 'customize_preview_init', 'varya_customize_preview_js' );
+add_action( 'customize_preview_init', 'varya_woocommerce_customize_preview_js' );
 
 /**
  * Setup cart link for main menu
