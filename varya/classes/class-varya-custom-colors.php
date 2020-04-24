@@ -26,6 +26,7 @@ private $varya_custom_color_variables = array();
 			array( '--global--color-secondary', '#A36265', 'Secondary Color' ),
 			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
 			array( '--global--color-background', '#FFFFFF', 'Background Color' ),
+			array( '--global--color-background-light', '#FAFBF6', 'Background Light Color' ),
 			array( '--global--color-border', '#EFEFEF', 'Borders Color' )
 		);
 
@@ -215,10 +216,6 @@ private $varya_custom_color_variables = array();
 
 				if ( '--global--color-foreground' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
 					$theme_css .= "--global--color-foreground-light: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 70, get_theme_mod( "varya_--global--color-background" ) ) . ";";
-				}
-
-				if ( '--global--color-background' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
-					$theme_css .= "--global--color-background-light: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 70, get_theme_mod( "varya_--global--color-foreground" ) ) . ";";
 				}
 			}
 		}
