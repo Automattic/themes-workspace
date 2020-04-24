@@ -132,16 +132,6 @@ a {
 	font-size: var(--global--font-size-md);
 }
 
-.wp-block.alignleft {
-	margin: 0;
-	margin-right: var(--global--spacing-horizontal);
-}
-
-.wp-block.alignright {
-	margin: 0;
-	margin-left: var(--global--spacing-horizontal);
-}
-
 div[data-type="core/button"] {
 	display: block;
 }
@@ -1185,6 +1175,17 @@ pre.wp-block-verse {
 [data-block] [data-block] {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+/* Block Alignments */
+.alignleft {
+	margin: 0;
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.alignright {
+	margin: 0;
+	margin-left: var(--global--spacing-horizontal);
 }
 
 /**
