@@ -1024,6 +1024,10 @@ table th,
 	padding: calc( 0.5 * var(--global--spacing-unit));
 }
 
+pre.wp-block-verse {
+	padding: 0;
+}
+
 /**
 * Editor Post Title
 * - Needs a special styles
