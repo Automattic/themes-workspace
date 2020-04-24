@@ -265,3 +265,38 @@
  */
 
 @import "spacing-overrides";
+
+/* 
+ * Custom gradients 
+*/
+.has-hard-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, #A36265 49.9%, #FAFBF6 50%);
+}
+
+.has-hard-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, #A36265 49.9%, #FAFBF6 50%);
+}
+
+.has-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, #A36265, #FAFBF6);
+}
+
+.has-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, #A36265, #FAFBF6);
+}
+
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, #A36265 50%, #FAFBF6 50%);
+}
+
+.has-hard-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, #A36265 50%, #FAFBF6 50%);
+}
+
+.has-horizontal-gradient-background {
+	background: linear-gradient(to bottom, #A36265, #FAFBF6);
+}
+
+.has-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, #A36265, #FAFBF6);
+}
