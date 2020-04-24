@@ -191,3 +191,14 @@
 .has-horizontal-inverted-gradient-background {
 	background: linear-gradient(to top, #A36265, #FAFBF6);
 }
+
+/* Block Alignments */
+.alignleft {
+	margin: 0;
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.alignright {
+	margin: 0;
+	margin-left: var(--global--spacing-horizontal);
+}

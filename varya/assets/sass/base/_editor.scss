@@ -18,7 +18,9 @@ body {
 
 // Links styles
 a {
+	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--global--color-primary);
+	text-decoration: none;
 
 	&:hover {
 		color: var(--global--color-primary-hover);
@@ -42,6 +44,11 @@ a {
 	&[data-align="wide"],
 	&.alignwide {
 		max-width: var(--responsive--alignwide-width);
+	}
+
+	&.block-editor-default-block-appender > textarea {
+		font-family: var(--global--font-secondary);
+		font-size: var(--global--font-size-md);
 	}
 }
 

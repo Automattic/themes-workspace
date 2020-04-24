@@ -7,7 +7,8 @@
 	p {
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
-		line-height: var(--global--line-height-body);
+		font-style: var(--quote--font-style);
+		line-height: var(--quote--line-height);
 	}
 
 	&.is-large,
@@ -20,7 +21,8 @@
 
 		p {
 			font-size: var(--quote--font-size-large);
-			font-style: normal;
+			font-style: var(--quote--font-style-large);
+			line-height: var(--quote--line-height-large);
 		}
 		&.has-text-align-right {
 			border-left: none;

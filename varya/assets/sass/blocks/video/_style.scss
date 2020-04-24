@@ -7,6 +7,16 @@
 		margin-bottom: var(--global--spacing-unit);
 		text-align: center;
 	}
+
+	.entry-content &.alignleft {
+		@extend %responsive-alignright;
+		margin-right: var(--global--spacing-horizontal);
+	}
+
+	.entry-content &.alignright {
+		@extend %responsive-alignleft;
+		margin-left: var(--global--spacing-horizontal);
+	}
 }
 
 * > figure > video {

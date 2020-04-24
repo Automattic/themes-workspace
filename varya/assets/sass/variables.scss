@@ -30,6 +30,7 @@
 	@include entry-variables();
 	@include comments-variables();
 	@include footer-variables();
+	@include pagination-variables();
 	/* Vendors */
 	@include woocommerce-variables();
 }
