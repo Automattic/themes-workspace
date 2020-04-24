@@ -119,23 +119,6 @@ a {
 	cursor: pointer;
 }
 
-.wp-block:not([data-align="full"]):not([data-align="wide"]) {
-	max-width: var(--responsive--aligndefault-width);
-}
-
-.wp-block[data-align="wide"], .wp-block.alignwide {
-	max-width: var(--responsive--alignwide-width);
-}
-
-.wp-block.block-editor-default-block-appender > textarea {
-	font-family: var(--global--font-secondary);
-	font-size: var(--global--font-size-md);
-}
-
-div[data-type="core/button"] {
-	display: block;
-}
-
 /**
  * Elements
  * - Styles for basic HTML elemants
@@ -467,6 +450,10 @@ object {
 .wp-block-button__link.is-style-squared,
 .is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+div[data-type="core/button"] {
+	display: block;
 }
 
 .wp-block-cover,
@@ -1041,6 +1028,11 @@ pre.wp-block-verse {
 	line-height: var(--heading--line-height);
 }
 
+.wp-block.block-editor-default-block-appender > textarea {
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-md);
+}
+
 .has-primary-color[class] {
 	color: var(--global--color-primary) !important;
 }
@@ -1175,6 +1167,17 @@ pre.wp-block-verse {
 [data-block] [data-block] {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+/**
+ * Alignments
+ */
+.wp-block:not(.alignwide):not(.alignfull):not([data-align="full"]):not([data-align="wide"]) {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.wp-block[data-align="wide"], .wp-block.alignwide {
+	max-width: var(--responsive--alignwide-width);
 }
 
 /**
