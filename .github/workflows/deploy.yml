@@ -2,7 +2,7 @@ name: Deploy to staging
 
 on:
   push:
-    branches: [ try/sftp-deploy ]
+    branches: [ master, try/sftp-deploy ]
 
 jobs:
   deploy:
