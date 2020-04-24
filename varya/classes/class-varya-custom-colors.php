@@ -214,15 +214,15 @@ private $varya_custom_color_variables = array();
 
 				$theme_css .= $theme_mod_variable_name . ":" . $theme_mod_custom_color . ";";
 
-				if ( '--global--color-primary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_custom_color ) {
+				if ( $theme_mod_variable_name === '--global--color-primary' ) {
 					$theme_css .= "--global--color-primary-hover: " . $adjusted_color . ";";
 				}
 
-				if ( '--global--color-secondary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_custom_color ) {
+				if ( $theme_mod_variable_name === '--global--color-secondary' && $theme_mod_default_color !== $theme_mod_custom_color ) {
 					$theme_css .= "--global--color-secondary-hover: " . $adjusted_color . ";";
 				}
 
-				if ( '--global--color-foreground' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_custom_color ) {
+				if ( $theme_mod_variable_name === '--global--color-foreground' && $theme_mod_default_color !== $theme_mod_custom_color ) {
 					$theme_css .= "--global--color-foreground-light: " . $adjusted_color . ";";
 				}
 			}
