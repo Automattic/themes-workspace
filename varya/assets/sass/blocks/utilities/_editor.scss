@@ -164,10 +164,7 @@
 	}
 }
 
-/**
- * Alignments
- */
-
+/* Block Alignments */
 .wp-block {
 
 	// Gutenberg injects a rule that limits the max width of .wp-block to 580px
@@ -181,4 +178,14 @@
 	&.alignwide {
 		max-width: var(--responsive--alignwide-width);
 	}
+}
+
+.alignleft {
+	margin: 0;
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.alignright {
+	margin: 0;
+	margin-left: var(--global--spacing-horizontal);
 }
