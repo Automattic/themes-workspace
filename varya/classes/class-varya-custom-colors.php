@@ -204,18 +204,26 @@ private $varya_custom_color_variables = array();
 
 		foreach ( $this->$varya_custom_color_variables as $variable ) {
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
-				$theme_css .= $variable[0] . ":" . get_theme_mod( "varya_$variable[0]" ) . ";";
 
-				if ( '--global--color-primary' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
-					$theme_css .= "--global--color-primary-hover: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 70, get_theme_mod( "varya_--global--color-background" ) ) . ";";
+				$theme_mod_default_color = $variable[1];
+				$theme_mod_variable_name = $variable[0];
+				$theme_mod_new_hex_color = get_theme_mod( "varya_$variable[0]" );
+				$theme_mod_bg_color      = get_theme_mod( "varya_--global--color-background" );
+				$opacity_int             = 70;
+				$adjusted_color          = $this->varya_color_blend_by_opacity( $theme_mod_new_hex_color, $opacity_int, $theme_mod_bg_color );
+
+				$theme_css .= $theme_mod_variable_name . ":" . $theme_mod_new_hex_color . ";";
+
+				if ( '--global--color-primary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_new_hex_color ) {
+					$theme_css .= "--global--color-primary-hover: " . $adjusted_color . ";";
 				}
 
-				if ( '--global--color-secondary' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
-					$theme_css .= "--global--color-secondary-hover: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 70, get_theme_mod( "varya_--global--color-background" ) ) . ";";
+				if ( '--global--color-secondary' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_new_hex_color ) {
+					$theme_css .= "--global--color-secondary-hover: " . $adjusted_color . ";";
 				}
 
-				if ( '--global--color-foreground' === $variable[0] && $variable[1] !== get_theme_mod( "varya_$variable[0]" ) ) {
-					$theme_css .= "--global--color-foreground-light: " . $this->varya_color_blend_by_opacity( get_theme_mod( "varya_$variable[0]" ), 70, get_theme_mod( "varya_--global--color-background" ) ) . ";";
+				if ( '--global--color-foreground' === $theme_mod_variable_name && $theme_mod_default_color !== $theme_mod_new_hex_color ) {
+					$theme_css .= "--global--color-foreground-light: " . $adjusted_color . ";";
 				}
 			}
 		}
@@ -223,7 +231,7 @@ private $varya_custom_color_variables = array();
 		$theme_css .= "}";
 
 		// Selection colors
-		$selection_background = $this->varya_color_blend_by_opacity( get_theme_mod( "varya_--global--color-primary" ), 5, get_theme_mod( "varya_--global--color-background" ) ) . ";";
+		$selection_background = $this->varya_color_blend_by_opacity( get_theme_mod( "varya_--global--color-primary" ), 5, $theme_mod_bg_color ) . ";";
 		$theme_css .= "::selection { background-color: " . $selection_background . "}";
 		$theme_css .= "::-moz-selection { background-color: ". $selection_background . "}";
 
