@@ -182,52 +182,55 @@ if ( ! function_exists( 'varya_setup' ) ) :
 			)
 		);
 
+		$gradient_color_a = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' );
+		$gradient_color_b = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'varya_--global--color-background-light' );
+
 		add_theme_support(
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( 'Half brick, half cream cutting diagonally', 'en' ),
-					'gradient' => 'linear-gradient(to bottom right, #A36265 49.9%, #FAFBF6 50%)',
-					'slug'     => 'hard-diagonal'
+					'name'     => __( 'Diagonal', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $gradient_color_a . ' 49.9%, ' . $gradient_color_b  . ' 50%)',
+					'slug'     => 'hard-diagonal',
 				),
 				array(
-					'name'     => __( 'Half cream, half brick cutting diagonally', 'en' ),
-					'gradient' => 'linear-gradient(to top left, #A36265 49.9%, #FAFBF6 50%)',
-					'slug'     => 'hard-diagonal-inverted'
+					'name'     => __( 'Diagonal inverted', 'en' ),
+					'gradient' => 'linear-gradient(to top left, ' . $gradient_color_a . ' 49.9%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-diagonal-inverted',
 				),
 				array(
-					'name'     => __( 'Half brick, half cream', 'en' ),
-					'gradient' => 'linear-gradient(to bottom, #A36265 50%, #FAFBF6 50%)',
-					'slug'     => 'hard-horizontal'
+					'name'     => __( 'Horizontal', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $gradient_color_a . ' 50%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-horizontal',
 				),
 				array(
-					'name'     => __( 'Half cream, half brick', 'en' ),
-					'gradient' => 'linear-gradient(to top, #A36265 50%, #FAFBF6 50%)',
+					'name'     => __( 'Horizontal inverted', 'en' ),
+					'gradient' => 'linear-gradient(to top, ' . $gradient_color_a . ' 50%, ' . $gradient_color_b . ' 50%)',
 					'slug'     => 'hard-horizontal-inverted',
 				),
 				array(
-					'name'     => __( 'Brick to cream diagonal gradient', 'en' ),
-					'gradient' => 'linear-gradient(to bottom right, #A36265, #FAFBF6)',
+					'name'     => __( 'Diagonal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
 					'slug'     => 'diagonal',
 				),
 				array(
-					'name'     => __( 'Cream to brick diagonal gradient', 'en' ),
-					'gradient' => 'linear-gradient(to top left, #A36265, #FAFBF6)',
+					'name'     => __( 'Diagonal inverted gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top left, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
 					'slug'     => 'diagonal-inverted',
 				),
 				array(
-					'name'     => __( 'Brick to cream gradient', 'en' ),
-					'gradient' => 'linear-gradient(to bottom, #A36265, #FAFBF6)',
+					'name'     => __( 'Horizontal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
 					'slug'     => 'horizontal',
 				),
 				array(
-					'name'     => __( 'Cream to brick gradient', 'en' ),
-					'gradient' => 'linear-gradient(to top, #A36265, #FAFBF6)',
+					'name'     => __( 'Horizontal inverted gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
 					'slug'     => 'horizontal-inverted',
 				),
 				array(
-					'name'     => __( 'Brick stripe gradient', 'en' ),
-					'gradient' => 'linear-gradient(to bottom, transparent 20%, #A36265 20%, #A36265 80%, transparent 80%)',
+					'name'     => __( 'Stripe', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, transparent 20%, ' . $gradient_color_a . ' 20%, ' . $gradient_color_a . ' 80%, transparent 80%)',
 					'slug'     => 'stripe',
 				),
 			)
