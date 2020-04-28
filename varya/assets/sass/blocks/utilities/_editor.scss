@@ -3,6 +3,7 @@
 * - Needs a special styles
 */
 
+// Post title style
 .editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-foreground);
 	font-family: var(--heading--font-family);
@@ -10,6 +11,12 @@
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height);
+}
+
+// Editor UI font styles
+.wp-block.block-editor-default-block-appender > textarea {
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-md);
 }
 
 // Gutenberg text color options
@@ -193,6 +200,24 @@
 }
 
 /* Block Alignments */
+.wp-block {
+
+	// Gutenberg injects a rule that limits the max width of .wp-block to 580px
+	// This line overrides it to use the responsive spacing rules for default width content
+	max-width: var(--responsive--aligndefault-width);
+
+	// Use the theme's max-width for wide alignment.
+	&[data-align="wide"],
+	&.alignwide {
+		max-width: var(--responsive--alignwide-width);
+	}
+
+	&[data-align="full"],
+	&.alignfull {
+		max-width: none;
+	}
+}
+
 .alignleft {
 	margin: 0;
 	margin-right: var(--global--spacing-horizontal);

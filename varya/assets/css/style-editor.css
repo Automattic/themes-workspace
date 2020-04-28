@@ -119,23 +119,6 @@ a {
 	cursor: pointer;
 }
 
-.wp-block:not([data-align="full"]):not([data-align="wide"]) {
-	max-width: var(--responsive--aligndefault-width);
-}
-
-.wp-block[data-align="wide"], .wp-block.alignwide {
-	max-width: var(--responsive--alignwide-width);
-}
-
-.wp-block.block-editor-default-block-appender > textarea {
-	font-family: var(--global--font-secondary);
-	font-size: var(--global--font-size-md);
-}
-
-div[data-type="core/button"] {
-	display: block;
-}
-
 /**
  * Elements
  * - Styles for basic HTML elemants
@@ -467,6 +450,10 @@ object {
 .wp-block-button__link.is-style-squared,
 .is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+div[data-type="core/button"] {
+	display: block;
 }
 
 .wp-block-cover,
@@ -1065,6 +1052,11 @@ pre.wp-block-verse {
 	line-height: var(--heading--line-height);
 }
 
+.wp-block.block-editor-default-block-appender > textarea {
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-md);
+}
+
 .has-primary-color[class] {
 	color: var(--global--color-primary) !important;
 }
@@ -1237,6 +1229,18 @@ pre.wp-block-verse {
 }
 
 /* Block Alignments */
+.wp-block {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.wp-block[data-align="wide"], .wp-block.alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block[data-align="full"], .wp-block.alignfull {
+	max-width: none;
+}
+
 .alignleft {
 	margin: 0;
 	margin-right: var(--global--spacing-horizontal);
