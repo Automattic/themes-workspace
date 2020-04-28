@@ -1170,12 +1170,16 @@ pre.wp-block-verse {
 }
 
 /* Block Alignments */
-.wp-block:not(.alignwide):not(.alignfull):not([data-align="full"]):not([data-align="wide"]) {
+.wp-block {
 	max-width: var(--responsive--aligndefault-width);
 }
 
 .wp-block[data-align="wide"], .wp-block.alignwide {
 	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block[data-align="full"], .wp-block.alignfull {
+	max-width: none;
 }
 
 .alignleft {

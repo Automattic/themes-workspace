@@ -169,14 +169,17 @@
 
 	// Gutenberg injects a rule that limits the max width of .wp-block to 580px
 	// This line overrides it to use the responsive spacing rules for default width content
-	&:not(.alignwide):not(.alignfull):not([data-align="full"]):not([data-align="wide"]){
-		max-width: var(--responsive--aligndefault-width);
-	}
+	max-width: var(--responsive--aligndefault-width);
 
 	// Use the theme's max-width for wide alignment.
 	&[data-align="wide"],
 	&.alignwide {
 		max-width: var(--responsive--alignwide-width);
+	}
+
+	&[data-align="full"],
+	&.alignfull {
+		max-width: none;
 	}
 }
 
