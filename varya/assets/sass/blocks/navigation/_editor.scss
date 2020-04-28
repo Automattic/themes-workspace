@@ -12,6 +12,12 @@
             padding: var(--primary-nav--padding);
         }
     }
+
+    .has-child {
+        .wp-block-navigation__container {
+            box-shadow: var(--global--elevation);
+        }
+    }
     
     &:not(.has-text-color){
         .wp-block-navigation-link {
