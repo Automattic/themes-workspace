@@ -2727,6 +2727,10 @@ table th,
 	background: linear-gradient(to top, #A36265, #FAFBF6);
 }
 
+.has-stripe-gradient-background {
+	background: linear-gradient(to bottom, transparent 20%, #A36265 20%, #A36265 80%, transparent 80%);
+}
+
 /*
  * Components
  * - Similar to Blocks but exist outside of the "current" editor context

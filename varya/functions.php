@@ -203,27 +203,32 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'     => __( 'Half cream, half brick', 'en' ),
 					'gradient' => 'linear-gradient(to top, #A36265 50%, #FAFBF6 50%)',
-					'slug'     => 'hard-horizontal-inverted'
+					'slug'     => 'hard-horizontal-inverted',
 				),
 				array(
 					'name'     => __( 'Brick to cream diagonal gradient', 'en' ),
 					'gradient' => 'linear-gradient(to bottom right, #A36265, #FAFBF6)',
-					'slug'     => 'diagonal'
+					'slug'     => 'diagonal',
 				),
 				array(
 					'name'     => __( 'Cream to brick diagonal gradient', 'en' ),
 					'gradient' => 'linear-gradient(to top left, #A36265, #FAFBF6)',
-					'slug'     => 'diagonal-inverted'
+					'slug'     => 'diagonal-inverted',
 				),
 				array(
 					'name'     => __( 'Brick to cream gradient', 'en' ),
 					'gradient' => 'linear-gradient(to bottom, #A36265, #FAFBF6)',
-					'slug'     => 'horizontal'
+					'slug'     => 'horizontal',
 				),
 				array(
 					'name'     => __( 'Cream to brick gradient', 'en' ),
 					'gradient' => 'linear-gradient(to top, #A36265, #FAFBF6)',
-					'slug'     => 'horizontal-inverted'
+					'slug'     => 'horizontal-inverted',
+				),
+				array(
+					'name'     => __( 'Brick stripe gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, transparent 20%, #A36265 20%, #A36265 80%, transparent 80%)',
+					'slug'     => 'stripe',
 				),
 			)
 		);
