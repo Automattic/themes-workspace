@@ -208,29 +208,36 @@
 }
 
 // Gutenberg Font-size options
-.is-small-text,
-.has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
+:root {
+	.is-tiny-text,
+	.has-tiny-font-size {
+		font-size: var(--global--font-size-xs);
+	}
 
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
-	font-size: var(--global--font-size-base);
-}
+	.is-small-text,
+	.has-small-font-size {
+		font-size: var(--global--font-size-sm);
+	}
 
-.is-large-text,
-.has-large-font-size {
-	font-size: var(--global--font-size-lg);
-	line-height: var(--global--line-height-heading);
-}
+	.is-regular-text,
+	.has-regular-font-size,
+	.has-normal-font-size,
+	.has-medium-font-size {
+		font-size: var(--global--font-size-base);
+	}
 
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
+	.is-large-text,
+	.has-large-font-size {
+		font-size: var(--global--font-size-lg);
+		line-height: var(--global--line-height-heading);
+	}
+
+	.is-larger-text,
+	.has-larger-font-size,
+	.has-huge-font-size {
+		font-size: var(--global--font-size-xl);
+		line-height: var(--global--line-height-heading);
+	}
 }
 
 // Drop caps

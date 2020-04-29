@@ -138,13 +138,13 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'      => __( 'Large', 'varya' ),
 					'shortName' => __( 'L', 'varya' ),
-					'size'      => 20,
+					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'Huge', 'varya' ),
 					'shortName' => __( 'XL', 'varya' ),
-					'size'      => 24,
+					'size'      => 28,
 					'slug'      => 'huge',
 				),
 			)
