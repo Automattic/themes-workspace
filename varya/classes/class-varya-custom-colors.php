@@ -60,7 +60,11 @@ private $varya_custom_color_variables = array();
 	function varya_color_blend_by_opacity( $foreground, $opacity, $background=null ) {
 		static $colors_rgb = array(); // stores colour values already passed through the hexdec() functions below.
 
-		$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground ); //str_replace( '#', '', $foreground );
+		if ( ! is_null( $foreground ) ) {
+			$foreground = '000000'; // default primary.
+		} else {
+			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground ); //str_replace( '#', '', $foreground );
+		}
 
 		if ( ! is_null( $background ) ) {
 			$background = 'FFFFFF'; // default background.
