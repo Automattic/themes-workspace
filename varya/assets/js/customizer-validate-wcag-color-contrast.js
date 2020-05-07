@@ -29,19 +29,26 @@
 		 * @returns {*}
 		 */
 		setting.validate = function (value){
-			_.each ( self.validate_color_contrast, function( colors_to_compare ){
-				_.each ( colors_to_compare, function ( color_to_compare_id ){
-					var code = 'contrast_' + color_to_compare_id;
-					setting.notifications.remove( code );
-					var color_to_compare = $( '#customize-control-' + color_to_compare_id + ' .wp-color-result')[0].style.backgroundColor.match(/\d+/g);
-					var contrast	= self.rgb( [ parseInt(color_to_compare[0]), parseInt(color_to_compare[1]), parseInt(color_to_compare[2]) ], self.hexRgb( value ) );
-					var score		= self.score( contrast );
-					if ( score === 'Fail' ){
-						var validationWarning = new api.Notification( code, { message: self.sprintf( 'Color is not accessible against %s.<br/>Contrast ratio: %s<br/>Contrast score: %s', color_to_compare_id, contrast, score), type: 'warning' } );
-						setting.notifications.add( code, validationWarning );
-					} 
-				});
+			var failsWCAG = false;
+			var code = 'contrast_warning';
+
+			_.each ( self.validate_color_contrast[setting.id], function( color_to_compare_id ){
+				setting.notifications.remove( code );
+				var color_to_compare = $( '#customize-control-' + color_to_compare_id + ' .wp-color-result')[0].style.backgroundColor.match(/\d+/g);
+				// var validationWarning = new api.Notification( code, { message: self.sprintf( 'Color is not accessible against %s.<br/>Contrast ratio: %s<br/>Contrast score: %s', color_to_compare_id, contrast, score), type: 'warning' } );
+				var contrast	= self.rgb( [ parseInt(color_to_compare[0]), parseInt(color_to_compare[1]), parseInt(color_to_compare[2]) ], self.hexRgb( value ) );
+				var score		= self.score( contrast );
+				if ( score === 'Fail' ){
+					failsWCAG = true;
+				} 
 			});
+
+			if ( failsWCAG ){
+				var validationWarning = new api.Notification( code, { message: 'This color combination may be hard for people to read. Try using a brighter background color and/or a darker text color.', type: 'warning' } );
+				setting.notifications.add( code, validationWarning );
+			} else {
+				setting.notifications.remove( code );
+			}
 
 			return value;
 		} 
@@ -65,19 +72,19 @@
 		self.addWCAGColorContrastValidation( setting );
 	} );
 
-	api( 'custom_colors_active', function( setting ) {
-		setting.validate = function( value ) {
-			var code = 'contrast_notice';
-			if ( value == 'custom' ){
-				var notification = new api.Notification( code, { type: 'warning', message: 'Please ensure that your color choices create high enough contrast ratios for readers. Information on contrast accessibility can be found <a href="/">here</a>.' } );
-				setting.notifications.add( code, notification );
-			} else {
-				setting.notifications.remove( code );
-			}
+	// api( 'custom_colors_active', function( setting ) {
+	// 	setting.validate = function( value ) {
+	// 		var code = 'contrast_notice';
+	// 		if ( value == 'custom' ){
+	// 			var notification = new api.Notification( code, { type: 'warning', message: 'Please ensure that your color choices create high enough contrast ratios for readers. Information on contrast accessibility can be found <a href="/">here</a>.' } );
+	// 			setting.notifications.add( code, notification );
+	// 		} else {
+	// 			setting.notifications.remove( code );
+	// 		}
 
-			return value;
-		}
-	});
+	// 		return value;
+	// 	}
+	// });
 
 	self.sprintf = function( format ) {
 		for( var i=1; i < arguments.length; i++ ) {
