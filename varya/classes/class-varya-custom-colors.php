@@ -44,6 +44,27 @@ private $varya_custom_color_variables = array();
 		 * Enqueue color variables for editor.
 		 */
 		add_action( 'enqueue_block_editor_assets', array( $this, 'varya_editor_custom_color_variables' ) );
+
+		/**
+		 * Enqueue contrast checking.
+		 */
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'on_customize_controls_enqueue_scripts' ) );
+	}
+
+	function on_customize_controls_enqueue_scripts() {
+		$handle = 'wcag-validate-customizer-color-contrast';
+		$src    = get_template_directory_uri() . '/assets/js/customizer-validate-wcag-color-contrast.js';
+		$deps 	= [ 'customize-controls' ];
+
+		$exports = [
+			'validate_color_contrast' => [
+				// key = current color control , values = array with color controls to check color contrast against
+				'varya_--global--color-primary' => [ "varya_--global--color-background", "varya_--global--color-background-light" ],
+			],
+		];
+
+		wp_enqueue_script( $handle, $src, $deps );
+		wp_script_add_data( $handle, 'data', sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) ) );
 	}
 
 	/**
