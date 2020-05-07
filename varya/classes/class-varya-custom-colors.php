@@ -278,14 +278,15 @@ private $varya_custom_color_variables = array();
 			'validate_color_contrast' => [
 				// key = current color control , values = array with color controls to check color contrast against
 				'varya_--global--color-primary' => [ "varya_--global--color-background", "varya_--global--color-background-light" ],
+				'varya_--global--color-foreground' => [ "varya_--global--color-background", "varya_--global--color-background-light" ],
+				'varya_--global--color-background' => [ "varya_--global--color-primary", "varya_--global--color-foreground" ],
+				'varya_--global--color-background-light' => [ "varya_--global--color-primary", "varya_--global--color-foreground" ],
 			],
 		];
 
 		wp_enqueue_script( $handle, $src, $deps );
 		wp_script_add_data( $handle, 'data', sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) ) );
 	}
-
-
 
 	/**
 	 * Sanitize select.
