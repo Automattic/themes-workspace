@@ -3394,6 +3394,10 @@ nav a {
  * Author
  */
 /* Author description */
+.author-bio {
+	max-width: var(--responsive--aligndefault-width);
+}
+
 .site-main > article > .author-bio {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
