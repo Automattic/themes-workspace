@@ -137,13 +137,13 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'      => __( 'Large', 'varya' ),
 					'shortName' => __( 'L', 'varya' ),
-					'size'      => 20,
+					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'Huge', 'varya' ),
 					'shortName' => __( 'XL', 'varya' ),
-					'size'      => 24,
+					'size'      => 28,
 					'slug'      => 'huge',
 				),
 			)
@@ -177,6 +177,60 @@ if ( ! function_exists( 'varya_setup' ) ) :
 					'name'  => __( 'Background', 'varya' ),
 					'slug'  => 'background',
 					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FFFFFF' : get_theme_mod( 'varya_--global--color-background' )
+				),
+			)
+		);
+
+		$gradient_color_a = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' );
+		$gradient_color_b = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'varya_--global--color-background-light' );
+
+		add_theme_support(
+			'editor-gradient-presets',
+			array(
+				array(
+					'name'     => __( 'Diagonal', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $gradient_color_a . ' 49.9%, ' . $gradient_color_b  . ' 50%)',
+					'slug'     => 'hard-diagonal',
+				),
+				array(
+					'name'     => __( 'Diagonal inverted', 'en' ),
+					'gradient' => 'linear-gradient(to top left, ' . $gradient_color_a . ' 49.9%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-diagonal-inverted',
+				),
+				array(
+					'name'     => __( 'Horizontal', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $gradient_color_a . ' 50%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-horizontal',
+				),
+				array(
+					'name'     => __( 'Horizontal inverted', 'en' ),
+					'gradient' => 'linear-gradient(to top, ' . $gradient_color_a . ' 50%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-horizontal-inverted',
+				),
+				array(
+					'name'     => __( 'Diagonal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'diagonal',
+				),
+				array(
+					'name'     => __( 'Diagonal inverted gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top left, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'diagonal-inverted',
+				),
+				array(
+					'name'     => __( 'Horizontal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'horizontal',
+				),
+				array(
+					'name'     => __( 'Horizontal inverted gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'horizontal-inverted',
+				),
+				array(
+					'name'     => __( 'Stripe', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, transparent 20%, ' . $gradient_color_a . ' 20%, ' . $gradient_color_a . ' 80%, transparent 80%)',
+					'slug'     => 'stripe',
 				),
 			)
 		);

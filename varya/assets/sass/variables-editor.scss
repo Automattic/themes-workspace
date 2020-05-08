@@ -25,6 +25,8 @@
 	@include quote-variables();
 	@include separator-variables();
 	@include utilities-variables();
+	/* Components */
+	@include header-variables();
 	/* Vendors */
 	@include woocommerce-variables();
 }

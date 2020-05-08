@@ -92,7 +92,7 @@ private $varya_custom_color_variables = array();
 			return false;
 		}
 
-		if ( $opacity == 100 )    // $transparency == 0
+		if ( $opacity == 100 )  // $transparency == 0
 			return strtoupper( $foreground );
 		if ( $opacity == 0 )    // $transparency == 100
 			return strtoupper( $background );
@@ -212,6 +212,7 @@ private $varya_custom_color_variables = array();
 		}
 
 		foreach ( $this->$varya_custom_color_variables as $variable ) {
+
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 
 				$theme_mod_variable_name = $variable[0];
@@ -223,7 +224,7 @@ private $varya_custom_color_variables = array();
 
 				$theme_css .= $theme_mod_variable_name . ":" . $theme_mod_custom_color . ";";
 
-				if ( $theme_mod_variable_name === '--global--color-primary' ) {
+				if ( $theme_mod_variable_name === '--global--color-primary' && $theme_mod_default_color !== $theme_mod_custom_color ) {
 					$theme_css .= "--global--color-primary-hover: " . $adjusted_color . ";";
 				}
 

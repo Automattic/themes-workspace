@@ -39,16 +39,6 @@
 		background: none;
 	}
 
-	&.is-style-default {
-		&.alignleft,
-		&.aligncenter,
-		&.alignright {
-			blockquote > * {
-				text-align: center;
-			}
-		}
-	}
-
     &.is-style-large {
         border-left-color: var(--quote--border-color);
         border-left-style: solid;

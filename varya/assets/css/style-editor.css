@@ -119,23 +119,6 @@ a {
 	cursor: pointer;
 }
 
-.wp-block:not([data-align="full"]):not([data-align="wide"]) {
-	max-width: var(--responsive--aligndefault-width);
-}
-
-.wp-block[data-align="wide"], .wp-block.alignwide {
-	max-width: var(--responsive--alignwide-width);
-}
-
-.wp-block.block-editor-default-block-appender > textarea {
-	font-family: var(--global--font-secondary);
-	font-size: var(--global--font-size-md);
-}
-
-div[data-type="core/button"] {
-	display: block;
-}
-
 /**
  * Elements
  * - Styles for basic HTML elemants
@@ -469,6 +452,10 @@ object {
 	border-radius: 0;
 }
 
+div[data-type="core/button"] {
+	display: block;
+}
+
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--cover--color-background);
@@ -794,6 +781,30 @@ dt {
 	color: currentColor;
 }
 
+.wp-block-navigation .wp-block-navigation__container {
+	background: var(--global--color-background);
+	padding: 0;
+}
+
+.wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__content {
+	font-family: var(--primary-nav--font-family);
+	font-size: var(--primary-nav--font-size);
+	font-weight: var(--primary-nav--font-weight);
+	padding: var(--primary-nav--padding);
+}
+
+.wp-block-navigation .has-child .wp-block-navigation__container {
+	box-shadow: var(--global--elevation);
+}
+
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:hover, .wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:focus {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link__content {
+	color: currentColor;
+}
+
 p {
 	line-height: var(--wp--typography--line-height, --global--line-height-body);
 }
@@ -1024,6 +1035,10 @@ table th,
 	padding: calc( 0.5 * var(--global--spacing-unit));
 }
 
+pre.wp-block-verse {
+	padding: 0;
+}
+
 /**
 * Editor Post Title
 * - Needs a special styles
@@ -1035,6 +1050,11 @@ table th,
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height);
+}
+
+.wp-block.block-editor-default-block-appender > textarea {
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-md);
 }
 
 .has-primary-color[class] {
@@ -1129,6 +1149,11 @@ table th,
 	color: var(--global--color-primary);
 }
 
+.is-tiny-text,
+.has-tiny-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
 .is-small-text,
 .has-small-font-size {
 	font-size: var(--global--font-size-sm);
@@ -1171,6 +1196,68 @@ table th,
 [data-block] [data-block] {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+/* 
+ * Custom gradients 
+*/
+.has-hard-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+}
+
+.has-hard-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+}
+
+.has-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
+.has-hard-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
+.has-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-stripe-gradient-background {
+	background: linear-gradient(to bottom, transparent 20%, var(--global--color-secondary) 20%, var(--global--color-secondary) 80%, transparent 80%);
+}
+
+/* Block Alignments */
+.wp-block {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.wp-block[data-align="wide"], .wp-block.alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block[data-align="full"], .wp-block.alignfull {
+	max-width: none;
+}
+
+.alignleft {
+	margin: 0;
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.alignright {
+	margin: 0;
+	margin-left: var(--global--spacing-horizontal);
 }
 
 /**

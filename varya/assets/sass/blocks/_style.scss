@@ -20,6 +20,7 @@
 @import "legacy/style"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
 @import "list/style";
 @import "media-text/style";
+@import "navigation/style";
 @import "paragraph/style";
 @import "posts-list/style";
 @import "pullquote/style";
@@ -30,5 +31,6 @@
 @import "spacer/style";
 @import "subscription/style";
 @import "table/style";
+@import "verse/style";
 @import "video/style";
 @import "utilities/style"; // Import LAST to cascade properly

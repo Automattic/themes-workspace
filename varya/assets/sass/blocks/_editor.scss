@@ -18,6 +18,7 @@
 @import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
 @import "list/editor";
 @import "media-text/editor";
+@import "navigation/editor";
 @import "paragraph/editor";
 @import "posts-list/editor";
 @import "pullquote/editor";
@@ -27,4 +28,5 @@
 @import "slideshow/editor";
 @import "subscription/editor";
 @import "table/editor";
+@import "verse/editor";
 @import "utilities/editor"; // Import LAST to cascade properly
