@@ -3394,6 +3394,11 @@ nav a {
  * Author
  */
 /* Author description */
+.author-bio {
+	font-size: var(--global--font-size-xs);
+	max-width: var(--responsive--aligndefault-width);
+}
+
 .site-main > article > .author-bio {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
@@ -3401,6 +3406,10 @@ nav a {
 .author-bio .author-title {
 	font-family: var(--entry-author-bio--font-family);
 	font-size: var(--entry-author-bio--font-size);
+}
+
+.author-bio .author-description {
+	font-size: var(--global--font-size-md);
 }
 
 /* Next/Previous navigation */
