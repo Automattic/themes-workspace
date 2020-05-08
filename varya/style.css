@@ -46,6 +46,14 @@ License: GPLv2
 Source: https://wordpress.org/themes/twentytwenty/
 Included as part of the following classes and functions:
 - sanitize_select()
+
+Color Contrast Validation
+Copyright (C) 2016 Per Soderlind
+License: GNU General Public License v3 
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Source: https://github.com/soderlind/2016-customizer-demo
+Included as part of the following classes and functions:
+- on_customize_controls_enqueue_scripts(
 */
 /**
  * Layout
