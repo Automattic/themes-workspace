@@ -206,10 +206,6 @@
 	// Top-level Item Link Colors
 	.main-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
-
-		+ svg {
-			fill: var(--primary-nav--color-link-hover);
-		}
 	}
 
 	// Menu Item Link Colors
@@ -235,6 +231,10 @@
 			font-size: var(--primary-nav--font-size);
 			font-weight: var(--primary-nav--font-weight);
 			padding: var(--primary-nav--padding);
+		}
+
+		& + svg {
+			fill: currentColor;
 		}
 
 		&:hover,

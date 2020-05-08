@@ -109,7 +109,6 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( array(
 			varya_fonts_url(),
-			'./assets/css/variables-editor.css',
 			'./assets/css/style-editor.css'
 		) );
 
@@ -157,27 +156,27 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya' ),
 					'slug'  => 'primary',
-					'color' => '#000000',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#000000' : get_theme_mod( 'varya_--global--color-primary' )
 				),
 				array(
 					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => '#A36265',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' )
 				),
 				array(
 					'name'  => __( 'Foreground', 'varya' ),
 					'slug'  => 'foreground',
-					'color' => '#333333',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#333333' : get_theme_mod( 'varya_--global--color-foreground' )
 				),
 				array(
 					'name'  => __( 'Background Light', 'varya' ),
 					'slug'  => 'background-light',
-					'color' => '#FAFBF6',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'varya_--global--color-background-light' )
 				),
 				array(
 					'name'  => __( 'Background', 'varya' ),
 					'slug'  => 'background',
-					'color' => '#FFFFFF',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FFFFFF' : get_theme_mod( 'varya_--global--color-background' )
 				),
 			)
 		);
@@ -383,9 +382,14 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
 
 /**
- * Custom Comment Walker template.
+ * Custom comment walker template.
  */
 require get_template_directory() . '/classes/class-varya-walker-comment.php';
+
+/**
+ * Custom colors class.
+ */
+require get_template_directory() . '/classes/class-varya-custom-colors.php';
 
 /**
  * Enhance the theme by hooking into WordPress.

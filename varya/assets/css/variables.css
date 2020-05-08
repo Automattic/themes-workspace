@@ -208,7 +208,7 @@
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
 	--comments--border-color: var(--global--color-border);
-	--footer--color-text: var(--global--color-foreground-light);
+	--footer--color-text: var(--global--color-foreground);
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
