@@ -268,6 +268,9 @@ private $varya_custom_color_variables = array();
 
 	/**
 	 * Customizer contrast validation warnings.
+	 * 
+	 * @author Per Soderlind
+	 * @link https://github.com/soderlind/2016-customizer-demo
 	 */
 	function on_customize_controls_enqueue_scripts() {
 		$handle = 'wcag-validate-customizer-color-contrast';

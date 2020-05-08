@@ -1,5 +1,9 @@
-/* global wp, _validateWCAGColorContrastExports */
-/* exported validateWCAGColorContrast */
+/**
+ * @author Per Soderlind
+ * @link https://github.com/soderlind/2016-customizer-demo
+ * global wp, _validateWCAGColorContrastExports
+ * exported validateWCAGColorContrast
+**/
 ( function( $, api, exports ) {
 	var self = {
 		validate_color_contrast: []
@@ -7,6 +11,7 @@
 	if ( exports ) {
 		$.extend( self, exports );
 	}
+
 	/**
 	 * Add contrast validation to a control if it is entitled (is a valid color control).
 	 *
@@ -33,9 +38,7 @@
 			var code = 'contrast_warning';
 
 			_.each ( self.validate_color_contrast[setting.id], function( color_to_compare_id ){
-				setting.notifications.remove( code );
 				var color_to_compare = $( '#customize-control-' + color_to_compare_id + ' .wp-color-result')[0].style.backgroundColor.match(/\d+/g);
-				// var validationWarning = new api.Notification( code, { message: self.sprintf( 'Color is not accessible against %s.<br/>Contrast ratio: %s<br/>Contrast score: %s', color_to_compare_id, contrast, score), type: 'warning' } );
 				var contrast	= self.rgb( [ parseInt(color_to_compare[0]), parseInt(color_to_compare[1]), parseInt(color_to_compare[2]) ], self.hexRgb( value ) );
 				var score		= self.score( contrast );
 				if ( score === 'Fail' ){
@@ -45,15 +48,17 @@
 
 			if ( failsWCAG ){
 				var validationWarning = new api.Notification( code, { message: 'This color combination may be hard for people to read. Try using a brighter background color and/or a darker text color.', type: 'warning' } );
-				setting.notifications.add( code, validationWarning );
+				setTimeout( function(){
+					setting.notifications.add( code, validationWarning );
+				}, 400);
 			} else {
-				setting.notifications.remove( code );
+				setTimeout( function(){
+					setting.notifications.remove( code );
+				}, 400);
 			}
 
 			return value;
 		} 
-
-		return true;
 	};
 
 	/**
@@ -81,7 +86,6 @@
 	// 		} else {
 	// 			setting.notifications.remove( code );
 	// 		}
-
 	// 		return value;
 	// 	}
 	// });
