@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Dalston
+ * @subpackage Sk8prk
  * @since 1.0.0
  */
 
