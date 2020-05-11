@@ -2,6 +2,7 @@
  * @author Per Soderlind
  * @link https://github.com/soderlind/2016-customizer-demo
  * global wp, _validateWCAGColorContrastExports
+ * global validateContrastText
  * exported validateWCAGColorContrast
 **/
 ( function( $, api, exports ) {
@@ -47,7 +48,7 @@
 			});
 
 			if ( failsWCAG ){
-				var validationWarning = new api.Notification( code, { message: 'This color combination may be hard for people to read. Try using a brighter background color and/or a darker text color.', type: 'warning' } );
+				var validationWarning = new api.Notification( code, { message: validateContrastText, type: 'warning' } );
 				setTimeout( function(){
 					setting.notifications.add( code, validationWarning );
 				}, 400);

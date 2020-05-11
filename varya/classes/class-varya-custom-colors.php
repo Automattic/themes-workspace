@@ -14,7 +14,7 @@
 
 class Varya_Custom_Colors {
 
-private $varya_custom_color_variables = array();
+	private $varya_custom_color_variables = array();
 
 	function __construct() {
 
@@ -290,6 +290,9 @@ private $varya_custom_color_variables = array();
 
 		wp_enqueue_script( $handle, $src, $deps );
 		wp_script_add_data( $handle, 'data', sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) ) );
+
+		// Custom color contrast validation text
+		wp_localize_script( $handle, 'validateContrastText', esc_html__( 'This color combination may be hard for people to read. Try using a brighter background color and/or a darker foreground color.'));
 	}
 
 	/**
