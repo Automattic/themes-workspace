@@ -13,6 +13,8 @@
 		$.extend( self, exports );
 	}
 
+	var code = 'contrast_warning';
+
 	/**
 	 * Add contrast validation to a control if it is entitled (is a valid color control).
 	 *
@@ -36,7 +38,6 @@
 		 */
 		setting.validate = function (value){
 			var failsWCAG = false;
-			var code = 'contrast_warning';
 
 			_.each ( self.validate_color_contrast[setting.id], function( color_to_compare_id ){
 				var color_to_compare = $( '#customize-control-' + color_to_compare_id + ' .wp-color-result')[0].style.backgroundColor.match(/\d+/g);
@@ -50,11 +51,11 @@
 			if ( failsWCAG ){
 				var validationWarning = new api.Notification( code, { message: validateContrastText, type: 'warning' } );
 				setTimeout( function(){
-					setting.notifications.add( code, validationWarning );
+					self.custom_colors_setting.notifications.add( code, validationWarning );
 				}, 400);
 			} else {
 				setTimeout( function(){
-					setting.notifications.remove( code );
+					self.custom_colors_setting.notifications.remove( code );
 				}, 400);
 			}
 
@@ -78,18 +79,15 @@
 		self.addWCAGColorContrastValidation( setting );
 	} );
 
-	// api( 'custom_colors_active', function( setting ) {
-	// 	setting.validate = function( value ) {
-	// 		var code = 'contrast_notice';
-	// 		if ( value == 'custom' ){
-	// 			var notification = new api.Notification( code, { type: 'warning', message: 'Please ensure that your color choices create high enough contrast ratios for readers. Information on contrast accessibility can be found <a href="/">here</a>.' } );
-	// 			setting.notifications.add( code, notification );
-	// 		} else {
-	// 			setting.notifications.remove( code );
-	// 		}
-	// 		return value;
-	// 	}
-	// });
+	api( 'custom_colors_active', function( setting ) {
+		self.custom_colors_setting = setting;
+		setting.validate = function( value ) {
+			if ( value == 'default' ){
+				setting.notifications.remove( code );
+			}
+			return value;
+		}
+	});
 
 	self.sprintf = function( format ) {
 		for( var i=1; i < arguments.length; i++ ) {
