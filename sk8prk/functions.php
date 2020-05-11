@@ -27,7 +27,7 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
             get_template_directory_uri() . '/assets/css/style-editor.css',
             varya_sk8prk_fonts_url(),
 			'./assets/css/variables.css',
-			'./assets/css/style-editor.css',
+			'style.css',
 		) );
 
 		// Add child theme editor font sizes to match Sass-map variables in `_config-child-theme-deep.scss`.
@@ -48,7 +48,7 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 				),
 				array(
 					'name'      => __( 'Medium', 'varya-sk8prk' ),
-					'shortName' => __( 'R', 'varya-sk8prk' ),
+					'shortName' => __( 'M', 'varya-sk8prk' ),
 					'size'      => 20,
 					'slug'      => 'medium',
 				),
