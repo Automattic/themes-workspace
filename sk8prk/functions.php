@@ -83,8 +83,8 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 					'color' => '#000000',
 				),
 				array(
-					'name'  => __( 'Secondary', 'varya-sk8prk' ),
-					'slug'  => 'secondary',
+					'name'  => __( 'Background', 'varya-sk8prk' ),
+					'slug'  => 'background',
 					'color' => '#BFF5A5',
 				),
 			)
@@ -97,7 +97,7 @@ add_action( 'after_setup_theme', 'varya_sk8prk_setup', 12 );
  * Filter the content_width in pixels, based on the child-theme's design and stylesheet.
  */
 function varya_sk8prk_content_width() {
-	return 750;
+	return 744;
 }
 add_filter( 'varya_content_width', 'varya_sk8prk_content_width' );
 
