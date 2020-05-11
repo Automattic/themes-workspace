@@ -38,7 +38,7 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 					'name'      => __( 'Tiny', 'varya-sk8prk' ),
 					'shortName' => __( 'XS', 'varya-sk8prk' ),
 					'size'      => 14,
-					'slug'      => 'small',
+					'slug'      => 'xs',
 				),
 				array(
 					'name'      => __( 'Small', 'varya-sk8prk' ),
@@ -50,19 +50,19 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 					'name'      => __( 'Medium', 'varya-sk8prk' ),
 					'shortName' => __( 'R', 'varya-sk8prk' ),
 					'size'      => 20,
-					'slug'      => 'small',
+					'slug'      => 'medium',
 				),
 				array(
 					'name'      => __( 'Large', 'varya-sk8prk' ),
 					'shortName' => __( 'L', 'varya-sk8prk' ),
 					'size'      => 24,
-					'slug'      => 'normal',
+					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'XL', 'varya-sk8prk' ),
 					'shortName' => __( 'XL', 'varya-sk8prk' ),
 					'size'      => 36,
-					'slug'      => 'large',
+					'slug'      => 'xl',
 				),
 				array(
 					'name'      => __( 'Huge', 'varya-sk8prk' ),
