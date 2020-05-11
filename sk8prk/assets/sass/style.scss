@@ -12,3 +12,23 @@ Template: varya
 Text Domain: sk8prk 
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
 */
+
+// Typography
+// Support more than five font sizes
+:root {
+    .has-xs-font-size {
+        font-size: var(--global--font-size-xs);
+    }
+    .has-xl-font-size {
+        font-size: var(--global--font-size-xl);
+        line-height: var(--global--line-height-heading);
+    }
+    .has-huge-font-size {
+        font-size: var(--global--font-size-xxl);
+        line-height: var(--global--line-height-heading);
+    }
+}
+
+h4, h5, h6 {
+    text-transform: uppercase;
+}

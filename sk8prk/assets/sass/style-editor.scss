@@ -1,0 +1,17 @@
+:root {
+    .has-xs-font-size {
+        font-size: var(--global--font-size-xs);
+    }
+    .has-xl-font-size {
+        font-size: var(--global--font-size-xl);
+        line-height: var(--global--line-height-heading);
+    }
+    .has-huge-font-size {
+        font-size: var(--global--font-size-xxl);
+        line-height: var(--global--line-height-heading);
+    }
+}
+
+h4, h5, h6 {
+    text-transform: uppercase;
+}
