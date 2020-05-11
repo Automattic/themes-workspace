@@ -14,14 +14,14 @@
 
 class Varya_Custom_Colors {
 
-private $varya_custom_color_variables = array();
+	private $varya_custom_color_variables = array();
 
 	function __construct() {
 
 		/**
 		 * Define color variables
 		 */
-		$this->$varya_custom_color_variables = array(
+		$this->varya_custom_color_variables = array(
 			array( '--global--color-primary', '#000000', 'Primary Color' ),
 			array( '--global--color-secondary', '#A36265', 'Secondary Color' ),
 			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
@@ -174,7 +174,7 @@ private $varya_custom_color_variables = array();
 		/**
 		 * Create customizer color controls.
 		 */
-		foreach ( $this->$varya_custom_color_variables as $variable ) {
+		foreach ( $this->varya_custom_color_variables as $variable ) {
 			$wp_customize->add_setting(
 				"varya_$variable[0]",
 				array(
@@ -206,7 +206,7 @@ private $varya_custom_color_variables = array();
 			$theme_css = ':root {';
 		}
 
-		foreach ( $this->$varya_custom_color_variables as $variable ) {
+		foreach ( $this->varya_custom_color_variables as $variable ) {
 
 			if ( '' !== get_theme_mod( "varya_$variable" ) ) {
 
