@@ -13,6 +13,9 @@ Text Domain: sk8prk
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
 */
 
+// Responsive
+@import "responsive";
+
 // Typography
 // Support more than five font sizes
 :root {
@@ -31,4 +34,25 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 
 h4, h5, h6 {
     text-transform: uppercase;
+}
+
+.entry-content, 
+.entry-content [class*="inner-container"] {
+    p {
+        &:first-child {
+            text-indent: 30%;
+        }
+    }
+}
+
+.entry-content,
+.entry-content [class*="inner-container"] {
+    p, h4, h5, h6 {
+        &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+        &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+            @include media( tablet ) {
+                max-width: 544px;
+            }
+        }
+    }
 }
