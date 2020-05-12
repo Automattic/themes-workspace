@@ -114,10 +114,13 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 	margin-top: 0;
 }
 
-.site-header .navigation-container .main-navigation a {
+.site-header .navigation-container .main-navigation .menu-item {
+	margin-left: calc( 2 * var(--global--spacing-unit));
+}
+
+.site-header .navigation-container .main-navigation .menu-item a {
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-left: var(--global--spacing-unit);
 }
 
 .site-header .navigation-container .main-navigation .current-menu-item, .site-header .navigation-container .main-navigation .current-page-item {

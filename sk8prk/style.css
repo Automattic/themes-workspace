@@ -161,8 +161,9 @@ h4, h5, h6 {
 
 .wp-block-button__link {
 	font-weight: bold;
-	text-transform: uppercase;
+	letter-spacing: 1px;
 	min-width: 264px;
+	text-transform: uppercase;
 }
 
 .wp-block-gallery .blocks-gallery-grid {

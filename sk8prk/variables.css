@@ -41,8 +41,9 @@
 	--entry-header--font-size: var(--heading--font-size-h1);
 
 	--button--border-radius: 0px;
-	--button--color-text: var(--global--color-foreground);
+	--button--color-text: var(--global--color-background);
 	--button--color-background: var(--global--color-primary);
+	--button--font-weight: bold;
 	--button--font-family: var(--global--font-secondary);
 	--button--font-size: var(--global--font-size-sm);
 
