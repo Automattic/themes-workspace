@@ -44,6 +44,11 @@ class Varya_Custom_Colors {
 		 * Enqueue color variables for editor.
 		 */
 		add_action( 'enqueue_block_editor_assets', array( $this, 'varya_editor_custom_color_variables' ) );
+
+		/**
+		 * Enqueue contrast checking.
+		 */
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'on_customize_controls_enqueue_scripts' ) );
 	}
 
 	/**
@@ -260,6 +265,34 @@ class Varya_Custom_Colors {
 		if ( 'default' !== get_theme_mod( 'custom_colors_active' ) ) {
 			wp_add_inline_style( 'varya-editor-variables', $this->varya_generate_custom_color_variables( 'editor' ) );
 		}
+	}
+
+	/**
+	 * Customizer contrast validation warnings.
+	 * 
+	 * @author Per Soderlind
+	 * @link https://github.com/soderlind/2016-customizer-demo
+	 */
+	function on_customize_controls_enqueue_scripts() {
+		$handle = 'wcag-validate-customizer-color-contrast';
+		$src    = get_template_directory_uri() . '/assets/js/customizer-validate-wcag-color-contrast.js';
+		$deps 	= [ 'customize-controls' ];
+
+		$exports = [
+			'validate_color_contrast' => [
+				// key = current color control , values = array with color controls to check color contrast against
+				'varya_--global--color-primary' => [ "varya_--global--color-background" ],
+				'varya_--global--color-secondary' => [ "varya_--global--color-background" ],
+				'varya_--global--color-foreground' => [ "varya_--global--color-background" ],
+				'varya_--global--color-background' => [ "varya_--global--color-foreground" ],
+			],
+		];
+
+		wp_enqueue_script( $handle, $src, $deps );
+		wp_script_add_data( $handle, 'data', sprintf( 'var _validateWCAGColorContrastExports = %s;', wp_json_encode( $exports ) ) );
+
+		// Custom color contrast validation text
+		wp_localize_script( $handle, 'validateContrastText', esc_html__( 'This color combination may be hard for people to read. Try using a brighter background color and/or a darker foreground color.'));
 	}
 
 	/**
