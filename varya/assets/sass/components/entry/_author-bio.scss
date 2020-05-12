@@ -6,6 +6,9 @@
 
 .author-bio {
 
+	font-size: var(--global--font-size-xs);
+	max-width: var(--responsive--aligndefault-width);
+
 	.site-main > article > & {
 		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
@@ -16,8 +19,6 @@
 	}
 
 	.author-description {
-		.author-link {
-
-		}
+		font-size: var(--global--font-size-md);
 	}
 }
