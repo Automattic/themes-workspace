@@ -281,10 +281,10 @@ class Varya_Custom_Colors {
 		$exports = [
 			'validate_color_contrast' => [
 				// key = current color control , values = array with color controls to check color contrast against
-				'varya_--global--color-primary' => [ "varya_--global--color-background", "varya_--global--color-background-light" ],
-				'varya_--global--color-foreground' => [ "varya_--global--color-background", "varya_--global--color-background-light" ],
-				'varya_--global--color-background' => [ "varya_--global--color-primary", "varya_--global--color-foreground" ],
-				'varya_--global--color-background-light' => [ "varya_--global--color-primary", "varya_--global--color-foreground" ],
+				'varya_--global--color-primary' => [ "varya_--global--color-background" ],
+				'varya_--global--color-secondary' => [ "varya_--global--color-background" ],
+				'varya_--global--color-foreground' => [ "varya_--global--color-background" ],
+				'varya_--global--color-background' => [ "varya_--global--color-foreground" ],
 			],
 		];
 
