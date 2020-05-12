@@ -24,8 +24,8 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( array(
-            get_template_directory_uri() . '/assets/css/style-editor.css',
-            varya_sk8prk_fonts_url(),
+			get_template_directory_uri() . '/assets/css/style-editor.css',
+			varya_sk8prk_fonts_url(),
 			'variables.css',
 			'style.css',
 		) );
