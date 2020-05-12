@@ -13,8 +13,9 @@ Text Domain: sk8prk
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
 */
 
-// Responsive
 @import "responsive";
+@import "header";
+@import "../block-extends/group";
 
 // Typography
 // Support more than five font sizes
@@ -45,14 +46,36 @@ h4, h5, h6 {
     }
 }
 
-.entry-content,
-.entry-content [class*="inner-container"] {
-    p, h4, h5, h6 {
-        &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
-        &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
-            @include media( tablet ) {
-                max-width: 544px;
-            }
+// .entry-content,
+// .entry-content [class*="inner-container"] {
+//     &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator),
+//     &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
+//         p, h4, h5, h6 {
+//             @include media( tablet ) {
+//                 max-width: 544px;
+//             }
+//         }
+//         .wp-block-columns {
+//             p, h4, h5, h6 {
+//                 @include media( tablet ) {
+//                     max-width: 100%;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.wp-block-button__link {
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 264px;
+}
+
+.wp-block-gallery {
+    .blocks-gallery-grid {
+        width: 100%; // is this a Gutenberg bug?
+        .blocks-gallery-item {
+            margin: 0;
         }
     }
 }

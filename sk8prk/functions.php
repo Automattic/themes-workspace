@@ -26,7 +26,7 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 		add_editor_style( array(
             get_template_directory_uri() . '/assets/css/style-editor.css',
             varya_sk8prk_fonts_url(),
-			'./assets/css/variables.css',
+			'variables.css',
 			'style.css',
 		) );
 
@@ -110,7 +110,7 @@ function varya_sk8prk_scripts() {
     wp_enqueue_style( 'varya-sk8park-fonts', varya_sk8prk_fonts_url(), array(), null );
 
 	// Child theme variables
-	wp_enqueue_style( 'varya-sk8prk-variables-style', get_stylesheet_directory_uri() . '/assets/css/variables.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'varya-sk8prk-variables-style', get_stylesheet_directory_uri() . '/variables.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// dequeue parent styles
 	// wp_dequeue_style( 'varya-variables-style' );
@@ -118,11 +118,9 @@ function varya_sk8prk_scripts() {
 	// enqueue child styles
 	wp_enqueue_style('varya-sk8prk-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ));
 
-	// Override responsive width styles
-	// wp_enqueue_style( 'varya-sk8prk-responsive-style', get_stylesheet_directory_uri() . '/responsive.css', array(), wp_get_theme()->get( 'Version' ) );
-
 	// enqueue child RTL styles
 	wp_style_add_data( 'varya-sk8prk-style', 'rtl', 'replace' );
+
 }
 add_action( 'wp_enqueue_scripts', 'varya_sk8prk_scripts', 99 );
 
@@ -130,15 +128,11 @@ add_action( 'wp_enqueue_scripts', 'varya_sk8prk_scripts', 99 );
  * Enqueue Custom Cover Block Styles and Scripts
  */
 function varya_sk8prk_block_extends() {
-	// Button Block
-	// wp_enqueue_script( 'varya-sk8prk-extend-button-block',
-	// 	get_stylesheet_directory_uri() . '/block-extends/extend-button-block.js',
-	// 	array( 'wp-blocks' )
-	// );
-
-	// wp_enqueue_style( 'varya-sk8prk-extend-button-block',
-	// 	get_stylesheet_directory_uri() . '/block-extends/extend-button-block.css'
-	// );
+	// Block Tweaks
+	wp_enqueue_script( 'varya-sk8prk-block-extends',
+		get_stylesheet_directory_uri() . '/assets/block-extends/extend-blocks.js',
+		array( 'wp-blocks' )
+	);
 }
 add_action( 'enqueue_block_assets', 'varya_sk8prk_block_extends' );
 
@@ -152,7 +146,7 @@ function varya_sk8prk_fonts_url() : string {
 
 	$font_families   = array();
 	$font_families[] = 'family=Red+Hat+Display:ital,wght@0,900;1,900';
-	$font_families[] = 'family=Red+Hat+Text:ital,wght@0,400;0,500;1,400;1,500';
+	$font_families[] = 'family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700';
 	$font_families[] = 'display=swap';
 
     // Make a single request for the theme fonts.

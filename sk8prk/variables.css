@@ -13,6 +13,8 @@
 	--global--color-background-dark: #BFF5A5;
 	--global--color-border: var(--global--color-secondary);
 	/* Font Size */
+	--global--font-size-xs: 14px;
+	--global--font-size-sm: 16px;
 	--global--font-size-root: 20px;
 	--global--font-size-md: 20px;
 	--global--font-size-lg: 24px;
@@ -36,4 +38,22 @@
 	--heading--line-height-h1: 1.2;
 	--heading--line-height-h2: 1.2;
 	--heading--line-height-h3: 1.4;
+	--entry-header--font-size: var(--heading--font-size-h1);
+
+	--button--border-radius: 0px;
+	--button--color-text: var(--global--color-foreground);
+	--button--color-background: var(--global--color-primary);
+	--button--font-family: var(--global--font-secondary);
+	--button--font-size: var(--global--font-size-sm);
+
+	--cover--color-foreground: var(--global--color-background);
+
+	--branding--title--font-size: var(--global--font-size-lg);
+
+	--primary-nav--justify-content: space-between;
+	--primary-nav--font-family: var(--global--font-primary);
+	--primary-nav--font-weight: bold;
+	--primary-nav--padding: 0 0 6px 0;
+
+	--social-nav--padding: calc( .67 * var(--global--spacing-unit) );
 }
