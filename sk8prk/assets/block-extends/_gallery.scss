@@ -1,4 +1,11 @@
 .wp-block-gallery {
+    .blocks-gallery-grid {
+        width: 100%; // is this a Gutenberg bug?
+        .blocks-gallery-item {
+            margin: 0;
+        }
+    }
+
     &.is-style-duotone {
         .blocks-gallery-item > figure {
             > img {
