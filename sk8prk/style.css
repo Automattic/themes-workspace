@@ -127,6 +127,42 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 	border-bottom: 3px solid var(--global--color-border);
 }
 
+.wp-block-cover.is-style-duotone::before, .wp-block-cover.is-style-duotone::after {
+	content: " ";
+	left: 0;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wp-block-cover.is-style-duotone::before {
+	background-color: #f2f2f2;
+}
+
+.wp-block-cover.is-style-duotone::after {
+	background-color: var(--global--color-background);
+}
+
+.wp-block-gallery.is-style-duotone .blocks-gallery-item > figure::before, .wp-block-gallery.is-style-duotone .blocks-gallery-item > figure::after {
+	content: " ";
+	left: 0;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wp-block-gallery.is-style-duotone .blocks-gallery-item > figure::before {
+	background-color: #f2f2f2;
+}
+
+.wp-block-gallery.is-style-duotone .blocks-gallery-item > figure::after {
+	background-color: var(--global--color-background);
+}
+
 .wp-block-group.is-style-outline {
 	border: 3px solid var(--global--color-border);
 	padding: calc( 3 * var(--global--spacing-unit));
