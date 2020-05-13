@@ -93,23 +93,23 @@ body[class*="woocommerce"] .entry-content > .woocommerce {
 /**
  * Output
  */
-body[class*="woocommerce"] #page #respond input#submit,
-body[class*="woocommerce"] #page #respond input#submit.alt,
-body[class*="woocommerce"] #page a.button,
-body[class*="woocommerce"] #page a.button.alt,
-body[class*="woocommerce"] #page button.button,
-body[class*="woocommerce"] #page button.button.alt,
-body[class*="woocommerce"] #page input.button,
-body[class*="woocommerce"] #page input.button.alt,
-body[class*="woocommerce"] #page .cart .button,
-body[class*="woocommerce"] #page .cart input.button,
-body[class*="woocommerce"] #page a.added_to_cart,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit,
-body[class*="woocommerce"] #page .woocommerce a.button,
-body[class*="woocommerce"] #page .woocommerce button.button,
-body[class*="woocommerce"] #page .woocommerce input.button,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a {
+body[class*="woocommerce"] #page .site-content #respond input#submit,
+body[class*="woocommerce"] #page .site-content #respond input#submit.alt,
+body[class*="woocommerce"] #page .site-content a.button,
+body[class*="woocommerce"] #page .site-content a.button.alt,
+body[class*="woocommerce"] #page .site-content button.button,
+body[class*="woocommerce"] #page .site-content button.button.alt,
+body[class*="woocommerce"] #page .site-content input.button,
+body[class*="woocommerce"] #page .site-content input.button.alt,
+body[class*="woocommerce"] #page .site-content .cart .button,
+body[class*="woocommerce"] #page .site-content .cart input.button,
+body[class*="woocommerce"] #page .site-content a.added_to_cart,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
 	cursor: pointer;
@@ -123,115 +123,115 @@ body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a {
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-body[class*="woocommerce"] #page #respond input#submit:before,
-body[class*="woocommerce"] #page #respond input#submit.alt:before,
-body[class*="woocommerce"] #page a.button:before,
-body[class*="woocommerce"] #page a.button.alt:before,
-body[class*="woocommerce"] #page button.button:before,
-body[class*="woocommerce"] #page button.button.alt:before,
-body[class*="woocommerce"] #page input.button:before,
-body[class*="woocommerce"] #page input.button.alt:before,
-body[class*="woocommerce"] #page .cart .button:before,
-body[class*="woocommerce"] #page a.added_to_cart:before,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:before,
-body[class*="woocommerce"] #page .woocommerce a.button:before,
-body[class*="woocommerce"] #page .woocommerce button.button:before,
-body[class*="woocommerce"] #page .woocommerce input.button:before,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:before,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:before, body[class*="woocommerce"] #page #respond input#submit:after,
-body[class*="woocommerce"] #page #respond input#submit.alt:after,
-body[class*="woocommerce"] #page a.button:after,
-body[class*="woocommerce"] #page a.button.alt:after,
-body[class*="woocommerce"] #page button.button:after,
-body[class*="woocommerce"] #page button.button.alt:after,
-body[class*="woocommerce"] #page input.button:after,
-body[class*="woocommerce"] #page input.button.alt:after,
-body[class*="woocommerce"] #page .cart .button:after,
-body[class*="woocommerce"] #page a.added_to_cart:after,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:after,
-body[class*="woocommerce"] #page .woocommerce a.button:after,
-body[class*="woocommerce"] #page .woocommerce button.button:after,
-body[class*="woocommerce"] #page .woocommerce input.button:after,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:after,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:after {
+body[class*="woocommerce"] #page .site-content #respond input#submit:before,
+body[class*="woocommerce"] #page .site-content #respond input#submit.alt:before,
+body[class*="woocommerce"] #page .site-content a.button:before,
+body[class*="woocommerce"] #page .site-content a.button.alt:before,
+body[class*="woocommerce"] #page .site-content button.button:before,
+body[class*="woocommerce"] #page .site-content button.button.alt:before,
+body[class*="woocommerce"] #page .site-content input.button:before,
+body[class*="woocommerce"] #page .site-content input.button.alt:before,
+body[class*="woocommerce"] #page .site-content .cart .button:before,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:before,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:before,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:before,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:before,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:before,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:before,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:before, body[class*="woocommerce"] #page .site-content #respond input#submit:after,
+body[class*="woocommerce"] #page .site-content #respond input#submit.alt:after,
+body[class*="woocommerce"] #page .site-content a.button:after,
+body[class*="woocommerce"] #page .site-content a.button.alt:after,
+body[class*="woocommerce"] #page .site-content button.button:after,
+body[class*="woocommerce"] #page .site-content button.button.alt:after,
+body[class*="woocommerce"] #page .site-content input.button:after,
+body[class*="woocommerce"] #page .site-content input.button.alt:after,
+body[class*="woocommerce"] #page .site-content .cart .button:after,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:after,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:after,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:after,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:after,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:after,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:after,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:after {
 	content: '';
 	display: block;
 	height: 0;
 	width: 0;
 }
 
-body[class*="woocommerce"] #page #respond input#submit:before,
-body[class*="woocommerce"] #page #respond input#submit.alt:before,
-body[class*="woocommerce"] #page a.button:before,
-body[class*="woocommerce"] #page a.button.alt:before,
-body[class*="woocommerce"] #page button.button:before,
-body[class*="woocommerce"] #page button.button.alt:before,
-body[class*="woocommerce"] #page input.button:before,
-body[class*="woocommerce"] #page input.button.alt:before,
-body[class*="woocommerce"] #page .cart .button:before,
-body[class*="woocommerce"] #page a.added_to_cart:before,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:before,
-body[class*="woocommerce"] #page .woocommerce a.button:before,
-body[class*="woocommerce"] #page .woocommerce button.button:before,
-body[class*="woocommerce"] #page .woocommerce input.button:before,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:before,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:before {
+body[class*="woocommerce"] #page .site-content #respond input#submit:before,
+body[class*="woocommerce"] #page .site-content #respond input#submit.alt:before,
+body[class*="woocommerce"] #page .site-content a.button:before,
+body[class*="woocommerce"] #page .site-content a.button.alt:before,
+body[class*="woocommerce"] #page .site-content button.button:before,
+body[class*="woocommerce"] #page .site-content button.button.alt:before,
+body[class*="woocommerce"] #page .site-content input.button:before,
+body[class*="woocommerce"] #page .site-content input.button.alt:before,
+body[class*="woocommerce"] #page .site-content .cart .button:before,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:before,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:before,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:before,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:before,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:before,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:before,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:before {
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
-body[class*="woocommerce"] #page #respond input#submit:after,
-body[class*="woocommerce"] #page #respond input#submit.alt:after,
-body[class*="woocommerce"] #page a.button:after,
-body[class*="woocommerce"] #page a.button.alt:after,
-body[class*="woocommerce"] #page button.button:after,
-body[class*="woocommerce"] #page button.button.alt:after,
-body[class*="woocommerce"] #page input.button:after,
-body[class*="woocommerce"] #page input.button.alt:after,
-body[class*="woocommerce"] #page .cart .button:after,
-body[class*="woocommerce"] #page a.added_to_cart:after,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:after,
-body[class*="woocommerce"] #page .woocommerce a.button:after,
-body[class*="woocommerce"] #page .woocommerce button.button:after,
-body[class*="woocommerce"] #page .woocommerce input.button:after,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:after,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:after {
+body[class*="woocommerce"] #page .site-content #respond input#submit:after,
+body[class*="woocommerce"] #page .site-content #respond input#submit.alt:after,
+body[class*="woocommerce"] #page .site-content a.button:after,
+body[class*="woocommerce"] #page .site-content a.button.alt:after,
+body[class*="woocommerce"] #page .site-content button.button:after,
+body[class*="woocommerce"] #page .site-content button.button.alt:after,
+body[class*="woocommerce"] #page .site-content input.button:after,
+body[class*="woocommerce"] #page .site-content input.button.alt:after,
+body[class*="woocommerce"] #page .site-content .cart .button:after,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:after,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:after,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:after,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:after,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:after,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:after,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-body[class*="woocommerce"] #page #respond input#submit:active,
-body[class*="woocommerce"] #page a.button:active,
-body[class*="woocommerce"] #page button.button:active,
-body[class*="woocommerce"] #page input.button:active,
-body[class*="woocommerce"] #page .cart .button:active,
-body[class*="woocommerce"] #page a.added_to_cart:active,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:active,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:active {
+body[class*="woocommerce"] #page .site-content #respond input#submit:active,
+body[class*="woocommerce"] #page .site-content a.button:active,
+body[class*="woocommerce"] #page .site-content button.button:active,
+body[class*="woocommerce"] #page .site-content input.button:active,
+body[class*="woocommerce"] #page .site-content .cart .button:active,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:active,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:active,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }
 
-body[class*="woocommerce"] #page #respond input#submit:hover,
-body[class*="woocommerce"] #page a.button:hover,
-body[class*="woocommerce"] #page button.button:hover,
-body[class*="woocommerce"] #page input.button:hover,
-body[class*="woocommerce"] #page .cart .button:hover,
-body[class*="woocommerce"] #page a.added_to_cart:hover,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:hover,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:hover, body[class*="woocommerce"] #page #respond input#submit:focus,
-body[class*="woocommerce"] #page a.button:focus,
-body[class*="woocommerce"] #page button.button:focus,
-body[class*="woocommerce"] #page input.button:focus,
-body[class*="woocommerce"] #page .cart .button:focus,
-body[class*="woocommerce"] #page a.added_to_cart:focus,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a:focus,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a:focus, body[class*="woocommerce"] #page #respond input.has-focus#submit,
-body[class*="woocommerce"] #page a.has-focus.button,
-body[class*="woocommerce"] #page button.has-focus.button,
-body[class*="woocommerce"] #page input.has-focus.button,
-body[class*="woocommerce"] #page .cart .has-focus.button,
-body[class*="woocommerce"] #page a.has-focus.added_to_cart,
-body[class*="woocommerce"] #page .woocommerce .widget_shopping_cart .buttons a.has-focus,
-body[class*="woocommerce"] #page .woocommerce.widget_shopping_cart .buttons a.has-focus {
+body[class*="woocommerce"] #page .site-content #respond input#submit:hover,
+body[class*="woocommerce"] #page .site-content a.button:hover,
+body[class*="woocommerce"] #page .site-content button.button:hover,
+body[class*="woocommerce"] #page .site-content input.button:hover,
+body[class*="woocommerce"] #page .site-content .cart .button:hover,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:hover, body[class*="woocommerce"] #page .site-content #respond input#submit:focus,
+body[class*="woocommerce"] #page .site-content a.button:focus,
+body[class*="woocommerce"] #page .site-content button.button:focus,
+body[class*="woocommerce"] #page .site-content input.button:focus,
+body[class*="woocommerce"] #page .site-content .cart .button:focus,
+body[class*="woocommerce"] #page .site-content a.added_to_cart:focus,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a:focus,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a:focus, body[class*="woocommerce"] #page .site-content #respond input.has-focus#submit,
+body[class*="woocommerce"] #page .site-content a.has-focus.button,
+body[class*="woocommerce"] #page .site-content button.has-focus.button,
+body[class*="woocommerce"] #page .site-content input.has-focus.button,
+body[class*="woocommerce"] #page .site-content .cart .has-focus.button,
+body[class*="woocommerce"] #page .site-content a.has-focus.added_to_cart,
+body[class*="woocommerce"] #page .site-content .woocommerce .widget_shopping_cart .buttons a.has-focus,
+body[class*="woocommerce"] #page .site-content .woocommerce.widget_shopping_cart .buttons a.has-focus {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
 }
@@ -506,33 +506,33 @@ body[class*="woocommerce"] #page table th {
 /**
  * Button
  */
-body[class*="woocommerce"] #page .woocommerce #respond input#submit.disabled,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:disabled,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:disabled[disabled],
-body[class*="woocommerce"] #page .woocommerce a.button.disabled,
-body[class*="woocommerce"] #page .woocommerce a.button:disabled,
-body[class*="woocommerce"] #page .woocommerce a.button:disabled[disabled],
-body[class*="woocommerce"] #page .woocommerce button.button.disabled,
-body[class*="woocommerce"] #page .woocommerce button.button:disabled,
-body[class*="woocommerce"] #page .woocommerce button.button:disabled[disabled],
-body[class*="woocommerce"] #page .woocommerce input.button.disabled,
-body[class*="woocommerce"] #page .woocommerce input.button:disabled,
-body[class*="woocommerce"] #page .woocommerce input.button:disabled[disabled] {
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit.disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:disabled[disabled],
+body[class*="woocommerce"] #page .site-content .woocommerce a.button.disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:disabled[disabled],
+body[class*="woocommerce"] #page .site-content .woocommerce button.button.disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:disabled[disabled],
+body[class*="woocommerce"] #page .site-content .woocommerce input.button.disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:disabled,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:disabled[disabled] {
 	cursor: not-allowed;
 }
 
-body[class*="woocommerce"] #page .woocommerce #respond input#submit.disabled:hover,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:disabled:hover,
-body[class*="woocommerce"] #page .woocommerce #respond input#submit:disabled[disabled]:hover,
-body[class*="woocommerce"] #page .woocommerce a.button.disabled:hover,
-body[class*="woocommerce"] #page .woocommerce a.button:disabled:hover,
-body[class*="woocommerce"] #page .woocommerce a.button:disabled[disabled]:hover,
-body[class*="woocommerce"] #page .woocommerce button.button.disabled:hover,
-body[class*="woocommerce"] #page .woocommerce button.button:disabled:hover,
-body[class*="woocommerce"] #page .woocommerce button.button:disabled[disabled]:hover,
-body[class*="woocommerce"] #page .woocommerce input.button.disabled:hover,
-body[class*="woocommerce"] #page .woocommerce input.button:disabled:hover,
-body[class*="woocommerce"] #page .woocommerce input.button:disabled[disabled]:hover {
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit.disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce #respond input#submit:disabled[disabled]:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button.disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce a.button:disabled[disabled]:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button.disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce button.button:disabled[disabled]:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button.disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:disabled:hover,
+body[class*="woocommerce"] #page .site-content .woocommerce input.button:disabled[disabled]:hover {
 	background-color: var(--global--color-primary-default);
 }
 
@@ -683,50 +683,57 @@ body[class*="woocommerce"] #page .wc-block-grid__product-add-to-cart .added_to_c
 	text-decoration: none;
 }
 
-body[class*="woocommerce"] #page .main-navigation #toggle-cart {
-	display: inline-block;
-	margin: 0;
+body[class*="woocommerce"] #page .main-navigation > #toggle-cart {
+	left: 0;
+	top: 0;
+	right: auto;
 }
 
-body[class*="woocommerce"] #page .main-navigation #toggle-cart .svg-icon {
+body[class*="woocommerce"] #page .main-navigation > #toggle-cart .svg-icon {
 	vertical-align: middle;
 }
 
-body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked ~ div {
-	display: inline-block;
+body[class*="woocommerce"].wc-navigation-open #page .main-navigation > .woocommerce-menu-container {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
 }
 
-body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:focus + #toggle-cart {
-	background-color: var(--primary-nav--color-link-hover);
-	outline: inherit;
-	text-decoration: underline;
+body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-cart {
+	left: auto;
+	right: 0;
+	z-index: 500;
 }
 
-body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + #toggle-cart .open {
+body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-cart .open {
 	display: none;
 }
 
-body[class*="woocommerce"] #page .main-navigation #woocommerce-toggle:checked + #toggle-cart .close {
+body[class*="woocommerce"].wc-navigation-open #page .main-navigation #toggle-cart .close {
 	display: inline;
 }
 
 @media only screen and (max-width: 481px) {
+	body[class*="woocommerce"].admin-bar.lock-scrolling #page .main-navigation #toggle-cart {
+		top: 46px;
+	}
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container {
 		background-color: var(--wc--mini-cart--color-background);
 		color: var(--wc--mini-cart--color-text);
-		padding: 0;
-		width: 100%;
 	}
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a,
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a:link,
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container a:visited {
 		color: currentColor;
 	}
+	body[class*="woocommerce"] #page .main-navigation .woocommerce-menu-container .sub-menu {
+		margin-left: 0;
+	}
 }
 
 @media only screen and (min-width: 482px) {
-	body[class*="woocommerce"] #page .main-navigation > div:not(:last-of-type) {
-		margin-right: calc(2 * var(--global--spacing-unit));
+	body[class*="woocommerce"] #page .main-navigation {
+		flex-direction: column;
 	}
 	body[class*="woocommerce"] #page .main-navigation #toggle-cart {
 		display: none;
@@ -750,6 +757,9 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .woocom
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .woocommerce-cart-count {
 	color: var(--wc--mini-cart--color-count);
 	font-weight: normal;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: bottom;
 }
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-icon {
@@ -761,7 +771,9 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link .svg-ic
 
 @media only screen and (min-width: 482px) {
 	body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-link {
-		display: inline-block;
+		align-items: center;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 }
 
@@ -785,6 +797,7 @@ body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .wooc
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list li {
 	border-top: 1px solid var(--wc--mini-cart--color-border);
+	padding-left: var(--global--spacing-horizontal);
 }
 
 body[class*="woocommerce"] #page .main-navigation .woocommerce-cart-widget .woocommerce.widget_shopping_cart .cart_list a:hover:not(.remove),
@@ -1798,7 +1811,7 @@ body[class*="woocommerce"] #page .woocommerce-ordering select {
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__image--placeholder {
-	border-color: var(--global--color-border-light);
+	border-color: var(--global--color-border);
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__trigger {
@@ -1807,11 +1820,11 @@ body[class*="woocommerce"] #page .woocommerce-ordering select {
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__trigger::before {
-	border-color: var(--global--color-border-dark);
+	border-color: var(--global--color-border);
 }
 
 .single-product #page #woocommerce-wrapper div.product div.images .woocommerce-product-gallery__trigger::after {
-	background-color: var(--global--color-border-dark);
+	background-color: var(--global--color-border);
 }
 
 .single-product #page #woocommerce-wrapper div.product div.summary {

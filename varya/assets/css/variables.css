@@ -12,7 +12,14 @@
  * - Similar to Blocks but exist outside of the "current" editor context
  */
 /**
+ * Variable configuration
+ * - import all vendor config files
+ */
+/**
  * WooCommerce Variables
+ */
+/**
+ * Jetpack Variables
  */
 :root {
 	/* Globals */
@@ -49,26 +56,19 @@
 	--global--color-background: #FFFFFF;
 	--global--color-background-light: #FAFBF6;
 	--global--color-background-dark: #DDDDDD;
-	--global--color-border: #757575;
-	--global--color-border-light: #444444;
-	--global--color-border-dark: #AAAAAA;
-	--global--color-text-selection: #FAFBF6;
+	--global--color-border: #EFEFEF;
+	--global--color-text-selection: #F4EFEF;
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;
 	--global--color-alert-warning: gold;
 	--global--color-alert-error: salmon;
 	/* Spacing */
-	--global--spacing-unit: 16px;
+	--global--spacing-unit: 20px;
 	--global--spacing-measure: unset;
-	--global--spacing-horizontal: 16px;
-	--global--spacing-vertical: 32px;
+	--global--spacing-horizontal: 25px;
+	--global--spacing-vertical: 30px;
 	/* Elevation */
-	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-none: 0px 0px 0px 0px transparent;
+	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 	/* Other */
 	--global--border-radius-sm: 9px;
 	--global--border-radius-md: 13.5px;
@@ -81,9 +81,9 @@
 	--form--line-height: var(--global-line-height-body);
 	--form--color-text: var(--global--color-foreground);
 	--form--border-color: var(--global--color-border);
-	--form--border-width: 1px;
-	--form--border-radius: 3px;
-	--form--spacing-unit: calc(0.33 * var(--global--spacing-unit));
+	--form--border-width: 2px;
+	--form--border-radius: 0;
+	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
 	/* Blocks */
 	--button--color-text: var(--global--color-background);
 	--button--color-text-hover: var(--button--color-text);
@@ -95,7 +95,7 @@
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: normal;
 	--button--line-height: 1;
-	--button--border-width: 1px;
+	--button--border-width: 2px;
 	--button--border-radius: 4px;
 	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
 	--button--padding-horizontal: var(--global--spacing-horizontal);
@@ -103,6 +103,7 @@
 	--cover--color-foreground: var(--global--color-foreground-dark);
 	--cover--color-background: var(--global--color-background-light);
 	--heading--font-family: var(--global--font-primary);
+	--heading--line-height: 1.3;
 	--heading--font-size-h6: var(--global--font-size-base);
 	--heading--font-size-h5: var(--global--font-size-md);
 	--heading--font-size-h4: var(--global--font-size-lg);
@@ -115,13 +116,24 @@
 	--heading--letter-spacing-h3: var(--global--letter-spacing-xl);
 	--heading--letter-spacing-h2: var(--global--letter-spacing-xxl);
 	--heading--letter-spacing-h1: var(--global--letter-spacing-xxxl);
-	--heading--line-height: 1.25em;
+	--heading--line-height-h6: 1.3;
+	--heading--line-height-h5: 1.3;
+	--heading--line-height-h4: 1.3;
+	--heading--line-height-h3: var(--heading--line-height);
+	--heading--line-height-h2: var(--heading--line-height);
+	--heading--line-height-h1: var(--heading--line-height);
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;
 	--latest-posts--title-font-family: var(--heading--font-family);
 	--latest-posts--title-font-size: var(--heading--font-size-h3);
 	--latest-posts--description-font-family: var(--global--font-secondary);
 	--latest-posts--description-font-size: var(--global--font-size-sm);
+	--layout-grid--gutter-none: 0px;
+	--layout-grid--gutter-small: calc( var(--global--spacing-unit) / 2);
+	--layout-grid--gutter-medium: var(--global--spacing-unit);
+	--layout-grid--gutter-large: calc( var(--global--spacing-unit) * 2);
+	--layout-grid--gutter-huge: calc( var(--global--spacing-unit) * 3);
+	--layout-grid--background-offset: calc( var(--global--spacing-unit));
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	--pullquote--font-family: var(--global--font-primary);
@@ -129,7 +141,7 @@
 	--pullquote--font-style: italic;
 	--pullquote--line-height: var(--global--line-height-heading);
 	--pullquote--border-width: 0;
-	--pullquote--color-border: transparent;
+	--pullquote--border-color: transparent;
 	--pullquote--color-foreground: var(--global--color-foreground);
 	--pullquote--color-background: var(--global--color-background);
 	--quote--border-color: var(--global--color-secondary);
@@ -137,6 +149,10 @@
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
 	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-style: normal;
+	--quote--font-style-large: normal;
+	--quote--line-height: var(--global--line-height-body);
+	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 2px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
@@ -163,7 +179,12 @@
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 	--primary-nav--font-family: var(--global--font-secondary);
-	--primary-nav--font-size: 16px;
+	--primary-nav--font-family-mobile: var(--global--font-primary);
+	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size-mobile: var(--global--font-size-xxl);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
+	--primary-nav--font-style: normal;
+	--primary-nav--font-style-sub-menu-mobile: italic;
 	--primary-nav--font-weight: normal;
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
@@ -186,11 +207,18 @@
 	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
-	--footer--color-text: var(--global--color-foreground-light);
+	--comments--border-color: var(--global--color-border);
+	--footer--color-text: var(--global--color-foreground);
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
 	--footer--font-size: var(--global--font-size-sm);
+	--pagination--color-text: var(--global--color-foreground);
+	--pagination--color-link: var(--global--color-primary);
+	--pagination--color-link-hover: var(--global--color-primary-hover);
+	--pagination--font-family: var(--global--font-secondary);
+	--pagination--font-size: var(--global--font-size-sm);
+	--pagination--font-weight: normal;
 	/* Vendors */
 	--wc--wrapper-width: default;
 	--wc--table--border-color: var(--global--color-border);

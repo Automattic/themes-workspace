@@ -3,6 +3,7 @@
 * - Needs a special styles
 */
 
+// Post title style
 .editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-foreground);
 	font-family: var(--heading--font-family);
@@ -10,6 +11,12 @@
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height);
+}
+
+// Editor UI font styles
+.wp-block.block-editor-default-block-appender > textarea {
+	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-md);
 }
 
 // Gutenberg text color options
@@ -111,6 +118,11 @@
 }
 
 // Gutenberg Font-size utility classes
+.is-tiny-text,
+.has-tiny-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
 .is-small-text,
 .has-small-font-size {
 	font-size: var(--global--font-size-sm);
@@ -150,4 +162,77 @@
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
+
+	[data-block] {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+/* 
+ * Custom gradients 
+*/
+.has-hard-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+}
+
+.has-hard-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+}
+
+.has-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
+.has-hard-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
+.has-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-stripe-gradient-background {
+	background: linear-gradient(to bottom, transparent 20%, var(--global--color-secondary) 20%, var(--global--color-secondary) 80%, transparent 80%);
+}
+
+/* Block Alignments */
+.wp-block {
+
+	// Gutenberg injects a rule that limits the max width of .wp-block to 580px
+	// This line overrides it to use the responsive spacing rules for default width content
+	max-width: var(--responsive--aligndefault-width);
+
+	// Use the theme's max-width for wide alignment.
+	&[data-align="wide"],
+	&.alignwide {
+		max-width: var(--responsive--alignwide-width);
+	}
+
+	&[data-align="full"],
+	&.alignfull {
+		max-width: none;
+	}
+}
+
+.alignleft {
+	margin: 0;
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.alignright {
+	margin: 0;
+	margin-left: var(--global--spacing-horizontal);
 }

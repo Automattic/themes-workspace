@@ -14,9 +14,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: var(--form--color-text);
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
+	color: var(--form--color-text);
+	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit);
 
 	&:focus {
@@ -37,6 +38,5 @@ textarea {
 input[type=checkbox] + label {
 	display: inline;
 	margin-left: 0.5em;
-	margin-right: 2em;
 	line-height: 1em;
 }

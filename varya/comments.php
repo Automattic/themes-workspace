@@ -32,13 +32,12 @@ if ( post_password_required() ) {
 			if ( '1' === $varya_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'varya' ),
-					'<span>' . get_the_title() . '</span>'
+					esc_html__( '1 Comment', 'varya' )
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $varya_comment_count, 'comments title', 'varya' ) ),
+					esc_html( _nx( '%1$s Comment', '%1$s Comments', $varya_comment_count, 'comments title', 'varya' ) ),
 					number_format_i18n( $varya_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -51,6 +50,7 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments( array(
+				'avatar_size'=> 42,
 				'style'      => 'ol',
 				'short_ping' => true,
 			) );
@@ -69,7 +69,10 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	comment_form( array(
+		'logged_in_as'	=> null,
+		'title_reply'	=> esc_html( 'Leave a Comment', 'varya')
+	) );
 	?>
 
 </div><!-- #comments -->

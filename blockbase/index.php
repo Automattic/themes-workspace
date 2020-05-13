@@ -1,1 +1,0 @@
-<?php echo esc_html("If you can see this, you need to activate the Full Site Editing experiment in the Gutenberg Plugin."); ?>

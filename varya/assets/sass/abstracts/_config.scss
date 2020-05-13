@@ -1,5 +1,5 @@
 // Vertical Rhythm Multiplier
-$baseline-unit: 8px;
+$baseline-unit: 10px;
 
 // Typescale Multipliers
 $typescale-root: 18px; // Set 16px/1em default on html
@@ -43,28 +43,21 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--color-background: #FFFFFF;
 	--global--color-background-light: #FAFBF6;
 	--global--color-background-dark: #DDDDDD;
-	--global--color-border: #757575;
-	--global--color-border-light: #444444;
-	--global--color-border-dark: #AAAAAA;
-	--global--color-text-selection: #FAFBF6;
+	--global--color-border: #EFEFEF;
+	--global--color-text-selection: #F4EFEF;
 	--global--color-alert-success: yellowgreen;
 	--global--color-alert-info: skyblue;
 	--global--color-alert-warning: gold;
 	--global--color-alert-error: salmon;
 
 	/* Spacing */
-	--global--spacing-unit: #{2 * $baseline-unit}; // 16px
+	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
 	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
-	--global--spacing-horizontal: #{2 * $baseline-unit}; // 16px
-	--global--spacing-vertical: #{4 * $baseline-unit}; // 32px matches default spacing in the editor.
+	--global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px
+	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
 
 	/* Elevation */
-	--global--elevation-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
-	--global--elevation-none: 0px 0px 0px 0px transparent;
+	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 
 	/* Other */
 	--global--border-radius-sm: #{0.5 * $typescale-root};

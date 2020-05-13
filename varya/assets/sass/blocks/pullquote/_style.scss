@@ -4,9 +4,9 @@
 	margin-right: 0;
 	text-align: left;
 	// Theme?
-	border-top-color: var(--pullquote--color-border);
+	border-top-color: var(--pullquote--border-color);
 	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--color-border);
+	border-bottom-color: var(--pullquote--border-color);
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
 
@@ -39,16 +39,6 @@
 		background: none;
 	}
 
-	&.is-style-default {
-		&.alignleft,
-		&.aligncenter,
-		&.alignright {
-			blockquote > * {
-				text-align: center;
-			}
-		}
-	}
-    
     &.is-style-large {
         border-left-color: var(--quote--border-color);
         border-left-style: solid;
@@ -83,4 +73,13 @@
 		}
 	}
 
+	.entry-content &.alignleft {
+		@extend %responsive-alignright;
+		margin-right: var(--global--spacing-horizontal);
+	}
+
+	.entry-content &.alignright {
+		@extend %responsive-alignleft;
+		margin-left: var(--global--spacing-horizontal);
+	}
 }

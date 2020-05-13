@@ -56,7 +56,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary Navigation', 'varya' ),
+				'primary' => __( 'Primary Navigation', 'varya' ),
 				'footer' => __( 'Footer Navigation', 'varya' ),
 				'social' => __( 'Social Links Navigation', 'varya' ),
 			)
@@ -74,6 +74,8 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				'comment-list',
 				'gallery',
 				'caption',
+				'style',
+				'script',
 			)
 		);
 
@@ -107,7 +109,6 @@ if ( ! function_exists( 'varya_setup' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( array(
 			varya_fonts_url(),
-			'./assets/css/variables-editor.css',
 			'./assets/css/style-editor.css'
 		) );
 
@@ -136,13 +137,13 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'      => __( 'Large', 'varya' ),
 					'shortName' => __( 'L', 'varya' ),
-					'size'      => 20,
+					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'Huge', 'varya' ),
 					'shortName' => __( 'XL', 'varya' ),
-					'size'      => 24,
+					'size'      => 28,
 					'slug'      => 'huge',
 				),
 			)
@@ -155,27 +156,81 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'varya' ),
 					'slug'  => 'primary',
-					'color' => '#000000',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#000000' : get_theme_mod( 'varya_--global--color-primary' )
 				),
 				array(
 					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => '#A36265',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' )
 				),
 				array(
 					'name'  => __( 'Foreground', 'varya' ),
 					'slug'  => 'foreground',
-					'color' => '#333333',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#333333' : get_theme_mod( 'varya_--global--color-foreground' )
 				),
 				array(
 					'name'  => __( 'Background Light', 'varya' ),
 					'slug'  => 'background-light',
-					'color' => '#FAFBF6',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'varya_--global--color-background-light' )
 				),
 				array(
 					'name'  => __( 'Background', 'varya' ),
 					'slug'  => 'background',
-					'color' => '#FFFFFF',
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FFFFFF' : get_theme_mod( 'varya_--global--color-background' )
+				),
+			)
+		);
+
+		$gradient_color_a = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' );
+		$gradient_color_b = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'varya_--global--color-background-light' );
+
+		add_theme_support(
+			'editor-gradient-presets',
+			array(
+				array(
+					'name'     => __( 'Diagonal', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $gradient_color_a . ' 49.9%, ' . $gradient_color_b  . ' 50%)',
+					'slug'     => 'hard-diagonal',
+				),
+				array(
+					'name'     => __( 'Diagonal inverted', 'en' ),
+					'gradient' => 'linear-gradient(to top left, ' . $gradient_color_a . ' 49.9%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-diagonal-inverted',
+				),
+				array(
+					'name'     => __( 'Horizontal', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $gradient_color_a . ' 50%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-horizontal',
+				),
+				array(
+					'name'     => __( 'Horizontal inverted', 'en' ),
+					'gradient' => 'linear-gradient(to top, ' . $gradient_color_a . ' 50%, ' . $gradient_color_b . ' 50%)',
+					'slug'     => 'hard-horizontal-inverted',
+				),
+				array(
+					'name'     => __( 'Diagonal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'diagonal',
+				),
+				array(
+					'name'     => __( 'Diagonal inverted gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top left, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'diagonal-inverted',
+				),
+				array(
+					'name'     => __( 'Horizontal gradient', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'horizontal',
+				),
+				array(
+					'name'     => __( 'Horizontal inverted gradient', 'en' ),
+					'gradient' => 'linear-gradient(to top, ' . $gradient_color_a . ', ' . $gradient_color_b . ')',
+					'slug'     => 'horizontal-inverted',
+				),
+				array(
+					'name'     => __( 'Stripe', 'en' ),
+					'gradient' => 'linear-gradient(to bottom, transparent 20%, ' . $gradient_color_a . ' 20%, ' . $gradient_color_a . ' 80%, transparent 80%)',
+					'slug'     => 'stripe',
 				),
 			)
 		);
@@ -289,6 +344,20 @@ function varya_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Main navigation scripts
+	// Check to see if the menu is not assigned and or empty
+	$menu = wp_nav_menu(
+		array (
+			'echo' => FALSE,
+			'menu' => 'primary',
+			'fallback_cb' => '__return_false'
+		)
+	);
+
+	if ( ! empty ( $menu ) ) {
+		wp_enqueue_script( 'varya-main-navigation-scripts', get_template_directory_uri() . '/assets/js/main-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'varya_scripts' );
 
@@ -316,9 +385,14 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
 
 /**
- * Custom Comment Walker template.
+ * Custom comment walker template.
  */
 require get_template_directory() . '/classes/class-varya-walker-comment.php';
+
+/**
+ * Custom colors class.
+ */
+require get_template_directory() . '/classes/class-varya-custom-colors.php';
 
 /**
  * Enhance the theme by hooking into WordPress.

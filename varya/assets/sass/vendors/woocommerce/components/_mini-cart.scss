@@ -12,58 +12,67 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 	.main-navigation {
 
 		// Mobile menu toggle
-		#toggle-cart {
-			display: inline-block;
-			margin: 0;
+		> #toggle-cart {
+			left: 0;
+			top: 0;
+			right: auto;
 
 			.svg-icon {
 				vertical-align: middle;
 			}
 		}
 
-		// Checkbox hack
-		#woocommerce-toggle:checked ~ div {
-			display: inline-block;
-		}
+		// Mobile menu open
+		@at-root body[class*="woocommerce"].wc-navigation-open #page .main-navigation {
 
-		#woocommerce-toggle:focus + #toggle-cart {
-			background-color: var(--primary-nav--color-link-hover);
-			outline: inherit;
-			text-decoration: underline;
-		}
-
-		#woocommerce-toggle:checked + #toggle-cart {
-			.open {
-				display: none;
+			> .woocommerce-menu-container {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(0);
 			}
 
-			.close {
-				display: inline;
+			#toggle-cart {
+
+				left: auto;
+				right: 0;
+				z-index: 500;
+
+				.open {
+					display: none;
+				}
+
+				.close {
+					display: inline;
+				}
 			}
 		}
 
 		@include media(mobile-only) {
 
+			// Adjust position when logged-in
+			@at-root body[class*="woocommerce"].admin-bar.lock-scrolling #page .main-navigation #toggle-cart {
+				top: 46px;
+			}
+
 			.woocommerce-menu-container {
 
 				background-color: var(--wc--mini-cart--color-background);
 				color: var(--wc--mini-cart--color-text);
-				padding: 0;
-				width: 100%;
 
 				a,
 				a:link,
 				a:visited {
 					color: currentColor;
 				}
+
+				.sub-menu {
+					margin-left: 0;
+				}
 			}
 		}
 
 		@include media(mobile) {
-
-			& > div:not(:last-of-type) {
-				margin-right: calc(2 * var(--global--spacing-unit));
-			}
+			flex-direction: column;
 
 			#toggle-cart {
 				display: none;
@@ -87,6 +96,9 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 			.woocommerce-cart-count {
 				color: var(--wc--mini-cart--color-count);
 				font-weight: normal;
+				white-space: nowrap;
+				display: inline-block;
+				vertical-align: bottom;
 			}
 
 			.svg-icon {
@@ -97,7 +109,9 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 			}
 
 			@include media(mobile) {
-				display: inline-block;
+				align-items: center;
+				display: flex;
+				flex-wrap: nowrap;
 			}
 		}
 
@@ -118,6 +132,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 
 				li {
 					border-top: 1px solid var(--wc--mini-cart--color-border);
+					padding-left: var(--global--spacing-horizontal);
 				}
 
 				a:hover:not(.remove),

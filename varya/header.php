@@ -27,22 +27,27 @@
 
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
-			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'varya' ); ?>">
-					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
-					<label for="toggle" id="toggle-menu" class="button">
-						<?php _e( 'Menu', 'varya' ); ?>
-						<span class="dropdown-icon open">+</span>
-						<span class="dropdown-icon close">&times;</span>
+					<button id="toggle-menu" class="button">
+						<span class="dropdown-icon open"><?php _e( 'Menu', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu_open' ) ?></span>
+						<span class="dropdown-icon close"><?php _e( 'Close', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu_close' ) ?></span>
 						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'varya' ); ?></span>
 						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'varya' ); ?></span>
-					</label>
+					</button>
 					<?php
+					// Get menu slug
+					$location_name = 'primary';
+					$locations = get_nav_menu_locations();
+					$menu_id = $locations[ $location_name ];
+					$menu = wp_get_nav_menu_object( $menu_id );
+
 					wp_nav_menu(
 						array(
-							'theme_location' => 'menu-1',
-							'menu_class'     => 'main-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
+							'theme_location'  => 'primary',
+							'menu_class'      => 'main-menu',
+							'container_class' => 'main-menu-container menu-'. $menu->slug .'-container',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 						)
 					);
 					?>

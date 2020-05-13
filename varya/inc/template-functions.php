@@ -35,9 +35,9 @@ function varya_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class if image filters are enabled.
-	if ( varya_image_filters_enabled() ) {
-		$classes[] = 'image-filters-enabled';
+	// Add a body class if main navigation is active.
+	if ( has_nav_menu( 'primary' ) ) {
+		$classes[] = 'has-main-navigation'; 
 	}
 
 	return $classes;
@@ -121,13 +121,6 @@ function varya_can_show_post_thumbnail() {
 }
 
 /**
- * Returns true if image filters are enabled on the theme options.
- */
-function varya_image_filters_enabled() {
-	return 0 !== get_theme_mod( 'image_filter', 1 );
-}
-
-/**
  * Returns the size for avatars used in the theme.
  */
 function varya_get_avatar_size() {
@@ -206,11 +199,11 @@ add_filter( 'the_content_more_link', 'varya_continue_reading_link' );
 function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	// Only add class to 'top level' items on the 'primary' menu.
-	if ( ! isset( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
+	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
 		return $output;
 	}
 
-	if ( 'menu-1' == $args->theme_location && $depth === 0 ) {
+	if ( 'primary' == $args->theme_location && $depth === 0 ) {
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 			// Add SVG icon to parent items.
@@ -233,7 +226,7 @@ add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
  */
 function varya_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
 	static $pseudo_id = 0;
-	if ( ! isset( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
+	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
 		return $sorted_menu_items;
 	}
 
