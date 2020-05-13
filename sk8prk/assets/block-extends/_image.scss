@@ -4,7 +4,8 @@
         > img {
             filter: grayscale(100%);
         }
-        &::before, &::after {
+        &::before,
+        &::after {
             content: " ";
             left: 0;
             mix-blend-mode: multiply;

@@ -15,8 +15,10 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 
 @import "responsive";
 @import "header";
+@import "../block-extends/text";
 @import "../block-extends/cover";
 @import "../block-extends/image";
+@import "../block-extends/media-text";
 @import "../block-extends/gallery";
 @import "../block-extends/group";
 
@@ -44,7 +46,25 @@ h4, h5, h6 {
 .entry-content [class*="inner-container"] {
     p {
         &:first-child {
+            // a trick to getting the indent is adding the paragraph 
+            // you're trying to indent to a group block
             text-indent: 30%;
+        }
+    }
+}
+
+.wp-block-button__link {
+    font-weight: bold;
+    letter-spacing: 1px;
+    min-width: 264px;
+    text-transform: uppercase;
+}
+
+.wp-block-gallery {
+    .blocks-gallery-grid {
+        width: 100%; // is this a Gutenberg bug?
+        .blocks-gallery-item {
+            margin: 0;
         }
     }
 }
@@ -67,19 +87,3 @@ h4, h5, h6 {
 //         }
 //     }
 // }
-
-.wp-block-button__link {
-    font-weight: bold;
-    letter-spacing: 1px;
-    min-width: 264px;
-    text-transform: uppercase;
-}
-
-.wp-block-gallery {
-    .blocks-gallery-grid {
-        width: 100%; // is this a Gutenberg bug?
-        .blocks-gallery-item {
-            margin: 0;
-        }
-    }
-}

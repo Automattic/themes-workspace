@@ -1,5 +1,5 @@
 /* global wp */
-( function( blocks ) {
+( function( blocks, domReady ) {
     var styles = [
         {
             name: "core/group",
@@ -29,9 +29,34 @@
                 label: "Duotone",
             },
         },
+        {
+            name: "core/paragraph",
+            options: {
+                name: "border-top",
+                label: "Border Top",
+            },
+        },
+        {
+            name: "core/media-text",
+            options: {
+                name: "duotone",
+                label: "Duotone",
+            },
+        },
+        {
+            name: "core/heading",
+            options: {
+                name: "border-top",
+                label: "Border Top",
+            },
+        },
     ];
     
-    styles.forEach ( function(style){
-        blocks.registerBlockStyle( style.name, style.options );
+    domReady( function() {
+        styles.forEach ( function(style){
+            blocks.registerBlockStyle( style.name, style.options );
+        });
+
+        blocks.unregisterBlockStyle( 'core/pullquote', 'solid-color' );
     });
-}( wp.blocks ) );
+}( wp.blocks, wp.domReady ) );

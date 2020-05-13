@@ -24,7 +24,7 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( array(
-			get_template_directory_uri() . '/assets/css/style-editor.css',
+			// get_template_directory_uri() . '/assets/css/style-editor.css', // varya editor styles
 			varya_sk8prk_fonts_url(),
 			'variables.css',
 			'style.css',
@@ -131,7 +131,7 @@ function varya_sk8prk_block_extends() {
 	// Block Tweaks
 	wp_enqueue_script( 'varya-sk8prk-block-extends',
 		get_stylesheet_directory_uri() . '/assets/block-extends/extend-blocks.js',
-		array( 'wp-blocks' )
+		array( 'wp-blocks', 'wp-edit-post' ) // wp-edit-post is added to avoid a race condition when trying to unregister a style variation 
 	);
 }
 add_action( 'enqueue_block_assets', 'varya_sk8prk_block_extends' );
