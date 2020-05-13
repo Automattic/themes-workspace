@@ -1,6 +1,9 @@
 .wp-block-gallery {
     &.is-style-duotone {
         .blocks-gallery-item > figure {
+            > img {
+                filter: grayscale(100%);
+            }
             &::before, &::after {
                 content: " ";
                 left: 0;

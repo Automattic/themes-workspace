@@ -22,6 +22,13 @@
                 label: "Duotone",
             },
         },
+        {
+            name: "core/image",
+            options: {
+                name: "duotone",
+                label: "Duotone",
+            },
+        },
     ];
     
     styles.forEach ( function(style){

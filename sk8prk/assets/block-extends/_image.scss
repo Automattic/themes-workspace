@@ -1,5 +1,9 @@
-.wp-block-cover {
+.wp-block-image {
     &.is-style-duotone {
+        position: relative;
+        > img {
+            filter: grayscale(100%);
+        }
         &::before, &::after {
             content: " ";
             left: 0;
@@ -14,9 +18,6 @@
         }
         &::after {
             background-color: var(--global--color-background);
-        }
-        .wp-block-cover__inner-container {
-            filter: none;
         }
     }
 }
