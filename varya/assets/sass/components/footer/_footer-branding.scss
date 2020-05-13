@@ -8,7 +8,6 @@
 		align-items: flex-end;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 }
 
@@ -22,8 +21,6 @@
 	line-height: var(--global--line-height-body);
 
 	@include media(desktop) {
-		order: 1;
-		flex: 1 0 50%;
 		margin-top: 0;
 		margin-bottom: 0;
 	}

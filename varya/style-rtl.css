@@ -3164,7 +3164,6 @@ nav a {
 		align-items: flex-end;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 }
 
@@ -3177,8 +3176,6 @@ nav a {
 
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
-		order: 1;
-		flex: 1 0 50%;
 		margin-top: 0;
 		margin-bottom: 0;
 	}
@@ -3206,11 +3203,9 @@ nav a {
 
 @media only screen and (min-width: 822px) {
 	.site-footer > .footer-navigation {
-		flex: 1 0 50%;
-		order: 2;
-		margin-top: 0;
-		margin-bottom: 0;
-		text-align: left;
+		margin-top: var(--global--spacing-unit);
+		margin-bottom: var(--global--spacing-unit);
+		text-align: right;
 	}
 }
 
