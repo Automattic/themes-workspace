@@ -50,6 +50,13 @@
                 label: "Border Top",
             },
         },
+        {
+            name: "core/paragraph",
+            options: {
+                name: "text-indent",
+                label: "Indent",
+            },
+        },
     ];
     
     domReady( function() {

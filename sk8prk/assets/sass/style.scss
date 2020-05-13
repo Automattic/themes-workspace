@@ -15,43 +15,11 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 
 @import "responsive";
 @import "header";
-@import "../block-extends/text";
-@import "../block-extends/cover";
-@import "../block-extends/image";
-@import "../block-extends/media-text";
-@import "../block-extends/gallery";
-@import "../block-extends/group";
+@import "text";
+@import "block-extends";
 
 // Typography
 // Support more than five font sizes
-:root {
-    .has-xs-font-size {
-        font-size: var(--global--font-size-xs);
-    }
-    .has-xl-font-size {
-        font-size: var(--global--font-size-xl);
-        line-height: var(--global--line-height-heading);
-    }
-    .has-huge-font-size {
-        font-size: var(--global--font-size-xxl);
-        line-height: var(--global--line-height-heading);
-    }
-}
-
-h4, h5, h6 {
-    text-transform: uppercase;
-}
-
-.entry-content, 
-.entry-content [class*="inner-container"] {
-    p {
-        &:first-child {
-            // a trick to getting the indent is adding the paragraph 
-            // you're trying to indent to a group block
-            text-indent: 30%;
-        }
-    }
-}
 
 .wp-block-button__link {
     font-weight: bold;

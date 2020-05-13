@@ -127,10 +127,32 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 	border-bottom: 3px solid var(--global--color-border);
 }
 
+:root .has-xs-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+:root .has-xl-font-size {
+	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+}
+
+:root .has-huge-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+}
+
+h4, h5, h6 {
+	text-transform: uppercase;
+}
+
 p.is-style-border-top, h1.is-style-border-top, h2.is-style-border-top, h3.is-style-border-top, h4.is-style-border-top, h5.is-style-border-top, h6.is-style-border-top {
 	border-top: 3px solid var(--global--color-border);
 	display: inline-block;
 	padding-top: var(--global--spacing-unit);
+}
+
+p .is-style-text-indent {
+	text-indent: 30%;
 }
 
 .wp-block-cover.is-style-duotone::before, .wp-block-cover.is-style-duotone::after {
@@ -207,6 +229,24 @@ p.is-style-border-top, h1.is-style-border-top, h2.is-style-border-top, h3.is-sty
 	background-color: var(--global--color-background);
 }
 
+@media only screen and (min-width: 482px) {
+	.wp-block-pullquote blockquote {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.wp-block-pullquote blockquote p {
+		margin-left: calc( 2 * var(--global--spacing-horizontal));
+	}
+}
+
+.wp-block-pullquote blockquote cite {
+	border-top: 3px solid var(--global--color-border);
+	font-size: var(--global--font-size-md);
+	padding-top: var(--global--spacing-vertical);
+	text-align: right;
+	width: 40%;
+}
+
 .wp-block-gallery.is-style-duotone .blocks-gallery-item > figure > img {
 	filter: grayscale(100%);
 }
@@ -236,29 +276,6 @@ p.is-style-border-top, h1.is-style-border-top, h2.is-style-border-top, h3.is-sty
 
 .wp-block-group.is-style-outline.alignwide {
 	max-width: calc( var(--responsive--alignwide-width) + 6 * var(--global--spacing-unit));
-}
-
-:root .has-xs-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-:root .has-xl-font-size {
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
-}
-
-:root .has-huge-font-size {
-	font-size: var(--global--font-size-xxl);
-	line-height: var(--global--line-height-heading);
-}
-
-h4, h5, h6 {
-	text-transform: uppercase;
-}
-
-.entry-content p:first-child,
-.entry-content [class*="inner-container"] p:first-child {
-	text-indent: 30%;
 }
 
 .wp-block-button__link {
