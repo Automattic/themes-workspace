@@ -151,7 +151,7 @@ p.is-style-border-top, h1.is-style-border-top, h2.is-style-border-top, h3.is-sty
 	padding-top: var(--global--spacing-unit);
 }
 
-p .is-style-text-indent {
+p.is-style-text-indent {
 	text-indent: 30%;
 }
 
