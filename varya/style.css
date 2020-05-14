@@ -164,7 +164,7 @@ Included as part of the following classes and functions:
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignleft-margin);
 		/*rtl:ignore*/
-		margin-right: var(--global--spacing-unit);
+		margin-right: var(--global--spacing-horizontal);
 	}
 }
 
@@ -178,7 +178,7 @@ Included as part of the following classes and functions:
 @media only screen and (min-width: 482px) {
 	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignright {
 		/*rtl:ignore*/
-		margin-left: var(--global--spacing-unit);
+		margin-left: var(--global--spacing-horizontal);
 		/*rtl:ignore*/
 		margin-right: var(--responsive--alignright-margin);
 	}
