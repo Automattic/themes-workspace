@@ -11,17 +11,49 @@ License URI: LICENSE
 Text Domain: varya
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Varya WordPress Theme, (C) 2020 Automattic, Inc.
+Varya is distributed under the terms of the GNU GPL.
 
-varya is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Varya is derived from Twenty Nineteen. 2018-2020 WordPress.org
+Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
+
+Varya is also based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc. 
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
-Social Icons License: GNU GPL v2 or later.
+Varya bundles the following third-party resources:
+
+Social Icons
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
+
+Code from Twenty Twenty
+Copyright (C) 2020 WordPress.org
+License: GPLv2
+Source: https://wordpress.org/themes/twentytwenty/
+Included as part of the following classes and functions:
+- sanitize_select()
+
+Color Contrast Validation
+Copyright (C) 2016 Per Soderlind
+License: GNU General Public License v3 
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Source: https://github.com/soderlind/2016-customizer-demo
+Included as part of the following classes and functions:
+- on_customize_controls_enqueue_scripts(
 */
 /**
  * Layout
@@ -126,7 +158,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignleft {
+	.entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignleft {
 		margin-left: var(--responsive--alignleft-margin);
 		margin-right: var(--global--spacing-unit);
 	}
@@ -138,7 +170,7 @@ Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 }
 
 @media only screen and (min-width: 482px) {
-	.entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignright {
+	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignright {
 		margin-left: var(--global--spacing-unit);
 		margin-right: var(--responsive--alignright-margin);
 	}
@@ -1446,14 +1478,6 @@ button[data-load-more-btn],
 	padding: calc(0.5 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
 }
 
-.entry-content .wp-block-file.alignleft {
-	margin-left: var(--global--spacing-horizontal);
-}
-
-.entry-content .wp-block-file.alignright {
-	margin-right: var(--global--spacing-horizontal);
-}
-
 .wp-block-gallery {
 	margin: 0;
 }
@@ -1857,6 +1881,68 @@ dd {
 	}
 }
 
+.wp-block-navigation .wp-block-navigation-link {
+	padding: 0;
+}
+
+.wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__content {
+	font-family: var(--primary-nav--font-family);
+	font-size: var(--primary-nav--font-size);
+	font-weight: var(--primary-nav--font-weight);
+	padding: var(--primary-nav--padding);
+}
+
+.wp-block-navigation .wp-block-navigation-link__submenu-icon {
+	padding: 0;
+}
+
+.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation-link {
+	display: inherit;
+}
+
+.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation__container {
+	border: none;
+	right: 0;
+	margin-right: var(--primary-nav--padding);
+	min-width: max-content;
+	opacity: 0;
+	padding: 0;
+	position: inherit;
+	top: inherit;
+}
+
+.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation__container .wp-block-navigation-link .wp-block-navigation-link__content {
+	display: inline-block;
+	padding: calc( 0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+}
+
+.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation__container .wp-block-navigation-link__submenu-icon {
+	display: none;
+}
+
+.wp-block-navigation > .wp-block-navigation__container .has-child:hover .wp-block-navigation__container, .wp-block-navigation > .wp-block-navigation__container .has-child:focus-within .wp-block-navigation__container {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+.wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container {
+	background: var(--global--color-background);
+	box-shadow: var(--global--elevation);
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+}
+
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:hover, .wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:focus {
+	color: var(--primary-nav--color-link-hover);
+}
+
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link__content {
+	color: currentColor;
+}
+
 p {
 	line-height: var(--wp--typography--line-height, --global--line-height-body);
 }
@@ -1974,10 +2060,6 @@ p.has-background {
 
 .wp-block-pullquote:not(.is-style-solid-color) {
 	background: none;
-}
-
-.wp-block-pullquote.is-style-default.alignleft blockquote > *, .wp-block-pullquote.is-style-default.aligncenter blockquote > *, .wp-block-pullquote.is-style-default.alignright blockquote > * {
-	text-align: center;
 }
 
 .wp-block-pullquote.is-style-large {
@@ -2402,27 +2484,32 @@ table th,
 	color: var(--global--color-primary);
 }
 
-.is-small-text,
-.has-small-font-size {
+:root .is-tiny-text,
+:root .has-tiny-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+:root .is-small-text,
+:root .has-small-font-size {
 	font-size: var(--global--font-size-sm);
 }
 
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
+:root .is-regular-text,
+:root .has-regular-font-size,
+:root .has-normal-font-size,
+:root .has-medium-font-size {
 	font-size: var(--global--font-size-base);
 }
 
-.is-large-text,
-.has-large-font-size {
+:root .is-large-text,
+:root .has-large-font-size {
 	font-size: var(--global--font-size-lg);
 	line-height: var(--global--line-height-heading);
 }
 
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
+:root .is-larger-text,
+:root .has-larger-font-size,
+:root .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
 }
@@ -2558,6 +2645,45 @@ table th,
 
 .padding-left-default {
 	padding-left: var(--global--spacing-vertical) !important;
+}
+
+/* 
+ * Custom gradients 
+*/
+.has-hard-diagonal-gradient-background {
+	background: linear-gradient(to bottom left, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+}
+
+.has-hard-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top right, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+}
+
+.has-diagonal-gradient-background {
+	background: linear-gradient(to bottom left, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top right, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
+.has-hard-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+}
+
+.has-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-horizontal-inverted-gradient-background {
+	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-background-light));
+}
+
+.has-stripe-gradient-background {
+	background: linear-gradient(to bottom, transparent 20%, var(--global--color-secondary) 20%, var(--global--color-secondary) 80%, transparent 80%);
 }
 
 /*
@@ -2830,7 +2956,7 @@ nav a {
 	.primary-navigation > div > ul > li > .sub-menu {
 		margin: 0;
 		background: var(--global--color-background);
-		box-shadow: var(--global--elevation-4);
+		box-shadow: var(--global--elevation);
 		right: 0;
 		top: 100%;
 		min-width: max-content;
@@ -2847,10 +2973,6 @@ nav a {
 
 .primary-navigation .primary-menu > .menu-item:hover > a {
 	color: var(--primary-nav--color-link-hover);
-}
-
-.primary-navigation .primary-menu > .menu-item:hover > a + svg {
-	fill: var(--primary-nav--color-link-hover);
 }
 
 .primary-navigation .menu-item > a {
@@ -2877,6 +2999,10 @@ nav a {
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding);
 	}
+}
+
+.primary-navigation a + svg {
+	fill: currentColor;
 }
 
 .primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
@@ -2980,7 +3106,6 @@ nav a {
 		align-items: flex-end;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 }
 
@@ -2993,8 +3118,6 @@ nav a {
 
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
-		order: 1;
-		flex: 1 0 50%;
 		margin-top: 0;
 		margin-bottom: 0;
 	}
@@ -3022,11 +3145,9 @@ nav a {
 
 @media only screen and (min-width: 822px) {
 	.site-footer > .footer-navigation {
-		flex: 1 0 50%;
-		order: 2;
-		margin-top: 0;
-		margin-bottom: 0;
-		text-align: left;
+		margin-top: var(--global--spacing-unit);
+		margin-bottom: var(--global--spacing-unit);
+		text-align: right;
 	}
 }
 
@@ -3218,6 +3339,11 @@ nav a {
  * Author
  */
 /* Author description */
+.author-bio {
+	font-size: var(--global--font-size-xs);
+	max-width: var(--responsive--aligndefault-width);
+}
+
 .site-main > article > .author-bio {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
@@ -3225,6 +3351,10 @@ nav a {
 .author-bio .author-title {
 	font-family: var(--entry-author-bio--font-family);
 	font-size: var(--entry-author-bio--font-size);
+}
+
+.author-bio .author-description {
+	font-size: var(--global--font-size-md);
 }
 
 /* Next/Previous navigation */
