@@ -160,7 +160,7 @@ Included as part of the following classes and functions:
 @media only screen and (min-width: 482px) {
 	.entry-content .wp-block-file.alignleft, .entry-content .wp-block-pullquote.alignleft, .entry-content .wp-block-video.alignleft, .entry-content > .alignleft {
 		margin-left: var(--responsive--alignleft-margin);
-		margin-right: var(--global--spacing-unit);
+		margin-right: var(--global--spacing-horizontal);
 	}
 }
 
@@ -171,7 +171,7 @@ Included as part of the following classes and functions:
 
 @media only screen and (min-width: 482px) {
 	.entry-content .wp-block-file.alignright, .entry-content .wp-block-pullquote.alignright, .entry-content .wp-block-video.alignright, .entry-content > .alignright {
-		margin-left: var(--global--spacing-unit);
+		margin-left: var(--global--spacing-horizontal);
 		margin-right: var(--responsive--alignright-margin);
 	}
 }
