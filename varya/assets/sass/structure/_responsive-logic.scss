@@ -181,9 +181,9 @@ $breakpoint_xxl: 1024px;
 @include media(mobile) {
 	%responsive-alignleft {
 		/*rtl:ignore*/
-		margin-left: auto;
+		margin-left: var(--responsive--alignleft-margin);
 		/*rtl:ignore*/
-		margin-right: var(--responsive--alignleft-margin);
+		margin-right: var(--global--spacing-horizontal);
 	}
 }
 
@@ -197,9 +197,9 @@ $breakpoint_xxl: 1024px;
 @include media(mobile) {
 	%responsive-alignright {
 		/*rtl:ignore*/
-		margin-left: var(--responsive--alignright-margin);
+		margin-left: var(--global--spacing-horizontal);
 		/*rtl:ignore*/
-		margin-right: auto;
+		margin-right: var(--responsive--alignright-margin);
 	}
 }
 

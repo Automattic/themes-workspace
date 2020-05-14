@@ -356,7 +356,7 @@ function varya_scripts() {
 	);
 
 	if ( ! empty ( $menu ) ) {
-		wp_enqueue_script( 'varya-main-navigation-scripts', get_template_directory_uri() . '/assets/js/main-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+		wp_enqueue_script( 'varya-primary-navigation-script', get_template_directory_uri() . '/assets/js/primary-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'varya_scripts' );
@@ -383,11 +383,6 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
-
-/**
- * Custom comment walker template.
- */
-require get_template_directory() . '/classes/class-varya-walker-comment.php';
 
 /**
  * Custom colors class.

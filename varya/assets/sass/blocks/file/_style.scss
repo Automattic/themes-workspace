@@ -17,12 +17,10 @@
 	}
 
 	.entry-content &.alignleft {
-		@extend %responsive-alignright;
-		margin-right: var(--global--spacing-horizontal);
+		@extend %responsive-alignleft;
 	}
 
 	.entry-content &.alignright {
-		@extend %responsive-alignleft;
-		margin-left: var(--global--spacing-horizontal);
+		@extend %responsive-alignright;
 	}
 }

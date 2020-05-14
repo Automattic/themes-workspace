@@ -8,16 +8,12 @@
  */
 
 /**
- * Remove Gutenberg Block Styles
- * - We could end up keeping these, but for now these styles
- *   should live in `_block-utilities.scss` where we can make
- *   them simpler and more block-agnostic.
+ * Remove Gutenberg `Theme` Block Styles
  */
-function wps_deregister_styles() {
-	wp_dequeue_style( 'wp-block-library' );
+function varya_deregister_styles() {
 	wp_dequeue_style( 'wp-block-library-theme' );
 }
-//add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+add_action( 'wp_print_styles', 'varya_deregister_styles', 100 );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -37,7 +33,7 @@ function varya_body_classes( $classes ) {
 
 	// Add a body class if main navigation is active.
 	if ( has_nav_menu( 'primary' ) ) {
-		$classes[] = 'has-main-navigation'; 
+		$classes[] = 'has-main-navigation';
 	}
 
 	return $classes;
@@ -53,7 +49,6 @@ function varya_post_classes( $classes, $class, $post_id ) {
 	return $classes;
 }
 add_filter( 'post_class', 'varya_post_classes', 10, 3 );
-
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -214,119 +209,3 @@ function varya_add_dropdown_icons( $output, $item, $depth, $args ) {
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'varya_add_dropdown_icons', 10, 4 );
-
-/**
- * Create a nav menu item to be displayed on mobile to navigate from submenu back to the parent.
- *
- * This duplicates each parent nav menu item and makes it the first child of itself.
- *
- * @param array  $sorted_menu_items Sorted nav menu items.
- * @param object $args              Nav menu args.
- * @return array Amended nav menu items.
- */
-function varya_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
-	static $pseudo_id = 0;
-	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
-		return $sorted_menu_items;
-	}
-
-	$amended_menu_items = array();
-	foreach ( $sorted_menu_items as $nav_menu_item ) {
-		$amended_menu_items[] = $nav_menu_item;
-		if ( in_array( 'menu-item-has-children', $nav_menu_item->classes, true ) ) {
-			$parent_menu_item                   = clone $nav_menu_item;
-			$parent_menu_item->original_id      = $nav_menu_item->ID;
-			$parent_menu_item->ID               = --$pseudo_id;
-			$parent_menu_item->db_id            = $parent_menu_item->ID;
-			$parent_menu_item->object_id        = $parent_menu_item->ID;
-			$parent_menu_item->classes          = array( 'mobile-parent-nav-menu-item' );
-			$parent_menu_item->menu_item_parent = $nav_menu_item->ID;
-
-			$amended_menu_items[] = $parent_menu_item;
-		}
-	}
-
-	return $amended_menu_items;
-}
-// add_filter( 'wp_nav_menu_objects', 'varya_add_mobile_parent_nav_menu_items', 10, 2 );
-
-/**
- * Convert HSL to HEX colors
- */
-function varya_hsl_hex( $h, $s, $l, $to_hex = true ) {
-
-	$h /= 360;
-	$s /= 100;
-	$l /= 100;
-
-	$r = $l;
-	$g = $l;
-	$b = $l;
-	$v = ( $l <= 0.5 ) ? ( $l * ( 1.0 + $s ) ) : ( $l + $s - $l * $s );
-	if ( $v > 0 ) {
-		$m;
-		$sv;
-		$sextant;
-		$fract;
-		$vsf;
-		$mid1;
-		$mid2;
-
-		$m       = $l + $l - $v;
-		$sv      = ( $v - $m ) / $v;
-		$h      *= 6.0;
-		$sextant = floor( $h );
-		$fract   = $h - $sextant;
-		$vsf     = $v * $sv * $fract;
-		$mid1    = $m + $vsf;
-		$mid2    = $v - $vsf;
-
-		switch ( $sextant ) {
-			case 0:
-				$r = $v;
-				$g = $mid1;
-				$b = $m;
-				break;
-			case 1:
-				$r = $mid2;
-				$g = $v;
-				$b = $m;
-				break;
-			case 2:
-				$r = $m;
-				$g = $v;
-				$b = $mid1;
-				break;
-			case 3:
-				$r = $m;
-				$g = $mid2;
-				$b = $v;
-				break;
-			case 4:
-				$r = $mid1;
-				$g = $m;
-				$b = $v;
-				break;
-			case 5:
-				$r = $v;
-				$g = $m;
-				$b = $mid2;
-				break;
-		}
-	}
-	$r = round( $r * 255, 0 );
-	$g = round( $g * 255, 0 );
-	$b = round( $b * 255, 0 );
-
-	if ( $to_hex ) {
-
-		$r = ( $r < 15 ) ? '0' . dechex( $r ) : dechex( $r );
-		$g = ( $g < 15 ) ? '0' . dechex( $g ) : dechex( $g );
-		$b = ( $b < 15 ) ? '0' . dechex( $b ) : dechex( $b );
-
-		return "#$r$g$b";
-
-	}
-
-	return "rgb($r, $g, $b)";
-}

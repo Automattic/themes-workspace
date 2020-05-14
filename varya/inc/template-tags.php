@@ -73,7 +73,7 @@ if ( ! function_exists( 'varya_entry_meta_header' ) ) :
 	 * by overwriting this function.
 	 */
 	function varya_entry_meta_header() {
-
+		/* Leaving this empty so child themes can optionally add entry-meta to the header */
 	}
 endif;
 
@@ -155,7 +155,7 @@ if ( ! function_exists( 'varya_post_thumbnail' ) ) :
 		}
 
 		if ( is_singular() ) :
-			?>
+		?>
 
 			<figure class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
@@ -187,42 +187,6 @@ if ( ! function_exists( 'varya_comment_avatar' ) ) :
 		}
 
 		return sprintf( '<div class="comment-user-avatar comment-author vcard">%s</div>', get_avatar( $id_or_email, varya_get_avatar_size() ) );
-	}
-endif;
-
-if ( ! function_exists( 'varya_discussion_avatars_list' ) ) :
-	/**
-	 * Displays a list of avatars involved in a discussion for a given post.
-	 */
-	function varya_discussion_avatars_list( $comment_authors ) {
-		if ( empty( $comment_authors ) ) {
-			return;
-		}
-		echo '<ol class="discussion-avatar-list">', "\n";
-		foreach ( $comment_authors as $id_or_email ) {
-			printf(
-				"<li>%s</li>\n",
-				varya_get_user_avatar_markup( $id_or_email )
-			);
-		}
-		echo '</ol><!-- .discussion-avatar-list -->', "\n";
-	}
-endif;
-
-if ( ! function_exists( 'varya_comment_form' ) ) :
-	/**
-	 * Documentation for function.
-	 */
-	function varya_comment_form( $order ) {
-		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
-
-			comment_form(
-				array(
-					'logged_in_as' => null,
-					'title_reply'  => null,
-				)
-			);
-		}
 	}
 endif;
 
