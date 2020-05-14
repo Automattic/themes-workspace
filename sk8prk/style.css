@@ -286,7 +286,13 @@ p.is-style-text-indent {
 
 .wp-block-group.is-style-outline {
 	border: 3px solid var(--global--color-border);
-	padding: calc( 3 * var(--global--spacing-unit));
+	padding: var(--global--spacing-unit);
+}
+
+@media only screen and (min-width: 482px) {
+	.wp-block-group.is-style-outline {
+		padding: calc( 3 * var(--global--spacing-unit));
+	}
 }
 
 .wp-block-group.is-style-outline.alignwide {
