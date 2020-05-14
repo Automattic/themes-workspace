@@ -385,19 +385,11 @@ add_action( 'wp_print_footer_scripts', 'varya_skip_link_focus_fix' );
 require get_template_directory() . '/classes/class-varya-svg-icons.php';
 
 /**
-<<<<<<< HEAD
-=======
- * Custom comment walker template.
- */
-require get_template_directory() . '/classes/class-varya-walker-comment.php';
-
-/**
  * Custom colors class.
  */
 require get_template_directory() . '/classes/class-varya-custom-colors.php';
 
 /**
->>>>>>> master
  * Enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
