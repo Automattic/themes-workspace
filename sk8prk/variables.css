@@ -61,6 +61,12 @@
 	--pullquote--font-style: normal;
 	--pullquote--letter-spacing: 0;
 	--pullquote--line-height: 1.15;
+
+	--latest-posts--title-font-family: var(--global--font-primary);
+	--latest-posts--title-font-size: var(--global--font-size-md);
+	--latest-posts--description-font-family: var(--global--font-secondary);
+
+	--list--font-family: var(--global--font-secondary);
 }
 
 @media ( min-width: 482px ){

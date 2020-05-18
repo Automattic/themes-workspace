@@ -1,0 +1,21 @@
+.wp-block-latest-posts {
+    .wp-block-latest-posts__featured-image {
+        > img {
+            max-width: 100% !important;
+        }
+    }
+    > li > a {
+        border-bottom: none;
+    }
+    time {
+        font-weight: 500;
+    }
+    > li > *:first-child {
+        border-top: 3px solid var(--global--color-border);
+        padding-top: var(--global--spacing-unit);
+    }
+
+    .wp-block-latest-posts__post-date {
+        margin-top: 0;
+    }
+}

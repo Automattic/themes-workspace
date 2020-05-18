@@ -155,6 +155,11 @@ p.is-style-text-indent {
 	text-indent: 30%;
 }
 
+a {
+	border-bottom: 2px solid currentColor;
+	font-weight: 500;
+}
+
 .wp-block-button__link {
 	font-weight: bold;
 	letter-spacing: 1px;
@@ -208,6 +213,27 @@ p.is-style-text-indent {
 
 .wp-block-image.is-style-duotone::after {
 	background-color: var(--global--color-background);
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__featured-image > img {
+	max-width: 100% !important;
+}
+
+.wp-block-latest-posts > li > a {
+	border-bottom: none;
+}
+
+.wp-block-latest-posts time {
+	font-weight: 500;
+}
+
+.wp-block-latest-posts > li > *:first-child {
+	border-top: 3px solid var(--global--color-border);
+	padding-top: var(--global--spacing-unit);
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-date {
+	margin-top: 0;
 }
 
 .wp-block-media-text.is-style-duotone .wp-block-media-text__media {
