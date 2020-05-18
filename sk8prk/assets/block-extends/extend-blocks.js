@@ -30,6 +30,13 @@
             },
         },
         {
+            name: "core/latest-posts",
+            options: {
+                name: "duotone",
+                label: "Duotone",
+            },
+        },
+        {
             name: "core/paragraph",
             options: {
                 name: "border-top",
