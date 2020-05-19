@@ -227,7 +227,7 @@ a {
 	font-weight: 500;
 }
 
-.wp-block-latest-posts > li > *:first-child {
+.wp-block-latest-posts > li {
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-unit);
 }

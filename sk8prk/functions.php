@@ -129,7 +129,7 @@ add_action( 'wp_enqueue_scripts', 'varya_sk8prk_scripts', 99 );
 function varya_sk8prk_block_extends() {
 	// Block Tweaks
 	wp_enqueue_script( 'varya-sk8prk-block-extends',
-		get_stylesheet_directory_uri() . '/assets/block-extends/extend-blocks.js',
+		get_stylesheet_directory_uri() . '/assets/js/extend-blocks.js',
 		array( 'wp-blocks', 'wp-edit-post' ) // wp-edit-post is added to avoid a race condition when trying to unregister a style variation 
 	);
 }
