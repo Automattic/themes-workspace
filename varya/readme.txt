@@ -41,6 +41,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
+Unless otherwise noted, the icons in this theme are derived from the WordPress 
+Icons Library, licensed under the terms of the GNU GPL v2 or later.
+https://github.com/WordPress/gutenberg/tree/master/packages/icons
+
 Varya bundles the following third-party resources:
 
 Social Icons

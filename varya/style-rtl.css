@@ -35,17 +35,16 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
+Unless otherwise noted, the icons in this theme are derived from the WordPress 
+Icons Library, licensed under the terms of the GNU GPL v2 or later.
+https://github.com/WordPress/gutenberg/tree/master/packages/icons
+
 Varya bundles the following third-party resources:
 
 Social Icons
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
-
-Icons
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Source: WordPress Icons Library (See https://github.com/WordPress/gutenberg/tree/master/packages/icons)
 
 Code from Twenty Twenty
 Copyright (C) 2020 WordPress.org
