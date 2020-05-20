@@ -3,10 +3,13 @@
         padding: 0;
 
         .wp-block-navigation-link__content {
+            padding: var(--primary-nav--padding);
+        }
+
+        .wp-block-navigation-link__label {
             font-family: var(--primary-nav--font-family);
             font-size: var(--primary-nav--font-size);
             font-weight: var(--primary-nav--font-weight);
-            padding: var(--primary-nav--padding);
         }
     }
 
