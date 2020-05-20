@@ -55,7 +55,14 @@ License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Source: https://github.com/soderlind/2016-customizer-demo
 Included as part of the following classes and functions:
-- on_customize_controls_enqueue_scripts(
+- on_customize_controls_enqueue_scripts()
+
+Images from Smithsonian Institution
+License: CC0
+Source: https://www.si.edu/object/hymenoxys-odorata-dc:nmnhbotany_13045011
+		https://www.si.edu/object/coccocypselum-guianense-aubl-k-schum:nmnhbotany_10752403
+		https://www.si.edu/object/coccocypselum-guianense-aubl-k-schum:nmnhbotany_10672835
+Included in theme screenshot.
 */
 /**
  * Layout
