@@ -77,7 +77,7 @@
 		align-items: center;
 
 		.svg-icon {
-			margin-left: calc(0.5 * var(--global--spacing-unit));
+			margin-left: calc(0.25 * var(--global--spacing-unit));
 		}
 
 		&.open .svg-icon {

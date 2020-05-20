@@ -2934,7 +2934,7 @@ nav a {
 }
 
 .main-navigation .dropdown-icon .svg-icon {
-	margin-left: calc(0.5 * var(--global--spacing-unit));
+	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
 .main-navigation .dropdown-icon.open .svg-icon {
