@@ -27,7 +27,7 @@ if ( ! function_exists( 'varya_posted_on' ) ) :
 
 		printf(
 			'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
-			varya_get_icon_svg( 'watch', 16 ),
+			varya_get_icon_svg( 'calendar', 16 ),
 			esc_url( get_permalink() ),
 			$time_string
 		);
@@ -98,7 +98,7 @@ if ( ! function_exists( 'varya_entry_meta_footer' ) ) :
 				printf(
 					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of categories. */
 					'<span class="cat-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
-					varya_get_icon_svg( 'archive', 16 ),
+					varya_get_icon_svg( 'category', 16 ),
 					__( 'Posted in', 'varya' ),
 					$categories_list
 				); // WPCS: XSS OK.

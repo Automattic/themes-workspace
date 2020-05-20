@@ -71,109 +71,36 @@ class Varya_SVG_Icons {
 	 * @var array
 	 */
 	static $ui_icons = array(
-		'link'                     => /* material-design – link */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
-</svg>',
 
-		'watch'                    => /* material-design – watch-later */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <defs>
-        <path id="a" d="M0 0h24v24H0V0z"></path>
-    </defs>
-    <clipPath id="b">
-        <use xlink:href="#a" overflow="visible"></use>
-    </clipPath>
-    <path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path>
-</svg>',
+		'calendar'                    => /* calendar */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 7.5H4.5V19.0005C4.5 19.2764 4.72363 19.5 4.9995 19.5H19.0005C19.2764 19.5 19.5 19.2764 19.5 19.0005V7.5ZM3 7.5V4.9995V4.995C3 3.89319 3.89319 3 4.995 3H4.9995H19.0005H19.005C20.1068 3 21 3.89319 21 4.995V4.9995V7.5V19.0005C21 20.1048 20.1048 21 19.0005 21H4.9995C3.89521 21 3 20.1048 3 19.0005V7.5ZM7.5 10.5H9V12H7.5V10.5ZM9 15H7.5V16.5H9V15ZM11.25 10.5H12.75V12H11.25V10.5ZM12.75 15H11.25V16.5H12.75V15ZM15 10.5H16.5V12H15V10.5ZM16.5 15H15V16.5H16.5V15Z" fill="currentColor"/></svg>',
 
-		'archive'                  => /* material-design – folder */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'category'                  => /* category */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.1979 8.25L11.2098 6.27363C11.1259 6.10593 10.9545 6 10.767 6H4.995C4.72162 6 4.5 6.22162 4.5 6.495V17.505C4.5 17.7784 4.72162 18 4.995 18H19.0005C19.2764 18 19.5 17.7764 19.5 17.5005V8.7495C19.5 8.47363 19.2764 8.25 19.0005 8.25H12.1979ZM13.125 6.75H19.0005C20.1048 6.75 21 7.64521 21 8.7495V17.5005C21 18.6048 20.1048 19.5 19.0005 19.5H4.995C3.89319 19.5 3 18.6068 3 17.505V6.495C3 5.39319 3.89319 4.5 4.995 4.5H10.767C11.5227 4.5 12.2135 4.92693 12.5514 5.60281L13.125 6.75Z" fill="currentColor"/></svg>',
 
-		'tag'                      => /* material-design – local_offer */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
-	<path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
+		'check'                    => /* check */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.6103 6.43587L10.6406 17.5937L5.51985 13.326L6.48017 12.1737L10.3594 15.4067L17.3897 5.56403L18.6103 6.43587Z" fill="currentColor"/></svg>',
+		
+		'chevron_left'             => /* chevron_left */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9697 6.96973L7.93933 12.0001L12.9697 17.0304L14.0303 15.9697L10.0606 12.0001L14.0303 8.03039L12.9697 6.96973Z" fill="currentColor"/></svg>',
+		
+		'chevron_right'            => /* chevron_right */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.0303 17.0303L16.0607 11.9999L11.0303 6.96961L9.96968 8.03027L13.9394 11.9999L9.96968 15.9696L11.0303 17.0303Z" fill="currentColor"/></svg>',
+		
+		'close' => /* close */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.9394L5.53033 4.46973L4.46967 5.53039L10.9393 12.0001L4.46967 18.4697L5.53033 19.5304L12 13.0607L18.4697 19.5304L19.5303 18.4697L13.0607 12.0001L19.5303 5.53039L18.4697 4.46973L12 10.9394Z" fill="currentColor"/></svg>',
+		
+		'comment'                  => /* comment */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.0458 15.0001L5.99998 17.697L5.99999 6.49478C5.99999 6.22141 6.2216 5.99979 6.49498 5.99978L17.505 5.99951C17.7784 5.9995 18 6.22113 18 6.49451L18 14.5046C18 14.778 17.7784 14.9996 17.505 14.9996L10.0458 15.0001ZM10.5 16.5L17.5051 16.4996C18.6069 16.4995 19.5 15.6063 19.5 14.5046L19.5 6.49451C19.5 5.39268 18.6068 4.49948 17.5049 4.49951L6.49494 4.49978C5.39315 4.49981 4.49999 5.39299 4.49999 6.49478L4.49998 18.3483C4.49998 18.9842 5.01549 19.4997 5.6514 19.4997C5.8787 19.4997 6.10091 19.4324 6.29004 19.3063L10.5 16.5Z" fill="currentColor"/></svg>',
+		
+		'download'      => /* download */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 13.1894V4.5L12.75 4.5L12.75 13.1894L15.9697 9.96973L17.0303 11.0304L12 16.0607L6.96967 11.0304L8.03033 9.96973L11.25 13.1894ZM19.5 15V19.5L4.5 19.5L4.5 15H6L6 18L18 18L18 15H19.5Z" fill="currentColor"/></svg>',
 
-		'comment'                  => /* material-design – comment */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
-
-		'person'                   => /* material-design – person */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
-
-		'edit'                     => /* material-design – edit */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
-
-		'chevron_left'             => /* material-design – chevron_left */ '
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
-
-		'chevron_right'            => /* material-design – chevron_right */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-    <path d="M0 0h24v24H0z" fill="none"></path>
-</svg>',
-
-		'check'                    => /* material-design – check */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
-</svg>',
-
-		'arrow_drop_down_circle'   => /* material-design – arrow_drop_down_circle */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<path d="M0 0h24v24H0z" fill="none"></path>
-	<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z"></path>
-</svg>',
-
-		'keyboard_arrow_down'      => /* material-design – keyboard_arrow_down */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-	<path fill="none" d="M0 0h24v24H0V0z"></path>
-</svg>',
-
-		'keyboard_arrow_right'     => /* material-design – keyboard_arrow_right */ '
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<path d="M10 17l5-5-5-5v10z"></path>
-	<path fill="none" d="M0 24V0h24v24H0z"></path>
-</svg>',
-
-		'keyboard_arrow_left'      => /* material-design – keyboard_arrow_left */ '
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-	<path d="M14 7l-5 5 5 5V7z"></path>
-	<path fill="none" d="M24 0v24H0V0h24z"></path>
-</svg>',
-
-		'arrow_drop_down_ellipsis' => /* custom – arrow_drop_down_ellipsis */ '
-<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-        <path d="M0 0h24v24H0z"/>
-        <path fill="currentColor" fill-rule="nonzero" d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM6 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm6 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm6 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-    </g>
-</svg>',
-
-		'shopping_cart' => /* material-design - shopping_cart */ '
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-	<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/>
-	<path d="M0 0h24v24H0z" fill="none"/>
-</svg>',
-
+		'dropdown'      => /* dropdown */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.96954 10.2804L11.9999 15.3107L17.0302 10.2804L15.9695 9.21973L11.9999 13.1894L8.0302 9.21973L6.96954 10.2804Z" fill="currentColor"/></svg>',
+		
+		'edit'                     => /* edit */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5668 6.424L17.4888 3.44531L7.63418 13.3967L6.39832 17.5826L10.6924 16.3953L20.5668 6.424ZM12 21H4.5V19.5H12V21Z" fill="currentColor"/></svg>',
+		
+		'link'                     => /* link */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 18H9C6.1005 18 3.75 15.6495 3.75 12.75C3.75 9.85051 6.10051 7.5 9 7.5H10.5V9L9 9C6.92893 9 5.25 10.6789 5.25 12.75C5.25 14.8211 6.92893 16.5 9 16.5H10.5V18ZM13.5 7.5H15C17.8995 7.5 20.25 9.85051 20.25 12.75C20.25 15.6495 17.8995 18 15 18H13.5V16.5H15C17.0711 16.5 18.75 14.8211 18.75 12.75C18.75 10.6789 17.0711 9 15 9H13.5V7.5ZM9 13.5L15 13.5V12L9 12V13.5Z" fill="currentColor"/></svg>',
+		
+		'menu' => /* menu */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 6H19.5V7.5H4.5V6ZM4.5 12H19.5V13.5H4.5V12ZM19.5 18H4.5V19.5H19.5V18Z" fill="currentColor"/></svg>',
+		
+		'person'                   => /* person */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 7.5C15 9.15685 13.6569 10.5 12 10.5C10.3431 10.5 9 9.15685 9 7.5C9 5.84315 10.3431 4.5 12 4.5C13.6569 4.5 15 5.84315 15 7.5ZM16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5ZM19.5 19.5V16.245C19.5 14.729 18.271 13.5 16.755 13.5L7.245 13.5C5.72898 13.5 4.5 14.729 4.5 16.245L4.5 19.5H6L6 16.245C6 15.5574 6.5574 15 7.245 15L16.755 15C17.4426 15 18 15.5574 18 16.245V19.5H19.5Z" fill="currentColor"/></svg>',
+		
+		'shopping_cart' => /* shopping_cart */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 4.5H6.52532L7.26338 6.52966C7.615 6.20354 8.087 6 8.61768 6H18.4033C19.7141 6 20.6687 7.24252 20.3309 8.50904L19.3949 12.019C19.162 12.8924 18.3711 13.5 17.4673 13.5H13.6765H9.58293H9.42116C8.93324 13.5 8.57522 13.9585 8.69356 14.4319C8.77742 14.7674 9.07592 15 9.41842 15H19.5V16.5H9.41842C8.38433 16.5 7.48835 15.7957 7.23834 14.7957C7.03011 13.9628 7.31351 13.1451 7.87883 12.6114L7.80744 12.4151C7.74604 12.2952 7.69614 12.1678 7.65934 12.034L7.62983 11.9267L5.47468 6H3V4.5ZM9.1741 11.7841L9.06014 11.4708L8.1404 8.12625C8.05374 7.81113 8.29086 7.5 8.61768 7.5H18.4033C18.7285 7.5 18.9654 7.80829 18.8816 8.12254L17.9456 11.6325C17.8878 11.8492 17.6915 12 17.4673 12H13.6765H9.58293C9.41598 12 9.26445 11.9164 9.1741 11.7841ZM10.5 19.5C10.5 20.3284 9.82843 21 9 21C8.17157 21 7.5 20.3284 7.5 19.5C7.5 18.6716 8.17157 18 9 18C9.82843 18 10.5 18.6716 10.5 19.5ZM18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z" fill="currentColor"/></svg>',
+		
+		'tag'                      => /* tag */ '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 12.2045C3 12.5941 3.15158 12.9684 3.42267 13.2482L9.71878 19.747C11.0769 21.1489 13.3201 21.1667 14.7003 19.7865L19.7873 14.6995C21.1677 13.319 21.1497 11.0753 19.7471 9.71731L13.2459 3.42238C12.9661 3.15147 12.5919 3 12.2025 3H4.5C3.67157 3 3 3.67157 3 4.5V12.2045ZM12.2025 4.5H4.5V12.2045L10.7961 18.7033C11.5714 19.5035 12.8518 19.5137 13.6396 18.7258L18.7266 13.6388C19.5146 12.8509 19.5043 11.5701 18.7037 10.7949L12.2025 4.5ZM8.4975 9.495C9.0484 9.495 9.495 9.0484 9.495 8.4975C9.495 7.9466 9.0484 7.5 8.4975 7.5C7.9466 7.5 7.5 7.9466 7.5 8.4975C7.5 9.0484 7.9466 9.495 8.4975 9.495Z" fill="currentColor"/></svg>',
 	);
 
 	/**

@@ -689,7 +689,9 @@ body[class*="woocommerce"] #page .primary-navigation > #toggle-cart {
 	left: auto;
 }
 
-body[class*="woocommerce"] #page .primary-navigation > #toggle-cart .svg-icon {
+body[class*="woocommerce"] #page .primary-navigation > #toggle-cart .open .svg-icon {
+	margin-right: 0;
+	margin-left: calc(0.25 * var(--global--spacing-unit));
 	vertical-align: middle;
 }
 
@@ -710,7 +712,8 @@ body[class*="woocommerce"].wc-navigation-open #page .primary-navigation #toggle-
 }
 
 body[class*="woocommerce"].wc-navigation-open #page .primary-navigation #toggle-cart .close {
-	display: inline;
+	display: flex;
+	align-items: center;
 }
 
 @media only screen and (max-width: 481px) {

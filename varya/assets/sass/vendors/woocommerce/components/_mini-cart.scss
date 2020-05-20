@@ -17,7 +17,9 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 			top: 0;
 			right: auto;
 
-			.svg-icon {
+			.open .svg-icon {
+				margin-left: 0;
+				margin-right: calc(0.25 * var(--global--spacing-unit));
 				vertical-align: middle;
 			}
 		}
@@ -42,7 +44,8 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 				}
 
 				.close {
-					display: inline;
+					display: flex;
+					align-items: center;
 				}
 			}
 		}
