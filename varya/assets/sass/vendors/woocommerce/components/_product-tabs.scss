@@ -28,6 +28,7 @@ body[class*="woocommerce"] #page { // adding #content here to override default w
 					padding-right: var(--wc--tabs--padding);
 					padding-top: calc(0.5 * var(--wc--tabs--padding));
 					padding-bottom: calc(0.5 * var(--wc--tabs--padding));
+					border-bottom: none;
 
 					&:hover {
 						color: var(--global--color-primary-hover);

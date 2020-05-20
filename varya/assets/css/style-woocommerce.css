@@ -1069,6 +1069,7 @@ body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li a {
 	padding-right: var(--wc--tabs--padding);
 	padding-top: calc(0.5 * var(--wc--tabs--padding));
 	padding-bottom: calc(0.5 * var(--wc--tabs--padding));
+	border-bottom: none;
 }
 
 body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li a:hover {
@@ -1138,6 +1139,14 @@ body[class*="woocommerce"] #page #reviews h2 small {
 
 body[class*="woocommerce"] #page #reviews h2 small a {
 	color: currentColor;
+}
+
+body[class*="woocommerce"] #page #reviews .comment-form > p {
+	flex-basis: 100%;
+}
+
+body[class*="woocommerce"] #page #reviews .comment-form .stars a {
+	border-bottom: none;
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist {
