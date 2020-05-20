@@ -161,7 +161,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 				array(
 					'name'  => __( 'Secondary', 'varya' ),
 					'slug'  => 'secondary',
-					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' )
+					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#3C8067' : get_theme_mod( 'varya_--global--color-secondary' )
 				),
 				array(
 					'name'  => __( 'Foreground', 'varya' ),
@@ -181,7 +181,7 @@ if ( ! function_exists( 'varya_setup' ) ) :
 			)
 		);
 
-		$gradient_color_a = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#A36265' : get_theme_mod( 'varya_--global--color-secondary' );
+		$gradient_color_a = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#3C8067' : get_theme_mod( 'varya_--global--color-secondary' );
 		$gradient_color_b = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'varya_--global--color-background-light' );
 
 		add_theme_support(
