@@ -30,8 +30,8 @@
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'varya' ); ?>">
 					<button id="toggle-menu" class="button">
-						<span class="dropdown-icon open"><?php _e( 'Menu', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu_open' ) ?></span>
-						<span class="dropdown-icon close"><?php _e( 'Close', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu_close' ) ?></span>
+						<span class="dropdown-icon open"><?php _e( 'Menu', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu' ) ?></span>
+						<span class="dropdown-icon close"><?php _e( 'Close', 'varya' ); ?> <?php echo varya_get_icon_svg( 'close' ) ?></span>
 						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'varya' ); ?></span>
 						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'varya' ); ?></span>
 					</button>
