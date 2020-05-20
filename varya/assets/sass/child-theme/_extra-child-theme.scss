@@ -1,7 +1,6 @@
 /**
  * Extra Child Theme Styles
  */
-// @import "";
 
 /*
  * Center-align layout
@@ -14,7 +13,7 @@ a {
 
 .site-branding,
 .site-info,
-.main-navigation,
+.primary-navigation,
 .entry-header,
 .entry-footer,
 .page-title,
@@ -24,7 +23,7 @@ a {
 	text-align: center;
 }
 
-.main-navigation > div {
+.primary-navigation > div {
 	text-align: left;
 }
 
@@ -36,7 +35,7 @@ a {
 	display: flex;
 }
 
-.main-navigation > div > ul,
+.primary-navigation > div > ul,
 .social-navigation > div > ul,
 .pagination .nav-links {
 	justify-content: center;

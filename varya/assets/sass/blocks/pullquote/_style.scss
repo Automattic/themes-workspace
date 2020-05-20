@@ -14,7 +14,7 @@
 		font-family: var(--pullquote--font-family);
 		font-size: var(--pullquote--font-size);
 		font-style: var(--pullquote--font-style);
-		letter-spacing: var(--heading--letter-spacing-h4);
+		letter-spacing: var(--pullquote--letter-spacing);
 		line-height: var(--pullquote--line-height);
 		margin: 0;
 	}
@@ -74,12 +74,10 @@
 	}
 
 	.entry-content &.alignleft {
-		@extend %responsive-alignright;
-		margin-right: var(--global--spacing-horizontal);
+		@extend %responsive-alignleft;
 	}
 
 	.entry-content &.alignright {
-		@extend %responsive-alignleft;
-		margin-left: var(--global--spacing-horizontal);
+		@extend %responsive-alignright;
 	}
 }

@@ -95,8 +95,8 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		content: " < " attr(href) "> ";
 	}
 	/* Visibility */
-	.main-navigation,
-	.site-title + .main-navigation,
+	.primary-navigation,
+	.site-title + .primary-navigation,
 	.social-navigation,
 	.site-branding-container:before,
 	.entry .entry-title:before,
@@ -118,16 +118,16 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.site-header.featured-image {
 		min-height: 0;
 	}
-	.site-header.featured-image .main-navigation a,
-	.site-header.featured-image .main-navigation a + svg,
+	.site-header.featured-image .primary-navigation a,
+	.site-header.featured-image .primary-navigation a + svg,
 	.site-header.featured-image .social-navigation a,
 	.site-header.featured-image .site-title a,
 	.site-header.featured-image .site-featured-image a,
 	.site-header.featured-image .site-branding .site-title,
 	.site-header.featured-image .site-branding .site-description,
-	.site-header.featured-image .main-navigation a:after,
-	.site-header.featured-image .main-navigation .main-menu > li.menu-item-has-children:after,
-	.site-header.featured-image .main-navigation li,
+	.site-header.featured-image .primary-navigation a:after,
+	.site-header.featured-image .primary-navigation .menu-wrapper > li.menu-item-has-children:after,
+	.site-header.featured-image .primary-navigation li,
 	.site-header.featured-image .social-navigation li,
 	.site-header.featured-image .entry-meta,
 	.site-header.featured-image .entry-title,

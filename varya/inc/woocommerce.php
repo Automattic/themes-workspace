@@ -225,7 +225,7 @@ function varya_add_cart_menu( $nav, $args ) {
 				<span class="hide-visually collapsed-text">%7$s</span>
 			</button>
 			<div class="woocommerce-menu-container">
-			<ul id="woocommerce-menu" class="main-menu" aria-label="submenu">
+			<ul id="woocommerce-menu" class="menu-wrapper" aria-label="submenu">
 			<li class="menu-item woocommerce-menu-item %8$s" title="%9$s">
 				%10$s
 				<ul class="sub-menu">

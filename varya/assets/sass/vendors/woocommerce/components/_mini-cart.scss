@@ -9,7 +9,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 		text-decoration: none;
 	}
 
-	.main-navigation {
+	.primary-navigation {
 
 		// Mobile menu toggle
 		> #toggle-cart {
@@ -25,7 +25,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 		}
 
 		// Mobile menu open
-		@at-root body[class*="woocommerce"].wc-navigation-open #page .main-navigation {
+		@at-root body[class*="woocommerce"].wc-navigation-open #page .primary-navigation {
 
 			> .woocommerce-menu-container {
 				visibility: visible;
@@ -53,7 +53,7 @@ body[class*="woocommerce"] #page { // adding #page here to override default wc s
 		@include media(mobile-only) {
 
 			// Adjust position when logged-in
-			@at-root body[class*="woocommerce"].admin-bar.lock-scrolling #page .main-navigation #toggle-cart {
+			@at-root body[class*="woocommerce"].admin-bar.lock-scrolling #page .primary-navigation #toggle-cart {
 				top: 46px;
 			}
 

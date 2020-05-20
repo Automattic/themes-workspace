@@ -28,7 +28,7 @@
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
-				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'varya' ); ?>">
+				<nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'varya' ); ?>">
 					<button id="toggle-menu" class="button">
 						<span class="dropdown-icon open"><?php _e( 'Menu', 'varya' ); ?> <?php echo varya_get_icon_svg( 'menu' ) ?></span>
 						<span class="dropdown-icon close"><?php _e( 'Close', 'varya' ); ?> <?php echo varya_get_icon_svg( 'close' ) ?></span>
@@ -45,8 +45,8 @@
 					wp_nav_menu(
 						array(
 							'theme_location'  => 'primary',
-							'menu_class'      => 'main-menu',
-							'container_class' => 'main-menu-container menu-'. $menu->slug .'-container',
+							'menu_class'      => 'menu-wrapper',
+							'container_class' => 'primary-menu-container menu-'. $menu->slug .'-container',
 							'items_wrap'      => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 						)
 					);
@@ -60,7 +60,6 @@
 					wp_nav_menu(
 						array(
 							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
 							'link_before'    => '<span class="screen-reader-text">',
 							'link_after'     => '</span>' . varya_get_icon_svg( 'link' ),
 							'depth'          => 1,
