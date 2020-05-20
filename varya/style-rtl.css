@@ -3752,7 +3752,7 @@ nav a {
 	font-size: var(--global--font-size-xs);
 }
 
-.comment-form .comment-submit {
+.comment-form .form-submit {
 	flex-basis: 100%;
 }
 
