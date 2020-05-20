@@ -3777,6 +3777,10 @@ nav a {
 	font-size: var(--global--font-size-xs);
 }
 
+.comment-form .form-submit {
+	flex-basis: 100%;
+}
+
 .comment-form > p {
 	margin-bottom: var(--global--spacing-unit);
 }

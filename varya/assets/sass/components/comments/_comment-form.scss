@@ -48,6 +48,10 @@
 	.comment-notes {
 		font-size: var(--global--font-size-xs);
 	}
+
+	.form-submit {
+		flex-basis: 100%;
+	}
 }
 
 .comment-form > p {
