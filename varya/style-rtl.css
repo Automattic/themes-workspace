@@ -3736,6 +3736,10 @@ nav a {
 	flex-wrap: wrap;
 }
 
+.comment-form > * {
+	flex-basis: 100%;
+}
+
 .comment-form .comment-notes {
 	font-size: var(--global--font-size-sm);
 }
@@ -3747,16 +3751,13 @@ nav a {
 
 .comment-form .comment-form-author,
 .comment-form .comment-form-email {
+	flex-basis: 0;
 	flex-grow: 1;
 }
 
 .comment-form .comment-form-cookies-consent > label,
 .comment-form .comment-notes {
 	font-size: var(--global--font-size-xs);
-}
-
-.comment-form .form-submit {
-	flex-basis: 100%;
 }
 
 .comment-form > p {
