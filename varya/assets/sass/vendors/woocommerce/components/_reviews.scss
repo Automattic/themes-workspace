@@ -24,9 +24,6 @@ body[class*="woocommerce"] #page { // adding #content here to override default w
 		}
 
 		.comment-form {
-			> p {
-				flex-basis: 100%;
-			}
 
 			.stars a {
 				border-bottom: none;

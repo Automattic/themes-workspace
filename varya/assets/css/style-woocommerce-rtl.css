@@ -1141,10 +1141,6 @@ body[class*="woocommerce"] #page #reviews h2 small a {
 	color: currentColor;
 }
 
-body[class*="woocommerce"] #page #reviews .comment-form > p {
-	flex-basis: 100%;
-}
-
 body[class*="woocommerce"] #page #reviews .comment-form .stars a {
 	border-bottom: none;
 }
