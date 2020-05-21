@@ -29,6 +29,9 @@
 .comment-form {
 	display: flex;
 	flex-wrap: wrap;
+	> * {
+		flex-basis: 100%;
+	}
 
 	.comment-notes {
 		font-size: var(--global--font-size-sm);
@@ -41,16 +44,13 @@
 
 	.comment-form-author,
 	.comment-form-email {
+		flex-basis: 0;
 		flex-grow: 1;
 	}
 
 	.comment-form-cookies-consent > label, 
 	.comment-notes {
 		font-size: var(--global--font-size-xs);
-	}
-
-	.form-submit {
-		flex-basis: 100%;
 	}
 }
 
