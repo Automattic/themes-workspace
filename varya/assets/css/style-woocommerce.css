@@ -1069,6 +1069,8 @@ body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li a {
 	padding-right: var(--wc--tabs--padding);
 	padding-top: calc(0.5 * var(--wc--tabs--padding));
 	padding-bottom: calc(0.5 * var(--wc--tabs--padding));
+	font-weight: normal;
+	border-bottom: none;
 }
 
 body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li a:hover {
@@ -1118,7 +1120,6 @@ body[class*="woocommerce"] #page .woocommerce-tabs .panel h2,
 body[class*="woocommerce"] #page .woocommerce-tabs .panel .comment-reply-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
-	font-weight: bold;
 }
 
 /**
@@ -1138,6 +1139,14 @@ body[class*="woocommerce"] #page #reviews h2 small {
 
 body[class*="woocommerce"] #page #reviews h2 small a {
 	color: currentColor;
+}
+
+body[class*="woocommerce"] #page #reviews .comment-form > p {
+	flex-basis: 100%;
+}
+
+body[class*="woocommerce"] #page #reviews .comment-form .stars a {
+	border-bottom: none;
 }
 
 body[class*="woocommerce"] #page #reviews #comments ol.commentlist {

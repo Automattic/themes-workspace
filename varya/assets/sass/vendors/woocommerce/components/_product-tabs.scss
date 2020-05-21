@@ -28,6 +28,8 @@ body[class*="woocommerce"] #page { // adding #content here to override default w
 					padding-right: var(--wc--tabs--padding);
 					padding-top: calc(0.5 * var(--wc--tabs--padding));
 					padding-bottom: calc(0.5 * var(--wc--tabs--padding));
+					font-weight: normal;
+					border-bottom: none;
 
 					&:hover {
 						color: var(--global--color-primary-hover);
@@ -80,7 +82,6 @@ body[class*="woocommerce"] #page { // adding #content here to override default w
 			.comment-reply-title {
 				font-family: var(--global--font-primary);
 				font-size: var(--global--font-size-lg);
-				font-weight: bold;
 			}
 		}
 	}
