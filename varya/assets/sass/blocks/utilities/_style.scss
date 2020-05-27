@@ -85,7 +85,8 @@
 }
 
 .entry-content > .alignfull {
-	@extend %responsive-alignfull-width;
+	@extend %responsive-alignfull-width-mobile;
+	@extend %responsive-alignfull-width;	
 }
 
 .entry-content > .alignfull [class*="inner-container"] > .alignwide {

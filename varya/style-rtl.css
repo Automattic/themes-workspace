@@ -153,9 +153,19 @@ Included in theme screenshot.
 }
 
 .full-max-width, .entry-content > .alignfull, .singular .post-thumbnail {
-	max-width: var(--responsive--alignfull-width);
-	margin-right: auto;
+	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
+	width: calc(100% + (2 * var(--global--spacing-horizontal)));
+	margin-right: calc(-1 * var(--global--spacing-horizontal));
 	margin-left: auto;
+}
+
+@media only screen and (min-width: 482px) {
+	.full-max-width, .entry-content > .alignfull, .singular .post-thumbnail {
+		max-width: var(--responsive--alignfull-width);
+		width: auto;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 .entry-content > .alignwide [class*="inner-container"] > .alignwide, .entry-content > .alignfull [class*="inner-container"] > .alignwide {
