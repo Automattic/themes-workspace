@@ -533,6 +533,11 @@ div[data-type="core/button"] {
 	text-align: right;
 }
 
+.wp-block[data-align="full"] > .wp-block-columns {
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
 .wp-block-file .wp-block-file__textlink {
 	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--global--color-primary);
@@ -557,6 +562,20 @@ div[data-type="core/button"] {
 
 .wp-block-gallery figcaption {
 	margin-bottom: 0;
+}
+
+.wp-block-group .wp-block-group__inner-container {
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+.wp-block-group .wp-block-group__inner-container > [data-align=full],
+.wp-block-group .wp-block-group__inner-container > .alignfull {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: -14px;
+	width: calc(100% + 28px);
+	max-width: calc(100% + 28px);
 }
 
 .wp-block-group.has-background {

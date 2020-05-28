@@ -152,7 +152,7 @@ Included in theme screenshot.
 	margin-left: auto;
 }
 
-.full-max-width, .entry-content > .alignfull, .singular .post-thumbnail {
+.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .entry-content > .alignfull, .singular .post-thumbnail {
 	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	margin-right: calc(-1 * var(--global--spacing-horizontal));
@@ -1524,6 +1524,8 @@ button[data-load-more-btn],
 .wp-block-group .wp-block-group__inner-container {
 	margin-right: auto;
 	margin-left: auto;
+	padding-right: var(--global--spacing-horizontal);
+	padding-left: var(--global--spacing-horizontal);
 }
 
 .wp-block-group .wp-block-group__inner-container > * {
