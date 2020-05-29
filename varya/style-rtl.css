@@ -2801,6 +2801,7 @@ nav a {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 @media only screen and (max-width: 481px) {
