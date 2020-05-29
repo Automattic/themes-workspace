@@ -1,17 +1,4 @@
 .wp-block-group {
-	.wp-block-group__inner-container {
-		padding-left: 14px;
-		padding-right: 14px;
-	}
-
-	.wp-block-group__inner-container > [data-align=full],
-	.wp-block-group__inner-container > .alignfull {
-		padding-left: 0;
-		padding-right: 0;
-		margin-left: -14px;
-		width: calc(100% + 28px);
-		max-width:  calc(100% + 28px);
-	}
 
 	&.has-background {
 		padding: var(--global--spacing-vertical);
