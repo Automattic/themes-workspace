@@ -5,22 +5,25 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Root
+ * @subpackage Seedlet
  * @since 1.0.0
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<header class="entry-header wide-max-width">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php if ( ! is_page() ) : ?>
-		<div class="entry-meta">
-			<?php seedlet_entry_meta_header(); ?>
-		</div><!-- .meta-info -->
-		<?php endif; ?>
-	</header>
+	<header class="entry-header default-max-width">
+		<?php
+		if ( is_sticky() && is_home() && ! is_paged() ) {
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'seedlet' ) );
+		}
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+		endif;
+		?>
+	</header><!-- .entry-header -->
 
 	<?php seedlet_post_thumbnail(); ?>
 
@@ -53,9 +56,4 @@
 	<footer class="entry-footer default-max-width">
 		<?php seedlet_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
-
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
-	<?php endif; ?>
-
 </article><!-- #post-${ID} -->

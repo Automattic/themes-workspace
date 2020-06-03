@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Root
+ * @subpackage Seedlet
  * @since 1.0.0
  */
 
@@ -13,7 +13,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header wide-max-width">
+	<header class="entry-header default-max-width">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
@@ -55,7 +55,7 @@
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
+		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
 	<?php endif; ?>
 
 </article><!-- #post-${ID} -->
