@@ -54,6 +54,40 @@
 				</nav><!-- #site-navigation -->
 			<?php endif; ?>
 
+			<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+				<nav class="woo-navigation" aria-label="<?php esc_attr_e( 'Woo Minicart', 'varya' ); ?>">
+					<?php echo( sprintf(
+						'<button id="toggle-cart" class="button">
+							<span class="dropdown-icon open">%1$s %2$s</span>
+							<span class="dropdown-icon close">%3$s %4$s</span>
+							<span class="hide-visually expanded-text">%5$s</span>
+							<span class="hide-visually collapsed-text">%6$s</span>
+						</button>
+						<div class="woocommerce-menu-container">
+						<ul id="woocommerce-menu" class="menu-wrapper" aria-label="submenu">
+						<li class="menu-item woocommerce-menu-item %7$s" title="%8$s">
+							%9$s
+							<ul class="sub-menu">
+								<li class="woocommerce-cart-widget" title="%10$s">
+									%11$s
+								</li>
+							</ul>
+						</li>',
+						varya_get_icon_svg( 'shopping_cart' ),
+						esc_html__( 'Cart', 'varya' ),
+						esc_html__( 'Close', 'varya' ),
+						varya_get_icon_svg( 'close' ),
+						esc_html__( 'expanded', 'varya' ),
+						esc_html__( 'collapsed', 'varya' ),
+						is_cart() ? 'current-menu-item' : '',
+						esc_attr__( 'View your shopping cart', 'varya' ),
+						varya_cart_link(),
+						esc_attr__( 'View your shopping list', 'varya' ),
+						varya_cart_widget()
+					) ); ?>
+				</nav><!-- .woo-navigation -->
+			<?php endif; ?>
+
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
 				<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'varya' ); ?>">
 					<?php

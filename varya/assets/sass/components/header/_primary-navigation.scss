@@ -1,6 +1,7 @@
 // Navigation
 
-.primary-navigation {
+.primary-navigation,
+.woo-navigation { 
 
 	position: absolute;
  	top: 0;
@@ -8,6 +9,7 @@
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
 	margin-top: 0;
+	margin-bottom: 0;
 
 	@include media(mobile-only) {
 		width: 100%;
