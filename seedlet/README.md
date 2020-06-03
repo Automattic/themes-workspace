@@ -45,8 +45,8 @@ To use the system, simply duplicate the `seedlet-child` theme directory and rena
 - Search for: `'seedlet-child'` and replace with: `'my-theme-name'` (with quotes).
 - Search for: `seedlet_child_` and replace with: `my_theme_name_`.
 - Search for: `Text Domain: varia-child` and replace with: `Text Domain: my-theme-name` in _style.css_.
-- Search for:  `varia-child` and replace with: `my_theme_name`.
-- Search for: `varia-child-` and replace with: `my-theme-name-`.
+- Search for:  `seedlet-child` and replace with: `my_theme_name`.
+- Search for: `seedlet-child-` and replace with: `my-theme-name-`.
 
 (Soon this process will be replaced by a `theme-dev-util` that allows you to run a command and automatically produce a child theme with all the strings already replaced.)
 
