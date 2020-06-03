@@ -38,7 +38,7 @@
 	--global--font-size-lg: 24px;
 	--global--font-size-xl: 28px;
 	--global--font-size-xxl: 32px;
-	--global--font-size-xxxl: 64px;
+	--global--font-size-xxxl: 48px;
 	/* Line Height */
 	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
@@ -169,8 +169,8 @@
 	--branding--color-link: var(--global--color-primary);
 	--branding--color-link-hover: var(--global--color-primary-hover);
 	--branding--title--font-family: var(--global--font-primary);
-	--branding--title--font-size: var(--heading--font-size-h1);
-	--branding--title--font-size-mobile: calc( 0.75 * var(--heading--font-size-h1) );
+	--branding--title--font-size: calc( 1.25 * var(--heading--font-size-h1) );
+	--branding--title--font-size-mobile: var(--heading--font-size-h1);
 	--branding--title--font-weight: 700;
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
