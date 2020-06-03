@@ -3302,6 +3302,7 @@ nav a {
 	font-size: var(--entry-header--font-size);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height);
+	overflow-wrap: break-word;
 }
 
 .entry-title a {
