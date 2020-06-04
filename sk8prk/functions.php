@@ -9,7 +9,7 @@
  * @since 1.0.0
  */
 
-if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
+if ( ! function_exists( 'seedlet_sk8prk_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -17,14 +17,14 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function varya_sk8prk_setup() {
+	function seedlet_sk8prk_setup() {
 
 		// Add support for editor styles.
         add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
 		add_editor_style( array(
-			varya_sk8prk_fonts_url(),
+			seedlet_sk8prk_fonts_url(),
 			'variables.css',
 			'style.css',
 		) );
@@ -34,38 +34,38 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Tiny', 'varya-sk8prk' ),
-					'shortName' => __( 'XS', 'varya-sk8prk' ),
+					'name'      => __( 'Tiny', 'seedlet-sk8prk' ),
+					'shortName' => __( 'XS', 'seedlet-sk8prk' ),
 					'size'      => 14,
 					'slug'      => 'xs',
 				),
 				array(
-					'name'      => __( 'Small', 'varya-sk8prk' ),
-					'shortName' => __( 'S', 'varya-sk8prk' ),
+					'name'      => __( 'Small', 'seedlet-sk8prk' ),
+					'shortName' => __( 'S', 'seedlet-sk8prk' ),
 					'size'      => 16,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => __( 'Medium', 'varya-sk8prk' ),
-					'shortName' => __( 'M', 'varya-sk8prk' ),
+					'name'      => __( 'Medium', 'seedlet-sk8prk' ),
+					'shortName' => __( 'M', 'seedlet-sk8prk' ),
 					'size'      => 20,
 					'slug'      => 'medium',
 				),
 				array(
-					'name'      => __( 'Large', 'varya-sk8prk' ),
-					'shortName' => __( 'L', 'varya-sk8prk' ),
+					'name'      => __( 'Large', 'seedlet-sk8prk' ),
+					'shortName' => __( 'L', 'seedlet-sk8prk' ),
 					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'XL', 'varya-sk8prk' ),
-					'shortName' => __( 'XL', 'varya-sk8prk' ),
+					'name'      => __( 'XL', 'seedlet-sk8prk' ),
+					'shortName' => __( 'XL', 'seedlet-sk8prk' ),
 					'size'      => 36,
 					'slug'      => 'xl',
 				),
 				array(
-					'name'      => __( 'Huge', 'varya-sk8prk' ),
-					'shortName' => __( 'XXL', 'varya-sk8prk' ),
+					'name'      => __( 'Huge', 'seedlet-sk8prk' ),
+					'shortName' => __( 'XXL', 'seedlet-sk8prk' ),
 					'size'      => 48,
 					'slug'      => 'huge',
 				),
@@ -77,12 +77,12 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Primary', 'varya-sk8prk' ),
+					'name'  => __( 'Primary', 'seedlet-sk8prk' ),
 					'slug'  => 'primary',
 					'color' => '#000000',
 				),
 				array(
-					'name'  => __( 'Background', 'varya-sk8prk' ),
+					'name'  => __( 'Background', 'seedlet-sk8prk' ),
 					'slug'  => 'background',
 					'color' => '#BFF5A5',
 				),
@@ -90,57 +90,57 @@ if ( ! function_exists( 'varya_sk8prk_setup' ) ) :
         );
 	}
 endif;
-add_action( 'after_setup_theme', 'varya_sk8prk_setup', 12 );
+add_action( 'after_setup_theme', 'seedlet_sk8prk_setup', 12 );
 
 /**
  * Filter the content_width in pixels, based on the child-theme's design and stylesheet.
  */
-function varya_sk8prk_content_width() {
+function seedlet_sk8prk_content_width() {
 	return 744;
 }
-add_filter( 'varya_content_width', 'varya_sk8prk_content_width' );
+add_filter( 'seedlet_content_width', 'seedlet_sk8prk_content_width' );
 
 /**
  * Enqueue scripts and styles.
  */
-function varya_sk8prk_scripts() {
+function seedlet_sk8prk_scripts() {
 
 	// enqueue Google fonts, if necessary
-    wp_enqueue_style( 'varya-sk8park-fonts', varya_sk8prk_fonts_url(), array(), null );
+    wp_enqueue_style( 'seedlet-sk8park-fonts', seedlet_sk8prk_fonts_url(), array(), null );
 
 	// Child theme variables
-	wp_enqueue_style( 'varya-sk8prk-variables-style', get_stylesheet_directory_uri() . '/variables.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'seedlet-sk8prk-variables-style', get_stylesheet_directory_uri() . '/variables.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// dequeue parent styles
-	// wp_dequeue_style( 'varya-variables-style' );
+	// wp_dequeue_style( 'seedlet-variables-style' );
 
 	// enqueue child styles
-	wp_enqueue_style('varya-sk8prk-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ));
+	wp_enqueue_style('seedlet-sk8prk-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ));
 
 	// enqueue child RTL styles
-	wp_style_add_data( 'varya-sk8prk-style', 'rtl', 'replace' );
+	wp_style_add_data( 'seedlet-sk8prk-style', 'rtl', 'replace' );
 
 }
-add_action( 'wp_enqueue_scripts', 'varya_sk8prk_scripts', 99 );
+add_action( 'wp_enqueue_scripts', 'seedlet_sk8prk_scripts', 99 );
 
 /**
  * Enqueue Custom Cover Block Styles and Scripts
  */
-function varya_sk8prk_block_extends() {
+function seedlet_sk8prk_block_extends() {
 	// Block Tweaks
-	wp_enqueue_script( 'varya-sk8prk-block-extends',
+	wp_enqueue_script( 'seedlet-sk8prk-block-extends',
 		get_stylesheet_directory_uri() . '/assets/js/extend-blocks.js',
 		array( 'wp-blocks', 'wp-edit-post' ) // wp-edit-post is added to avoid a race condition when trying to unregister a style variation 
 	);
 }
-add_action( 'enqueue_block_assets', 'varya_sk8prk_block_extends' );
+add_action( 'enqueue_block_assets', 'seedlet_sk8prk_block_extends' );
 
 /**
  * Add Google webfonts
  *
  * @return string
  */
-function varya_sk8prk_fonts_url() : string {
+function seedlet_sk8prk_fonts_url() : string {
     $fonts_url = '';
 
 	$font_families   = array();

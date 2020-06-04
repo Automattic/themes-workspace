@@ -15,7 +15,7 @@
 	<header class="entry-header wide-max-width">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'varya' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'seedlet' ) );
 		}
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -25,7 +25,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php varya_post_thumbnail(); ?>
+	<?php seedlet_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -33,7 +33,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'varya' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'seedlet' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -46,7 +46,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'varya' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'seedlet' ),
 				'after'  => '</div>',
 			)
 		);
@@ -54,6 +54,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php varya_entry_meta_footer(); ?>
+		<?php seedlet_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->

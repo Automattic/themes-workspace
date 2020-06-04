@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Varya
+ * @subpackage Seedlet
  * @since 1.0.0
  */
 ?><!doctype html>
@@ -31,8 +31,8 @@
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'sk8prk' ); ?>">
 					<button id="toggle-menu" class="button">
-						<span class="dropdown-icon open"><?php _e( 'Menu', 'sk8prk' ); ?> <?php echo varya_get_icon_svg( 'menu_open' ) ?></span>
-						<span class="dropdown-icon close"><?php _e( 'Close', 'sk8prk' ); ?> <?php echo varya_get_icon_svg( 'menu_close' ) ?></span>
+						<span class="dropdown-icon open"><?php _e( 'Menu', 'sk8prk' ); ?> <?php echo seedlet_get_icon_svg( 'menu_open' ) ?></span>
+						<span class="dropdown-icon close"><?php _e( 'Close', 'sk8prk' ); ?> <?php echo seedlet_get_icon_svg( 'menu_close' ) ?></span>
 						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'sk8prk' ); ?></span>
 						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'sk8prk' ); ?></span>
 					</button>
@@ -63,7 +63,7 @@
 							'theme_location' => 'social',
 							'menu_class'     => 'social-links-menu',
 							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>' . varya_get_icon_svg( 'link' ),
+							'link_after'     => '</span>' . seedlet_get_icon_svg( 'link' ),
 							'depth'          => 1,
 						)
 					);
