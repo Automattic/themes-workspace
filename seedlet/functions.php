@@ -87,8 +87,8 @@ if ( ! function_exists( 'seedlet_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 120,
-				'width'       => 120,
+				'height'      => 240,
+				'width'       => 240,
 				'flex-width'  => false,
 				'flex-height' => false,
 			)
