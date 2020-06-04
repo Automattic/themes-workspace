@@ -77,10 +77,13 @@
 	margin-left: auto;
 }
 
-.full-max-width {
-	max-width: var(--responsive--alignfull-width);
-	margin-right: auto;
-	margin-left: auto;
+@media only screen and (min-width: 482px) {
+	.full-max-width {
+		max-width: var(--responsive--alignfull-width);
+		width: auto;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 body[class*="woocommerce"] .entry-content > .woocommerce {
