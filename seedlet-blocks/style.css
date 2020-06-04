@@ -33,8 +33,15 @@ GNU General Public License for more details.
 	text-align: center;
 }
 
+/* Properly align items inside of site content. */
+.site-content .wp-block-group__inner-container > *:not(.entry-content) {
+	max-width: var(--responsive--aligndefault-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Make sure full-width items in entry content show up as full-width. */
-.wp-block-group.site-content .wp-block-group__inner-container .entry-content {
+.site-content .wp-block-group__inner-container .entry-content {
 	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	margin-left: calc(-1 * var(--global--spacing-horizontal));
