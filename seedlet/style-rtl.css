@@ -1365,7 +1365,7 @@ button[data-load-more-btn],
 
 .wp-block-cover,
 .wp-block-cover-image {
-	background-color: var(--cover--color-background);
+	background-color: var(--cover--color-foreground);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -1399,7 +1399,7 @@ button[data-load-more-btn],
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover__inner-container,
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-image-text,
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-text {
-	color: var(--cover--color-foreground);
+	color: var(--cover--color-background);
 }
 
 .wp-block-cover h2,
