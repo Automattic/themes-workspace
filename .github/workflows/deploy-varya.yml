@@ -14,9 +14,9 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        local-dir: varya/
+        local-dir: seedlet/
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: sftp://sftp.pressable.com:22/htdocs/wp-content/themes/varya/
+        ftp-server: sftp://sftp.pressable.com:22/htdocs/wp-content/themes/seedlet/
         # FTP account username
         ftp-username: ${{ secrets.SFTP_USERNAME }}
         # FTP account password
