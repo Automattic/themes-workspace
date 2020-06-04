@@ -40,15 +40,6 @@ In each view, the variables are loaded first and then the stylesheet is loaded w
 
 #### Create a child-theme manually (*optional)
 
-<<<<<<< HEAD:seedlet/README.md
-To use the system, simply duplicate the `seedlet-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `varia-child` strings and replace them with `my-theme-name` as follows:
-
-- Search for: `'seedlet-child'` and replace with: `'my-theme-name'` (with quotes).
-- Search for: `seedlet_child_` and replace with: `my_theme_name_`.
-- Search for: `Text Domain: varia-child` and replace with: `Text Domain: my-theme-name` in _style.css_.
-- Search for:  `varia-child` and replace with: `my_theme_name`.
-- Search for: `varia-child-` and replace with: `my-theme-name-`.
-=======
 To use the system, simply duplicate the `seedlet-child` theme directory and rename it `my-theme-name`. You’ll also want to do a search for `seedlet-child` strings and replace them with `my-theme-name` as follows:
 
 - Search for: `'seedlet-child'` and replace with: `'my-theme-name'` (with quotes).
@@ -56,7 +47,6 @@ To use the system, simply duplicate the `seedlet-child` theme directory and rena
 - Search for: `Text Domain: seedlet-child` and replace with: `Text Domain: my-theme-name` in _style.css_.
 - Search for:  `seedlet-child` and replace with: `my_theme_name`.
 - Search for: `seedlet-child-` and replace with: `my-theme-name-`.
->>>>>>> master:varya/README.md
 
 (Soon this process will be replaced by a `theme-dev-util` that allows you to run a command and automatically produce a child theme with all the strings already replaced.)
 
