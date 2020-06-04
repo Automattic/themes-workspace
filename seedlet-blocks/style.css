@@ -1,25 +1,30 @@
 /*
 Theme Name: Seedlet (Blocks)
-Theme URI: https://github.com/Automattic/themes/seedlet-blocks
+Theme URI: https://github.com/Automattic/themes-workspace/seedlet-blocks
 Author: Automattic
 Author URI: https://automattic.com/
-Description: Make your online portfolio impressively awesome with Seedlet.
-Requires at least: WordPress 4.9.6
-Version: 1.2.1
+Description: A simple, text-driven, single-column theme.
+Requires at least: 4.9.6
+Tested up to: 5.4.1
+Requires PHP: 7.3
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Template: seedlet
-Text Domain: seedlet-blocks
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, auto-loading-homepage, jetpack-global-styles
+Text Domain: seedlet
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Seedlet Blocks WordPress Theme, (C) 2020 Automattic, Inc.
+Seedlet Blocks is distributed under the terms of the GNU GPL.
 
-Varia is based on Underscores https://underscores.me/, (C) 2012-2019 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 */
 
 .site-header h1 {
