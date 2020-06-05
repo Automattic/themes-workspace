@@ -160,9 +160,9 @@ if ( ! function_exists( 'seedlet_setup' ) ) :
 		$foreground       = ( ! empty( $colors_theme_mod ) &&
 								'default' === $colors_theme_mod ||
 								empty( get_theme_mod( 'seedlet_--global--color-foreground' ) ) ) ? '#333333' : get_theme_mod( 'seedlet_--global--color-foreground' );
-		$background_light = ( ! empty( $colors_theme_mod ) &&
+		$tertiary = ( ! empty( $colors_theme_mod ) &&
 								'default' === $colors_theme_mod ||
-								empty( get_theme_mod( 'seedlet_--global--color-background-light' ) ) ) ? '#FAFBF6' : get_theme_mod( 'seedlet_--global--color-background-light' );
+								empty( get_theme_mod( 'seedlet_--global--color-tertiary' ) ) ) ? '#FAFBF6' : get_theme_mod( 'seedlet_--global--color-tertiary' );
 		$background       = ( ! empty( $colors_theme_mod ) &&
 								'default' === $colors_theme_mod ||
 								empty( get_theme_mod( 'seedlet_--global--color-background' ) ) ) ? '#FFFFFF' : get_theme_mod( 'seedlet_--global--color-background' );
@@ -186,9 +186,9 @@ if ( ! function_exists( 'seedlet_setup' ) ) :
 					'color' => $foreground
 				),
 				array(
-					'name'  => __( 'Background Light', 'seedlet' ),
-					'slug'  => 'background-light',
-					'color' => $background_light
+					'name'  => __( 'Tertiary', 'seedlet' ),
+					'slug'  => 'tertiary',
+					'color' => $tertiary
 				),
 				array(
 					'name'  => __( 'Background', 'seedlet' ),
@@ -199,7 +199,7 @@ if ( ! function_exists( 'seedlet_setup' ) ) :
 		);
 
 		$gradient_color_a = $secondary;
-		$gradient_color_b = $background_light;
+		$gradient_color_b = $tertiary;
 
 		add_theme_support(
 			'editor-gradient-presets',

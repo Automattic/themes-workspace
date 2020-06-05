@@ -15,7 +15,7 @@ body[class*="woocommerce"] #page { // adding #content here to override default w
 			margin-bottom: var(--global--spacing-vertical);
 
 			li {
-				background-color: var(--global--color-background-light);
+				background-color: var(--global--color-tertiary);
 				border-color: var(--wc--tabs--border-color);
 				border-top-left-radius: var(--wc--tabs--border-radius);
 				border-top-right-radius: var(--wc--tabs--border-radius);
@@ -61,11 +61,11 @@ body[class*="woocommerce"] #page { // adding #content here to override default w
 				}
 
 				&::before {
-					box-shadow: 2px 2px 0 var(--global--color-background-light);
+					box-shadow: 2px 2px 0 var(--global--color-tertiary);
 				}
 
 				&::after {
-					box-shadow: -2px 2px 0 var(--global--color-background-light);
+					box-shadow: -2px 2px 0 var(--global--color-tertiary);
 				}
 			}
 

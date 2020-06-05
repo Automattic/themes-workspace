@@ -290,7 +290,7 @@ body[class*="woocommerce"] #page .woocommerce-error,
 body[class*="woocommerce"] #page .woocommerce-warning {
 	padding: var(--global--spacing-unit) calc(2 * var(--global--spacing-vertical)) var(--global--spacing-unit) var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
-	background-color: var(--global--color-background-light);
+	background-color: var(--global--color-tertiary);
 	color: var(--global--color-foreground-dark);
 	border-top-color: var(--global--color-primary-default);
 }
@@ -486,7 +486,7 @@ body[class*="woocommerce"] #page table.shop_attributes td p {
 
 body[class*="woocommerce"] #page table.shop_attributes tr:nth-child(even) td,
 body[class*="woocommerce"] #page table.shop_attributes tr:nth-child(even) th {
-	background: var(--global--color-background-light);
+	background: var(--global--color-tertiary);
 }
 
 body[class*="woocommerce"] #page table.my_account_orders {
@@ -1059,7 +1059,7 @@ body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs {
 }
 
 body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li {
-	background-color: var(--global--color-background-light);
+	background-color: var(--global--color-tertiary);
 	border-color: var(--wc--tabs--border-color);
 	border-top-right-radius: var(--wc--tabs--border-radius);
 	border-top-left-radius: var(--wc--tabs--border-radius);
@@ -1105,11 +1105,11 @@ body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li::before, body[clas
 }
 
 body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li::before {
-	box-shadow: -2px 2px 0 var(--global--color-background-light);
+	box-shadow: -2px 2px 0 var(--global--color-tertiary);
 }
 
 body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs li::after {
-	box-shadow: 2px 2px 0 var(--global--color-background-light);
+	box-shadow: 2px 2px 0 var(--global--color-tertiary);
 }
 
 body[class*="woocommerce"] #page .woocommerce-tabs ul.tabs::before {
