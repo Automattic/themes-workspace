@@ -410,6 +410,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Block Patterns.
+ */
+require get_template_directory() . '/inc/block-patterns.php';
+
+/**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
