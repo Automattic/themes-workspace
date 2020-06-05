@@ -150,39 +150,56 @@ if ( ! function_exists( 'seedlet_setup' ) ) :
 		);
 
 		// Editor color palette.
+		$colors_theme_mod = get_theme_mod( 'custom_colors_active' );
+		$primary          = ( ! empty( $colors_theme_mod ) &&
+								'default' === $colors_theme_mod ||
+								empty( get_theme_mod( 'seedlet_--global--color-primary' ) ) ) ? '#000000' : get_theme_mod( 'seedlet_--global--color-primary' );
+		$secondary        = ( ! empty( $colors_theme_mod ) &&
+								'default' === $colors_theme_mod ||
+								empty( get_theme_mod( 'seedlet_--global--color-secondary' ) ) ) ? '#3C8067' : get_theme_mod( 'seedlet_--global--color-secondary' );
+		$foreground       = ( ! empty( $colors_theme_mod ) &&
+								'default' === $colors_theme_mod ||
+								empty( get_theme_mod( 'seedlet_--global--color-foreground' ) ) ) ? '#333333' : get_theme_mod( 'seedlet_--global--color-foreground' );
+		$background_light = ( ! empty( $colors_theme_mod ) &&
+								'default' === $colors_theme_mod ||
+								empty( get_theme_mod( 'seedlet_--global--color-background-light' ) ) ) ? '#FAFBF6' : get_theme_mod( 'seedlet_--global--color-background-light' );
+		$background       = ( ! empty( $colors_theme_mod ) &&
+								'default' === $colors_theme_mod ||
+								empty( get_theme_mod( 'seedlet_--global--color-background' ) ) ) ? '#FFFFFF' : get_theme_mod( 'seedlet_--global--color-background' );
+
 		add_theme_support(
 			'editor-color-palette',
 			array(
 				array(
 					'name'  => __( 'Primary', 'seedlet' ),
 					'slug'  => 'primary',
-					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#000000' : get_theme_mod( 'seedlet_--global--color-primary' )
+					'color' => $primary
 				),
 				array(
 					'name'  => __( 'Secondary', 'seedlet' ),
 					'slug'  => 'secondary',
-					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#3C8067' : get_theme_mod( 'seedlet_--global--color-secondary' )
+					'color' => $secondary
 				),
 				array(
 					'name'  => __( 'Foreground', 'seedlet' ),
 					'slug'  => 'foreground',
-					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#333333' : get_theme_mod( 'seedlet_--global--color-foreground' )
+					'color' => $foreground
 				),
 				array(
 					'name'  => __( 'Background Light', 'seedlet' ),
 					'slug'  => 'background-light',
-					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'seedlet_--global--color-background-light' )
+					'color' => $background_light
 				),
 				array(
 					'name'  => __( 'Background', 'seedlet' ),
 					'slug'  => 'background',
-					'color' => 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FFFFFF' : get_theme_mod( 'seedlet_--global--color-background' )
+					'color' => $background
 				),
 			)
 		);
 
-		$gradient_color_a = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#3C8067' : get_theme_mod( 'seedlet_--global--color-secondary' );
-		$gradient_color_b = 'default' === get_theme_mod( 'custom_colors_active' ) ? '#FAFBF6' : get_theme_mod( 'seedlet_--global--color-background-light' );
+		$gradient_color_a = $secondary;
+		$gradient_color_b = $background_light;
 
 		add_theme_support(
 			'editor-gradient-presets',
