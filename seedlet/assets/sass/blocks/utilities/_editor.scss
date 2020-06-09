@@ -42,8 +42,8 @@
 	color: var(--global--color-foreground-dark) !important;
 }
 
-.has-background-light-color[class] {
-	color: var(--global--color-background-light) !important;
+.has-tertiary-color[class] {
+	color: var(--global--color-tertiary) !important;
 }
 
 .has-background-dark-color[class] {
@@ -92,8 +92,8 @@
 	color: var(--global--color-background);
 }
 
-.has-background-light-background-color[class] {
-	background-color: var(--global--color-background-light) !important;
+.has-tertiary-background-color[class] {
+	background-color: var(--global--color-tertiary) !important;
 	color: var(--global--color-foreground);
 }
 
@@ -177,35 +177,35 @@
  * Custom gradients 
 */
 .has-hard-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+	background: linear-gradient(to bottom right, var(--global--color-secondary) 49.9%, var(--global--color-tertiary) 50%);
 }
 
 .has-hard-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, var(--global--color-secondary) 49.9%, var(--global--color-background-light) 50%);
+	background: linear-gradient(to top left, var(--global--color-secondary) 49.9%, var(--global--color-tertiary) 50%);
 }
 
 .has-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, var(--global--color-secondary), var(--global--color-background-light));
+	background: linear-gradient(to bottom right, var(--global--color-secondary), var(--global--color-tertiary));
 }
 
 .has-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, var(--global--color-secondary), var(--global--color-background-light));
+	background: linear-gradient(to top left, var(--global--color-secondary), var(--global--color-tertiary));
 }
 
 .has-hard-horizontal-gradient-background {
-	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+	background: linear-gradient(to bottom, var(--global--color-secondary) 50%, var(--global--color-tertiary) 50%);
 }
 
 .has-hard-horizontal-inverted-gradient-background {
-	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-background-light) 50%);
+	background: linear-gradient(to top, var(--global--color-secondary) 50%, var(--global--color-tertiary) 50%);
 }
 
 .has-horizontal-gradient-background {
-	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-background-light));
+	background: linear-gradient(to bottom, var(--global--color-secondary), var(--global--color-tertiary));
 }
 
 .has-horizontal-inverted-gradient-background {
-	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-background-light));
+	background: linear-gradient(to top, var(--global--color-secondary), var(--global--color-tertiary));
 }
 
 .has-stripe-gradient-background {

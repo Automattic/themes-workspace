@@ -22,11 +22,11 @@ class Seedlet_Custom_Colors {
 		 * Define color variables
 		 */
 		$this->seedlet_custom_color_variables = array(
+			array( '--global--color-background', '#FFFFFF', 'Background Color' ),
+			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
 			array( '--global--color-primary', '#000000', 'Primary Color' ),
 			array( '--global--color-secondary', '#3C8067', 'Secondary Color' ),
-			array( '--global--color-foreground', '#333333', 'Foreground Color' ),
-			array( '--global--color-background', '#FFFFFF', 'Background Color' ),
-			array( '--global--color-background-light', '#FAFBF6', 'Background Light Color' ),
+			array( '--global--color-tertiary', '#FAFBF6', 'Tertiary Color' ),
 			array( '--global--color-border', '#EFEFEF', 'Borders Color' )
 		);
 
