@@ -1,5 +1,0 @@
-@mixin separator-variables() {
-	--separator--border-color: var(--global--color-border);
-	--separator--height: 2px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
-}
